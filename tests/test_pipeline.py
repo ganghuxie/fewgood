@@ -64,7 +64,7 @@ def test_enrich_only_candidates_and_cache(db, config, monkeypatch):
             assert len(params['id'].split(',')) <= 50
             return {'items':[raw()]}
     client=YT()
-    good={'id':'dQw4w9WgXcQ','recommenders':5,'months':6,'span_days':365}
+    good={'id':'dQw4w9WgXcQ','recommenders':30,'months':36,'span_days':365}
     bad=dict(good,id='abcdefghijk',recommenders=4)
     enrich(db,config,[good,bad],client=client)
     enrich(db,config,[good,bad],client=client)
@@ -73,11 +73,11 @@ def test_enrich_only_candidates_and_cache(db, config, monkeypatch):
 
 def test_report_gates_and_what_if(db,config,tmp_path,monkeypatch):
     monkeypatch.chdir(tmp_path)
-    good=dict(id='dQw4w9WgXcQ',recommenders=5,months=6,span_days=365,first=1,last=31536001,quotes=[])
+    good=dict(id='dQw4w9WgXcQ',recommenders=30,months=36,span_days=365,first=1,last=31536001,quotes=[])
     db.execute('INSERT INTO metadata VALUES (?,?,?)',(good['id'],1,json.dumps(raw())))
     result=report(db,config,[good],str(tmp_path/'reports'))
     assert result['final_selected']==1
-    assert len(result['what_if'])==18
+    assert len(result['what_if'])==25
     first=db.execute('SELECT selected_at FROM selections').fetchone()[0]
     report(db,config,[good],str(tmp_path/'reports'))
     assert db.execute('SELECT selected_at FROM selections').fetchone()[0]==first
@@ -126,7 +126,7 @@ def test_batching_and_unavailable_cache(db, config, monkeypatch):
             self.sizes.append(len(params['id'].split(',')))
             return {'items':[]}
     client=YT()
-    videos=[dict(id=f'{i:011d}',recommenders=5,months=6,span_days=365) for i in range(51)]
+    videos=[dict(id=f'{i:011d}',recommenders=30,months=36,span_days=365) for i in range(51)]
     enrich(db,config,videos,client=client)
     enrich(db,config,videos,client=client)
     assert client.sizes==[50,1]
@@ -134,7 +134,7 @@ def test_batching_and_unavailable_cache(db, config, monkeypatch):
 
 def test_recommendation_boundaries(config):
     c=config['recommendation']
-    v=dict(recommenders=5,months=6,span_days=365)
+    v=dict(recommenders=30,months=36,span_days=365)
     assert not any(recommendation_gates(v,c).values())
     c['sources']['enabled']=True
     assert recommendation_gates(v,c)['sources']
@@ -207,3 +207,21 @@ def test_extract_skips_malformed_candidates(db):
                 json.dumps({'comment_text': text})))
     extract(db)
     assert [v['id'] for v in aggregate(db)] == ['dQw4w9WgXcQ']
+
+
+def test_what_if_uses_each_rows_thresholds_and_cached_gates(db, config, tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    videos = [dict(id=str(i), recommenders=p, months=m, span_days=s)
+              for i, (p, m, s) in enumerate([(5, 6, 365), (30, 36, 365),
+                                           (50, 48, 365), (50, 48, 365),
+                                           (50, 48, 364)])]
+    # Loose-only cached pass, strict cached failure, and two unknowns.
+    db.execute('INSERT INTO metadata VALUES (?,?,?)', ('0', 1, json.dumps(raw())))
+    db.execute('INSERT INTO metadata VALUES (?,?,?)', ('2', 1, 'null'))
+    result = report(db, config, videos, str(tmp_path / 'reports'))
+    rows = {(r['recommenders'], r['months']): r for r in result['what_if']}
+    assert (rows[5, 6]['candidates'], rows[5, 6]['selected_with_cached_metadata'],
+            rows[5, 6]['unknown_metadata']) == (4, 1, 2)
+    assert (rows[50, 48]['candidates'], rows[50, 48]['selected_with_cached_metadata'],
+            rows[50, 48]['unknown_metadata']) == (2, 0, 1)
+    assert db.execute('SELECT count(*) FROM quota').fetchone()[0] == 0

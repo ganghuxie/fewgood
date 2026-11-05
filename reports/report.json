@@ -1,5 +1,5 @@
 {
-  "generated_at": 1793854542,
+  "generated_at": 1793859527,
   "hn_items": {
     "comment": 279777,
     "story": 124215
@@ -106,172 +106,19 @@
     "85": 1,
     "44": 1
   },
-  "recommendation_candidates": 3993,
+  "recommendation_candidates": 92,
   "dropped_by_gate": {
-    "recommenders": 253929,
-    "months": 257184,
+    "recommenders": 261464,
+    "months": 261619,
     "span": 235035,
     "sources": 0,
-    "metadata_unavailable": 236,
+    "metadata_unavailable": 5,
     "publish_age": 0,
-    "duration": 1014
+    "duration": 17
   },
-  "final_selected": 2743,
+  "final_selected": 70,
   "quota_units": 80,
   "what_if": [
-    {
-      "recommenders": 3,
-      "months": 3,
-      "span_days": 183,
-      "candidates": 14208,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 10215
-    },
-    {
-      "recommenders": 3,
-      "months": 3,
-      "span_days": 365,
-      "candidates": 13048,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 9055
-    },
-    {
-      "recommenders": 3,
-      "months": 4,
-      "span_days": 183,
-      "candidates": 8779,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 4786
-    },
-    {
-      "recommenders": 3,
-      "months": 4,
-      "span_days": 365,
-      "candidates": 8406,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 4413
-    },
-    {
-      "recommenders": 3,
-      "months": 6,
-      "span_days": 183,
-      "candidates": 4253,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 260
-    },
-    {
-      "recommenders": 3,
-      "months": 6,
-      "span_days": 365,
-      "candidates": 4198,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 205
-    },
-    {
-      "recommenders": 4,
-      "months": 3,
-      "span_days": 183,
-      "candidates": 9509,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 5516
-    },
-    {
-      "recommenders": 4,
-      "months": 3,
-      "span_days": 365,
-      "candidates": 8893,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 4900
-    },
-    {
-      "recommenders": 4,
-      "months": 4,
-      "span_days": 183,
-      "candidates": 8164,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 4171
-    },
-    {
-      "recommenders": 4,
-      "months": 4,
-      "span_days": 365,
-      "candidates": 7828,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 3835
-    },
-    {
-      "recommenders": 4,
-      "months": 6,
-      "span_days": 183,
-      "candidates": 4176,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 183
-    },
-    {
-      "recommenders": 4,
-      "months": 6,
-      "span_days": 365,
-      "candidates": 4125,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 132
-    },
-    {
-      "recommenders": 5,
-      "months": 3,
-      "span_days": 183,
-      "candidates": 6723,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 2730
-    },
-    {
-      "recommenders": 5,
-      "months": 3,
-      "span_days": 365,
-      "candidates": 6340,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 2347
-    },
-    {
-      "recommenders": 5,
-      "months": 4,
-      "span_days": 183,
-      "candidates": 6216,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 2223
-    },
-    {
-      "recommenders": 5,
-      "months": 4,
-      "span_days": 365,
-      "candidates": 5958,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 1965
-    },
-    {
-      "recommenders": 5,
-      "months": 6,
-      "span_days": 183,
-      "candidates": 4042,
-      "cached": 3993,
-      "selected_with_cached_metadata": 2743,
-      "unknown_metadata": 49
-    },
     {
       "recommenders": 5,
       "months": 6,
@@ -280,13 +127,229 @@
       "cached": 3993,
       "selected_with_cached_metadata": 2743,
       "unknown_metadata": 0
+    },
+    {
+      "recommenders": 5,
+      "months": 12,
+      "span_days": 365,
+      "candidates": 1126,
+      "cached": 1126,
+      "selected_with_cached_metadata": 812,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 5,
+      "months": 24,
+      "span_days": 365,
+      "candidates": 258,
+      "cached": 258,
+      "selected_with_cached_metadata": 191,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 5,
+      "months": 36,
+      "span_days": 365,
+      "candidates": 94,
+      "cached": 94,
+      "selected_with_cached_metadata": 72,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 5,
+      "months": 48,
+      "span_days": 365,
+      "candidates": 49,
+      "cached": 49,
+      "selected_with_cached_metadata": 39,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 10,
+      "months": 6,
+      "span_days": 365,
+      "candidates": 1891,
+      "cached": 1891,
+      "selected_with_cached_metadata": 1349,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 10,
+      "months": 12,
+      "span_days": 365,
+      "candidates": 1077,
+      "cached": 1077,
+      "selected_with_cached_metadata": 771,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 10,
+      "months": 24,
+      "span_days": 365,
+      "candidates": 255,
+      "cached": 255,
+      "selected_with_cached_metadata": 188,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 10,
+      "months": 36,
+      "span_days": 365,
+      "candidates": 93,
+      "cached": 93,
+      "selected_with_cached_metadata": 71,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 10,
+      "months": 48,
+      "span_days": 365,
+      "candidates": 49,
+      "cached": 49,
+      "selected_with_cached_metadata": 39,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 20,
+      "months": 6,
+      "span_days": 365,
+      "candidates": 523,
+      "cached": 523,
+      "selected_with_cached_metadata": 398,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 20,
+      "months": 12,
+      "span_days": 365,
+      "candidates": 504,
+      "cached": 504,
+      "selected_with_cached_metadata": 380,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 20,
+      "months": 24,
+      "span_days": 365,
+      "candidates": 250,
+      "cached": 250,
+      "selected_with_cached_metadata": 183,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 20,
+      "months": 36,
+      "span_days": 365,
+      "candidates": 92,
+      "cached": 92,
+      "selected_with_cached_metadata": 70,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 20,
+      "months": 48,
+      "span_days": 365,
+      "candidates": 49,
+      "cached": 49,
+      "selected_with_cached_metadata": 39,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 30,
+      "months": 6,
+      "span_days": 365,
+      "candidates": 248,
+      "cached": 248,
+      "selected_with_cached_metadata": 193,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 30,
+      "months": 12,
+      "span_days": 365,
+      "candidates": 247,
+      "cached": 247,
+      "selected_with_cached_metadata": 192,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 30,
+      "months": 24,
+      "span_days": 365,
+      "candidates": 202,
+      "cached": 202,
+      "selected_with_cached_metadata": 152,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 30,
+      "months": 36,
+      "span_days": 365,
+      "candidates": 92,
+      "cached": 92,
+      "selected_with_cached_metadata": 70,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 30,
+      "months": 48,
+      "span_days": 365,
+      "candidates": 49,
+      "cached": 49,
+      "selected_with_cached_metadata": 39,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 50,
+      "months": 6,
+      "span_days": 365,
+      "candidates": 71,
+      "cached": 71,
+      "selected_with_cached_metadata": 57,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 50,
+      "months": 12,
+      "span_days": 365,
+      "candidates": 71,
+      "cached": 71,
+      "selected_with_cached_metadata": 57,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 50,
+      "months": 24,
+      "span_days": 365,
+      "candidates": 70,
+      "cached": 70,
+      "selected_with_cached_metadata": 56,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 50,
+      "months": 36,
+      "span_days": 365,
+      "candidates": 62,
+      "cached": 62,
+      "selected_with_cached_metadata": 49,
+      "unknown_metadata": 0
+    },
+    {
+      "recommenders": 50,
+      "months": 48,
+      "span_days": 365,
+      "candidates": 47,
+      "cached": 47,
+      "selected_with_cached_metadata": 38,
+      "unknown_metadata": 0
     }
   ],
   "criteria": {
     "database": "data/ytrec.sqlite",
     "recommendation": {
-      "min_recommenders": 5,
-      "min_months": 6,
+      "min_recommenders": 30,
+      "min_months": 36,
       "min_span_days": 365,
       "sources": {
         "enabled": false,

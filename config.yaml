@@ -1,7 +1,7 @@
 database: data/ytrec.sqlite
 recommendation:
-  min_recommenders: 5
-  min_months: 6
+  min_recommenders: 30
+  min_months: 36
   min_span_days: 365
   sources:
     enabled: false

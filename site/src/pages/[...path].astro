@@ -1,0 +1,12 @@
+---
+import data from '../data/videos.json';
+import VideoPage from '../components/VideoPage.astro';
+import { paginate, pageUrl } from '../lib/pagination.mjs';
+export function getStaticPaths() {
+  return ['people', 'newest'].flatMap(sort => paginate(data.videos, sort).map(props => ({
+    params: { path: pageUrl(sort, props.page).replace(/^\/|\/$/g, '') || undefined },
+    props,
+  })));
+}
+---
+<VideoPage {...Astro.props} />

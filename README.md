@@ -34,9 +34,9 @@ python -m ytrec build-site
 
 ## Criteria
 
-Edit `config.yaml`: defaults require 5 distinct HN authors, 6 distinct UTC calendar months and a 365-day earliest/latest gap. Metadata must show public, processed, published at least 365 days ago and at least 300 seconds long. The source rule retains `min_sources: 2` but is disabled; enabling it excludes all Phase 1 HN-only candidates. Sentiment is explicitly disabled; attempting to enable it raises an error rather than silently claiming to analyze sentiment.
+Edit `config.yaml`: defaults require 30 distinct HN authors, 36 distinct UTC calendar months and a 365-day earliest/latest gap. Metadata must show public, processed, published at least 365 days ago and at least 300 seconds long. The source rule retains `min_sources: 2` but is disabled; enabling it excludes all Phase 1 HN-only candidates. Sentiment is explicitly disabled; attempting to enable it raises an error rather than silently claiming to analyze sentiment.
 
-A link is only a proxy for a recommendation: criticism and incidental links can qualify until phase 2. One author counts once toward the people threshold, while all of that author's dated mentions contribute to temporal coverage. Thus months measure repeated linking, not necessarily six different endorsers. Authors without an identity are excluded. HN usernames are the independence proxy; account coordination cannot be ruled out.
+A link is only a proxy for a recommendation: criticism and incidental links can qualify until phase 2. One author counts once toward the people threshold, while all of that author's dated mentions contribute to temporal coverage. Thus months measure repeated linking, not necessarily 36 different endorsers. Authors without an identity are excluded. HN usernames are the independence proxy; account coordination cannot be ruled out.
 
 ## Storage and resuming
 
@@ -48,10 +48,10 @@ Requests start at least one second apart, including retries; 429/5xx and transpo
 
 ## Outputs
 
-- `reports/report.json`: complete metrics, effective config and 18 what-if settings.
+- `reports/report.json`: complete metrics, effective config and 25 what-if settings (5/10/20/30/50 people × 6/12/24/36/48 months, 365-day span).
 - `reports/report.md`: human-readable summary and what-if table.
 - `site/src/data/videos.json`: selected videos, quotes, metrics, report snapshot.
-- `site/dist/`: static Astro site, thumbnails, 2–3 quotes when available, HN links and client-side people/newest-selected sort. Selection timestamps record the first successful report inclusion.
+- `site/dist/`: static Astro site, thumbnails, 2–3 quotes when available, HN links and 50-card static pages for most recommenders (`/`, `/page/2/`, …) and newest selected (`/newest/`, `/newest/page/2/`, …). Selection timestamps record the first successful report inclusion. Most recommenders sorts by people then months; newest selected sorts by first selection date then latest HN mention. Video ID breaks ties.
 
 Gate drop counts are independent and can overlap. Metadata-unavailable includes missing cache entries and API-confirmed unavailable/private/unprocessed videos. What-if rows report recommendation candidates, selected with cached metadata, and uncached unknowns separately; they are lower bounds, not estimates of unknown outcomes. The defaults are never relaxed to reach 100. All passing videos are displayed, with actual count even below or above 100.
 
