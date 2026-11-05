@@ -3,6 +3,8 @@ import sqlite3
 import time
 import re
 import os
+from queue import Queue, Empty
+from threading import Event, Thread
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import Counter
@@ -37,6 +39,47 @@ class Client:
         self.interval = max(1.0, interval)
         self.last = 0
         self.db = db
+        self.session = requests.Session()
+        self.request_deadline = 90
+
+    def _request(self, url, params):
+        session = self.session
+        deadline = time.monotonic() + self.request_deadline
+        cancelled = Event()
+        result = Queue(maxsize=1)
+
+        def fetch():
+            # Chunk checks cannot interrupt a blocked read (or DNS/headers).
+            # Keep those operations off the caller thread to bound the wait.
+            try:
+                with session.get(url, params=params, timeout=(10, 30), stream=True) as response:
+                    if response.status_code != 200:
+                        value = (response.status_code, None)
+                    else:
+                        body = bytearray()
+                        for chunk in response.iter_content(chunk_size=1):
+                            if cancelled.is_set() or time.monotonic() >= deadline:
+                                raise requests.Timeout('Request deadline exceeded')
+                            body.extend(chunk)
+                        value = (response.status_code, json.loads(body))
+                result.put((value, None))
+            except Exception as error:
+                result.put((None, error))
+
+        # A stuck resolver/socket must not hold up process exit. Abandoned
+        # attempts own sessions that are never reused; response cleanup runs
+        # in the worker when the blocking operation returns.
+        Thread(target=fetch, daemon=True).start()
+        try:
+            value, error = result.get(timeout=max(0, deadline - time.monotonic()))
+            if time.monotonic() >= deadline:
+                raise Empty
+        except Empty:
+            cancelled.set()
+            raise requests.Timeout('Request deadline exceeded') from None
+        if error is not None:
+            raise error
+        return value
 
     def get(self, url, params, youtube=False):
         for attempt in range(7):
@@ -46,21 +89,22 @@ class Client:
                 self.db.execute('INSERT INTO quota VALUES (?,1)', (now(),))
                 self.db.commit()
             try:
-                response = requests.get(url, params=params, timeout=60)
+                status, payload = self._request(url, params)
             except requests.RequestException:
+                self.session.close()
+                self.session = requests.Session()
                 if attempt == 6:
                     raise RuntimeError('API transport failed (request details suppressed)') from None
                 time.sleep(2 ** attempt)
                 continue
-            if response.status_code == 429 or response.status_code >= 500:
-                time.sleep(2 ** attempt)
-                continue
-            if response.status_code != 200:
-                raise RuntimeError(f'API HTTP {response.status_code}; request details suppressed')
-            try:
-                return response.json()
             except ValueError:
                 raise RuntimeError('API returned invalid JSON') from None
+            if status == 429 or status >= 500:
+                time.sleep(2 ** attempt)
+                continue
+            if status != 200:
+                raise RuntimeError(f'API HTTP {status}; request details suppressed')
+            return payload
         raise RuntimeError('API retry limit reached')
 
 def crawl(db, config, start, end, client=None):
@@ -85,7 +129,7 @@ def crawl(db, config, start, end, client=None):
                     db.execute('INSERT OR REPLACE INTO items VALUES (?,?,?,?,?)', (hit['objectID'], kind, hit.get('author'), hit['created_at_i'], json.dumps(hit)))
         with db:
             db.execute('INSERT OR IGNORE INTO windows VALUES (?,?,?,?)', (term, kind, lo, hi))
-        print(f'HN {kind} {term} {datetime.fromtimestamp(lo, UTC).date()}..{datetime.fromtimestamp(hi, UTC).date()} complete')
+        print(f'HN {kind} {term} {datetime.fromtimestamp(lo, UTC).date()}..{datetime.fromtimestamp(hi, UTC).date()} complete', flush=True)
     step = int(config['crawl']['window_days'] * 86400)
     if step <= 0 or start >= end:
         raise ValueError('Require positive window size and start < end')
@@ -163,7 +207,7 @@ def enrich(db, config, videos, refresh=False, client=None):
         with db:
             for vid in batch:
                 db.execute('INSERT OR REPLACE INTO metadata VALUES (?,?,?)', (vid, now(), json.dumps(found.get(vid))))
-        print(f'YouTube cached {len(batch)} IDs; approximate units tracked in SQLite')
+        print(f'YouTube cached {len(batch)} IDs; approximate units tracked in SQLite', flush=True)
 
 def report(db, config, videos, output='reports'):
     at = now()

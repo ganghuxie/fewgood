@@ -89,22 +89,31 @@ def test_truncation_not_completed(db,config):
         crawl(db,config,0,4,Truncated())
     assert db.execute('SELECT count(*) FROM windows').fetchone()[0]==0
 
-def test_request_retry_and_secret_suppression(monkeypatch):
+@pytest.mark.parametrize('error_type', ['RequestException', 'ReadTimeout'])
+def test_request_retry_and_secret_suppression(monkeypatch, error_type):
     from ytrec.core import Client
     import requests
     calls=[]
     def get(*args,**kwargs):
         calls.append(1)
-        if len(calls)==1: return type('Response',(),{'status_code':429})()
-        return type('Response',(),{'status_code':200,'json':lambda self:{'ok':True}})()
-    monkeypatch.setattr('ytrec.core.requests.get',get)
+        response = requests.Response()
+        response.status_code = 429 if len(calls) == 1 else 200
+        response._content = b'{"ok": true}'
+        response._content_consumed = True
+        return response
+    monkeypatch.setattr('ytrec.core.requests.Session.get',get)
     monkeypatch.setattr('ytrec.core.time.sleep',lambda _:None)
     assert Client().get('https://example.com',{'key':'never-show'}) == {'ok':True}
-    def fail(*args,**kwargs): raise requests.RequestException('https://example.com?key=never-show')
-    monkeypatch.setattr('ytrec.core.requests.get',fail)
+    failed_sessions = []
+    def fail(session, *args, **kwargs):
+        failed_sessions.append(session)
+        raise getattr(requests, error_type)('https://example.com?key=never-show')
+    monkeypatch.setattr('ytrec.core.requests.Session.get',fail)
     with pytest.raises(RuntimeError) as error:
         Client().get('https://example.com',{'key':'never-show'})
-    assert 'never-show' not in str(error.value)
+    assert str(error.value) == 'API transport failed (request details suppressed)'
+    assert len(failed_sessions) == 7
+    assert len({id(session) for session in failed_sessions}) == 7
 
 def test_timestamp_offset():
     assert stamp('2024-01-01T08:00:00+08:00') == stamp('2024-01-01')
@@ -129,3 +138,60 @@ def test_recommendation_boundaries(config):
     assert not any(recommendation_gates(v,c).values())
     c['sources']['enabled']=True
     assert recommendation_gates(v,c)['sources']
+
+
+@pytest.mark.parametrize('stall_at', ['headers', 'body'])
+def test_request_deadline_retries_stalled_response(monkeypatch, stall_at):
+    from threading import Event
+    from time import monotonic
+    import requests
+    from ytrec.core import Client
+
+    release = Event()
+    closed = Event()
+    sessions = []
+    sleeps = []
+
+    class StalledResponse:
+        status_code = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            closed.set()
+
+        def iter_content(self, chunk_size):
+            yield b'{'  # Receiving some bytes must not reset the deadline.
+            release.wait(5)
+            yield b'}'
+
+    def get(session, url, **kwargs):
+        sessions.append(session)
+        assert kwargs['stream'] is True
+        assert kwargs['timeout'] == (10, 30)
+        if len(sessions) == 1:
+            if stall_at == 'headers':
+                release.wait(5)
+            return StalledResponse()
+        response = requests.Response()
+        response.status_code = 200
+        response._content = b'{"ok": true}'
+        response._content_consumed = True
+        return response
+
+    monkeypatch.setattr('ytrec.core.requests.Session.get', get)
+    monkeypatch.setattr('ytrec.core.time.sleep', sleeps.append)
+    client = Client()
+    client.request_deadline = 0.1
+    started = monotonic()
+    try:
+        assert client.get('https://example.com', {'key': 'never-show'}) == {'ok': True}
+        assert monotonic() - started < 2
+        assert len(sessions) == 2
+        assert sessions[0] is not sessions[1]
+        assert sleeps[1] == 1  # Existing first-retry backoff.
+    finally:
+        release.set()
+        assert closed.wait(2)
+        client.session.close()
