@@ -1,0 +1,13 @@
+/data/
+*.sqlite*
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.venv/
+.env
+.env.*
+*.log
+node_modules/
+site/dist/
+site/.astro/
+logs/

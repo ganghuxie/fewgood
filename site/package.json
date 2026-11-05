@@ -1,0 +1,8 @@
+{
+  "name": "ytrec-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {"build": "astro build", "dev": "astro dev"},
+  "dependencies": {"astro": "^5.16.0"}
+}

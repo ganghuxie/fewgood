@@ -1,0 +1,19 @@
+database: data/ytrec.sqlite
+recommendation:
+  min_recommenders: 5
+  min_months: 6
+  min_span_days: 365
+  sources:
+    enabled: false
+    min_sources: 2
+  positive_sentiment:
+    enabled: false
+metadata:
+  min_publish_age_days: 365
+  min_duration_seconds: 300
+  cache_days: 30
+  max_units_per_run: 1000
+crawl:
+  start: '2007-01-01'
+  window_days: 30
+  request_interval_seconds: 1.05
