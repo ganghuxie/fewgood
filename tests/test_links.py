@@ -20,3 +20,37 @@ def test_negative(url):
 
 def test_dedup_and_plain_html():
     assert extract_ids(f'https://youtu.be/{V} https://youtube.com/watch?feature=x&amp;v={V}') == {V}
+
+@pytest.mark.parametrize('url', [
+    f'http://[youtube.com/watch?v={V}',
+    'https://youtu.be/]',
+    f'https://youtube.com/watch?v={V}&x=[oops',
+    f'https://youtube.com/watch?v={V}&x=%FF',
+    f'https://youtube.com/watch?v={V}&x=%ED%A0%80',
+    f'https://youtube.com/watch?v={V}&x=%zz',
+    f'https://youtube.com/watch?v={V}&x=%',
+    f'https://youtube.com/attribution_link?u=http%3A%2F%2F%5Byoutube.com%2Fwatch%3Fv%3D{V}',
+    f'https://youtube.com/attribution_link?u=%2Fwatch%3Fv%3D{V}%26x%3D%25FF',
+    f'https://youtube.com\uff0f.example/watch?v={V}',
+])
+def test_malformed_urls(url):
+    assert video_id(url) is None
+    assert extract_ids(url) == set()
+    assert extract_ids(f'{url} https://youtu.be/{V}') == {V}
+
+@pytest.mark.parametrize('wrapped', [f'(https://youtu.be/{V})',
+    f'[https://youtu.be/{V}]', f'[video](https://youtu.be/{V})',
+    f'(https://youtube.com/watch?v={V}).'])
+def test_markdown_punctuation(wrapped):
+    assert extract_ids(wrapped) == {V}
+
+@pytest.mark.parametrize('parser', ['urlparse', 'parse_qs', 'unquote'])
+def test_parser_errors_are_local(monkeypatch, parser):
+    import ytrec.links as links
+    original = getattr(links, parser)
+    def fail_bad(value, *args, **kwargs):
+        if 'bad' in value:
+            raise ValueError('malformed URL')
+        return original(value, *args, **kwargs)
+    monkeypatch.setattr(links, parser, fail_bad)
+    assert extract_ids(f'https://youtube.com/watch?bad=1 https://youtu.be/{V}') == {V}

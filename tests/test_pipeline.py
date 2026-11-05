@@ -195,3 +195,15 @@ def test_request_deadline_retries_stalled_response(monkeypatch, stall_at):
         release.set()
         assert closed.wait(2)
         client.session.close()
+
+
+def test_extract_skips_malformed_candidates(db):
+    text = ('http://[youtube.com/watch?v=dQw4w9WgXcQ '
+            'https://youtu.be/] '
+            'https://youtube.com/watch?v=abcdefghijk&x=%FF '
+            '(https://youtu.be/dQw4w9WgXcQ)')
+    db.execute('INSERT INTO items VALUES (?,?,?,?,?)',
+               ('malformed', 'comment', 'user', stamp('2020-01-01'),
+                json.dumps({'comment_text': text})))
+    extract(db)
+    assert [v['id'] for v in aggregate(db)] == ['dQw4w9WgXcQ']

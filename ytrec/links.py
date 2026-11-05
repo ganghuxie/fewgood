@@ -3,15 +3,29 @@ import re
 from urllib.parse import urlparse, parse_qs, unquote
 
 ID = re.compile(r'^[A-Za-z0-9_-]{11}$')
-URL = re.compile(r'(?<![A-Za-z0-9_.-])(?:https?://|//)?(?:[\w-]+\.)*(?:youtube\.com|youtu\.be|youtube-nocookie\.com)(?::\d+)?[^\s<>"\']*', re.I)
+URL = re.compile(r'(?<![A-Za-z0-9_.\[/-])(?:https?://|//)?(?:[\w-]+\.)*(?:youtube\.com|youtu\.be|youtube-nocookie\.com)(?::\d+)?[^\s<>"\']*', re.I)
 
 def video_id(url, depth=0):
+    """Return an ID, or None for an untrusted/malformed URL candidate."""
+    try:
+        return _video_id(url, depth)
+    except (ValueError, UnicodeError):
+        # Keep urllib parsing/decoding failures local to this candidate,
+        # including recursive attribution targets.
+        return None
+
+
+def _video_id(url, depth):
     if depth > 3:
         return None
-    url = html.unescape(url).strip().rstrip('.,);]')
+    url = html.unescape(url).strip().lstrip('(').rstrip('.,);]')
+    if any(c in url for c in '[]') or re.search(r'%(?![0-9a-fA-F]{2})', url):
+        return None
+    # Validate escaped UTF-8 without decoding URL delimiters before parsing.
+    unquote(url, errors='strict')
     parsed = urlparse(url if '://' in url else 'https://' + url.lstrip('/'))
     host = (parsed.hostname or '').lower()
-    query = parse_qs(parsed.query)
+    query = parse_qs(parsed.query, errors='strict')
     path = parsed.path.strip('/').split('/')
     value = None
     if host in {'youtu.be', 'www.youtu.be'}:
