@@ -196,6 +196,15 @@ def video_record(raw):
                 view_count=int(stats.get('viewCount', 0)),
                 like_count=int(stats['likeCount']) if stats.get('likeCount') is not None else None)
 
+def landscape_video(raw):
+    """Return whether a video has player dimensions proving it is landscape."""
+    player = raw.get('player', {})
+    width, height = player.get('embedWidth'), player.get('embedHeight')
+    try:
+        return bool(width and height and float(width) > float(height))
+    except (TypeError, ValueError):
+        return False
+
 def write_feed(name, payload, root='site/src/data'):
     target = Path(root) / f'{name}.json'
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -205,38 +214,84 @@ def write_feed(name, payload, root='site/src/data'):
 def youtube_videos(client, key, ids):
     found = []
     for offset in range(0, len(ids), 50):
-        response = client.get(YOUTUBE_API + 'videos', dict(part='snippet,contentDetails,statistics', id=','.join(ids[offset:offset+50]), key=key), youtube=True)
+        response = client.get(YOUTUBE_API + 'videos', dict(part='snippet,contentDetails,statistics,player', maxWidth=640, maxHeight=640, id=','.join(ids[offset:offset+50]), key=key), youtube=True)
         found.extend(response.get('items', []))
     return found
 
 def trending_feed(client=None, output='site/src/data'):
-    """Fetch up to five popularity search pages, filtering sub-minute Shorts."""
+    """Fetch recent medium/long popularity pages, keeping landscape videos."""
     key = youtube_key(); client = client or Client(interval=.05, db=None)
     after = (datetime.now(UTC) - timedelta(days=30)).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
-    ids, seen_ids, token, searches, quota_video_batches = [], set(), None, 0, 0
+    seen_ids, id_buckets, searches, quota_video_batches = set(), {}, 0, 0
     records = []
-    while searches < 5:
-        params = dict(part='id', type='video', order='viewCount', publishedAfter=after, maxResults=50, key=key)
-        if token: params['pageToken'] = token
-        response = client.get(YOUTUBE_API + 'search', params, youtube=True); searches += 1
-        page_ids = [item['id']['videoId'] for item in response.get('items', []) if item.get('id', {}).get('videoId')]
+    buckets = [{'name': bucket, 'token': None, 'pages': 0, 'done': False}
+               for bucket in ('medium', 'long')]
+
+    def fetch_page(bucket):
+        nonlocal searches, quota_video_batches
+        params = dict(part='id', type='video', videoDuration=bucket['name'], order='viewCount',
+                      publishedAfter=after, maxResults=50, key=key)
+        if bucket['token']:
+            params['pageToken'] = bucket['token']
+        response = client.get(YOUTUBE_API + 'search', params, youtube=True)
+        searches += 1
+        bucket['pages'] += 1
+        page_ids = [item['id']['videoId'] for item in response.get('items', [])
+                    if item.get('id', {}).get('videoId')]
         new_ids = [video_id for video_id in page_ids if video_id not in seen_ids]
         seen_ids.update(new_ids)
-        ids.extend(new_ids)
+        for video_id in new_ids:
+            id_buckets[video_id] = bucket['name']
         if new_ids:
             records.extend(youtube_videos(client, key, new_ids))
             quota_video_batches += (len(new_ids) + 49) // 50
-        videos = [video_record(item) for item in records]
-        videos = [v for v in videos if v['duration_seconds'] >= 60]
+        bucket['token'] = response.get('nextPageToken')
+        bucket['done'] = not bucket['token']
+
+    def accepted():
+        videos = []
+        dropped_short = dropped_vertical = 0
+        for item in records:
+            if duration(item.get('contentDetails', {}).get('duration')) < 60:
+                dropped_short += 1
+            elif not landscape_video(item):
+                dropped_vertical += 1
+            else:
+                videos.append(video_record(item))
         videos.sort(key=lambda v: (-v['view_count'], v['id']))
+        return videos, dropped_short, dropped_vertical
+
+    # Give both API duration buckets a small, predictable base budget.
+    for _ in range(2):
+        for bucket in buckets:
+            if not bucket['done']:
+                fetch_page(bucket)
+                videos, dropped_short, dropped_vertical = accepted()
+                if len(videos) >= 100:
+                    break
         if len(videos) >= 100:
             break
-        token = response.get('nextPageToken')
-        if not token: break
+
+    # If the base budget is short, spend one more search page on the bucket
+    # with fewer landscape keepers. This caps search.list at five calls.
+    if len(videos) < 100 and searches < 5:
+        available = [bucket for bucket in buckets if not bucket['done']]
+        if available:
+            keepers = {bucket['name']: 0 for bucket in buckets}
+            for item in records:
+                if duration(item.get('contentDetails', {}).get('duration')) >= 60 and landscape_video(item):
+                    keepers[id_buckets.get(item.get('id'), available[0]['name'])] += 1
+            bucket = min(available, key=lambda b: (keepers[b['name']], b['name']))
+            fetch_page(bucket)
+            videos, dropped_short, dropped_vertical = accepted()
+
     payload = dict(generated_at=iso_now(), window_days=30, exclude_shorts_under_seconds=60,
+                   candidates_fetched=len(records), dropped_short=dropped_short,
+                   dropped_vertical=dropped_vertical, landscape_only=True,
+                   video_duration_buckets=['medium', 'long'], final_count=len(videos[:100]),
                    quota_units_approx=searches * 100 + quota_video_batches, videos=videos[:100])
     write_feed('trending', payload, output)
-    print(f"Trending: {len(payload['videos'])} videos; approximate YouTube quota units: {payload['quota_units_approx']}")
+    print(f"Trending: {len(payload['videos'])} landscape videos from {payload['candidates_fetched']} candidates; dropped {payload['dropped_short']} short and {payload['dropped_vertical']} vertical/unknown; approximate YouTube quota units: {payload['quota_units_approx']}")
     return payload
 
 def _normal(value):
