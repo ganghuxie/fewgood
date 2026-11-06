@@ -1,0 +1,213 @@
+# Curated AI company/creator YouTube channels (from X handles, verified).
+# Refresh with: python -m ytrec resolve-ai-channels  (then re-check mismatches)
+channels:
+- name: OpenAI
+  x: OpenAI
+  youtube_channel_id: UCXZCJLdBC09xxGZ6gcdrc6A
+  youtube_title: OpenAI
+  resolved_via: forHandle
+- name: Anthropic
+  x: AnthropicAI
+  youtube_channel_id: UCrDwWp7EBBv4NwvScIpBDOA
+  youtube_title: Anthropic
+  resolved_via: search
+- name: Google DeepMind
+  x: GoogleDeepMind
+  youtube_channel_id: UCP7jMXSY2xbc3KCAE0MHQ-A
+  youtube_title: Google DeepMind
+  resolved_via: forHandle
+- name: AI at Meta
+  x: AIatMeta
+  youtube_channel_id: UC5qxlwEKM7-5YZudb24l0bg
+  youtube_title: AI at Meta
+  resolved_via: forHandle
+- name: NVIDIA
+  x: nvidia
+  youtube_channel_id: UCHuiy8bXnmK5nisYHUd1J5g
+  youtube_title: NVIDIA
+  resolved_via: forHandle
+- name: Hugging Face
+  x: huggingface
+  youtube_channel_id: UCHlNU7kIZhRgSbhHvFoy72w
+  youtube_title: Hugging Face
+  resolved_via: forHandle
+- name: Stability AI
+  x: StabilityAI
+  youtube_channel_id: UCrhOqMww3ItTHOKxtYM56cg
+  youtube_title: 'Stability AI '
+  resolved_via: forHandle
+- name: Midjourney
+  x: midjourney
+  youtube_channel_id: UCldFPBqAVrok5DPUQeSMEqQ
+  youtube_title: Midjourney
+  resolved_via: forHandle
+- name: DeepLearning.AI
+  x: DeepLearningAI
+  youtube_channel_id: UCcIXc5mJsHVYTZR1maL5l9w
+  youtube_title: DeepLearningAI
+  resolved_via: forHandle
+- name: Mistral AI
+  x: MistralAI
+  youtube_channel_id: UCRaz_dquopKtb4ptswKcxTA
+  youtube_title: mistralai
+  resolved_via: forHandle
+- name: Cohere
+  x: cohere
+  youtube_channel_id: UCAKTUy0tz47ZY02DFpxMqoQ
+  youtube_title: Cohere
+  resolved_via: search
+- name: Perplexity
+  x: perplexity_ai
+  youtube_channel_id: UCTSqI4c58ffN6l5Mbdat6dg
+  youtube_title: Perplexity
+  resolved_via: forHandle
+- name: Runway
+  x: runwayml
+  youtube_channel_id: UCUBqu_z5uP0AZhYtuyFZB3g
+  youtube_title: Runway
+  resolved_via: forHandle
+- name: ElevenLabs
+  x: ElevenLabs
+  youtube_channel_id: UC-ew9TfeD887qUSiWWAAj1w
+  youtube_title: ElevenLabs
+  resolved_via: forHandle
+- name: Character.AI
+  x: character_ai
+  youtube_channel_id: UCwU4GDx7DC7eUVtgTuI4zeA
+  youtube_title: Character Ai
+  resolved_via: forHandle
+- name: Scale AI
+  x: scale_AI
+  youtube_channel_id: UCAHS4cP-uIXdrpCsSfGq_OA
+  youtube_title: Scale
+  resolved_via: forHandle
+- name: Together AI
+  x: togethercompute
+  youtube_channel_id: UCgiSqzt-AFeQFa6-pAxTIvA
+  youtube_title: Together AI
+  resolved_via: search
+- name: Cursor
+  x: cursor_ai
+  youtube_channel_id: UC6YYHJzM6PhZ2Yey9BQiUaw
+  youtube_title: Cursor
+  resolved_via: forHandle
+- name: LangChain
+  x: LangChain
+  youtube_channel_id: UCC-lyoTfSrcJzA1ab3APAgw
+  youtube_title: LangChain
+  resolved_via: forHandle
+- name: Pinecone
+  x: pinecone
+  youtube_channel_id: UCulYMQ-GOvXkDeoxFojwKQw
+  youtube_title: Pinecone
+  resolved_via: forHandle
+- name: AI Engineer
+  x: aiDotEngineer
+  youtube_channel_id: UCLKPca3kwwd-B59HNr-_lvA
+  youtube_title: AI Engineer
+  resolved_via: forHandle
+- name: The Rundown AI
+  x: TheRundownAI
+  youtube_channel_id: UC8LUzR34nNX8KH3Edd0un1g
+  youtube_title: The Rundown AI
+  resolved_via: forHandle
+- name: Latent Space
+  x: latentspacepod
+  youtube_channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ
+  youtube_title: Latent Space
+  resolved_via: forHandle
+- name: Andrej Karpathy
+  x: karpathy
+  youtube_channel_id: UCe4jUOmQPKMDvOkzJpDfMRQ
+  youtube_title: karpathy
+  resolved_via: forHandle
+- name: Andrew Ng
+  x: AndrewYNg
+  youtube_channel_id: UC0nw93YVMDAuABkfDexpF2Q
+  youtube_title: andrewyng
+  resolved_via: forHandle
+- name: Yann LeCun
+  x: ylecun
+  youtube_channel_id: UCMU7l2bIv6MXlgJR3-E33Dw
+  youtube_title: Yann LeCun
+  resolved_via: search
+- name: François Chollet
+  x: fchollet
+  youtube_channel_id: UC820bCs6DQWEozZnLeBPpaQ
+  youtube_title: François Chollet
+  resolved_via: forHandle
+- name: Greg Brockman
+  x: gdb
+  youtube_channel_id: UCF3n5QTuQ6qel9kEZ6JWO7g
+  youtube_title: Greg Brockman
+  resolved_via: search
+- name: Jack Clark
+  x: jackclarkSF
+  youtube_channel_id: UCNFv-eBKW_xhTCiziy8zjJA
+  youtube_title: Jack Clark
+  resolved_via: forHandle
+- name: Jim Fan
+  x: DrJimFan
+  youtube_channel_id: UC4vr9HaKGCYLmmiCXnzac7A
+  youtube_title: Dr. Jim Fan
+  resolved_via: forHandle
+- name: hardmaru
+  x: hardmaru
+  youtube_channel_id: UCw-ZrGIgic129_VsuwUHWFg
+  youtube_title: hard maru
+  resolved_via: search
+- name: Lex Fridman
+  x: lexfridman
+  youtube_channel_id: UCSHZKyawb77ixDdsGog4iWA
+  youtube_title: Lex Fridman
+  resolved_via: forHandle
+- name: Two Minute Papers
+  x: twominutepapers
+  youtube_channel_id: UCbfYPyITQ-7l4upoX8nvctg
+  youtube_title: Two Minute Papers
+  resolved_via: forHandle
+- name: Sentdex
+  x: Sentdex
+  youtube_channel_id: UCfzlCWGWYyIQ0aLC5w48gBQ
+  youtube_title: sentdex
+  resolved_via: forHandle
+- name: 3Blue1Brown
+  x: 3blue1brown
+  youtube_channel_id: UCYO_jab_esuFRV4b17AJtAw
+  youtube_title: 3Blue1Brown
+  resolved_via: forHandle
+- name: AI Explained
+  x: AIExplainedYT
+  youtube_channel_id: UCNJ1Ymd5yFuUPtn21xtRbbw
+  youtube_title: AI Explained
+  resolved_via: search
+- name: Siraj Raval
+  x: sirajraval
+  youtube_channel_id: UCWN3xxRkmTPmbKwht9FuE5A
+  youtube_title: Siraj Raval
+  resolved_via: forHandle
+- name: swyx
+  x: swyx
+  youtube_channel_id: UC50YKpKY_2Y86Qo4DZY3mMQ
+  youtube_title: Swyx
+  resolved_via: forHandle
+- name: Ethan Mollick
+  x: emollick
+  youtube_channel_id: UCuEvINOL2TLekZeeCk50Yug
+  youtube_title: Ethan Mollick
+  resolved_via: search
+- name: Rowan Cheung
+  x: rowancheung
+  youtube_channel_id: UCt6l0E-bBC1Z4d7C3qgh3cA
+  youtube_title: Rowan Cheung
+  resolved_via: forHandle
+- name: Linus Ekenstam
+  x: LinusEkenstam
+  youtube_channel_id: UCFnSHboIJpG6-hriXMyHvYg
+  youtube_title: Linus Ekenstam
+  resolved_via: forHandle
+- name: Mckay Wrigley
+  x: mckaywrigley
+  youtube_channel_id: UCXZFVVCFahewxr3est7aT7Q
+  youtube_title: Mckay Wrigley
+  resolved_via: search

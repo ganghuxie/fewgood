@@ -1,0 +1,62 @@
+# Curated from X lookups (2026-11-06). Codex resolves YouTube channel IDs into ai_channels.yaml.
+# Keep ~40–80; drop accounts with no YouTube channel after resolution.
+accounts:
+  # Companies / labs
+  - { name: OpenAI, x: OpenAI }
+  - { name: Anthropic, x: AnthropicAI }
+  - { name: Google DeepMind, x: GoogleDeepMind }
+  - { name: Google AI, x: GoogleAI }
+  - { name: AI at Meta, x: AIatMeta }
+  - { name: NVIDIA, x: nvidia }
+  - { name: Hugging Face, x: huggingface }
+  - { name: Stability AI, x: StabilityAI }
+  - { name: Midjourney, x: midjourney }
+  - { name: DeepLearning.AI, x: DeepLearningAI }
+  - { name: Mistral AI, x: MistralAI }
+  - { name: Cohere, x: cohere }
+  - { name: Perplexity, x: perplexity_ai }
+  - { name: Runway, x: runwayml }
+  - { name: ElevenLabs, x: ElevenLabs }
+  - { name: Character.AI, x: character_ai }
+  - { name: Scale AI, x: scale_AI }
+  - { name: Together AI, x: togethercompute }
+  - { name: Replicate, x: replicate }
+  - { name: Cursor, x: cursor_ai }
+  - { name: LangChain, x: LangChain }
+  - { name: Weights & Biases, x: wandb }
+  - { name: Pinecone, x: pinecone }
+  - { name: GitHub, x: github }
+  - { name: Microsoft, x: Microsoft }
+  - { name: IBM, x: IBM }
+  - { name: AI Engineer, x: aiDotEngineer }
+  - { name: The Rundown AI, x: TheRundownAI }
+  - { name: Latent Space, x: latentspacepod }
+  - { name: Claude, x: claudeai }
+  # Researchers / founders
+  - { name: Andrej Karpathy, x: karpathy }
+  - { name: Andrew Ng, x: AndrewYNg }
+  - { name: Yann LeCun, x: ylecun }
+  - { name: Demis Hassabis, x: demishassabis }
+  - { name: Fei-Fei Li, x: drfeifei }
+  - { name: François Chollet, x: fchollet }
+  - { name: Sam Altman, x: sama }
+  - { name: Greg Brockman, x: gdb }
+  - { name: Ilya Sutskever, x: ilyasut }
+  - { name: Dario Amodei, x: DarioAmodei }
+  - { name: Jack Clark, x: jackclarkSF }
+  - { name: Clem Delangue, x: ClementDelangue }
+  - { name: Jim Fan, x: DrJimFan }
+  - { name: hardmaru, x: hardmaru }
+  - { name: Alex Albert, x: alexalbert__ }
+  # Creators / educators / podcasts
+  - { name: Lex Fridman, x: lexfridman }
+  - { name: Two Minute Papers, x: twominutepapers }
+  - { name: Sentdex, x: Sentdex }
+  - { name: 3Blue1Brown, x: 3blue1brown }
+  - { name: AI Explained, x: AIExplainedYT }
+  - { name: Siraj Raval, x: sirajraval }
+  - { name: swyx, x: swyx }
+  - { name: Ethan Mollick, x: emollick }
+  - { name: Rowan Cheung, x: rowancheung }
+  - { name: Linus Ekenstam, x: LinusEkenstam }
+  - { name: Mckay Wrigley, x: mckaywrigley }

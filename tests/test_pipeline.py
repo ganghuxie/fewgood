@@ -2,7 +2,7 @@ import json
 import re
 import yaml
 from pathlib import Path
-from ytrec.core import connect, crawl, extract, aggregate, recommendation_gates, metadata_gates, duration, enrich, report, stamp
+from ytrec.core import connect, crawl, extract, aggregate, recommendation_gates, metadata_gates, duration, enrich, report, stamp, trending_feed
 import pytest
 
 @pytest.fixture
@@ -138,6 +138,44 @@ def test_recommendation_boundaries(config):
     assert not any(recommendation_gates(v,c).values())
     c['sources']['enabled']=True
     assert recommendation_gates(v,c)['sources']
+
+def test_trending_feed_filters_shorts_and_writes_json(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_' + 'API_KEY', 'test-only')
+    class YT:
+        def get(self, url, params, youtube=False):
+            if url.endswith('search'):
+                return {'items': [{'id': {'videoId': 'long'}}, {'id': {'videoId': 'short'}}]}
+            return {'items': [
+                dict(raw(), id='long', statistics={'viewCount': '9'}),
+                dict(raw(), id='short', contentDetails={'duration': 'PT59S'}, statistics={'viewCount': '99'}),
+            ]}
+    result = trending_feed(YT(), tmp_path)
+    assert result['videos'][0]['id'] == 'long'
+    saved = json.loads((tmp_path / 'trending.json').read_text())
+    assert saved['exclude_shorts_under_seconds'] == 60
+
+def test_trending_feed_fetches_more_pages_after_shorts(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_' + 'API_KEY', 'test-only')
+    class YT:
+        searches = 0
+        def get(self, url, params, youtube=False):
+            if url.endswith('search'):
+                self.searches += 1
+                page = self.searches - 1
+                return {
+                    'items': [{'id': {'videoId': f'v{page * 50 + i}'}} for i in range(50)],
+                    **({'nextPageToken': f'p{self.searches}'} if self.searches < 3 else {}),
+                }
+            ids = params['id'].split(',')
+            return {'items': [dict(raw(), id=video_id,
+                                   contentDetails={'duration': 'PT59S'} if video_id.startswith('v0') else {'duration': 'PT5M'},
+                                   statistics={'viewCount': str(i)}) for i, video_id in enumerate(ids)]}
+
+    client = YT()
+    result = trending_feed(client, tmp_path)
+    assert client.searches == 3
+    assert len(result['videos']) == 100
+    assert result['quota_units_approx'] == 303
 
 
 @pytest.mark.parametrize('stall_at', ['headers', 'body'])

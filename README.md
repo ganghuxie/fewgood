@@ -1,6 +1,6 @@
 # Long Echo · HN × YouTube
 
-Phase 1: discover YouTube videos repeatedly linked by independent Hacker News users over time. Views and likes are stored in the metadata cache but never used for selection or sorting. Reddit, sentiment analysis, AI classification and scheduled updates are outside this phase.
+Long Echo has three compact, AnliBili-inspired sections: **推荐** (`/`) is the most-viewed long-form YouTube videos published in the last 30 days; **AI** (`/ai/`) is recent long-form uploads from a curated AI-channel list; and **社区好评** (`/community/`) is the original Hacker News long-term recommendation list. The community criteria are unchanged and its people/newest sorts remain under that tab.
 
 ## Setup and full run
 
@@ -14,6 +14,21 @@ npm ci --prefix site
 python -m pytest -q
 python -m ytrec all
 ```
+
+## Refreshing the YouTube feeds
+
+The published site uses committed JSON and CI never needs a YouTube credential. In a shell with `YOUTUBE_API_KEY` set (do not commit a `.env`), refresh manually:
+
+```bash
+python -m ytrec resolve-ai-channels  # seed X accounts -> config/ai_channels.yaml
+python -m ytrec trending             # -> site/src/data/trending.json
+python -m ytrec ai                   # -> site/src/data/ai.json
+python -m ytrec build-site           # builds from committed community/feed data
+```
+
+`trending` uses two `search.list` pages (a third only when needed) with `order=viewCount` and `publishedAfter=30d`, then batches `videos.list`. It reports an approximate quota cost: search calls cost roughly 100 units each and video batches roughly one. Both YouTube feeds exclude videos shorter than 60 seconds (Shorts). `resolve-ai-channels` tries cheap `channels.list?forHandle=` lookups first and caps expensive channel searches at 40; unresolved accounts are dropped. The seed contains the editorial AI company, researcher, creator, and podcast candidates; `ai_channels.yaml` is the resolved, reviewed tracking file.
+
+Cards open a privacy-enhanced in-site player at `/v/<videoId>/?from=trending|ai|community` (under Pages: `/yt-recommended/v/<videoId>/…`). The `from` query selects the source feed's metadata and related list; the page also provides a clear **进入 YouTube 观看** link for opening YouTube in a new tab.
 
 For a site-only local preview from the committed `site/src/data/videos.json`, build with root-relative URLs and serve the output:
 
@@ -37,7 +52,7 @@ python -m ytrec report
 python -m ytrec build-site
 ```
 
-`all` runs crawl → extract → aggregate → enrich → report → Astro build. `build-site` regenerates the report/data before building. `aggregate` also writes `data/aggregates.json`. All commands accept `--config PATH`. Dates are inclusive start / exclusive end, UTC ISO dates or timestamps. Use `--refresh-metadata` with `enrich` or `all` to refresh eligible cached videos; otherwise the metadata cache expires after 30 days. Build/report do not contact YouTube; rerun enrichment to check availability.
+`all` runs crawl → extract → aggregate → enrich → report → Astro build. `build-site` regenerates the community report/data before building; it does not refresh the recommendation or AI feeds. `aggregate` also writes `data/aggregates.json`. All commands accept `--config PATH`. Dates are inclusive start / exclusive end, UTC ISO dates or timestamps. Use `--refresh-metadata` with `enrich` or `all` to refresh eligible cached videos; otherwise the metadata cache expires after 30 days. Build/report do not contact YouTube; rerun enrichment to check availability.
 
 ## Criteria
 
@@ -58,7 +73,8 @@ Requests start at least one second apart, including retries; 429/5xx and transpo
 - `reports/report.json`: complete metrics, effective config and 25 what-if settings (5/10/20/30/50 people × 6/12/24/36/48 months, 365-day span).
 - `reports/report.md`: human-readable summary and what-if table.
 - `site/src/data/videos.json`: selected videos, quotes, metrics, report snapshot.
-- `site/dist/`: static Astro site, thumbnails, 2–3 quotes when available, HN links and 50-card static pages for most recommenders (`/`, `/page/2/`, …) and newest selected (`/newest/`, `/newest/page/2/`, …). Selection timestamps record the first successful report inclusion. Most recommenders sorts by people then months; newest selected sorts by first selection date then latest HN mention. Video ID breaks ties.
+- `site/src/data/trending.json` and `site/src/data/ai.json`: deployed YouTube feed snapshots, with source window, Shorts cutoff and approximate quota use.
+- `site/dist/`: static 20-card pages for 推荐 (`/`, `/page/2/`), AI (`/ai/`, `/ai/page/2/`) and 社区好评 (`/community/`, `/community/page/2/`; newest at `/community/newest/`). Community selection timestamps record the first successful report inclusion. Its most-recommenders sort uses people then months; newest uses first selection date then latest HN mention.
 
 Gate drop counts are independent and can overlap. Metadata-unavailable includes missing cache entries and API-confirmed unavailable/private/unprocessed videos. What-if rows report recommendation candidates, selected with cached metadata, and uncached unknowns separately; they are lower bounds, not estimates of unknown outcomes. The defaults are never relaxed to reach 100. All passing videos are displayed, with actual count even below or above 100.
 

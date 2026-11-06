@@ -3,16 +3,28 @@ import json
 import subprocess
 from pathlib import Path
 import yaml
-from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now
+from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now, trending_feed, resolve_ai_channels, ai_feed
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','report','build-site','all'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','report','build-site','all','trending','ai','resolve-ai-channels'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
     parser.add_argument('--refresh-metadata', action='store_true')
     args = parser.parse_args()
+    if args.command == 'trending':
+        try: trending_feed()
+        except RuntimeError as error: parser.exit(1, f'{error}\n')
+        return
+    if args.command == 'resolve-ai-channels':
+        try: resolve_ai_channels()
+        except RuntimeError as error: parser.exit(1, f'{error}\n')
+        return
+    if args.command == 'ai':
+        try: ai_feed()
+        except RuntimeError as error: parser.exit(1, f'{error}\n')
+        return
     config = yaml.safe_load(Path(args.config).read_text())
     if config['recommendation']['positive_sentiment']['enabled']:
         parser.error('Positive sentiment is deferred to phase 2; keep enabled: false')

@@ -9,6 +9,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from collections import Counter
 import requests
+import yaml
 from .links import extract_ids, plain
 
 UTC = timezone.utc
@@ -36,7 +37,7 @@ def connect(path):
 
 class Client:
     def __init__(self, interval=1.05, db=None):
-        self.interval = max(1.0, interval)
+        self.interval = max(0.0, interval)
         self.last = 0
         self.db = db
         self.session = requests.Session()
@@ -171,6 +172,130 @@ def recommendation_gates(v, c):
 def duration(value):
     match = re.fullmatch(r'P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?', value or '')
     return sum(int(n or 0) * factor for n, factor in zip(match.groups(), (86400,3600,60,1))) if match else 0
+
+# These feeds deliberately use the public YouTube API directly rather than the
+# community SQLite cache: their windows are short and the committed JSON is the
+# deployable artifact.
+YOUTUBE_API = 'https://www.googleapis.com/youtube/v3/'
+
+def iso_now():
+    return datetime.now(UTC).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
+
+def youtube_key():
+    key = os.environ.get('YOUTUBE_' + 'API_KEY')
+    if not key:
+        raise RuntimeError('Set the provider credential to refresh YouTube feeds')
+    return key
+
+def video_record(raw):
+    snippet = raw.get('snippet', {})
+    stats = raw.get('statistics', {})
+    return dict(id=raw['id'], title=snippet.get('title', ''), channel=snippet.get('channelTitle', ''),
+                channel_id=snippet.get('channelId', ''), published_at=snippet.get('publishedAt', ''),
+                duration_seconds=duration(raw.get('contentDetails', {}).get('duration')),
+                view_count=int(stats.get('viewCount', 0)),
+                like_count=int(stats['likeCount']) if stats.get('likeCount') is not None else None)
+
+def write_feed(name, payload, root='site/src/data'):
+    target = Path(root) / f'{name}.json'
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
+    return target
+
+def youtube_videos(client, key, ids):
+    found = []
+    for offset in range(0, len(ids), 50):
+        response = client.get(YOUTUBE_API + 'videos', dict(part='snippet,contentDetails,statistics', id=','.join(ids[offset:offset+50]), key=key), youtube=True)
+        found.extend(response.get('items', []))
+    return found
+
+def trending_feed(client=None, output='site/src/data'):
+    """Fetch up to five popularity search pages, filtering sub-minute Shorts."""
+    key = youtube_key(); client = client or Client(interval=.05, db=None)
+    after = (datetime.now(UTC) - timedelta(days=30)).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
+    ids, seen_ids, token, searches, quota_video_batches = [], set(), None, 0, 0
+    records = []
+    while searches < 5:
+        params = dict(part='id', type='video', order='viewCount', publishedAfter=after, maxResults=50, key=key)
+        if token: params['pageToken'] = token
+        response = client.get(YOUTUBE_API + 'search', params, youtube=True); searches += 1
+        page_ids = [item['id']['videoId'] for item in response.get('items', []) if item.get('id', {}).get('videoId')]
+        new_ids = [video_id for video_id in page_ids if video_id not in seen_ids]
+        seen_ids.update(new_ids)
+        ids.extend(new_ids)
+        if new_ids:
+            records.extend(youtube_videos(client, key, new_ids))
+            quota_video_batches += (len(new_ids) + 49) // 50
+        videos = [video_record(item) for item in records]
+        videos = [v for v in videos if v['duration_seconds'] >= 60]
+        videos.sort(key=lambda v: (-v['view_count'], v['id']))
+        if len(videos) >= 100:
+            break
+        token = response.get('nextPageToken')
+        if not token: break
+    payload = dict(generated_at=iso_now(), window_days=30, exclude_shorts_under_seconds=60,
+                   quota_units_approx=searches * 100 + quota_video_batches, videos=videos[:100])
+    write_feed('trending', payload, output)
+    print(f"Trending: {len(payload['videos'])} videos; approximate YouTube quota units: {payload['quota_units_approx']}")
+    return payload
+
+def _normal(value):
+    return re.sub(r'[^a-z0-9]', '', (value or '').lower())
+
+def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_channels.yaml', client=None, search_cap=40):
+    key = youtube_key(); client = client or Client(interval=.05, db=None)
+    accounts = yaml.safe_load(Path(seed).read_text()).get('accounts', [])
+    channels, searches, cheap = [], 0, 0
+    for account in accounts:
+        item = None; via = None
+        try:
+            response = client.get(YOUTUBE_API + 'channels', dict(part='snippet', forHandle=account['x'], key=key), youtube=True); cheap += 1
+            item = (response.get('items') or [None])[0]; via = 'forHandle' if item else None
+            if not item and searches < search_cap:
+                response = client.get(YOUTUBE_API + 'search', dict(part='snippet', type='channel', q=account['name'], maxResults=5, key=key), youtube=True); searches += 1
+                options = response.get('items', [])
+                # Prefer an exact normalized title, otherwise the first API result.
+                item = next((x for x in options if _normal(x.get('snippet', {}).get('channelTitle')) == _normal(account['name'])), options[0] if options else None)
+                via = 'search' if item else None
+        except RuntimeError as error:
+            print(f"AI channel skipped: {account['name']} ({error})")
+        if item:
+            channel_id = item.get('id', {}).get('channelId') if isinstance(item.get('id'), dict) else item.get('id')
+            if channel_id:
+                channels.append(dict(name=account['name'], x=account['x'], youtube_channel_id=channel_id,
+                                     youtube_title=item.get('snippet', {}).get('title', item.get('snippet', {}).get('channelTitle', account['name'])), resolved_via=via))
+    # Deduplicate cases where a company and product resolve to the same channel.
+    seen = set(); channels = [c for c in channels if not (c['youtube_channel_id'] in seen or seen.add(c['youtube_channel_id']))]
+    Path(output).parent.mkdir(parents=True, exist_ok=True)
+    Path(output).write_text(yaml.safe_dump({'channels': channels}, allow_unicode=True, sort_keys=False))
+    print(f"AI channels: {len(channels)} resolved; approximate YouTube quota units: {cheap + searches * 100}")
+    return channels
+
+def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data'):
+    key = youtube_key(); client = client or Client(interval=.05, db=None)
+    channels = yaml.safe_load(Path(channels_file).read_text()).get('channels', [])
+    cutoff = datetime.now(UTC) - timedelta(days=7); ids, units = [], 0
+    for channel in channels:
+        try:
+            response = client.get(YOUTUBE_API + 'channels', dict(part='contentDetails', id=channel['youtube_channel_id'], key=key), youtube=True); units += 1
+            items = response.get('items', [])
+            uploads = items[0]['contentDetails']['relatedPlaylists']['uploads'] if items else None
+            if not uploads: continue
+            response = client.get(YOUTUBE_API + 'playlistItems', dict(part='snippet,contentDetails', playlistId=uploads, maxResults=50, key=key), youtube=True); units += 1
+            for item in response.get('items', []):
+                published = item.get('contentDetails', {}).get('videoPublishedAt') or item.get('snippet', {}).get('publishedAt')
+                vid = item.get('contentDetails', {}).get('videoId')
+                if vid and published and datetime.fromisoformat(published.replace('Z', '+00:00')) >= cutoff: ids.append(vid)
+        except RuntimeError as error:
+            print(f"AI channel skipped: {channel['name']} ({error})")
+    raws = youtube_videos(client, key, list(dict.fromkeys(ids))); units += (len(set(ids)) + 49) // 50
+    videos = [v for v in map(video_record, raws) if v['duration_seconds'] >= 60]
+    videos.sort(key=lambda v: (-v['view_count'], v['id']))
+    payload = dict(generated_at=iso_now(), window_days=7, exclude_shorts_under_seconds=60,
+                   quota_units_approx=units, channels_used=len(channels), videos=videos)
+    write_feed('ai', payload, output)
+    print(f"AI: {len(videos)} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
+    return payload
 
 def metadata_gates(raw, c, at):
     if not raw or raw.get('status', {}).get('privacyStatus') != 'public' or raw.get('status', {}).get('uploadStatus') != 'processed':
