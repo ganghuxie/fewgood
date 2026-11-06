@@ -6,16 +6,42 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Layout title={`${title} · ${SITE_NAME}`}><section class="library-page" data-kind={kind} data-base={base}><div class="library-heading"><h1>{title}</h1>{kind === 'history' && <button class="clear" data-clear>清空历史</button>}</div><p class="empty" data-empty>{empty}</p><div class="video-grid library-list" data-list></div></section></Layout>
 <script>
- import { KEYS, list as libraryList, migrate, remove, set } from '../scripts/library.js';
+ import { KEYS, list as libraryList, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
  const root = document.querySelector('[data-kind]'), kind = root.dataset.kind, key = KEYS[kind], base = root.dataset.base;
  const list = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]');
  const duration = n => `${Math.floor((n || 0) / 60)}:${String((n || 0) % 60).padStart(2, '0')}`;
  const esc = value => String(value || '').replace(/[&<>"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[char]));
  const avatar = (channel, name) => { const title = channel?.title || name || '频道'; const letter = [...title.trim()][0] || '频'; let hash = 0; for (const character of title) hash = (hash * 31 + character.codePointAt(0)) >>> 0; const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7]; return channel?.thumbnail ? `<img class="channel-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; };
- const render = snapshots => { empty.hidden = snapshots.length > 0; list.innerHTML = snapshots.map(video => `<article class="video-card"><a href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(video.thumbnail || `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`)}" alt=""><span class="duration">${duration(video.duration)}</span></div></a><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div><a class="video-title" href="${base}/v/${video.id}/">${esc(video.title || video.id)}</a><p class="video-meta">${esc(video.channel)}</p></div></div><button aria-label="移除" data-remove="${video.id}">×</button></article>`).join(''); list.querySelectorAll('[data-remove]').forEach(button => button.onclick = () => { remove(key, button.dataset.remove); render(libraryList(key)); }); };
+ let seenObserver;
+ const observeSeen = () => {
+   if (kind !== 'watchLater') return;
+   seenObserver?.disconnect();
+   seenObserver = new IntersectionObserver(entries => {
+     entries.forEach(entry => {
+       if (!entry.isIntersecting || entry.intersectionRatio < 0.6) return;
+       const id = entry.target.getAttribute('data-id');
+       if (markWatchLaterSeen(id)) updateBadges();
+       seenObserver.unobserve(entry.target);
+     });
+   }, { threshold: 0.6 });
+   list.querySelectorAll('article[data-id]').forEach(node => seenObserver.observe(node));
+ };
+ const render = snapshots => {
+   empty.hidden = snapshots.length > 0;
+   list.innerHTML = snapshots.map(video => `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(video.thumbnail || `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`)}" alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div><h2 class="video-title">${esc(video.title || video.id)}</h2><p class="video-meta">${esc(video.channel)}</p></div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`).join('');
+   list.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); event.stopPropagation(); remove(key, button.dataset.remove); render(libraryList(key)); });
+   observeSeen();
+   updateBadges();
+ };
  Promise.all([fetch(`${base}/catalog.json`).then(response => response.json()), fetch(`${base}/channels.json`).then(response => response.json())]).then(([catalog, channelData]) => { migrate(key, catalog, channelData); render(libraryList(key)); }).catch(() => render(libraryList(key)));
  root.querySelector('[data-clear]')?.addEventListener('click', () => { set(key, []); render([]); });
 </script>
 <style>
-.library-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.library-heading h1{font-size:26px;margin:0}.clear{border:0;background:#f2f2f2;border-radius:18px;padding:9px 14px;cursor:pointer}.empty{color:#606060;padding:36px 0;text-align:center}.library-list article{position:relative}.library-list button{position:absolute;right:7px;top:calc(56.25% - 30px);border:0;background:#0f0f0fcc;color:#fff;width:26px;height:26px;border-radius:50%;font-size:20px;line-height:20px;cursor:pointer}
+.library-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.library-heading h1{font-size:26px;margin:0}.clear{border:0;background:#f2f2f2;border-radius:18px;padding:9px 14px;cursor:pointer;color:#0f0f0f}.empty{color:#606060;padding:36px 0;text-align:center}
+:global(.library-list article){position:relative}
+:global(.library-list .card-link){display:block;color:#0f0f0f;text-decoration:none}
+:global(.library-list .video-title){color:#0f0f0f;text-decoration:none}
+:global(.library-list .remove){position:absolute;right:8px;top:8px;border:0;background:#0f0f0fcc;color:#fff;width:32px;height:32px;border-radius:50%;font-size:22px;line-height:28px;cursor:pointer;opacity:0;transition:opacity .15s}
+:global(.library-list article:hover .remove){opacity:1}
+:global(.library-list .remove:hover){background:#cc0000}
 </style>

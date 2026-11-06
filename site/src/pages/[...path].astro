@@ -5,14 +5,26 @@ import podcast from '../data/podcast.json';
 import music from '../data/music.json';
 import community from '../data/videos.json';
 import VideoPage from '../components/VideoPage.astro';
-import { paginate, pageUrl } from '../lib/pagination.mjs';
+import { paginate, pageUrl, sortVideos } from '../lib/pagination.mjs';
 export function getStaticPaths() {
   const feeds = { trending, ai, podcast, music, community };
   const definitions = [['trending', 'people'], ['ai', 'people'], ['podcast', 'people'], ['music', 'people'], ['community', 'people'], ['community', 'newest']];
-  return definitions.flatMap(([section, sort]) => paginate(feeds[section].videos, section, sort).map(props => ({
-    params: { path: pageUrl(section, props.page, '', sort).replace(/^\/|\/$/g, '') || undefined },
-    props: { ...props, feed: feeds[section] },
-  })));
+  return definitions.flatMap(([section, sort]) => paginate(feeds[section].videos, section, sort).map(props => {
+    const path = pageUrl(section, props.page, '', sort).replace(/^\/|\/$/g, '') || undefined;
+    if (props.page === 1) {
+      return {
+        params: { path },
+        props: { ...props, allVideos: sortVideos(feeds[section].videos, section, sort), feed: feeds[section] },
+      };
+    }
+    // Old /page/N URLs redirect to the section root (harmless).
+    return {
+      params: { path },
+      props: { redirectTo: pageUrl(section, 1, '', sort) },
+    };
+  }));
 }
+const { redirectTo, ...pageProps } = Astro.props;
+if (redirectTo) return Astro.redirect(redirectTo);
 ---
-<VideoPage {...Astro.props} />
+<VideoPage {...pageProps} />

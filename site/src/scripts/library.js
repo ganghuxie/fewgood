@@ -1,5 +1,11 @@
 const PREFIX = 'youtuber:';
-export const KEYS = { favorites: `${PREFIX}favorites`, watchLater: `${PREFIX}watchLater`, history: `${PREFIX}history`, following: `${PREFIX}following` };
+export const KEYS = {
+  favorites: `${PREFIX}favorites`,
+  watchLater: `${PREFIX}watchLater`,
+  history: `${PREFIX}history`,
+  following: `${PREFIX}following`,
+  channelSeen: `${PREFIX}channelSeen`,
+};
 const raw = key => { try { const value = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(value) ? value : []; } catch { return []; } };
 const first = (...values) => values.find(value => value !== undefined && value !== null && value !== '');
 const incompleteTitle = (title, id) => !title || title === id;
@@ -16,7 +22,7 @@ const video = (item, catalog = {}, channels = {}) => {
     !incompleteTitle(source.title, id) ? source.title : undefined,
     catalog.title, id
   );
-  return {
+  const result = {
     id,
     title,
     thumbnail: first(source.thumbnail, source.thumb, catalog.thumbnail, catalog.thumb, id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ''),
@@ -29,6 +35,10 @@ const video = (item, catalog = {}, channels = {}) => {
     saved_at: first(source.saved_at, source.savedAt, Date.now()),
     ...(source.watchedAt ? { watchedAt: source.watchedAt } : {}),
   };
+  // Watch-later unseen: newly added items are unseen; preserve seen_at when present.
+  if (source.seen_at !== undefined) result.seen_at = source.seen_at;
+  else if (source.unseen === false) result.seen_at = source.seen_at || Date.now();
+  return result;
 };
 const channel = (item, source = {}) => {
   const id = typeof item === 'string' ? item : first(item?.id, item?.channelId);
@@ -69,7 +79,11 @@ export function toggleVideo(key, snapshot) {
   const item = video(snapshot);
   const present = has(key, item.id);
   if (present) remove(key, item.id);
-  else set(key, [item, ...get(key)]);
+  else {
+    // Newly added watch-later items are unseen (no seen_at).
+    if (key === KEYS.watchLater) delete item.seen_at;
+    set(key, [item, ...get(key)]);
+  }
   return !present;
 }
 export function toggle(key, idOrSnapshot) {
@@ -87,9 +101,51 @@ export function toggleChannel(snapshot) {
   return !present;
 }
 export const follow = toggleChannel;
+export function getChannelSeen(id) {
+  try {
+    const seen = JSON.parse(localStorage.getItem(KEYS.channelSeen) || '{}');
+    return seen && typeof seen === 'object' ? seen[id] || 0 : 0;
+  } catch { return 0; }
+}
+export function markChannelSeen(id, at = Date.now()) {
+  if (!id) return;
+  try {
+    const seen = JSON.parse(localStorage.getItem(KEYS.channelSeen) || '{}');
+    seen[id] = Math.max(Number(seen[id]) || 0, typeof at === 'number' ? at : Date.parse(at) || Date.now());
+    localStorage.setItem(KEYS.channelSeen, JSON.stringify(seen));
+  } catch { /* private browsing */ }
+}
+export function channelHasNew(channelId, latestPublishedAt) {
+  return has(KEYS.following, channelId) && !!latestPublishedAt && Date.parse(latestPublishedAt) > Number(getChannelSeen(channelId) || 0);
+}
+export function isWatchLaterUnseen(item) {
+  return !item?.seen_at;
+}
+export function unseenWatchLaterCount() {
+  return get(KEYS.watchLater).filter(isWatchLaterUnseen).length;
+}
+export function markWatchLaterSeen(id) {
+  if (!id) return false;
+  const items = get(KEYS.watchLater);
+  let changed = false;
+  const next = items.map(item => {
+    if (item.id !== id || item.seen_at) return item;
+    changed = true;
+    return { ...item, seen_at: Date.now() };
+  });
+  if (changed) set(KEYS.watchLater, next);
+  return changed;
+}
 export function updateBadges() {
   document.querySelectorAll('[data-library-count]').forEach(node => {
-    const count = ids(KEYS[node.dataset.libraryCount]).length;
+    const kind = node.dataset.libraryCount;
+    // Only 稍后再看 shows a badge, and only for unseen items.
+    if (kind !== 'watchLater') {
+      node.textContent = '';
+      node.hidden = true;
+      return;
+    }
+    const count = unseenWatchLaterCount();
     node.textContent = count || '';
     node.hidden = !count;
   });

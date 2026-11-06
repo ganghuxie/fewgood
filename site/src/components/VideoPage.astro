@@ -1,11 +1,11 @@
 ---
-import { pageUrl, pageNumbers, videoUrl } from '../lib/pagination.mjs';
+import { pageUrl, videoUrl, PAGE_SIZE } from '../lib/pagination.mjs';
 import Layout from './Layout.astro';
 import ChannelAvatar from './ChannelAvatar.astro';
 import channelData from '../data/channels.json';
 import zhData from '../data/zh.json';
 import { SITE_NAME } from '../lib/brand.mjs';
-const { videos, total, page, pages, section, sort, feed } = Astro.props;
+const { videos, total, page, section, sort, feed, allVideos = videos } = Astro.props;
 const channels = Object.fromEntries((channelData.channels || []).map(channel => [channel.id, channel]));
 const base = import.meta.env.BASE_URL;
 const community = section === 'community';
@@ -14,14 +14,37 @@ const duration = n => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`
 const compact = n => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(n || 0);
 const ago = value => { const days = Math.max(0, Math.floor((Date.now() - new Date(value).getTime()) / 86400000)); return days < 1 ? '今天' : days < 30 ? `${days}天前` : days < 365 ? `${Math.floor(days / 30)}个月前` : `${Math.floor(days / 365)}年前`; };
 const zhFor = id => community ? (zhData.videos || {})[id] : null;
+const feedData = allVideos.map(v => ({ ...v, channel_thumbnail: channels[v.channel_id]?.thumbnail || null, zh: zhFor(v.id) || null }));
 ---
 <Layout title={`${label} · ${SITE_NAME}`} active={section}>
   <section class="page-heading"><div><h1>{label}</h1><p>{community ? '来自社区长期推荐的视频' : section === 'ai' ? '值得一看的 AI 视频' : section === 'podcast' ? '正在被观看的播客' : section === 'music' ? '正在被观看的音乐' : '发现正在被观看的好视频'}</p></div><span>{total} 个视频</span></section>
   {community && <section class="sort-row"><span>{feed.summary.criteria.recommendation.min_recommenders}+ 人 · {feed.summary.criteria.recommendation.min_months}+ 个月</span><nav><a href={pageUrl('community', 1, base, 'people')} aria-current={sort === 'people' ? 'page' : undefined}>最多推荐</a><a href={pageUrl('community', 1, base, 'newest')} aria-current={sort === 'newest' ? 'page' : undefined}>最新入选</a></nav></section>}
-  <section class="video-grid">{videos.map(v => <a class="video-card" href={videoUrl(section, v.id, base)}><div class="thumbnail"><img loading="lazy" src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt=""/><span class="duration">{duration(v.duration_seconds)}</span></div><div class="video-info"><ChannelAvatar channel={channels[v.channel_id]} name={v.channel} /><div><h2 class="video-title">{v.title}</h2>{zhFor(v.id)?.title_zh && <p class="zh-title">{zhFor(v.id).title_zh}</p>}<p class="video-meta">{v.channel}</p><p class="video-meta">{community ? `${v.recommenders} 人推荐 · ${v.months} 个月` : `${compact(v.view_count)} 次观看 · ${ago(v.published_at)}`}</p>{zhFor(v.id)?.blurb_zh && <p class="zh-blurb">{zhFor(v.id).blurb_zh}</p>}</div></div></a>)}</section>
-  {pages > 1 && <nav class="pagination" aria-label="分页">{page > 1 && <a rel="prev" href={pageUrl(section, page - 1, base, sort)}>上一页</a>}{pageNumbers(page, pages).map(n => n === null ? <span>…</span> : <a href={pageUrl(section, n, base, sort)} aria-current={n === page ? 'page' : undefined}>{n}</a>)}{page < pages && <a rel="next" href={pageUrl(section, page + 1, base, sort)}>下一页</a>}</nav>}
+  <section class="video-grid" data-feed-grid data-section={section} data-sort={sort} data-page-size={PAGE_SIZE}>{videos.map(v => <a class="video-card" href={videoUrl(section, v.id, base)}><div class="thumbnail"><img loading="lazy" src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt=""/><span class="duration">{duration(v.duration_seconds)}</span></div><div class="video-info"><ChannelAvatar channel={channels[v.channel_id]} name={v.channel} /><div><h2 class="video-title">{v.title}</h2>{zhFor(v.id)?.title_zh && <p class="zh-title">{zhFor(v.id).title_zh}</p>}<p class="video-meta">{v.channel}</p><p class="video-meta">{community ? `${v.recommenders} 人推荐 · ${v.months} 个月` : `${compact(v.view_count)} 次观看 · ${ago(v.published_at)}`}</p>{zhFor(v.id)?.blurb_zh && <p class="zh-blurb">{zhFor(v.id).blurb_zh}</p>}</div></div></a>)}</section>
+  <div class="infinite-sentinel" data-infinite-sentinel aria-hidden="true"></div><div class="infinite-spinner" data-infinite-spinner hidden aria-live="polite">加载中…</div>
 </Layout>
+<script type="application/json" id="feed-data" set:html={JSON.stringify(feedData).replace(/</g, '\\u003c')}></script>
+<script>
+  const grid = document.querySelector('[data-feed-grid]');
+  const sentinel = document.querySelector('[data-infinite-sentinel]');
+  const spinner = document.querySelector('[data-infinite-spinner]');
+  const data = JSON.parse(document.querySelector('#feed-data').textContent);
+  const base = document.querySelector('main')?.dataset.base || '';
+  const pageSize = Number(grid.dataset.pageSize);
+  let cursor = grid.children.length;
+  let loading = false;
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const avatar = (video) => video.channel_thumbnail
+    ? `<img class="channel-avatar" src="${esc(video.channel_thumbnail)}" alt="">`
+    : (() => { const name = video.channel || '频道'; const letter = [...name.trim()][0] || '频'; let hash = 0; for (const ch of name) hash = (hash * 31 + ch.codePointAt(0)) >>> 0; const color = ['#d14b4b','#b06b2f','#8a6d1d','#4f8a3d','#357a8a','#5367a6','#7a5795'][hash % 7]; return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; })();
+  const ago = value => { const days = Math.max(0, Math.floor((Date.now() - new Date(value).getTime()) / 86400000)); return days < 1 ? '今天' : days < 30 ? `${days}天前` : days < 365 ? `${Math.floor(days / 30)}个月前` : `${Math.floor(days / 365)}年前`; };
+  const compact = value => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(value || 0);
+  const card = video => { const zh = video.zh || {}; const community = grid.dataset.section === 'community'; const link = document.createElement('a'); link.className = 'video-card'; link.href = `${base}/v/${video.id}/?from=${grid.dataset.section}`;
+    link.innerHTML = `<div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${video.id}/hqdefault.jpg" alt=""><span class="duration">${Math.floor(video.duration_seconds / 60)}:${String(video.duration_seconds % 60).padStart(2, '0')}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2>${zh.title_zh ? `<p class="zh-title">${esc(zh.title_zh)}</p>` : ''}<p class="video-meta">${esc(video.channel)}</p><p class="video-meta">${community ? `${video.recommenders} 人推荐 · ${video.months} 个月` : `${compact(video.view_count)} 次观看 · ${ago(video.published_at)}`}</p>${zh.blurb_zh ? `<p class="zh-blurb">${esc(zh.blurb_zh)}</p>` : ''}</div></div>`; return link; };
+  const load = async () => { if (loading || cursor >= data.length) return; loading = true; spinner.hidden = false; await new Promise(requestAnimationFrame); data.slice(cursor, cursor + pageSize).forEach(video => grid.append(card(video))); cursor += pageSize; loading = false; spinner.hidden = true; if (cursor >= data.length) observer.disconnect(); };
+  const observer = new IntersectionObserver(entries => { if (entries[0].isIntersecting) load(); }, { rootMargin: '500px' });
+  if (cursor < data.length) observer.observe(sentinel); else sentinel.remove();
+</script>
 <style>
 .page-heading{display:flex;justify-content:space-between;align-items:end;margin:6px 0 26px}.page-heading h1{font-size:28px;margin:0 0 6px}.page-heading p,.page-heading span{margin:0;color:#606060;font-size:14px}.sort-row{padding:12px 0;margin:-8px 0 22px;border-block:1px solid #e5e5e5;display:flex;justify-content:space-between;font-size:13px;color:#606060}.sort-row nav{display:flex;gap:16px}.sort-row a{text-decoration:none}.sort-row a[aria-current="page"]{color:#0f0f0f;font-weight:700}@media(max-width:600px){.sort-row{display:block}.sort-row nav{margin-top:10px}}
-.zh-title,.zh-blurb{margin:3px 0;color:#606060;font-size:13px;line-height:1.35}.zh-blurb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.zh-title,.zh-blurb{margin:3px 0;color:#606060;font-size:13px;line-height:1.35}.zh-blurb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.infinite-sentinel{height:1px}.infinite-spinner{text-align:center;color:#606060;padding:22px}
 </style>

@@ -24,13 +24,17 @@ export function pageNumbers(page, pages) {
   return numbers.flatMap((n, i) => i && n - numbers[i - 1] > 1 ? [null, n] : [n]);
 }
 
-export function paginate(videos, section, sort = 'people') {
-  const sorted = [...videos].sort((a, b) => {
+export function sortVideos(videos, section, sort = 'people') {
+  return [...videos].sort((a, b) => {
     if (section === 'community') return (sort === 'newest'
       ? b.selected_at - a.selected_at || b.last - a.last
       : b.recommenders - a.recommenders || b.months - a.months) || a.id.localeCompare(b.id);
     return b.view_count - a.view_count || a.id.localeCompare(b.id);
   });
+}
+
+export function paginate(videos, section, sort = 'people') {
+  const sorted = sortVideos(videos, section, sort);
   const pages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
   return Array.from({ length: pages }, (_, i) => ({
     videos: sorted.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE), total: sorted.length,
