@@ -1,9 +1,11 @@
 ---
-const { channel, name = '' } = Astro.props;
+const { channel, name = '', size = 'sm' } = Astro.props;
 const title = channel?.title || name || '频道';
 const letter = [...title.trim()][0] || '频';
 let hash = 0;
 for (const character of title) hash = (hash * 31 + character.codePointAt(0)) >>> 0;
 const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7];
+const thumbnail = channel?.thumbnail?.replace(/=s(\d+)/, (_, value) => `=s${Math.max(Number(value), 240)}`);
+const avatarClass = `channel-avatar${size === 'lg' ? ' channel-avatar--lg' : ''}`;
 ---
-{channel?.thumbnail ? <img class="channel-avatar" src={channel.thumbnail} alt="" /> : <span class="channel-avatar channel-avatar-letter" style={`background-color:${color}`} aria-hidden="true">{letter}</span>}
+{thumbnail ? <img class={avatarClass} src={thumbnail} alt="" /> : <span class={`${avatarClass} channel-avatar-letter`} style={`background-color:${color}`} aria-hidden="true">{letter}</span>}
