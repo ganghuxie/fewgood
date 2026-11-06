@@ -2,7 +2,7 @@ import json
 import re
 import yaml
 from pathlib import Path
-from ytrec.core import connect, crawl, extract, aggregate, recommendation_gates, metadata_gates, duration, enrich, report, stamp, trending_feed, podcast_feed, channels_feed
+from ytrec.core import connect, crawl, extract, aggregate, recommendation_gates, metadata_gates, duration, enrich, report, stamp, trending_feed, podcast_feed, channels_feed, youtube_cost, charge_quota, load_quota, pacific_today, Client
 import pytest
 
 @pytest.fixture
@@ -117,6 +117,35 @@ def test_request_retry_and_secret_suppression(monkeypatch, error_type):
 
 def test_timestamp_offset():
     assert stamp('2024-01-01T08:00:00+08:00') == stamp('2024-01-01')
+
+def test_youtube_costs():
+    assert youtube_cost('https://www.googleapis.com/youtube/v3/search') == 100
+    assert youtube_cost('https://www.googleapis.com/youtube/v3/videos') == 1
+    assert youtube_cost('https://www.googleapis.com/youtube/v3/channels') == 1
+    assert youtube_cost('https://www.googleapis.com/youtube/v3/playlistItems') == 1
+
+def test_config_daily_quota_limit(config):
+    assert config['metadata']['daily_quota_limit'] == 8000
+
+def test_quota_charge_persists_and_refuses(tmp_path):
+    path = tmp_path / 'quota.json'
+    charge_quota(3, 5, path)
+    assert load_quota(path) == {'date': pacific_today(), 'units': 3}
+    before = path.read_text()
+    with pytest.raises(RuntimeError, match='would exceed 5'):
+        charge_quota(3, 5, path)
+    assert path.read_text() == before
+
+def test_quota_rolls_over(tmp_path):
+    path = tmp_path / 'quota.json'
+    path.write_text(json.dumps({'date': '2000-01-01', 'units': 999}))
+    assert load_quota(path) == {'date': pacific_today(), 'units': 0}
+
+def test_client_youtube_search_charges_before_request(tmp_path):
+    client = Client(quota_limit=200, quota_path=tmp_path / 'quota.json')
+    client._request = lambda url, params: (200, {'ok': True})
+    assert client.get('https://www.googleapis.com/youtube/v3/search', {}, youtube=True) == {'ok': True}
+    assert load_quota(tmp_path / 'quota.json')['units'] == 100
 
 def test_batching_and_unavailable_cache(db, config, monkeypatch):
     monkeypatch.setenv('YOUTUBE_' + 'API_KEY','test-only')

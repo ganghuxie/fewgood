@@ -6,6 +6,7 @@ import os
 from queue import Queue, Empty
 from threading import Event, Thread
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from collections import Counter
 import requests
@@ -13,6 +14,49 @@ import yaml
 from .links import extract_ids, plain
 
 UTC = timezone.utc
+PACIFIC = ZoneInfo('America/Los_Angeles')
+
+def pacific_today():
+    return datetime.now(PACIFIC).date().isoformat()
+
+def load_quota(path='data/quota.json'):
+    target = Path(path)
+    today = pacific_today()
+    try:
+        value = json.loads(target.read_text())
+    except (FileNotFoundError, json.JSONDecodeError, TypeError):
+        value = {}
+    if value.get('date') != today:
+        value = {'date': today, 'units': 0}
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(json.dumps(value) + '\n')
+    else:
+        value = {'date': today, 'units': int(value.get('units', 0))}
+    return value
+
+def quota_remaining(limit, path='data/quota.json'):
+    return max(0, int(limit) - load_quota(path)['units'])
+
+def charge_quota(units, limit, path='data/quota.json'):
+    value = load_quota(path)
+    used = value['units']; units = int(units); remaining = int(limit) - used
+    if used + units > int(limit):
+        raise RuntimeError(f'YouTube daily quota would exceed {limit} (used={used}, need={units}, remaining={remaining}); refusing call')
+    value['units'] = used + units
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    Path(path).write_text(json.dumps(value) + '\n')
+    return value
+
+def youtube_cost(url):
+    path = str(url).split('?', 1)[0].rstrip('/').lower()
+    for endpoint, cost in (('/search', 100), ('/videos', 1), ('/channels', 1), ('/playlistitems', 1)):
+        if endpoint in path:
+            return cost
+    return 1
+
+def quota_line(limit=8000, path='data/quota.json'):
+    value = load_quota(path)
+    return f"YouTube quota: used={value['units']} limit={limit} remaining={max(0, int(limit) - value['units'])} (Pacific date {value['date']})"
 
 def stamp(value):
     parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
@@ -36,10 +80,12 @@ def connect(path):
     return db
 
 class Client:
-    def __init__(self, interval=1.05, db=None):
+    def __init__(self, interval=1.05, db=None, quota_limit=8000, quota_path='data/quota.json'):
         self.interval = max(0.0, interval)
         self.last = 0
         self.db = db
+        self.quota_limit = quota_limit
+        self.quota_path = quota_path
         self.session = requests.Session()
         self.request_deadline = 90
 
@@ -83,12 +129,16 @@ class Client:
         return value
 
     def get(self, url, params, youtube=False):
+        charged = False
         for attempt in range(7):
             time.sleep(max(0, self.interval - (time.monotonic() - self.last)))
             self.last = time.monotonic()
-            if youtube and self.db is not None:
-                self.db.execute('INSERT INTO quota VALUES (?,1)', (now(),))
-                self.db.commit()
+            if youtube and not charged:
+                charge_quota(youtube_cost(url), self.quota_limit, self.quota_path)
+                charged = True
+                if self.db is not None:
+                    self.db.execute('INSERT INTO quota VALUES (?,1)', (now(),))
+                    self.db.commit()
             try:
                 status, payload = self._request(url, params)
             except requests.RequestException:
@@ -219,9 +269,9 @@ def youtube_videos(client, key, ids):
     return found
 
 def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=None,
-                            category_id=None, landscape_only=True):
+                            category_id=None, landscape_only=True, quota_limit=8000):
     """Fetch five six-day popularity windows shared by editorial feeds."""
-    key = youtube_key(); client = client or Client(interval=.05, db=None)
+    key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     end = datetime.now(UTC).replace(microsecond=0)
     candidate_ids = set()
     searches = 0
@@ -277,19 +327,20 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
         payload['video_category_id'] = category_id
     write_feed(name, payload, output)
     print(f"{name.title()}: {len(payload['videos'])} videos from {payload['candidates_fetched']} candidates across {payload['windows']} {payload['window_size_days']}-day windows; approximate YouTube quota units: {payload['quota_units_approx']}")
+    print(quota_line(quota_limit))
     return payload
 
-def trending_feed(client=None, output='site/src/data'):
+def trending_feed(client=None, output='site/src/data', quota_limit=8000):
     """Fetch five six-day medium/long popularity windows, keeping landscape videos."""
-    return windowed_viewcount_feed('trending', client, output, landscape_only=True)
+    return windowed_viewcount_feed('trending', client, output, landscape_only=True, quota_limit=quota_limit)
 
-def podcast_feed(client=None, output='site/src/data'):
+def podcast_feed(client=None, output='site/src/data', quota_limit=8000):
     """Fetch popular long-form podcast videos without adding extra searches."""
-    return windowed_viewcount_feed('podcast', client, output, query='podcast', landscape_only=True)
+    return windowed_viewcount_feed('podcast', client, output, query='podcast', landscape_only=True, quota_limit=quota_limit)
 
-def music_feed(client=None, output='site/src/data'):
+def music_feed(client=None, output='site/src/data', quota_limit=8000):
     """Fetch popular music-category videos in the same bounded windows."""
-    return windowed_viewcount_feed('music', client, output, category_id='10', landscape_only=True)
+    return windowed_viewcount_feed('music', client, output, category_id='10', landscape_only=True, quota_limit=quota_limit)
 
 def _feed_channel_ids(root='site/src/data'):
     ids = set()
@@ -302,9 +353,9 @@ def _feed_channel_ids(root='site/src/data'):
                 ids.add(video['channel_id'])
     return sorted(ids)
 
-def channels_feed(client=None, output='site/src/data'):
+def channels_feed(client=None, output='site/src/data', quota_limit=8000):
     """Build a small channel catalogue from channels already present in feeds."""
-    key = youtube_key(); client = client or Client(interval=.05, db=None)
+    key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     channel_ids = _feed_channel_ids(output)
     channels, units = [], 0
     for offset in range(0, len(channel_ids), 50):
@@ -326,13 +377,14 @@ def channels_feed(client=None, output='site/src/data'):
     payload = dict(generated_at=iso_now(), channels=channels, quota_units_approx=units)
     write_feed('channels', payload, output)
     print(f"Channels: {len(channels)} channels; approximate YouTube quota units: {units}")
+    print(quota_line(quota_limit))
     return payload
 
 def _normal(value):
     return re.sub(r'[^a-z0-9]', '', (value or '').lower())
 
-def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_channels.yaml', client=None, search_cap=40):
-    key = youtube_key(); client = client or Client(interval=.05, db=None)
+def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_channels.yaml', client=None, search_cap=40, quota_limit=8000):
+    key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     accounts = yaml.safe_load(Path(seed).read_text()).get('accounts', [])
     channels, searches, cheap = [], 0, 0
     for account in accounts:
@@ -358,10 +410,11 @@ def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_c
     Path(output).parent.mkdir(parents=True, exist_ok=True)
     Path(output).write_text(yaml.safe_dump({'channels': channels}, allow_unicode=True, sort_keys=False))
     print(f"AI channels: {len(channels)} resolved; approximate YouTube quota units: {cheap + searches * 100}")
+    print(quota_line(quota_limit))
     return channels
 
-def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data'):
-    key = youtube_key(); client = client or Client(interval=.05, db=None)
+def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data', quota_limit=8000):
+    key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     channels = yaml.safe_load(Path(channels_file).read_text()).get('channels', [])
     cutoff = datetime.now(UTC) - timedelta(days=7); ids, units = [], 0
     for channel in channels:
@@ -384,6 +437,7 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
                    quota_units_approx=units, channels_used=len(channels), videos=videos)
     write_feed('ai', payload, output)
     print(f"AI: {len(videos)} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
+    print(quota_line(quota_limit))
     return payload
 
 def metadata_gates(raw, c, at):
@@ -408,7 +462,7 @@ def enrich(db, config, videos, refresh=False, client=None):
     key = os.environ.get('YOUTUBE_' + 'API_KEY')
     if not key:
         raise RuntimeError('Set the provider credential to enrich eligible candidates')
-    client = client or Client(db=db)
+    client = client or Client(db=db, quota_limit=config.get('metadata', {}).get('daily_quota_limit', 8000))
     initial = db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0]
     for offset in range(0, len(pending), 50):
         used = db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0] - initial

@@ -6,7 +6,10 @@ from contextlib import redirect_stdout, redirect_stderr
 from datetime import datetime, timezone
 from pathlib import Path
 import yaml
-from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now, trending_feed, podcast_feed, music_feed, channels_feed, resolve_ai_channels, ai_feed
+from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now, trending_feed, podcast_feed, music_feed, channels_feed, resolve_ai_channels, ai_feed, quota_line
+
+def daily_limit(config):
+    return config.get('metadata', {}).get('daily_quota_limit', config.get('youtube', {}).get('daily_quota_limit', 8000))
 
 def refresh():
     """Refresh deployable feeds, build the site, and publish only changed snapshots."""
@@ -14,7 +17,10 @@ def refresh():
     log.parent.mkdir(exist_ok=True)
     with log.open('a', encoding='utf8') as handle, redirect_stdout(handle), redirect_stderr(handle):
         print(f'=== refresh {datetime.now(timezone.utc).isoformat()} ===')
-        trending_feed(); ai_feed(); podcast_feed(); music_feed(); channels_feed()
+        config = yaml.safe_load(Path('config.yaml').read_text())
+        limit = daily_limit(config)
+        trending_feed(quota_limit=limit); ai_feed(quota_limit=limit); podcast_feed(quota_limit=limit); music_feed(quota_limit=limit); channels_feed(quota_limit=limit)
+        print(quota_line(limit))
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True, stdout=handle, stderr=handle)
         paths = ['site/src/data', 'site/public/catalog.json', 'site/public/channels.json']
         changed = subprocess.run(['git', 'status', '--porcelain', '--', *paths], text=True, stdout=subprocess.PIPE, check=True).stdout
@@ -35,28 +41,29 @@ def main():
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
     parser.add_argument('--refresh-metadata', action='store_true')
     args = parser.parse_args()
+    config = yaml.safe_load(Path(args.config).read_text())
+    limit = daily_limit(config)
     if args.command == 'trending':
-        try: trending_feed()
+        try: trending_feed(quota_limit=limit)
         except RuntimeError as error: parser.exit(1, f'{error}\n')
         return
     if args.command == 'resolve-ai-channels':
-        try: resolve_ai_channels()
+        try: resolve_ai_channels(quota_limit=limit)
         except RuntimeError as error: parser.exit(1, f'{error}\n')
         return
     if args.command == 'ai':
-        try: ai_feed()
+        try: ai_feed(quota_limit=limit)
         except RuntimeError as error: parser.exit(1, f'{error}\n')
         return
     if args.command in ('podcast', 'music', 'channels', 'refresh'):
         try:
-            if args.command == 'podcast': podcast_feed()
-            elif args.command == 'music': music_feed()
-            elif args.command == 'channels': channels_feed()
+            if args.command == 'podcast': podcast_feed(quota_limit=limit)
+            elif args.command == 'music': music_feed(quota_limit=limit)
+            elif args.command == 'channels': channels_feed(quota_limit=limit)
             else: refresh()
         except (RuntimeError, subprocess.CalledProcessError) as error:
             parser.exit(1, f'{error}\n')
         return
-    config = yaml.safe_load(Path(args.config).read_text())
     if config['recommendation']['positive_sentiment']['enabled']:
         parser.error('Positive sentiment is deferred to phase 2; keep enabled: false')
     db = connect(config['database'])

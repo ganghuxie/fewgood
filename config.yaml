@@ -13,6 +13,7 @@ metadata:
   min_duration_seconds: 300
   cache_days: 30
   max_units_per_run: 1000
+  daily_quota_limit: 8000
 crawl:
   start: '2007-01-01'
   window_days: 30
