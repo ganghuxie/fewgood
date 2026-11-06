@@ -159,36 +159,38 @@ def test_trending_feed_filters_shorts_and_writes_json(tmp_path, monkeypatch):
     assert result['dropped_vertical'] == 1
     assert result['landscape_only'] is True
     assert result['final_count'] == 1
+    assert len(YT.search_params) == 10
     assert {params['videoDuration'] for params in YT.search_params} == {'medium', 'long'}
     assert all('videoDuration' in params for params in YT.search_params)
+    assert len({(params['publishedAfter'], params['publishedBefore']) for params in YT.search_params}) == 5
+    assert all('publishedAfter' in params and 'publishedBefore' in params for params in YT.search_params)
     assert result['video_duration_buckets'] == ['medium', 'long']
+    assert result['window_days'] == 30
+    assert result['window_size_days'] == 6
+    assert result['windows'] == 5
     saved = json.loads((tmp_path / 'trending.json').read_text())
     assert saved['exclude_shorts_under_seconds'] == 60
 
-def test_trending_feed_fetches_more_pages_after_shorts(tmp_path, monkeypatch):
+def test_trending_feed_deduplicates_window_candidates_and_sorts(tmp_path, monkeypatch):
     monkeypatch.setenv('YOUTUBE_' + 'API_KEY', 'test-only')
     class YT:
-        search_pages = {'medium': 0, 'long': 0}
+        search_params = []
         def get(self, url, params, youtube=False):
             if url.endswith('search'):
-                bucket = params['videoDuration']
-                page = self.search_pages[bucket]
-                self.search_pages[bucket] += 1
-                return {
-                    'items': [{'id': {'videoId': f'{bucket[0]}{page * 50 + i}'}} for i in range(50)],
-                    **({'nextPageToken': f'{bucket}-{page + 1}'} if page == 0 else {}),
-                }
+                self.search_params.append(params)
+                return {'items': [{'id': {'videoId': 'a'}}, {'id': {'videoId': 'b'}},
+                                  {'id': {'videoId': 'a'}}]}
             ids = params['id'].split(',')
-            return {'items': [dict(raw(), id=video_id,
-                                   player={'embedWidth': 360, 'embedHeight': 640} if video_id.startswith('l') and int(video_id[1:]) < 50 else {'embedWidth': 640, 'embedHeight': 360},
-                                   contentDetails={'duration': 'PT59S'} if video_id.startswith('m') and int(video_id[1:]) < 50 else {'duration': 'PT5M'},
-                                   statistics={'viewCount': str(i)}) for i, video_id in enumerate(ids)]}
+            return {'items': [dict(raw(), id=video_id, player={'embedWidth': 640, 'embedHeight': 360},
+                                   statistics={'viewCount': '9' if video_id == 'a' else '99'})
+                             for video_id in ids]}
 
     client = YT()
     result = trending_feed(client, tmp_path)
-    assert client.search_pages == {'medium': 2, 'long': 2}
-    assert len(result['videos']) == 100
-    assert result['quota_units_approx'] == 404
+    assert len(client.search_params) == 10
+    assert result['candidates_fetched'] == 2
+    assert [video['id'] for video in result['videos']] == ['b', 'a']
+    assert result['quota_units_approx'] == 1001
 
 
 @pytest.mark.parametrize('stall_at', ['headers', 'body'])

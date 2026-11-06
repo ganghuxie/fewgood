@@ -219,34 +219,26 @@ def youtube_videos(client, key, ids):
     return found
 
 def trending_feed(client=None, output='site/src/data'):
-    """Fetch recent medium/long popularity pages, keeping landscape videos."""
+    """Fetch five six-day medium/long popularity windows, keeping landscape videos."""
     key = youtube_key(); client = client or Client(interval=.05, db=None)
-    after = (datetime.now(UTC) - timedelta(days=30)).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
-    seen_ids, id_buckets, searches, quota_video_batches = set(), {}, 0, 0
-    records = []
-    buckets = [{'name': bucket, 'token': None, 'pages': 0, 'done': False}
-               for bucket in ('medium', 'long')]
+    end = datetime.now(UTC).replace(microsecond=0)
+    candidate_ids = set()
+    searches = 0
+    for window in range(5):
+        window_end = end - timedelta(days=window * 6)
+        window_start = window_end - timedelta(days=6)
+        for bucket in ('medium', 'long'):
+            params = dict(part='id', type='video', videoDuration=bucket, order='viewCount',
+                          publishedAfter=window_start.isoformat().replace('+00:00', 'Z'),
+                          publishedBefore=window_end.isoformat().replace('+00:00', 'Z'),
+                          maxResults=50, key=key)
+            response = client.get(YOUTUBE_API + 'search', params, youtube=True)
+            searches += 1
+            candidate_ids.update(item['id']['videoId'] for item in response.get('items', [])
+                                 if item.get('id', {}).get('videoId'))
 
-    def fetch_page(bucket):
-        nonlocal searches, quota_video_batches
-        params = dict(part='id', type='video', videoDuration=bucket['name'], order='viewCount',
-                      publishedAfter=after, maxResults=50, key=key)
-        if bucket['token']:
-            params['pageToken'] = bucket['token']
-        response = client.get(YOUTUBE_API + 'search', params, youtube=True)
-        searches += 1
-        bucket['pages'] += 1
-        page_ids = [item['id']['videoId'] for item in response.get('items', [])
-                    if item.get('id', {}).get('videoId')]
-        new_ids = [video_id for video_id in page_ids if video_id not in seen_ids]
-        seen_ids.update(new_ids)
-        for video_id in new_ids:
-            id_buckets[video_id] = bucket['name']
-        if new_ids:
-            records.extend(youtube_videos(client, key, new_ids))
-            quota_video_batches += (len(new_ids) + 49) // 50
-        bucket['token'] = response.get('nextPageToken')
-        bucket['done'] = not bucket['token']
+    records = youtube_videos(client, key, sorted(candidate_ids))
+    quota_video_batches = (len(candidate_ids) + 49) // 50 if candidate_ids else 0
 
     def accepted():
         videos = []
@@ -261,37 +253,21 @@ def trending_feed(client=None, output='site/src/data'):
         videos.sort(key=lambda v: (-v['view_count'], v['id']))
         return videos, dropped_short, dropped_vertical
 
-    # Give both API duration buckets a small, predictable base budget.
-    for _ in range(2):
-        for bucket in buckets:
-            if not bucket['done']:
-                fetch_page(bucket)
-                videos, dropped_short, dropped_vertical = accepted()
-                if len(videos) >= 100:
-                    break
-        if len(videos) >= 100:
-            break
-
-    # If the base budget is short, spend one more search page on the bucket
-    # with fewer landscape keepers. This caps search.list at five calls.
-    if len(videos) < 100 and searches < 5:
-        available = [bucket for bucket in buckets if not bucket['done']]
-        if available:
-            keepers = {bucket['name']: 0 for bucket in buckets}
-            for item in records:
-                if duration(item.get('contentDetails', {}).get('duration')) >= 60 and landscape_video(item):
-                    keepers[id_buckets.get(item.get('id'), available[0]['name'])] += 1
-            bucket = min(available, key=lambda b: (keepers[b['name']], b['name']))
-            fetch_page(bucket)
-            videos, dropped_short, dropped_vertical = accepted()
+    videos, dropped_short, dropped_vertical = accepted()
+    final_videos = videos[:100]
+    published = [video['published_at'] for video in final_videos if video['published_at']]
 
     payload = dict(generated_at=iso_now(), window_days=30, exclude_shorts_under_seconds=60,
-                   candidates_fetched=len(records), dropped_short=dropped_short,
+                   window_size_days=6, windows=5,
+                   candidates_fetched=len(candidate_ids), dropped_short=dropped_short,
                    dropped_vertical=dropped_vertical, landscape_only=True,
                    video_duration_buckets=['medium', 'long'], final_count=len(videos[:100]),
-                   quota_units_approx=searches * 100 + quota_video_batches, videos=videos[:100])
+                   quota_units_approx=searches * 100 + quota_video_batches,
+                   videos=final_videos)
+    if published:
+        payload['publish_date_span'] = {'min': min(published), 'max': max(published)}
     write_feed('trending', payload, output)
-    print(f"Trending: {len(payload['videos'])} landscape videos from {payload['candidates_fetched']} candidates; dropped {payload['dropped_short']} short and {payload['dropped_vertical']} vertical/unknown; approximate YouTube quota units: {payload['quota_units_approx']}")
+    print(f"Trending: {len(payload['videos'])} landscape videos from {payload['candidates_fetched']} candidates across {payload['windows']} {payload['window_size_days']}-day windows; dropped {payload['dropped_short']} short and {payload['dropped_vertical']} vertical/unknown; approximate YouTube quota units: {payload['quota_units_approx']}")
     return payload
 
 def _normal(value):
