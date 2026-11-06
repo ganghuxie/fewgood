@@ -14,7 +14,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
       <a href={link('/watch-later/')}><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a>
     </nav>
   </div>
-  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'trending' }} href={link('/')}>全部</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>AI前沿</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>播客</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>音乐</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>社区好评</a><a class:list={{ active: active === 'following' }} href={link('/following/')}>关注</a></nav></div>
+  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'trending' }} href={link('/')}>全部</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>AI前沿</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>播客</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>音乐</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>社区推荐</a><a class:list={{ active: active === 'following' }} href={link('/following/')}>关注</a></nav></div>
 </header>
 <script>
   import { updateBadges } from '../scripts/library.js';

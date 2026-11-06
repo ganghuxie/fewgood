@@ -8,7 +8,7 @@ const { videos, total, page, pages, section, sort, feed } = Astro.props;
 const channels = Object.fromEntries((channelData.channels || []).map(channel => [channel.id, channel]));
 const base = import.meta.env.BASE_URL;
 const community = section === 'community';
-const label = section === 'trending' ? '全部' : section === 'ai' ? 'AI前沿' : section === 'podcast' ? '播客' : section === 'music' ? '音乐' : '社区好评';
+const label = section === 'trending' ? '全部' : section === 'ai' ? 'AI前沿' : section === 'podcast' ? '播客' : section === 'music' ? '音乐' : '社区推荐';
 const duration = n => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`;
 const compact = n => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(n || 0);
 const ago = value => { const days = Math.max(0, Math.floor((Date.now() - new Date(value).getTime()) / 86400000)); return days < 1 ? '今天' : days < 30 ? `${days}天前` : days < 365 ? `${Math.floor(days / 30)}个月前` : `${Math.floor(days / 365)}年前`; };
