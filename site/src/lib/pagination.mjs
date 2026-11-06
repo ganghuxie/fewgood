@@ -1,7 +1,9 @@
 export const PAGE_SIZE = 50;
-export function pageUrl(sort, page) {
-  const base = sort === 'newest' ? '/newest/' : '/';
-  return page === 1 ? base : `${base}page/${page}/`;
+export function pageUrl(sort, page, base = '') {
+  const path = sort === 'newest' ? '/newest/' : '/';
+  const relativePath = page === 1 ? path : `${path}page/${page}/`;
+  if (!base || base === '/') return relativePath;
+  return `${base.replace(/\/$/, '')}${relativePath}`;
 }
 export function pageNumbers(page, pages) {
   const numbers = Array.from({ length: pages }, (_, i) => i + 1)

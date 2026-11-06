@@ -24,6 +24,8 @@ assert.equal(pageUrl('people', 1), '/');
 assert.equal(pageUrl('people', 2), '/page/2/');
 assert.equal(pageUrl('newest', 1), '/newest/');
 assert.equal(pageUrl('newest', 2), '/newest/page/2/');
+assert.equal(pageUrl('people', 1, '/yt-recommended/'), '/yt-recommended/');
+assert.equal(pageUrl('newest', 2, '/yt-recommended/'), '/yt-recommended/newest/page/2/');
 assert.deepEqual(pageNumbers(5, 10), [1, null, 3, 4, 5, 6, 7, null, 10]);
 assert.deepEqual(pageNumbers(1, 1), [1]);
 '''], cwd=Path(__file__).resolve().parents[1], check=True)

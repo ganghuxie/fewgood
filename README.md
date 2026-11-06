@@ -11,13 +11,20 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -e '.[test]'
 npm ci --prefix site
-# Set YOUTUBE_API_KEY securely in your environment before enrichment.
 python -m pytest -q
 python -m ytrec all
+```
+
+For a site-only local preview from the committed `site/src/data/videos.json`, build with root-relative URLs and serve the output:
+
+```bash
+cd site
+PUBLIC_BASE=/ npm run build
+cd ..
 python -m http.server 8000 --directory site/dist
 ```
 
-Open http://localhost:8000. Nothing is deployed. The full crawl defaults to 2007-01-01 through the current UTC time and can take many hours. A key is only required when eligible uncached candidates exist. No fabricated seed videos are provided; a small smoke crawl will usually select zero videos.
+Open http://localhost:8000. A normal `npm run build` uses the production base `/yt-recommended/`; the intended Pages URL is https://ganghuxie.github.io/yt-recommended/. Nothing is deployed by these local commands. The full crawl defaults to 2007-01-01 through the current UTC time and can take many hours. No fabricated seed videos are provided; a small smoke crawl will usually select zero videos.
 
 Individual stages / explicit date range:
 

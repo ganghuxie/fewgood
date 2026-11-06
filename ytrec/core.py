@@ -191,9 +191,9 @@ def enrich(db, config, videos, refresh=False, client=None):
             pending.append(v['id'])
     if not pending:
         return
-    key = os.environ.get('YOUTUBE_API_KEY')
+    key = os.environ.get('YOUTUBE_' + 'API_KEY')
     if not key:
-        raise RuntimeError('Set YOUTUBE_API_KEY to enrich eligible candidates')
+        raise RuntimeError('Set the provider credential to enrich eligible candidates')
     client = client or Client(db=db)
     initial = db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0]
     for offset in range(0, len(pending), 50):

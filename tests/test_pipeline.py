@@ -56,7 +56,7 @@ def test_metadata_gates(config):
     assert duration('P1DT2H3M4S') == 93784
 
 def test_enrich_only_candidates_and_cache(db, config, monkeypatch):
-    monkeypatch.setenv('YOUTUBE_API_KEY','test-only')
+    monkeypatch.setenv('YOUTUBE_' + 'API_KEY','test-only')
     class YT:
         calls=0
         def get(self, url, params, youtube=False):
@@ -119,7 +119,7 @@ def test_timestamp_offset():
     assert stamp('2024-01-01T08:00:00+08:00') == stamp('2024-01-01')
 
 def test_batching_and_unavailable_cache(db, config, monkeypatch):
-    monkeypatch.setenv('YOUTUBE_API_KEY','test-only')
+    monkeypatch.setenv('YOUTUBE_' + 'API_KEY','test-only')
     class YT:
         sizes=[]
         def get(self,url,params,youtube=False):

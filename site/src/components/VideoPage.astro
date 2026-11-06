@@ -2,6 +2,7 @@
 import data from '../data/videos.json';
 import { pageUrl, pageNumbers } from '../lib/pagination.mjs';
 const { videos, total, page, pages, sort } = Astro.props;
+const base = import.meta.env.BASE_URL;
 const start = total ? (page - 1) * 50 + 1 : 0;
 const end = Math.min(page * 50, total);
 const date = (ts: number) => new Date(ts*1000).toISOString().slice(0,10);
@@ -14,7 +15,7 @@ const criteria = data.summary.criteria.recommendation;
 <body>
 <main>
 <header><p class="eyebrow">HN × YOUTUBE / PHASE 01</p><h1>Long Echo<span>Videos that keep coming back.</span></h1><p class="intro">Discover videos shared by independent people across months and years. A community memory, beyond view counts.</p></header>
-<section class="bar"><div><strong>{total}</strong> selected <span>· {criteria.min_recommenders}+ people · {criteria.min_months}+ months · {criteria.min_span_days}+ days</span></div><nav aria-label="Sort"><span>Sort: </span><a href="/" aria-current={sort === 'people' ? 'page' : undefined}>Most recommenders</a> · <a href="/newest/" aria-current={sort === 'newest' ? 'page' : undefined}>Newest selected</a></nav></section>
+<section class="bar"><div><strong>{total}</strong> selected <span>· {criteria.min_recommenders}+ people · {criteria.min_months}+ months · {criteria.min_span_days}+ days</span></div><nav aria-label="Sort"><span>Sort: </span><a href={pageUrl('people', 1, base)} aria-current={sort === 'people' ? 'page' : undefined}>Most recommenders</a> · <a href={pageUrl('newest', 1, base)} aria-current={sort === 'newest' ? 'page' : undefined}>Newest selected</a></nav></section>
 <p class="range">Showing {start}–{end} of {total}</p>
 <p class="note">HN links are recommendation signals, not verified endorsements. Sentiment screening is planned for phase 2. Metadata is cached; availability may change.</p>
 {videos.length === 0 && <section class="empty"><h2>No videos meet all gates yet.</h2><p>Run the crawl and metadata pipeline to populate this collection. Strict thresholds remain unchanged.</p><p>{data.summary.recommendation_candidates} candidates pass the recommendation thresholds.</p></section>}
@@ -25,9 +26,9 @@ const criteria = data.summary.criteria.recommendation;
 </article>)}
 </section>
 {pages > 1 && <nav class="pagination" aria-label="Pagination">
-{page > 1 && <a rel="prev" href={pageUrl(sort, page - 1)}>← Previous</a>}
-{pageNumbers(page, pages).map(n => n === null ? <span>…</span> : <a href={pageUrl(sort, n)} aria-current={n === page ? 'page' : undefined}>{n}</a>)}
-{page < pages && <a rel="next" href={pageUrl(sort, page + 1)}>Next →</a>}
+{page > 1 && <a rel="prev" href={pageUrl(sort, page - 1, base)}>← Previous</a>}
+{pageNumbers(page, pages).map(n => n === null ? <span>…</span> : <a href={pageUrl(sort, n, base)} aria-current={n === page ? 'page' : undefined}>{n}</a>)}
+{page < pages && <a rel="next" href={pageUrl(sort, page + 1, base)}>Next →</a>}
 </nav>}
 <footer>Long Echo / Hacker News archive · No ranking by YouTube views or likes.</footer>
 </main>
