@@ -9,9 +9,9 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`}><span class="logo-mark"><i></i></span><span>{SITE_NAME}</span></a>
     <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索视频和频道" aria-label="搜索视频和频道"/><button aria-label="搜索">⌕</button></form>
     <nav class="libraries" aria-label="个人视频库">
-      <a href={link('/history/')}>◴ <span>历史</span><b data-library-count="history" hidden></b></a>
-      <a href={link('/favorites/')}>☆ <span>收藏</span><b data-library-count="favorites" hidden></b></a>
-      <a href={link('/watch-later/')}>◷ <span>稍后再看</span><b data-library-count="watchLater" hidden></b></a>
+      <a href={link('/history/')}><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span><b data-library-count="history" hidden></b></a>
+      <a href={link('/favorites/')}><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.5 5.1 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 4Z"/></svg><span>收藏</span><b data-library-count="favorites" hidden></b></a>
+      <a href={link('/watch-later/')}><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a>
     </nav>
   </div>
   <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'trending' }} href={link('/')}>推荐</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>AI</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>社区好评</a></nav><small>{TAGLINE}</small></div>
