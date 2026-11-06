@@ -1,8 +1,11 @@
 ---
 import { pageUrl, pageNumbers, videoUrl } from '../lib/pagination.mjs';
 import Layout from './Layout.astro';
+import ChannelAvatar from './ChannelAvatar.astro';
+import channelData from '../data/channels.json';
 import { SITE_NAME } from '../lib/brand.mjs';
 const { videos, total, page, pages, section, sort, feed } = Astro.props;
+const channels = Object.fromEntries((channelData.channels || []).map(channel => [channel.id, channel]));
 const base = import.meta.env.BASE_URL;
 const community = section === 'community';
 const label = section === 'trending' ? '全部' : section === 'ai' ? 'AI前沿' : section === 'podcast' ? '播客' : section === 'music' ? '音乐' : '社区好评';
@@ -13,7 +16,7 @@ const ago = value => { const days = Math.max(0, Math.floor((Date.now() - new Dat
 <Layout title={`${label} · ${SITE_NAME}`} active={section}>
   <section class="page-heading"><div><h1>{label}</h1><p>{community ? '来自社区长期推荐的视频' : section === 'ai' ? '值得一看的 AI 视频' : section === 'podcast' ? '正在被观看的播客' : section === 'music' ? '正在被观看的音乐' : '发现正在被观看的好视频'}</p></div><span>{total} 个视频</span></section>
   {community && <section class="sort-row"><span>{feed.summary.criteria.recommendation.min_recommenders}+ 人 · {feed.summary.criteria.recommendation.min_months}+ 个月</span><nav><a href={pageUrl('community', 1, base, 'people')} aria-current={sort === 'people' ? 'page' : undefined}>最多推荐</a><a href={pageUrl('community', 1, base, 'newest')} aria-current={sort === 'newest' ? 'page' : undefined}>最新入选</a></nav></section>}
-  <section class="video-grid">{videos.map(v => <a class="video-card" href={videoUrl(section, v.id, base)}><div class="thumbnail"><img loading="lazy" src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt=""/><span class="duration">{duration(v.duration_seconds)}</span></div><div class="video-info"><span class="channel-avatar" aria-hidden="true"></span><div><h2 class="video-title">{v.title}</h2><p class="video-meta">{v.channel}</p><p class="video-meta">{community ? `${v.recommenders} 人推荐 · ${v.months} 个月` : `${compact(v.view_count)} 次观看 · ${ago(v.published_at)}`}</p></div></div></a>)}</section>
+  <section class="video-grid">{videos.map(v => <a class="video-card" href={videoUrl(section, v.id, base)}><div class="thumbnail"><img loading="lazy" src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt=""/><span class="duration">{duration(v.duration_seconds)}</span></div><div class="video-info"><ChannelAvatar channel={channels[v.channel_id]} name={v.channel} /><div><h2 class="video-title">{v.title}</h2><p class="video-meta">{v.channel}</p><p class="video-meta">{community ? `${v.recommenders} 人推荐 · ${v.months} 个月` : `${compact(v.view_count)} 次观看 · ${ago(v.published_at)}`}</p></div></div></a>)}</section>
   {pages > 1 && <nav class="pagination" aria-label="分页">{page > 1 && <a rel="prev" href={pageUrl(section, page - 1, base, sort)}>上一页</a>}{pageNumbers(page, pages).map(n => n === null ? <span>…</span> : <a href={pageUrl(section, n, base, sort)} aria-current={n === page ? 'page' : undefined}>{n}</a>)}{page < pages && <a rel="next" href={pageUrl(section, page + 1, base, sort)}>下一页</a>}</nav>}
 </Layout>
 <style>
