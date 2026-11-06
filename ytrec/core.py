@@ -218,8 +218,9 @@ def youtube_videos(client, key, ids):
         found.extend(response.get('items', []))
     return found
 
-def trending_feed(client=None, output='site/src/data'):
-    """Fetch five six-day medium/long popularity windows, keeping landscape videos."""
+def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=None,
+                            category_id=None, landscape_only=True):
+    """Fetch five six-day popularity windows shared by editorial feeds."""
     key = youtube_key(); client = client or Client(interval=.05, db=None)
     end = datetime.now(UTC).replace(microsecond=0)
     candidate_ids = set()
@@ -232,6 +233,10 @@ def trending_feed(client=None, output='site/src/data'):
                           publishedAfter=window_start.isoformat().replace('+00:00', 'Z'),
                           publishedBefore=window_end.isoformat().replace('+00:00', 'Z'),
                           maxResults=50, key=key)
+            if query:
+                params['q'] = query
+            if category_id:
+                params['videoCategoryId'] = category_id
             response = client.get(YOUTUBE_API + 'search', params, youtube=True)
             searches += 1
             candidate_ids.update(item['id']['videoId'] for item in response.get('items', [])
@@ -246,7 +251,7 @@ def trending_feed(client=None, output='site/src/data'):
         for item in records:
             if duration(item.get('contentDetails', {}).get('duration')) < 60:
                 dropped_short += 1
-            elif not landscape_video(item):
+            elif landscape_only and not landscape_video(item):
                 dropped_vertical += 1
             else:
                 videos.append(video_record(item))
@@ -260,14 +265,67 @@ def trending_feed(client=None, output='site/src/data'):
     payload = dict(generated_at=iso_now(), window_days=30, exclude_shorts_under_seconds=60,
                    window_size_days=6, windows=5,
                    candidates_fetched=len(candidate_ids), dropped_short=dropped_short,
-                   dropped_vertical=dropped_vertical, landscape_only=True,
+                   dropped_vertical=dropped_vertical, landscape_only=landscape_only,
                    video_duration_buckets=['medium', 'long'], final_count=len(videos[:100]),
                    quota_units_approx=searches * 100 + quota_video_batches,
                    videos=final_videos)
     if published:
         payload['publish_date_span'] = {'min': min(published), 'max': max(published)}
-    write_feed('trending', payload, output)
-    print(f"Trending: {len(payload['videos'])} landscape videos from {payload['candidates_fetched']} candidates across {payload['windows']} {payload['window_size_days']}-day windows; dropped {payload['dropped_short']} short and {payload['dropped_vertical']} vertical/unknown; approximate YouTube quota units: {payload['quota_units_approx']}")
+    if query:
+        payload['query'] = query
+    if category_id:
+        payload['video_category_id'] = category_id
+    write_feed(name, payload, output)
+    print(f"{name.title()}: {len(payload['videos'])} videos from {payload['candidates_fetched']} candidates across {payload['windows']} {payload['window_size_days']}-day windows; approximate YouTube quota units: {payload['quota_units_approx']}")
+    return payload
+
+def trending_feed(client=None, output='site/src/data'):
+    """Fetch five six-day medium/long popularity windows, keeping landscape videos."""
+    return windowed_viewcount_feed('trending', client, output, landscape_only=True)
+
+def podcast_feed(client=None, output='site/src/data'):
+    """Fetch popular long-form podcast videos without adding extra searches."""
+    return windowed_viewcount_feed('podcast', client, output, query='podcast', landscape_only=True)
+
+def music_feed(client=None, output='site/src/data'):
+    """Fetch popular music-category videos in the same bounded windows."""
+    return windowed_viewcount_feed('music', client, output, category_id='10', landscape_only=True)
+
+def _feed_channel_ids(root='site/src/data'):
+    ids = set()
+    for name in ('trending', 'ai', 'podcast', 'music', 'videos'):
+        path = Path(root) / f'{name}.json'
+        if not path.exists():
+            continue
+        for video in json.loads(path.read_text()).get('videos', []):
+            if video.get('channel_id'):
+                ids.add(video['channel_id'])
+    return sorted(ids)
+
+def channels_feed(client=None, output='site/src/data'):
+    """Build a small channel catalogue from channels already present in feeds."""
+    key = youtube_key(); client = client or Client(interval=.05, db=None)
+    channel_ids = _feed_channel_ids(output)
+    channels, units = [], 0
+    for offset in range(0, len(channel_ids), 50):
+        response = client.get(YOUTUBE_API + 'channels', dict(part='snippet,statistics,contentDetails', id=','.join(channel_ids[offset:offset + 50]), key=key), youtube=True)
+        units += 1
+        for raw in response.get('items', []):
+            snippet = raw.get('snippet', {}); uploads = raw.get('contentDetails', {}).get('relatedPlaylists', {}).get('uploads')
+            channels.append(dict(id=raw['id'], title=snippet.get('title', ''), thumbnail=snippet.get('thumbnails', {}).get('medium', {}).get('url') or snippet.get('thumbnails', {}).get('default', {}).get('url', ''), subscriber_count=int(raw.get('statistics', {}).get('subscriberCount', 0)), uploads_playlist_id=uploads, videos=[]))
+    for channel in channels:
+        if not channel['uploads_playlist_id']:
+            continue
+        response = client.get(YOUTUBE_API + 'playlistItems', dict(part='snippet,contentDetails', playlistId=channel['uploads_playlist_id'], maxResults=50, key=key), youtube=True)
+        units += 1
+        for item in response.get('items', []):
+            snippet, details = item.get('snippet', {}), item.get('contentDetails', {})
+            video_id = details.get('videoId') or snippet.get('resourceId', {}).get('videoId')
+            if video_id:
+                channel['videos'].append(dict(id=video_id, title=snippet.get('title', ''), published_at=details.get('videoPublishedAt') or snippet.get('publishedAt', ''), thumb=snippet.get('thumbnails', {}).get('medium', {}).get('url') or snippet.get('thumbnails', {}).get('default', {}).get('url', '')))
+    payload = dict(generated_at=iso_now(), channels=channels, quota_units_approx=units)
+    write_feed('channels', payload, output)
+    print(f"Channels: {len(channels)} channels; approximate YouTube quota units: {units}")
     return payload
 
 def _normal(value):
@@ -384,7 +442,7 @@ def report(db, config, videos, output='reports'):
         raw = cached[v['id']]
         db.execute('INSERT OR IGNORE INTO selections VALUES (?,?)', (v['id'], at))
         selected_at = db.execute('SELECT selected_at FROM selections WHERE video_id=?', (v['id'],)).fetchone()[0]
-        selected.append(dict(v, title=raw['snippet']['title'], channel=raw['snippet']['channelTitle'], duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at))
+        selected.append(dict(v, title=raw['snippet']['title'], channel=raw['snippet']['channelTitle'], channel_id=raw['snippet'].get('channelId', ''), duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at))
     db.commit()
     what_if = []
     for people in (5,10,20,30,50):

@@ -1,0 +1,14 @@
+---
+import Layout from '../components/Layout.astro';
+import { SITE_NAME } from '../lib/brand.mjs';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title={`关注 · ${SITE_NAME}`} active="following"><section class="following" data-base={base}><h1>关注</h1><p class="empty" data-empty>还没有关注频道。去看看喜欢的视频吧。</p><div data-list></div></section></Layout>
+<script>
+ import { KEYS, ids, has, toggle } from '../scripts/library.js';
+ const root = document.querySelector('[data-base]'), base = root.dataset.base, list = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]');
+ const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+ const render = channels => { const selected = ids(KEYS.following).map(id => channels.find(c => c.id === id) || { id, title: id }); empty.hidden = !!selected.length; list.innerHTML = selected.map(c => `<article><a href="${base}/channel/${c.id}/">${c.thumbnail ? `<img src="${c.thumbnail}" alt="">` : '<span class="avatar"></span>'}<b>${esc(c.title)}</b></a><button data-id="${c.id}">已关注</button></article>`).join(''); list.querySelectorAll('button').forEach(b => b.onclick = () => { toggle(KEYS.following, b.dataset.id); render(channels); }); };
+ fetch(`${base}/channels.json`).then(r => r.json()).then(data => render(data.channels || [])).catch(() => render([]));
+</script>
+<style>.following h1{font-size:26px}.empty{color:#606060;padding:30px 0}.following article{display:flex;align-items:center;justify-content:space-between;max-width:600px;padding:12px 0}.following article a{display:flex;align-items:center;gap:12px;text-decoration:none;color:#0f0f0f}.following img,.avatar{width:48px;height:48px;border-radius:50%;background:#e5e5e5}.following button{border:0;border-radius:18px;padding:9px 14px;cursor:pointer}</style>

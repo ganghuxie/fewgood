@@ -1,0 +1,11 @@
+---
+import Layout from '../../components/Layout.astro';
+import channelsData from '../../data/channels.json';
+import { SITE_NAME } from '../../lib/brand.mjs';
+export function getStaticPaths() { return (channelsData.channels || []).map(channel => ({ params: { id: channel.id }, props: { channel } })); }
+const { channel } = Astro.props; const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const compact = n => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(n || 0);
+---
+<Layout title={`${channel.title} · ${SITE_NAME}`} active="following"><section class="channel"><header>{channel.thumbnail && <img src={channel.thumbnail} alt=""/>}<div><h1>{channel.title}</h1><p>{compact(channel.subscriber_count)} 位订阅者</p></div><button data-follow data-id={channel.id}>关注</button></header><a class="youtube" href={`https://www.youtube.com/playlist?list=${channel.uploads_playlist_id}`} target="_blank" rel="noopener noreferrer">在 YouTube 查看全部作品 ↗</a><div class="video-grid">{channel.videos.map(video => <a class="video-card" href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer"><div class="thumbnail"><img src={video.thumb || `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt=""/></div><div class="video-info"><span class="channel-avatar"></span><div><h2 class="video-title">{video.title}</h2><p class="video-meta">{video.published_at?.slice(0, 10)}</p></div></div></a>)}</div></section></Layout>
+<script>import { KEYS, has, toggle } from '../../scripts/library.js'; const button = document.querySelector('[data-follow]'); const paint = () => button.textContent = has(KEYS.following, button.dataset.id) ? '已关注' : '关注'; paint(); button.onclick = () => { toggle(KEYS.following, button.dataset.id); paint(); };</script>
+<style>.channel header{display:flex;align-items:center;gap:16px;margin-bottom:18px}.channel header img{width:88px;height:88px;border-radius:50%}.channel h1{margin:0;font-size:26px}.channel p{color:#606060}.channel button,.youtube{margin-left:auto;border:0;border-radius:18px;padding:10px 15px;background:#0f0f0f;color:#fff;text-decoration:none;cursor:pointer;font-weight:500}.youtube{display:inline-block;margin:0 0 24px;background:#f2f2f2;color:#0f0f0f}</style>

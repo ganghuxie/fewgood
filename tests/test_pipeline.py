@@ -2,7 +2,7 @@ import json
 import re
 import yaml
 from pathlib import Path
-from ytrec.core import connect, crawl, extract, aggregate, recommendation_gates, metadata_gates, duration, enrich, report, stamp, trending_feed
+from ytrec.core import connect, crawl, extract, aggregate, recommendation_gates, metadata_gates, duration, enrich, report, stamp, trending_feed, podcast_feed, channels_feed
 import pytest
 
 @pytest.fixture
@@ -191,6 +191,32 @@ def test_trending_feed_deduplicates_window_candidates_and_sorts(tmp_path, monkey
     assert result['candidates_fetched'] == 2
     assert [video['id'] for video in result['videos']] == ['b', 'a']
     assert result['quota_units_approx'] == 1001
+
+def test_podcast_windowed_feed_uses_query(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_' + 'API_KEY', 'test-only')
+    class YT:
+        queries = []
+        def get(self, url, params, youtube=False):
+            if url.endswith('search'):
+                self.queries.append(params)
+                return {'items': [{'id': {'videoId': 'pod'}}]}
+            return {'items': [dict(raw(), id='pod', player={'embedWidth': 640, 'embedHeight': 360}, statistics={'viewCount': '1'})]}
+    result = podcast_feed(YT(), tmp_path)
+    assert len(YT.queries) == 10
+    assert {query['q'] for query in YT.queries} == {'podcast'}
+    assert result['query'] == 'podcast'
+
+def test_channels_feed_collects_feed_channel_ids_and_uploads(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_' + 'API_KEY', 'test-only')
+    (tmp_path / 'trending.json').write_text(json.dumps({'videos': [{'channel_id': 'channel-1'}]}))
+    class YT:
+        def get(self, url, params, youtube=False):
+            if url.endswith('channels'):
+                return {'items': [{'id': 'channel-1', 'snippet': {'title': 'Example', 'thumbnails': {'default': {'url': 'avatar'}}}, 'statistics': {'subscriberCount': '12'}, 'contentDetails': {'relatedPlaylists': {'uploads': 'uploads-1'}}}]}
+            return {'items': [{'snippet': {'title': 'Recent', 'thumbnails': {'default': {'url': 'thumb'}}, 'resourceId': {'videoId': 'video-1'}}, 'contentDetails': {'videoId': 'video-1', 'videoPublishedAt': '2025-01-01T00:00:00Z'}}]}
+    result = channels_feed(YT(), tmp_path)
+    assert result['channels'][0]['id'] == 'channel-1'
+    assert result['channels'][0]['videos'][0]['id'] == 'video-1'
 
 
 @pytest.mark.parametrize('stall_at', ['headers', 'body'])

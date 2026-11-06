@@ -1,6 +1,6 @@
 # YouTuber · HN × YouTube
 
-YouTuber（无广告 · 只看好视频）有三个 YouTube 风格的视频区：**推荐** (`/`) 是近 30 天观看量最高的长视频；**AI** (`/ai/`) 是来自精选 AI 频道的近期长视频；**社区好评** (`/community/`) 保留原有 Hacker News 长期推荐列表。社区筛选标准与 people/newest 排序均未改变。
+YouTuber（无广告 · 只看好视频）有六个 YouTube 风格的视频区：**全部** (`/`) 是近 30 天观看量最高的长视频；**AI前沿** (`/ai/`) 是来自精选 AI 频道的近期长视频；**播客** (`/podcast/`) 与 **音乐** (`/music/`) 使用同样的热门长视频窗口；**社区好评** (`/community/`) 保留原有 Hacker News 长期推荐列表；**关注** (`/following/`) 保存在浏览器本地。社区筛选标准与 people/newest 排序均未改变。
 
 ## Setup and full run
 
@@ -23,8 +23,13 @@ The published site uses committed JSON and CI never needs a YouTube credential. 
 python -m ytrec resolve-ai-channels  # seed X accounts -> config/ai_channels.yaml
 python -m ytrec trending             # -> site/src/data/trending.json
 python -m ytrec ai                   # -> site/src/data/ai.json
+python -m ytrec podcast               # -> site/src/data/podcast.json
+python -m ytrec music                 # -> site/src/data/music.json
+python -m ytrec channels              # -> site/src/data/channels.json
 python -m ytrec build-site           # builds from committed community/feed data
 ```
+
+For the normal deployable refresh, use `python -m ytrec refresh`. It runs trending, AI, podcast, music, and channels in that order, regenerates the search catalog, builds Astro, writes `logs/refresh-YYYYMMDD.log`, and commits/pushes changed feed/catalog files as `data: refresh YYYY-MM-DD`. It never prints the credential. The refresh uses about 4,000 YouTube quota units or fewer under the intended feed sizes; AI channel volume remains the main variable.
 
 `trending` uses medium+long `search.list` pages with `order=viewCount` across five weekly six-day windows, then batches `videos.list`; 推荐 keeps landscape videos only when player dimensions prove that orientation. It reports an approximate quota cost: search calls cost roughly 100 units each and video batches roughly one. Both YouTube feeds exclude videos shorter than 60 seconds (Shorts). `resolve-ai-channels` tries cheap `channels.list?forHandle=` lookups first and caps expensive channel searches at 40; unresolved accounts are dropped. The seed contains the editorial AI company, researcher, creator, and podcast candidates; `ai_channels.yaml` is the resolved, reviewed tracking file.
 
@@ -73,8 +78,8 @@ Requests start at least one second apart, including retries; 429/5xx and transpo
 - `reports/report.json`: complete metrics, effective config and 25 what-if settings (5/10/20/30/50 people × 6/12/24/36/48 months, 365-day span).
 - `reports/report.md`: human-readable summary and what-if table.
 - `site/src/data/videos.json`: selected videos, quotes, metrics, report snapshot.
-- `site/src/data/trending.json` and `site/src/data/ai.json`: deployed YouTube feed snapshots, with source window, Shorts cutoff and approximate quota use.
-- `site/dist/`: static 20-card pages for 推荐 (`/`, `/page/2/`), AI (`/ai/`, `/ai/page/2/`) and 社区好评 (`/community/`, `/community/page/2/`; newest at `/community/newest/`). Community selection timestamps record the first successful report inclusion. Its most-recommenders sort uses people then months; newest uses first selection date then latest HN mention.
+- `site/src/data/trending.json`, `ai.json`, `podcast.json`, `music.json`, and `channels.json`: deployed YouTube feed snapshots. `channels.json` contains source-channel details and recent upload snippets for prebuilt channel pages.
+- `site/dist/`: static 20-card pages for 全部, AI前沿, 播客, 音乐, and 社区好评 (including their `/page/2/` routes when needed), plus prebuilt `/channel/<id>/` pages and `/following/`. Community selection timestamps record the first successful report inclusion. Its most-recommenders sort uses people then months; newest uses first selection date then latest HN mention.
 
 Gate drop counts are independent and can overlap. Metadata-unavailable includes missing cache entries and API-confirmed unavailable/private/unprocessed videos. What-if rows report recommendation candidates, selected with cached metadata, and uncached unknowns separately; they are lower bounds, not estimates of unknown outcomes. The defaults are never relaxed to reach 100. All passing videos are displayed, with actual count even below or above 100.
 

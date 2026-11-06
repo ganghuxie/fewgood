@@ -10,6 +10,8 @@ export function videoUrl(section, id, base = '') {
 export function pageUrl(section, page, base = '', sort = 'people') {
   let path;
   if (section === 'ai') path = '/ai/';
+  else if (section === 'podcast') path = '/podcast/';
+  else if (section === 'music') path = '/music/';
   else if (section === 'community') path = sort === 'newest' ? '/community/newest/' : '/community/';
   else path = '/';
   const relative = page === 1 ? path : `${path}page/${page}/`;

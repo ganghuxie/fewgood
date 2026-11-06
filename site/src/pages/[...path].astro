@@ -1,15 +1,17 @@
 ---
 import trending from '../data/trending.json';
 import ai from '../data/ai.json';
+import podcast from '../data/podcast.json';
+import music from '../data/music.json';
 import community from '../data/videos.json';
 import VideoPage from '../components/VideoPage.astro';
 import { paginate, pageUrl } from '../lib/pagination.mjs';
 export function getStaticPaths() {
-  const feeds = { trending, ai, community };
-  const definitions = [['trending', 'people'], ['ai', 'people'], ['community', 'people'], ['community', 'newest']];
+  const feeds = { trending, ai, podcast, music, community };
+  const definitions = [['trending', 'people'], ['ai', 'people'], ['podcast', 'people'], ['music', 'people'], ['community', 'people'], ['community', 'newest']];
   return definitions.flatMap(([section, sort]) => paginate(feeds[section].videos, section, sort).map(props => ({
     params: { path: pageUrl(section, props.page, '', sort).replace(/^\/|\/$/g, '') || undefined },
-    props: { ...props, feed: feeds[section], tabCounts: { ai: ai.videos.length, community: community.videos.length } },
+    props: { ...props, feed: feeds[section] },
   })));
 }
 ---

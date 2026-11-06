@@ -1,5 +1,5 @@
 const PREFIX = 'youtuber:';
-export const KEYS = { favorites: `${PREFIX}favorites`, watchLater: `${PREFIX}watchLater`, history: `${PREFIX}history` };
+export const KEYS = { favorites: `${PREFIX}favorites`, watchLater: `${PREFIX}watchLater`, history: `${PREFIX}history`, following: `${PREFIX}following` };
 
 export function get(key) {
   try { const value = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(value) ? value : []; } catch { return []; }
