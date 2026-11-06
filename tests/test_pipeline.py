@@ -123,6 +123,7 @@ def test_youtube_costs():
     assert youtube_cost('https://www.googleapis.com/youtube/v3/videos') == 1
     assert youtube_cost('https://www.googleapis.com/youtube/v3/channels') == 1
     assert youtube_cost('https://www.googleapis.com/youtube/v3/playlistItems') == 1
+    assert youtube_cost('https://www.googleapis.com/youtube/v3/commentThreads') == 1
 
 def test_config_daily_quota_limit(config):
     assert config['metadata']['daily_quota_limit'] == 8000

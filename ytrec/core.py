@@ -49,7 +49,7 @@ def charge_quota(units, limit, path='data/quota.json'):
 
 def youtube_cost(url):
     path = str(url).split('?', 1)[0].rstrip('/').lower()
-    for endpoint, cost in (('/search', 100), ('/videos', 1), ('/channels', 1), ('/playlistitems', 1)):
+    for endpoint, cost in (('/search', 100), ('/videos', 1), ('/channels', 1), ('/playlistitems', 1), ('/commentthreads', 1)):
         if endpoint in path:
             return cost
     return 1

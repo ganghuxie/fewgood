@@ -18,3 +18,8 @@ crawl:
   start: '2007-01-01'
   window_days: 30
   request_interval_seconds: 1.05
+zh:
+  provider: gemini
+  gemini_model: gemini-3.5-flash
+  gemini_fallback_model: gemini-3.5-flash-lite
+  deepseek_model: deepseek-chat

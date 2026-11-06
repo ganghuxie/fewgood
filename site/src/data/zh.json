@@ -1,0 +1,3354 @@
+{
+  "generated_at": "2026-11-06T14:47:55Z",
+  "feed": "community",
+  "videos": {
+    "ji5_MqicxSo": {
+      "title_zh": "兰迪·波许的最后一课：实现你的童年梦想",
+      "blurb_zh": "卡耐基梅隆大学教授的传奇演讲，激励数百万人勇敢追梦。",
+      "highlights": [],
+      "comments_zh": [
+        {
+          "original": "I was a grad student at CMU's Entertainment Technology Center when Randy gave this lecture. In 2008 he came to our graduation ceremony on main campus and ETC's diploma ceremony at Heinz field, he was so sick and weak but he still came. I wrote him an email telling him how thrilled I was to be a graduate from the school he and Don Marinelli started and proud of being the \"oldest\" student there (in my 50's) and I actually made it thru. As sick as Randy was he wrote me back and told me how proud I should be of that accomplishment. I understand he answered every single email he got no matter how lousy he felt. That's what made me love this guy. What a trooper and a true inspiration, his children will forever be so proud of him and his legacy will forever inspire millions. Way to go Randy...",
+          "text_zh": "兰迪做这场演讲时我是CMU娱乐科技中心的硕士生。2008年他拖着病体参加了我们的毕业典礼。我给他发邮件表达敬意，尽管病重他还是回信祝贺了我。他回复了收到的每一封邮件，真正伟大的灵魂！",
+          "likes": 5936
+        },
+        {
+          "original": "There are some big quotes to pick here.\n\nOne of them : \"Experience is what you get when you didn't get what you wanted\"",
+          "text_zh": "这里有许多金句，其中一句是：“经验是你未能如愿以偿时所得到的收获。”",
+          "likes": 4306
+        },
+        {
+          "original": "In his book 'The Last Lecture', Randy says his wife whispered 'Please don't die' to him when she hugged him before blowing out her birthday candle. Knowing this watching that part of the lecture always wrecks me.",
+          "text_zh": "在书中兰迪提到，妻子在吹生日蜡烛前拥抱他时曾轻声说“请别死”。每次看到演讲的那个部分都会让我泪崩。",
+          "likes": 1660
+        }
+      ],
+      "has_transcript": false,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 644,
+        "completion_tokens": 547,
+        "total_tokens": 1191
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 644,
+        "completion_tokens": 547,
+        "total_tokens": 1191
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:37:54Z"
+    },
+    "UF8uR6Z6KLc": {
+      "title_zh": "史蒂夫·乔布斯2005年斯坦福大学毕业典礼演讲",
+      "blurb_zh": "乔布斯分享人生三则故事，激励毕业生追随内心、直面挫折。",
+      "highlights": [
+        {
+          "text": "串联生命中的点滴",
+          "start": 55.0
+        },
+        {
+          "text": "关于爱与失落的故事",
+          "start": 338.0
+        },
+        {
+          "text": "求知若饥，虚心若愚",
+          "start": 0.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Here I am watching this on my iPhone...Thank you Steve....",
+          "text_zh": "此时此刻我正用iPhone看着这个视频……谢谢你，史蒂夫……",
+          "likes": 14877
+        },
+        {
+          "original": "\"Your time is limited, so don't waste it living someone else's life\" - Steve Jobs",
+          "text_zh": "“你的时间有限，所以不要浪费时间去过别人的生活” —— 史蒂夫·乔布斯",
+          "likes": 12858
+        },
+        {
+          "original": "Who is listening to this in 2026?",
+          "text_zh": "2026年了还有谁在听这个？",
+          "likes": 12581
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2776,
+        "completion_tokens": 360,
+        "total_tokens": 3136
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2776,
+        "completion_tokens": 360,
+        "total_tokens": 3136
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:00Z"
+    },
+    "a9xAKttWgP4": {
+      "title_zh": "用 APL 语言实现康威生命游戏",
+      "blurb_zh": "通过精炼的 APL 数组编程，仅用数行代码实现优雅且无显式循环的生命游戏。",
+      "highlights": [
+        {
+          "text": "使用 APL 矩阵重塑与旋转构建初始网格",
+          "start": 4.0
+        },
+        {
+          "text": "通过外积计算邻居数量并应用生命游戏规则",
+          "start": 98.0
+        },
+        {
+          "text": "利用不动点运算编写动画循环并实现演化展示",
+          "start": 332.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "So this is a function. And we'll call this function \"Life\".\n\n\nImmediately starts writing down magic symbols down.",
+          "text_zh": "所以这是一个函数。我们称之为“Life”。\n\n随后立刻开始写下一堆魔法符号。",
+          "likes": 151
+        },
+        {
+          "original": "Now I see I made right choice of learning Brainfuck instead of APL.",
+          "text_zh": "现在我发现当初选择学 Brainfuck 而不是 APL 是明智的。",
+          "likes": 145
+        },
+        {
+          "original": "APL was the first programming language I learned, back around 1973 or so.\n\nIt's pretty strange to see lower case letters.  How do you fit all those characters on the typeball?",
+          "text_zh": "APL 是我在 1973 年左右学的第一门编程语言。\n\n看到小写字母感觉真奇怪。你怎么把所有这些字符都塞进打字球里的？",
+          "likes": 75
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3038,
+        "completion_tokens": 438,
+        "total_tokens": 3476
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3038,
+        "completion_tokens": 438,
+        "total_tokens": 3476
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:08Z"
+    },
+    "ZTC_RxWN_xo": {
+      "title_zh": "硅谷的秘密历史",
+      "blurb_zh": "揭秘硅谷如何从二战与冷战的军事秘密中诞生。",
+      "highlights": [],
+      "comments_zh": [
+        {
+          "original": "Thank you for making this video. I had no idea that my Dad had been \"heavily involved\" in radar things in the late 1950s while a student at Harvard and probably other things out here also when Dave & Bill of HP brought him to HP in the very late 1950s. I'm trying to get him to talk with the Computer History Museum at some point.",
+          "text_zh": "感谢制作这个视频。我以前完全不知道我父亲在50年代末在哈佛求学时曾深度参与雷达相关工作...",
+          "likes": 66
+        },
+        {
+          "original": "His introductory comments about the current generation of university engineering students view the world and think is spot on.    Basically, they graduate from high school not knowing anything, uninformed, and too lazy to think.   Since they are the same  human race that their fathers and grandfathers were, the problem cannot be with the students.   The problem must be a failure of the high school system and the training of school teachers.  Today's generation of university students regard anything older than themselves as ancient history, and will not read textbooks published more than 15-20 years ago, regarding them as obsolete and probably wrong.",
+          "text_zh": "他关于当代大学工程专业学生世界观和思维方式的开场白非常精辟。",
+          "likes": 23
+        },
+        {
+          "original": "What a great presentation.  It covers the history of \"Silicon Valley\" of which most are unaware.  I was a manufacturer's rep from 1965 to 2000.  My customers included almost all of the microwave manufacturers-- Dalmo Victor, Litton, Lenkurt, California Microwave, HP, Watkins-Johnson, Avantek, Yigtek, among others, I've probably forgotten.",
+          "text_zh": "多棒的演讲。它涵盖了大多数人所不知的“硅谷”历史。",
+          "likes": 17
+        }
+      ],
+      "has_transcript": false,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 755,
+        "completion_tokens": 513,
+        "total_tokens": 1268
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 755,
+        "completion_tokens": 513,
+        "total_tokens": 1268
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:16Z"
+    },
+    "NOAgplgTxfc": {
+      "title_zh": "斯坦福大学萨polsy教授谈美国抑郁症（完整讲座）",
+      "blurb_zh": "深入探讨抑郁症的生物学与心理学根源，带你科学认识这一最具破坏性的常见疾病。",
+      "highlights": [
+        {
+          "text": "0.5s 音乐响起与斯坦福大学介绍",
+          "start": 0.5
+        },
+        {
+          "text": "78.2s 抑郁症是毁灭性且极具破坏性的疾病",
+          "start": 78.2
+        },
+        {
+          "text": "302.0s 核心症状：无法感知快乐的快感缺失",
+          "start": 302.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "“Yea, I went to Stanford for a bit.”",
+          "text_zh": "“是的，我在斯坦福待过一会儿。”",
+          "likes": 15101
+        },
+        {
+          "original": "\"It's a biochemical disorder with a genetic component with early exposure experiences that make it so someone can't appreciate sunsets\"\nNothing has hit me harder than this",
+          "text_zh": "“这是一种具有遗传成分和早期经历影响的生化疾病，它让人无法欣赏日落。”\n没有什么比这句话更让我破防了。",
+          "likes": 10206
+        },
+        {
+          "original": "I'd like to thank Stanford and Professor Sapolsky for making their educational materials like this lecture open to the public. This lecture was quite eye opening for me.",
+          "text_zh": "我要感谢斯坦福大学和萨波尔斯基教授将这门讲座等教育材料向公众开放。这场讲座让我大开眼界。",
+          "likes": 9204
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2937,
+        "completion_tokens": 449,
+        "total_tokens": 3386
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2937,
+        "completion_tokens": 449,
+        "total_tokens": 3386
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:22Z"
+    },
+    "dBnniua6-oM": {
+      "title_zh": "糖：苦涩的真相",
+      "blurb_zh": "揭秘糖分如何悄然摧毁健康，颠覆你对肥胖与饮食的传统认知。",
+      "highlights": [
+        {
+          "text": "1:06 罗伯特·卢斯蒂格博士开始演讲",
+          "start": 66.0
+        },
+        {
+          "text": "114.1 探讨阿特金斯饮食与日本饮食的共同点",
+          "start": 114.0
+        },
+        {
+          "text": "232.3 质疑热力学第一定律在肥胖问题上的局限性",
+          "start": 232.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "I stopped eating sugar and drinking soda the weekend before Thanksgiving 2020. I started out at 212.8 pounds. I am down to 188.2 pounds, and I feel great. My doctor told me my blood sugar was at the level to be classified as a type 2 diabetic. That did it. I knew I had to change my diet. Sugar was my drug of choice. I have had issues with joint pain for years. I have arthritis, and being overweight for years, and the sugar made it worse. After stopping eating sugar, and losing the weight, my joints have stopped hurting. My mind is clear. I was having issues concentrating. Now I don't. I work 12 hour shifts. I used to feel wiped out by the end of my shift. Now I don't. My wife and I have started keto. She has gone from 235 down to 217. Her joint pain has stopped too. Sugar is poison. It's also addictive. It's literally killing people. Something must be done. Processed foods are formulated to be addictive. Eating healthy is expensive. Eating unhealthy is cheap. That's why poor people are overweight more than people who aren't poor. This has to change. Our society is being destroyed by sugar addiction. All kids should watch this video, as well as adults. Money is all that matters to the powers that be. Our health means nothing. Take control of your health people. It can be done. DO IT!!!!!",
+          "text_zh": "我在2020年感恩节前的周末停止吃糖和喝苏打水。我的体重从212.8磅降到了188.2磅，感觉棒极了。医生说我的血糖达到了2型糖尿病的标准，这让我意识到必须改变饮食。糖就像我的毒品。我多年来一直有关节痛和关节炎的问题，超重和糖分使情况恶化。戒糖并减重后，我的关节不再疼了，思维也清晰了。我上12小时的班，过去下班时总是筋疲力尽，现在不会了。我和妻子开始了生酮饮食，她的体重从235磅降到217磅，关节痛也消失了。糖就是毒药，它会让人上瘾，正在杀死人们。我们必须采取行动！",
+          "likes": 4751
+        },
+        {
+          "original": "I cut all refined sugars out of my diet and eat a 100% whole/clean diet as of 4 months ago and it's like I have found the fountain of youth. I haven't counted calories or gone hungry at all in these last 4 months and I have lost 25 pounds (20 more to go) and my adult acne has cleared up. No big secret, I just make all my own food and I don't buy anything that has more than 3 ingredients in it (all of which I have to be able to pronounce).",
+          "text_zh": "4个月前，我戒掉了所有精制糖，开始100%吃天然/清淡的食物，感觉就像找到了青春之泉。这4个月里我没有计算卡路里，也没有挨饿，体重减轻了25磅（还要再减20磅），成人的青春痘也消失了。没有什么大秘密，我只是自己做饭，不买配料超过3种且名字叫不上来的东西。",
+          "likes": 3305
+        },
+        {
+          "original": "My mom through the 60’s and 70’s never feed us chips or sugary sodas, I think I’ll call her up and tell her I love her!",
+          "text_zh": "我妈妈在60和70年代从不给我们吃薯片或含糖苏打水，我想打电话告诉她我爱她！",
+          "likes": 3029
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3653,
+        "completion_tokens": 1057,
+        "total_tokens": 4710
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3653,
+        "completion_tokens": 1057,
+        "total_tokens": 4710
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:29Z"
+    },
+    "0CDXJ6bMkMY": {
+      "title_zh": "David Heinemeier Hansson 在创业学校 08 的演讲",
+      "blurb_zh": "探讨如何不依赖风投、通过产品盈利打造可持续发展的初创公司。",
+      "highlights": [
+        {
+          "text": "00:35 探讨不依赖VC融资、保持盈利的创业方式",
+          "start": 35.0
+        },
+        {
+          "text": "01:28 收取费用的商业本质与盈利模式",
+          "start": 88.0
+        },
+        {
+          "text": "02:23 37signals的月订阅收费模式及其成功经验",
+          "start": 143.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "who's the genius who didn't show the slides?",
+          "text_zh": "哪个天才没有展示幻灯片？",
+          "likes": 45
+        },
+        {
+          "original": "This is one of the best business talks I have watched in my entire life. The insights are even more relevant to developing African economies like South Africa which has more barriers to funding and big corporate clients. Thanks to Courtland Allen for recommending this talk.",
+          "text_zh": "这是我一生中看过最好的商业演讲之一。这些见解对于南非等面临更多融资和大客户壁垒的发展中非洲经济体更具现实意义。感谢 Courtland Allen 推荐这个演讲。",
+          "likes": 21
+        },
+        {
+          "original": "Even 15 years ago David was GOLD!",
+          "text_zh": "即使在15年前，David 也是金子般宝贵！",
+          "likes": 12
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2927,
+        "completion_tokens": 409,
+        "total_tokens": 3336
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2927,
+        "completion_tokens": 409,
+        "total_tokens": 3336
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:35Z"
+    },
+    "2Op3QLzMgSY": {
+      "title_zh": "麻省理工学院 6.001 结构与解释计算机程序 (1986) - 第一讲 A",
+      "blurb_zh": "计算机科学既不是科学，也不是关于计算机的，它是关于“过程”与如何做事的艺术。",
+      "highlights": [
+        {
+          "text": "计算机科学既不是科学，也不是关于计算机的",
+          "start": 30.0
+        },
+        {
+          "text": "过程就像是住在计算机里并做事的魔法精灵",
+          "start": 340.0
+        },
+        {
+          "text": "我们用 Lisp 语言来施放作为程序的咒语",
+          "start": 378.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "00:30 Computer science is a terrible name. First, it's not a science. And it's also not about computers.\n3:12 People in the future will recognize that people were really formalizing intuitions about *process* -- how to do things. Talking precisely about *how to* knowledge. As opposed to geometry that talks about what is true.\n5:36 What's a process? A process is like a magical spirit that lives in the computer and does something. What directs a process is a pattern of rules called a procedure. Procedures are the spells. The programming language is the language for casting the spells.\n7:25 Computer science is the business is in formalizing the \"how to\" imperative knowledge.\n10:12 As opposed to the constraints in other kinds of engineering,  where the constraints of what you can build are the constraints of physical systems, the constraints imposed in building large software systems are the limitations of our own minds. \n10:55 Abstraction. Engineering technique whereby a \"black box\" can be used without knowing its implementation details. And these \"black boxes\" can be combined to create even more complex systems.\n16:50 We're not only building boxes that input and output numbers. We're building boxes that can compute methods. We can have procedures whose values is another procedure.\n18:14 Big Topic 1: Black-Box Abstraction\n22:45 Big Topic 2: Conventional Interfaces\n24:45 Big Topic 3: Metalinguistic Abstraction - making new languages\n\n28:07 Learning a new language. Know: 1) primitive elements 2) means of combination and 3) means of abstraction.\n29:58 Lisp's primitive data\n38:45 Lisp's \"define\"\n44:48 Lambda is Lisp's way of saying \"make a procedure\".\n49:33 A key thing in Lisp is that you don't make arbitrary distinctions between things that happen to be primitive in the language and things that happen to be built in. So the things you construct get used with all the power and flexibility as if they were primitives.\n51:13 How to make a case analysis i.e.conditionals. \"cond\" or \"if\"\n59:05 An example problem: Heron's square root algorithm\n1:08:54 Summary",
+          "text_zh": "00:30 计算机科学是个糟糕的名字。首先，它不是科学，其次，它也跟计算机没太大关系。\n3:12 未来的人们会意识到，人类当时实际上是在将关于“过程”（如何做事）的直觉形式化，精确地探讨“如何做”的知识，这与探讨“什么是真理”的几何学相对。\n5:36 什么是过程？过程就像是一个住在计算机里并能做事的魔法精灵。指导过程的是一组被称为过程（procedure）的规则模式。过程就是咒语，而编程语言则是施放咒语的语言。\n7:25 计算机科学的核心业务是将“如何做”的命令式知识形式化。\n10:12 与其他工程中构建物的限制在于物理系统不同，构建大型软件系统所面临的限制是我们自身的思维极限。\n10:55 抽象。这是一种工程技术，使用“黑盒”时无需了解其实现细节，并且这些“黑盒”可以组合以创造更复杂的系统。\n16:50 我们不只是在构建输入和输出数字的盒子，我们在构建能够计算方法的盒子。我们可以让一个过程的值是另一个过程。\n18:14 核心主题 1：黑盒抽象\n22:45 核心主题 2：常规接口\n24:45 核心主题 3：元语言抽象——创造新语言\n\n28:07 学习一门新语言需要了解：1）基本元素，2）组合手段，3）抽象手段。\n29:58 Lisp 的基本数据\n38:45 Lisp 的 \"define\"\n44:48 Lambda 是 Lisp 中表示“制造一个过程”的方式。\n49:33 Lisp 的关键之处在于，你不会在语言中碰巧属于基本的东西和碰巧内置的东西之间做出随意的区分。因此，你构建的东西可以像基本元素一样拥有全部的功能和灵活性。\n51:13 如何进行条件分析，即条件语句 \"cond\" 或 \"if\"\n59:05 示例问题：海伦平方根算法\n1:08:54 总结",
+          "likes": 367
+        },
+        {
+          "original": "Wonder if he planned to be watched around 30 years later on the internet.",
+          "text_zh": "不知道他当年有没有想过，大约30年后这段视频会被人在互联网上观看。",
+          "likes": 234
+        },
+        {
+          "original": "Lisp syntax is a bit different since \"syntactic sugars\" have been added over the years. Yet the content of the lecture does not vary over time since it is \"not about computers\" but process and procedures. Thank you, MIT.",
+          "text_zh": "多年来随着各种“语法糖”的加入，Lisp 的语法有了一点不同。但讲座的内容并没有随时间改变，因为它“无关计算机”，而是关于过程与程序的。谢谢你，MIT。",
+          "likes": 91
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3361,
+        "completion_tokens": 1419,
+        "total_tokens": 4780
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3361,
+        "completion_tokens": 1419,
+        "total_tokens": 4780
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:43Z"
+    },
+    "u6XAPnuFjJc": {
+      "title_zh": "驱动力：揭示人类动机的惊人真相",
+      "blurb_zh": "颠覆传统的金钱奖励认知，深入探讨激发内在动机的核心要素。",
+      "highlights": [
+        {
+          "text": "机械技能与认知技能的奖励差异",
+          "start": 108.0
+        },
+        {
+          "text": "MIT与印度农村的激励实验",
+          "start": 54.0
+        },
+        {
+          "text": "自主性、专精与目的性的驱动三要素",
+          "start": 306.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "You could possibly translate this ideology into the classroom by making learning the primary focus rather than grades.",
+          "text_zh": "你可以将这种理念应用到课堂中，让学习成为首要目标，而不是分数。",
+          "likes": 1932
+        },
+        {
+          "original": "how big is this freaking board?",
+          "text_zh": "这块疯狂的白板到底有多大？",
+          "likes": 1280
+        },
+        {
+          "original": "Working together on something for a purpose (other than just making profit) is awesome. People love to work but they hate to do useless work.",
+          "text_zh": "为了一个目标（不仅仅是为了盈利）而共同努力的感觉太棒了。人们喜欢工作，但讨厌做无用功。",
+          "likes": 863
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2956,
+        "completion_tokens": 360,
+        "total_tokens": 3316
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2956,
+        "completion_tokens": 360,
+        "total_tokens": 3316
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:51Z"
+    },
+    "MO0r930Sn_8": {
+      "title_zh": "理查德·费曼谈磁铁",
+      "blurb_zh": "跟随费曼的独特视角，探索“为什么”背后的物理真谛与认知局限。",
+      "highlights": [
+        {
+          "text": "2.6s 磁铁间的排斥与吸引感觉",
+          "start": 2.0
+        },
+        {
+          "text": "67.4s 为什么阿姨滑倒：解释的框架",
+          "start": 67.0
+        },
+        {
+          "text": "237.5s 为什么磁铁会排斥：深入本质",
+          "start": 237.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "RIchard Feyman's wife: \"WHY did you not take the trash out yet?!\" \n\n*Richard proceeds to go on a long tirade about electromagnetic forces, gravity, string theory etc. until the wife sighs in despair and takes out the garbage herself. Again.*",
+          "text_zh": "理查德·费曼的妻子：“你为什么还没倒垃圾？！”\n\n*理查德随后开始了一场关于电磁力、引力、弦理论等的长篇大论，直到妻子绝望地叹了口气，自己去倒了垃圾。又一次。*",
+          "likes": 1520
+        },
+        {
+          "original": "When I go to my physics professor's office to ask one homework question...",
+          "text_zh": "当我去物理教授办公室问一个作业问题时……",
+          "likes": 1445
+        },
+        {
+          "original": "i dont know about magnets but i learned allot about ice",
+          "text_zh": "我对磁铁还是一知半解，但我对冰了解了很多",
+          "likes": 1197
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2963,
+        "completion_tokens": 448,
+        "total_tokens": 3411
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2963,
+        "completion_tokens": 448,
+        "total_tokens": 3411
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:38:56Z"
+    },
+    "yYAw79386WI": {
+      "title_zh": "转弯之际 - 差速器是如何工作的（1937年）",
+      "blurb_zh": "通过精妙的微缩模型，用最直观易懂的方式带你领略汽车差速器的机械之美。",
+      "highlights": [
+        {
+          "text": "134.1s 解释为什么外侧车轮需要以更快的速度转动",
+          "start": 134.0
+        },
+        {
+          "text": "194.4s 揭秘差速器的基本构造与工作原理",
+          "start": 194.0
+        },
+        {
+          "text": "392.6s 展示齿轮如何完美演变成现代汽车差速器",
+          "start": 392.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Let's take a moment to appreciate the machinist who built like 10 progressively complicated miniature differentials for this film.",
+          "text_zh": "让我们花点时间赞赏一下这位机械师，他为这部电影制作了大约10个越来越复杂的微型差速器。",
+          "likes": 29388
+        },
+        {
+          "original": "i always wonder why the explanation of these old videos is better than the new one...",
+          "text_zh": "我一直很好奇为什么这些老视频的解释比现在的视频还要好……",
+          "likes": 20634
+        },
+        {
+          "original": "Somebody save this video in case we need to rebuild humanity.",
+          "text_zh": "请把这个视频保存好，万一我们需要重建人类文明呢。",
+          "likes": 17300
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 413,
+        "total_tokens": 3052
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 413,
+        "total_tokens": 3052
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:04Z"
+    },
+    "0fKBhvDjuy0": {
+      "title_zh": "十的乘方 (1977)",
+      "blurb_zh": "这部经典短片带我们从芝加哥湖畔出发，在宏观宇宙与微观粒子间穿梭，感受震撼的尺度之",
+      "highlights": [
+        {
+          "text": "芝加哥湖畔的野餐起点",
+          "start": 32.0
+        },
+        {
+          "text": "从太阳系边缘飞向宇宙深空",
+          "start": 181.0
+        },
+        {
+          "text": "深入人体细胞与DNA原子内部",
+          "start": 374.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "the fact that this wasmade in 1977 blows my mind, imagine what could be done with today's technology, someone should make a new version of this!",
+          "text_zh": "这竟然是1977年制作的，太让人震惊了。想象一下用今天的技术能做出什么效果，真应该有人拍个新版本！",
+          "likes": 3883
+        },
+        {
+          "original": "Everyone has noticed different aspects of this video, but nobody has noticed that this guy has been putting hearts under the comments for 10 years. I think this is the true Power of Ten. ✊👏💖",
+          "text_zh": "每个人都关注了视频的不同方面，但没人发现这家伙在评论区点赞红心已经坚持了10年。我想这才是真正的十的乘方力量。✊👏💖",
+          "likes": 3682
+        },
+        {
+          "original": "Who else watch this for a school assignment in 2020",
+          "text_zh": "还有谁是为了2020年的学校作业来看这个的",
+          "likes": 3233
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3068,
+        "completion_tokens": 447,
+        "total_tokens": 3515
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3068,
+        "completion_tokens": 447,
+        "total_tokens": 3515
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:10Z"
+    },
+    "b2F-DItXtZs": {
+      "title_zh": "第 1 集 - MongoDB 是网络规模的",
+      "blurb_zh": "幽默讽刺NoSQL迷信与关系型数据库的经典技术短片。",
+      "highlights": [
+        {
+          "text": "MongoDB是网络规模的数据库",
+          "start": 11.8
+        },
+        {
+          "text": "关系型数据库不支持扩展",
+          "start": 36.1
+        },
+        {
+          "text": "我辞职去农场干活了",
+          "start": 157.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This video aged like fine wine",
+          "text_zh": "这视频真是越陈越香",
+          "likes": 3558
+        },
+        {
+          "original": "how the fuck is this 14 years old and nothing has changed 😂😭😭",
+          "text_zh": "这特么都14年了，怎么一点都没变 😂😭😭",
+          "likes": 3335
+        },
+        {
+          "original": "\"Mongo DB handles web scale. You turn it on and it scales right up\" \nLMAO",
+          "text_zh": "\"MongoDB能处理网络规模。你一打开它就自动扩展了\" 哈哈哈哈",
+          "likes": 2904
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2453,
+        "completion_tokens": 338,
+        "total_tokens": 2791
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2453,
+        "completion_tokens": 338,
+        "total_tokens": 2791
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:16Z"
+    },
+    "NNnIGh9g6fA": {
+      "title_zh": "人类行为生物学导论",
+      "blurb_zh": "斯坦福大学经典公开课，带你从生物学视角探索人类行为的复杂根源。",
+      "highlights": [
+        {
+          "text": "通过一个离奇的行凶案例引入行为生物学",
+          "start": 15.0
+        },
+        {
+          "text": "探讨基因、环境与自由意志的复杂交织",
+          "start": 95.0
+        },
+        {
+          "text": "探讨激素如何影响大脑并作为法庭辩护理由",
+          "start": 210.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "i've completed the full cycle of procrastination, going so far into the depths of not doing homework that i end up watching a stanford intro class on youtube",
+          "text_zh": "我完成了拖延症的闭环，为了不做作业竟然在YouTube上看起了斯坦福的导论课。",
+          "likes": 38876
+        },
+        {
+          "original": "The fact that we can access this lecture without having to attend Stanford is mind-blowing. What a time to be alive!",
+          "text_zh": "不用上斯坦福就能听到这门课，简直太震撼了。生逢其时啊！",
+          "likes": 37575
+        },
+        {
+          "original": "Just pointing put, someone wrote 57 minutes of subtitles for a lecture. Shout out to you my guy.",
+          "text_zh": "顺便指出，居然有人为一节讲座写了57分钟的字幕。向你致敬，老兄。",
+          "likes": 12714
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2968,
+        "completion_tokens": 414,
+        "total_tokens": 3382
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2968,
+        "completion_tokens": 414,
+        "total_tokens": 3382
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:22Z"
+    },
+    "-zRN7XLCRhc": {
+      "title_zh": "LISA11 - 枝繁叶茂！illumos 的崛起与发展",
+      "blurb_zh": "回顾 illumos 操作系统的历史与未来，探索其作为 OpenSolaris ",
+      "highlights": [
+        {
+          "text": "10.1s 演讲开场与对历史长河的思考",
+          "start": 10.0
+        },
+        {
+          "text": "111.2s 回忆 Solaris 2.x 艰难的内核演进",
+          "start": 111.0
+        },
+        {
+          "text": "330.0s 软件开发中的仁慈独裁者模型",
+          "start": 330.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"Do not fall into the trap of anthropomorphizing Larry Ellison\"  hahahaha xD",
+          "text_zh": "“不要陷入将拉里·埃里森拟人化的陷阱”哈哈哈 xD",
+          "likes": 492
+        },
+        {
+          "original": "I've watched this talk multiple times, and I'm just making this list as a reference for my future self so I can quickly find these clips:\n7:45 - Scalability Day\n16:40 - Innovative ideas come from engineers, from individuals: they reflect the people behind them\n27:25 - Governance, politics - forkaphobia\n29:32 - OpenSolaris sock puppet performance\n35:30 - What you think of Oracle is even truer than what you think it is: \"Shit mediocrity, inflict misery, lie our asses off, screw our customers, and make a whole shitload of money\"\n38:28 - Do not fall into the trap of anthropomorphizing Larry Ellison. . .The lawnmower doesn't care about OpenSolaris - the lawnmower doesn't have empathy\n43:26 - Because I didn't work at Oracle [anymore], I couldn't quit over this. . .I wanted to quit over it, but I couldn't\n56:14 - There is a file system crisis in Linux and KVM. . .it's clown college [btrfs, etc.]\n57:05 - If you jailbreak out of QEMU in our KVM implementation, you just find yourself in a zone. Congratulations, you've now burrowed out into a much more secure cell\n59:00 - I didn't think this [illumos hackathon] was going to work. Who's gonna hack on an operating system? It's complicated. It's like, \"let's go hack on a 747-800!\" You don't do that! It might crash!\n1:02:30 - Linux has not included DTrace primarily for licensing/religious issues",
+          "text_zh": "我已经看过好几次这个演讲了，做个时间戳列表留作参考以便快速找到精彩片段：\n7:45 - 可扩展性日\n16:40 - 创新想法来自工程师和个人：它们反映了背后的创造者\n27:25 - 治理、政治与“分支恐惧症”\n29:32 - OpenSolaris 木偶戏表演\n35:30 - 你对甲骨文的看法甚至比你想象的还要真实：“制造平庸、带来痛苦、疯狂说谎、坑害客户并赚大钱”\n38:28 - 不要陷入将拉里·埃里森拟人化的陷阱……割草机才不在乎 OpenSolaris 呢，割草机没有同理心\n43:26 - 因为我（当时）不在甲骨文工作了，所以我没法为此辞职……我很想为这事辞职，但没法辞\n56:14 - Linux 和 KVM 正面临文件系统危机……简直像小丑学校 [btrfs 等]\n57:05 - 如果你在我们的 KVM 实现中逃离 QEMU，你会发现自己身处一个 Zone 中。恭喜，你钻进了一个更安全的隔离区\n59:00 - 我当时觉得这个 [illumos 黑客马拉松] 不会成功。谁会去魔改一个操作系统？太复杂了。这就好比说“咱们去魔改一架波音 747-800 吧！”你不能这么干，会坠机的！\n1:02:30 - Linux 没能包含 DTrace 主要还是出于许可和意识形态/宗教问题",
+          "likes": 155
+        },
+        {
+          "original": "I usually watch videos at 1.25x speed. Not with Bryan Cantrill.",
+          "text_zh": "我通常以 1.25 倍速看视频，但看 Bryan Cantrill 的视频除外。",
+          "likes": 149
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 1146,
+        "total_tokens": 4549
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3403,
+        "completion_tokens": 1146,
+        "total_tokens": 4549
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:30Z"
+    },
+    "HUEvRyemKSg": {
+      "title_zh": "通用的计算机之战",
+      "blurb_zh": "科里·多克托罗深入剖析版权战背后的通用计算机生存危机，警示数字时代的技术自由。雷",
+      "highlights": [
+        {
+          "text": "科里·多克托罗开场幽默致意",
+          "start": 29.0
+        },
+        {
+          "text": "探讨版权战与通用计算机的命运",
+          "start": 132.0
+        },
+        {
+          "text": "早期软件防盗版与DRM的困境",
+          "start": 171.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "In Lollipop 2.0, you'll get to turn the alarm off, and the red bar is also cool",
+          "text_zh": "在 Lollipop 2.0 中，你可以关掉闹钟，红色的状态栏也很酷",
+          "likes": 454
+        },
+        {
+          "original": "Wow good taste Sam",
+          "text_zh": "哇，品味真好，山姆",
+          "likes": 170
+        },
+        {
+          "original": "It sends a chill down my spine on how prophetic this was.\nHere we are, in 2020, with Apple releasing new Macs that don't allow you to run any other operating system besides MacOS. And if you try and run any of your own binaries inside MacOS, they must be Signed and Approved by Apple, otherwise it's going to be hell to run them.\n\nStallman was right.",
+          "text_zh": "这预言太准了，让人不寒而栗。\n到了2020年，苹果发布的新Mac甚至不允许运行MacOS以外的其他操作系统。如果你想在MacOS里运行自己的二进制文件，它们必须经过苹果的签名和批准，否则运行起来将是个噩梦。\n\n斯托曼是对的。",
+          "likes": 134
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2607,
+        "completion_tokens": 484,
+        "total_tokens": 3091
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2607,
+        "completion_tokens": 484,
+        "total_tokens": 3091
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:37Z"
+    },
+    "bzkRVzciAZg": {
+      "title_zh": "Node.js 是牛逼闪闪摇滚科技吗？",
+      "blurb_zh": "幽默探讨 Node.js 异步编程与传统服务器的优劣。",
+      "highlights": [
+        {
+          "text": "0.4s: 讨论 Apache 服务器在应用中的表现",
+          "start": 0.0
+        },
+        {
+          "text": "10.4s: 探讨为什么不用 Node.js",
+          "start": 10.0
+        },
+        {
+          "text": "137s: 顺序代码与异步恐怖故事的对比",
+          "start": 137.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"Do you know what this reminds me of?\"\n\"The invention of the transistor.\"\n\nLMFAO.",
+          "text_zh": "“这让我想起了什么？”“晶体管的发明。”笑死我了。",
+          "likes": 517
+        },
+        {
+          "original": "\"You may recall sequential code. It's code that you can read.\"",
+          "text_zh": "“你可能还记得顺序代码。那是你能读懂的代码。”",
+          "likes": 506
+        },
+        {
+          "original": "\"Apache was built before async was discovered!\" Hahaha!",
+          "text_zh": "“Apache 是在异步被发现之前构建的！”哈哈哈！",
+          "likes": 306
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2397,
+        "completion_tokens": 361,
+        "total_tokens": 2758
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2397,
+        "completion_tokens": 361,
+        "total_tokens": 2758
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:43Z"
+    },
+    "PUv66718DII": {
+      "title_zh": "Bret Victor - 发明原理",
+      "blurb_zh": "一场改变你思考创作与编程方式的经典演讲，强烈推荐。",
+      "highlights": [
+        {
+          "text": "创作者需要与作品建立即时连接",
+          "start": 116.0
+        },
+        {
+          "text": "代码与画面实时同步，无需编译运行",
+          "start": 231.0
+        },
+        {
+          "text": "即时反馈让艺术发现成为可能",
+          "start": 326.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"You can choose to sleepwalk through life and accept the path that's been laid out for you. You can choose to accept the world as it is. But you don't have to. If there's something in the world you feel is wrong, and you have a vision for what a better world could be, you can find your guiding principle, and fight for a cause.\"\n\nOne of the best talks I've ever seen.",
+          "text_zh": "“你可以选择浑浑噩噩地过一生，接受别人为你铺好的路。你可以选择接受世界本来的样子。但你不必如此。如果你觉得世界上有什么不对，并且你对更美好的世界有愿景，你可以找到你的指导原则，为一个事业而奋斗。”我看过的最好的演讲之一。",
+          "likes": 204
+        },
+        {
+          "original": "I see you're all back here again to pay your annual tribute\n\nedit: hello from 2024. mass orgasm at 14:08 will never be topped",
+          "text_zh": "我看到你们又回来朝圣了。\n\n补充：来自2024年的问候。14:08的集体高潮永远无法被超越。",
+          "likes": 180
+        },
+        {
+          "original": "This talk was so ahead of its time. Its surprising how most of these ideas, in 2020, are still not how we think about or write in code.",
+          "text_zh": "这场演讲太超前了。令人惊讶的是，到了2020年，这些想法中的大多数仍然不是我们思考和编写代码的方式。",
+          "likes": 115
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-chat",
+      "llm_usage": {
+        "prompt_tokens": 2685,
+        "completion_tokens": 406,
+        "total_tokens": 3091,
+        "fallback_from": "gemini:HTTPError"
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2685,
+        "completion_tokens": 406,
+        "total_tokens": 3091,
+        "fallback_from": "gemini:HTTPError"
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:51Z"
+    },
+    "tc4ROCJYbm0": {
+      "title_zh": "AT&T档案：UNIX操作系统",
+      "blurb_zh": "回顾UNIX诞生与设计哲学，理解现代操作系统根基。",
+      "highlights": [
+        {
+          "text": "UNIX三层结构：内核、shell与实用程序",
+          "start": 298.0
+        },
+        {
+          "text": "管道是UNIX系统的根本贡献",
+          "start": 359.0
+        },
+        {
+          "text": "1969年Thompson与Ritchie开始构建UNIX",
+          "start": 275.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "These guys built the backbone of almost every server, mobile device, iot, and apple device in existence. Unix + C has held for 40 years.",
+          "text_zh": "这些人构建了几乎所有服务器、移动设备、物联网和苹果设备的骨干。Unix加C已屹立40年。",
+          "likes": 4141
+        },
+        {
+          "original": "C and the Shell. Still here more than 40 years later. So many languages have come and gone in the meantime.",
+          "text_zh": "C和Shell，40多年后依然存在。其间多少语言来了又去。",
+          "likes": 2855
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-chat",
+      "llm_usage": {
+        "prompt_tokens": 2730,
+        "completion_tokens": 289,
+        "total_tokens": 3019,
+        "fallback_from": "gemini:HTTPError"
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2730,
+        "completion_tokens": 289,
+        "total_tokens": 3019,
+        "fallback_from": "gemini:HTTPError"
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:39:58Z"
+    },
+    "s7tWHJfhiyo": {
+      "title_zh": "为什么你的选票其实没用？",
+      "blurb_zh": "用生动的动物王国动画，深刻剖析“多数代表制”投票系统如何导致两党制与废票现象。",
+      "highlights": [
+        {
+          "text": "介绍什么是第一过去投票制（FPTP）及其核心规则",
+          "start": 38.0
+        },
+        {
+          "text": "揭示少数统治问题：80%的人想要别人，但豹子依然获胜",
+          "start": 81.0
+        },
+        {
+          "text": "通过多轮选举演示，解释系统如何必然导致两党制",
+          "start": 107.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Can we talk about how this poor lion Queen has a new husband every four years? Talk about divorce court.",
+          "text_zh": "我们能聊聊这个可怜的狮子女王每四年就换一个新丈夫吗？这简直是离婚法庭啊。",
+          "likes": 11763
+        },
+        {
+          "original": "Who cares about Trump or Hillary, I'm voting for Turtle",
+          "text_zh": "谁管特朗普还是希拉里，我要投给乌龟。",
+          "likes": 10728
+        },
+        {
+          "original": "Depressing modern relevance aside, it’s kind of incredible how well this video holds up a DECADE later",
+          "text_zh": "抛开令人沮丧的现代现实不谈，十年后这个视频依然如此经久不衰，真是不可思议。",
+          "likes": 9445
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2427,
+        "completion_tokens": 404,
+        "total_tokens": 2831
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2427,
+        "completion_tokens": 404,
+        "total_tokens": 2831
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:04Z"
+    },
+    "rI8tNMsozo0": {
+      "title_zh": "Rails Conf 2012 主题演讲：简单至关重要 (Rich Hickey)",
+      "blurb_zh": "Clojure 语言作者带你厘清“简单”与“容易”的本质区别。",
+      "highlights": [
+        {
+          "text": "区分简单与复杂、容易的概念",
+          "start": 94.0
+        },
+        {
+          "text": "简单是客观的，容易是相对的",
+          "start": 197.0
+        },
+        {
+          "text": "人类大脑处理复杂性的极限",
+          "start": 371.0
+        }
+      ],
+      "comments_zh": [],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3040,
+        "completion_tokens": 447,
+        "total_tokens": 3487
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3040,
+        "completion_tokens": 447,
+        "total_tokens": 3487
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:10Z"
+    },
+    "5pidokakU4I": {
+      "title_zh": "轴心奇迹 - 四和弦金曲串烧",
+      "blurb_zh": "仅凭四个和弦就能串起几十首流行金曲，幽默又震撼！",
+      "highlights": [],
+      "comments_zh": [
+        {
+          "original": "Ah yes, who could forget the classic Australian comedy trio Will Arnett, Jack Black and Edward Snowden.",
+          "text_zh": "啊对，谁能忘记这组澳大利亚喜剧三人组威尔·阿奈特、杰克·布莱克和爱德华·斯诺登呢。",
+          "likes": 41374
+        },
+        {
+          "original": "How many Copyright strikes can you get in 5min Speedrun",
+          "text_zh": "五分钟内能吃到多少次版权警告速通挑战",
+          "likes": 38974
+        },
+        {
+          "original": "Ironically enough this did end up as their biggest hit",
+          "text_zh": "具有讽刺意味的是，这最终成了他们最火的作品。",
+          "likes": 28267
+        }
+      ],
+      "has_transcript": false,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 651,
+        "completion_tokens": 270,
+        "total_tokens": 921
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 651,
+        "completion_tokens": 270,
+        "total_tokens": 921
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:16Z"
+    },
+    "_ahvzDzKdB0": {
+      "title_zh": "语言的生长 - Guy Steele (1998)",
+      "blurb_zh": "Guy Steele在OOPSLA上的经典演讲，通过独特的单音节词限制探讨编程语",
+      "highlights": [
+        {
+          "text": "39.2s 演讲开场与对单音节词限制的说明",
+          "start": 39.2
+        },
+        {
+          "text": "363.8s 谈论Java编程语言及命名限制",
+          "start": 363.8
+        },
+        {
+          "text": "414.9s 探讨编程语言应该庞大还是精简",
+          "start": 414.9
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Wow, that was good. Anyone who sees this thinking it may be too old or irrelevant.. it's not. I'd say this is timeless as far as a talk on PL design is concerned.",
+          "text_zh": "哇，太精彩了。任何觉得它过时或无关紧要的人……其实不然。就编程语言设计的演讲而言，我认为它是永恒的。",
+          "likes": 101
+        },
+        {
+          "original": "KAIST PL class brought me here.",
+          "text_zh": "KAIST的编程语言课程把我带到了这里。",
+          "likes": 100
+        },
+        {
+          "original": "He leaves defining \"garbage collection\" in single-syllable words as an exercise for the listener.  Here's my go.  \"Garbage collection\" means ways to find and free space filled with things you don't need so you will have space to put new things that you might need.",
+          "text_zh": "他留下了用单音节词定义“垃圾回收”的练习给听众。这是我的尝试：“垃圾回收”意味着寻找并释放充满不需要的东西的空间，以便有空间放置可能需要的新东西。",
+          "likes": 95
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2817,
+        "completion_tokens": 480,
+        "total_tokens": 3297
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2817,
+        "completion_tokens": 480,
+        "total_tokens": 3297
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:22Z"
+    },
+    "NGFhc8R_uO4": {
+      "title_zh": "犹如魔法：现代电脑芯片的制造过程",
+      "blurb_zh": "带你深入了解现代纳米芯片如何通过极致的黑客思维与工程学制造出来。",
+      "highlights": [],
+      "comments_zh": [
+        {
+          "original": "I will never complain about CPU prices again.",
+          "text_zh": "我再也不会抱怨CPU的价格了。",
+          "likes": 198
+        },
+        {
+          "original": "I'd kill for a 2022 version of this.",
+          "text_zh": "我太想看这个的2022年更新版本了。",
+          "likes": 151
+        },
+        {
+          "original": "This is the practical application of alchemy.",
+          "text_zh": "这就是炼金术的实际应用。",
+          "likes": 92
+        }
+      ],
+      "has_transcript": false,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 420,
+        "completion_tokens": 216,
+        "total_tokens": 636
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 420,
+        "completion_tokens": 216,
+        "total_tokens": 636
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:29Z"
+    },
+    "a1zDuOPkMSw": {
+      "title_zh": "哈明《你和你的研究》",
+      "blurb_zh": "探讨如何做出真正有价值的卓越研究，启发科研工作者的思考。",
+      "highlights": [
+        {
+          "text": "讨论马太效应与科学研究中的成名机制",
+          "start": 92.0
+        },
+        {
+          "text": "探讨运气与有准备的头脑之间的关系",
+          "start": 224.0
+        },
+        {
+          "text": "强调持续努力与专注对取得成就的重要性",
+          "start": 361.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Lots of insightful catch phrases. On collaboration \"Those who work with the door shut...don't know what to work on...they're not connected with reality\" and \"The guys with their doors closed were often very well able, very gifted but they seemed to work always on slightly the wrong problem\"",
+          "text_zh": "有很多深刻的金句。关于合作，他提到“关着门工作的人……不知道该研究什么……他们与现实脱节”以及“那些关着门的人通常很有能力、很有天赋，但他们似乎总是在研究稍微有点偏差的问题”。",
+          "likes": 204
+        },
+        {
+          "original": "Im in the middle of PhD. This is spot on. Put many things in perspective.",
+          "text_zh": "我正在读博士。这讲得太准了，让我对许多事情有了更清晰的认识。",
+          "likes": 90
+        },
+        {
+          "original": "Hamming telling me as politely as possible how disappointed he is in me.",
+          "text_zh": "哈明正尽可能客气地告诉我他对我是多么失望。",
+          "likes": 81
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2657,
+        "completion_tokens": 429,
+        "total_tokens": 3086
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2657,
+        "completion_tokens": 429,
+        "total_tokens": 3086
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:37Z"
+    },
+    "o9pEzgHorH0": {
+      "title_zh": "别再滥用类了",
+      "blurb_zh": "Python开发中类常常被过度使用，本视频教你如何精简代码，告别复杂的面向对象迷",
+      "highlights": [
+        {
+          "text": "132s 介绍如何识别并重构被滥用类的常见场景",
+          "start": 132.0
+        },
+        {
+          "text": "271s 通过第三方API实例展示如何将冗长代码简化",
+          "start": 271.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.\n - Antoine de Saint-Exupery",
+          "text_zh": "达到完美不是因为无以复加，而是因为无可删减。\n - 安托万·德·圣埃克苏佩里",
+          "likes": 735
+        },
+        {
+          "original": "Take aways from this talk and the comment section (note: I am including several quotes from the Zen of Python and PEP 8).\n\n1. Classes are useful, but foolish consistency is the hobgoblin of simple minds.\n2. Simple is better than complex, complex is better than complicated.\n3. Practicality beats purity\n4. When the tools you have already work: use and adapt them for your use-case. Don't reinvent the wheel with a class every time you happen upon a new problem.\n5. People will miss the message because their beliefs and tools are attacked.",
+          "text_zh": "本次演讲和评论区的核心收获：\n\n1. 类很有用，但盲目的死板是简单思维的恶魔。\n2. 简单胜于复杂，复杂胜于繁琐。\n3. 实用性胜过纯粹性。\n4. 现有工具能用就拿来适配你的场景，不要每次遇到新问题都用类去重复造轮子。\n5. 人们有时会错过核心观点，因为他们的信仰和工具受到了挑战。",
+          "likes": 278
+        },
+        {
+          "original": "I think the take away here is simply that very often people tend to overdo some code steps systematically just because they learned that this was \"the proper way\" whereas it might actually just be making the code complicated and large uselessly.\n\nThis guy isn't the first I see to make the point that this whole deal of making your code super complex for the pretended sake of future flexibility and time saving is a bunch of garbage and typically just ends up eating more time than it saves. I think there's truth to this.\n\nAlso you gotta remember that everytime you complexify one of your APIs you're making the learning process longer for any new employee in your organization. I think over the years there's been a dogmatic approach that's built up in OOP and not always for the better.",
+          "text_zh": "我认为这里的核心收获是，人们往往系统性地过度设计代码，仅仅是因为他们被教导这是“正确的方式”，而实际上这只会让代码无端变得复杂且臃肿。\n\n这位并不是我见过的第一个提出这种观点的人：为了所谓“未来的灵活性和省时”而把代码搞得超级复杂纯属无稽之谈，通常这只会消耗更多的时间。我认为这很有道理。\n\n另外你必须记住，每次你把API搞复杂时，都在增加公司新员工的学习成本。我认为多年来面向对象编程（OOP）中已经形成了一种教条主义，并非总是朝着好的方向发展。",
+          "likes": 94
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3252,
+        "completion_tokens": 836,
+        "total_tokens": 4088
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3252,
+        "completion_tokens": 836,
+        "total_tokens": 4088
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:44Z"
+    },
+    "dP1xVpMPn8M": {
+      "title_zh": "Acme 编辑器导览",
+      "blurb_zh": "带你了解源自 Plan 9 的独特鼠标驱动文本编辑器 Acme。",
+      "highlights": [
+        {
+          "text": "1.4s 介绍 Acme 的背景与历史",
+          "start": 1.4
+        },
+        {
+          "text": "171.9s 三键鼠标与窗口布局机制",
+          "start": 171.9
+        },
+        {
+          "text": "285.7s 鼠标三键在文本操作中的独特作用",
+          "start": 285.7
+        }
+      ],
+      "comments_zh": [],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2660,
+        "completion_tokens": 170,
+        "total_tokens": 2830
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2660,
+        "completion_tokens": 170,
+        "total_tokens": 2830
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:49Z"
+    },
+    "EKWGGDXe5MA": {
+      "title_zh": "理查德·费曼计算机科学讲座：硬件、软件与启发式",
+      "blurb_zh": "诺奖得主费曼带你从文件系统原理理解计算机本质。",
+      "highlights": [
+        {
+          "text": "63.1s 费曼解释计算机本质上是高速文件系统",
+          "start": 63.1
+        },
+        {
+          "text": "101.5s 探讨计算机的输入与输出概念",
+          "start": 101.5
+        },
+        {
+          "text": "271.4s 将计算机类比为传统商业档案系统",
+          "start": 271.4
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This guy could talk about the in's and outs of a cats arse and I would listen with the upmost respect and gratitude.  \n\nThis awesome human known as Richard Feynman.",
+          "text_zh": "这家伙就算讲猫屁股里的里里外海外行事，我也会带着崇高的敬意和感激去听。这就是被称为理查德·费曼的伟大人类。",
+          "likes": 588
+        },
+        {
+          "original": "At 1:08:35 Richard tries to put his glasses on the shirt pocket and realize he has a t-shirt and then make a move as if he were going to polish his glasses, LOL.",
+          "text_zh": "在 1:08:35 时，理查德试图把眼镜插在衬衫口袋上，然后意识到自己穿的是T恤，接着假装要擦眼镜，哈哈。",
+          "likes": 511
+        },
+        {
+          "original": "This was 1986, when he was 68, 2 years before his death. Imagine your grandpa being this smart, this funny, and this right. And imagine that 30 years after he explains new technology, still most of it is spot on. What a guy.",
+          "text_zh": "那是1986年，他68岁，在他去世前两年。想象一下你的爷爷能这么聪明、这么有趣、这么正确。而且想象一下在他解释新技术30年后，大部分内容依然完全正确。真是个奇男子。",
+          "likes": 424
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3158,
+        "completion_tokens": 555,
+        "total_tokens": 3713
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3158,
+        "completion_tokens": 555,
+        "total_tokens": 3713
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:40:56Z"
+    },
+    "QPKKQnijnsM": {
+      "title_zh": "美国财富不平等现象",
+      "blurb_zh": "直观揭示美国财富分配的巨大差距，现实远比想象中残酷。",
+      "highlights": [
+        {
+          "text": "0.1s - 美国人对财富分配的认知与理想",
+          "start": 0.1
+        },
+        {
+          "text": "128.9s - 将美国财富分配缩减至100人模型",
+          "start": 128.9
+        },
+        {
+          "text": "228.1s - 触目惊心的美国财富分配现实",
+          "start": 228.1
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "The fact that this was created 11 years ago, is insane, imagine the distribution now.",
+          "text_zh": "这个视频是11年前制作的，太疯狂了，真难以想象现在的分配情况会怎样。",
+          "likes": 23142
+        },
+        {
+          "original": "funny that this was posted 6 years ago and it's even more relevant today.",
+          "text_zh": "有趣的是，这视频是6年前发布的，而放到今天却更加切中要害了。",
+          "likes": 16691
+        },
+        {
+          "original": "*Watches video:* \"Man this is bad\"\n\n*Realizes video came out 12 years ago:* \"Oh no...\"",
+          "text_zh": "*看视频：*“天哪，这太糟了”\n\n*意识到视频是12年前发布的：*“噢不……”",
+          "likes": 10148
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2879,
+        "completion_tokens": 419,
+        "total_tokens": 3298
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2879,
+        "completion_tokens": 419,
+        "total_tokens": 3298
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:02Z"
+    },
+    "yJDv-zdhzMY": {
+      "title_zh": "所有演示之母 - 道格拉斯·恩格尔巴特 (1968)",
+      "blurb_zh": "带你回到1968年，见证现代计算机图形交互界面的诞生地。",
+      "highlights": [
+        {
+          "text": "演示文字处理与文件系统操作",
+          "start": 217.0
+        },
+        {
+          "text": "展示视图控制与大纲折叠功能",
+          "start": 357.0
+        },
+        {
+          "text": "演示购物清单的实时编辑与浏览",
+          "start": 528.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "I don't understand -  this should be celebrated as one of those moments in history when someone steps out of relative obscurity and changes EVERYTHING. Imagine Edison coming out of nowehere and not just presenting the light bulb, but a city block fully lit with street lamposts, and fully lit apartment building with individual units all set up with light switches, ceiling lamps, desk lamps etc etc. This is like Einstein's Miracle Year, or the publication of The Origin of Species. This is absolutely monumental. Epochal. \n\nHow could they have put together all that technology, HARDWARE AND SOFTWARE in one working system? The vision it must have took to assemble all the disparate technologies into this is beyond comprehension.",
+          "text_zh": "我不明白——这本该被誉为历史上最伟大的时刻之一，有人从默默无闻中走出来，改变了一切。这就像爱因斯坦的奇迹年，绝对具有划时代的意义。他们究竟是怎么把所有这些软硬件技术组合成一个完整的工作系统的？",
+          "likes": 1624
+        },
+        {
+          "original": "This guy was literally 30+ yrs ahead of his time.  He's even got a gamer headset on lol.",
+          "text_zh": "这家伙简直领先了他所在的时代30多年。他甚至还戴着游戏耳机哈哈。",
+          "likes": 1167
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2556,
+        "completion_tokens": 627,
+        "total_tokens": 3183
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2556,
+        "completion_tokens": 627,
+        "total_tokens": 3183
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:08Z"
+    },
+    "8SkdfdXWYaI": {
+      "title_zh": "使用 Python 进行语音编程",
+      "blurb_zh": "通过语音识别摆脱手部劳损，高效编写代码。",
+      "highlights": [
+        {
+          "text": "作者因腕管综合征被迫尝试语音编程",
+          "start": 171.0
+        },
+        {
+          "text": "展示如何完全不碰键盘进行现场演示",
+          "start": 65.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": ">it probably works best for lisps\n\nironic",
+          "text_zh": ">它可能最适合 Lisp 语言\n\n真讽刺",
+          "likes": 43
+        },
+        {
+          "original": "For those who are interested in trying something like this, please see https://github.com/dictation-toolbox or google for 'github voice code'. I've been releasing tarballs of my code privately to those who already have natlink/dragonfly working but it is so custom to my setup that you wouldn't be able to use it directly. Others, who appear to have much more time than I, have taken up the banner on this.",
+          "text_zh": "对于有兴趣尝试这类技术的人，请访问 https://github.com/dictation-toolbox 或在谷歌搜索 'github voice code'。我曾向那些已经配好 natlink/dragonfly 的人私下发布过代码包，但由于它高度契合我的个人配置，你无法直接使用。不过其他人（看起来比我有更多时间）已经接过了这面大旗。",
+          "likes": 28
+        },
+        {
+          "original": "just thought of this idea 6+ years to late",
+          "text_zh": "我想到这个主意时已经迟了 6 年多",
+          "likes": 9
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3169,
+        "completion_tokens": 439,
+        "total_tokens": 3608
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3169,
+        "completion_tokens": 439,
+        "total_tokens": 3608
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:14Z"
+    },
+    "oKg1hTOQXoY": {
+      "title_zh": "艾伦·凯 1997 年 OOPSLA 演讲：计算机革命尚未发生",
+      "blurb_zh": "计算机革命尚未真正发生，艾伦·凯的预言至今仍发人深省。",
+      "highlights": [
+        {
+          "text": "Smalltalk 25周年：从 Xerox PARC 到今",
+          "start": 109.0
+        },
+        {
+          "text": "计算机是一种全新的数学，而非经典数学的附庸",
+          "start": 435.0
+        },
+        {
+          "text": "对象应像细胞一样生长，而非像建筑一样搭建",
+          "start": 2640.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "07:00 \"On the Fact that the Atlantic Has Two Sides\"\n      Kay: \"On the Fact that Most of the World's Software Is Written On One Side Of The Atlantic!\"\n07:30 Two types of math: computers = practical math\n      structures of a much larger kind, consistent\n08:55 Debugging goes on in math as well\n10:00 What's being done out in the world under the name of \"OOP\"?\n10:33 Infamous C++ quip\n10:50 Same feelings about Smalltalk! Meant to be improved. Not syntax, or classes. Taken as given...\n13:00 Math as gears\n13:35 Analogy to 60s programs: SCALING A DOGHOUSE!\n18:00 Pink plane / blue plane\n21:30 Data abstraction in 1961 US Air Force\n23:25 Contrast that with what you have to do with HTML on the internet! Dark Ages!\n      Presupposes that there should be a \"browser\" that should understand its format.\n      \"This has to be one of the worst ideas since MS-DOS\"\n      What happens when physicists decide to play with computers :P\n      Browser wars, which are 100% irrelevant [to the big picture]\n25:30 The internet is starting to move in that direction as people invent ever more complex HTML formats, ever more intractable.\n    This same mistake made over and over again\n26:00 Sketchpad: very much an object-oriented system\n26:50 Simula\n27:50 Better Old Thing vs. New Thing\n29:20 Molecular biology: cell physiology and embryology (morphogenesis)\n30:00 First assay of an entire living creature: E.Coli; biological info processing\n34:10 Only takes 50 (40) cell division [cycles?] to make a baby!\n35:20 Computers: slow, small, stupid. How can we get them to realise their destiny?\n36:00 Doghouses, clocks don't scale 100x very well. Cells scale by 1,000,000,000,000x.\n      How do they do it, how might we adapt this for building complex systems?\n36:40 Simple idea that C++ has not figured out.\n      \"No idea so simple and powerful that you can't get zillions of people to misunderstand it\"\n      Must not allow the INTERIOR to be a factor in the computation of the whole\n      Cell membrane keeps stuff OUT as much as it keeps stuff IN\n      Confusion with objects from noun+verb-centered language. \"Our process words stink\"\n37:50 Apologies for \"Object-Oriented\". Should have been Process/Message/間 (ma) -Oriented\n      Stuff IN-BETWEEN objects. What you DON'T see.\n39:25 An object can act like anything. You have encapsulated a COMPUTER!! The universal simulator!\n      Take the powerful thing you're working on and not LOSE it by PARTITIONING UP your design space!\n      That's the bug in data/procedures.\n      Pernicious thing in C++ and Java by looking like the OLD THING as much as possible.\n40:35 Virtual Machine\n41:00 UNIX processes: like objects, but too much overhead. \"3\" ought to be an object; but it can't be a UNIX process.\n41:50 Bio-cells can't share their DNA. OUR \"cells\" can! No need to e.g. engineer a special virus to change the DNA (e.g. cystic fibrosis)\n43:00 \"An object is a virtual server\" Every object should at least have a \"URL\"\n      I believe every object should have an IP\n44:10 So far we've been CONSTRUCTING software; soon we'll have to GROW it\n      Easy to grow a baby 6 inches; never have to take it down for maintenance!!\n      Can't grow a Boeing 747! Simple mechanical world; only object was to MAKE the artefact, NOT to grow it\n44:55 How many people STILL[1997] use a dev system that forces you to develop OUTSIDE of the lang?\n      Edit/compile/run? Even if it is \"fast\". Cannot possibly be other than a DEAD END for building complex systems!\n      [20 years later, in 2017: has anything changed?]\n45:50 ARPANET, the precursor to the Internet.\n      From the time ARPANET started running, expanded by 8 orders of magnitude.\n      Not ONE PHYSICAL ATOM in the internet today that was in the original ARPANET!\n      Not ONE LINE OF CODE of the original remains in the system!\n      System expanded by 100,000,000x, has changed every atom and every bit and has NEVER HAD TO STOP!\n      That is the metaphor we ABSOLUTELY MUST apply to what we THINK are \"smaller\" things!\n      When we think programming is \"small\", that's why our programs are so BIG.\n47:45 LISP, meta-reflection. \"Maxwell's Equations\" of software\n      Saddest thing about Java (possibly before reflection API?)\n      Java originally for programming toasters, not internet, but still --\n      How can you hope to cope with stuff without a meta-system?\n      Represents a real failure of people to understand what the larger picture is / will be.\n50:10 Meta-programming. Bootstrapping on top of the language itself.\n      Tyranny of a single implementation.\n52:15 Dozens and dozens of different object systems, all with very similar semantics, but different pragmatic details.\n      Think of what a URL is, a HTTP message is, an object is, an obj-oriented pointer is...\n      Should be clear that objects should not have to be local to the computer.\n      Interop is possible basically for free under this stance.\n      Things like JavaBeans and CORBA will not suffice.\n      Objects will have to DISCOVER and NEGOTIATE what each other can do.\n      Prod and poke each other to see response.\n      Must automate this!!\n55:20 1970s: Abstract Data Types. Assignment-centered thinking.\n       C++ like MS-DOS: no-one took seriously, because who would ever fall for a joke like that? ...\n57:35 McLuhan: \"I don't know who discovered water, but it wasn't a fish!\"\n58:10 3 stages of new ideas:\n      Dismissed as mad.\n      Then: totally obvious.\n      Finally: original denouncers claim to have invented it!\n      Smalltalk, sadly, went this way.\n      We don't know how to make systems yet!\n      Don't let what we DON'T know become a religion!\n      Before coming out into the world, Smalltalk was very good at making obsolete previous versions of itself.\n      Squeak: bootstrap something better than Smalltalk!\n      Think of how you can obsolete the damn thing!\n1:01:30 Pipe organ: \"Play it grand.\"\n\nLet us combine all this with Bret Victor's work, and lay the foundations for the *real* computer revolution yet to come.",
+          "text_zh": "07:00 “论大西洋有两岸”\n凯：“论世界上大多数软件都写在大西洋的一岸！”\n07:30 两种数学：计算机=实用数学\n结构更大且一致\n08:55 数学中也有调试\n10:00 世界上以“OOP”之名做的事？\n10:33 著名的C++吐槽\n10:50 对Smalltalk也有同感！本应被改进。不是语法或类。被当作既定……\n13:00 数学如齿轮\n13:35 类比60年代程序：缩放狗屋！\n18:00 粉红飞机/蓝飞机\n21:30 1961年美国空军的数据抽象\n23:25 对比互联网上HTML要做的事！黑暗时代！\n预设应有“浏览器”理解其格式。\n“这一定是自MS-DOS以来最糟糕的想法之一”\n物理学家玩计算机时会发生什么 :P\n浏览器大战，100%无关紧要[于大局]\n25:30 互联网正朝那方向移动，人们发明越来越复杂、越来越难处理的HTML格式。\n同样的错误一再犯\n26:00 Sketchpad：非常面向对象的系统\n26:50 Simula\n27:50 更好的旧事物 vs 新事物\n29:20 分子生物学：细胞生理学与胚胎学（形态发生）\n30:00 首次分析整个生物体：大肠杆菌；生物信息处理\n34:10 只需50（40）次细胞分裂就能造出婴儿！\n35:20 计算机：慢、小、笨。如何让它们实现命运？\n36:00 狗屋、时钟不能很好地扩展100倍。细胞能扩展1,000,000,000,000倍。\n它们如何做到，我们如何借鉴来构建复杂系统？\n36:40 C++没搞懂的简单想法。\n“没有哪个想法简单强大到不会让无数人误解”\n不能让内部成为整体计算的因素\n细胞膜既挡住东西出去也挡住东西进来\n因名词+动词中心语言而对对象产生混淆。“我们的过程词很烂”\n37:50 为“面向对象”道歉。本应是过程/消息/间（ma）导向\n对象之间的东西。你没看到的东西。\n39:25 对象可以像任何东西。你封装了一台计算机！！通用模拟器！\n把你正在做的强大东西拿来，不要因划分设计空间而失去它！\n这就是数据/过程的缺陷。\nC++和Java的恶毒之处在于尽可能像旧事物。\n40:35 虚拟机\n41:00 UNIX进程：像对象，但开销太大。“3”应该是对象；但不能是UNIX进程。\n41:50 生物细胞不能共享DNA。我们的“细胞”可以！无需如工程化特殊病毒来改变DNA（如囊性纤维化）\n43:00 “对象是虚拟服务器”每个对象至少应有“URL”\n我相信每个对象都应有IP\n44:10 到目前为止我们一直在构造软件；很快我们将不得不培育它\n让婴儿长6英寸很容易；从不需要停机维护！！\n不能培育波音747！简单机械世界；唯一目标是制造人工制品，而非培育它\n44:55 还有多少人[1997]使用强制你在语言之外开发的开发系统？\n编辑/编译/运行？即使“快”。对构建复杂系统不可能不是死路！\n[20年后，2017：有改变吗？]\n45:50 ARPANET，互联网的前身。\n从ARPANET运行起，扩展了8个数量级。\n今天互联网中没有一物理原子来自原始ARPANET！\n原始代码没有一行留在系统中！\n系统扩展了100,000,000倍，改变了每个原子和每个比特，却从未停止！\n这是我们必须应用于我们认为“较小”事物的隐喻！\n当我们认为编程“小”，这就是程序如此大的原因。\n47:45 LISP，元反射。软件的“麦克斯韦方程”\nJava最悲哀之处（可能在反射API之前？）\nJava最初为烤面包机编程，非互联网，但仍——\n没有元系统怎能应对？\n代表人们理解大局/未来的真正失败。\n50:10 元编程。在语言自身之上自举。\n单一实现的暴政。\n52:15 几十个不同对象系统，语义非常相似，但语用细节不同。\n想想URL、HTTP消息、对象、面向对象指针是什么……\n应清楚对象不必本地于计算机。\n此立场下互操作基本免费。\nJavaBeans和CORBA之类不够。\n对象必须发现和协商彼此能做什么。\n互相戳探看反应。\n必须自动化！\n55:20 1970年代：抽象数据类型。以赋值为中心思考。\nC++像MS-DOS：没人当真，谁会中这种笑话？……\n57:35 麦克卢汉：“我不知道谁发现水，但不是鱼！”\n58:10 新想法三阶段：\n被斥为疯狂。\n然后：完全显然。\n最后：原谴责者声称发明了它！\nSmalltalk不幸如此。\n我们还不知道如何造系统！\n别让我们不知道的成为宗教！\n问世前，Smalltalk很擅长淘汰自己的旧版本。\nSqueak：自举比Smalltalk更好的东西！\n想想如何淘汰这鬼东西！\n1:01:30 管风琴：“宏大演奏。”\n\n让我们结合Bret Victor的工作，为*真正*尚未到来的计算机革命奠基。",
+          "likes": 152
+        },
+        {
+          "original": "Best Alan Kay quote @10:34\"I made up the term object-oriented, and I can tell you I did not have C++ in mind.\" \n\nReminds me of: \"Those who forgot the past, are condemned to reinvent it, badly.\"",
+          "text_zh": "艾伦·凯最佳名言 @10:34“我发明了面向对象这个词，我可以告诉你我当时没想到C++。”\n\n让我想起：“忘记过去的人注定要糟糕地重蹈覆辙。”",
+          "likes": 48
+        },
+        {
+          "original": "The collection of sick burns Alan Kay lays on the Computing field never get old and is still just as relevant. I love this talk and so many of his others",
+          "text_zh": "艾伦·凯对计算领域的犀利吐槽永不过时，至今仍同样切题。我爱这个演讲和他的许多其他演讲。",
+          "likes": 43
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-chat",
+      "llm_usage": {
+        "prompt_tokens": 4396,
+        "completion_tokens": 3093,
+        "total_tokens": 7489,
+        "fallback_from": "gemini:JSONDecodeError"
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 4396,
+        "completion_tokens": 3093,
+        "total_tokens": 7489,
+        "fallback_from": "gemini:JSONDecodeError"
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:38Z"
+    },
+    "36GT2zI8lVA": {
+      "title_zh": "理查德·费曼：为什么？",
+      "blurb_zh": "跟随费曼的独特视角，探索“为什么”背后的科学与哲学深意。",
+      "highlights": [
+        {
+          "text": "磁铁相斥的直观感受与疑问",
+          "start": 2.0
+        },
+        {
+          "text": "以阿姨摔倒为例解释“为什么”的层级",
+          "start": 67.0
+        },
+        {
+          "text": "越追问下去，事物就越深邃有趣",
+          "start": 220.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Feynman gets stopped by a cop. \nCop : why were you speeding ? \nFeynman : what do you mean why ? \nHalf hour later \nCop : please just leave me alone",
+          "text_zh": "费曼被警察拦下了。\n警察：你为什么超速？\n费曼：你这话什么意思，为什么？\n半小时后：\n警察：求求你放过我吧",
+          "likes": 26675
+        },
+        {
+          "original": "'Some husbands arent interested in their wives' - Richard Feynman explaining magnetism.",
+          "text_zh": "“有些丈夫对他们的妻子不感兴趣”——理查德·费曼在解释磁性。",
+          "likes": 14183
+        },
+        {
+          "original": "If this man ever talks to toddlers, the conversation will be infinite",
+          "text_zh": "如果这个人跟小孩子说话，对话将会无限延续下去",
+          "likes": 9831
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2833,
+        "completion_tokens": 408,
+        "total_tokens": 3241
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2833,
+        "completion_tokens": 408,
+        "total_tokens": 3241
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:44Z"
+    },
+    "s1i-dnAH9Y4": {
+      "title_zh": "机械计算机（全集）- 火控计算机中的基本机构",
+      "blurb_zh": "带你领略微处理器诞生前，人类用纯机械结构精妙解决复杂数学计算的震撼智慧。",
+      "highlights": [
+        {
+          "text": "134.1秒：轴与齿轮的数值传递原理",
+          "start": 134.1
+        },
+        {
+          "text": "279.8秒：凸轮机构的形状设计与应用",
+          "start": 279.8
+        },
+        {
+          "text": "614.5秒：三维筒形凸轮的复杂计算",
+          "start": 614.5
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "How people designed this just absolutely blows my mind",
+          "text_zh": "人们是怎么设计出这东西的，简直让我大开眼界",
+          "likes": 241
+        },
+        {
+          "original": "Hopefully this technology doesn't fall into the hands of North Korea.",
+          "text_zh": "希望这项技术不会落入朝鲜手中。",
+          "likes": 237
+        },
+        {
+          "original": "I swear these videos from the 30s-50s do the best job at explaining things",
+          "text_zh": "我发誓30到50年代的这些视频在解释事物方面做得最好",
+          "likes": 217
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2962,
+        "completion_tokens": 372,
+        "total_tokens": 3334
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2962,
+        "completion_tokens": 372,
+        "total_tokens": 3334
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:49Z"
+    },
+    "f84n5oFoZBc": {
+      "title_zh": "吊床驱动开发 - Rich Hickey",
+      "blurb_zh": "探讨软件开发中的深度思考与设计哲学，解决根本 misconception。",
+      "highlights": [
+        {
+          "text": "15.5s 开场致辞与探讨深度思考的重要价值",
+          "start": 15.5
+        },
+        {
+          "text": "249.2s 设计阶段是修复软件缺陷成本最低的地方",
+          "start": 249.2
+        },
+        {
+          "text": "384.7s 重新定义分析与设计：识别问题与评估方案",
+          "start": 384.7
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "I got good at explaining problems by explaining them to my dog.\nThe dog enjoyed the attention, I benefited from formulating the problem in words. Win-win.\nSince my dog passed, I have been having a hard time coming up with a replacement explanation target. I should just get another dog.",
+          "text_zh": "我以前经常把问题解释给我的狗听来理清思路。狗享受了关注，我通过组织语言受益匪浅，双赢。自从我的狗去世后，我一直很难找到替代的倾听对象。我应该再去养只狗。",
+          "likes": 101
+        },
+        {
+          "original": "\"Not everything is awesome.\" Amen! Thank you, Rich.",
+          "text_zh": "“并不是每件事都很棒。”说得对！谢谢你，Rich。",
+          "likes": 43
+        },
+        {
+          "original": "I like bed driven development, I'm gonna try hammock now. Thanks Rich :)",
+          "text_zh": "我喜欢床铺驱动开发，现在我要去试试吊床了。谢谢 Rich :)",
+          "likes": 26
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2951,
+        "completion_tokens": 445,
+        "total_tokens": 3396
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2951,
+        "completion_tokens": 445,
+        "total_tokens": 3396
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:41:55Z"
+    },
+    "8pTEmbeENF4": {
+      "title_zh": "Bret Victor：编程的未来",
+      "blurb_zh": "探讨编程的本质与未来发展，极具启发性。",
+      "highlights": [
+        {
+          "text": "20.6s 探讨计算技术的快速发展",
+          "start": 20.6
+        },
+        {
+          "text": "98.0s 讨论接受新思想的本质与阻力",
+          "start": 98.0
+        },
+        {
+          "text": "326.5s 介绍源自最新研究的四大编程理念",
+          "start": 326.5
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This is why Computer Science needs to teach courses on the history of computers and programming. All other sciences talk about their history in introductory courses but not computer science. So the history is lost.  I have taken CS courses at 4 universities and none of them talked about the history. BTW very good talk.",
+          "text_zh": "这就是为什么计算机科学需要教授计算机和编程的历史。所有其他科学都会在入门课程中讲授其历史，但计算机科学却没有，因此历史遗失了。我在4所大学上过CS课程，没有一门讲过历史。顺便说一句，这是一场非常棒的演讲。",
+          "likes": 304
+        },
+        {
+          "original": "i like how the audience is initially laughing along with him, 1973 how quaint… then falls silent as they realize how dead serious he is and how far off we are in 2013.",
+          "text_zh": "我喜欢观众一开始跟着他笑（1973年多古朴啊……），然后变得鸦雀无声，因为他们意识到他是多么的严肃，而我们在2013年又是多么的落后。",
+          "likes": 195
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2781,
+        "completion_tokens": 502,
+        "total_tokens": 3283
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2781,
+        "completion_tokens": 502,
+        "total_tokens": 3283
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:01Z"
+    },
+    "kPRA0W1kECg": {
+      "title_zh": "6分钟演示15种排序算法",
+      "blurb_zh": "可视化与听觉化结合，带你领略15种经典排序算法的运行之美。",
+      "highlights": [
+        {
+          "text": "15种排序算法的精彩可视化演示",
+          "start": 6.0
+        },
+        {
+          "text": "通过声音和速度感受算法复杂度",
+          "start": 20.0
+        },
+        {
+          "text": "趣味十足的bogo sort算法展示",
+          "start": 30.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"Oh, that girl with the headphones is cute. I wonder what she's listening to.\"",
+          "text_zh": "“哦，那个戴耳机 姑娘真可爱。真想知道她在听什么。”",
+          "likes": 62733
+        },
+        {
+          "original": "I'm sitting here on a Friday night watching sorting algorithms. Help me.",
+          "text_zh": "我周五晚上坐在这里看排序算法。救救我。",
+          "likes": 40319
+        },
+        {
+          "original": "I want to play this to people that claim they listen to all sorts of music",
+          "text_zh": "我想把这个放给那些自称听过各种音乐的人听。",
+          "likes": 39974
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 681,
+        "completion_tokens": 351,
+        "total_tokens": 1032
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 681,
+        "completion_tokens": 351,
+        "total_tokens": 1032
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:08Z"
+    },
+    "PHe0bXAIuk0": {
+      "title_zh": "经济这台机器是怎样运行的",
+      "blurb_zh": "雷·达利欧用30分钟动画带你轻松看懂经济运行的本质。",
+      "highlights": [
+        {
+          "text": "0.1s 经济运行的宏观逻辑概览",
+          "start": 0.1
+        },
+        {
+          "text": "34.3s 交易作为经济机器的基本构建模块",
+          "start": 34.3
+        },
+        {
+          "text": "210.4s 信用在经济中所扮演的核心作用",
+          "start": 210.4
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "The public school system sucks. I get all of my education on YouTube.",
+          "text_zh": "公立学校系统太烂了，我所有的知识都是在YouTube上学的。",
+          "likes": 19705
+        },
+        {
+          "original": "Can we all take a moment to appreciate the quality of the animation here!! Simply extraordinary",
+          "text_zh": "大家能花点时间欣赏一下这里的动画质量吗！！简直太非凡了。",
+          "likes": 16718
+        },
+        {
+          "original": "The moral of the story: Debt is for investment, not expenditure.",
+          "text_zh": "这个故事的寓意是：负债是为了投资，而不是为了消费。",
+          "likes": 4534
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2962,
+        "completion_tokens": 368,
+        "total_tokens": 3330
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2962,
+        "completion_tokens": 368,
+        "total_tokens": 3330
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:13Z"
+    },
+    "o4-YnLpLgtk": {
+      "title_zh": "Symbolics Lisp 机器演示（2013年1月）",
+      "blurb_zh": "带你领略运行在模拟器上的传奇 Lisp 机器与先进的 Genera 系统。",
+      "highlights": [
+        {
+          "text": "04.9s 介绍运行在笔记本模拟器上的 Lisp 机器",
+          "start": 4.0
+        },
+        {
+          "text": "48.6s 演示类似于 Emacs 的 Zmacs 编辑器与",
+          "start": 48.0
+        },
+        {
+          "text": "201.5s 展示超越时代的鼠标敏感交互与对象呈现机制",
+          "start": 201.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "I'm not sure whether to be amazed or to be sad. This is **amazing** technology that scratches the surface of what could be -- unfortunately it means we're stuck with a piss-poor status quo crappy substitute instead. :-/",
+          "text_zh": "我不知道该感到惊叹还是悲伤。这是令人惊叹的技术，只展现了无限可能性的冰山一角——不幸的是，这意味着我们现在只能将就着用糟糕得多的现状代用品。:-/",
+          "likes": 45
+        },
+        {
+          "original": "I personally only worked on the Lisp system itself and on VLSI design tools that were used to design and test the Ivory chip itself. But there were CAD tools, typesetting systems, expert systems of various flavors and factory control systems written by Symbolics custumers, as well as the paint and 3d animation tools written by the Graphics division and later sold to III.",
+          "text_zh": "我个人只参与过 Lisp 系统本身以及用于设计和测试 Ivory 芯片的超大规模集成电路（VLSI）设计工具的工作。不过 Symbolics 的客户还编写了 CAD 工具、排版系统、各种风格的专家系统以及工厂控制系统，图形部门还编写了绘图和3D动画工具，后来卖给了 III 公司。",
+          "likes": 33
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3281,
+        "completion_tokens": 787,
+        "total_tokens": 4068
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3281,
+        "completion_tokens": 787,
+        "total_tokens": 4068
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:21Z"
+    },
+    "-5wpm-gesOY": {
+      "title_zh": "时间与时区的问题 - Computerphile",
+      "blurb_zh": "程序员永远的痛：为什么处理时区是一场无休止的噩梦。",
+      "highlights": [
+        {
+          "text": "0.3s 程序员处理时区像是一个警示故事",
+          "start": 0.3
+        },
+        {
+          "text": "51.1s 澳大利亚和尼泊尔带来奇葩时区要求",
+          "start": 51.1
+        },
+        {
+          "text": "316.5s 历史学家和历法更迭带来的终极崩溃",
+          "start": 316.5
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This video should be called \"Timezones - Tom Scotts descent into madness\"",
+          "text_zh": "这视频应该改名叫《时区：汤姆·斯科特是如何陷入疯狂的》",
+          "likes": 25468
+        },
+        {
+          "original": "\"And you thank them for making it open source\" - Best programmer line ever.",
+          "text_zh": "“然后你感谢他们将其开源”——有史以来最好的程序员台词。",
+          "likes": 19483
+        },
+        {
+          "original": "You know that your date calculator is accurate when it asks you: \"start date, end date, location, ethnicity, political spectrum, belief system\"",
+          "text_zh": "当你的日期计算器要求你输入“开始日期、结束日期、地点、种族、政治光谱、信仰体系”时，你就知道它准了。",
+          "likes": 16874
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3071,
+        "completion_tokens": 411,
+        "total_tokens": 3482
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3071,
+        "completion_tokens": 411,
+        "total_tokens": 3482
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:27Z"
+    },
+    "d-7o9xYp7eE": {
+      "title_zh": "别跟警察说话",
+      "blurb_zh": "法学教授深度剖析为何在任何情况下都不应与警察对话。",
+      "highlights": [
+        {
+          "text": "美利坚合众国宪法第五修正案解析",
+          "start": 59.0
+        },
+        {
+          "text": "最高法院大法官杰克逊的法律忠告",
+          "start": 178.0
+        },
+        {
+          "text": "辩护律师因与警察对话而获罪的真实案例",
+          "start": 224.0
+        }
+      ],
+      "comments_zh": [],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2755,
+        "completion_tokens": 159,
+        "total_tokens": 2914
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2755,
+        "completion_tokens": 159,
+        "total_tokens": 2914
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:32Z"
+    },
+    "jVkLVRt6c1U": {
+      "title_zh": "迈克·蒙泰罗：操，付钱！",
+      "blurb_zh": "全网最受欢迎的设计师演讲，教你如何硬气地向客户要回属于你的劳动报酬。",
+      "highlights": [
+        {
+          "text": "搞设计不仅要靠创意，更要懂得如何通过合同保护自己的商业权益。",
+          "start": 200.0
+        },
+        {
+          "text": "向客户写温情脉脉的求助信是毫无尊严的妥协，你必须掌握主导权。",
+          "start": 332.0
+        },
+        {
+          "text": "防患于未然，一份规范的客户服务合同能帮你解决绝大多数收款纠纷",
+          "start": 447.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Adam Savage sent me here\n\nEdit: ...and it was totally worth it! 🤟",
+          "text_zh": "亚当·萨维奇把我带到这里的\n\n编辑：……太值得了！🤟",
+          "likes": 3197
+        },
+        {
+          "original": "Yes, Adam Savage highly recommended  a MUST",
+          "text_zh": "是的，亚当·萨维奇极力推荐，绝对必看",
+          "likes": 866
+        },
+        {
+          "original": "As an architect that owns and runs my own firm, I watch this weekly to remind me and put me in the right mindset. \n-Never \"trust\" anyone, the nicest, friendliest buddy buddy clients can (and have) try to f**k you when it's time for them to pay.\n-Never start or do any work for free. Always take a deposit.",
+          "text_zh": "作为一个拥有并经营自己事务所的建筑师，我每周都看这个视频来提醒自己并调整心态。\n-永远不要“信任”任何人，再好的朋友客户在付钱时也会（并且已经）试图坑你。\n-永远不要免费开始或做任何工作。一定要收定金。",
+          "likes": 693
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2987,
+        "completion_tokens": 509,
+        "total_tokens": 3496
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2987,
+        "completion_tokens": 509,
+        "total_tokens": 3496
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:39Z"
+    },
+    "BKorP55Aqvg": {
+      "title_zh": "专家（搞笑短片）",
+      "blurb_zh": "职场讽刺神作，精准吐槽外行领导内行的崩溃日常。",
+      "highlights": [
+        {
+          "text": "0.4s 甲方提出画七条红线的离谱要求",
+          "start": 0.4
+        },
+        {
+          "text": "144.0s 工程师试图解释垂直几何学",
+          "start": 144.0
+        },
+        {
+          "text": "331.1s 客户要求把其中一条线画成小猫形状",
+          "start": 331.1
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "As an engineer, I eventually learned to just agree with them and then did whatever actually needed to be done- knowing they'd never even know the difference.",
+          "text_zh": "作为一名工程师，我最终学会了先满口答应，然后按实际需要去做——反正他们根本分不清区别。",
+          "likes": 23868
+        },
+        {
+          "original": "You know you're an engineer when this doesn't feel like a joke anymore",
+          "text_zh": "当你觉得这不再是个笑话时，说明你真的是个工程师了。",
+          "likes": 14811
+        },
+        {
+          "original": "I thought comedy was meant to make you laugh, not give you extreme anxiety.",
+          "text_zh": "我以为喜剧是让人发笑的，而不是让人焦虑发作的。",
+          "likes": 13898
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3213,
+        "completion_tokens": 397,
+        "total_tokens": 3610
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3213,
+        "completion_tokens": 397,
+        "total_tokens": 3610
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:44Z"
+    },
+    "7Pq-S557XQU": {
+      "title_zh": "马的命运，会是人类的未来吗？",
+      "blurb_zh": "深入探讨自动化与人工智能如何像当年的机械肌肉取代马匹一样，逐步颠覆人类的工作岗位",
+      "highlights": [
+        {
+          "text": "机械大脑正在取代人类的脑力劳动",
+          "start": 51.0
+        },
+        {
+          "text": "通用机器人正成为当年的个人电脑",
+          "start": 113.0
+        },
+        {
+          "text": "自动驾驶汽车将彻底改变人类出行",
+          "start": 302.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"you might think technology can't replace your job\"\nI'd be pretty horrified if technology started replacing unemployed peoples jobs.",
+          "text_zh": "“你可能觉得科技无法取代你的工作”\n如果科技开始取代失业者的工作，我会感到非常恐慌。",
+          "likes": 31861
+        },
+        {
+          "original": "Aged like fine wine",
+          "text_zh": "像美酒一样愈发醇香（指预言十分准确）",
+          "likes": 31264
+        },
+        {
+          "original": "\"The human brain is the most complicated machine, perhaps in the whole universe.\"\n\n- Human Brain",
+          "text_zh": "“人脑或许是整个宇宙中最复杂的机器。”\n——人类的大脑",
+          "likes": 24158
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2807,
+        "completion_tokens": 374,
+        "total_tokens": 3181
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2807,
+        "completion_tokens": 374,
+        "total_tokens": 3181
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:50Z"
+    },
+    "lKXe3HUG2l4": {
+      "title_zh": "乔·阿姆斯特朗的演讲《我们所处的困境》",
+      "blurb_zh": "Erlang语言发明者幽默吐槽现代软件开发的复杂性与痛点。",
+      "highlights": [
+        {
+          "text": "乔·阿姆斯特朗分享因为更新软件而崩溃的一个糟糕周五",
+          "start": 4.1
+        },
+        {
+          "text": "回顾1948年世界上第一个现代计算机程序的诞生",
+          "start": 254.0
+        },
+        {
+          "text": "对比1985年与当今电脑配置的巨大飞跃",
+          "start": 351.5
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "R.I.P. Joe Armstrong. :( You will be remembered fondly by many.",
+          "text_zh": "安息吧，乔·阿姆斯特朗。:( 很多人会深情地缅怀你。",
+          "likes": 552
+        },
+        {
+          "original": "\"And now for the tricky bit.\"\nalways :D",
+          "text_zh": "“接下来是棘手的部分。”总是让人忍俊不禁 :D",
+          "likes": 228
+        },
+        {
+          "original": "Only old guys with nothing to prove can be radically honest.",
+          "text_zh": "只有无需证明自己的老前辈才能做到彻底的坦诚。",
+          "likes": 182
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3056,
+        "completion_tokens": 367,
+        "total_tokens": 3423
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3056,
+        "completion_tokens": 367,
+        "total_tokens": 3423
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:42:56Z"
+    },
+    "4fFDFbi3toc": {
+      "title_zh": "使用确定性仿真测试分布式系统",
+      "blurb_zh": "通过确定性仿真解决分布式系统难以调试和复现的痛点。",
+      "highlights": [
+        {
+          "text": "1.6s 介绍演讲者与Foundation DB背景",
+          "start": 1.0
+        },
+        {
+          "text": "60.4s 通过简单示例分析分布式系统难以调试的根本原因",
+          "start": 60.0
+        },
+        {
+          "text": "300.9s 引入确定性仿真：先写仿真器再写数据库",
+          "start": 300.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "can u fix the sound?",
+          "text_zh": "能修一下声音吗？",
+          "likes": 29
+        },
+        {
+          "original": "I remember the \"spin\" network protocol simulator from Bell Labs in the early '90s. It was used at then-AT&T to predict and avoid bugs in telecom equipment systems. Sounds very similar in approach; simulate first, detect protocol problems (deadlocks, livelocks, bad states, etc) and then implement once you get it right.",
+          "text_zh": "我记得90年代初贝尔实验室的“spin”网络协议模拟器。它当时被AT&T用来预测和避免电信设备系统中的Bug。听起来方法非常相似：先模拟，检测协议问题（死锁、活锁、不良状态等），弄对后再实现。",
+          "likes": 13
+        },
+        {
+          "original": "Also, tools like TLA+ are made to solve these problems. The difference being that TLA+ uses logic to verify all traces *exhaustively*, without taking millions of years to do so. Running a sim will only explore a tiny percentage of possible event traces.",
+          "text_zh": "另外，像TLA+这样的工具也是为了解决这些问题而制造的。不同之处在于，TLA+使用逻辑来*详尽地*验证所有轨迹，而不需要花费数百万年的时间。运行仿真只能探索极小一部分可能的事件轨迹。",
+          "likes": 10
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3055,
+        "completion_tokens": 514,
+        "total_tokens": 3569
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3055,
+        "completion_tokens": 514,
+        "total_tokens": 3569
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:02Z"
+    },
+    "rX0ItVEVjHc": {
+      "title_zh": "CppCon 2014：Mike Acton “面向数据设计与 C++”",
+      "blurb_zh": "探讨如何通过面向数据设计在游戏开发中突破性能极限。",
+      "highlights": [
+        {
+          "text": "介绍主讲人及失眠组背景",
+          "start": 0.0
+        },
+        {
+          "text": "游戏开发中的性能需求",
+          "start": 126.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "@1:18:00 - \"Ok, great. You don't care how long it takes ... Great. But people who don't care how long it takes is also the reason why I have to wait 30 seconds for Word to boot.\"\n\nMike Acton really knows how to put things in perspective :)",
+          "text_zh": "Mike Acton 真的很懂如何切中要害：)",
+          "likes": 1244
+        },
+        {
+          "original": "The thing that makes this talk so special is that once you start your journey down the \"data-oriented rabbit hole\", you inevitably end up coming back to watch it multiple times over the years and getting more out of it each time - basically every sentence is packed with insight.",
+          "text_zh": "这场演讲特别之处在于，当你踏上面向数据的探索之旅后，免不了会反复观看，每次都有新收获——几乎每句话都充满了见解。",
+          "likes": 1199
+        },
+        {
+          "original": "0:00 introducing the introducer feels very on brand for a cpp conference.",
+          "text_zh": "0:00 连介绍人都要被介绍，这很符合 C++ 大会的风格。",
+          "likes": 589
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 1804,
+        "completion_tokens": 430,
+        "total_tokens": 2234
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 1804,
+        "completion_tokens": 430,
+        "total_tokens": 2234
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:07Z"
+    },
+    "DJklHwoYgBQ": {
+      "title_zh": "智能管道 | 仿冒电视购物广告 | Adult Swim",
+      "blurb_zh": "把你的排泄物联网并分享给社交圈，荒诞讽刺拉满的科技短片。",
+      "highlights": [
+        {
+          "text": "04.1s 讽刺科技创业风潮的智能管道广告",
+          "start": 4.1
+        },
+        {
+          "text": "109.5s 自动将你的健康状况发推特通知医院",
+          "start": 109.5
+        },
+        {
+          "text": "149.5s 将社交媒体与排泄状态同步的疯狂功能",
+          "start": 149.5
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Wow, in 2019 literally no part of this video feels like that huge of a stretch. What a great time to be alive.",
+          "text_zh": "哇，到了2019年，这视频里的任何情节感觉都毫不夸张。真是个活见鬼的好时代。",
+          "likes": 5460
+        },
+        {
+          "original": "Lyme disease detected\ncontacting authorities\n\"very cool\"",
+          "text_zh": "检测到莱姆病\n正在联系当局\n“非常酷”",
+          "likes": 4039
+        },
+        {
+          "original": "I didn't expect the joke about the company being registered as a sex offender to actually be referenced later in the video.",
+          "text_zh": "我没想到关于公司被登记为性犯罪者的梗，在视频后面居然真的被呼应了。",
+          "likes": 3758
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3887,
+        "completion_tokens": 423,
+        "total_tokens": 4310
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3887,
+        "completion_tokens": 423,
+        "total_tokens": 4310
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:14Z"
+    },
+    "w3_0x6oaDmI": {
+      "title_zh": "为什么电子投票是个糟糕的主意 - Computerphile",
+      "blurb_zh": "深入剖析为什么电子投票和投票机在安全与信任上面临巨大漏洞。",
+      "highlights": [
+        {
+          "text": "00:21 物理投票历经数百年，其欺诈防范机制历经考验",
+          "start": 21.0
+        },
+        {
+          "text": "01:18 投票机软件与硬件审计的现实困境",
+          "start": 78.0
+        },
+        {
+          "text": "03:17 票数传输与中央计票程序带来的安全隐患",
+          "start": 197.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "you know this video is accurate because they animated the usb stick going in the wrong way the first time",
+          "text_zh": "你知道这个视频很严谨，因为他们第一次把U盘插反的动画都做出来了",
+          "likes": 6693
+        },
+        {
+          "original": "someone had to do it:\n\n1.  00:00 - 00:20 is 09:50 AM\n\n2.  00:20 - 01:24 is 10:05 AM\n\n3.  01:24 - 01:55 is 10:35 AM\n\n4.  01:56 - 03:22 is 10:05 AM\n\n5.  03:23 - 05:09 is 10:10 AM\n\n6.  05:10 - 05:18 is 10:25 AM\n\n7.  05:19 - 05:42 is 10:15 AM\n\n8.  05:43 - 05:56 is 10:40 AM\n\n9.  05:57 - 07:24 is 10:15 AM\n\n10. 07:25 - 07:49 is 10:40 AM\n\n11. 07:50 - 07:52 is 09:15 AM\n\n12. 07:52 - 07:52 is 10:45 AM\n\n\nthe recording went by this order:\n\nstarted filming at 09:15AM (11), first take 9:50AM (1), second take 10:05AM (2, 4), third take 10:10AM (5), fourth take 10:15AM (7, 9),\n\nfifth take 10:25AM (6), sixth take 10:35AM (3), seventh take 10:40AM (8, 10), last take 10:45AM (12)\n\nbut, sadly, I couldn't figure out how many times Tom got to repeat it because he was very frustrated\n\nthank you big-ben, god bless the queen",
+          "text_zh": "总得有人来做这件事：根据背景钟声整理出了镜头的拍摄顺序……可惜没法数清Tom因为太崩溃而重拍了多少次。",
+          "likes": 6646
+        },
+        {
+          "original": "In Argentina's capital, a law passed enabling electronic vote. Hours later, the government website was hacked and it's database compromised.\nFrustrating as always",
+          "text_zh": "在阿根廷首都，一项允许电子投票的法律刚通过。几小时后，政府网站就被黑了，数据库也遭到了泄露。一如既往地令人沮丧",
+          "likes": 3228
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3055,
+        "completion_tokens": 944,
+        "total_tokens": 3999
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3055,
+        "completion_tokens": 944,
+        "total_tokens": 3999
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:21Z"
+    },
+    "PaKIZ7gJlRU": {
+      "title_zh": "Linus Torvalds 直言：GPL v3 违背了 GPLv2 的初心",
+      "blurb_zh": "Linus Torvalds 犀利点评 GPL v3，直言其背离开源精神。",
+      "highlights": [
+        {
+          "text": "Linus 批评 GPL v3 违背 GPLv2 初心",
+          "start": 7.0
+        },
+        {
+          "text": "谈论防刷机限制与 FSF 的争议",
+          "start": 157.0
+        },
+        {
+          "text": "为什么坚持使用 GPLv2 并且拒绝升级",
+          "start": 393.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "I love Linus so much. He has opinions and doesn't hold back with them.",
+          "text_zh": "我太喜欢 Linus 了。他很有主见，而且从不掩饰自己的观点。",
+          "likes": 1994
+        },
+        {
+          "original": "Everytime I listen to this man, I just respect him more.",
+          "text_zh": "每次听这个人讲话，我都对他肃然起敬。",
+          "likes": 1272
+        },
+        {
+          "original": "It's kinda funny how Linus Torvalds and Richard Stallman are so different from each other and they're both the fathers of GNU/Linux.",
+          "text_zh": "有趣的是，Linus Torvalds 和 Richard Stallman 风格迥异，但他们都是 GNU/Linux 的之父。",
+          "likes": 1215
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2927,
+        "completion_tokens": 398,
+        "total_tokens": 3325
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2927,
+        "completion_tokens": 398,
+        "total_tokens": 3325
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:26Z"
+    },
+    "rE3j_RHkqJc": {
+      "title_zh": "你能看完这个视频而不生气吗？",
+      "blurb_zh": "深入剖析互联网信息如何利用人类情绪病毒式传播。",
+      "highlights": [
+        {
+          "text": "将互联网上的观点比作会传染的病毒",
+          "start": 12.0
+        },
+        {
+          "text": "解释为什么愤怒是思想病毒传播的终极催化剂",
+          "start": 81.0
+        },
+        {
+          "text": "揭示对立观点如何在网络上共生并推高热度",
+          "start": 226.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This video was made five years ago but couldn’t be more relavent right now in 2020",
+          "text_zh": "这个视频是五年前制作的，但在2020年当下显得再合适不过了。",
+          "likes": 17447
+        },
+        {
+          "original": "I'm angry this video didn't make me angry\n\n\nOh wait",
+          "text_zh": "我很生气这个视频居然没让我生气\n\n\n等等",
+          "likes": 17395
+        },
+        {
+          "original": "I'm in AWE and really pretty HAPPY that this video didn't make me ANGRY. (sneeze)",
+          "text_zh": "我感到很敬畏，而且真的挺高兴这个视频没有让我生气。（打喷嚏）",
+          "likes": 16851
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2708,
+        "completion_tokens": 388,
+        "total_tokens": 3096
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2708,
+        "completion_tokens": 388,
+        "total_tokens": 3096
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:38Z"
+    },
+    "MFzDaBzBlL0": {
+      "title_zh": "反向大脑自行车 - 颠覆你的常识",
+      "blurb_zh": "通过骑一辆方向相反的自行车，探索人类大脑的神经可塑性与认知盲区。",
+      "highlights": [
+        {
+          "text": "方向盘反向的奇葩自行车挑战",
+          "start": 41.0
+        },
+        {
+          "text": "花费8个月终于学会骑反向自行车",
+          "start": 214.0
+        },
+        {
+          "text": "回到阿姆斯特丹尝试骑回普通自行车",
+          "start": 294.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "I thought this was going to be a bike where you'd have to pedal backwards to get it to move lol",
+          "text_zh": "我还以为这是一辆需要倒着踩脚踏板才能前进的车呢哈哈",
+          "likes": 19336
+        },
+        {
+          "original": "I think you have just discovered the best anti bike theft mechinism",
+          "text_zh": "我觉得你刚刚发明了最好的防偷车机制",
+          "likes": 16514
+        },
+        {
+          "original": "When Doc Hudson said “turn left to go right” I know what he meant",
+          "text_zh": "当哈德逊博士说“向左转是为了向右开”时，我终于懂是什么意思了",
+          "likes": 5481
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3174,
+        "completion_tokens": 367,
+        "total_tokens": 3541
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3174,
+        "completion_tokens": 367,
+        "total_tokens": 3541
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:44Z"
+    },
+    "IOiZatlZtGU": {
+      "title_zh": "菲利普·瓦德勒：命题即类型",
+      "blurb_zh": "深入浅出地探讨逻辑学与计算的惊人联系，带你领略函数式编程的深邃与魅力。",
+      "highlights": [
+        {
+          "text": "算法与可计算性理论的发展历史",
+          "start": 16.0
+        },
+        {
+          "text": "哥德尔不完备定理及其对逻辑的影响",
+          "start": 142.0
+        },
+        {
+          "text": "图灵机与邱奇的Lambda演算",
+          "start": 264.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"[The core of Functional Languages] is not arbitrary. Their core is something that was written down once by a logician, and once by a computer scientist. That is, it was not invented, but discovered. Most of you use programming languages that are invented, and you can tell, can't you. So this is my invitation to you to use programming languages that are discovered.\"",
+          "text_zh": "“（函数式语言的核心）并非随意的。它们的核心是逻辑学家和计算机科学家分别写下来的。也就是说，它不是被发明的，而是被发现的。你们大多数人使用的编程语言都是被发明的，你们能看得出来，不是吗？所以我在此邀请你们去使用那些被发现的编程语言。”",
+          "likes": 196
+        },
+        {
+          "original": "Wadler, Philip - \"you don't put science in your name if you're real science\"",
+          "text_zh": "菲利普·瓦德勒：“如果你真的是一门科学，你才不会把‘科学’二字写进名字里呢。”",
+          "likes": 140
+        },
+        {
+          "original": "This is one of the best talks I've ever watched.  If I could just encourage relatively young but hungry programmers to watch one talk, it might be this one.  It led to me firing off about 4 different emails just while watching it, all of which I hope have some small impact on people.",
+          "text_zh": "这是我看过的最好的演讲之一。如果我只能鼓励比较年轻但充满求知欲的程序员看一个演讲，可能就是这个了。它让我在观看的时候就忍不住发了大约4封不同的邮件，希望这些邮件能对人们产生一点小小的影响。",
+          "likes": 128
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3240,
+        "completion_tokens": 581,
+        "total_tokens": 3821
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3240,
+        "completion_tokens": 581,
+        "total_tokens": 3821
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:50Z"
+    },
+    "QM1iUe6IofM": {
+      "title_zh": "面向对象编程是个错误",
+      "blurb_zh": "颠覆传统认知，深入剖析面向对象编程的弊端并推荐过程式编程。",
+      "highlights": [
+        {
+          "text": "面向对象编程占据统治地位的原因",
+          "start": 74.0
+        },
+        {
+          "text": "面向对象编程的真正问题所在",
+          "start": 92.0
+        },
+        {
+          "text": "为什么要选择过程式编程而非面向对象",
+          "start": 240.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"There are only two kinds of languages: the ones people complain about and the ones nobody uses.\" - Bjarne Stroustrup",
+          "text_zh": "“世界上只有两种编程语言：人们抱怨的语言和没人用的语言。”——比雅尼·斯特劳斯特鲁普",
+          "likes": 12257
+        },
+        {
+          "original": "The irony of this video is most people watching it are just going to be better at OOP by the end of it.",
+          "text_zh": "这个视频讽刺的地方在于，大多数人看完之后反而会更擅长面向对象编程了。",
+          "likes": 10300
+        },
+        {
+          "original": "Hm, yes, this video has definitively shown me that I don’t actually know enough about programming to properly understand this video.",
+          "text_zh": "嗯，是的，这个视频明确地向我展示了我对编程的了解还远远不够，无法真正理解它。",
+          "likes": 8032
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2728,
+        "completion_tokens": 394,
+        "total_tokens": 3122
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2728,
+        "completion_tokens": 394,
+        "total_tokens": 3122
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:43:56Z"
+    },
+    "eJ3RzGoQC4s": {
+      "title_zh": "自我的世纪（亚当·柯蒂斯经典纪录片）",
+      "blurb_zh": "深度剖析弗洛伊德理论如何被资本与强权用于操纵大众消费与心理。",
+      "highlights": [],
+      "comments_zh": [
+        {
+          "original": "I just wanted to say how great it is to read so many thoughtful and intelligent comments for this upload. As several have alluded to already social media can be perhaps the single most effective weapon (and I use that in a very literal sense) a weapon to destroy the mind; so I wanted to let everyone know how comforting it is to hear you express yourselves in a way that demonstrates there is still a battery of resilient non-conformists which refuse to be robbed of their senses.",
+          "text_zh": "看到这个视频下有这么多深思熟虑且理性的评论，我感到太棒了。正如许多人已经提到的那样，社交媒体也许是摧毁心智最有效的武器（我是按字面意思用的）；所以我想让大家知道，听到你们这样表达自己，展现出仍然有一群坚韧的反叛者拒绝被剥夺理智，这让我感到十分欣慰。",
+          "likes": 1284
+        },
+        {
+          "original": "For years I've been recommending this to anyone who questions the world we live in today. This documentary explains it all.",
+          "text_zh": "多年来，我一直把这部纪录片推荐给任何对我们当今世界存疑的人。它把一切都解释清楚了。",
+          "likes": 787
+        },
+        {
+          "original": "I feel so disillusioned and frenetic living in modern society. I really feel like we jumped the shark in a lot of ways. I hate social media, consumerism, the narcissistic new tendencies of everyone’s desire to be an influencer to further shill corporate brands… my heart yearns to live in a cabin in the woods for real haha.",
+          "text_zh": "生活在现代社会，我感到无比的幻灭和狂躁。我真的觉得我们在很多方面都彻底走向荒诞了。我讨厌社交媒体、消费主义，讨厌每个人都想当网红去帮企业品牌带货的自恋新趋势……我的内心真的渴望去森林里住木屋哈哈。",
+          "likes": 549
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3045,
+        "completion_tokens": 534,
+        "total_tokens": 3579
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3045,
+        "completion_tokens": 534,
+        "total_tokens": 3579
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:02Z"
+    },
+    "KkpqA8yG9T4": {
+      "title_zh": "核聚变取得突破了吗？——Dennis Whyte 教授",
+      "blurb_zh": "麻省理工学院教授Dennis Whyte详解新型超导材料如何让核聚变走向商业化。",
+      "highlights": [
+        {
+          "text": "1克重水蕴含惊人能量，可供家庭使用一年以上",
+          "start": 35.0
+        },
+        {
+          "text": "MIT高场环形装置成功达到1亿度高温",
+          "start": 295.0
+        },
+        {
+          "text": "我们掌握基础科学知识已有20多年，但能源使命停滞不前",
+          "start": 357.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Been listening to lectures all night while I work. So far this one was the most exciting. I will defiantly be following this in the future.",
+          "text_zh": "我工作时听了一整晚的讲座，目前为止这个是最令人兴奋的。我以后一定会持续关注。",
+          "likes": 268
+        },
+        {
+          "original": "As a fusion researcher myself, though on a very different path - if anyone is going to make thermalized magnetic confinement fusion work, I'd bet it's this guy and his team.  I'm rarely impressed.  But this impresses me.  If there are flaws, they're not mentioned - perhaps Bremsstrahlung radiation loss is higher at higher B?  It's always the things you leave out that turn out to be the problem....\nOtherwise, excellent job picking up on the fact that new superconductors change the game a lot.",
+          "text_zh": "作为一个聚变研究人员，虽然走的是不同的路——如果有人能让热化磁约束聚变成功，我押这个人及其团队。我很少被震撼，但这让我震撼。如果没有提及缺陷……总之，他们准确抓住了新超导材料改变游戏规则这一点，做得很棒。",
+          "likes": 158
+        },
+        {
+          "original": "I respect human beings that are actually working towards betterment of the Planet and the human species.",
+          "text_zh": "我向那些真正为改善地球和人类命运而努力的人类致以敬意。",
+          "likes": 76
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3329,
+        "completion_tokens": 538,
+        "total_tokens": 3867
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3329,
+        "completion_tokens": 538,
+        "total_tokens": 3867
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:08Z"
+    },
+    "YJg02ivYzSs": {
+      "title_zh": "超现实",
+      "blurb_zh": "这部短片呈现了一个物理与虚拟现实融合、媒体饱和的挑衅性未来愿景。",
+      "highlights": [
+        {
+          "text": "主角在虚拟与现实交织的城市中工作",
+          "start": 25.0
+        },
+        {
+          "text": "系统出现故障，积分与身份引发混乱",
+          "start": 189.0
+        },
+        {
+          "text": "遭遇黑客攻击，现实界面彻底崩溃",
+          "start": 300.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This Hyper-Reality need an *Ad-Block* app urgent.",
+          "text_zh": "这个超现实世界急需一个广告拦截应用。",
+          "likes": 14945
+        },
+        {
+          "original": "How do i install Ad-blocker?",
+          "text_zh": "请问怎么安装广告拦截器？",
+          "likes": 5502
+        },
+        {
+          "original": "This must be how boomers see technology right now",
+          "text_zh": "这大概就是老一辈现在看待科技的方式吧。",
+          "likes": 4972
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 1332,
+        "completion_tokens": 314,
+        "total_tokens": 1646
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 1332,
+        "completion_tokens": 314,
+        "total_tokens": 1646
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:15Z"
+    },
+    "rStL7niR7gs": {
+      "title_zh": "试图公正统治，你就会被推翻",
+      "blurb_zh": "揭秘政治权力的残酷本质与统治者的生存法则。",
+      "highlights": [
+        {
+          "text": "没有谁能独自统治，统治者需要关键支持者。",
+          "start": 47.8
+        },
+        {
+          "text": "将财富花费在民众身上，等于给竞争对手递刀子。",
+          "start": 174.9
+        },
+        {
+          "text": "为了巩固权力，必须精简并踢开不必要的关键支持者。",
+          "start": 296.1
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "\"Democracies are better places to live than dictatorships not because representatives are better people, but because their needs happen to be aligned with a large portion of the population\". This might be the most optimistic sentence in this video, in a weird way",
+          "text_zh": "“民主国家比独裁国家更宜居，不是因为代表们更好，而是因为他们的需求恰好与大部分人口一致。”这可以说是本视频中最乐观的一句话了，虽然感觉怪怪的。",
+          "likes": 45632
+        },
+        {
+          "original": "Instructions unclear, became a key smith",
+          "text_zh": "操作说明没看懂，结果我成了配钥匙的。",
+          "likes": 32498
+        },
+        {
+          "original": "I know the banana represents food, but I like the idea that all dictators have one key guy who demands bananas",
+          "text_zh": "我知道香蕉代表食物，但我更喜欢这种脑洞：每个独裁者都有一个非要香蕉不可的关键手下。",
+          "likes": 29135
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3225,
+        "completion_tokens": 435,
+        "total_tokens": 3660
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3225,
+        "completion_tokens": 435,
+        "total_tokens": 3660
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:21Z"
+    },
+    "oyLBGkS5ICk": {
+      "title_zh": "规范臆测主题演讲 - Rich Hickey",
+      "blurb_zh": "听 Rich Hickey 探讨软件规范、变更管理及依赖地狱背后的深刻设计哲学。",
+      "highlights": [
+        {
+          "text": "规范的真正目的在于支持未来的变更与承诺",
+          "start": 174.0
+        },
+        {
+          "text": "软件演进中的依赖冲突与版本选择问题",
+          "start": 343.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "An instant classic.  Rich, always gives well designed (see what i did there) talks tackling big ideas related to things we as an industry aren't questioning and should be.",
+          "text_zh": "一部即时经典。Rich 总是带来设计精良的演讲，探讨我们整个行业本该质疑却没有质疑的宏大理念。",
+          "likes": 40
+        },
+        {
+          "original": "Glad somebody prominent and influential is able to see and say this.",
+          "text_zh": "很高兴看到有声望、有影响力的人能够洞察并说出这一点。",
+          "likes": 28
+        },
+        {
+          "original": "3 years and only 27 comments. Seems like the future will look at this video just like we look at old Lisp ideas that we adopt now (if statements, garbage collection).",
+          "text_zh": "三年了只有27条评论。感觉未来的人们看待这个视频，就像我们看待现在采用的古老 Lisp 思想（如 if 语句、垃圾回收）一样。",
+          "likes": 21
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2941,
+        "completion_tokens": 393,
+        "total_tokens": 3334
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2941,
+        "completion_tokens": 393,
+        "total_tokens": 3334
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:27Z"
+    },
+    "Pb5oIIPO62g": {
+      "title_zh": "约翰·克里斯谈管理中的创造力",
+      "blurb_zh": "喜剧大师约翰·克里斯幽默剖析创造力的本质，教你如何在团队中打破常规思维。",
+      "highlights": [
+        {
+          "text": "创造力不是一种天赋，而是一种思维运作方式",
+          "start": 267.0
+        },
+        {
+          "text": "高创造力人群与IQ无关，关键在于善于“玩耍”",
+          "start": 308.0
+        },
+        {
+          "text": "区分专注高效的“闭环思维”与轻松广阔的“开环思维”",
+          "start": 447.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Excellent, excellent talk on creativity; thanks for posting the full video in quality!\nRequest: the audio is too low.  Can you normalize the volume?",
+          "text_zh": "非常棒的关于创造力的演讲；感谢发布高质量的完整视频！请求：音频太小了。你能把音量标准化吗？",
+          "likes": 634
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2860,
+        "completion_tokens": 276,
+        "total_tokens": 3136
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2860,
+        "completion_tokens": 276,
+        "total_tokens": 3136
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:32Z"
+    },
+    "9CO6M2HsoIA": {
+      "title_zh": "屠宰机器人：AI自主武器的恐怖未来",
+      "blurb_zh": "一部警示人工智能武器化潜在恐怖的科幻短片，引发对未来的深刻思考。",
+      "highlights": [
+        {
+          "text": "36.4s 这一技能全靠人工智能自主飞行",
+          "start": 36.0
+        },
+        {
+          "text": "155.2s 足以消灭半个城市的微型无人机蜂群",
+          "start": 155.0
+        },
+        {
+          "text": "432.6s 展现了现有技术微型化与集成化的结果",
+          "start": 432.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "This looks like it could be a black mirror episode.",
+          "text_zh": "这看起来就像《黑镜》里的一集。",
+          "likes": 826
+        },
+        {
+          "original": "The CEO (character) is so good in this. \"Trust me these are all bad guys\" and none of them is holding a gun.",
+          "text_zh": "里面扮演CEO的角色太棒了。“相信我，这些都是坏人”，而他们当中没有一个人拿着枪。",
+          "likes": 801
+        },
+        {
+          "original": "The way he casually talks about an autonomous weapon capable of killing an entire city based on individual facial recognition while being cheered at by the crowd makes it almost satirical to watch, this whole thing just seems so evil.",
+          "text_zh": "他漫不经心地谈论着一种能根据个人面部识别消灭整个城市的自主武器，台下却欢呼雀跃，这看起来简直像是在讽刺，这一切都显得太邪恶了。",
+          "likes": 532
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2280,
+        "completion_tokens": 436,
+        "total_tokens": 2716
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2280,
+        "completion_tokens": 436,
+        "total_tokens": 2716
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:38Z"
+    },
+    "kZRE7HIO3vk": {
+      "title_zh": "三千万行代码的问题",
+      "blurb_zh": "深入探讨现代软硬件发展背后的危机与反思。",
+      "highlights": [
+        {
+          "text": "回顾1990年与2015年的硬件性能巨大差异",
+          "start": 81.0
+        },
+        {
+          "text": "探讨硬件性能呈指数级增长的现象",
+          "start": 139.0
+        },
+        {
+          "text": "分析为什么如今的软件体验反而越来越糟糕",
+          "start": 246.0
+        }
+      ],
+      "comments_zh": [],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2821,
+        "completion_tokens": 155,
+        "total_tokens": 2976
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2821,
+        "completion_tokens": 155,
+        "total_tokens": 2976
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:43Z"
+    },
+    "vtIzMaLkCaM": {
+      "title_zh": "领导力实验室：高效写作的艺术",
+      "blurb_zh": "颠覆传统写作观念，教你如何以读者为导向进行学术写作。",
+      "highlights": [
+        {
+          "text": "34.9s 芝加哥大学写作项目的自上而下方法",
+          "start": 35.0
+        },
+        {
+          "text": "236.2s 停止思考规则，开始思考读者",
+          "start": 236.0
+        },
+        {
+          "text": "316.3s 专家如何利用写作来辅助思考",
+          "start": 316.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "*My takeaways:*\n1. This course is not about writing rules 3:04\n2. Stop thinking about rules and start thinking about readers 3:55\n3. The problems that domain experts have in their writing 4:00\n4. Domain experts use writing to help themselves with thinking 4:51, if they don't do it this way, they can't think to the level they need\n5. The challenge: the way that experts do their writing (to help with their thinking) is different to the way that readers can understand  6:53\n6. The consequences 8:10 - 1. readers need to slow down and re-read many times 2. readers can't understand or misunderstand 3. readers give up\n7. Readers read things that are valuable to them 11:52\n8. Writings need to be clear, organized, persuasive and VALUABLE 13:45\n9. Valuable to the readers of a research area (not everybody in the world) 15:20\n10. An example of comparing two writings 17:16\n11. Writing is not about communicating your ideas, it is about changing readers' ideas 21:24\n12. Nothing will be accepted as knowledge or understanding until it has been challenged by people who have the competence to challenge 23:24, this determines the readers of our writing\n13. A piece of writing is important, not because it is new and original; It is because it has value to some readers 25:16\n14. What does the world of knowledge look like 28:00\n15. Every research communities have their own code to communicate VALUE 31:30\n16. Why does it take 5-6 years to get a PhD? 34:30 50% of the time is used to know the readers in the field\n17. Using these words to show that you are aware of the research communities: widely, accepted, and reported 35:24\n18. Flow/transition words can help to make writing preservative and organized: and, but, because, unless, nonetheless, however, although, etc. 36:00\n19. Do things under the code of the communities 42:00\n20. Another example 44:25\n21. The function of a piece of writing is to move a research area forward, not to be preserved for 500 years 46:54\n22. Writing is not about to express what is in our head, it is about changing other people's thoughts 48:50\n23. The instability words that create tension/challenge: anomaly, inconsistent, but, however, although 54:00\n24. Bad writing style: backgroud+thesis 55:07 and a better style: problem+solution 56:18\n25. Learn the language code from the target publications 1:01:30\n26. Literature review is used to enrich the problem 1:02:50\n27. Problem vs background 1:06:47\n28. Gap in the knowledge is dangerous 1:08:45\n29. Identify the right readers (research communities) is important, but it could be difficult for interdisciplinary research 1:11:57",
+          "text_zh": "*我的收获：*\n1. 本课程无关写作规则 3:04\n2. 停止思考规则，开始思考读者 3:55\n3. 领域专家在写作中遇到的问题 4:00\n4. 领域专家用写作来辅助思考 4:51，不这样做就无法达到所需思维高度\n5. 挑战：专家写作的方式（辅助思考）与读者理解的方式不同 6:53\n6. 后果 8:10 - 1. 读者需要放慢速度反复阅读 2. 读者无法理解或误解 3. 读者放弃阅读\n7. 读者阅读对自己有价值的内容 11:52\n8. 写作需要清晰、有条理、有说服力且有价值 13:45\n9. 对特定研究领域的读者有价值（而非世上所有人） 15:20\n10. 两篇写作的对比示例 17:16\n11. 写作不是为了传达你的想法，而是为了改变读者的想法 21:24\n12. 任何东西在被有能力挑战的人质疑之前，都不会被接受为知识或理解 23:24，这决定了我们写作的读者群\n13. 一篇好的写作之所以重要，不是因为它新颖原创；而是因为它对某些读者有价值 25:16\n14. 知识世界是什么样的 28:00\n15. 每个研究社群都有自己传达价值的代码 31:30\n16. 为什么读博需要5-6年？34:30 其中50%的时间用于了解该领域的读者\n17. 使用这些词来表明你了解研究社群：广泛地、被接受的、据报道 35:24\n18. 逻辑/过渡词有助于使写作更具连贯性和条理性：和、但是、因为、除非、尽管如此、然而、虽然等 36:00\n19. 在社群的代码规则下做事 42:00\n20. 另一个例子 44:25\n21. 写作的功能是推动研究领域向前发展，而不是保存500年 46:54\n22. 写作不是为了表达我们脑海中的东西，而是为了改变别人的想法 48:50\n23. 创造张力/挑战的不稳定词汇：反常、不一致、但是、然而、虽然 54:00\n24. 糟糕的写作风格：背景+论点 55:07，更好的风格：问题+解决方案 56:18\n25. 从目标出版物中学习语言代码 1:01:30\n26. 文献综述用于丰富问题 1:02:50\n27. 问题与背景的对比 1:06:47\n28. 知识空白是危险的 1:08:45\n29. 识别正确的读者（研究社群）很重要，但这对于跨学科研究可能很困难 1:11:57",
+          "likes": 9296
+        },
+        {
+          "original": "This guy needs a Patreon account. I feel like I owe him money. There's a shocking amount of useful information in this lecture.",
+          "text_zh": "这家伙需要开一个Patreon账号。我觉得我欠他钱。这次讲座包含惊人数量的有用信息。",
+          "likes": 3606
+        },
+        {
+          "original": "Notice how the lecture is constructed like how he believes writing should be:\nTells us immediately there's something wrong with how we've been taught, identifies the problem, know the reader (academics) and the problem they face in their field; why they should care.\nGreat stuff.",
+          "text_zh": "注意这场讲座的结构正是他所认为的写作应有的样子：\n立即告诉我们以往受到的教育有问题，指出问题所在，了解读者（学者）及其在各自领域面临的问题；为什么他们应该关心。\n太棒了。",
+          "likes": 2734
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3913,
+        "completion_tokens": 1941,
+        "total_tokens": 5854
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3913,
+        "completion_tokens": 1941,
+        "total_tokens": 5854
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:53Z"
+    },
+    "uD4izuDMUQA": {
+      "title_zh": "未来的延时摄影：一场通往时间尽头的旅行 (4K)",
+      "blurb_zh": "带你跨越万亿年，用震撼的视觉科学视角探索宇宙与地球终极命运。",
+      "highlights": [
+        {
+          "text": "太阳膨胀并最终消亡，地球走向毁灭",
+          "start": 196.0
+        },
+        {
+          "text": "恒星相继熄灭，宇宙陷入漫长黑暗",
+          "start": 240.0
+        },
+        {
+          "text": "黑洞吞噬残存物质并在黑暗中闪耀",
+          "start": 490.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "And you afraid to talk to the person you like.",
+          "text_zh": "而你却连跟喜欢的人说话都不敢。",
+          "likes": 77414
+        },
+        {
+          "original": "* sun exploded, earth died. every star dies*\nme: wait THERE IS STILL 20 MINUTES LEFT",
+          "text_zh": "*太阳爆炸了，地球毁灭了，每颗恒星都死了*\n我：等等，还有20分钟呢",
+          "likes": 52090
+        },
+        {
+          "original": "hey guys - thanks for all the love on this piece.  just posted my follow up film, LIFE BEYOND: https://www.youtube.com/watch?v=SUelbSa-OkA hope ya dig!",
+          "text_zh": "大家好——谢谢大家对这部作品的喜爱。我刚发布了续集电影《生命之外》，希望你们喜欢！",
+          "likes": 51635
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3220,
+        "completion_tokens": 416,
+        "total_tokens": 3636
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3220,
+        "completion_tokens": 416,
+        "total_tokens": 3636
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:44:59Z"
+    },
+    "JvBT4XBdoUE": {
+      "title_zh": "Erlang 与 Elixir 的灵魂 • Sasa Juric • GOTO 2019",
+      "blurb_zh": "深入探讨 Erlang 与 Elixir 的并发模型及 BEAM 虚拟机架构。",
+      "highlights": [
+        {
+          "text": "14.4s 探讨 Joe Armstrong 与 Erlan",
+          "start": 14.0
+        },
+        {
+          "text": "105.8s 演讲核心结构与 BEAM 并发介绍",
+          "start": 105.0
+        },
+        {
+          "text": "166.3s 深入理解 Joe Armstrong 的并发哲",
+          "start": 166.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "American tutorials: x1.25 speed\nIndian tutorials: x1.50 speed\nSaša Jurić: x0.50 speed",
+          "text_zh": "美国教程：1.25倍速\n印度教程：1.50倍速\n萨沙·尤里奇：0.50倍速",
+          "likes": 336
+        },
+        {
+          "original": "kudos to the cameraman following the guy on each step",
+          "text_zh": "向跟随演讲者每一步移动的摄像师致敬",
+          "likes": 331
+        },
+        {
+          "original": "Brutal in every single aspect, absolutely spectacular delivery, concise, to the point, no fat talk... love it.",
+          "text_zh": "方方面面都太强了，表达极其精彩，简练、直击要害、没有废话……太棒了。",
+          "likes": 190
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3034,
+        "completion_tokens": 425,
+        "total_tokens": 3459
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3034,
+        "completion_tokens": 425,
+        "total_tokens": 3459
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:45:05Z"
+    },
+    "Unzc731iCUY": {
+      "title_zh": "如何演讲 (MIT)",
+      "blurb_zh": "掌握MIT经典演讲技巧，提升你的公众表达与沟通能力。",
+      "highlights": [
+        {
+          "text": "0:16 演讲的重要性与公式",
+          "start": 16.0
+        },
+        {
+          "text": "4:15 如何开场与避免笑话",
+          "start": 255.0
+        },
+        {
+          "text": "5:38 四个核心启发法",
+          "start": 338.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "We are lucky that we live in an age where we can watch/listen to something like this for free",
+          "text_zh": "很幸运我们生活在这个可以免费观看/收听此类内容的时代",
+          "likes": 23901
+        },
+        {
+          "original": "\"Your success in life will be determined largely by your ability to speak, your ability to write, and the quality of your ideas. In that order.\"",
+          "text_zh": "“你一生的成功很大程度上取决于你的演讲能力、写作能力以及你的想法质量。按这个顺序排列。”",
+          "likes": 22582
+        },
+        {
+          "original": "*A summary of the whole talk. Save, read, use... Enjoy!*\n\nI believe it'll be usefull for many people out there!\n\nStart\r\n1. Do not start a talk with a joke.\r\n2. Promise - Tell them what they gonna learn at the end of your talk.\r\n3. Cycle – make your idea repeated many times in order to be completely clear for everyone.\n4. Make a “Fence” around your idea so that it can be distinguished from someone else’s idea.\r\n5. Verbal punctuation – sum up information within your talk some times to make listeners get back on.\r\n6.  Ask a question - intriguing one\n\r\nPlace and Time\r\n\r\n7. Best time for having a lecture is 11 am.\r (not too early and not after lunch)\n8. The place should be well lit.\r\n9. The place should be seen and checked before the lecture.\n10. The place should not be full less than a half, it must be chosen according to the amount of listeners.\r\n\r\nTools\r\nFor teaching.\r\n1. Board – it’s got graphics, speed, target. Watch your hands! Don’t hold them behind your back, it’s better to keep them straight and use for pointing at the board.\r\n2. Props – use them in order to make your ideas visual.\r\nVisual perception is the most effective way to interact with listeners.\r\n\r\nFor Job Talk. Exposing, Slides\r\n3. Don’t put too many words on a slide. Slides should just reflect what you’re saying, not the other way around. Pictures attracts attention and people start to wait for your explanation – use that tip.\r\n4. Make slide as easy as you can – no title, no distracting pictures, frames, points and so on.\r\n5. Do not use laser pointer – due to that you lose eye contact with the audience. Instead you can make the arrows just upon a slide. \r\n\r\nInforming\r\n \r\nShow to your listeners your stuff is cool and interesting.\r\nYou have to be able to:\r\n-show your vision of that problem\r\n-show that you’ve done particular things (by steps)\r\nAll of that should be done real quick in no more than 5 min.\r\nPersuade your listeners you’re not a rookie (Prof. Winston contrived to do that from the very first seconds of his talk)\r\n\r\nGetting Famous\r\nIf you want to your ideas be remembered you’ve got to have\r \"5 S\"\n\n\n- Symbols associate with your ideas (visual perception is the best way to attract attention)\r\n- Slogan (describing your idea)\r\n- Surprise (common fallacy that is no longer true, for instance, just after you’ve told about it)\r\n- Salient Idea (not necessarily important but the one that sticks out)\r\n- Story (how you did it, how it works…)\r\n\r\nHow to End\r\n\r\n- Don’t put collaborators at the end, do that at the beginning.\n- Question’s the worst way to end a talk.\r\n- It’s good to end with a Contribution slide – to sum up everything you’ve told with your OWN decision.\r\n- At the very end you could tell a joke since people then will leave the event feeling fun and thus keep a good memory of your talk.\n- \"Thank you (for listening)\" isn’t good ending, it’s trite at least. You can end with a quote of a prominent person (my own knowledge), with a salute to people (how much you valued the time being here, the people over here..., “I’d like to get back, it was fun!”\r\n\nThat part actually I find the hardest one, since saying “Thanks” is a kind of a habit and it’s really difficult to make people clap if your talk wasn’t fascinating, so you’d better do this great and you won’t have to worry about how to end!",
+          "text_zh": "整场演讲的总结。收藏、阅读并使用……尽情享受吧！\n我相信这对很多人都会有用！\n\n开场\n1. 不要用笑话开场。\n2. 承诺 - 告诉大家演讲结束时能学到什么。\n3. 循环 – 多次重复你的观点，以便每个人都能完全听懂。\n4. 在你的观点周围建一座“篱笆”，以便与他人的观点区分开。\n5. 言语标点 – 总结演讲中的信息，让听众回归注意力。\n6. 提出一个引人入胜的问题\n\n地点与时间\n7. 讲课的最佳时间是上午 11 点（不要太早，也不要在午饭后）。\n8. 场地光线要充足。\n9. 演讲前应查看并检查场地。\n10. 场地不能空置超过一半，必须根据听众数量来选择。\n\n工具\n用于教学：\n1. 黑板 – 具有图形、速度和目标感。注意你的手！不要把手背在身后，最好保持直立并用来指向黑板。\n2. 道具 – 用它们让你的想法可视化。视觉感知是与听众互动最有效的方式。\n\n用于求职演讲/展示与幻灯片：\n3. 幻灯片上不要放太多字。幻灯片应该只反映你在说的话，而不是相反。图片能吸引注意力，人们会开始等待你的解释——利用这个技巧。\n4. 让幻灯片尽可能简单 – 没有标题、没有分散注意力的图片、边框、要点等。\n5. 不要使用激光笔 – 因为这会让你失去与观众的眼神交流。你可以在幻灯片上直接画箭头。\n\n信息传递\n向听众展示你的东西很酷很有趣。\n你必须能够：\n- 展示你对该问题的看法\n- 展示你已经完成的具体事情（按步骤）\n所有这些都应该在 5 分钟内快速完成。\n说服听众你不是新手\n\n成名之道\n如果你想让你的想法被记住，你必须拥有“5S”原则：\n- 与你的想法相关的符号\n- 口号\n- 惊喜\n- 突出的想法\n- 故事\n\n如何收尾\n- 不要把合作者放在结尾，要在开头提及。\n- 提问是演讲最糟糕的结尾方式。\n- 最好以贡献幻灯片结束 – 用你自己的决定总结你所讲的一切。\n- 在最后你可以讲个笑话，这样人们离开时会带着愉快的心情，并对你的演讲留下美好的记忆。\n- “谢谢（聆听）”不是一个好的结尾，至少很老套。",
+          "likes": 19407
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 4135,
+        "completion_tokens": 1901,
+        "total_tokens": 6036
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 4135,
+        "completion_tokens": 1901,
+        "total_tokens": 6036
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:45:23Z"
+    },
+    "ZSRHeXYDLko": {
+      "title_zh": "防止文明崩溃 / 乔纳森·布洛 (Thekla, Inc)",
+      "blurb_zh": "探讨软件开发与文明技术倒退的关系，深刻启发思考。",
+      "highlights": [
+        {
+          "text": "太空竞赛历史与阿波罗计划回顾",
+          "start": 3.0
+        },
+        {
+          "text": "技术不会自动进步，历史文明的失落",
+          "start": 304.0
+        },
+        {
+          "text": "罗马帝国的纳米材料古迹莱库古杯",
+          "start": 412.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Meanwhile on r/gamedev, some guy wants to learn about how engines work and everyone told him that he is wasting time and should not even bother do it.",
+          "text_zh": "与此同时在 r/gamedev 上，有个家伙想了解引擎是如何工作的，结果每个人都告诉他是在浪费时间，根本不用去理会。",
+          "likes": 1042
+        },
+        {
+          "original": "As a retired software engineer - Software complexity grows during development until you hit a critical point where nearly everything works, then if you are allowed by management to keep going, it will get simpler and simpler as you refactor based on what you've learned during development until everything actually does work. Unfortunately, management rarely allows you to keep going much past that complexity peak because it's close enough to ship.",
+          "text_zh": "作为一个退休的软件工程师——软件复杂性在开发过程中不断增长，直到达到一个临界点，此时几乎所有功能都能运行；然后，如果管理层允许你继续进行下去，根据开发过程中学到的知识进行重构，它就会变得越来越简单，直到一切真正完美运行。不幸的是，管理层很少允许你在复杂度顶峰之后继续推进，因为这已经足够接近发布了。",
+          "likes": 792
+        },
+        {
+          "original": "This is a damn good talk. What's interesting about his suggestion of simplifying everything is that it somewhat coincides with the desire I have for technology to become less invasive, healthier and more utility-oriented. Mass manipulation, spying and conditioning of the masses through shitty mobile games, social media, etc. etc. are in many ways products of this explosion of bad, overly complex technology. Health is clearly an issue, too, if you pay any attention to your body and lifestyle (eyesight, skeletal structure, posture, spending hours playing video games, scrolling through social media, etc.) and those of others. So for that I respect Jonathan even more!",
+          "text_zh": "这是一场非常精彩的演讲。他关于简化一切的建议有趣之处在于，它在某种程度上与我希望技术变得更不具侵入性、更健康、更注重实用性的愿望不谋而合。通过糟糕的手游、社交媒体等对大众进行的大规模操纵、监视和洗脑，在很多方面都是这种糟糕、过度复杂的技术爆发的产物。如果你关注自己和别人的身体与生活方式（视力、骨骼结构、体态、花几小时玩电子游戏、刷社交媒体等），健康显然也是一个问题。因此，为此我更加尊重乔纳森！",
+          "likes": 423
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 3224,
+        "completion_tokens": 749,
+        "total_tokens": 3973
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 3224,
+        "completion_tokens": 749,
+        "total_tokens": 3973
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:45:30Z"
+    },
+    "oeqPrUmVz-o": {
+      "title_zh": "史蒂夫·乔布斯高情商回应尖锐挑衅",
+      "blurb_zh": "看乔布斯如何在1997年开发者大会上优雅化解刁难，尽显商业大智慧。",
+      "highlights": [
+        {
+          "text": "乔布斯沉着应对尖锐提问",
+          "start": 43.0
+        },
+        {
+          "text": "强调用户体验至上的产品理念",
+          "start": 113.0
+        },
+        {
+          "text": "赞赏并支持苹果团队的辛勤付出",
+          "start": 240.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Basically telling him \"You're right, but it doesn't matter\" 😂",
+          "text_zh": "基本上就是在告诉他：“你是对的，但这并不重要” 😂",
+          "likes": 27337
+        },
+        {
+          "original": "The main lesson here is to how to defend yourself without actually attacking your critics.",
+          "text_zh": "这里的主要教训是如何在不真正攻击批评者的情况下为自己辩护。",
+          "likes": 16481
+        },
+        {
+          "original": "Jobs was a much better person than me. I would have answered the \"what have you been doing for the past 7 years\" question with \"your mom\"",
+          "text_zh": "乔布斯可比我脾气好多了。如果是我，当被问到“过去七年你都在干嘛”时，我一定会回答“你妈”",
+          "likes": 16461
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2252,
+        "completion_tokens": 402,
+        "total_tokens": 2654
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2252,
+        "completion_tokens": 402,
+        "total_tokens": 2654
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:45:37Z"
+    },
+    "Uhx-26GfCBU": {
+      "title_zh": "为什么加拿大人冬天不能骑自行车（但芬兰人可以）",
+      "blurb_zh": "冬季骑车与天气无关，全靠安全的交通基础设施。",
+      "highlights": [
+        {
+          "text": "芬兰奥卢是世界冬季骑行之都",
+          "start": 37.0
+        },
+        {
+          "text": "气温和天气不影响冬季骑行量",
+          "start": 120.0
+        },
+        {
+          "text": "安全车道与高效除雪是关键",
+          "start": 260.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "Here in Slovakia, we treat cyclists and drivers equally in the winter. We don't plow anything and it is safe for no one.",
+          "text_zh": "在斯洛伐克，我们冬天对骑行者和司机一视同仁。我们什么都不除雪，对谁都不安全。",
+          "likes": 36718
+        },
+        {
+          "original": "\"people will ride a bicycle in the winter if the city is designed for it.\" I'm sure more people would ride a bicycle regardless of season if cities were designed for it.",
+          "text_zh": "“如果城市设计合理，人们冬天就会骑车。”我确信只要城市设计到位，无论什么季节都会有更多人骑车。",
+          "likes": 6319
+        },
+        {
+          "original": "I had a friend from Iceland who would always say, \"There's no such thing as bad weather, just bad clothing\"",
+          "text_zh": "我有个冰岛朋友总是说：“没有糟糕的天气，只有糟糕的衣服。”",
+          "likes": 5707
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2819,
+        "completion_tokens": 423,
+        "total_tokens": 3242
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2819,
+        "completion_tokens": 423,
+        "total_tokens": 3242
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:45:42Z"
+    },
+    "SxdOUGdseq4": {
+      "title_zh": "简单易行 (Simple Made Easy) - Rich Hickey (2011)",
+      "blurb_zh": "区分“简单”与“容易”，重塑你对软件设计复杂性的认知。",
+      "highlights": [
+        {
+          "text": "简单是可靠性的先决条件",
+          "start": 58.0
+        },
+        {
+          "text": "简单与复杂的词源辨析",
+          "start": 116.0
+        },
+        {
+          "text": "熟知并非简单：警惕对“容易”的迷恋",
+          "start": 381.0
+        }
+      ],
+      "comments_zh": [
+        {
+          "original": "07:03 is one of my favorite quotes ever: If you want everything to be familiar, you will never learn anything new, because it can't be significantly different from what you already know.",
+          "text_zh": "7分03秒是我最喜欢的名言之一：如果你希望一切都熟悉，你就永远学不到新东西，因为它不可能与你已知的事物有本质的不同。",
+          "likes": 160
+        },
+        {
+          "original": "\"We just fire a pistol every hundred yards and call it a new sprint\" 😭",
+          "text_zh": "“我们只是每隔一百码开一枪，然后称之为一个新的冲刺”😭",
+          "likes": 84
+        },
+        {
+          "original": "Coming from Clojure documentary ✋",
+          "text_zh": "从Clojure纪录片过来的 ✋",
+          "likes": 81
+        }
+      ],
+      "has_transcript": true,
+      "llm_provider": "gemini",
+      "llm_model": "gemini-3.5-flash-lite",
+      "llm_usage": {
+        "prompt_tokens": 2603,
+        "completion_tokens": 389,
+        "total_tokens": 2992
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 2603,
+        "completion_tokens": 389,
+        "total_tokens": 2992
+      },
+      "youtube_comment_units": 1,
+      "updated_at": "2026-11-06T14:45:48Z"
+    }
+  },
+  "stats": {
+    "processed": 70,
+    "with_transcript": 66,
+    "with_timestamp_highlights": 65,
+    "llm_tokens": 233292,
+    "prompt_tokens": 194993,
+    "completion_tokens": 38299,
+    "youtube_units": 70,
+    "providers": {
+      "gemini": 67,
+      "deepseek": 3
+    },
+    "models": {
+      "gemini-3.5-flash-lite": 67,
+      "deepseek-chat": 3
+    }
+  }
+}

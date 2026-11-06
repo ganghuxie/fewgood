@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 name = "ytrec"
 version = "0.1.0"
 requires-python = ">=3.10"
-dependencies = ["requests>=2.31", "PyYAML>=6"]
+dependencies = ["requests>=2.31", "PyYAML>=6", "youtube-transcript-api>=1.0"]
 [project.optional-dependencies]
 test = ["pytest>=8"]
 [tool.setuptools]

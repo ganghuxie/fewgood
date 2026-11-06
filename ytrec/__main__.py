@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 import yaml
 from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now, trending_feed, podcast_feed, music_feed, channels_feed, resolve_ai_channels, ai_feed, quota_line
+from .zh import enrich_zh
 
 def daily_limit(config):
     return config.get('metadata', {}).get('daily_quota_limit', config.get('youtube', {}).get('daily_quota_limit', 8000))
@@ -35,11 +36,15 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
     parser.add_argument('--refresh-metadata', action='store_true')
+    parser.add_argument('--feed', default='community')
+    parser.add_argument('--limit', type=int)
+    parser.add_argument('--force', action='store_true')
+    parser.add_argument('--provider', choices=['gemini','deepseek'])
     args = parser.parse_args()
     config = yaml.safe_load(Path(args.config).read_text())
     limit = daily_limit(config)
@@ -68,6 +73,9 @@ def main():
         parser.error('Positive sentiment is deferred to phase 2; keep enabled: false')
     db = connect(config['database'])
     try:
+        if args.command == 'enrich-zh':
+            enrich_zh(db, feed=args.feed, limit=args.limit, force=args.force, provider=args.provider)
+            return
         if args.command in ('crawl','all'):
             crawl(db, config, stamp(args.start or config['crawl']['start']), stamp(args.end) if args.end else now())
         if args.command in ('extract','all'):
