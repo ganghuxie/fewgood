@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 const configuredBase = process.env.PUBLIC_BASE;
 const base = configuredBase === undefined
-  ? '/yt-recommended'
+  ? '/youtuber'
   : configuredBase === '/'
     ? ''
     : configuredBase;

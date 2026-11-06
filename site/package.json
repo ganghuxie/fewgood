@@ -3,6 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "scripts": {"build": "astro build", "dev": "astro dev"},
+  "scripts": {"build": "node scripts/build-catalog.mjs && astro build", "dev": "node scripts/build-catalog.mjs && astro dev"},
   "dependencies": {"astro": "^5.16.0"}
 }

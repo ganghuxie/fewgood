@@ -1,0 +1,23 @@
+---
+import { SITE_NAME, TAGLINE } from '../lib/brand.mjs';
+const { active = 'trending' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const link = path => `${base.replace(/\/$/, '')}${path}`;
+---
+<header class="site-header">
+  <div class="header-row">
+    <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`}><span class="logo-mark"><i></i></span><span>{SITE_NAME}</span></a>
+    <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索视频和频道" aria-label="搜索视频和频道"/><button aria-label="搜索">⌕</button></form>
+    <nav class="libraries" aria-label="个人视频库">
+      <a href={link('/history/')}>◴ <span>历史</span><b data-library-count="history" hidden></b></a>
+      <a href={link('/favorites/')}>☆ <span>收藏</span><b data-library-count="favorites" hidden></b></a>
+      <a href={link('/watch-later/')}>◷ <span>稍后再看</span><b data-library-count="watchLater" hidden></b></a>
+    </nav>
+  </div>
+  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'trending' }} href={link('/')}>推荐</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>AI</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>社区好评</a></nav><small>{TAGLINE}</small></div>
+</header>
+<script>
+  import { updateBadges } from '../scripts/library.js';
+  updateBadges();
+  window.addEventListener('storage', updateBadges);
+</script>

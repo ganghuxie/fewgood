@@ -1,0 +1,12 @@
+---
+import Layout from '../components/Layout.astro';
+import { SITE_NAME } from '../lib/brand.mjs';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title={`搜索 · ${SITE_NAME}`}><section class="search-page" data-base={base}><h1>搜索</h1><p class="search-summary" data-summary>输入关键词，搜索视频标题和频道。</p><div class="video-grid" data-results></div></section></Layout>
+<script>
+ const root = document.querySelector('[data-base]'), base = root.dataset.base, query = new URLSearchParams(location.search).get('q')?.trim() || '', results = root.querySelector('[data-results]'), summary = root.querySelector('[data-summary]');
+ const esc = value => String(value || '').replace(/[&<>"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[char])); const duration = n => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`;
+ if (query) { summary.textContent = `正在搜索“${query}”…`; fetch(`${base}/catalog.json`).then(r => r.json()).then(catalog => { const q = query.toLocaleLowerCase(); const matches = catalog.filter(v => `${v.title} ${v.channel}`.toLocaleLowerCase().includes(q)); summary.textContent = matches.length ? `“${query}”的 ${matches.length} 个结果` : `没有找到“${query}”相关视频。`; results.innerHTML = matches.map(v => `<a class="video-card" href="${base}/v/${v.id}/?from=${v.section}"><div class="thumbnail"><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt=""><span class="duration">${duration(v.duration_seconds)}</span></div><div class="video-info"><h2 class="video-title">${esc(v.title)}</h2><p class="video-meta">${esc(v.channel)}</p></div></a>`).join(''); }).catch(() => summary.textContent = '视频目录暂时无法加载。'); }
+</script>
+<style>.search-page h1{font-size:26px;margin:0 0 8px}.search-summary{color:#606060;margin:0 0 24px}</style>

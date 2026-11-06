@@ -1,0 +1,18 @@
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+
+const dataDir = new URL('../src/data/', import.meta.url);
+const read = async name => JSON.parse(await readFile(new URL(name, dataDir), 'utf8'));
+const [trending, ai, community] = await Promise.all([read('trending.json'), read('ai.json'), read('videos.json')]);
+const index = new Map();
+for (const [section, feed] of [['trending', trending], ['ai', ai], ['community', community]]) {
+  for (const video of feed.videos) {
+    const prior = index.get(video.id);
+    // Preserve one searchable record per ID while retaining every source in case
+    // a video belongs to both editorial feeds.
+    index.set(video.id, { ...prior, ...video, section: prior?.section || section, sections: [...new Set([...(prior?.sections || []), section])] });
+  }
+}
+const output = JSON.stringify([...index.values()], null, 2) + '\n';
+await mkdir(dataDir, { recursive: true });
+await mkdir(new URL('../public/', import.meta.url), { recursive: true });
+await Promise.all([writeFile(new URL('catalog.json', dataDir), output), writeFile(new URL('../public/catalog.json', import.meta.url), output)]);
