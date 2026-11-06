@@ -6,30 +6,17 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 ---
 <header class="site-header">
   <div class="header-row">
-    <button class="menu-toggle" type="button" aria-label="导览" aria-controls="site-sidebar" aria-expanded="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <button class="menu-toggle" type="button" aria-label="导览" aria-controls="site-sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`} title="无广告 · 只看好视频"><span class="logo-mark"><i></i></span><span>{SITE_NAME}</span></a>
     <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索视频和频道" aria-label="搜索视频和频道"/><button aria-label="搜索">⌕</button></form>
     <nav class="libraries" aria-label="个人视频库">
-      <div class="lib-item" data-lib-panel="history">
-        <a class="lib-trigger" href={link('/history/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span></a>
-        <div class="lib-panel" data-panel hidden>
-          <div class="lib-panel-scroll" data-panel-list></div>
-          <a class="lib-panel-footer" href={link('/history/')}>查看全部</a>
-        </div>
-      </div>
-      <div class="lib-item" data-lib-panel="favorites">
-        <a class="lib-trigger" href={link('/favorites/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.5 5.1 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 4Z"/></svg><span>收藏</span></a>
-        <div class="lib-panel" data-panel hidden>
-          <div class="lib-panel-scroll" data-panel-list></div>
-          <a class="lib-panel-footer" href={link('/favorites/')}>查看全部</a>
-        </div>
-      </div>
-      <div class="lib-item" data-lib-panel="watchLater">
-        <a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a>
-        <div class="lib-panel" data-panel hidden>
-          <div class="lib-panel-scroll" data-panel-list></div>
-          <a class="lib-panel-footer" href={link('/watch-later/')}>查看全部</a>
-        </div>
+      <div class="lib-item" data-lib-kind="history"><a class="lib-trigger" href={link('/history/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span></a></div>
+      <div class="lib-item" data-lib-kind="favorites"><a class="lib-trigger" href={link('/favorites/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.5 5.1 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 4Z"/></svg><span>收藏</span></a></div>
+      <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a></div>
+      <div class="lib-panel" data-panel hidden>
+        <div class="lib-panel-tabs" role="tablist" aria-label="视频库"><button type="button" data-panel-tab="history">历史</button><button type="button" data-panel-tab="favorites">收藏</button><button type="button" data-panel-tab="watchLater">稍后再看</button></div>
+        <div class="lib-panel-scroll" data-panel-list></div>
+        <a class="lib-panel-footer" data-panel-footer href={link('/history/')}>查看全部</a>
       </div>
     </nav>
   </div>
@@ -41,22 +28,25 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 .lib-trigger{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:13px;white-space:nowrap;padding:4px 8px;border-radius:10px;color:#0f0f0f;text-decoration:none}
 .lib-trigger:hover{background:#f2f2f2}
 :global(.lib-trigger b){position:absolute;top:-2px;right:0;min-width:17px;padding:1px 4px;border-radius:9px;background:#cc0000;color:#fff;font-size:10px;text-align:center}
-.lib-panel{position:absolute;top:calc(100% + 8px);right:0;z-index:40;width:360px;max-width:min(360px,92vw);background:#fff;border:1px solid #e5e5e5;border-radius:12px;box-shadow:0 8px 28px #00000026;overflow:hidden}
-.lib-panel-scroll{max-height:70vh;overflow:auto;padding:8px 0}
-.lib-panel-footer{display:block;text-align:center;padding:12px;border-top:1px solid #eee;color:#0f0f0f;text-decoration:none;font-size:14px;font-weight:500;background:#fafafa}
-.lib-panel-footer:hover{background:#f2f2f2}
+:global(.lib-panel){position:absolute;top:calc(100% + 8px);right:0;z-index:40;width:380px;max-width:min(380px,92vw);background:#fff;border:1px solid #e5e5e5;border-radius:12px;box-shadow:0 8px 28px #00000026;overflow:hidden}
+:global(.lib-panel-tabs){display:flex;border-bottom:1px solid #eee;padding:4px 8px}
+:global(.lib-panel-tabs button){flex:1;border:0;background:none;padding:8px 4px;color:#606060;font:inherit;cursor:pointer;border-radius:7px}
+:global(.lib-panel-tabs button:hover),:global(.lib-panel-tabs button[aria-selected="true"]){background:#f2f2f2;color:#0f0f0f;font-weight:500}
+:global(.lib-panel-scroll){max-height:70vh;overflow-y:auto;overflow-x:hidden;padding:8px 0}
+:global(.lib-panel-footer){display:block;text-align:center;padding:12px;border-top:1px solid #eee;color:#0f0f0f;text-decoration:none;font-size:14px;font-weight:500;background:#fafafa}
+:global(.lib-panel-footer:hover){background:#f2f2f2}
 :global(.lib-empty){padding:28px 16px;text-align:center;color:#606060;font-size:14px}
 :global(.lib-group){padding:8px 14px 4px;color:#606060;font-size:13px;font-weight:500}
-:global(.lib-row){display:grid;grid-template-columns:128px 1fr;gap:10px;padding:8px 14px;text-decoration:none;color:#0f0f0f}
+:global(.lib-row){display:grid;grid-template-columns:140px minmax(0,1fr);gap:10px;padding:8px 14px;text-decoration:none;color:#0f0f0f}
 :global(.lib-row:hover){background:#f2f2f2}
-:global(.lib-thumb){position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#eee}
+:global(.lib-thumb){position:relative;width:140px;height:79px;border-radius:8px;overflow:hidden;background:#eee}
 :global(.lib-thumb img){width:100%;height:100%;object-fit:cover;display:block}
 :global(.lib-thumb .dur){position:absolute;right:4px;bottom:4px;background:#0f0f0ee6;color:#fff;font-size:11px;padding:1px 4px;border-radius:3px;font-weight:600}
 :global(.lib-thumb .bar){position:absolute;left:0;right:0;bottom:0;height:3px;background:#0004}
 :global(.lib-thumb .bar i){display:block;height:100%;background:#f00;width:35%}
-:global(.lib-row b){font-size:13px;line-height:18px;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0 0 6px}
+:global(.lib-row b){font-size:13px;line-height:18px;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0 0 6px;color:#0f0f0f;background:none;position:static;min-width:0;padding:0;border-radius:0;text-align:left}
 :global(.lib-row small){display:block;color:#606060;font-size:12px;line-height:16px}
-@media(max-width:899px){.lib-panel{right:-20px}}
+@media(max-width:899px){:global(.lib-panel){right:-20px}}
 </style>
 <script>
   import { KEYS, list, updateBadges, markWatchLaterSeen } from '../scripts/library.js';
@@ -65,12 +55,12 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   document.addEventListener('youtuber:library-change', updateBadges);
 
   const toggle = document.querySelector('.menu-toggle');
-  const saved = localStorage.getItem('youtuber:sidebar');
-  const desktop = window.matchMedia('(min-width: 900px)');
-  const paint = open => { document.body.classList.toggle('sidebar-open', open); document.body.classList.toggle('sidebar-collapsed', !open); toggle?.setAttribute('aria-expanded', String(open)); localStorage.setItem('youtuber:sidebar', open ? 'open' : 'closed'); };
-  paint(desktop.matches ? saved !== 'closed' : false);
+  const backdrop = document.querySelector('.sidebar-backdrop');
+  const paint = open => { document.body.classList.toggle('sidebar-open', open); document.body.classList.toggle('sidebar-collapsed', !open); toggle?.setAttribute('aria-expanded', String(open)); };
+  paint(false);
   toggle?.addEventListener('click', () => paint(!document.body.classList.contains('sidebar-open')));
-  desktop.addEventListener?.('change', event => paint(event.matches ? localStorage.getItem('youtuber:sidebar') !== 'closed' : false));
+  backdrop?.addEventListener('click', () => paint(false));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') paint(false); });
 
   const base = (document.querySelector('main')?.dataset.base || '').replace(/\/$/, '');
   const esc = value => String(value || '').replace(/[&<>"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[char]));
@@ -89,11 +79,11 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   const emptyText = { history: '还没有观看记录', favorites: '还没有收藏视频', watchLater: '稍后再看是空的' };
   const rowHtml = (item, kind) => {
     const bar = kind === 'history' ? '<span class="bar" aria-hidden="true"><i></i></span>' : '';
-    return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img src="${esc(item.thumbnail || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`)}" alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
+    return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img src="${esc(item.thumbnail || `https://i.ytimg.com/vi/${item.id}/mqdefault.jpg`)}" alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
   };
-  const renderPanel = (kind, host) => {
+  const renderPanel = (kind) => {
     const items = list(KEYS[kind]);
-    const box = host.querySelector('[data-panel-list]');
+    const box = panel.querySelector('[data-panel-list]');
     if (!items.length) { box.innerHTML = `<p class="lib-empty">${emptyText[kind]}</p>`; return; }
     if (kind === 'history') {
       const today = []; const earlier = [];
@@ -116,26 +106,25 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     }
   };
 
+  const libraries = document.querySelector('.libraries');
+  const panel = libraries?.querySelector('[data-panel]');
+  const footer = panel?.querySelector('[data-panel-footer]');
   const touch = matchMedia('(pointer: coarse)').matches && !matchMedia('(hover: hover)').matches;
-  document.querySelectorAll('[data-lib-panel]').forEach(item => {
-    const kind = item.dataset.libPanel;
-    const panel = item.querySelector('[data-panel]');
-    const trigger = item.querySelector('[data-lib-trigger]');
-    let openTimer, closeTimer;
-    const open = () => { clearTimeout(closeTimer); document.querySelectorAll('[data-panel]').forEach(p => { if (p !== panel) p.hidden = true; }); renderPanel(kind, item); panel.hidden = false; };
-    const close = () => { clearTimeout(openTimer); panel.hidden = true; };
-    const scheduleOpen = () => { clearTimeout(closeTimer); openTimer = setTimeout(open, 120); };
-    const scheduleClose = () => { clearTimeout(openTimer); closeTimer = setTimeout(close, 220); };
-    if (!touch) {
-      item.addEventListener('mouseenter', scheduleOpen);
-      item.addEventListener('mouseleave', scheduleClose);
-      panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
-      panel.addEventListener('mouseleave', scheduleClose);
-    } else {
-      trigger.addEventListener('click', event => {
-        if (panel.hidden) { event.preventDefault(); open(); }
-      });
-      document.addEventListener('click', event => { if (!item.contains(event.target)) close(); });
-    }
+  const paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' };
+  let activeKind = 'history'; let openTimer; let closeTimer;
+  const setKind = kind => { activeKind = kind; panel.querySelectorAll('[data-panel-tab]').forEach(tab => tab.setAttribute('aria-selected', String(tab.dataset.panelTab === kind))); footer.href = `${base}${paths[kind]}`; renderPanel(kind); };
+  const open = kind => { clearTimeout(closeTimer); setKind(kind); panel.hidden = false; };
+  const close = () => { clearTimeout(openTimer); panel.hidden = true; };
+  const scheduleOpen = kind => { clearTimeout(closeTimer); clearTimeout(openTimer); openTimer = setTimeout(() => open(kind), 120); };
+  const scheduleClose = () => { clearTimeout(openTimer); closeTimer = setTimeout(close, 220); };
+  document.querySelectorAll('[data-lib-kind]').forEach(item => {
+    const kind = item.dataset.libKind; const trigger = item.querySelector('[data-lib-trigger]');
+    if (!touch) { item.addEventListener('mouseenter', () => scheduleOpen(kind)); }
+    else trigger.addEventListener('click', event => { if (panel.hidden || activeKind !== kind) { event.preventDefault(); open(kind); } });
   });
+  panel?.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+  panel?.addEventListener('mouseleave', scheduleClose);
+  libraries?.addEventListener('mouseleave', scheduleClose);
+  panel?.querySelectorAll('[data-panel-tab]').forEach(tab => tab.addEventListener('click', () => open(tab.dataset.panelTab)));
+  document.addEventListener('click', event => { if (touch && libraries && !libraries.contains(event.target)) close(); });
 </script>

@@ -1,14 +1,47 @@
 ---
 import Layout from '../components/Layout.astro';
 import { SITE_NAME } from '../lib/brand.mjs';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<Layout title={`已加入 · ${SITE_NAME}`} active="trending"><section class="following" data-base={base}><h1>已加入</h1><p class="empty" data-empty>还没有加入的频道。去看看喜欢的视频吧。</p><div class="channel-grid" data-list></div></section></Layout>
+<Layout title={`已关注 · ${SITE_NAME}`} active="trending">
+  <section class="following" data-base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+    <h1>已关注</h1>
+    <div class="following-channels" data-channel-strip aria-label="已关注的频道"></div>
+    <p class="empty" data-empty hidden>还没有关注的频道。去看看喜欢的视频吧。</p>
+    <div class="video-grid" id="following-feed"></div>
+    <div class="infinite-sentinel" data-infinite-sentinel aria-hidden="true"></div>
+    <div class="infinite-spinner" data-infinite-spinner hidden>加载中…</div>
+  </section>
+</Layout>
 <script>
- import { KEYS, list as libraryList, migrate, toggleChannel } from '../scripts/library.js';
- const root = document.querySelector('[data-base]'), base = root.dataset.base, list = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]');
- const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
- const render = channels => { const selected = libraryList(KEYS.following); const map = Object.fromEntries(channels.map(c => [c.id, c])); empty.hidden = !!selected.length; list.innerHTML = selected.map(c => { const data = map[c.id] || c; return `<article><a href="${base}/channel/${c.id}/"><img src="${esc(data.thumbnail || c.thumbnail)}" alt=""><b>${esc(data.title || c.title)}</b><small>${data.subscriber_count ? `${new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(data.subscriber_count)} 位订阅者` : ''}</small></a><button data-id="${c.id}">已加入</button></article>`; }).join(''); list.querySelectorAll('button').forEach(b => b.onclick = () => { toggleChannel(selected.find(c => c.id === b.dataset.id)); render(channels); }); };
- fetch(`${base}/channels.json`).then(r => r.json()).then(data => { migrate(KEYS.following, [], data); render(data.channels || []); }).catch(() => render([]));
+  import { KEYS, list as libraryList, migrate } from '../scripts/library.js';
+
+  const root = document.querySelector('.following');
+  const base = root.dataset.base;
+  const strip = root.querySelector('[data-channel-strip]');
+  const feed = root.querySelector('#following-feed');
+  const empty = root.querySelector('[data-empty]');
+  const sentinel = root.querySelector('[data-infinite-sentinel]');
+  const spinner = root.querySelector('[data-infinite-spinner]');
+  const esc = value => String(value || '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[char]));
+  const date = value => value ? new Date(value).toISOString().slice(0, 10) : '';
+  const stripAvatar = channel => channel.thumbnail ? `<img class="following-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="following-avatar following-avatar-letter">${esc([... (channel.title || '')][0] || '频')}</span>`;
+  const cardAvatar = channel => channel.thumbnail ? `<img class="channel-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background:#607d8b">${esc([... (channel.title || '')][0] || '频')}</span>`;
+  const card = item => `<a class="video-card" href="https://www.youtube.com/watch?v=${esc(item.video.id)}" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><img loading="lazy" src="${esc(item.video.thumb || `https://i.ytimg.com/vi/${item.video.id}/hqdefault.jpg`)}" alt=""></div><div class="video-info">${cardAvatar(item.channel)}<div><h2 class="video-title">${esc(item.video.title || item.video.id)}</h2><p class="video-meta">${esc(item.channel.title)}</p><p class="video-meta">${esc(date(item.video.published_at))}</p></div></div></a>`;
+  let all = [];
+  let shown = 0;
+  const renderMore = () => { const next = all.slice(shown, shown + 20); if (!next.length) return; feed.insertAdjacentHTML('beforeend', next.map(card).join('')); shown += next.length; };
+  const render = channels => {
+    const map = Object.fromEntries(channels.map(channel => [channel.id, channel]));
+    const followed = libraryList(KEYS.following).map(saved => ({ ...map[saved.id], ...saved })).filter(channel => channel.id);
+    empty.hidden = followed.length > 0;
+    strip.innerHTML = followed.map(channel => `<a class="following-channel" href="${base}/channel/${esc(channel.id)}/">${stripAvatar(channel)}<span>${esc(channel.title)}</span></a>`).join('');
+    all = followed.flatMap(channel => (channel.videos || []).map(video => ({ channel, video }))).sort((a, b) => Date.parse(b.video.published_at || '') - Date.parse(a.video.published_at || ''));
+    feed.innerHTML = ''; shown = 0; renderMore();
+  };
+  fetch(`${base}/channels.json`).then(response => response.json()).then(data => { migrate(KEYS.following, [], data); render(data.channels || []); }).catch(() => render([]));
+  const observer = new IntersectionObserver(entries => { if (entries.some(entry => entry.isIntersecting)) { spinner.hidden = false; requestAnimationFrame(() => { renderMore(); spinner.hidden = true; }); } }, { rootMargin: '500px' });
+  observer.observe(sentinel);
 </script>
-<style>.following h1{font-size:26px}.empty{color:#606060;padding:30px 0}.channel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px 18px}.following article{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 12px;border:1px solid #eee;border-radius:12px}.following article a{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:#0f0f0f}.following img,.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;background:#e5e5e5}.following article b{font-size:16px}.following article small{color:#606060}.following button{margin-top:12px;border:0;background:#f2f2f2;color:#0f0f0f;border-radius:18px;padding:9px 14px;cursor:pointer;font-weight:500}</style>
+<style>
+.following h1{font-size:26px;margin:0 0 22px}.empty{color:#606060;padding:30px 0}.following-channels{display:flex;gap:22px;overflow-x:auto;padding:2px 2px 22px;margin-bottom:8px}:global(.following-channel){display:flex;flex:0 0 72px;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:#0f0f0f;font-size:12px;text-align:center}:global(.following-avatar){width:56px;height:56px;border-radius:50%;object-fit:cover;background:#eee}:global(.following-avatar-letter){display:grid;place-items:center;color:#fff;background:#607d8b;font-size:22px;font-weight:700}.infinite-sentinel{height:1px}.infinite-spinner{text-align:center;color:#606060;padding:20px}
+</style>
