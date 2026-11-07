@@ -5,7 +5,6 @@ import { SITE_NAME } from '../lib/brand.mjs';
 <Layout title={`已关注 · ${SITE_NAME}`} active="trending">
   <section class="following" data-base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
     <h1>已关注</h1>
-    <div class="following-channels" data-channel-strip aria-label="已关注的频道"></div>
     <p class="empty" data-empty hidden>还没有关注的频道。去看看喜欢的视频吧。</p>
     <div class="video-grid" id="following-feed"></div>
     <div class="infinite-sentinel" data-infinite-sentinel aria-hidden="true"></div>
@@ -17,16 +16,15 @@ import { SITE_NAME } from '../lib/brand.mjs';
 
   const root = document.querySelector('.following');
   const base = root.dataset.base;
-  const strip = root.querySelector('[data-channel-strip]');
   const feed = root.querySelector('#following-feed');
   const empty = root.querySelector('[data-empty]');
   const sentinel = root.querySelector('[data-infinite-sentinel]');
   const spinner = root.querySelector('[data-infinite-spinner]');
   const esc = value => String(value || '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[char]));
   const date = value => value ? new Date(value).toISOString().slice(0, 10) : '';
-  const stripAvatar = channel => channel.thumbnail ? `<img class="following-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="following-avatar following-avatar-letter">${esc([... (channel.title || '')][0] || '频')}</span>`;
   const cardAvatar = channel => channel.thumbnail ? `<img class="channel-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background:#607d8b">${esc([... (channel.title || '')][0] || '频')}</span>`;
-  const card = item => `<a class="video-card" href="https://www.youtube.com/watch?v=${esc(item.video.id)}" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><img loading="lazy" src="${esc(item.video.thumb || `https://i.ytimg.com/vi/${item.video.id}/hqdefault.jpg`)}" alt=""></div><div class="video-info">${cardAvatar(item.channel)}<div><h2 class="video-title">${esc(item.video.title || item.video.id)}</h2><p class="video-meta">${esc(item.channel.title)}</p><p class="video-meta">${esc(date(item.video.published_at))}</p></div></div></a>`;
+  const views = value => Number(value) ? ` · ${Number(value).toLocaleString('zh-CN')} 次观看` : '';
+  const card = item => `<a class="video-card" href="https://www.youtube.com/watch?v=${esc(item.video.id)}" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(item.video.id)}/hqdefault.jpg" alt=""></div><div class="video-info">${cardAvatar(item.channel)}<div><h2 class="video-title">${esc(item.video.title || item.video.id)}</h2><p class="video-meta">${esc(item.channel.title)}</p><p class="video-meta">${esc(date(item.video.published_at))}${esc(views(item.video.views))}</p></div></div></a>`;
   let all = [];
   let shown = 0;
   const renderMore = () => { const next = all.slice(shown, shown + 20); if (!next.length) return; feed.insertAdjacentHTML('beforeend', next.map(card).join('')); shown += next.length; };
@@ -34,7 +32,6 @@ import { SITE_NAME } from '../lib/brand.mjs';
     const map = Object.fromEntries(channels.map(channel => [channel.id, channel]));
     const followed = libraryList(KEYS.following).map(saved => ({ ...map[saved.id], ...saved })).filter(channel => channel.id);
     empty.hidden = followed.length > 0;
-    strip.innerHTML = followed.map(channel => `<a class="following-channel" href="${base}/channel/${esc(channel.id)}/">${stripAvatar(channel)}<span>${esc(channel.title)}</span></a>`).join('');
     all = followed.flatMap(channel => (channel.videos || []).map(video => ({ channel, video }))).sort((a, b) => Date.parse(b.video.published_at || '') - Date.parse(a.video.published_at || ''));
     feed.innerHTML = ''; shown = 0; renderMore();
   };
@@ -43,5 +40,5 @@ import { SITE_NAME } from '../lib/brand.mjs';
   observer.observe(sentinel);
 </script>
 <style>
-.following h1{font-size:26px;margin:0 0 22px}.empty{color:#606060;padding:30px 0}.following-channels{display:flex;gap:22px;overflow-x:auto;padding:2px 2px 22px;margin-bottom:8px}:global(.following-channel){display:flex;flex:0 0 72px;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:#0f0f0f;font-size:12px;text-align:center}:global(.following-avatar){width:56px;height:56px;border-radius:50%;object-fit:cover;background:#eee}:global(.following-avatar-letter){display:grid;place-items:center;color:#fff;background:#607d8b;font-size:22px;font-weight:700}.infinite-sentinel{height:1px}.infinite-spinner{text-align:center;color:#606060;padding:20px}
+.following h1{font-size:26px;margin:0 0 22px}.empty{color:#606060;padding:30px 0}.infinite-sentinel{height:1px}.infinite-spinner{text-align:center;color:#606060;padding:20px}
 </style>

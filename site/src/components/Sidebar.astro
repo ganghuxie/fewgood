@@ -1,15 +1,23 @@
 ---
+import { SITE_NAME } from '../lib/brand.mjs';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const link = path => `${base}${path}`;
+const isHome = Astro.url.pathname === `${base}/` || Astro.url.pathname === '/';
 ---
 <aside id="site-sidebar" class="site-sidebar" aria-label="侧边栏">
-  <a class="side-home" href={link('/')}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg><span>首页</span></a>
-  <div class="side-divider"></div>
-  <a class="side-section" href={link('/following/')}><b>已关注</b><span>›</span></a>
-  <div class="followed-list" data-followed-list><p>还没有关注的频道</p></div>
+  <div class="side-top">
+    <button class="menu-toggle" type="button" data-sidebar-close aria-label="关闭导览" aria-controls="site-sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`}><span class="logo-mark"><i></i></span><span>{SITE_NAME}</span></a>
+  </div>
+  <nav class="side-nav">
+    <a class:list={{ 'side-home': true, active: isHome }} href={link('/')}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg><span>首页</span></a>
+    <div class="side-divider"></div>
+    <a class="side-section" href={link('/following/')}><b>已关注</b><span>›</span></a>
+    <div class="followed-list" data-followed-list><p>还没有关注的频道</p></div>
+  </nav>
 </aside>
 <script>
-  import { KEYS, channelHasNew, list, markChannelSeen } from '../scripts/library.js';
+  import { KEYS, channelHasNew, list } from '../scripts/library.js';
   const root = document.querySelector('[data-followed-list]');
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const esc = value => String(value || '').replace(/[&<>\"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
@@ -19,5 +27,5 @@ const link = path => `${base}${path}`;
   document.addEventListener('youtuber:library-change', render);
 </script>
 <style is:global>
-.site-sidebar{position:fixed;z-index:30;top:105px;bottom:0;left:0;width:240px;padding:14px 12px;background:#fff;transform:translateX(-100%);transition:transform .2s ease;overflow-y:auto}.sidebar-open .site-sidebar{transform:translateX(0)}.side-home,.side-section,.followed-item{display:flex;align-items:center;gap:16px;min-height:44px;padding:0 14px;border-radius:10px;color:#0f0f0f;text-decoration:none}.side-home:hover,.side-section:hover,.followed-item:hover{background:#f2f2f2}.side-home svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}.side-section{justify-content:space-between;font-size:14px}.side-section b{font-weight:500}.side-section span{font-size:25px;color:#606060}.side-divider{border-top:1px solid #e5e5e5;margin:14px 0}.followed-list p{padding:12px 14px;color:#606060;font-size:13px}.followed-item{gap:10px;min-height:40px;padding-right:8px;font-size:14px}.followed-item img{width:24px;height:24px;border-radius:50%;object-fit:cover;background:#eee;flex:none}.followed-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.new-dot{width:7px;height:7px;margin-left:auto;border-radius:50%;background:#065fd4;flex:none}.sidebar-backdrop{display:none}.sidebar-open .sidebar-backdrop{display:block;position:fixed;inset:0;z-index:25;background:#0006}@media(max-width:899px){.site-sidebar{top:0;width:280px;padding-top:70px;box-shadow:2px 0 8px #0002}}
+.site-sidebar{position:fixed;z-index:40;top:0;bottom:0;left:0;width:240px;padding:0;background:#fff;transform:translateX(-100%);transition:transform .2s ease;overflow-y:auto;box-shadow:2px 0 8px #0001}.site-sidebar a{color:#0f0f0f;text-decoration:none}.sidebar-open .site-sidebar{transform:translateX(0)}.side-top{height:56px;padding:0 16px;display:flex;align-items:center;gap:16px}.side-top .menu-toggle{margin:0;width:40px;height:40px}.side-top .logo{font-size:20px;gap:6px}.side-nav{padding:8px 12px 16px}.side-home,.side-section,.followed-item{display:flex;align-items:center;gap:24px;min-height:40px;padding:0 12px;border-radius:12px;color:#0f0f0f;text-decoration:none;font-size:14px}.side-home:hover,.side-home.active,.side-section:hover,.followed-item:hover{background:#f2f2f2}.side-home.active{font-weight:700}.side-home svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;flex:none}.side-section{justify-content:space-between;gap:8px}.side-section b{font-weight:500}.side-section span{font-size:25px;color:#606060}.side-divider{border-top:1px solid #e5e5e5;margin:12px}.followed-list p{padding:12px;color:#606060;font-size:13px}.followed-item{gap:10px;min-height:40px;padding-right:8px}.followed-item img{width:24px;height:24px;border-radius:50%;object-fit:cover;background:#eee;flex:none}.followed-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.new-dot{width:7px;height:7px;margin-left:auto;border-radius:50%;background:#065fd4;flex:none}.sidebar-backdrop{display:none}.sidebar-open .sidebar-backdrop{display:block;position:fixed;inset:0;z-index:35;background:#0006}@media(max-width:899px){.site-sidebar{width:280px}}
 </style>

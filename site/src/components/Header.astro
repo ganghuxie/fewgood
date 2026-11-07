@@ -54,11 +54,11 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   window.addEventListener('storage', updateBadges);
   document.addEventListener('youtuber:library-change', updateBadges);
 
-  const toggle = document.querySelector('.menu-toggle');
+  const toggles = document.querySelectorAll('.menu-toggle');
   const backdrop = document.querySelector('.sidebar-backdrop');
-  const paint = open => { document.body.classList.toggle('sidebar-open', open); document.body.classList.toggle('sidebar-collapsed', !open); toggle?.setAttribute('aria-expanded', String(open)); };
+  const paint = open => { document.body.classList.toggle('sidebar-open', open); document.body.classList.toggle('sidebar-collapsed', !open); toggles.forEach(button => button.setAttribute('aria-expanded', String(open))); };
   paint(false);
-  toggle?.addEventListener('click', () => paint(!document.body.classList.contains('sidebar-open')));
+  toggles.forEach(button => button.addEventListener('click', () => paint(button.hasAttribute('data-sidebar-close') ? false : !document.body.classList.contains('sidebar-open'))));
   backdrop?.addEventListener('click', () => paint(false));
   document.addEventListener('keydown', event => { if (event.key === 'Escape') paint(false); });
 
