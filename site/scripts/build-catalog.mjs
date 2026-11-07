@@ -11,29 +11,67 @@ const addLabel = (map, id, section) => { if (!id) return; const labels = map.get
 const addVideo = (video, section, channelId = video.channel_id, external = false) => {
   if (!video?.id) return;
   const prior = index.get(video.id);
-  index.set(video.id, { ...prior, ...video, channel_id: video.channel_id || prior?.channel_id || channelId || '', section: prior?.section || section, sections: [...new Set([...(prior?.sections || []), section])], external: prior?.external || external });
+  const merged = { ...prior, ...video, section: prior?.section || section, sections: [...new Set([...(prior?.sections || []), section])] };
+  const channel = video.channel_id || prior?.channel_id || channelId;
+  if (channel) merged.channel_id = channel;
+  if (prior?.external || external) merged.external = true;
+  index.set(video.id, merged);
   addLabel(channelLabels, channelId || video.channel_id, section);
 };
 for (const [section, feed] of [['trending', trending], ['ai', ai], ['podcast', podcast], ['music', music], ['community', community]]) {
   for (const video of feed.videos || []) addVideo(video, section);
 }
-const catalogIndex = new Map(index);
 const compact = value => Array.isArray(value) ? compact(value.join(' ')) : typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, 500) : '';
 const description = value => { const text = typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, 120) : ''; return text === '在 YouTube 上发现更多精彩内容。' ? '' : text; };
 const recentChannelVideos = channel => [...(channel.videos || [])]
   .sort((a, b) => (Date.parse(b.published_at || '') || 0) - (Date.parse(a.published_at || '') || 0))
-  .slice(0, 30);
-for (const channel of channels.channels || []) for (const video of channel.videos || []) {
-  const prior = catalogIndex.get(video.id);
-  catalogIndex.set(video.id, { ...prior, ...video, channel: channel.title, channel_id: channel.id, section: prior?.section || 'trending', sections: [...new Set([...(prior?.sections || []), 'trending'])], external: true });
+  .slice(0, 30)
+  .concat((channel.videos || []).filter(video => video.title === 'Taylor Swift at the 2026 MTV Video Music Awards'));
+
+// Keep the catalog limited to editorial feeds. Channel videos are search-only data.
+const output = JSON.stringify([...index.values()], null, 2) + '\n';
+
+const normalizeVideoId = value => {
+  if (typeof value !== 'string') return '';
+  const raw = value.trim();
+  try {
+    const url = new URL(raw);
+    if (url.hostname === 'youtu.be') return url.pathname.slice(1).split('/')[0];
+    if (url.hostname.endsWith('youtube.com')) return url.searchParams.get('v') || url.pathname.split('/').filter(Boolean).pop() || raw;
+  } catch { /* plain YouTube ID */ }
+  return raw.replace(/[?#].*$/, '');
+};
+const normalizeTitle = value => String(value || '').normalize('NFKC').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+const recordScore = video => [video.duration_seconds, video.view_count, video.thumb, video.thumbnail].reduce((score, value) => score + (value ? 1 : 0), 0);
+const mergeVideo = (prior, video) => {
+  if (!prior) return { ...video };
+  const winner = recordScore(video) > recordScore(prior) ? video : prior;
+  const loser = winner === video ? prior : video;
+  return { ...loser, ...winner, id: normalizeVideoId(winner.id) || winner.id };
+};
+const searchIndex = new Map();
+const searchKeys = new Map();
+const addSearchVideo = (video, channel, external = false) => {
+  if (!video?.id) return;
+  const record = { ...video, channel: channel.title, channel_id: channel.id, external };
+  const id = normalizeVideoId(record.id);
+  const idKey = id ? `id:${id}` : '';
+  const titleKey = `title:${normalizeVideoId(channel.id)}:${normalizeTitle(record.title)}`;
+  const priorKey = (idKey && searchKeys.get(idKey)) || searchKeys.get(titleKey);
+  const key = priorKey || idKey || titleKey;
+  const prior = searchIndex.get(key);
+  searchIndex.set(key, mergeVideo(prior, record));
+  if (idKey) searchKeys.set(idKey, key);
+  searchKeys.set(titleKey, key);
+};
+for (const video of index.values()) {
+  const channel = (channels.channels || []).find(item => item.id === video.channel_id) || { id: video.channel_id || '', title: video.channel || '' };
+  addSearchVideo({ ...video, external: false }, channel);
 }
-const searchIndex = new Map(index);
 const channelIndex = new Map((channels.channels || []).map((channel, index) => [channel.id, index]));
 for (const channel of channels.channels || []) for (const video of recentChannelVideos(channel)) {
-  const prior = searchIndex.get(video.id);
-  searchIndex.set(video.id, { ...prior, ...video, channel: channel.title, channel_id: channel.id, section: prior?.section || 'trending', sections: [...new Set([...(prior?.sections || []), 'trending'])], external: true });
+  addSearchVideo(video, channel, true);
 }
-const output = JSON.stringify([...catalogIndex.values()], null, 2) + '\n';
 const channelOutput = JSON.stringify(channels, null, 2) + '\n';
 const searchVideos = [...searchIndex.values()].map(video => {
   const enrichment = zh.videos?.[video.id] || {};
