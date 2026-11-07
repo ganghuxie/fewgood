@@ -2,11 +2,14 @@ import posthog from 'posthog-js';
 
 const key = import.meta.env.PUBLIC_POSTHOG_KEY?.trim();
 const host = import.meta.env.PUBLIC_POSTHOG_HOST?.trim() || 'https://us.i.posthog.com';
+const localHost = ['localhost', '127.0.0.1', '[::1]', '::1'].includes(window.location.hostname);
 const dnt = [navigator.doNotTrack, window.doNotTrack, navigator.msDoNotTrack]
   .some(value => ['1', 'yes'].includes(String(value ?? '').toLowerCase()));
 let inited = false;
 
-if (key && !dnt) {
+// Never initialize the production client on a local browser. A test can safely
+// install window.posthog.capture after page load without enabling network I/O.
+if (key && !dnt && !localHost) {
   posthog.init(key, {
     api_host: host,
     autocapture: true,
@@ -18,6 +21,11 @@ if (key && !dnt) {
 }
 
 export function track(event, props) {
+  const stub = window.posthog;
+  if (stub && typeof stub.capture === 'function') {
+    stub.capture(event, props);
+    return;
+  }
   if (inited) posthog.capture(event, props);
 }
 
