@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "scripts": {"build": "node scripts/build-catalog.mjs && astro build", "dev": "node scripts/build-catalog.mjs && astro dev"},
-  "dependencies": {"astro": "^5.16.0"}
+  "scripts": {
+    "build": "node scripts/build-catalog.mjs && astro build",
+    "dev": "node scripts/build-catalog.mjs && astro dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "astro": "^5.16.0"
+  }
 }

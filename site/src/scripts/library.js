@@ -113,6 +113,7 @@ export function markChannelSeen(id, at = Date.now()) {
     const seen = JSON.parse(localStorage.getItem(KEYS.channelSeen) || '{}');
     seen[id] = Math.max(Number(seen[id]) || 0, typeof at === 'number' ? at : Date.parse(at) || Date.now());
     localStorage.setItem(KEYS.channelSeen, JSON.stringify(seen));
+    document.dispatchEvent(new CustomEvent('youtuber:library-change', { detail: { key: KEYS.channelSeen } }));
   } catch { /* private browsing */ }
 }
 export function channelHasNew(channelId, latestPublishedAt) {
