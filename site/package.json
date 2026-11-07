@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",
-    "astro": "^5.16.0"
+    "astro": "^5.16.0",
+    "posthog-js": "^1.279.0"
   }
 }

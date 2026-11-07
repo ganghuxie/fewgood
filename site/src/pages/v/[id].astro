@@ -26,13 +26,14 @@ const timestamp = seconds => `${Math.floor(seconds / 60)}:${String(Math.floor(se
 </Layout>
 <script>
  import { KEYS, addHistory, has, toggleChannel, toggleVideo } from '../../scripts/library.js';
+ import { track } from '../../scripts/analytics.js';
  const source = new URLSearchParams(location.search).get('from'); const sections = [...document.querySelectorAll('[data-source]')]; const selected = sections.some(el => el.dataset.source === source) ? source : sections[0]?.dataset.source; sections.forEach(el => el.hidden = el.dataset.source !== selected);
  const labels = { favorites: ['☆ 收藏', '★ 已收藏'], watchLater: ['◷ 稍后再看', '◷ 已在稍后再看'] };
  const snapshotFor = button => JSON.parse(button.closest('[data-video-json]').dataset.videoJson);
  const paint = button => { const key = button.dataset.libraryToggle, id = button.dataset.id; button.textContent = labels[key][has(KEYS[key], id) ? 1 : 0]; };
  document.querySelectorAll('[data-library-toggle]').forEach(button => { paint(button); button.addEventListener('click', () => { toggleVideo(KEYS[button.dataset.libraryToggle], snapshotFor(button)); paint(button); }); });
  document.querySelectorAll('[data-follow-channel]').forEach(button => { if (!button.dataset.channel) { button.hidden = true; return; } const paintFollow = () => { const following = has(KEYS.following, button.dataset.channel); button.textContent = following ? '已关注' : '关注'; button.classList.toggle('is-following', following); }; paintFollow(); button.addEventListener('click', () => { const snap = snapshotFor(button); toggleChannel({ id: snap.channelId, title: snap.channel, thumbnail: snap.avatar }); paintFollow(); }); });
- document.querySelectorAll('[data-seek]').forEach(button => button.addEventListener('click', () => { const detail = button.closest('.detail'); const frame = detail?.querySelector('iframe'); if (frame) frame.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?start=${Math.floor(Number(button.dataset.seek))}&autoplay=1`; }));
+ document.querySelectorAll('[data-seek]').forEach(button => button.addEventListener('click', () => { const detail = button.closest('.detail'); const frame = detail?.querySelector('iframe'); if (frame) { frame.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?start=${Math.floor(Number(button.dataset.seek))}&autoplay=1`; track('zh_highlight_click', { video_id: button.dataset.videoId, t: Number(button.dataset.seek) }); track('play_embed', { video_id: button.dataset.videoId }); } }));
  if (sections[0]) addHistory(snapshotFor(sections[0].querySelector('[data-library-toggle]')));
 </script>
 <style>

@@ -52,6 +52,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 </style>
 <script>
   import { KEYS, list, updateBadges, markWatchLaterSeen } from '../scripts/library.js';
+  import { track } from '../scripts/analytics.js';
   updateBadges();
   window.addEventListener('storage', updateBadges);
   document.addEventListener('youtuber:library-change', updateBadges);
@@ -127,6 +128,6 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   panel?.addEventListener('mouseenter', () => clearTimeout(closeTimer));
   panel?.addEventListener('mouseleave', scheduleClose);
   libraries?.addEventListener('mouseleave', scheduleClose);
-  panel?.querySelectorAll('[data-panel-tab]').forEach(tab => tab.addEventListener('click', () => open(tab.dataset.panelTab)));
+  panel?.querySelectorAll('[data-panel-tab]').forEach(tab => tab.addEventListener('click', () => { track('tab_switch', { tab: tab.dataset.panelTab }); open(tab.dataset.panelTab); }));
   document.addEventListener('click', event => { if (touch && libraries && !libraries.contains(event.target)) close(); });
 </script>

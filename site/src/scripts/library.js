@@ -1,4 +1,5 @@
 const PREFIX = 'youtuber:';
+import { track } from './analytics.js';
 export const KEYS = {
   favorites: `${PREFIX}favorites`,
   watchLater: `${PREFIX}watchLater`,
@@ -74,7 +75,11 @@ export function set(key, value) {
 }
 export function ids(key) { return get(key).map(item => item.id).filter(Boolean); }
 export function has(key, id) { return ids(key).includes(id); }
-export function remove(key, id) { set(key, get(key).filter(item => item.id !== id)); }
+export function remove(key, id) {
+  set(key, get(key).filter(item => item.id !== id));
+  if (key === KEYS.favorites) track('favorite_remove', { video_id: id });
+  if (key === KEYS.watchLater) track('watch_later_remove', { video_id: id });
+}
 export function toggleVideo(key, snapshot) {
   const item = video(snapshot);
   const present = has(key, item.id);
@@ -83,6 +88,8 @@ export function toggleVideo(key, snapshot) {
     // Newly added watch-later items are unseen (no seen_at).
     if (key === KEYS.watchLater) delete item.seen_at;
     set(key, [item, ...get(key)]);
+    if (key === KEYS.favorites) track('favorite_add', { video_id: item.id });
+    if (key === KEYS.watchLater) track('watch_later_add', { video_id: item.id });
   }
   return !present;
 }
@@ -98,6 +105,7 @@ export function toggleChannel(snapshot) {
   const present = has(KEYS.following, item.id);
   if (present) remove(KEYS.following, item.id);
   else set(KEYS.following, [item, ...get(KEYS.following)]);
+  track(present ? 'unfollow' : 'follow', { channel_id: item.id });
   return !present;
 }
 export const follow = toggleChannel;
