@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-07T10:19:41Z",
+  "generated_at": "2026-11-07T23:10:41Z",
   "window_days": 30,
   "exclude_shorts_under_seconds": 60,
   "window_size_days": 6,
   "windows": 5,
-  "candidates_fetched": 488,
+  "candidates_fetched": 479,
   "dropped_short": 0,
   "dropped_vertical": 1,
   "landscape_only": true,
@@ -22,18 +22,8 @@
       "channel_id": "UCAov2BBv1ZJav0c_yHEciAw",
       "published_at": "2026-10-25T13:30:07Z",
       "duration_seconds": 3007,
-      "view_count": 68989319,
-      "like_count": 1526652
-    },
-    {
-      "id": "G7QspzZIpCY",
-      "title": "Inside LeBron and Savannah James's Home, Full of Wonderful Objects | Vogue",
-      "channel": "Vogue",
-      "channel_id": "UCRXiA3h1no_PFkb1JCP0yMA",
-      "published_at": "2026-10-20T16:00:07Z",
-      "duration_seconds": 708,
-      "view_count": 17174500,
-      "like_count": 123005
+      "view_count": 69466658,
+      "like_count": 1530476
     },
     {
       "id": "xbY3Twa1cBU",
@@ -42,28 +32,8 @@
       "channel_id": "UC7FE8E7nCP-sJO8o4FTo93Q",
       "published_at": "2026-10-20T09:00:11Z",
       "duration_seconds": 590,
-      "view_count": 14157825,
-      "like_count": 188556
-    },
-    {
-      "id": "MgBZpKV3AMM",
-      "title": "Israeli Spy Who Almost Became Syria's President | Nitish Rajput",
-      "channel": "Nitish Rajput",
-      "channel_id": "UC6WzPg6yxF9dQx2_O6R4lww",
-      "published_at": "2026-10-09T11:59:06Z",
-      "duration_seconds": 2398,
-      "view_count": 12704416,
-      "like_count": 126513
-    },
-    {
-      "id": "foEYL-ElhTc",
-      "title": "Dhruv Rathee Interviews Former Chief Election Commissioner | Dr. S.Y. Quraishi",
-      "channel": "Dhruv Rathee",
-      "channel_id": "UC-CSyyi47VX1lD9zyeABW3w",
-      "published_at": "2026-10-22T17:44:17Z",
-      "duration_seconds": 4622,
-      "view_count": 11806827,
-      "like_count": 302946
+      "view_count": 14357872,
+      "like_count": 188950
     },
     {
       "id": "3kuNW8hRc2U",
@@ -72,58 +42,8 @@
       "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
       "published_at": "2026-10-29T08:00:22Z",
       "duration_seconds": 6102,
-      "view_count": 9411454,
-      "like_count": 187339
-    },
-    {
-      "id": "Z7bUQpa89fs",
-      "title": "Apa Kabar Syahrini?",
-      "channel": "Raditya Dika",
-      "channel_id": "UC0rzsIrAxF4kCsALP6J2EsA",
-      "published_at": "2026-10-08T12:00:01Z",
-      "duration_seconds": 2704,
-      "view_count": 8475949,
-      "like_count": 131769
-    },
-    {
-      "id": "WgQkUOeXs4E",
-      "title": "HEH OM BOTAAAK.. KAMU KEFARAAAT YA NANYA AKUNYA‼️🤣",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-10-13T04:20:35Z",
-      "duration_seconds": 4115,
-      "view_count": 8324559,
-      "like_count": 86969
-    },
-    {
-      "id": "9cX_O07NBq0",
-      "title": "DISVMPAHI, DIFI-TN*H SAMPAI DI N- 0- D41 AYAH⁉️ AKTE & IJAZAH DI B*-KR⁉️ “AKU BUTUH PERTOLONGAN‼️”",
-      "channel": "CURHAT BANG Denny Sumargo",
-      "channel_id": "UCapUP1gKtGuhEkyaaHwxlpw",
-      "published_at": "2026-10-09T12:15:05Z",
-      "duration_seconds": 2711,
-      "view_count": 7566082,
-      "like_count": 84989
-    },
-    {
-      "id": "6yl3NQwG9Mc",
-      "title": "Mira Rajput Kapoor Interview with Kareena Kapoor Khan | Mirchi What Women Want Season 6 | EP-3",
-      "channel": "Mirchi Plus",
-      "channel_id": "UCv41ean41z5cRWdHiK5YvEw",
-      "published_at": "2026-10-30T13:30:35Z",
-      "duration_seconds": 1542,
-      "view_count": 7405061,
-      "like_count": 41052
-    },
-    {
-      "id": "5x9dkYIRb58",
-      "title": "President Zelenskyy: It's Time To Tell You The Truth About The War! They Found 500 Bodies!",
-      "channel": "The Diary Of A CEO",
-      "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
-      "published_at": "2026-10-22T07:17:58Z",
-      "duration_seconds": 6598,
-      "view_count": 6746062,
-      "like_count": 216710
+      "view_count": 9523590,
+      "like_count": 189408
     },
     {
       "id": "sRH-XlBE2cQ",
@@ -132,18 +52,18 @@
       "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
       "published_at": "2026-10-24T15:39:19Z",
       "duration_seconds": 6572,
-      "view_count": 6621487,
-      "like_count": 48257
+      "view_count": 6807672,
+      "like_count": 48878
     },
     {
-      "id": "wmPi8NLgzSI",
-      "title": "Cornell 7: Frat Brothers Accused of Campus Gang SA & Sending \"Free Pu**y\" Snapchat",
-      "channel": "Rotten Mango",
-      "channel_id": "UC0JJtK3m8pwy6rVgnBz47Rw",
-      "published_at": "2026-10-16T20:51:54Z",
-      "duration_seconds": 6880,
-      "view_count": 5593743,
-      "like_count": 82745
+      "id": "5x9dkYIRb58",
+      "title": "President Zelenskyy: It's Time To Tell You The Truth About The War! They Found 500 Bodies!",
+      "channel": "The Diary Of A CEO",
+      "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
+      "published_at": "2026-10-22T07:17:58Z",
+      "duration_seconds": 6598,
+      "view_count": 6796994,
+      "like_count": 217889
     },
     {
       "id": "mgPN8B-B7tg",
@@ -152,18 +72,8 @@
       "channel_id": "UCqoAEDirJPjEUFcF2FklnBA",
       "published_at": "2026-10-09T01:22:32Z",
       "duration_seconds": 1146,
-      "view_count": 5437586,
-      "like_count": 38453
-    },
-    {
-      "id": "xSvjqPsG4Fo",
-      "title": "Bocah-bocah Jadi Ibu-ibu",
-      "channel": "Raditya Dika",
-      "channel_id": "UC0rzsIrAxF4kCsALP6J2EsA",
-      "published_at": "2026-10-17T12:00:09Z",
-      "duration_seconds": 3437,
-      "view_count": 5389604,
-      "like_count": 51154
+      "view_count": 5442134,
+      "like_count": 38490
     },
     {
       "id": "hv8CsPah23w",
@@ -172,28 +82,8 @@
       "channel_id": "UCMSqyGyyqI_zWkyS22pk7bA",
       "published_at": "2026-10-16T16:59:14Z",
       "duration_seconds": 2686,
-      "view_count": 5357329,
-      "like_count": 146558
-    },
-    {
-      "id": "GlaSnROMqRY",
-      "title": "The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! | Dr Christopher Kerr",
-      "channel": "The Diary Of A CEO",
-      "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
-      "published_at": "2026-10-19T07:00:16Z",
-      "duration_seconds": 5007,
-      "view_count": 4843535,
-      "like_count": 104117
-    },
-    {
-      "id": "IkhmdTqSvJw",
-      "title": "UFO Cover-Up Analyst: The Secret Alien Programs Nobody Is Talking About! | Eric Weinstein",
-      "channel": "The Diary Of A CEO",
-      "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
-      "published_at": "2026-10-12T07:00:32Z",
-      "duration_seconds": 6778,
-      "view_count": 4648633,
-      "like_count": 85449
+      "view_count": 5382464,
+      "like_count": 146975
     },
     {
       "id": "Aax6O3_1dxI",
@@ -202,8 +92,8 @@
       "channel_id": "UCapUP1gKtGuhEkyaaHwxlpw",
       "published_at": "2026-10-16T12:00:08Z",
       "duration_seconds": 3038,
-      "view_count": 4536158,
-      "like_count": 37709
+      "view_count": 4541059,
+      "like_count": 37711
     },
     {
       "id": "jRLUcLG2FT0",
@@ -212,8 +102,8 @@
       "channel_id": "UC9ZHe6vps-DC79TU_7lRAsA",
       "published_at": "2026-11-03T15:45:06Z",
       "duration_seconds": 1822,
-      "view_count": 4270259,
-      "like_count": 67107
+      "view_count": 4385532,
+      "like_count": 67757
     },
     {
       "id": "BKXeW00-XiY",
@@ -222,8 +112,8 @@
       "channel_id": "UCapUP1gKtGuhEkyaaHwxlpw",
       "published_at": "2026-10-26T12:31:55Z",
       "duration_seconds": 3807,
-      "view_count": 4159352,
-      "like_count": 44112
+      "view_count": 4236266,
+      "like_count": 44591
     },
     {
       "id": "P_dNJzF5w94",
@@ -232,38 +122,28 @@
       "channel_id": "UC80mzf_mrz7-dcSK7rLbzQQ",
       "published_at": "2026-11-03T13:49:45Z",
       "duration_seconds": 2169,
-      "view_count": 3978620,
-      "like_count": 41118
+      "view_count": 4094223,
+      "like_count": 41639
     },
     {
-      "id": "tts4cbd7Pho",
-      "title": "EL CHAPO, EL MAYO Y EL MENCHO NO ERAN LOS JEFES | Jesús Tovar # 409",
-      "channel": "Doble G",
-      "channel_id": "UCe4yxFAIPvftQ9aYGzJ6iTA",
-      "published_at": "2026-10-18T20:00:51Z",
-      "duration_seconds": 6592,
-      "view_count": 3974828,
-      "like_count": 45171
+      "id": "Tl8N6xm_edM",
+      "title": "MEMBUKA 'RAHASIA MISTIS' 25 TAHUN HIDUP BERSAMA SUZZANNA.. NYI RORO KIDUL & PESUGIHAN GUNUNG KAWI",
+      "channel": "Malam Mencekam",
+      "channel_id": "UCQAxhTdTi6XUVn-Cn6ihQ-Q",
+      "published_at": "2026-10-11T12:30:14Z",
+      "duration_seconds": 5256,
+      "view_count": 3862908,
+      "like_count": 32964
     },
     {
-      "id": "zOnA_8JmdM8",
-      "title": "NEPHILIM, NABI ADAM & RAKSASA PURBA... APA YANG SEBENARNYA TERJADI PADA MEREKA❓",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-10-15T04:20:28Z",
-      "duration_seconds": 3745,
-      "view_count": 3818685,
-      "like_count": 27828
-    },
-    {
-      "id": "QhrjI7-Y788",
-      "title": "The Most UNHINGED Woman In Financial Audit History",
-      "channel": "Caleb Hammer",
-      "channel_id": "UCLe_q9axMaeTbjN0hy1Z9xA",
-      "published_at": "2026-10-09T15:00:19Z",
-      "duration_seconds": 5617,
-      "view_count": 3710857,
-      "like_count": 38277
+      "id": "TjPPIf-M6KE",
+      "title": "Sam Altman On AI Revolution, Superintelligence & Future Of Humanity | FO583 Raj Shamani",
+      "channel": "Raj Shamani",
+      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
+      "published_at": "2026-11-03T15:39:22Z",
+      "duration_seconds": 4081,
+      "view_count": 3839286,
+      "like_count": 65051
     },
     {
       "id": "Pc-PyrlVT3I",
@@ -272,18 +152,18 @@
       "channel_id": "UCzRxkmSKHlNOMNiJRG275Ow",
       "published_at": "2026-10-12T12:00:10Z",
       "duration_seconds": 1154,
-      "view_count": 3553585,
-      "like_count": 41762
+      "view_count": 3572681,
+      "like_count": 41909
     },
     {
-      "id": "JlZqXwryUOw",
-      "title": "KARHUTLA: PROFESOR INI KELUARGANYA BERKALI-KALI DIANCAM!‼️ APA YANG DIA KETAHUI!?",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-10-28T04:20:18Z",
-      "duration_seconds": 4892,
-      "view_count": 3458184,
-      "like_count": 30431
+      "id": "gbaqK_i-m6w",
+      "title": "NIKEN SALINDRY : BAWAKAN LAGU LINGSIR WENGI, RITUAL, DAN NYANYI DI PANTAI SELATAN #OMMAMAT",
+      "channel": "RJL 5 - Fajar Aditya",
+      "channel_id": "UCiFM5EHunF5tL0pMR6Pooaw",
+      "published_at": "2026-10-22T13:35:42Z",
+      "duration_seconds": 4120,
+      "view_count": 3477377,
+      "like_count": 34361
     },
     {
       "id": "UXHNgJO9Tuc",
@@ -292,58 +172,8 @@
       "channel_id": "UCcB5cXUCggZGnVzR_84Xyag",
       "published_at": "2026-10-24T10:00:00Z",
       "duration_seconds": 3976,
-      "view_count": 3301219,
-      "like_count": 26389
-    },
-    {
-      "id": "hsZzNqL2yVA",
-      "title": "Memahami masalah dan Dampak MSCI untuk perekonomian Indonesia",
-      "channel": "Ferry Irwandi",
-      "channel_id": "UCC_OYI6VZtuEZuq49Ht-cQQ",
-      "published_at": "2026-10-16T12:33:22Z",
-      "duration_seconds": 776,
-      "view_count": 3257209,
-      "like_count": 29312
-    },
-    {
-      "id": "0c5JfN2qeu0",
-      "title": "El Vaticano desde Dentro: La Verdad Sobre la Muerte del Papa Juan Pablo I - Padre Charles Murr #301",
-      "channel": "WORLDCA$T",
-      "channel_id": "UCuDm45jKrsTeEpx7BayVaiw",
-      "published_at": "2026-10-08T19:00:10Z",
-      "duration_seconds": 7164,
-      "view_count": 3035042,
-      "like_count": 46325
-    },
-    {
-      "id": "tGHjvJWA5CI",
-      "title": "#111 - EX TESTIGOS DE JEHOVÁ: UNA FAMILIA ROTA | Noemimisma en Roca Project",
-      "channel": "ROCA PROJECT",
-      "channel_id": "UCYQgLLpqeFe3FGzv18ZabdA",
-      "published_at": "2026-10-14T17:30:30Z",
-      "duration_seconds": 5879,
-      "view_count": 3007773,
-      "like_count": 56594
-    },
-    {
-      "id": "aPSc4Hx_6M0",
-      "title": "Why we actually broke up…",
-      "channel": "yoangelolo",
-      "channel_id": "UCr2RPX6bUMaO68UKWYLvt8g",
-      "published_at": "2026-10-11T14:00:07Z",
-      "duration_seconds": 3025,
-      "view_count": 3003237,
-      "like_count": 48378
-    },
-    {
-      "id": "BV7QRw8wtjs",
-      "title": "How To Build An Unbreakable Mind & Push Beyond Your Limits | Ayyoub El Osrouti | FO578 Raj Shamani",
-      "channel": "Raj Shamani",
-      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
-      "published_at": "2026-10-22T15:39:01Z",
-      "duration_seconds": 10209,
-      "view_count": 2965524,
-      "like_count": 35373
+      "view_count": 3331101,
+      "like_count": 26479
     },
     {
       "id": "4auTjwwG2RI",
@@ -352,98 +182,28 @@
       "channel_id": "UCro1VNb7hqX38TvyUN64JkQ",
       "published_at": "2026-10-30T17:00:32Z",
       "duration_seconds": 3835,
-      "view_count": 2957494,
-      "like_count": 28548
+      "view_count": 3033554,
+      "like_count": 29243
     },
     {
-      "id": "WvDLMyYZW9A",
-      "title": "FALSISSIMO EP 28 - \"IL VERO GENERALE\" PARTE UNO",
-      "channel": "FABRIZIO CORONA",
-      "channel_id": "UCuqUDrPi1CPUzZIH6G6NSMQ",
-      "published_at": "2026-10-12T19:00:01Z",
-      "duration_seconds": 5605,
-      "view_count": 2815403,
-      "like_count": 52427
+      "id": "aPSc4Hx_6M0",
+      "title": "Why we actually broke up…",
+      "channel": "yoangelolo",
+      "channel_id": "UCr2RPX6bUMaO68UKWYLvt8g",
+      "published_at": "2026-10-11T14:00:07Z",
+      "duration_seconds": 3025,
+      "view_count": 3018934,
+      "like_count": 48483
     },
     {
-      "id": "OQnvClWgN-g",
-      "title": "Das Ende von Deutschland steht bevor (Markus Krall)",
-      "channel": "{ungeskriptet} by Ben",
-      "channel_id": "UCjkSqbf8E4MybdYmfhlW10A",
-      "published_at": "2026-10-17T08:00:30Z",
-      "duration_seconds": 12062,
-      "view_count": 2781279,
-      "like_count": 77618
-    },
-    {
-      "id": "7s90aii_YqA",
-      "title": "MISTERI TEMBOK ANTARTIKA DAN AREA 51, ADA KEHIDUPAN LAIN DISANA! | MEJA MONGOL",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-10-08T12:00:17Z",
-      "duration_seconds": 3549,
-      "view_count": 2739653,
-      "like_count": 17192
-    },
-    {
-      "id": "IL4zZB-Zy5I",
-      "title": "What Jane Doe & Cornell 7 Said Happened That Night- All The Inconsistencies",
-      "channel": "Rotten Mango",
-      "channel_id": "UC0JJtK3m8pwy6rVgnBz47Rw",
-      "published_at": "2026-10-23T15:47:57Z",
-      "duration_seconds": 5043,
-      "view_count": 2730510,
-      "like_count": 38870
-    },
-    {
-      "id": "WdWVlQgkVe4",
-      "title": "Joe Rogan Experience #2571 - Jimmy Carr",
-      "channel": "PowerfulJRE",
-      "channel_id": "UCzQUP1qoWDoEbmsQxvdjxgQ",
-      "published_at": "2026-10-28T19:00:03Z",
-      "duration_seconds": 10236,
-      "view_count": 2711449,
-      "like_count": 24362
-    },
-    {
-      "id": "iIvpZx1jx28",
-      "title": "THE ETHAN KLEIN AFFAIR CLUES ARE INSANE",
-      "channel": "HasanAbi",
-      "channel_id": "UCtoaZpBnrd0lhycxYJ4MNOQ",
-      "published_at": "2026-10-25T23:30:21Z",
-      "duration_seconds": 5241,
-      "view_count": 2696682,
-      "like_count": 43050
-    },
-    {
-      "id": "f8j99y64CDQ",
-      "title": "DEDDY CORBUZIER: GAK ADA ORANG NGEGYM BUAT KESEHATAN! \"TAI KUCING!” - PODCAST BAHLUL",
-      "channel": "NOICE",
-      "channel_id": "UCU7U3fcM-PQs39jFSj5pVMg",
-      "published_at": "2026-10-19T12:21:00Z",
-      "duration_seconds": 4895,
-      "view_count": 2672531,
-      "like_count": 26131
-    },
-    {
-      "id": "Kc59APuR06s",
-      "title": "Grind Boys  Eps. 289 - Suguryaga Insomnia",
-      "channel": "Gofar Hilman",
-      "channel_id": "UCxLyVB3oV_aOLIouyfW7HUQ",
-      "published_at": "2026-10-21T14:00:16Z",
-      "duration_seconds": 4114,
-      "view_count": 2637366,
-      "like_count": 22530
-    },
-    {
-      "id": "cUeJSNR1xJM",
-      "title": "LIVE: 2026 MIDTERM ELECTIONS",
-      "channel": "MeidasTouch",
-      "channel_id": "UC9r9HYFxEQOBXSopFS61ZWg",
-      "published_at": "2026-11-04T08:10:29Z",
-      "duration_seconds": 34601,
-      "view_count": 2611298,
-      "like_count": 54674
+      "id": "BV7QRw8wtjs",
+      "title": "How To Build An Unbreakable Mind & Push Beyond Your Limits | Ayyoub El Osrouti | FO578 Raj Shamani",
+      "channel": "Raj Shamani",
+      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
+      "published_at": "2026-10-22T15:39:01Z",
+      "duration_seconds": 10209,
+      "view_count": 2985101,
+      "like_count": 35490
     },
     {
       "id": "XBk3FkzL7nU",
@@ -452,8 +212,78 @@
       "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
       "published_at": "2026-11-04T12:00:06Z",
       "duration_seconds": 2960,
-      "view_count": 2592602,
-      "like_count": 22977
+      "view_count": 2878971,
+      "like_count": 24175
+    },
+    {
+      "id": "e1cwjeP5Ofs",
+      "title": "India's Biggest Economic Threat | Why Jaishankar Is Warning Every Indian About the 4F Crisis?",
+      "channel": "Think School",
+      "channel_id": "UCKZozRVHRYsYHGEyNKuhhdA",
+      "published_at": "2026-10-12T12:40:58Z",
+      "duration_seconds": 996,
+      "view_count": 2846957,
+      "like_count": 25853
+    },
+    {
+      "id": "feiF4mTzfsU",
+      "title": "Neil deGrasse Tyson | Hot Ones Game Night",
+      "channel": "First We Feast",
+      "channel_id": "UCPD_bxCRGpmmeQcbe2kpPaA",
+      "published_at": "2026-10-14T17:00:10Z",
+      "duration_seconds": 1750,
+      "view_count": 2817482,
+      "like_count": 56121
+    },
+    {
+      "id": "OQnvClWgN-g",
+      "title": "Das Ende von Deutschland steht bevor (Markus Krall)",
+      "channel": "{ungeskriptet} by Ben",
+      "channel_id": "UCjkSqbf8E4MybdYmfhlW10A",
+      "published_at": "2026-10-17T08:00:30Z",
+      "duration_seconds": 12062,
+      "view_count": 2793441,
+      "like_count": 77756
+    },
+    {
+      "id": "iIvpZx1jx28",
+      "title": "THE ETHAN KLEIN AFFAIR CLUES ARE INSANE",
+      "channel": "HasanAbi",
+      "channel_id": "UCtoaZpBnrd0lhycxYJ4MNOQ",
+      "published_at": "2026-10-25T23:30:21Z",
+      "duration_seconds": 5241,
+      "view_count": 2705454,
+      "like_count": 43113
+    },
+    {
+      "id": "2u2iaA-T5d0",
+      "title": "PRILLY DAN UMMI BERSATU MELAWAN OM DED YANG TOXIC‼️WAH UDAH GIL44 LOE SEMUA‼️- VADI, NINO",
+      "channel": "Deddy Corbuzier",
+      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
+      "published_at": "2026-10-31T02:20:40Z",
+      "duration_seconds": 4866,
+      "view_count": 2702558,
+      "like_count": 21429
+    },
+    {
+      "id": "f8j99y64CDQ",
+      "title": "DEDDY CORBUZIER: GAK ADA ORANG NGEGYM BUAT KESEHATAN! \"TAI KUCING!” - PODCAST BAHLUL",
+      "channel": "NOICE",
+      "channel_id": "UCU7U3fcM-PQs39jFSj5pVMg",
+      "published_at": "2026-10-19T12:21:00Z",
+      "duration_seconds": 4895,
+      "view_count": 2680102,
+      "like_count": 26167
+    },
+    {
+      "id": "Kc59APuR06s",
+      "title": "Grind Boys  Eps. 289 - Suguryaga Insomnia",
+      "channel": "Gofar Hilman",
+      "channel_id": "UCxLyVB3oV_aOLIouyfW7HUQ",
+      "published_at": "2026-10-21T14:00:16Z",
+      "duration_seconds": 4114,
+      "view_count": 2653761,
+      "like_count": 22576
     },
     {
       "id": "Zr-YMX2QoVA",
@@ -462,8 +292,18 @@
       "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
       "published_at": "2026-10-28T14:34:07Z",
       "duration_seconds": 5775,
-      "view_count": 2575811,
-      "like_count": 26935
+      "view_count": 2591643,
+      "like_count": 26984
+    },
+    {
+      "id": "qa31tANX0tU",
+      "title": "Inside America's Most Secret Base | Aircraft, Testing, Secrecy  | Annie Jacobsen | FO581 Raj Shamani",
+      "channel": "Raj Shamani",
+      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
+      "published_at": "2026-10-29T15:39:05Z",
+      "duration_seconds": 11403,
+      "view_count": 2581892,
+      "like_count": 16012
     },
     {
       "id": "4WKrKH5IqJc",
@@ -472,18 +312,8 @@
       "channel_id": "UC5kyULWIngxMEeXsivTydLQ",
       "published_at": "2026-10-21T10:03:26Z",
       "duration_seconds": 3036,
-      "view_count": 2551670,
-      "like_count": 15483
-    },
-    {
-      "id": "k-NpZntHGxs",
-      "title": "\"I Chased Them For 11 Miles Shooting At Them\" - UFC Fighter on Hunting Down His Son’s Predator",
-      "channel": "Shawn Ryan Clips",
-      "channel_id": "UC1vUksRWfEfd6V4pPDIQ0jw",
-      "published_at": "2026-10-29T18:00:02Z",
-      "duration_seconds": 910,
-      "view_count": 2445632,
-      "like_count": 24712
+      "view_count": 2576200,
+      "like_count": 15569
     },
     {
       "id": "WB8S0jcMQno",
@@ -492,18 +322,18 @@
       "channel_id": "UCrI6c17u5Fvrf2mFDOAhRFQ",
       "published_at": "2026-11-03T10:00:13Z",
       "duration_seconds": 3752,
-      "view_count": 2386129,
-      "like_count": 15932
+      "view_count": 2533498,
+      "like_count": 16393
     },
     {
-      "id": "yi-AJd7ygHY",
-      "title": "Unplugged ft. Pawan Jallad | Muskan Rastogi & Sahil | Nirbhaya Case | Blue Drum Case| Saurabh Rajput",
-      "channel": "Shubhankar Mishra ",
-      "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
-      "published_at": "2026-10-15T15:08:02Z",
-      "duration_seconds": 4708,
-      "view_count": 2385211,
-      "like_count": 15293
+      "id": "k-NpZntHGxs",
+      "title": "\"I Chased Them For 11 Miles Shooting At Them\" - UFC Fighter on Hunting Down His Son’s Predator",
+      "channel": "Shawn Ryan Clips",
+      "channel_id": "UC1vUksRWfEfd6V4pPDIQ0jw",
+      "published_at": "2026-10-29T18:00:02Z",
+      "duration_seconds": 910,
+      "view_count": 2532531,
+      "like_count": 25193
     },
     {
       "id": "yV0NGj95GhI",
@@ -512,28 +342,8 @@
       "channel_id": "UCUK49UvmYWYLiB7_bZFuFZQ",
       "published_at": "2026-10-25T00:45:05Z",
       "duration_seconds": 4114,
-      "view_count": 2363922,
-      "like_count": 21143
-    },
-    {
-      "id": "sQ8MX1j6sUU",
-      "title": "Trisha & Moses Address Ethan & Hila Klein For the First Time... | Just Trish Ep. 323",
-      "channel": "JUST TRISH PODCAST",
-      "channel_id": "UCy2A0jf5lYUYQxi7iKHmHhQ",
-      "published_at": "2026-10-27T14:00:11Z",
-      "duration_seconds": 7298,
-      "view_count": 2346370,
-      "like_count": 62987
-    },
-    {
-      "id": "LmDWj47akGw",
-      "title": "Martinez's United Outburst, Gerrard’s Wirtz Warning & City’s Title Future | Stick to Football EP 153",
-      "channel": "The Overlap",
-      "channel_id": "UCjXIw1GlwaY1IzpW_jN9iCQ",
-      "published_at": "2026-10-15T07:00:00Z",
-      "duration_seconds": 5261,
-      "view_count": 2330722,
-      "like_count": 15705
+      "view_count": 2377449,
+      "like_count": 21246
     },
     {
       "id": "NJ04KISduB8",
@@ -542,18 +352,28 @@
       "channel_id": "UCDE454ZKSWksDbQDw7pyxUg",
       "published_at": "2026-10-30T12:30:21Z",
       "duration_seconds": 3382,
-      "view_count": 2327043,
-      "like_count": 15813
+      "view_count": 2376504,
+      "like_count": 16000
     },
     {
-      "id": "STtjPJFWJnA",
-      "title": "The Ethan Klein Files Somehow Got Worse",
-      "channel": "American Redact",
-      "channel_id": "UCsLGW4mXzWqvtityp1T6CKQ",
-      "published_at": "2026-10-28T19:00:20Z",
-      "duration_seconds": 1520,
-      "view_count": 2315357,
-      "like_count": 23983
+      "id": "sQ8MX1j6sUU",
+      "title": "Trisha & Moses Address Ethan & Hila Klein For the First Time... | Just Trish Ep. 323",
+      "channel": "JUST TRISH PODCAST",
+      "channel_id": "UCy2A0jf5lYUYQxi7iKHmHhQ",
+      "published_at": "2026-10-27T14:00:11Z",
+      "duration_seconds": 7298,
+      "view_count": 2352030,
+      "like_count": 63063
+    },
+    {
+      "id": "NXGqKIIXUgQ",
+      "title": "PWK - CUMAN GJLS YANG BERHASIL NGAJAK GRINDBOYS MAIN FILM",
+      "channel": "HAS Creative",
+      "channel_id": "UCio3ArXLJ_Mo8FLLGVzIC5A",
+      "published_at": "2026-10-31T12:00:34Z",
+      "duration_seconds": 4993,
+      "view_count": 2302678,
+      "like_count": 15594
     },
     {
       "id": "_VVyPCpRCNg",
@@ -562,8 +382,8 @@
       "channel_id": "UC1vUksRWfEfd6V4pPDIQ0jw",
       "published_at": "2026-10-19T22:00:29Z",
       "duration_seconds": 809,
-      "view_count": 2293814,
-      "like_count": 32643
+      "view_count": 2294761,
+      "like_count": 32670
     },
     {
       "id": "Feuyd0BHKEQ",
@@ -572,8 +392,8 @@
       "channel_id": "UCjkSqbf8E4MybdYmfhlW10A",
       "published_at": "2026-10-21T16:00:23Z",
       "duration_seconds": 10468,
-      "view_count": 2281828,
-      "like_count": 45623
+      "view_count": 2288549,
+      "like_count": 45734
     },
     {
       "id": "MNnQ-V8TOpY",
@@ -582,8 +402,18 @@
       "channel_id": "UC3BM4LVGTrG5OER815AM7Bg",
       "published_at": "2026-10-26T04:00:56Z",
       "duration_seconds": 33791,
-      "view_count": 2205484,
-      "like_count": 80211
+      "view_count": 2205617,
+      "like_count": 80208
+    },
+    {
+      "id": "8jGeoV2bR8k",
+      "title": "AMEENA SPILL KELAKUAN ATTA & AUREL DI RUMAH! Anak 4 Tahun Emang Gak ADA FILTER!",
+      "channel": "Daging Talk - (NAT) Need A Talk",
+      "channel_id": "UC16gqbUcn1tj7g0I8dX0ruA",
+      "published_at": "2026-11-02T09:01:35Z",
+      "duration_seconds": 2740,
+      "view_count": 2183416,
+      "like_count": 33892
     },
     {
       "id": "kSd53HhSbpQ",
@@ -592,8 +422,8 @@
       "channel_id": "UCpiJVUGKZXWW1HYCTS_d0EA",
       "published_at": "2026-10-15T02:36:35Z",
       "duration_seconds": 886,
-      "view_count": 2140496,
-      "like_count": 32045
+      "view_count": 2167268,
+      "like_count": 32450
     },
     {
       "id": "BOiDLE3oKe4",
@@ -602,7 +432,7 @@
       "channel_id": "UClk3PT3G11Qh7Pyf-BvyG5g",
       "published_at": "2026-10-22T10:25:02Z",
       "duration_seconds": 1018,
-      "view_count": 2124516,
+      "view_count": 2152813,
       "like_count": null
     },
     {
@@ -612,18 +442,8 @@
       "channel_id": "UCpZQRFkfHjMKAJYQUyER0BA",
       "published_at": "2026-10-14T14:30:10Z",
       "duration_seconds": 918,
-      "view_count": 2121796,
-      "like_count": 18000
-    },
-    {
-      "id": "lgBLqo8TwgE",
-      "title": "Death Investigator: What Dead Bodies Reveal About Murder | Barbara Butcher | FO575 Raj Shamani",
-      "channel": "Raj Shamani",
-      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
-      "published_at": "2026-10-15T15:39:04Z",
-      "duration_seconds": 7826,
-      "view_count": 2117530,
-      "like_count": 27590
+      "view_count": 2122948,
+      "like_count": 18035
     },
     {
       "id": "iU-7L8Cft6M",
@@ -632,8 +452,8 @@
       "channel_id": "UC7BXdXFxVgMPKmBeDgx2QrQ",
       "published_at": "2026-10-15T13:00:11Z",
       "duration_seconds": 12775,
-      "view_count": 2109061,
-      "like_count": 74328
+      "view_count": 2111343,
+      "like_count": 74356
     },
     {
       "id": "9rQsJ_DbfVg",
@@ -642,48 +462,8 @@
       "channel_id": "UCTFVgK2cp9t5IJslBKoqSbQ",
       "published_at": "2026-10-19T16:00:24Z",
       "duration_seconds": 7814,
-      "view_count": 2076191,
-      "like_count": 40555
-    },
-    {
-      "id": "lJNl226Xpfs",
-      "title": "FLÁVIO BOLSONARO FOGE APÓS ELEIÇÃO - RENAN SANTOS, FELIPE MOURA BRASIL E IGOR 3K",
-      "channel": "Flow Podcast",
-      "channel_id": "UC4ncvgh5hFr5O83MH7-jRJg",
-      "published_at": "2026-10-28T03:02:58Z",
-      "duration_seconds": 10299,
-      "view_count": 2074404,
-      "like_count": 72111
-    },
-    {
-      "id": "kJLS8t2mUKg",
-      "title": "IGUN: \"GUE BELUM JADI APA-APA, DAVE HENDRIK UDAH PAKAI JAM ROLEX\" | BUTIK HAJI IGUN",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-10-20T12:00:09Z",
-      "duration_seconds": 3112,
-      "view_count": 2070830,
-      "like_count": 10389
-    },
-    {
-      "id": "-XIpMJBet1c",
-      "title": "JOB DESK UTAMA YAJUJ DAN MAJUJ ADALAH MEMBAKAR HUTAN?! | MEJA MONGOL",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-10-22T12:00:10Z",
-      "duration_seconds": 3350,
-      "view_count": 2068950,
-      "like_count": 19527
-    },
-    {
-      "id": "qi5ZUH3WKe8",
-      "title": "Crushes raros 😍🫠 l Las Alucines l 03x19 [Me dio colitis este episodio 🥴]",
-      "channel": "Las Alucines",
-      "channel_id": "UCYF9YCqlD7SUen2RalDasNg",
-      "published_at": "2026-10-20T01:00:06Z",
-      "duration_seconds": 5635,
-      "view_count": 2061963,
-      "like_count": 38678
+      "view_count": 2104239,
+      "like_count": 41039
     },
     {
       "id": "wllFRT0BRTY",
@@ -692,58 +472,38 @@
       "channel_id": "UCzJXNzqz6VMHSNInQt_7q6w",
       "published_at": "2026-11-02T20:37:49Z",
       "duration_seconds": 790,
-      "view_count": 2035592,
-      "like_count": 25498
+      "view_count": 2100492,
+      "like_count": 25997
     },
     {
-      "id": "xRIw-ZmDzj4",
-      "title": "La crise est historique : j'ai interrogé Emmanuel Macron",
-      "channel": "HugoDécrypte - Grands formats",
-      "channel_id": "UCUo1RqYV8tGjV38sQ8S5p9A",
-      "published_at": "2026-10-28T21:21:07Z",
-      "duration_seconds": 4875,
-      "view_count": 1972200,
-      "like_count": 30592
+      "id": "kJLS8t2mUKg",
+      "title": "IGUN: \"GUE BELUM JADI APA-APA, DAVE HENDRIK UDAH PAKAI JAM ROLEX\" | BUTIK HAJI IGUN",
+      "channel": "C8 Podcast",
+      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
+      "published_at": "2026-10-20T12:00:09Z",
+      "duration_seconds": 3112,
+      "view_count": 2094764,
+      "like_count": 10419
     },
     {
-      "id": "dHiut0fysw0",
-      "title": "Josh Brolin | This Past Weekend w/ Theo Von #690",
-      "channel": "Theo Von",
-      "channel_id": "UC5AQEUAwCh1sGDvkQtkDWUQ",
-      "published_at": "2026-10-13T12:00:13Z",
-      "duration_seconds": 5853,
-      "view_count": 1969831,
-      "like_count": 30247
+      "id": "-XIpMJBet1c",
+      "title": "JOB DESK UTAMA YAJUJ DAN MAJUJ ADALAH MEMBAKAR HUTAN?! | MEJA MONGOL",
+      "channel": "C8 Podcast",
+      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
+      "published_at": "2026-10-22T12:00:10Z",
+      "duration_seconds": 3350,
+      "view_count": 2077010,
+      "like_count": 19557
     },
     {
-      "id": "rn6iW7XDEHc",
-      "title": "Joe Rogan Experience #2570 - Mystery Boys",
-      "channel": "PowerfulJRE",
-      "channel_id": "UCzQUP1qoWDoEbmsQxvdjxgQ",
-      "published_at": "2026-10-23T17:00:23Z",
-      "duration_seconds": 9822,
-      "view_count": 1957120,
-      "like_count": 18354
-    },
-    {
-      "id": "7CosTO5mfKE",
-      "title": "Joe Rogan & Jimmy Carr Reveal What Jeremy Clarkson Is REALLY Like",
-      "channel": "Joe Blow",
-      "channel_id": "UC_MyeFKqSUGBbgB6CZIMvSA",
-      "published_at": "2026-10-28T23:45:35Z",
-      "duration_seconds": 512,
-      "view_count": 1954332,
-      "like_count": 9357
-    },
-    {
-      "id": "Vr_PLEvNH8I",
-      "title": "Mengapa Partai Politik Belum Bulat Memakzulkan Gibran Setelah Putusan MK | Bocor Alus Politik",
-      "channel": "Tempodotco",
-      "channel_id": "UC3QRoNY-nYDTNSv-1dR0P-g",
-      "published_at": "2026-10-14T13:00:11Z",
-      "duration_seconds": 1950,
-      "view_count": 1953368,
-      "like_count": 9962
+      "id": "lJNl226Xpfs",
+      "title": "FLÁVIO BOLSONARO FOGE APÓS ELEIÇÃO - RENAN SANTOS, FELIPE MOURA BRASIL E IGOR 3K",
+      "channel": "Flow Podcast",
+      "channel_id": "UC4ncvgh5hFr5O83MH7-jRJg",
+      "published_at": "2026-10-28T03:02:58Z",
+      "duration_seconds": 10299,
+      "view_count": 2076858,
+      "like_count": 72138
     },
     {
       "id": "WZAyUZWiP5I",
@@ -752,8 +512,38 @@
       "channel_id": "UCYeySNdFnZg7vfGGPCR9ePw",
       "published_at": "2026-11-02T11:30:39Z",
       "duration_seconds": 5102,
-      "view_count": 1953335,
-      "like_count": 21210
+      "view_count": 2031241,
+      "like_count": 21519
+    },
+    {
+      "id": "7CosTO5mfKE",
+      "title": "Joe Rogan & Jimmy Carr Reveal What Jeremy Clarkson Is REALLY Like",
+      "channel": "Joe Blow",
+      "channel_id": "UC_MyeFKqSUGBbgB6CZIMvSA",
+      "published_at": "2026-10-28T23:45:35Z",
+      "duration_seconds": 512,
+      "view_count": 1991923,
+      "like_count": 9481
+    },
+    {
+      "id": "xRIw-ZmDzj4",
+      "title": "La crise est historique : j'ai interrogé Emmanuel Macron",
+      "channel": "HugoDécrypte - Grands formats",
+      "channel_id": "UCUo1RqYV8tGjV38sQ8S5p9A",
+      "published_at": "2026-10-28T21:21:07Z",
+      "duration_seconds": 4875,
+      "view_count": 1985352,
+      "like_count": 30700
+    },
+    {
+      "id": "K0H5wYDJJjo",
+      "title": "KEJAR SETORAN - UJIAN AWAL KARIR GANTA.. KETIPU BELI IPHONE DENGAN HARGA 2 JUTA!",
+      "channel": "Tuah Kreasi",
+      "channel_id": "UCcB5cXUCggZGnVzR_84Xyag",
+      "published_at": "2026-10-31T10:00:33Z",
+      "duration_seconds": 4172,
+      "view_count": 1981687,
+      "like_count": 28974
     },
     {
       "id": "8ebOUNXWgr0",
@@ -762,8 +552,18 @@
       "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
       "published_at": "2026-10-29T12:00:09Z",
       "duration_seconds": 2873,
-      "view_count": 1932939,
-      "like_count": 14451
+      "view_count": 1966943,
+      "like_count": 14558
+    },
+    {
+      "id": "rn6iW7XDEHc",
+      "title": "Joe Rogan Experience #2570 - Mystery Boys",
+      "channel": "PowerfulJRE",
+      "channel_id": "UCzQUP1qoWDoEbmsQxvdjxgQ",
+      "published_at": "2026-10-23T17:00:23Z",
+      "duration_seconds": 9822,
+      "view_count": 1961047,
+      "like_count": 18380
     },
     {
       "id": "TCbIVkttJmc",
@@ -772,18 +572,8 @@
       "channel_id": "UCWZoPPW7u2I4gZfhJBZ6NqQ",
       "published_at": "2026-10-27T00:44:21Z",
       "duration_seconds": 8642,
-      "view_count": 1931183,
-      "like_count": 79434
-    },
-    {
-      "id": "U3DTDKOii50",
-      "title": "Unplugged FT. Gulam Sarwar | Indian Muslims: The Hard Questions | BJP, Islam & Madrasas",
-      "channel": "Shubhankar Mishra ",
-      "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
-      "published_at": "2026-10-24T14:07:54Z",
-      "duration_seconds": 7142,
-      "view_count": 1921131,
-      "like_count": 20605
+      "view_count": 1934531,
+      "like_count": 79470
     },
     {
       "id": "yjkkEcXf2vk",
@@ -792,18 +582,18 @@
       "channel_id": "UChFnGuCZ_Fb4DhbxRm9N9UQ",
       "published_at": "2026-10-13T09:00:20Z",
       "duration_seconds": 2923,
-      "view_count": 1908464,
-      "like_count": 1774
+      "view_count": 1908621,
+      "like_count": 1776
     },
     {
-      "id": "gzUjw3jNB88",
-      "title": "Bisa Ga Sih Pejabat Ga Sebodoh ini Menanggapi  Karhutla? - Felix Siauw",
-      "channel": "Felix Siauw",
-      "channel_id": "UCOO6NvLCJxdDi36SWF1dVXA",
-      "published_at": "2026-10-15T11:45:30Z",
-      "duration_seconds": 1117,
-      "view_count": 1880044,
-      "like_count": 25349
+      "id": "jx04LbMagJQ",
+      "title": "EP 18: Get Real - Official podcast of Magicbricks Ft. Payas Agarwal, Director, Great Value Realty",
+      "channel": "MBTV by Magicbricks",
+      "channel_id": "UCRtEWt48CRchY1X_5CWSrPw",
+      "published_at": "2026-10-30T12:18:37Z",
+      "duration_seconds": 3028,
+      "view_count": 1887021,
+      "like_count": 183
     },
     {
       "id": "XhxqL5I6zeg",
@@ -812,18 +602,8 @@
       "channel_id": "UCY99TnBJ8xyat2lpeN_hcEA",
       "published_at": "2026-10-12T11:00:18Z",
       "duration_seconds": 5114,
-      "view_count": 1876567,
-      "like_count": 25675
-    },
-    {
-      "id": "bcpQkvBCACw",
-      "title": "Why We Haven’t Reached Superintelligence, with David Krakauer",
-      "channel": "StarTalk",
-      "channel_id": "UCqoAEDirJPjEUFcF2FklnBA",
-      "published_at": "2026-10-10T15:30:11Z",
-      "duration_seconds": 4670,
-      "view_count": 1871196,
-      "like_count": 25762
+      "view_count": 1880686,
+      "like_count": 25699
     },
     {
       "id": "0U_aks1-iAQ",
@@ -832,8 +612,8 @@
       "channel_id": "UCio3ArXLJ_Mo8FLLGVzIC5A",
       "published_at": "2026-10-24T12:00:10Z",
       "duration_seconds": 8062,
-      "view_count": 1865564,
-      "like_count": 14262
+      "view_count": 1873778,
+      "like_count": 14288
     },
     {
       "id": "odWGBwqYwSk",
@@ -842,8 +622,8 @@
       "channel_id": "UCv41ean41z5cRWdHiK5YvEw",
       "published_at": "2026-10-23T16:10:26Z",
       "duration_seconds": 1859,
-      "view_count": 1847206,
-      "like_count": 9470
+      "view_count": 1872820,
+      "like_count": 9541
     },
     {
       "id": "_A-h4JLTf6Q",
@@ -852,8 +632,8 @@
       "channel_id": "UCU7U3fcM-PQs39jFSj5pVMg",
       "published_at": "2026-10-12T10:00:39Z",
       "duration_seconds": 4006,
-      "view_count": 1827755,
-      "like_count": 11965
+      "view_count": 1835114,
+      "like_count": 11988
     },
     {
       "id": "1yhcblSSKZg",
@@ -862,18 +642,8 @@
       "channel_id": "UCn_ewC0UzQLJuyKs5JyS4kw",
       "published_at": "2026-10-09T13:00:05Z",
       "duration_seconds": 2136,
-      "view_count": 1819622,
-      "like_count": 14236
-    },
-    {
-      "id": "UAhbrJZxLdQ",
-      "title": "PENUH HARU‼️ RICIS SUDAH IKHLAS KALAU MOANA PILIH ...",
-      "channel": "CURHAT BANG Denny Sumargo",
-      "channel_id": "UCapUP1gKtGuhEkyaaHwxlpw",
-      "published_at": "2026-10-19T12:00:23Z",
-      "duration_seconds": 3203,
-      "view_count": 1815508,
-      "like_count": 12065
+      "view_count": 1825986,
+      "like_count": 14273
     },
     {
       "id": "5-BdF3thmQA",
@@ -882,8 +652,48 @@
       "channel_id": "UCiFM5EHunF5tL0pMR6Pooaw",
       "published_at": "2026-10-27T13:15:26Z",
       "duration_seconds": 3135,
-      "view_count": 1814462,
-      "like_count": 14503
+      "view_count": 1824564,
+      "like_count": 14546
+    },
+    {
+      "id": "UAhbrJZxLdQ",
+      "title": "PENUH HARU‼️ RICIS SUDAH IKHLAS KALAU MOANA PILIH ...",
+      "channel": "CURHAT BANG Denny Sumargo",
+      "channel_id": "UCapUP1gKtGuhEkyaaHwxlpw",
+      "published_at": "2026-10-19T12:00:23Z",
+      "duration_seconds": 3203,
+      "view_count": 1821050,
+      "like_count": 12078
+    },
+    {
+      "id": "uDqR4t5N84o",
+      "title": "Nate Silver On What the Polls Say — And What His Gut’s Telling Him | The Ezra Klein Show",
+      "channel": "The Ezra Klein Show",
+      "channel_id": "UCnxuOd8obvLLtf5_-YKFbiQ",
+      "published_at": "2026-10-27T15:00:12Z",
+      "duration_seconds": 3548,
+      "view_count": 1806639,
+      "like_count": 12339
+    },
+    {
+      "id": "XE6HOTeKG9Q",
+      "title": "Pierogi - Shawn Ryan Calls Scammers and Destroys Their Computer LIVE | SRS #347",
+      "channel": "Shawn Ryan Show",
+      "channel_id": "UCkoujZQZatbqy4KGcgjpVxQ",
+      "published_at": "2026-10-12T17:30:04Z",
+      "duration_seconds": 13624,
+      "view_count": 1805270,
+      "like_count": 25913
+    },
+    {
+      "id": "XWGSXwXqjCo",
+      "title": "CHAMAQUITAS BIEN I FT. LUPITA VILLALOBOS",
+      "channel": "Jair Sánchez",
+      "channel_id": "UCP_Mc642HKGfYmtJLdf3kDQ",
+      "published_at": "2026-11-06T05:05:17Z",
+      "duration_seconds": 4557,
+      "view_count": 1801193,
+      "like_count": 63370
     },
     {
       "id": "tcC9HNGUQ_Y",
@@ -892,68 +702,8 @@
       "channel_id": "UCm4eA46c6boHmPrD0Lp2iEg",
       "published_at": "2026-10-14T11:02:25Z",
       "duration_seconds": 848,
-      "view_count": 1797754,
-      "like_count": 25355
-    },
-    {
-      "id": "Sus8oNMgwUE",
-      "title": "PWK - OTONG KOIL TERLALU ANEH BUAT JADI TEMEN NONGKRONGNYA GOFAR",
-      "channel": "HAS Creative",
-      "channel_id": "UCio3ArXLJ_Mo8FLLGVzIC5A",
-      "published_at": "2026-10-17T12:00:08Z",
-      "duration_seconds": 5962,
-      "view_count": 1785253,
-      "like_count": 13354
-    },
-    {
-      "id": "0FbzHpPRFjc",
-      "title": "The Wild Project #388 - Brais Moure | 10 Formas en las que la IA podría EXTERMINARNOS",
-      "channel": "The Wild Project",
-      "channel_id": "UCBYyJBCtCvgqA4NwtoPMwpQ",
-      "published_at": "2026-10-22T15:00:32Z",
-      "duration_seconds": 16559,
-      "view_count": 1782931,
-      "like_count": 19716
-    },
-    {
-      "id": "dxq-3pimV-E",
-      "title": "How Google Research Is Accelerating Scientific Discovery | The Google Research Podcast",
-      "channel": "Google Research",
-      "channel_id": "UCT-VzthVAM_4ohDdKa-BbXA",
-      "published_at": "2026-10-12T15:00:02Z",
-      "duration_seconds": 2929,
-      "view_count": 1771290,
-      "like_count": 446
-    },
-    {
-      "id": "XmQzj-pT45M",
-      "title": "LOE BUKA HP LOE SKRG, LIAT BAGIAN INI‼️ PRESIDEN DI SADAP... KITA⁉️",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-11-06T04:20:02Z",
-      "duration_seconds": 3267,
-      "view_count": 1767304,
-      "like_count": 19091
-    },
-    {
-      "id": "oq24RbfPWEY",
-      "title": "Pakistan ki number one mehngi tareen Shadi..",
-      "channel": "Imnews",
-      "channel_id": "UCWltSTQLfv3YTCEFH3weNtA",
-      "published_at": "2026-10-30T14:49:51Z",
-      "duration_seconds": 605,
-      "view_count": 1751695,
-      "like_count": 10781
-    },
-    {
-      "id": "PLRrmis9prI",
-      "title": "Papá de Antonella rompe el silencio “Silvana M4TØ a mi hija”",
-      "channel": "Conducta Delictiva",
-      "channel_id": "UC1hnBY1vAbEVqzxKiXZWv3Q",
-      "published_at": "2026-10-13T17:30:33Z",
-      "duration_seconds": 3726,
-      "view_count": 1744942,
-      "like_count": 24584
+      "view_count": 1799308,
+      "like_count": 25360
     },
     {
       "id": "GAYvkxf6Vmo",
@@ -962,8 +712,38 @@
       "channel_id": "UC0XWC2_UZMkXPGn4bj0R2Uw",
       "published_at": "2026-10-31T06:30:22Z",
       "duration_seconds": 1003,
-      "view_count": 1736406,
-      "like_count": 14620
+      "view_count": 1794774,
+      "like_count": 14773
+    },
+    {
+      "id": "0FbzHpPRFjc",
+      "title": "The Wild Project #388 - Brais Moure | 10 Formas en las que la IA podría EXTERMINARNOS",
+      "channel": "The Wild Project",
+      "channel_id": "UCBYyJBCtCvgqA4NwtoPMwpQ",
+      "published_at": "2026-10-22T15:00:32Z",
+      "duration_seconds": 16559,
+      "view_count": 1792720,
+      "like_count": 19818
+    },
+    {
+      "id": "dxq-3pimV-E",
+      "title": "How Google Research Is Accelerating Scientific Discovery | The Google Research Podcast",
+      "channel": "Google Research",
+      "channel_id": "UCT-VzthVAM_4ohDdKa-BbXA",
+      "published_at": "2026-10-12T15:00:02Z",
+      "duration_seconds": 2929,
+      "view_count": 1771451,
+      "like_count": 447
+    },
+    {
+      "id": "oq24RbfPWEY",
+      "title": "Pakistan ki number one mehngi tareen Shadi..",
+      "channel": "Imnews",
+      "channel_id": "UCWltSTQLfv3YTCEFH3weNtA",
+      "published_at": "2026-10-30T14:49:51Z",
+      "duration_seconds": 605,
+      "view_count": 1761358,
+      "like_count": 10830
     },
     {
       "id": "3ebSn49jqIw",
@@ -972,8 +752,8 @@
       "channel_id": "UC3uYvpJ3J6oNoNYRXfZXjEw",
       "published_at": "2026-10-28T03:55:49Z",
       "duration_seconds": 1509,
-      "view_count": 1733797,
-      "like_count": 43374
+      "view_count": 1735724,
+      "like_count": 43412
     },
     {
       "id": "UUKtux3KQHU",
@@ -982,8 +762,8 @@
       "channel_id": "UCxcDCeShqZWIUQuEo2iJSVA",
       "published_at": "2026-10-27T19:07:53Z",
       "duration_seconds": 7325,
-      "view_count": 1684272,
-      "like_count": 56522
+      "view_count": 1686907,
+      "like_count": 56561
     },
     {
       "id": "JByflci8EYE",
@@ -992,8 +772,8 @@
       "channel_id": "UCNAf1k0yIjyGu3k9BwAg3lg",
       "published_at": "2026-10-25T20:00:05Z",
       "duration_seconds": 2058,
-      "view_count": 1682749,
-      "like_count": 11112
+      "view_count": 1684750,
+      "like_count": 11115
     },
     {
       "id": "1BBYjOW-XoM",
@@ -1002,8 +782,8 @@
       "channel_id": "UCrI6c17u5Fvrf2mFDOAhRFQ",
       "published_at": "2026-10-27T10:00:15Z",
       "duration_seconds": 4592,
-      "view_count": 1663888,
-      "like_count": 11666
+      "view_count": 1682809,
+      "like_count": 11732
     },
     {
       "id": "tOVUEzQpyck",
@@ -1012,13 +792,233 @@
       "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
       "published_at": "2026-10-31T14:45:17Z",
       "duration_seconds": 8151,
-      "view_count": 1649132,
-      "like_count": 11959
+      "view_count": 1675319,
+      "like_count": 12033
+    },
+    {
+      "id": "VHgrce9VcRo",
+      "title": "Clues Ethan Klein Was CHEATING With Tamara + Hypocrisy - h3 podcast clips compilation",
+      "channel": "SHOCKMOUTHS SLOP",
+      "channel_id": "UCO3_vIPAdsVmH74j0eFd3OQ",
+      "published_at": "2026-10-24T05:24:53Z",
+      "duration_seconds": 1217,
+      "view_count": 1633954,
+      "like_count": 13297
+    },
+    {
+      "id": "uOJyMoZt3Q0",
+      "title": "Rajab Butt Is Back! | Brutal Podcast | Ep. 291 | Excuse Me with Ahmed Ali Butt",
+      "channel": "Ahmad Ali Butt",
+      "channel_id": "UChesaNka3fubnbdUGFWuk6w",
+      "published_at": "2026-10-16T14:00:00Z",
+      "duration_seconds": 3749,
+      "view_count": 1632457,
+      "like_count": 29500
+    },
+    {
+      "id": "FvbUoiusl14",
+      "title": "⁉️🔥 CHEPPUKUNE TIME OCHESINDIII | Ft. Dr. C.M. Parameshwara | Telugu Podcast | Raw Talks With Vk |",
+      "channel": "Raw Talks With VK",
+      "channel_id": "UCEW_Fg9lQ2VaS7DLVma01Cg",
+      "published_at": "2026-10-09T14:00:02Z",
+      "duration_seconds": 9307,
+      "view_count": 1623891,
+      "like_count": 7170
+    },
+    {
+      "id": "Cmq3dp0R7FA",
+      "title": "Jefri Nichol Udah Bosen Dikasih Peran Cowok Baik",
+      "channel": "MALAKA",
+      "channel_id": "UCbmCx2xsM1qfk5vyXE9UC8g",
+      "published_at": "2026-10-27T11:06:35Z",
+      "duration_seconds": 4437,
+      "view_count": 1603461,
+      "like_count": 10157
+    },
+    {
+      "id": "r8T98tDwh_g",
+      "title": "EP59. ¿Qué le importa ... a Aldo Rendón?",
+      "channel": "CAPI Pérez",
+      "channel_id": "UCty65avi7SZ48CmKkfmbRhw",
+      "published_at": "2026-10-27T12:00:36Z",
+      "duration_seconds": 5193,
+      "view_count": 1595428,
+      "like_count": 24929
+    },
+    {
+      "id": "CPbr1d9tHpM",
+      "title": "2027 में क्या होने वाला है?😳भविष्य मालिका की आखिरी भविष्यवाणी! | भविष्य मालिका Part 2 | Akshat Gupta",
+      "channel": "THE FACT-TREE",
+      "channel_id": "UCpZQRFkfHjMKAJYQUyER0BA",
+      "published_at": "2026-10-28T14:30:28Z",
+      "duration_seconds": 1105,
+      "view_count": 1591916,
+      "like_count": 19858
+    },
+    {
+      "id": "3sDzlv-VI2U",
+      "title": "Data Centers, Debt & the Risks of AI’s Finances w/ Ed Zitron | The Weekly Show with Jon Stewart",
+      "channel": "The Weekly Show with Jon Stewart",
+      "channel_id": "UCQlJ7XpBtiMLKNSd4RAJmRQ",
+      "published_at": "2026-10-28T18:04:53Z",
+      "duration_seconds": 5756,
+      "view_count": 1543536,
+      "like_count": 25045
+    },
+    {
+      "id": "NjK2igaQqqI",
+      "title": "If You Feel Lost in Life, Watch This | Vikas Divyakirti",
+      "channel": "Think with shamani ",
+      "channel_id": "UCutefLoF0e4gQ25oSIgkleQ",
+      "published_at": "2026-10-26T16:00:39Z",
+      "duration_seconds": 554,
+      "view_count": 1543059,
+      "like_count": 8355
+    },
+    {
+      "id": "lGF8FD-vKP4",
+      "title": "Physics Girl's Medical Mystery",
+      "channel": "KPBS Arts",
+      "channel_id": "UChuSvU_OSgDla8qE9wxlX3Q",
+      "published_at": "2026-10-22T22:00:04Z",
+      "duration_seconds": 286,
+      "view_count": 1532565,
+      "like_count": 23969
+    },
+    {
+      "id": "yabdiSeYytM",
+      "title": "Chinese military tried to cover it up | Campfire Stories with MrBallen",
+      "channel": "MrBallen",
+      "channel_id": "UCtPrkXdtCM5DACLufB9jbsA",
+      "published_at": "2026-10-30T18:00:13Z",
+      "duration_seconds": 1961,
+      "view_count": 1524002,
+      "like_count": 35113
+    },
+    {
+      "id": "co8xTePzQgw",
+      "title": "Witchcraft vs Christianity: Pastor & Warlock Debate (EP 014)",
+      "channel": "Let's Chop It Up Rich Podcast",
+      "channel_id": "UCCfx27F-SL6p53iRy9bKgdQ",
+      "published_at": "2026-10-10T19:00:16Z",
+      "duration_seconds": 9118,
+      "view_count": 1521783,
+      "like_count": 29909
+    },
+    {
+      "id": "fPQyHFus7CM",
+      "title": "4BU5Ó de nuestras hijas de 8 y 12 años: Ayudé a la Policía a capturarlo antes de que se escapara",
+      "channel": "Más Allá del Silencio Podcast",
+      "channel_id": "UCro1VNb7hqX38TvyUN64JkQ",
+      "published_at": "2026-10-15T17:00:02Z",
+      "duration_seconds": 2665,
+      "view_count": 1511348,
+      "like_count": 14690
+    },
+    {
+      "id": "4intZzYWOxs",
+      "title": "Habla Juan Carlos Suárez, condenado a 37 años por el crimen de Jaime Esteban Moreno",
+      "channel": "Conducta Delictiva",
+      "channel_id": "UC1hnBY1vAbEVqzxKiXZWv3Q",
+      "published_at": "2026-10-30T17:00:37Z",
+      "duration_seconds": 4282,
+      "view_count": 1495078,
+      "like_count": 19816
+    },
+    {
+      "id": "btknAGmBiD4",
+      "title": "What Hundreds of Focus Groups With Trump Voters Revealed | The Ezra Klein Show",
+      "channel": "The Ezra Klein Show",
+      "channel_id": "UCnxuOd8obvLLtf5_-YKFbiQ",
+      "published_at": "2026-10-23T15:00:29Z",
+      "duration_seconds": 4319,
+      "view_count": 1478624,
+      "like_count": 19013
+    },
+    {
+      "id": "MNCHAAupzBo",
+      "title": "GOD KA PROOF - Quantum Science Explained In Hindi | Time Travel, AI & Reality | Sufiyan A On TRS",
+      "channel": "Ranveer Allahbadia",
+      "channel_id": "UCneyi-aYq4VIBYIAQgWmk_w",
+      "published_at": "2026-10-21T11:43:03Z",
+      "duration_seconds": 5178,
+      "view_count": 1465825,
+      "like_count": 21840
+    },
+    {
+      "id": "Put_ebpxQXU",
+      "title": "Cardi B on the Moment She Knew Her Marriage Was Over",
+      "channel": "Jay Shetty Podcast",
+      "channel_id": "UCbk_QsfaFZG6PdQeCvaYXJQ",
+      "published_at": "2026-10-15T15:30:06Z",
+      "duration_seconds": 2844,
+      "view_count": 1448197,
+      "like_count": 20857
+    },
+    {
+      "id": "CYCNhPgfA-g",
+      "title": "Abdul El-Sayed: America's First Muslim Senator",
+      "channel": "Hasan Minhaj",
+      "channel_id": "UCarEovlrD9QY-fy-Z6apIDQ",
+      "published_at": "2026-10-28T12:30:04Z",
+      "duration_seconds": 4001,
+      "view_count": 1433706,
+      "like_count": 28178
+    },
+    {
+      "id": "qDdT7ke1ZSc",
+      "title": "NIATNYA DUO BAHLUL NGE-REM TRETAN... EH MALAH IKUT NYEBUR JURANG! - PODCAST BAHLUL",
+      "channel": "NOICE",
+      "channel_id": "UCU7U3fcM-PQs39jFSj5pVMg",
+      "published_at": "2026-10-26T11:03:04Z",
+      "duration_seconds": 4281,
+      "view_count": 1430925,
+      "like_count": 11606
+    },
+    {
+      "id": "-GgVdKIOf_c",
+      "title": "The Leaked Video, Fox News & The Breakfast Club: Philip Anthony Mitchell Responds | Funky Friday",
+      "channel": "Cam Newton",
+      "channel_id": "UCyKV3Zl7AKVj7ikyOlcfZTQ",
+      "published_at": "2026-10-30T16:02:48Z",
+      "duration_seconds": 10293,
+      "view_count": 1398536,
+      "like_count": 27344
+    },
+    {
+      "id": "oNi1_U_HD5Q",
+      "title": "🚨Top UK General WARNS of WORLD WAR 3…",
+      "channel": "MeidasTouch",
+      "channel_id": "UC9r9HYFxEQOBXSopFS61ZWg",
+      "published_at": "2026-10-18T20:00:20Z",
+      "duration_seconds": 957,
+      "view_count": 1397038,
+      "like_count": 30898
+    },
+    {
+      "id": "WK6E5HWbzDg",
+      "title": "Mi FAMILIA me hizo BRUJERÍA | Relatos de BRUJERÍA REALES",
+      "channel": "Podcast Extra Anormal",
+      "channel_id": "UC-e25eS3oTJMFw-eHRCol3g",
+      "published_at": "2026-10-12T15:00:19Z",
+      "duration_seconds": 5113,
+      "view_count": 1383254,
+      "like_count": 27911
+    },
+    {
+      "id": "EXCvg7VrAXo",
+      "title": "El lado OSCURO del DÍA DE MUERTOS | Relatos PARANORMALES REALES",
+      "channel": "Podcast Extra Anormal",
+      "channel_id": "UC-e25eS3oTJMFw-eHRCol3g",
+      "published_at": "2026-11-02T15:00:20Z",
+      "duration_seconds": 6113,
+      "view_count": 1378686,
+      "like_count": 26582
     }
   ],
   "publish_date_span": {
-    "min": "2026-10-08T12:00:01Z",
-    "max": "2026-11-06T04:20:02Z"
+    "min": "2026-10-09T01:22:32Z",
+    "max": "2026-11-06T05:05:17Z"
   },
   "query": "podcast"
 }

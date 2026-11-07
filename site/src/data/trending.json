@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T10:19:17Z",
+  "generated_at": "2026-11-07T23:10:16Z",
   "window_days": 30,
   "exclude_shorts_under_seconds": 60,
   "window_size_days": 6,
   "windows": 5,
   "candidates_fetched": 500,
   "dropped_short": 0,
-  "dropped_vertical": 7,
+  "dropped_vertical": 15,
   "landscape_only": true,
   "video_duration_buckets": [
     "medium",
@@ -22,8 +22,18 @@
       "channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
       "published_at": "2026-10-31T16:00:00Z",
       "duration_seconds": 1348,
-      "view_count": 77663762,
-      "like_count": 1111684
+      "view_count": 80325320,
+      "like_count": 1131676
+    },
+    {
+      "id": "4rPcOxl-cyM",
+      "title": "Dard-E-Dil Dard-E-Jigar | Gunmaaster G9| Emraan, Genelia, Aditya | Himesh | Akasa| Sonia| Deepak M",
+      "channel": "Himesh Reshammiya Melodies",
+      "channel_id": "UC9ftt2QxQewlpWaJ3HvemaQ",
+      "published_at": "2026-10-30T07:00:20Z",
+      "duration_seconds": 282,
+      "view_count": 66927307,
+      "like_count": 194596
     },
     {
       "id": "XO1h5G6xytU",
@@ -32,38 +42,8 @@
       "channel_id": "UC9TO_oo4c_LrOiKNaY6aysA",
       "published_at": "2026-10-30T04:00:11Z",
       "duration_seconds": 248,
-      "view_count": 36872636,
-      "like_count": 422567
-    },
-    {
-      "id": "gsZauX8gwxo",
-      "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
-      "channel": "OliviaRodrigoVEVO",
-      "channel_id": "UCxE5jEls-T0QtlTHT8lI1lw",
-      "published_at": "2026-10-16T00:00:10Z",
-      "duration_seconds": 293,
-      "view_count": 25801910,
-      "like_count": 850858
-    },
-    {
-      "id": "rsNhWkC4neE",
-      "title": "IVE 아이브 'Looks Can Kill' MV",
-      "channel": "STARSHIP",
-      "channel_id": "UCYDmx2Sfpnaxg488yBpZIGg",
-      "published_at": "2026-10-19T09:00:05Z",
-      "duration_seconds": 243,
-      "view_count": 25204552,
-      "like_count": 361261
-    },
-    {
-      "id": "hthtghc4xmI",
-      "title": "Yeraltı 20. Bölüm",
-      "channel": "Yeraltı",
-      "channel_id": "UC9hZO00do4SZHaJRU-xkyEg",
-      "published_at": "2026-10-28T20:55:58Z",
-      "duration_seconds": 8341,
-      "view_count": 23219295,
-      "like_count": 176831
+      "view_count": 37876539,
+      "like_count": 436861
     },
     {
       "id": "26P1KyvrmjI",
@@ -72,8 +52,8 @@
       "channel_id": "UCY1kMZp36IQSyNx_9h4mpCg",
       "published_at": "2026-10-24T13:00:22Z",
       "duration_seconds": 1734,
-      "view_count": 21390926,
-      "like_count": 233809
+      "view_count": 21738750,
+      "like_count": 235279
     },
     {
       "id": "lpB3nMC2iZg",
@@ -82,8 +62,28 @@
       "channel_id": "UCIjLRyywnG8olYXAEVYGYgQ",
       "published_at": "2026-10-23T12:31:13Z",
       "duration_seconds": 4319,
-      "view_count": 20539923,
-      "like_count": 155052
+      "view_count": 20736986,
+      "like_count": 155647
+    },
+    {
+      "id": "k178PJ6DfII",
+      "title": "FULL REPLAY (English): Inter Kashi FC vs FC Goa (1-2) | MG ISL 2026-27",
+      "channel": "MG Indian Super League",
+      "channel_id": "UCJk-aQ7NZtqYtpcqKDt_vZg",
+      "published_at": "2026-11-01T16:13:20Z",
+      "duration_seconds": 8293,
+      "view_count": 20553865,
+      "like_count": 10185
+    },
+    {
+      "id": "JoU2xoFhB-U",
+      "title": "Pati Brahmachari | Full Episode 455 | 30 Oct 2026 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-30T14:00:01Z",
+      "duration_seconds": 1350,
+      "view_count": 20330345,
+      "like_count": 281899
     },
     {
       "id": "ud2GvJUjBYs",
@@ -92,18 +92,8 @@
       "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
       "published_at": "2026-10-31T14:00:24Z",
       "duration_seconds": 1350,
-      "view_count": 19193185,
-      "like_count": 273486
-    },
-    {
-      "id": "9OSuhIHrVgI",
-      "title": "Surviving 24 Hours In My Pool",
-      "channel": "Jordan Matter",
-      "channel_id": "UCKaCalz5N5ienIbfPzEbYuA",
-      "published_at": "2026-10-24T14:00:08Z",
-      "duration_seconds": 1560,
-      "view_count": 18938679,
-      "like_count": 128693
+      "view_count": 19377078,
+      "like_count": 274704
     },
     {
       "id": "3IVslEdL6aQ",
@@ -112,8 +102,18 @@
       "channel_id": "UCZzvDDvaYti8Dd8bLEiSoyQ",
       "published_at": "2026-10-30T16:00:12Z",
       "duration_seconds": 261,
-      "view_count": 18360212,
-      "like_count": 179510
+      "view_count": 19050158,
+      "like_count": 182991
+    },
+    {
+      "id": "a_CoBY7PkPg",
+      "title": "Daha 17 | 23. Bölüm",
+      "channel": "Daha 17",
+      "channel_id": "UC9qIbva82rrHzSM1kI7Cb6g",
+      "published_at": "2026-11-01T20:45:25Z",
+      "duration_seconds": 9604,
+      "view_count": 17772421,
+      "like_count": 228462
     },
     {
       "id": "93j1fDGi_-8",
@@ -122,8 +122,8 @@
       "channel_id": "UCTQVIXvcHrR9jYoJ6qaBAow",
       "published_at": "2026-10-13T09:55:16Z",
       "duration_seconds": 243,
-      "view_count": 17301693,
-      "like_count": 182581
+      "view_count": 17499457,
+      "like_count": 183634
     },
     {
       "id": "SWzfm9PED6s",
@@ -132,18 +132,8 @@
       "channel_id": "UCpFgmZm65yOU5X-hmWkWjuw",
       "published_at": "2026-10-23T14:53:07Z",
       "duration_seconds": 291,
-      "view_count": 16720430,
-      "like_count": 118084
-    },
-    {
-      "id": "eF7Q_1uk-lY",
-      "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 380 | 30 Oct 2026 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-30T15:30:26Z",
-      "duration_seconds": 1350,
-      "view_count": 16660500,
-      "like_count": 257754
+      "view_count": 17141604,
+      "like_count": 118470
     },
     {
       "id": "7TaRIreSQ6M",
@@ -152,38 +142,8 @@
       "channel_id": "UCnJjcn5FrgrOEp5_N45ZLEQ",
       "published_at": "2026-10-26T05:29:08Z",
       "duration_seconds": 378,
-      "view_count": 16409451,
-      "like_count": 51000
-    },
-    {
-      "id": "nemL6kplRlc",
-      "title": "Mitti De Baway Ep 12 (Sub) 29 Oct 26, Digitally VGO TEL, Happilac Paints & Vince Shampoo | Green TV",
-      "channel": "Green TV Entertainment",
-      "channel_id": "UCF2ltLX1dnPa6-L1paPaMzw",
-      "published_at": "2026-10-29T17:04:48Z",
-      "duration_seconds": 2243,
-      "view_count": 16083237,
-      "like_count": 131976
-    },
-    {
-      "id": "5j8fIDh1V0A",
-      "title": "Myke Towers - TE IMAGINO (Official Music Video)",
-      "channel": "Myke Towers",
-      "channel_id": "UCLk8IJ1TwI7Xl7UUfAD8xPQ",
-      "published_at": "2026-10-22T00:00:09Z",
-      "duration_seconds": 252,
-      "view_count": 15834393,
-      "like_count": 128164
-    },
-    {
-      "id": "cmCh2VtB3ek",
-      "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 379 | 29 Oct 2026 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-29T15:30:26Z",
-      "duration_seconds": 1350,
-      "view_count": 15728216,
-      "like_count": 253075
+      "view_count": 16845110,
+      "like_count": 51797
     },
     {
       "id": "3AFJtcP2cp0",
@@ -192,8 +152,28 @@
       "channel_id": "UCI_hjK53AIDlpB-Rpr1WnwQ",
       "published_at": "2026-10-31T15:00:06Z",
       "duration_seconds": 1811,
-      "view_count": 15694172,
-      "like_count": 659587
+      "view_count": 16595429,
+      "like_count": 685982
+    },
+    {
+      "id": "nemL6kplRlc",
+      "title": "Mitti De Baway Ep 12 (Sub) 29 Oct 26, Digitally VGO TEL, Happilac Paints & Vince Shampoo | Green TV",
+      "channel": "Green TV Entertainment",
+      "channel_id": "UCF2ltLX1dnPa6-L1paPaMzw",
+      "published_at": "2026-10-29T17:04:48Z",
+      "duration_seconds": 2243,
+      "view_count": 16308198,
+      "like_count": 133105
+    },
+    {
+      "id": "5j8fIDh1V0A",
+      "title": "Myke Towers - TE IMAGINO (Official Music Video)",
+      "channel": "Myke Towers",
+      "channel_id": "UCLk8IJ1TwI7Xl7UUfAD8xPQ",
+      "published_at": "2026-10-22T00:00:09Z",
+      "duration_seconds": 252,
+      "view_count": 16180758,
+      "like_count": 130182
     },
     {
       "id": "nJlbqQEFYaE",
@@ -202,28 +182,28 @@
       "channel_id": "UCo07fumrTn1w4AxcU4j_uDw",
       "published_at": "2026-10-22T12:30:36Z",
       "duration_seconds": 281,
-      "view_count": 15338716,
-      "like_count": 57990
+      "view_count": 16062479,
+      "like_count": 60081
     },
     {
-      "id": "2wJuFzwBWkI",
-      "title": "48H POUR SURVIVRE À UN CRASH D'AVION (ft Amine, Squeezie, Michou et JD)",
-      "channel": "Inoxtag",
-      "channel_id": "UCL9aTJb0ur4sovxcppAopEw",
-      "published_at": "2026-10-31T13:30:36Z",
-      "duration_seconds": 6977,
-      "view_count": 14338088,
-      "like_count": 514228
+      "id": "jIllFABvvNk",
+      "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 381 | 31 Oct 2026 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-31T15:00:05Z",
+      "duration_seconds": 1350,
+      "view_count": 15892243,
+      "like_count": 234895
     },
     {
-      "id": "xbY3Twa1cBU",
-      "title": "DENNY CAKNAN FT RAFIQ - LAUT KIDUL|CRITO MUSTAHIL|NEGORO ANGIN (OFFICIAL LIVE MUSIC VIDEO) DC MUSIK",
-      "channel": "DC. PRODUCTION",
-      "channel_id": "UC7FE8E7nCP-sJO8o4FTo93Q",
-      "published_at": "2026-10-20T09:00:11Z",
-      "duration_seconds": 590,
-      "view_count": 14157825,
-      "like_count": 188555
+      "id": "qFkwaTonTyI",
+      "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 382 | 1 Nov 2026 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-11-01T15:30:19Z",
+      "duration_seconds": 1330,
+      "view_count": 15040401,
+      "like_count": 222508
     },
     {
       "id": "BeY_bOiiZ8A",
@@ -232,8 +212,8 @@
       "channel_id": "UCWaLBLeUqzZGC8EmGVDkkUg",
       "published_at": "2026-10-22T03:30:07Z",
       "duration_seconds": 1084,
-      "view_count": 13177386,
-      "like_count": 56995
+      "view_count": 13444653,
+      "like_count": 57519
     },
     {
       "id": "pj3Y_M94hPM",
@@ -242,8 +222,8 @@
       "channel_id": "UCwVg9btOceLQuNCdoQk9CXg",
       "published_at": "2026-10-18T14:18:16Z",
       "duration_seconds": 2440,
-      "view_count": 13010661,
-      "like_count": 73884
+      "view_count": 13207227,
+      "like_count": 74524
     },
     {
       "id": "V2fgXzoj0xg",
@@ -252,8 +232,8 @@
       "channel_id": "UC-CSyyi47VX1lD9zyeABW3w",
       "published_at": "2026-11-01T03:30:05Z",
       "duration_seconds": 1291,
-      "view_count": 12523275,
-      "like_count": 345877
+      "view_count": 12913051,
+      "like_count": 349081
     },
     {
       "id": "FZc_XS2ojWA",
@@ -262,38 +242,18 @@
       "channel_id": "UCx7gLo8iS4ofgNfBENUxWDA",
       "published_at": "2026-10-30T20:49:08Z",
       "duration_seconds": 9170,
-      "view_count": 12400939,
-      "like_count": 91595
+      "view_count": 12661881,
+      "like_count": 92536
     },
     {
-      "id": "FQ9YkllNOnY",
-      "title": "My SECRET SLEEPOVER in Target",
-      "channel": "Jordan Matter",
-      "channel_id": "UCKaCalz5N5ienIbfPzEbYuA",
-      "published_at": "2026-10-31T14:00:09Z",
-      "duration_seconds": 1970,
-      "view_count": 12118431,
-      "like_count": 102074
-    },
-    {
-      "id": "tkCR6oz7GBs",
-      "title": "Mann Sundar | 30 Oct 2026 | Full Episode 1773 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-30T15:00:23Z",
-      "duration_seconds": 1350,
-      "view_count": 11472919,
-      "like_count": 156242
-    },
-    {
-      "id": "yYuXFriRFz0",
-      "title": "JuL - Ragnar 2 [ Clip Officiel ] 2026",
-      "channel": "DORETDEPLATINE",
-      "channel_id": "UC-GI5LST5T3Gw93yZxjdFaw",
-      "published_at": "2026-10-23T09:58:02Z",
-      "duration_seconds": 515,
-      "view_count": 11105827,
-      "like_count": 29969
+      "id": "tNa-SfPF6pY",
+      "title": "Living in Every Color For 24 Hours!",
+      "channel": "Stay Wild",
+      "channel_id": "UClQ3NafOy_42dJ0toK3QUKw",
+      "published_at": "2026-11-01T17:03:32Z",
+      "duration_seconds": 1611,
+      "view_count": 12425070,
+      "like_count": 73643
     },
     {
       "id": "L2tPE6S80qI",
@@ -302,18 +262,8 @@
       "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
       "published_at": "2026-10-31T16:10:32Z",
       "duration_seconds": 2282,
-      "view_count": 11037867,
-      "like_count": 118990
-    },
-    {
-      "id": "cM5IAypOOfM",
-      "title": "Every Way To Use Chocolate",
-      "channel": "Nick's Kitchen",
-      "channel_id": "UC2HNqPgeKtVr2gZmLeeIk3g",
-      "published_at": "2026-10-16T16:00:25Z",
-      "duration_seconds": 1959,
-      "view_count": 10707968,
-      "like_count": 49828
+      "view_count": 11257153,
+      "like_count": 119999
     },
     {
       "id": "y6vNzw3z864",
@@ -322,38 +272,8 @@
       "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
       "published_at": "2026-10-30T16:00:08Z",
       "duration_seconds": 2318,
-      "view_count": 10495690,
-      "like_count": 124930
-    },
-    {
-      "id": "RbojqtOo1vo",
-      "title": "Mann Sundar | 31 Oct 2026 | Full Episode 1774 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-31T15:30:23Z",
-      "duration_seconds": 1160,
-      "view_count": 10482366,
-      "like_count": 150865
-    },
-    {
-      "id": "HYA9e0XOUGk",
-      "title": "Cardi B: Tiny Desk Concert",
-      "channel": "NPR Music",
-      "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-      "published_at": "2026-10-19T16:00:08Z",
-      "duration_seconds": 1127,
-      "view_count": 10297260,
-      "like_count": 369183
-    },
-    {
-      "id": "B82WFBXU7gs",
-      "title": "Intercambié Mi Vida con Un Seguidor",
-      "channel": "Ibai",
-      "channel_id": "UCaY_-ksFSQtTGk0y1HA_3YQ",
-      "published_at": "2026-10-18T16:58:11Z",
-      "duration_seconds": 1971,
-      "view_count": 10265895,
-      "like_count": 307270
+      "view_count": 10638244,
+      "like_count": 125715
     },
     {
       "id": "A5vdK_kbjCU",
@@ -362,8 +282,28 @@
       "channel_id": "UCL64gn1KZ1C-u87BGQv3b6w",
       "published_at": "2026-10-23T14:57:18Z",
       "duration_seconds": 240,
-      "view_count": 10076252,
-      "like_count": 12062
+      "view_count": 10521558,
+      "like_count": 12311
+    },
+    {
+      "id": "RbojqtOo1vo",
+      "title": "Mann Sundar | 31 Oct 2026 | Full Episode 1774 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-31T15:30:23Z",
+      "duration_seconds": 1160,
+      "view_count": 10501662,
+      "like_count": 150964
+    },
+    {
+      "id": "HYA9e0XOUGk",
+      "title": "Cardi B: Tiny Desk Concert",
+      "channel": "NPR Music",
+      "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
+      "published_at": "2026-10-19T16:00:08Z",
+      "duration_seconds": 1127,
+      "view_count": 10412016,
+      "like_count": 371360
     },
     {
       "id": "hCnsaahr2cc",
@@ -372,38 +312,38 @@
       "channel_id": "UCVycbNg9MtedSTmea6PRuNA",
       "published_at": "2026-10-16T04:00:02Z",
       "duration_seconds": 705,
-      "view_count": 9936673,
-      "like_count": 181532
+      "view_count": 10397230,
+      "like_count": 186841
     },
     {
-      "id": "YkL-jA0QsQw",
-      "title": "Snake Aagya Gharpe 😲 Cobra",
-      "channel": "Sourav Joshi Vlogs",
-      "channel_id": "UCjvgGbPPn-FgYeguc5nxG4A",
-      "published_at": "2026-11-01T02:30:06Z",
-      "duration_seconds": 775,
-      "view_count": 9773115,
-      "like_count": 181356
+      "id": "B82WFBXU7gs",
+      "title": "Intercambié Mi Vida con Un Seguidor",
+      "channel": "Ibai",
+      "channel_id": "UCaY_-ksFSQtTGk0y1HA_3YQ",
+      "published_at": "2026-10-18T16:58:11Z",
+      "duration_seconds": 1971,
+      "view_count": 10298588,
+      "like_count": 307894
     },
     {
-      "id": "5TXZWiaXUtk",
-      "title": "This Ibex Family Has Nowhere Left to Go",
-      "channel": "Buzzbible Video",
-      "channel_id": "UC91_dGVjroS9CJfq8VlB9Ew",
-      "published_at": "2026-10-09T12:00:28Z",
-      "duration_seconds": 991,
-      "view_count": 9559107,
-      "like_count": 29328
+      "id": "3Nttn9vGG-U",
+      "title": "Ralph Lauren | PoloRalphLauren | Decoding Vintage Polo with Mark Lee",
+      "channel": "Ralph Lauren",
+      "channel_id": "UCWpf8dFplG_k7HTTQBVllsA",
+      "published_at": "2026-10-24T05:32:38Z",
+      "duration_seconds": 249,
+      "view_count": 10186556,
+      "like_count": 960
     },
     {
-      "id": "aRhLojpaxlQ",
-      "title": "Mann Atisundar | 30 Oct 2026 | Full Episode 1194 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-30T14:30:00Z",
-      "duration_seconds": 1350,
-      "view_count": 9455187,
-      "like_count": 113946
+      "id": "nrmC1CqlEVM",
+      "title": "NAXAL 3 Full Action Movie | Ram Charan, Kajal Aggarwal | Latest South Indian Hindi Dubbed Movie 2026",
+      "channel": "Movie Sung",
+      "channel_id": "UCDhxyoirWft0gQCEOk3HjhA",
+      "published_at": "2026-11-01T14:01:24Z",
+      "duration_seconds": 7105,
+      "view_count": 10062283,
+      "like_count": 34259
     },
     {
       "id": "La4g9CSXvus",
@@ -412,18 +352,18 @@
       "channel_id": "UCoMlNw7o21I7LqL4OsjSYAg",
       "published_at": "2026-10-09T21:04:04Z",
       "duration_seconds": 346,
-      "view_count": 9403281,
-      "like_count": 101608
+      "view_count": 9583140,
+      "like_count": 102337
     },
     {
-      "id": "iR15hYRcKds",
-      "title": "My Sister and I Have the Same BF",
-      "channel": "MSA",
-      "channel_id": "UCYzEMRKqrh01-tauv7MYyVQ",
-      "published_at": "2026-10-17T00:08:30Z",
-      "duration_seconds": 2272,
-      "view_count": 9120119,
-      "like_count": 145534
+      "id": "aRhLojpaxlQ",
+      "title": "Mann Atisundar | 30 Oct 2026 | Full Episode 1194 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-30T14:30:00Z",
+      "duration_seconds": 1350,
+      "view_count": 9469673,
+      "like_count": 113985
     },
     {
       "id": "OJWuO5qMkYQ",
@@ -432,48 +372,8 @@
       "channel_id": "UCpTILQ0MwpwiUtv9f0H8EhA",
       "published_at": "2026-11-01T09:41:31Z",
       "duration_seconds": 1385,
-      "view_count": 8951863,
-      "like_count": 86235
-    },
-    {
-      "id": "j7WmloVujPk",
-      "title": "Mann Atisundar | 31 Oct 2026 | Full Episode 1195 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-31T14:30:18Z",
-      "duration_seconds": 1350,
-      "view_count": 8884272,
-      "like_count": 107833
-    },
-    {
-      "id": "aCH0eUXFMk0",
-      "title": "I Dressed Like a 1950s Man for a Week, Here's What Happened",
-      "channel": "Buff Dudes",
-      "channel_id": "UCKf0UqBiCQI4Ol0To9V0pKQ",
-      "published_at": "2026-10-31T14:00:15Z",
-      "duration_seconds": 1741,
-      "view_count": 8818432,
-      "like_count": 190652
-    },
-    {
-      "id": "DQ-g-dpU8Gc",
-      "title": "AWAL TERROR KAMPUNG POJOK !!!",
-      "channel": "dika_ bj",
-      "channel_id": "UCdqAL2kOoR9fMlq3800bmXA",
-      "published_at": "2026-10-12T05:51:38Z",
-      "duration_seconds": 2342,
-      "view_count": 8747498,
-      "like_count": 144687
-    },
-    {
-      "id": "EgjR4E7L0Xs",
-      "title": "ISHQ JUNOONI | Full Episode 240 | 31 Oct 2026 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-31T13:30:05Z",
-      "duration_seconds": 1350,
-      "view_count": 8734741,
-      "like_count": 120281
+      "view_count": 9263654,
+      "like_count": 87156
     },
     {
       "id": "7wLhJ7q7By4",
@@ -482,8 +382,58 @@
       "channel_id": "UC-SuHonAEkrikvs2oj7LLXg",
       "published_at": "2026-10-25T02:55:57Z",
       "duration_seconds": 8215,
-      "view_count": 8345329,
-      "like_count": 29015
+      "view_count": 9092855,
+      "like_count": 31124
+    },
+    {
+      "id": "j7WmloVujPk",
+      "title": "Mann Atisundar | 31 Oct 2026 | Full Episode 1195 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-31T14:30:18Z",
+      "duration_seconds": 1350,
+      "view_count": 8896772,
+      "like_count": 107878
+    },
+    {
+      "id": "EZWGT4RoMiU",
+      "title": "Başkalarının Hayatı 5. Bölüm",
+      "channel": "Başkalarının Hayatı",
+      "channel_id": "UCBPji4yBwHYvOmJYyXMfThQ",
+      "published_at": "2026-10-24T20:34:57Z",
+      "duration_seconds": 7621,
+      "view_count": 8846957,
+      "like_count": 57980
+    },
+    {
+      "id": "EgjR4E7L0Xs",
+      "title": "ISHQ JUNOONI | Full Episode 240 | 31 Oct 2026 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-31T13:30:05Z",
+      "duration_seconds": 1350,
+      "view_count": 8777002,
+      "like_count": 120485
+    },
+    {
+      "id": "DQ-g-dpU8Gc",
+      "title": "AWAL TERROR KAMPUNG POJOK !!!",
+      "channel": "dika_ bj",
+      "channel_id": "UCdqAL2kOoR9fMlq3800bmXA",
+      "published_at": "2026-10-12T05:51:38Z",
+      "duration_seconds": 2342,
+      "view_count": 8755167,
+      "like_count": 144692
+    },
+    {
+      "id": "IKygqrA8r4A",
+      "title": "Mann Atisundar | 1 Nov 2026 | Full Episode 1196 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-11-01T14:36:09Z",
+      "duration_seconds": 1308,
+      "view_count": 8544198,
+      "like_count": 106823
     },
     {
       "id": "PfSHrPMW4UU",
@@ -492,18 +442,8 @@
       "channel_id": "UCooVYzDxdwTtGYAkcPmOgOw",
       "published_at": "2026-10-31T16:00:07Z",
       "duration_seconds": 733,
-      "view_count": 8004359,
-      "like_count": 1739033
-    },
-    {
-      "id": "B-zaXo-skGo",
-      "title": "ดีใจที่ตรงนั้นไม่ใช่เรา - Only Monday [Official MV]",
-      "channel": "Only Monday Official",
-      "channel_id": "UCd07dm8l6TpykHI_TEwzCxg",
-      "published_at": "2026-10-20T11:00:14Z",
-      "duration_seconds": 334,
-      "view_count": 7940146,
-      "like_count": 49580
+      "view_count": 8041024,
+      "like_count": 1738464
     },
     {
       "id": "OWbhwq9fecg",
@@ -512,8 +452,18 @@
       "channel_id": "UCjIA3wwhi0QjSOXAZwOXbPA",
       "published_at": "2026-10-21T16:00:10Z",
       "duration_seconds": 249,
-      "view_count": 7905054,
-      "like_count": 71272
+      "view_count": 8004551,
+      "like_count": 71758
+    },
+    {
+      "id": "tycyv2eoOaU",
+      "title": "MrBeast Lab Ep 1: Monster Invasion",
+      "channel": "Beast Animations",
+      "channel_id": "UCZzvDDvaYti8Dd8bLEiSoyQ",
+      "published_at": "2026-11-01T18:57:16Z",
+      "duration_seconds": 1538,
+      "view_count": 7815445,
+      "like_count": 174769
     },
     {
       "id": "8pt_ru3Y-K8",
@@ -522,8 +472,8 @@
       "channel_id": "UC4JCksJF76g_MdzPVBJoC3Q",
       "published_at": "2026-10-31T16:00:25Z",
       "duration_seconds": 2277,
-      "view_count": 7586789,
-      "like_count": 77578
+      "view_count": 7745227,
+      "like_count": 78353
     },
     {
       "id": "D_n_bNLpN5w",
@@ -532,18 +482,8 @@
       "channel_id": "UCp0s7oQVaW5VDblo7iVVGng",
       "published_at": "2026-10-13T03:30:11Z",
       "duration_seconds": 414,
-      "view_count": 7583234,
-      "like_count": 136553
-    },
-    {
-      "id": "qt5p-_tE8d0",
-      "title": "Roadster Event",
-      "channel": "Tesla",
-      "channel_id": "UC5WjFrtBdufl6CZojX3D8dQ",
-      "published_at": "2026-10-16T01:34:18Z",
-      "duration_seconds": 1401,
-      "view_count": 7542729,
-      "like_count": 144092
+      "view_count": 7707455,
+      "like_count": 137388
     },
     {
       "id": "8LgukvnIH1Q",
@@ -552,68 +492,18 @@
       "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
       "published_at": "2026-10-30T13:30:22Z",
       "duration_seconds": 1347,
-      "view_count": 7517367,
-      "like_count": 108763
+      "view_count": 7547969,
+      "like_count": 108925
     },
     {
-      "id": "CcRvVLoI7pc",
-      "title": "Alice dan Mia Membuka Salon Kecantikan Rumahan!",
-      "channel": "Alice Putri",
-      "channel_id": "UCAnhzlnWKTFXCJ4Hm5Cp2LA",
-      "published_at": "2026-10-31T10:00:18Z",
-      "duration_seconds": 1030,
-      "view_count": 7471944,
-      "like_count": 4431
-    },
-    {
-      "id": "6yvm9bWcx2Q",
-      "title": "ISHQ JUNOONI | Full Episode 238 | 29 Oct 2026 | Full HD #Newepisode | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-29T13:30:31Z",
-      "duration_seconds": 1348,
-      "view_count": 7325352,
-      "like_count": 103156
-    },
-    {
-      "id": "c2flin7DzrQ",
-      "title": "Double Trouble | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Cartoon for Kids",
-      "channel": "Grizzy & les Lemmings",
-      "channel_id": "UCn9l4gU5mkmmlC2eiVu0LHw",
-      "published_at": "2026-10-23T10:01:39Z",
-      "duration_seconds": 1955,
-      "view_count": 7261922,
-      "like_count": 16222
-    },
-    {
-      "id": "K5RtSh1tlD4",
-      "title": "Whatever You Hit, You Keep!",
-      "channel": "Celine Dept",
-      "channel_id": "UC1a2ZCw7tugRZYRMnecNj3A",
-      "published_at": "2026-10-14T12:00:12Z",
-      "duration_seconds": 1130,
-      "view_count": 7095494,
-      "like_count": 43691
-    },
-    {
-      "id": "DPu5RyE1BKQ",
-      "title": "ADÉLA: Nicole Kidman/Ain't In LA Medley | The Tonight Show Starring Jimmy Fallon",
-      "channel": "The Tonight Show Starring Jimmy Fallon",
-      "channel_id": "UC8-Th83bH_thdKZDJCrn88g",
-      "published_at": "2026-10-23T04:30:11Z",
-      "duration_seconds": 314,
-      "view_count": 6907769,
-      "like_count": 162356
-    },
-    {
-      "id": "_hzgpE0NXR8",
-      "title": "DEVINE QUI TU ES #4 ft. CYPRIEN",
-      "channel": "Amixem",
-      "channel_id": "UCgvqvBoSHB1ctlyyhoHrGwQ",
-      "published_at": "2026-10-25T16:25:31Z",
-      "duration_seconds": 4435,
-      "view_count": 6885069,
-      "like_count": 208151
+      "id": "qt5p-_tE8d0",
+      "title": "Roadster Event",
+      "channel": "Tesla",
+      "channel_id": "UC5WjFrtBdufl6CZojX3D8dQ",
+      "published_at": "2026-10-16T01:34:18Z",
+      "duration_seconds": 1401,
+      "view_count": 7547294,
+      "like_count": 144106
     },
     {
       "id": "DGeiGGyWDRA",
@@ -622,18 +512,28 @@
       "channel_id": "UCGRIV5jOtKyAibhjBdIndZQ",
       "published_at": "2026-10-14T13:01:40Z",
       "duration_seconds": 254,
-      "view_count": 6837261,
-      "like_count": 15760
+      "view_count": 7312920,
+      "like_count": 15795
     },
     {
-      "id": "CXh5aDYuXLI",
-      "title": "Man Turns Massive Rock Into A Luxury Bathtub In 3 Months | Start to Finish by @Ringstone-Handmade",
-      "channel": "Quantum Makers",
-      "channel_id": "UC4Tklxku1yPcRIH0VVCKoeA",
-      "published_at": "2026-10-09T11:00:36Z",
-      "duration_seconds": 924,
-      "view_count": 6721906,
-      "like_count": 17735
+      "id": "DPu5RyE1BKQ",
+      "title": "ADÉLA: Nicole Kidman/Ain't In LA Medley | The Tonight Show Starring Jimmy Fallon",
+      "channel": "The Tonight Show Starring Jimmy Fallon",
+      "channel_id": "UC8-Th83bH_thdKZDJCrn88g",
+      "published_at": "2026-10-23T04:30:11Z",
+      "duration_seconds": 314,
+      "view_count": 7026001,
+      "like_count": 163572
+    },
+    {
+      "id": "FoWlWP3tmlw",
+      "title": "Back to Living in My Truck After a Long Break",
+      "channel": "Girl Truck Routine",
+      "channel_id": "UCMTFcOaJlwRjVNoSoS9D2Vg",
+      "published_at": "2026-10-22T21:06:42Z",
+      "duration_seconds": 1151,
+      "view_count": 6897859,
+      "like_count": 45607
     },
     {
       "id": "QFkL82O38Xk",
@@ -642,48 +542,28 @@
       "channel_id": "UCpJmCkjsJbqIBdvTRx2zt-w",
       "published_at": "2026-11-01T04:28:08Z",
       "duration_seconds": 282,
-      "view_count": 6568486,
-      "like_count": 70361
+      "view_count": 6795063,
+      "like_count": 71277
     },
     {
-      "id": "HdEsXL9SLwk",
-      "title": "Kaisi Teri Dillagi | Full Episode 102 | 31 Oct 2026 | New Show | Dangal TV",
-      "channel": "Dangal TV Channel",
-      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-      "published_at": "2026-10-31T17:00:26Z",
-      "duration_seconds": 1350,
-      "view_count": 6467087,
-      "like_count": 89749
+      "id": "CXh5aDYuXLI",
+      "title": "Man Turns Massive Rock Into A Luxury Bathtub In 3 Months | Start to Finish by @Ringstone-Handmade",
+      "channel": "Quantum Makers",
+      "channel_id": "UC4Tklxku1yPcRIH0VVCKoeA",
+      "published_at": "2026-10-09T11:00:36Z",
+      "duration_seconds": 924,
+      "view_count": 6745266,
+      "like_count": 17787
     },
     {
-      "id": "jqngHmcLqig",
-      "title": "Uswah Episode 37 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 29th October 2026",
+      "id": "kbsvMYFmgD0",
+      "title": "Uswah Episode 40 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 1st November 2026",
       "channel": "HAR PAL GEO",
       "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
-      "published_at": "2026-10-29T15:00:16Z",
-      "duration_seconds": 1942,
-      "view_count": 6437832,
-      "like_count": 62300
-    },
-    {
-      "id": "L_cLzd0Hsww",
-      "title": "Alo! Biệt Đội Cứu Hộ 🚓🚒🚑 113 – 114 – 115 | Bé Học Cách Gọi Trợ Giúp | Nhạc Thiếu Nhi | Vo Ve TV",
-      "channel": "Vo Ve TV - Kênh Nhạc Thiếu Nhi",
-      "channel_id": "UC1yUMaDYayOQi0q2iwlFaAw",
-      "published_at": "2026-10-19T08:24:51Z",
-      "duration_seconds": 241,
-      "view_count": 6386257,
-      "like_count": 3441
-    },
-    {
-      "id": "CFLDZfW1Hwg",
-      "title": "The Secret Creature of the Rainforest | Full Sci-Fi Adventure #LizardMonster #4K",
-      "channel": "NULL HOUR",
-      "channel_id": "UCKQ4qZ6izMf6y_nOMZIVOUw",
-      "published_at": "2026-10-31T11:12:21Z",
-      "duration_seconds": 2256,
-      "view_count": 6344710,
-      "like_count": 24752
+      "published_at": "2026-11-01T15:00:06Z",
+      "duration_seconds": 1964,
+      "view_count": 6731880,
+      "like_count": 66701
     },
     {
       "id": "e0UeSB-z5BU",
@@ -692,18 +572,28 @@
       "channel_id": "UC6Bk6cgu7Fc4iTlq5suamPg",
       "published_at": "2026-10-25T05:00:13Z",
       "duration_seconds": 992,
-      "view_count": 6320804,
-      "like_count": 10892
+      "view_count": 6494406,
+      "like_count": 11186
     },
     {
-      "id": "_4ZvDPzeodE",
-      "title": "เขาแค่..บ่เปิดโต - ลำเพลิน วงศกร feat. ธีร์ ทีเร็กซ์【OFFICIAL MV】",
-      "channel": "ThaiToneGen.Official",
-      "channel_id": "UC0l4aUvRziU8wKPJja6J9FQ",
-      "published_at": "2026-10-16T11:00:11Z",
-      "duration_seconds": 321,
-      "view_count": 6304449,
-      "like_count": 21142
+      "id": "HdEsXL9SLwk",
+      "title": "Kaisi Teri Dillagi | Full Episode 102 | 31 Oct 2026 | New Show | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-31T17:00:26Z",
+      "duration_seconds": 1350,
+      "view_count": 6486391,
+      "like_count": 89858
+    },
+    {
+      "id": "hHTZDY3pBm0",
+      "title": "Pati Brahmachari | Full Episode 462 | 7 Nov 2026 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-11-07T14:00:25Z",
+      "duration_seconds": 1350,
+      "view_count": 6275642,
+      "like_count": 119346
     },
     {
       "id": "N7AebpXAtvE",
@@ -712,18 +602,8 @@
       "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
       "published_at": "2026-10-30T15:00:33Z",
       "duration_seconds": 1940,
-      "view_count": 6202735,
-      "like_count": 62302
-    },
-    {
-      "id": "y8H72MOzo2g",
-      "title": "Uswah Episode 39 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 31st October 2026",
-      "channel": "HAR PAL GEO",
-      "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
-      "published_at": "2026-10-31T15:00:07Z",
-      "duration_seconds": 1952,
-      "view_count": 6173047,
-      "like_count": 63965
+      "view_count": 6249069,
+      "like_count": 62522
     },
     {
       "id": "PJ34dNFe3yU",
@@ -732,28 +612,28 @@
       "channel_id": "UCj2xeKmlkaRvsAXndCqohrQ",
       "published_at": "2026-10-23T13:41:18Z",
       "duration_seconds": 272,
-      "view_count": 6158902,
-      "like_count": 19109
+      "view_count": 6243267,
+      "like_count": 19162
     },
     {
-      "id": "ChTG8R2asTA",
-      "title": "Lemming Gum | Grizzy & the Lemmings | 35' Compilation | 🐻🐹 Cartoon for Kids",
-      "channel": "Grizzy & les Lemmings",
-      "channel_id": "UCn9l4gU5mkmmlC2eiVu0LHw",
-      "published_at": "2026-10-30T11:00:29Z",
-      "duration_seconds": 1955,
-      "view_count": 6112191,
-      "like_count": 10151
+      "id": "y8H72MOzo2g",
+      "title": "Uswah Episode 39 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 31st October 2026",
+      "channel": "HAR PAL GEO",
+      "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
+      "published_at": "2026-10-31T15:00:07Z",
+      "duration_seconds": 1952,
+      "view_count": 6233066,
+      "like_count": 64196
     },
     {
-      "id": "Doiq12y4078",
-      "title": "Ronaldo hits a HAT-TRICK to reach 985 ⛵️ | Powered by Toyota",
-      "channel": "الدوري السعودي للمحترفين - Saudi Pro League",
-      "channel_id": "UCqXAWrjSgLb0EPa_icPt-pw",
-      "published_at": "2026-10-29T20:58:37Z",
-      "duration_seconds": 578,
-      "view_count": 6098795,
-      "like_count": 68046
+      "id": "It7bA88tO40",
+      "title": "🔴 LIVE | MPL ID S18 | FINAL LOWER BRACKET | Bahasa Indonesia",
+      "channel": "MPL Indonesia",
+      "channel_id": "UC1dGHGJTXU_dkiR8tW3qQgg",
+      "published_at": "2026-11-07T17:54:58Z",
+      "duration_seconds": 24865,
+      "view_count": 6186196,
+      "like_count": 27203
     },
     {
       "id": "OxHriVbn48U",
@@ -762,8 +642,8 @@
       "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
       "published_at": "2026-10-30T17:00:25Z",
       "duration_seconds": 1350,
-      "view_count": 6091283,
-      "like_count": 89422
+      "view_count": 6109250,
+      "like_count": 89519
     },
     {
       "id": "D8CYC5P6Z8Y",
@@ -772,18 +652,28 @@
       "channel_id": "UCn-SYb1TUz-1itK_uz4imUA",
       "published_at": "2026-10-12T12:30:26Z",
       "duration_seconds": 253,
-      "view_count": 5994649,
-      "like_count": 151687
+      "view_count": 6053718,
+      "like_count": 152346
     },
     {
-      "id": "qeVq2M2jOBg",
-      "title": "INTERROGATOIRE SOUS DÉTECTEUR DE MENSONGES #12 (Avec Amixem)",
-      "channel": "Mastu",
-      "channel_id": "UCAhaFPP6v3WCfK5Tjao0B7A",
-      "published_at": "2026-10-17T09:00:17Z",
-      "duration_seconds": 2436,
-      "view_count": 5777776,
-      "like_count": 197326
+      "id": "rf5oGE1FdHc",
+      "title": "I ATTEMPTED HONG KONG’S BIGGEST BBQ CHALLENGE! | BeardMeatsFood",
+      "channel": "BeardMeatsFood",
+      "channel_id": "UCc9CjaAjsMMvaSghZB7-Kog",
+      "published_at": "2026-11-01T19:00:40Z",
+      "duration_seconds": 588,
+      "view_count": 5873130,
+      "like_count": 116104
+    },
+    {
+      "id": "Ky4R8o5cTKQ",
+      "title": "원이를 찾아서 (특별편)",
+      "channel": "안녕하세요원이입니다잘부탁드립니다",
+      "channel_id": "UCWpY0eSJtyO-qNAPbKFRSSg",
+      "published_at": "2026-11-01T10:00:09Z",
+      "duration_seconds": 639,
+      "view_count": 5865221,
+      "like_count": 93244
     },
     {
       "id": "_YMYy7eTio8",
@@ -792,8 +682,8 @@
       "channel_id": "UCzAn-hBNSTjX-QMnHASZFfA",
       "published_at": "2026-10-24T06:25:16Z",
       "duration_seconds": 418,
-      "view_count": 5743217,
-      "like_count": 56703
+      "view_count": 5792371,
+      "like_count": 57095
     },
     {
       "id": "XuOicpNoUM4",
@@ -802,28 +692,8 @@
       "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
       "published_at": "2026-10-23T13:00:06Z",
       "duration_seconds": 265,
-      "view_count": 5730644,
-      "like_count": 75847
-    },
-    {
-      "id": "8UduMkgaBE8",
-      "title": "LE DÎNER DE C*NS 4 (ft Mcfly & Carlito, Maxime Biaggi et Théodort)",
-      "channel": "Djilsi",
-      "channel_id": "UCEUZRSYr1a2hnBfnpWslFeQ",
-      "published_at": "2026-10-24T08:59:19Z",
-      "duration_seconds": 3518,
-      "view_count": 5721329,
-      "like_count": 133554
-    },
-    {
-      "id": "RD6Xus60ZUc",
-      "title": "Les enfants apprennent le travail d'équipe grâce à un climatiseur magique",
-      "channel": "Vlad et Nikita",
-      "channel_id": "UCBAVuFj7sgiS0Qp0hBgfuJg",
-      "published_at": "2026-10-22T06:00:24Z",
-      "duration_seconds": 1054,
-      "view_count": 5686410,
-      "like_count": 3909
+      "view_count": 5762956,
+      "like_count": 76187
     },
     {
       "id": "l7UNGn0wBLU",
@@ -832,8 +702,8 @@
       "channel_id": "UCCbj_2NvmjtvI-Bg2vVYAgg",
       "published_at": "2026-10-23T10:30:11Z",
       "duration_seconds": 5923,
-      "view_count": 5608886,
-      "like_count": 15735
+      "view_count": 5711252,
+      "like_count": 15992
     },
     {
       "id": "pKvx_bN74j4",
@@ -842,18 +712,8 @@
       "channel_id": "UC70u2e8gK14R7QfFs7ehNDw",
       "published_at": "2026-10-26T09:00:39Z",
       "duration_seconds": 485,
-      "view_count": 5581725,
-      "like_count": 38130
-    },
-    {
-      "id": "80ZQ1Luh6mI",
-      "title": "Sevdiğim Sensin 20. Bölüm",
-      "channel": "Sevdiğim Sensin",
-      "channel_id": "UCX8d_tK-HjGDQkAWUADy9sw",
-      "published_at": "2026-10-08T21:07:22Z",
-      "duration_seconds": 8187,
-      "view_count": 5574145,
-      "like_count": 42760
+      "view_count": 5667456,
+      "like_count": 38462
     },
     {
       "id": "O9kbG2tTX10",
@@ -862,28 +722,8 @@
       "channel_id": "UCB_qr75-ydFVKSF9Dmo6izg",
       "published_at": "2026-10-31T22:41:17Z",
       "duration_seconds": 483,
-      "view_count": 5567292,
-      "like_count": 81587
-    },
-    {
-      "id": "7_eUJ0Af5yw",
-      "title": "Trump Lashes Out at a Reporter, Hecklers Take Over His Rallies & Obama's Cheesecake Factory Response",
-      "channel": "Jimmy Kimmel Live",
-      "channel_id": "UCa6vGFO9ty8v5KZJXQxdhaw",
-      "published_at": "2026-10-30T03:45:18Z",
-      "duration_seconds": 830,
-      "view_count": 5325159,
-      "like_count": 107497
-    },
-    {
-      "id": "LTiGuCOPITQ",
-      "title": "SIDEMEN HOW FAR CAN YOU GET (ROAD TRIP EDITION)",
-      "channel": "Sidemen",
-      "channel_id": "UCDogdKl7t7NHzQ95aEwkdMw",
-      "published_at": "2026-10-25T19:00:07Z",
-      "duration_seconds": 5857,
-      "view_count": 5285831,
-      "like_count": 86737
+      "view_count": 5575929,
+      "like_count": 81620
     },
     {
       "id": "v9wYSebfh4o",
@@ -892,8 +732,28 @@
       "channel_id": "UCow2IGnug1l3Xazkrc5jM_Q",
       "published_at": "2026-11-01T15:06:34Z",
       "duration_seconds": 3350,
-      "view_count": 5282740,
-      "like_count": 149458
+      "view_count": 5471937,
+      "like_count": 152949
+    },
+    {
+      "id": "LTiGuCOPITQ",
+      "title": "SIDEMEN HOW FAR CAN YOU GET (ROAD TRIP EDITION)",
+      "channel": "Sidemen",
+      "channel_id": "UCDogdKl7t7NHzQ95aEwkdMw",
+      "published_at": "2026-10-25T19:00:07Z",
+      "duration_seconds": 5857,
+      "view_count": 5337677,
+      "like_count": 87190
+    },
+    {
+      "id": "7_eUJ0Af5yw",
+      "title": "Trump Lashes Out at a Reporter, Hecklers Take Over His Rallies & Obama's Cheesecake Factory Response",
+      "channel": "Jimmy Kimmel Live",
+      "channel_id": "UCa6vGFO9ty8v5KZJXQxdhaw",
+      "published_at": "2026-10-30T03:45:18Z",
+      "duration_seconds": 830,
+      "view_count": 5333318,
+      "like_count": 107538
     },
     {
       "id": "cKnwkxItL2M",
@@ -902,18 +762,8 @@
       "channel_id": "UCcyq283he07B7_KUX07mmtA",
       "published_at": "2026-10-11T13:00:32Z",
       "duration_seconds": 900,
-      "view_count": 5265147,
-      "like_count": 16702
-    },
-    {
-      "id": "l9tIQ54YRUU",
-      "title": "Jaane Kis Mod Pe (Video) | Pehla Pyaar Doosri Baar | Darshan Raval | Shreya J | Rochak K |Gurpreet S",
-      "channel": "T-Series",
-      "channel_id": "UCq-Fj5jknLsUf-MWSy4_brA",
-      "published_at": "2026-10-10T04:30:08Z",
-      "duration_seconds": 248,
-      "view_count": 5194663,
-      "like_count": 34627
+      "view_count": 5274174,
+      "like_count": 16716
     },
     {
       "id": "-pjrjcQ9K1c",
@@ -922,18 +772,28 @@
       "channel_id": "UCRv76wLBC73jiP7LX4C3l8Q",
       "published_at": "2026-10-22T06:00:07Z",
       "duration_seconds": 1696,
-      "view_count": 5154934,
-      "like_count": 11047
+      "view_count": 5259355,
+      "like_count": 11159
     },
     {
-      "id": "ZA_3eoib31s",
-      "title": "QUI SERA LE MEILLEUR MENTEUR ? (ft. Joyca, Djilsi & Theodort)",
-      "channel": "GOTAGA",
-      "channel_id": "UCCFqUJYKT97UerMmb6DM0bw",
-      "published_at": "2026-10-31T10:00:03Z",
-      "duration_seconds": 4068,
-      "view_count": 5126887,
-      "like_count": 121826
+      "id": "O6VZaBM2Zr4",
+      "title": "Scary Halloween Cold Open (ft. David S. Pumpkins) - SNL",
+      "channel": "Saturday Night Live",
+      "channel_id": "UCqFzWxSCi39LnW1JKFR3efg",
+      "published_at": "2026-11-01T04:18:21Z",
+      "duration_seconds": 401,
+      "view_count": 5205796,
+      "like_count": 77539
+    },
+    {
+      "id": "l9tIQ54YRUU",
+      "title": "Jaane Kis Mod Pe (Video) | Pehla Pyaar Doosri Baar | Darshan Raval | Shreya J | Rochak K |Gurpreet S",
+      "channel": "T-Series",
+      "channel_id": "UCq-Fj5jknLsUf-MWSy4_brA",
+      "published_at": "2026-10-10T04:30:08Z",
+      "duration_seconds": 248,
+      "view_count": 5200815,
+      "like_count": 34655
     },
     {
       "id": "Wur9BVrXaDc",
@@ -942,8 +802,8 @@
       "channel_id": "UCupvZG-5ko_eiXAupbDfxWw",
       "published_at": "2026-10-31T02:03:16Z",
       "duration_seconds": 1169,
-      "view_count": 5126321,
-      "like_count": 50335
+      "view_count": 5140008,
+      "like_count": 50462
     },
     {
       "id": "MugIFSQgh08",
@@ -952,18 +812,8 @@
       "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
       "published_at": "2026-10-31T16:30:28Z",
       "duration_seconds": 1350,
-      "view_count": 5069711,
-      "like_count": 72119
-    },
-    {
-      "id": "JS1RiLRZeYI",
-      "title": "ESSAYEZ DE NE PAS RÉAGIR AU CONTENU DE LA BOITE #3",
-      "channel": "Amixem",
-      "channel_id": "UCgvqvBoSHB1ctlyyhoHrGwQ",
-      "published_at": "2026-10-11T15:25:12Z",
-      "duration_seconds": 3074,
-      "view_count": 5069181,
-      "like_count": 143416
+      "view_count": 5086994,
+      "like_count": 72195
     },
     {
       "id": "ZLUX3h8NDZo",
@@ -972,52 +822,202 @@
       "channel_id": "UCnSFZ-olBoLGLRUS_3RI2Aw",
       "published_at": "2026-10-31T15:30:21Z",
       "duration_seconds": 699,
-      "view_count": 5057379,
-      "like_count": 29288
+      "view_count": 5079020,
+      "like_count": 29345
     },
     {
-      "id": "BByplh9JRTs",
-      "title": "UNDERCOVER NOCTURNE (Avec Michou, Maghla, Anyme, Samuel, Hctuan, Zaf, Leila, Kaatsup, Raska et Doig)",
-      "channel": "Mastu",
-      "channel_id": "UCAhaFPP6v3WCfK5Tjao0B7A",
-      "published_at": "2026-10-31T10:00:09Z",
-      "duration_seconds": 3578,
-      "view_count": 5023595,
-      "like_count": 131384
+      "id": "66BDqIsByUE",
+      "title": "\"we have to leave\" - 72 hours in the US town about to disappear",
+      "channel": "Yes Theory",
+      "channel_id": "UCvK4bOhULCpmLabd2pDMtnA",
+      "published_at": "2026-11-01T17:00:02Z",
+      "duration_seconds": 2212,
+      "view_count": 5061693,
+      "like_count": 62268
     },
     {
-      "id": "eyy7Ysz9UYI",
-      "title": "Ep. 1 – 2016: The Comeback | Racing On Trust – A Decade of Michelin in MotoGP™",
-      "channel": "Michelin Motorsport",
-      "channel_id": "UC4LWUhJh_kNQLUH0xY4djow",
-      "published_at": "2026-10-08T10:40:30Z",
-      "duration_seconds": 596,
-      "view_count": 5018927,
-      "like_count": 2160
+      "id": "M2w-jtb9g2E",
+      "title": "La Mayor Compra de mi Canal (+30.000€)",
+      "channel": "Ibai",
+      "channel_id": "UCaY_-ksFSQtTGk0y1HA_3YQ",
+      "published_at": "2026-11-01T19:00:20Z",
+      "duration_seconds": 3359,
+      "view_count": 5051073,
+      "like_count": 117094
     },
     {
-      "id": "2frDDzZDNkw",
-      "title": "HOT ONES : Éric Judor est-il le roi du game du piment ?",
-      "channel": "Studio Bagel",
-      "channel_id": "UCZ8kV8vuMdDLSerCIFfWnFQ",
-      "published_at": "2026-10-23T15:30:05Z",
-      "duration_seconds": 2043,
-      "view_count": 5012844,
-      "like_count": 51647
+      "id": "Yxxhq5iDTco",
+      "title": "Shopping के चक्कर में फंस गए Bhide, Taarak और Iyer | TMKOC MOVIES | Taarak Mehta Ka Ooltah Chashmah",
+      "channel": "Taarak Mehta ka Ooltah Chashmah Movies",
+      "channel_id": "UC2xlDOylZ4XX9TVqACAkflA",
+      "published_at": "2026-11-01T09:30:13Z",
+      "duration_seconds": 3887,
+      "view_count": 5048781,
+      "like_count": 20576
     },
     {
-      "id": "bwWGBP18vmc",
-      "title": "Trump’s Racism is on Full Display, Won’t Endorse JD Vance & Don Jr is All Over the Place",
-      "channel": "Jimmy Kimmel Live",
-      "channel_id": "UCa6vGFO9ty8v5KZJXQxdhaw",
-      "published_at": "2026-10-29T03:45:37Z",
-      "duration_seconds": 961,
-      "view_count": 4966711,
-      "like_count": 98307
+      "id": "z0yA0Kl9axA",
+      "title": "Bano Episode 19 [Eng Sub] Haris Waheed - Hina Tariq - Aqeel Yousaf | 31st October 2026 | HAR PAL GEO",
+      "channel": "HAR PAL GEO",
+      "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
+      "published_at": "2026-10-31T17:00:11Z",
+      "duration_seconds": 2251,
+      "view_count": 4981024,
+      "like_count": 47389
+    },
+    {
+      "id": "WPqqQlPmweA",
+      "title": "Testing 1000 Diwali Chakri At Once - मज़ा आ गया आज तो । Diwali Stash 2026",
+      "channel": "MR. INDIAN HACKER",
+      "channel_id": "UCSiDGb0MnHFGjs4E2WKvShw",
+      "published_at": "2026-11-01T12:30:18Z",
+      "duration_seconds": 976,
+      "view_count": 4940646,
+      "like_count": 152586
+    },
+    {
+      "id": "EkHaPvD_BSE",
+      "title": "Pinoy Big Brother Collab Edition 3.0 | Day 9 | November 1, 2026 | Full Episode",
+      "channel": "Pinoy Big Brother",
+      "channel_id": "UCsumo4lY8cd4v8Xt5zG3eSg",
+      "published_at": "2026-11-01T14:52:45Z",
+      "duration_seconds": 2697,
+      "view_count": 4886130,
+      "like_count": 31497
+    },
+    {
+      "id": "sHiJJfqc1IM",
+      "title": "2 Ngày 1 Đêm Mùa 5 | Tập 107: HIEUTHUHAI thờ ơ với \"nàng thơ có râu\", buitruonglinh bùng nổ sức mạnh",
+      "channel": "ĐÔNG TÂY PROMOTION OFFICIAL",
+      "channel_id": "UCFMEYTv6N64hIL9FlQ_hxBw",
+      "published_at": "2026-11-01T13:40:09Z",
+      "duration_seconds": 7521,
+      "view_count": 4840312,
+      "like_count": 29755
+    },
+    {
+      "id": "gQ6MvZlK9Yk",
+      "title": "Mann Sundar | 7 Nov 2026 | Full Episode 1781 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-11-07T15:00:29Z",
+      "duration_seconds": 1350,
+      "view_count": 4838530,
+      "like_count": 84993
+    },
+    {
+      "id": "2GyHOQAsNeQ",
+      "title": "24 HORAS PIDIENDO HALLOWEEN en DISNEY",
+      "channel": "Juan De Dios Pantoja",
+      "channel_id": "UCzoUWqjCbcfWFdOMvoep8FA",
+      "published_at": "2026-11-01T01:02:49Z",
+      "duration_seconds": 2024,
+      "view_count": 4829287,
+      "like_count": 35805
+    },
+    {
+      "id": "0GVepBzEqlw",
+      "title": "Aha 17 (222.Bölüm) - Çok Güzel Hareketler 2",
+      "channel": "Çok Güzel Hareketler",
+      "channel_id": "UCJhEfZoLs5P_idxX--yhWOA",
+      "published_at": "2026-10-30T15:00:16Z",
+      "duration_seconds": 1115,
+      "view_count": 4821645,
+      "like_count": 32729
+    },
+    {
+      "id": "XIYmVN-l7fM",
+      "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 388 | 7 Nov 2026 | Full HD #Newepisode | Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-11-07T15:30:10Z",
+      "duration_seconds": 1350,
+      "view_count": 4815320,
+      "like_count": 114854
+    },
+    {
+      "id": "rPTUUGT_6X0",
+      "title": "I Had to Shower in This Truck Stop Cabin (Not Safe)",
+      "channel": "Girl Truck Routine",
+      "channel_id": "UCMTFcOaJlwRjVNoSoS9D2Vg",
+      "published_at": "2026-10-12T19:48:47Z",
+      "duration_seconds": 875,
+      "view_count": 4799422,
+      "like_count": 25609
+    },
+    {
+      "id": "0PbERlUWzd8",
+      "title": "KIM OXIRGI BO’LIB UHLASA 1.000.000 YUTADI!!! ** DARKNET **",
+      "channel": "OMONXON",
+      "channel_id": "UCzjAw_4C2fSrEI1qtuHN2IQ",
+      "published_at": "2026-11-01T11:00:09Z",
+      "duration_seconds": 2424,
+      "view_count": 4695039,
+      "like_count": 196276
+    },
+    {
+      "id": "RoZ_PgJDgM4",
+      "title": "Probé  Hoteles de Futbol Malos",
+      "channel": "Rulas 47",
+      "channel_id": "UC_t0y7KjGMCpuw2FgedeUgQ",
+      "published_at": "2026-10-18T16:08:14Z",
+      "duration_seconds": 1526,
+      "view_count": 4678787,
+      "like_count": 24317
+    },
+    {
+      "id": "hOoKABmlJ3M",
+      "title": "صديقتي تحولت الى مستذئب !!! شفا",
+      "channel": "shfa",
+      "channel_id": "UCwHE1kM1CPJd_pI9FQ0-4dg",
+      "published_at": "2026-11-01T10:50:45Z",
+      "duration_seconds": 491,
+      "view_count": 4590860,
+      "like_count": 19407
+    },
+    {
+      "id": "JcfFxRV4LpY",
+      "title": "Hamari Bhabhi Number 1 | Full Episode 53 | 30 Oct 2026 | HD #newepisode Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-30T16:30:12Z",
+      "duration_seconds": 1340,
+      "view_count": 4575153,
+      "like_count": 66821
+    },
+    {
+      "id": "1H4nCi4qKqs",
+      "title": "Hamari Bhabhi Number 1 | Full Episode 52 | 29 Oct 2026 | HD #newepisode Dangal TV",
+      "channel": "Dangal TV Channel",
+      "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
+      "published_at": "2026-10-29T16:30:07Z",
+      "duration_seconds": 1350,
+      "view_count": 4574963,
+      "like_count": 64755
+    },
+    {
+      "id": "-YWR0zFho6M",
+      "title": "I Learned Extreme Camouflage to Sneak Into a Real Movie!",
+      "channel": "Stokes Twins",
+      "channel_id": "UCbp9MyKCTEww4CxEzc_Tp0Q",
+      "published_at": "2026-10-31T02:30:31Z",
+      "duration_seconds": 894,
+      "view_count": 4486894,
+      "like_count": 32440
+    },
+    {
+      "id": "BRr_2UnkCVA",
+      "title": "Escape Every Color, Win $10,000!",
+      "channel": "The Royalty Family",
+      "channel_id": "UCja7QUMRG9AD8X2F_vXFb9A",
+      "published_at": "2026-11-01T16:52:42Z",
+      "duration_seconds": 2251,
+      "view_count": 4421676,
+      "like_count": 32292
     }
   ],
   "publish_date_span": {
-    "min": "2026-10-08T10:40:30Z",
-    "max": "2026-11-01T15:06:34Z"
+    "min": "2026-10-09T11:00:36Z",
+    "max": "2026-11-07T17:54:58Z"
   }
 }
