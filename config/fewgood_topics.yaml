@@ -1,0 +1,65 @@
+max_per_channel_in_top: 2
+top_n: 6
+search_call_cap: 15
+other_unit_cap: 300
+topics:
+  - id: ai-models
+    name_zh: AI 模型与研究
+    definition: 关注模型能力、训练方法、评测与研究进展。
+    include_terms: {strong: ["large language model", LLM, "foundation model", "reasoning model", "AI research", "research paper", interpretability, "reinforcement learning", pretraining, "fine-tuning", "scaling law", "open-weight", "model release", "模型", "大语言模型"], weak: [benchmark, transformer, inference, 评测, paper, GPT, Gemini, Claude, Llama, Qwen, DeepSeek]}
+    exclude_terms: ["stock to buy", "make money", "3d model", "model kit", "fashion model", "role model"]
+    queries: ["AI model research", "LLM research"]
+    trusted_channels: [{name: OpenAI, youtube_channel_id: UCXZCJLdBC09xxGZ6gcdrc6A}, {name: Anthropic, youtube_channel_id: UCrDwWp7EBBv4NwvScIpBDOA}, {name: Google DeepMind, youtube_channel_id: UCP7jMXSY2xbc3KCAE0MHQ-A}, {name: Hugging Face, youtube_channel_id: UCHlNU7kIZhRgSbhHvFoy72w}, {name: Two Minute Papers, youtube_channel_id: UCbfYPyITQ-7l4upoX8nvctg}, {name: AI Explained, youtube_channel_id: UCNJ1Ymd5yFuUPtn21xtRbbw}, {name: Andrej Karpathy, youtube_channel_id: UCe4jUOmQPKMDvOkzJpDfMRQ}, {name: DeepLearning.AI, youtube_channel_id: UCcIXc5mJsHVYTZR1maL5l9w}]
+    published_within_days: 30
+    min_duration_seconds: 240
+    max_duration_seconds: 7200
+    fallback: 宁缺毋滥：不足 6 条就展示实际数量并标注候选不足；不降低相关性门槛
+    baseline_query: AI models
+  - id: ai-agents
+    name_zh: AI Agent
+    definition: 关注能规划、调用工具或执行任务的 AI Agent。
+    include_terms: {strong: ["AI agent", "AI agents", "agentic AI", agentic, MCP, "Model Context Protocol", "computer use", "agent framework", LangGraph, "multi-agent", "智能体", "AI 智能体"], weak: [agent, agents, "tool calling"]}
+    exclude_terms: ["real estate agent", "travel agent", "valorant agent", "movie agent", "secret agent", "insurance agent", "agent 007", "free agent", "fbi agent"]
+    queries: ["AI agents", "agentic AI tutorial"]
+    trusted_channels: [{name: LangChain, youtube_channel_id: UCC-lyoTfSrcJzA1ab3APAgw}, {name: AI Engineer, youtube_channel_id: UCLKPca3kwwd-B59HNr-_lvA}, {name: OpenAI, youtube_channel_id: UCXZCJLdBC09xxGZ6gcdrc6A}]
+    published_within_days: 30
+    min_duration_seconds: 240
+    max_duration_seconds: 7200
+    fallback: 宁缺毋滥：不足 6 条就展示实际数量并标注候选不足；不降低相关性门槛
+    baseline_query: AI Agent
+  - id: ai-coding
+    name_zh: AI 编程
+    definition: 关注 AI 辅助开发、代码生成与工程实践。
+    include_terms: {strong: ["AI coding", "AI code", "coding agent", "code agent", Cursor, Copilot, "Claude Code", Codex, "vibe coding", Windsurf, "AI IDE", "code review agent", "GitHub Copilot", "AI 编程"], weak: ["code generation", "软件开发", developer, coding, IDE, programming]}
+    exclude_terms: ["learn python", "python for beginners", "python tutorial", "make money with AI"]
+    queries: ["AI coding tools", "coding agents"]
+    trusted_channels: [{name: Cursor, youtube_channel_id: UC6YYHJzM6PhZ2Yey9BQiUaw}, {name: AI Engineer, youtube_channel_id: UCLKPca3kwwd-B59HNr-_lvA}, {name: LangChain, youtube_channel_id: UCC-lyoTfSrcJzA1ab3APAgw}]
+    published_within_days: 30
+    min_duration_seconds: 240
+    max_duration_seconds: 7200
+    fallback: 宁缺毋滥：不足 6 条就展示实际数量并标注候选不足；不降低相关性门槛
+    baseline_query: AI coding
+  - id: ai-products
+    name_zh: AI 产品与应用
+    definition: 关注面向真实用户的 AI 产品、功能与使用案例。
+    include_terms: {strong: ["AI product", "AI app", "AI application", ChatGPT, "AI tool", "AI tools", "AI feature", "AI assistant", NotebookLM, "AI video generator", "AI 产品", "AI 应用"], weak: ["product launch", "new feature", "use case", demo, launch, app, workflow]}
+    exclude_terms: ["make money with AI", "passive income", "get rich", clickbait, "top 10 AI tools to make money"]
+    queries: ["new AI products", "AI application demo"]
+    trusted_channels: [{name: Perplexity, youtube_channel_id: UCTSqI4c58ffN6l5Mbdat6dg}, {name: Runway, youtube_channel_id: UCUBqu_z5uP0AZhYtuyFZB3g}, {name: ElevenLabs, youtube_channel_id: UC-ew9TfeD887qUSiWWAAj1w}]
+    published_within_days: 30
+    min_duration_seconds: 240
+    max_duration_seconds: 7200
+    fallback: 宁缺毋滥：不足 6 条就展示实际数量并标注候选不足；不降低相关性门槛
+    baseline_query: AI products
+  - id: ai-industry
+    name_zh: AI 产业动态
+    definition: 关注 AI 公司、政策、融资、合作与行业变化。
+    include_terms: {strong: ["AI industry", "AI company", "AI funding", "AI regulation", "AI news", "AI policy", "AI startup", "AI chips", "data center", "AI investment", "AI bubble", "AI 产业"], weak: [startup, acquisition, policy, investment, 融资, 政策, earnings, IPO, regulation, chips, OpenAI, Nvidia, Anthropic]}
+    exclude_terms: ["stock to buy", "buy this stock", "price target", "make money with AI"]
+    queries: ["AI industry news", "AI company news"]
+    trusted_channels: [{name: The Rundown AI, youtube_channel_id: UC8LUzR34nNX8KH3Edd0un1g}, {name: Latent Space, youtube_channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ}, {name: NVIDIA, youtube_channel_id: UCHuiy8bXnmK5nisYHUd1J5g}]
+    published_within_days: 30
+    min_duration_seconds: 240
+    max_duration_seconds: 7200
+    fallback: 宁缺毋滥：不足 6 条就展示实际数量并标注候选不足；不降低相关性门槛
+    baseline_query: AI industry

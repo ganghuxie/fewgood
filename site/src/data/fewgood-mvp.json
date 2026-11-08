@@ -1,0 +1,1811 @@
+{
+  "generated_at": "2026-11-08T12:14:38Z",
+  "data_refreshed_at": "2026-11-08T12:12:51Z",
+  "mode": "select",
+  "config_digest": "18247ac746873dc81c426f0c964badca7fd21c2e2cb8ffacdc698a711a86dc7a",
+  "usage_summary": {
+    "calls": [
+      {
+        "endpoint": "search",
+        "purpose": "baseline:ai-models",
+        "timestamp": "2026-11-08T12:12:32Z",
+        "http_status": 200,
+        "returned": 10
+      },
+      {
+        "endpoint": "search",
+        "purpose": "baseline:ai-agents",
+        "timestamp": "2026-11-08T12:12:33Z",
+        "http_status": 200,
+        "returned": 10
+      },
+      {
+        "endpoint": "search",
+        "purpose": "baseline:ai-coding",
+        "timestamp": "2026-11-08T12:12:33Z",
+        "http_status": 200,
+        "returned": 10
+      },
+      {
+        "endpoint": "search",
+        "purpose": "baseline:ai-products",
+        "timestamp": "2026-11-08T12:12:33Z",
+        "http_status": 200,
+        "returned": 10
+      },
+      {
+        "endpoint": "search",
+        "purpose": "baseline:ai-industry",
+        "timestamp": "2026-11-08T12:12:34Z",
+        "http_status": 200,
+        "returned": 10
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-models:AI model research",
+        "timestamp": "2026-11-08T12:12:34Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-models:LLM research",
+        "timestamp": "2026-11-08T12:12:34Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-agents:AI agents",
+        "timestamp": "2026-11-08T12:12:35Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-agents:agentic AI tutorial",
+        "timestamp": "2026-11-08T12:12:35Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-coding:AI coding tools",
+        "timestamp": "2026-11-08T12:12:36Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-coding:coding agents",
+        "timestamp": "2026-11-08T12:12:36Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-products:new AI products",
+        "timestamp": "2026-11-08T12:12:37Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-products:AI application demo",
+        "timestamp": "2026-11-08T12:12:37Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-industry:AI industry news",
+        "timestamp": "2026-11-08T12:12:37Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "search",
+        "purpose": "topic:ai-industry:AI company news",
+        "timestamp": "2026-11-08T12:12:38Z",
+        "http_status": 200,
+        "returned": 25
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:OpenAI",
+        "timestamp": "2026-11-08T12:12:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Anthropic",
+        "timestamp": "2026-11-08T12:12:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Google DeepMind",
+        "timestamp": "2026-11-08T12:12:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:AI at Meta",
+        "timestamp": "2026-11-08T12:12:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:NVIDIA",
+        "timestamp": "2026-11-08T12:12:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Hugging Face",
+        "timestamp": "2026-11-08T12:12:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Stability AI",
+        "timestamp": "2026-11-08T12:12:39Z",
+        "http_status": 200,
+        "returned": 12
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Midjourney",
+        "timestamp": "2026-11-08T12:12:39Z",
+        "http_status": 200,
+        "returned": 14
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:DeepLearning.AI",
+        "timestamp": "2026-11-08T12:12:40Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Mistral AI",
+        "timestamp": "2026-11-08T12:12:40Z",
+        "http_status": 404,
+        "returned": 0
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Cohere",
+        "timestamp": "2026-11-08T12:12:40Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Perplexity",
+        "timestamp": "2026-11-08T12:12:40Z",
+        "http_status": 404,
+        "returned": 0
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Runway",
+        "timestamp": "2026-11-08T12:12:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:ElevenLabs",
+        "timestamp": "2026-11-08T12:12:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Character.AI",
+        "timestamp": "2026-11-08T12:12:41Z",
+        "http_status": 404,
+        "returned": 0
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Scale AI",
+        "timestamp": "2026-11-08T12:12:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Together AI",
+        "timestamp": "2026-11-08T12:12:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Cursor",
+        "timestamp": "2026-11-08T12:12:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:LangChain",
+        "timestamp": "2026-11-08T12:12:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Pinecone",
+        "timestamp": "2026-11-08T12:12:42Z",
+        "http_status": 200,
+        "returned": 37
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:AI Engineer",
+        "timestamp": "2026-11-08T12:12:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:The Rundown AI",
+        "timestamp": "2026-11-08T12:12:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Latent Space",
+        "timestamp": "2026-11-08T12:12:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Andrej Karpathy",
+        "timestamp": "2026-11-08T12:12:44Z",
+        "http_status": 200,
+        "returned": 5
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Andrew Ng",
+        "timestamp": "2026-11-08T12:12:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Yann LeCun",
+        "timestamp": "2026-11-08T12:12:44Z",
+        "http_status": 200,
+        "returned": 26
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:François Chollet",
+        "timestamp": "2026-11-08T12:12:44Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Greg Brockman",
+        "timestamp": "2026-11-08T12:12:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Jack Clark",
+        "timestamp": "2026-11-08T12:12:45Z",
+        "http_status": 200,
+        "returned": 2
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Jim Fan",
+        "timestamp": "2026-11-08T12:12:45Z",
+        "http_status": 404,
+        "returned": 0
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:hardmaru",
+        "timestamp": "2026-11-08T12:12:45Z",
+        "http_status": 200,
+        "returned": 6
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Lex Fridman",
+        "timestamp": "2026-11-08T12:12:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Two Minute Papers",
+        "timestamp": "2026-11-08T12:12:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Sentdex",
+        "timestamp": "2026-11-08T12:12:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:3Blue1Brown",
+        "timestamp": "2026-11-08T12:12:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:AI Explained",
+        "timestamp": "2026-11-08T12:12:47Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Siraj Raval",
+        "timestamp": "2026-11-08T12:12:47Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:swyx",
+        "timestamp": "2026-11-08T12:12:47Z",
+        "http_status": 404,
+        "returned": 0
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Ethan Mollick",
+        "timestamp": "2026-11-08T12:12:47Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Rowan Cheung",
+        "timestamp": "2026-11-08T12:12:47Z",
+        "http_status": 404,
+        "returned": 0
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Linus Ekenstam",
+        "timestamp": "2026-11-08T12:12:48Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "channel_uploads:Mckay Wrigley",
+        "timestamp": "2026-11-08T12:12:48Z",
+        "http_status": 200,
+        "returned": 22
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:48Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:48Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T12:12:51Z",
+        "http_status": 200,
+        "returned": 9
+      }
+    ],
+    "search_calls": 15,
+    "other_units": 55,
+    "old_model_units": 1555,
+    "aborted_reason": null
+  },
+  "pool_stats": {
+    "existing_pool_raw": 783,
+    "existing_pool_selected": 129,
+    "channel_upload_raw": 364,
+    "search_raw": 250,
+    "merged_unique": 587,
+    "after_title_dedup": 573,
+    "fetched_details": 609,
+    "missing_details": 0,
+    "duplicates_removed": 14,
+    "duplicate_pairs": [
+      {
+        "kept": "T2YGD6TZXtg",
+        "removed": "5HyG_FKtVmo",
+        "title": "Full Stack Generative AI with AI Agents, Agentic AI tutorials || Demo - 1 || by Khan Trainer"
+      },
+      {
+        "kept": "KhDzPY5PwN0",
+        "removed": "aeFED_MT7WI",
+        "title": "Demo-1 | Generative AI & Agentic AI Demo | Build Intelligent AI Applications"
+      },
+      {
+        "kept": "-fQ4eadD4dQ",
+        "removed": "7Zglgny1WBc",
+        "title": "Goldman Limits Traders and Bankers From Using Some AI Tools"
+      },
+      {
+        "kept": "44GBqQGc-v0",
+        "removed": "0LDs5rvx1EI",
+        "title": "How Figma Is Building Self-Serve Analytics with OpenAI"
+      },
+      {
+        "kept": "2h16j4K_NbA",
+        "removed": "JR7xBi2kJjY",
+        "title": "Glean on privacy and OpenAI Private Intelligence"
+      },
+      {
+        "kept": "Amm9ySSET4c",
+        "removed": "NbDF90z-g6w",
+        "title": "Coinbase on OpenAI Private Intelligence"
+      },
+      {
+        "kept": "Oi9DHk57KeQ",
+        "removed": "7TtGMileCus",
+        "title": "How Gen uses ChatGPT Work to turn data Into decisions | OpenAI"
+      },
+      {
+        "kept": "L6pzlo1QvoM",
+        "removed": "GNYHDltnwZQ",
+        "title": "ChatGPT Enterprise at Zendesk: Putting Company Data to Work"
+      },
+      {
+        "kept": "ilG7LPrngkI",
+        "removed": "vKMDQJpRSvA",
+        "title": "AI for Detection and Response | Cloudflare’s Mark Anderson"
+      },
+      {
+        "kept": "0qb0FQo3M5c",
+        "removed": "tFmlEKQkZi0",
+        "title": "Why Cybersecurity Needs AI | Cisco’s Jeetu Patel"
+      },
+      {
+        "kept": "crEHJon4iD4",
+        "removed": "Wanw4woz7zc",
+        "title": "How Sullivan & Cromwell builds legal tools with Codex | OpenAI"
+      },
+      {
+        "kept": "4ZwVP0-ylZU",
+        "removed": "xuQhEr3G2LQ",
+        "title": "Introducing Muse Wonder & Muse Wonder Full: frontier models for agentic tasks"
+      },
+      {
+        "kept": "PzzGrl6RW0I",
+        "removed": "pkXcc6aKyGU",
+        "title": "What You Missed at Hugging Face Open Together"
+      },
+      {
+        "kept": "WV5nqvHJ0Rw",
+        "removed": "ozXE36jAP0M",
+        "title": "Try Recast in ElevenCreative"
+      }
+    ]
+  },
+  "timing": {
+    "collect_seconds": 19.14751,
+    "select_seconds": 1.655549
+  },
+  "rules_notes": [
+    "竖屏判断：videos.list 未返回 embedWidth/embedHeight 时不按方向排除，依靠最短 4 分钟时长排除 Shorts"
+  ],
+  "topics": [
+    {
+      "id": "ai-models",
+      "name_zh": "AI 模型与研究",
+      "definition": "关注模型能力、训练方法、评测与研究进展。",
+      "stats": {
+        "searches": 2,
+        "baseline_searches": 1,
+        "topic_search_results": 50,
+        "matched": 112,
+        "matched_tier1": 25,
+        "matched_tier2": 76,
+        "matched_tier3": 11,
+        "eligible": 64,
+        "shown": 6,
+        "channel_distribution_shown": {
+          "Hugging Face": 1,
+          "The Pretrained Pod": 1,
+          "AI Research Roundup": 2,
+          "bycloud": 1,
+          "Breach FM - der Infosec Podcast": 1
+        },
+        "channel_distribution_eligible": {
+          "Hugging Face": 1,
+          "The Pretrained Pod": 1,
+          "AI Research Roundup": 2,
+          "bycloud": 1,
+          "Breach FM - der Infosec Podcast": 1
+        },
+        "excluded_by_rule": {
+          "duration": 69,
+          "exclude:make money": 3,
+          "live_or_upcoming": 1
+        },
+        "duplicates_in_topic": 0
+      },
+      "videos": [
+        {
+          "video_id": "mEtRe_KKYm0",
+          "title": "Hugging Face Journal Club: Score Centering Stabilizes Off-policy Reinforcement Learning",
+          "channel_title": "Hugging Face",
+          "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w",
+          "published_at": "2026-10-26T13:38:50Z",
+          "duration_seconds": 1946,
+          "view_count": 3008,
+          "topic": "ai-models",
+          "sources": [
+            "channel_uploads:Hugging Face"
+          ],
+          "reasons": [
+            "标题含关键词「reinforcement learning」",
+            "也匹配：AI 产业动态",
+            "来自可信频道：Hugging Face",
+            "发布于 2026-10-26（13 天前）",
+            "时长 32:26，非 Shorts",
+            "被 1 个来源发现：频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=mEtRe_KKYm0",
+          "thumbnail": "https://i.ytimg.com/vi/mEtRe_KKYm0/mqdefault.jpg"
+        },
+        {
+          "video_id": "bR5mzluCO5I",
+          "title": "The Shelf Life of LLM Findings",
+          "channel_title": "The Pretrained Pod",
+          "channel_id": "UCFVfVVrJzZStqDWu7mbp1mw",
+          "published_at": "2026-11-05T13:26:26Z",
+          "duration_seconds": 1328,
+          "view_count": 376,
+          "topic": "ai-models",
+          "sources": [
+            "search:LLM research"
+          ],
+          "reasons": [
+            "标题含关键词「LLM」",
+            "发布于 2026-11-05（3 天前）",
+            "时长 22:08，非 Shorts",
+            "被 1 个来源发现：搜索「LLM research」"
+          ],
+          "url": "https://www.youtube.com/watch?v=bR5mzluCO5I",
+          "thumbnail": "https://i.ytimg.com/vi/bR5mzluCO5I/mqdefault.jpg"
+        },
+        {
+          "video_id": "YphV2bVmHhc",
+          "title": "IdeaTaste: Benchmarking LLM Research Taste",
+          "channel_title": "AI Research Roundup",
+          "channel_id": "UCgan40EwxkwM9ot1pV8lTFA",
+          "published_at": "2026-11-05T05:43:02Z",
+          "duration_seconds": 286,
+          "view_count": 54,
+          "topic": "ai-models",
+          "sources": [
+            "search:LLM research"
+          ],
+          "reasons": [
+            "标题含关键词「LLM」",
+            "也匹配：AI Agent",
+            "发布于 2026-11-05（3 天前）",
+            "时长 4:46，非 Shorts",
+            "被 1 个来源发现：搜索「LLM research」"
+          ],
+          "url": "https://www.youtube.com/watch?v=YphV2bVmHhc",
+          "thumbnail": "https://i.ytimg.com/vi/YphV2bVmHhc/mqdefault.jpg"
+        },
+        {
+          "video_id": "2K_Rm8cho1I",
+          "title": "DeepSeek's New LLM Engine Just Made GPUs 3x More Valuable",
+          "channel_title": "bycloud",
+          "channel_id": "UCgfe2ooZD3VJPB6aJAnuQng",
+          "published_at": "2026-11-03T16:07:50Z",
+          "duration_seconds": 1159,
+          "view_count": 227350,
+          "topic": "ai-models",
+          "sources": [
+            "search:LLM research"
+          ],
+          "reasons": [
+            "标题含关键词「LLM」",
+            "也匹配：AI Agent、AI 编程、AI 产业动态",
+            "发布于 2026-11-03（5 天前）",
+            "时长 19:19，非 Shorts",
+            "被 1 个来源发现：搜索「LLM research」"
+          ],
+          "url": "https://www.youtube.com/watch?v=2K_Rm8cho1I",
+          "thumbnail": "https://i.ytimg.com/vi/2K_Rm8cho1I/mqdefault.jpg"
+        },
+        {
+          "video_id": "cdW2CYF6fhM",
+          "title": "LLM scaling, agent reliability and Europe’s AI stack ft. Daniel Gillblad",
+          "channel_title": "Breach FM - der Infosec Podcast",
+          "channel_id": "UCCGRGi0-jxQtVE12S8ykrIw",
+          "published_at": "2026-10-28T00:58:08Z",
+          "duration_seconds": 5754,
+          "view_count": 19,
+          "topic": "ai-models",
+          "sources": [
+            "search:LLM research"
+          ],
+          "reasons": [
+            "标题含关键词「LLM」",
+            "也匹配：AI Agent",
+            "发布于 2026-10-28（11 天前）",
+            "时长 95:54，非 Shorts",
+            "被 1 个来源发现：搜索「LLM research」"
+          ],
+          "url": "https://www.youtube.com/watch?v=cdW2CYF6fhM",
+          "thumbnail": "https://i.ytimg.com/vi/cdW2CYF6fhM/mqdefault.jpg"
+        },
+        {
+          "video_id": "o3Z8ajFXAgU",
+          "title": "AutoTavern: LLM Agents Build Top Hearthstone Bot",
+          "channel_title": "AI Research Roundup",
+          "channel_id": "UCgan40EwxkwM9ot1pV8lTFA",
+          "published_at": "2026-10-28T00:22:19Z",
+          "duration_seconds": 283,
+          "view_count": 160,
+          "topic": "ai-models",
+          "sources": [
+            "search:LLM research"
+          ],
+          "reasons": [
+            "标题含关键词「LLM」",
+            "也匹配：AI Agent",
+            "发布于 2026-10-28（11 天前）",
+            "时长 4:43，非 Shorts",
+            "被 1 个来源发现：搜索「LLM research」"
+          ],
+          "url": "https://www.youtube.com/watch?v=o3Z8ajFXAgU",
+          "thumbnail": "https://i.ytimg.com/vi/o3Z8ajFXAgU/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ai-agents",
+      "name_zh": "AI Agent",
+      "definition": "关注能规划、调用工具或执行任务的 AI Agent。",
+      "stats": {
+        "searches": 2,
+        "baseline_searches": 1,
+        "topic_search_results": 50,
+        "matched": 167,
+        "matched_tier1": 92,
+        "matched_tier2": 66,
+        "matched_tier3": 9,
+        "eligible": 104,
+        "shown": 6,
+        "channel_distribution_shown": {
+          "AI Engineer": 2,
+          "Grace Leung": 1,
+          "Siraj Raval": 1,
+          "Metics Media": 1,
+          "IBM Technology": 1
+        },
+        "channel_distribution_eligible": {
+          "AI Engineer": 15,
+          "Grace Leung": 1,
+          "Siraj Raval": 1,
+          "Metics Media": 1,
+          "IBM Technology": 1
+        },
+        "excluded_by_rule": {
+          "duration": 79
+        },
+        "duplicates_in_topic": 0
+      },
+      "videos": [
+        {
+          "video_id": "kIlVNGZZr8o",
+          "title": "How Agents Cut Hour-Long Data Checks to 5 Minutes - Amol Kapoor & Clifford Ressel, Nori Agentic",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-11-07T07:00:18Z",
+          "duration_seconds": 1174,
+          "view_count": 5334,
+          "topic": "ai-agents",
+          "sources": [
+            "existing:ai.json",
+            "existing:catalog.json",
+            "channel_uploads:AI Engineer"
+          ],
+          "reasons": [
+            "标题含关键词「agentic」",
+            "来自可信频道：AI Engineer",
+            "发布于 2026-11-07（1 天前）",
+            "时长 19:34，非 Shorts",
+            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=kIlVNGZZr8o",
+          "thumbnail": "https://i.ytimg.com/vi/kIlVNGZZr8o/mqdefault.jpg"
+        },
+        {
+          "video_id": "pz74r-4dGfQ",
+          "title": "Your AI Agent Is Hiding Its Mistakes From You - Ben Holmes, Warp",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-11-06T22:00:01Z",
+          "duration_seconds": 1160,
+          "view_count": 29625,
+          "topic": "ai-agents",
+          "sources": [
+            "existing:ai.json",
+            "existing:catalog.json",
+            "channel_uploads:AI Engineer"
+          ],
+          "reasons": [
+            "标题含关键词「AI agent」",
+            "也匹配：AI 模型与研究、AI 编程",
+            "来自可信频道：AI Engineer",
+            "发布于 2026-11-06（2 天前）",
+            "时长 19:20，非 Shorts",
+            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=pz74r-4dGfQ",
+          "thumbnail": "https://i.ytimg.com/vi/pz74r-4dGfQ/mqdefault.jpg"
+        },
+        {
+          "video_id": "F8jidmEkIeM",
+          "title": "Claude Code: Build Your First AI Agent in 20 Minutes (100% No Coding)",
+          "channel_title": "Grace Leung",
+          "channel_id": "UCrB7UFnkosBjAhOg3a9NdWw",
+          "published_at": "2026-10-30T13:00:10Z",
+          "duration_seconds": 1201,
+          "view_count": 250782,
+          "topic": "ai-agents",
+          "sources": [
+            "search:AI agents",
+            "search:agentic AI tutorial",
+            "search:AI coding tools",
+            "search:coding agents",
+            "search:AI application demo"
+          ],
+          "reasons": [
+            "标题含关键词「AI agent」",
+            "也匹配：AI 模型与研究、AI 编程、AI 产品与应用",
+            "发布于 2026-10-30（9 天前）",
+            "时长 20:01，非 Shorts",
+            "被 5 个来源发现：搜索「AI agents」 / 搜索「agentic AI tutorial」 / 搜索「AI coding tools」 / 搜索「coding agents」 / 搜索「AI application demo」"
+          ],
+          "url": "https://www.youtube.com/watch?v=F8jidmEkIeM",
+          "thumbnail": "https://i.ytimg.com/vi/F8jidmEkIeM/mqdefault.jpg"
+        },
+        {
+          "video_id": "ibdmyMFd_z8",
+          "title": "I Gave My AI Agent Live Internet Access (Here Is What Broke First)",
+          "channel_title": "Siraj Raval",
+          "channel_id": "UCWN3xxRkmTPmbKwht9FuE5A",
+          "published_at": "2026-11-06T14:51:09Z",
+          "duration_seconds": 1154,
+          "view_count": 2296,
+          "topic": "ai-agents",
+          "sources": [
+            "existing:ai.json",
+            "existing:catalog.json",
+            "channel_uploads:Siraj Raval"
+          ],
+          "reasons": [
+            "标题含关键词「AI agent」",
+            "也匹配：AI 模型与研究",
+            "发布于 2026-11-06（2 天前）",
+            "时长 19:14，非 Shorts",
+            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=ibdmyMFd_z8",
+          "thumbnail": "https://i.ytimg.com/vi/ibdmyMFd_z8/mqdefault.jpg"
+        },
+        {
+          "video_id": "rCkYVxOX-dI",
+          "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
+          "channel_title": "Metics Media",
+          "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ",
+          "published_at": "2026-10-19T11:00:25Z",
+          "duration_seconds": 1274,
+          "view_count": 670936,
+          "topic": "ai-agents",
+          "sources": [
+            "search:agentic AI tutorial",
+            "search:AI coding tools",
+            "search:coding agents"
+          ],
+          "reasons": [
+            "标题含关键词「AI agent」",
+            "也匹配：AI 编程",
+            "发布于 2026-10-19（20 天前）",
+            "时长 21:14，非 Shorts",
+            "被 3 个来源发现：搜索「agentic AI tutorial」 / 搜索「AI coding tools」 / 搜索「coding agents」"
+          ],
+          "url": "https://www.youtube.com/watch?v=rCkYVxOX-dI",
+          "thumbnail": "https://i.ytimg.com/vi/rCkYVxOX-dI/mqdefault.jpg"
+        },
+        {
+          "video_id": "DQBqh6gcx7U",
+          "title": "What Is Loop Engineering? Building Better AI Agents",
+          "channel_title": "IBM Technology",
+          "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ",
+          "published_at": "2026-10-19T11:00:06Z",
+          "duration_seconds": 648,
+          "view_count": 133156,
+          "topic": "ai-agents",
+          "sources": [
+            "search:AI agents",
+            "search:agentic AI tutorial",
+            "search:coding agents"
+          ],
+          "reasons": [
+            "标题含关键词「AI agents」",
+            "发布于 2026-10-19（20 天前）",
+            "时长 10:48，非 Shorts",
+            "被 3 个来源发现：搜索「AI agents」 / 搜索「agentic AI tutorial」 / 搜索「coding agents」"
+          ],
+          "url": "https://www.youtube.com/watch?v=DQBqh6gcx7U",
+          "thumbnail": "https://i.ytimg.com/vi/DQBqh6gcx7U/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ai-coding",
+      "name_zh": "AI 编程",
+      "definition": "关注 AI 辅助开发、代码生成与工程实践。",
+      "stats": {
+        "searches": 2,
+        "baseline_searches": 1,
+        "topic_search_results": 50,
+        "matched": 49,
+        "matched_tier1": 32,
+        "matched_tier2": 11,
+        "matched_tier3": 6,
+        "eligible": 25,
+        "shown": 6,
+        "channel_distribution_shown": {
+          "AI Engineer": 2,
+          "RGSecurityTeam": 1,
+          "EarnixLab": 1,
+          "Julian Goldie SEO": 1,
+          "ArjanCodes": 1
+        },
+        "channel_distribution_eligible": {
+          "AI Engineer": 2,
+          "RGSecurityTeam": 1,
+          "EarnixLab": 1,
+          "Julian Goldie SEO": 1,
+          "ArjanCodes": 1
+        },
+        "excluded_by_rule": {
+          "duration": 39,
+          "too_old": 3,
+          "exclude:make money with AI": 2
+        },
+        "duplicates_in_topic": 0
+      },
+      "videos": [
+        {
+          "video_id": "y9Sg--RDtks",
+          "title": "当我们什么都能做，还知道自己想做什么吗？When We Can Do Anything, Do We Still Know What We Want? — Ryo Lu, ex-Cursor",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-11-06T14:44:57Z",
+          "duration_seconds": 1385,
+          "view_count": 7029,
+          "topic": "ai-coding",
+          "sources": [
+            "existing:ai.json",
+            "existing:catalog.json",
+            "channel_uploads:AI Engineer"
+          ],
+          "reasons": [
+            "标题含关键词「Cursor」",
+            "也匹配：AI 产品与应用",
+            "来自可信频道：AI Engineer",
+            "发布于 2026-11-06（2 天前）",
+            "时长 23:05，非 Shorts",
+            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=y9Sg--RDtks",
+          "thumbnail": "https://i.ytimg.com/vi/y9Sg--RDtks/mqdefault.jpg"
+        },
+        {
+          "video_id": "BT1Mo-fD-g0",
+          "title": "Your Coding Agent Can't Undo Its Own Mistakes - Tanmay Sah & Dolly Sah",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-11-08T08:00:03Z",
+          "duration_seconds": 998,
+          "view_count": 1276,
+          "topic": "ai-coding",
+          "sources": [
+            "search:coding agents",
+            "channel_uploads:AI Engineer"
+          ],
+          "reasons": [
+            "标题含关键词「coding agent」",
+            "也匹配：AI 模型与研究、AI Agent",
+            "来自可信频道：AI Engineer",
+            "发布于 2026-11-08（0 天前）",
+            "时长 16:38，非 Shorts",
+            "被 2 个来源发现：搜索「coding agents」 / 频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=BT1Mo-fD-g0",
+          "thumbnail": "https://i.ytimg.com/vi/BT1Mo-fD-g0/mqdefault.jpg"
+        },
+        {
+          "video_id": "DHZECISfaMc",
+          "title": "I Jailbroke My AI Coding Agent… It Actually Worked! 😳",
+          "channel_title": "RGSecurityTeam",
+          "channel_id": "UCt3ErdvpKHBGAbg8qoLIZSA",
+          "published_at": "2026-10-31T14:30:35Z",
+          "duration_seconds": 289,
+          "view_count": 35842,
+          "topic": "ai-coding",
+          "sources": [
+            "search:AI coding tools",
+            "search:coding agents"
+          ],
+          "reasons": [
+            "标题含关键词「AI coding」",
+            "也匹配：AI 模型与研究、AI Agent、AI 产业动态",
+            "发布于 2026-10-31（8 天前）",
+            "时长 4:49，非 Shorts",
+            "被 2 个来源发现：搜索「AI coding tools」 / 搜索「coding agents」"
+          ],
+          "url": "https://www.youtube.com/watch?v=DHZECISfaMc",
+          "thumbnail": "https://i.ytimg.com/vi/DHZECISfaMc/mqdefault.jpg"
+        },
+        {
+          "video_id": "Wi83iStXpio",
+          "title": "Use Tencent HY4 for FREE! Best New AI Coding Agent (Full Setup Guide)",
+          "channel_title": "EarnixLab",
+          "channel_id": "UC8jIq2GuOzQp2NrX4f2nGVQ",
+          "published_at": "2026-11-07T17:30:07Z",
+          "duration_seconds": 560,
+          "view_count": 7702,
+          "topic": "ai-coding",
+          "sources": [
+            "search:coding agents"
+          ],
+          "reasons": [
+            "标题含关键词「AI coding」",
+            "也匹配：AI 模型与研究、AI Agent、AI 产品与应用",
+            "发布于 2026-11-07（1 天前）",
+            "时长 9:20，非 Shorts",
+            "被 1 个来源发现：搜索「coding agents」"
+          ],
+          "url": "https://www.youtube.com/watch?v=Wi83iStXpio",
+          "thumbnail": "https://i.ytimg.com/vi/Wi83iStXpio/mqdefault.jpg"
+        },
+        {
+          "video_id": "QwYKWW17xO8",
+          "title": "OpenCode Just Made AI Coding Automation INSANE!",
+          "channel_title": "Julian Goldie SEO",
+          "channel_id": "UCGpsgNbzdF7BECCVbB1COHw",
+          "published_at": "2026-11-06T23:00:12Z",
+          "duration_seconds": 510,
+          "view_count": 8302,
+          "topic": "ai-coding",
+          "sources": [
+            "search:AI coding tools"
+          ],
+          "reasons": [
+            "标题含关键词「AI coding」",
+            "也匹配：AI Agent、AI 产品与应用",
+            "发布于 2026-11-06（2 天前）",
+            "时长 8:30，非 Shorts",
+            "被 1 个来源发现：搜索「AI coding tools」"
+          ],
+          "url": "https://www.youtube.com/watch?v=QwYKWW17xO8",
+          "thumbnail": "https://i.ytimg.com/vi/QwYKWW17xO8/mqdefault.jpg"
+        },
+        {
+          "video_id": "oFtTodDCbkE",
+          "title": "7 Things AI Coding Agents Get Wrong (Because You Let Them)",
+          "channel_title": "ArjanCodes",
+          "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA",
+          "published_at": "2026-11-06T16:00:29Z",
+          "duration_seconds": 836,
+          "view_count": 24626,
+          "topic": "ai-coding",
+          "sources": [
+            "search:coding agents"
+          ],
+          "reasons": [
+            "标题含关键词「AI coding」",
+            "也匹配：AI 模型与研究、AI Agent",
+            "发布于 2026-11-06（2 天前）",
+            "时长 13:56，非 Shorts",
+            "被 1 个来源发现：搜索「coding agents」"
+          ],
+          "url": "https://www.youtube.com/watch?v=oFtTodDCbkE",
+          "thumbnail": "https://i.ytimg.com/vi/oFtTodDCbkE/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ai-products",
+      "name_zh": "AI 产品与应用",
+      "definition": "关注面向真实用户的 AI 产品、功能与使用案例。",
+      "stats": {
+        "searches": 2,
+        "baseline_searches": 1,
+        "topic_search_results": 50,
+        "matched": 67,
+        "matched_tier1": 19,
+        "matched_tier2": 25,
+        "matched_tier3": 23,
+        "eligible": 15,
+        "shown": 6,
+        "channel_distribution_shown": {
+          "AI Engineer": 2,
+          "AI with Hassan": 1,
+          "Latent Space": 1,
+          "Zubair Trabzada | AI Workshop": 1,
+          "Mikey No Code": 1
+        },
+        "channel_distribution_eligible": {
+          "AI Engineer": 2,
+          "AI with Hassan": 1,
+          "Latent Space": 1,
+          "Zubair Trabzada | AI Workshop": 1,
+          "Mikey No Code": 1
+        },
+        "excluded_by_rule": {
+          "duration": 64,
+          "too_old": 1,
+          "exclude:make money with AI": 3
+        },
+        "duplicates_in_topic": 0
+      },
+      "videos": [
+        {
+          "video_id": "ZJjRgvjhq3M",
+          "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-11-07T19:00:33Z",
+          "duration_seconds": 6632,
+          "view_count": 9595,
+          "topic": "ai-products",
+          "sources": [
+            "existing:ai.json",
+            "existing:catalog.json",
+            "channel_uploads:AI Engineer"
+          ],
+          "reasons": [
+            "标题含关键词「ChatGPT」",
+            "也匹配：AI Agent、AI 编程、AI 产业动态",
+            "发布于 2026-11-07（1 天前）",
+            "时长 110:32，非 Shorts",
+            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=ZJjRgvjhq3M",
+          "thumbnail": "https://i.ytimg.com/vi/ZJjRgvjhq3M/mqdefault.jpg"
+        },
+        {
+          "video_id": "08XjzXEugNw",
+          "title": "Build Complete AI App Frontend, Backend, Payments, Authentication with FREE AI tools (0% Coding)",
+          "channel_title": "AI with Hassan",
+          "channel_id": "UC7JIdd6JEcDHe1nQNbA8lvg",
+          "published_at": "2026-11-07T13:00:20Z",
+          "duration_seconds": 1111,
+          "view_count": 5716,
+          "topic": "ai-products",
+          "sources": [
+            "search:AI coding tools"
+          ],
+          "reasons": [
+            "标题含关键词「AI app」",
+            "也匹配：AI Agent、AI 编程",
+            "发布于 2026-11-07（1 天前）",
+            "时长 18:31，非 Shorts",
+            "被 1 个来源发现：搜索「AI coding tools」"
+          ],
+          "url": "https://www.youtube.com/watch?v=08XjzXEugNw",
+          "thumbnail": "https://i.ytimg.com/vi/08XjzXEugNw/mqdefault.jpg"
+        },
+        {
+          "video_id": "CvmZtAPmAW4",
+          "title": "78% Wanted This AI Feature. Almost Nobody Used It - Supriya Subudhi, Bumble",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-10-31T09:00:01Z",
+          "duration_seconds": 884,
+          "view_count": 10095,
+          "topic": "ai-products",
+          "sources": [
+            "channel_uploads:AI Engineer"
+          ],
+          "reasons": [
+            "标题含关键词「AI feature」",
+            "也匹配：AI 模型与研究、AI 产业动态",
+            "发布于 2026-10-31（8 天前）",
+            "时长 14:44，非 Shorts",
+            "被 1 个来源发现：频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=CvmZtAPmAW4",
+          "thumbnail": "https://i.ytimg.com/vi/CvmZtAPmAW4/mqdefault.jpg"
+        },
+        {
+          "video_id": "v-d1WTqIULs",
+          "title": "Building ChatGPT for Finance — Joseph Kim, OpenAI's Head of Financial Services",
+          "channel_title": "Latent Space",
+          "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+          "published_at": "2026-10-31T03:41:20Z",
+          "duration_seconds": 1655,
+          "view_count": 6413,
+          "topic": "ai-products",
+          "sources": [
+            "channel_uploads:Latent Space"
+          ],
+          "reasons": [
+            "标题含关键词「ChatGPT」",
+            "也匹配：AI 产业动态",
+            "发布于 2026-10-31（8 天前）",
+            "时长 27:35，非 Shorts",
+            "被 1 个来源发现：频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=v-d1WTqIULs",
+          "thumbnail": "https://i.ytimg.com/vi/v-d1WTqIULs/mqdefault.jpg"
+        },
+        {
+          "video_id": "84CkBM_jF4g",
+          "title": "I Gave My AI Assistant the Power to Reverse Engineer ANYTHING!",
+          "channel_title": "Zubair Trabzada | AI Workshop",
+          "channel_id": "UC2b2wgxm0vFjQfJJ0iRcFRw",
+          "published_at": "2026-10-14T18:06:55Z",
+          "duration_seconds": 1092,
+          "view_count": 381466,
+          "topic": "ai-products",
+          "sources": [
+            "search:AI application demo"
+          ],
+          "reasons": [
+            "标题含关键词「AI assistant」",
+            "也匹配：AI 模型与研究、AI Agent、AI 编程",
+            "发布于 2026-10-14（25 天前）",
+            "时长 18:12，非 Shorts",
+            "被 1 个来源发现：搜索「AI application demo」"
+          ],
+          "url": "https://www.youtube.com/watch?v=84CkBM_jF4g",
+          "thumbnail": "https://i.ytimg.com/vi/84CkBM_jF4g/mqdefault.jpg"
+        },
+        {
+          "video_id": "qxED97f4i7A",
+          "title": "Best AI App Builder in 2026 (Ranked Worst to Best!)",
+          "channel_title": "Mikey No Code",
+          "channel_id": "UCde0vB0fTwC8AT3sJofFV0w",
+          "published_at": "2026-10-13T14:15:29Z",
+          "duration_seconds": 1507,
+          "view_count": 35443,
+          "topic": "ai-products",
+          "sources": [
+            "search:AI coding tools"
+          ],
+          "reasons": [
+            "标题含关键词「AI app」",
+            "也匹配：AI Agent",
+            "发布于 2026-10-13（26 天前）",
+            "时长 25:07，非 Shorts",
+            "被 1 个来源发现：搜索「AI coding tools」"
+          ],
+          "url": "https://www.youtube.com/watch?v=qxED97f4i7A",
+          "thumbnail": "https://i.ytimg.com/vi/qxED97f4i7A/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ai-industry",
+      "name_zh": "AI 产业动态",
+      "definition": "关注 AI 公司、政策、融资、合作与行业变化。",
+      "stats": {
+        "searches": 2,
+        "baseline_searches": 1,
+        "topic_search_results": 50,
+        "matched": 83,
+        "matched_tier1": 15,
+        "matched_tier2": 46,
+        "matched_tier3": 22,
+        "eligible": 23,
+        "shown": 6,
+        "channel_distribution_shown": {
+          "Latent Space": 1,
+          "TheAIGRID": 1,
+          "Matt Wolfe": 1,
+          "AI Decode": 1,
+          "Bloomberg Television": 1,
+          "FinnovationZ by Prasad": 1
+        },
+        "channel_distribution_eligible": {
+          "Latent Space": 1,
+          "TheAIGRID": 1,
+          "Matt Wolfe": 1,
+          "AI Decode": 1,
+          "Bloomberg Television": 1,
+          "FinnovationZ by Prasad": 1
+        },
+        "excluded_by_rule": {
+          "duration": 107,
+          "too_old": 2,
+          "exclude:make money with AI": 1
+        },
+        "duplicates_in_topic": 0
+      },
+      "videos": [
+        {
+          "video_id": "EAtLq9_vrE0",
+          "title": "The Programmable Data Center — Evan Conrad, SF Compute",
+          "channel_title": "Latent Space",
+          "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+          "published_at": "2026-10-20T14:00:07Z",
+          "duration_seconds": 2204,
+          "view_count": 62026,
+          "topic": "ai-industry",
+          "sources": [
+            "channel_uploads:Latent Space"
+          ],
+          "reasons": [
+            "标题含关键词「data center」",
+            "也匹配：AI 模型与研究",
+            "来自可信频道：Latent Space",
+            "发布于 2026-10-20（19 天前）",
+            "时长 36:44，非 Shorts",
+            "被 1 个来源发现：频道上传"
+          ],
+          "url": "https://www.youtube.com/watch?v=EAtLq9_vrE0",
+          "thumbnail": "https://i.ytimg.com/vi/EAtLq9_vrE0/mqdefault.jpg"
+        },
+        {
+          "video_id": "7eQree8FhKI",
+          "title": "Anthropics Model 4 Just Shocked The AI Industry",
+          "channel_title": "TheAIGRID",
+          "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg",
+          "published_at": "2026-11-06T23:00:13Z",
+          "duration_seconds": 1801,
+          "view_count": 85918,
+          "topic": "ai-industry",
+          "sources": [
+            "search:AI model research",
+            "search:AI industry news"
+          ],
+          "reasons": [
+            "标题含关键词「AI industry」",
+            "发布于 2026-11-06（2 天前）",
+            "时长 30:01，非 Shorts",
+            "被 2 个来源发现：搜索「AI model research」 / 搜索「AI industry news」"
+          ],
+          "url": "https://www.youtube.com/watch?v=7eQree8FhKI",
+          "thumbnail": "https://i.ytimg.com/vi/7eQree8FhKI/mqdefault.jpg"
+        },
+        {
+          "video_id": "eDiQNFa-zYg",
+          "title": "AI News: The Only 6 Stories Worth Knowing This Week",
+          "channel_title": "Matt Wolfe",
+          "channel_id": "UChpleBmo18P08aKCIgti38g",
+          "published_at": "2026-10-30T21:15:04Z",
+          "duration_seconds": 1761,
+          "view_count": 130307,
+          "topic": "ai-industry",
+          "sources": [
+            "search:AI industry news",
+            "search:AI company news"
+          ],
+          "reasons": [
+            "标题含关键词「AI news」",
+            "也匹配：AI 模型与研究、AI Agent、AI 产品与应用",
+            "发布于 2026-10-30（9 天前）",
+            "时长 29:21，非 Shorts",
+            "被 2 个来源发现：搜索「AI industry news」 / 搜索「AI company news」"
+          ],
+          "url": "https://www.youtube.com/watch?v=eDiQNFa-zYg",
+          "thumbnail": "https://i.ytimg.com/vi/eDiQNFa-zYg/mqdefault.jpg"
+        },
+        {
+          "video_id": "qMp7Gpu2OXA",
+          "title": "HUGE AI NEWS! GPT-7 Rumors, Gemini 4 Breakthroughs, Qwen 4 Leaks & Claude Controversy!”",
+          "channel_title": "AI Decode",
+          "channel_id": "UCqVCu-qZtOJUEZC7RVYQnjQ",
+          "published_at": "2026-10-26T07:30:39Z",
+          "duration_seconds": 1403,
+          "view_count": 8139,
+          "topic": "ai-industry",
+          "sources": [
+            "search:AI industry news",
+            "search:AI company news"
+          ],
+          "reasons": [
+            "标题含关键词「AI news」",
+            "也匹配：AI 模型与研究、AI Agent、AI 编程",
+            "发布于 2026-10-26（13 天前）",
+            "时长 23:23，非 Shorts",
+            "被 2 个来源发现：搜索「AI industry news」 / 搜索「AI company news」"
+          ],
+          "url": "https://www.youtube.com/watch?v=qMp7Gpu2OXA",
+          "thumbnail": "https://i.ytimg.com/vi/qMp7Gpu2OXA/mqdefault.jpg"
+        },
+        {
+          "video_id": "-604wcjbg6Y",
+          "title": "Global Stock Selloff: AI Investment Will Continue, George Colony Says",
+          "channel_title": "Bloomberg Television",
+          "channel_id": "UCIALMKvObZNtJ6AmdCLP7Lg",
+          "published_at": "2026-11-05T17:23:56Z",
+          "duration_seconds": 624,
+          "view_count": 129532,
+          "topic": "ai-industry",
+          "sources": [
+            "search:AI company news"
+          ],
+          "reasons": [
+            "标题含关键词「AI investment」",
+            "发布于 2026-11-05（3 天前）",
+            "时长 10:24，非 Shorts",
+            "被 1 个来源发现：搜索「AI company news」"
+          ],
+          "url": "https://www.youtube.com/watch?v=-604wcjbg6Y",
+          "thumbnail": "https://i.ytimg.com/vi/-604wcjbg6Y/mqdefault.jpg"
+        },
+        {
+          "video_id": "Sp3JwHxmtlY",
+          "title": "AI bubble finally bursting ?? Market Update !!",
+          "channel_title": "FinnovationZ by Prasad",
+          "channel_id": "UCUMccND2H_CVS0dMZKCPCXA",
+          "published_at": "2026-11-05T15:14:45Z",
+          "duration_seconds": 1312,
+          "view_count": 681186,
+          "topic": "ai-industry",
+          "sources": [
+            "search:AI company news"
+          ],
+          "reasons": [
+            "标题含关键词「AI bubble」",
+            "发布于 2026-11-05（3 天前）",
+            "时长 21:52，非 Shorts",
+            "被 1 个来源发现：搜索「AI company news」"
+          ],
+          "url": "https://www.youtube.com/watch?v=Sp3JwHxmtlY",
+          "thumbnail": "https://i.ytimg.com/vi/Sp3JwHxmtlY/mqdefault.jpg"
+        }
+      ]
+    }
+  ],
+  "baseline": {
+    "ai-models": [
+      {
+        "rank": 1,
+        "video_id": "7eQree8FhKI",
+        "title": "Anthropics Model 4 Just Shocked The AI Industry",
+        "channel_title": "TheAIGRID",
+        "published_at": "2026-11-06T23:00:13Z",
+        "duration_seconds": 1801,
+        "view_count": 85918,
+        "url": "https://www.youtube.com/watch?v=7eQree8FhKI",
+        "also_in_fewgood_topN": true
+      },
+      {
+        "rank": 2,
+        "video_id": "ekxRIK8uAu0",
+        "title": "GPT-7 Is Coming: OpenAI 10 Trillion Parameter Secret AI Model!",
+        "channel_title": "BitBiasedAI",
+        "published_at": "2026-11-07T16:01:33Z",
+        "duration_seconds": 1444,
+        "view_count": 10687,
+        "url": "https://www.youtube.com/watch?v=ekxRIK8uAu0",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 3,
+        "video_id": "IrAHINf0M6E",
+        "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
+        "channel_title": "Matt Wolfe",
+        "published_at": "2026-11-06T18:20:31Z",
+        "duration_seconds": 1484,
+        "view_count": 100967,
+        "url": "https://www.youtube.com/watch?v=IrAHINf0M6E",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 4,
+        "video_id": "h1MEtoxegzw",
+        "title": "Every AI Model Explained in 17 Minutes",
+        "channel_title": "Just Explained",
+        "published_at": "2026-07-06T15:00:01Z",
+        "duration_seconds": 1038,
+        "view_count": 629536,
+        "url": "https://www.youtube.com/watch?v=h1MEtoxegzw",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 5,
+        "video_id": "HtjwDUMHxmY",
+        "title": "Why everyone is freaking out about this model",
+        "channel_title": "Alberta Tech",
+        "published_at": "2026-10-15T13:00:22Z",
+        "duration_seconds": 400,
+        "view_count": 785307,
+        "url": "https://www.youtube.com/watch?v=HtjwDUMHxmY",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 6,
+        "video_id": "w-Mo1Ldg-qs",
+        "title": "I Asked 7 Top AI Models How to Escape the 9–5...",
+        "channel_title": "Tom Scryleus",
+        "published_at": "2026-10-10T12:00:55Z",
+        "duration_seconds": 1371,
+        "view_count": 980526,
+        "url": "https://www.youtube.com/watch?v=w-Mo1Ldg-qs",
+        "also_in_fewgood_topN": false
+      }
+    ],
+    "ai-agents": [
+      {
+        "rank": 1,
+        "video_id": "jZWFWjYc7V4",
+        "title": "Google's FREE AQuA AI Agent Is Actually INSANE!",
+        "channel_title": "Julian Goldie SEO",
+        "published_at": "2026-11-08T00:00:17Z",
+        "duration_seconds": 518,
+        "view_count": 6729,
+        "url": "https://www.youtube.com/watch?v=jZWFWjYc7V4",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 2,
+        "video_id": "Bm84BAtOfQw",
+        "title": "You’re Not Behind (Yet): How to Build Your First AI Agent (Full Guide)",
+        "channel_title": "Dan Martell",
+        "published_at": "2026-07-15T13:00:36Z",
+        "duration_seconds": 1345,
+        "view_count": 963810,
+        "url": "https://www.youtube.com/watch?v=Bm84BAtOfQw",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 3,
+        "video_id": "FwOTs4UxQS4",
+        "title": "AI Agents, Clearly Explained",
+        "channel_title": "Jeff Su",
+        "published_at": "2025-04-08T13:00:28Z",
+        "duration_seconds": 609,
+        "view_count": 5658397,
+        "url": "https://www.youtube.com/watch?v=FwOTs4UxQS4",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 4,
+        "video_id": "HTNz4L2XM58",
+        "title": "AI Agents Explained for Beginners (And How to Build One)",
+        "channel_title": "Roboverse",
+        "published_at": "2026-08-26T13:41:42Z",
+        "duration_seconds": 700,
+        "view_count": 215643,
+        "url": "https://www.youtube.com/watch?v=HTNz4L2XM58",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 5,
+        "video_id": "BjWL_Gxqrxo",
+        "title": "AI Agent vs Agentic AI: What's the Difference?",
+        "channel_title": "TechGik",
+        "published_at": "2026-08-16T17:28:28Z",
+        "duration_seconds": 64,
+        "view_count": 83620,
+        "url": "https://www.youtube.com/watch?v=BjWL_Gxqrxo",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 6,
+        "video_id": "SJywU4UQryQ",
+        "title": "How to Build an AI Agent for Every Part of Your Life",
+        "channel_title": "Dan Martell",
+        "published_at": "2026-10-28T13:00:28Z",
+        "duration_seconds": 1671,
+        "view_count": 429212,
+        "url": "https://www.youtube.com/watch?v=SJywU4UQryQ",
+        "also_in_fewgood_topN": false
+      }
+    ],
+    "ai-coding": [
+      {
+        "rank": 1,
+        "video_id": "qvOxAbC3d0U",
+        "title": "AI vibe coding changes a local man’s life path",
+        "channel_title": "CTV News",
+        "published_at": "2026-11-02T16:52:54Z",
+        "duration_seconds": 200,
+        "view_count": 382459,
+        "url": "https://www.youtube.com/watch?v=qvOxAbC3d0U",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 2,
+        "video_id": "NsgjLVOcVMs",
+        "title": "I Have Spent 1000+ Hours Programming With AI. This Is what I learned",
+        "channel_title": "Andrew Codesmith",
+        "published_at": "2026-10-01T00:00:19Z",
+        "duration_seconds": 626,
+        "view_count": 37003,
+        "url": "https://www.youtube.com/watch?v=NsgjLVOcVMs",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 3,
+        "video_id": "5fhcklZe-qE",
+        "title": "Everything You Need to Know About Coding with AI // NOT vibe coding",
+        "channel_title": "ForrestKnight",
+        "published_at": "2025-10-15T18:15:00Z",
+        "duration_seconds": 795,
+        "view_count": 354237,
+        "url": "https://www.youtube.com/watch?v=5fhcklZe-qE",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 4,
+        "video_id": "wlpBCazAY9Q",
+        "title": "AI-Assisted Coding Tutorial – OpenClaw, GitHub Copilot, Claude Code, CodeRabbit, Gemini CLI",
+        "channel_title": "freeCodeCamp.org",
+        "published_at": "2026-03-31T10:01:00Z",
+        "duration_seconds": 5126,
+        "view_count": 304993,
+        "url": "https://www.youtube.com/watch?v=wlpBCazAY9Q",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 5,
+        "video_id": "hTAWHgQI4xg",
+        "title": "5 Concepts to Know for Coding with AI Agents",
+        "channel_title": "IBM Technology",
+        "published_at": "2026-10-12T11:00:38Z",
+        "duration_seconds": 603,
+        "view_count": 178501,
+        "url": "https://www.youtube.com/watch?v=hTAWHgQI4xg",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 6,
+        "video_id": "-QFHIoCo-Ko",
+        "title": "Full Walkthrough: Workflow for AI Coding — Matt Pocock",
+        "channel_title": "AI Engineer",
+        "published_at": "2026-04-24T15:15:38Z",
+        "duration_seconds": 5790,
+        "view_count": 1993049,
+        "url": "https://www.youtube.com/watch?v=-QFHIoCo-Ko",
+        "also_in_fewgood_topN": false
+      }
+    ],
+    "ai-products": [
+      {
+        "rank": 1,
+        "video_id": "5Z4jFafRcr4",
+        "title": "I Bought Obviously Fake AI Ads To See What I Get (Again)",
+        "channel_title": "John Casterline",
+        "published_at": "2026-11-07T16:07:19Z",
+        "duration_seconds": 1173,
+        "view_count": 106888,
+        "url": "https://www.youtube.com/watch?v=5Z4jFafRcr4",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 2,
+        "video_id": "wumi-4xh2Jk",
+        "title": "Pointless Ai Products",
+        "channel_title": "Kurtis Conner",
+        "published_at": "2024-09-29T19:00:01Z",
+        "duration_seconds": 2261,
+        "view_count": 8508300,
+        "url": "https://www.youtube.com/watch?v=wumi-4xh2Jk",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 3,
+        "video_id": "zDIX1eWeWNs",
+        "title": "I bought 2 AI-generated products, and they were SCAMS! 😡",
+        "channel_title": "Maggie McGaugh",
+        "published_at": "2025-09-25T15:22:35Z",
+        "duration_seconds": 44,
+        "view_count": 5219764,
+        "url": "https://www.youtube.com/watch?v=zDIX1eWeWNs",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 4,
+        "video_id": "OKNRbKvlIwo",
+        "title": "I bought FOUR AI-generated products. Here’s what they sent me. 🙄",
+        "channel_title": "Maggie McGaugh",
+        "published_at": "2025-09-09T16:45:09Z",
+        "duration_seconds": 112,
+        "view_count": 819826,
+        "url": "https://www.youtube.com/watch?v=OKNRbKvlIwo",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 5,
+        "video_id": "MJcrIRvb4Nk",
+        "title": "i bought every AI scam product",
+        "channel_title": "Dave K",
+        "published_at": "2026-09-27T13:00:06Z",
+        "duration_seconds": 69,
+        "view_count": 18653069,
+        "url": "https://www.youtube.com/watch?v=MJcrIRvb4Nk",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 6,
+        "video_id": "CU_YGNyIe48",
+        "title": "I Tested AI Products That Shouldn't Exist",
+        "channel_title": "Sambucha Highlights",
+        "published_at": "2026-10-13T14:00:23Z",
+        "duration_seconds": 5592,
+        "view_count": 871300,
+        "url": "https://www.youtube.com/watch?v=CU_YGNyIe48",
+        "also_in_fewgood_topN": false
+      }
+    ],
+    "ai-industry": [
+      {
+        "rank": 1,
+        "video_id": "e2zjpCqTmyo",
+        "title": "The AI Industry is a Complete Mess",
+        "channel_title": "ColdFusion",
+        "published_at": "2026-10-01T18:23:02Z",
+        "duration_seconds": 1284,
+        "view_count": 1573551,
+        "url": "https://www.youtube.com/watch?v=e2zjpCqTmyo",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 2,
+        "video_id": "_fEqQa5hBmI",
+        "title": "The AI Godfather Just Proved The Entire AI Industry Wrong",
+        "channel_title": "TheAIGRID",
+        "published_at": "2026-11-05T08:45:26Z",
+        "duration_seconds": 1801,
+        "view_count": 154033,
+        "url": "https://www.youtube.com/watch?v=_fEqQa5hBmI",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 3,
+        "video_id": "s8qkejdyffk",
+        "title": "Real Signs the AI Bubble is about to burst??",
+        "channel_title": "JayzTwoCents",
+        "published_at": "2026-10-22T18:27:18Z",
+        "duration_seconds": 1662,
+        "view_count": 1453101,
+        "url": "https://www.youtube.com/watch?v=s8qkejdyffk",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 4,
+        "video_id": "mUw27wG7uFA",
+        "title": "AI Simplified: 6 Concepts You Need to Know About Modern AI",
+        "channel_title": "IBM Technology",
+        "published_at": "2026-09-06T11:00:09Z",
+        "duration_seconds": 529,
+        "view_count": 1089164,
+        "url": "https://www.youtube.com/watch?v=mUw27wG7uFA",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 5,
+        "video_id": "kVBXHzdCOP0",
+        "title": "I Think AI Just Killed The Plugin Industry",
+        "channel_title": "Rhett Shull",
+        "published_at": "2026-11-02T20:44:36Z",
+        "duration_seconds": 985,
+        "view_count": 754158,
+        "url": "https://www.youtube.com/watch?v=kVBXHzdCOP0",
+        "also_in_fewgood_topN": false
+      },
+      {
+        "rank": 6,
+        "video_id": "7eQree8FhKI",
+        "title": "Anthropics Model 4 Just Shocked The AI Industry",
+        "channel_title": "TheAIGRID",
+        "published_at": "2026-11-06T23:00:13Z",
+        "duration_seconds": 1801,
+        "view_count": 85918,
+        "url": "https://www.youtube.com/watch?v=7eQree8FhKI",
+        "also_in_fewgood_topN": true
+      }
+    ]
+  }
+}

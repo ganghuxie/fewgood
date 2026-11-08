@@ -1,0 +1,498 @@
+{
+  "calls": [
+    {
+      "endpoint": "search",
+      "purpose": "baseline:ai-models",
+      "timestamp": "2026-11-08T12:12:32Z",
+      "http_status": 200,
+      "returned": 10
+    },
+    {
+      "endpoint": "search",
+      "purpose": "baseline:ai-agents",
+      "timestamp": "2026-11-08T12:12:33Z",
+      "http_status": 200,
+      "returned": 10
+    },
+    {
+      "endpoint": "search",
+      "purpose": "baseline:ai-coding",
+      "timestamp": "2026-11-08T12:12:33Z",
+      "http_status": 200,
+      "returned": 10
+    },
+    {
+      "endpoint": "search",
+      "purpose": "baseline:ai-products",
+      "timestamp": "2026-11-08T12:12:33Z",
+      "http_status": 200,
+      "returned": 10
+    },
+    {
+      "endpoint": "search",
+      "purpose": "baseline:ai-industry",
+      "timestamp": "2026-11-08T12:12:34Z",
+      "http_status": 200,
+      "returned": 10
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-models:AI model research",
+      "timestamp": "2026-11-08T12:12:34Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-models:LLM research",
+      "timestamp": "2026-11-08T12:12:34Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-agents:AI agents",
+      "timestamp": "2026-11-08T12:12:35Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-agents:agentic AI tutorial",
+      "timestamp": "2026-11-08T12:12:35Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-coding:AI coding tools",
+      "timestamp": "2026-11-08T12:12:36Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-coding:coding agents",
+      "timestamp": "2026-11-08T12:12:36Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-products:new AI products",
+      "timestamp": "2026-11-08T12:12:37Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-products:AI application demo",
+      "timestamp": "2026-11-08T12:12:37Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-industry:AI industry news",
+      "timestamp": "2026-11-08T12:12:37Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "search",
+      "purpose": "topic:ai-industry:AI company news",
+      "timestamp": "2026-11-08T12:12:38Z",
+      "http_status": 200,
+      "returned": 25
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:OpenAI",
+      "timestamp": "2026-11-08T12:12:38Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Anthropic",
+      "timestamp": "2026-11-08T12:12:38Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Google DeepMind",
+      "timestamp": "2026-11-08T12:12:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:AI at Meta",
+      "timestamp": "2026-11-08T12:12:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:NVIDIA",
+      "timestamp": "2026-11-08T12:12:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Hugging Face",
+      "timestamp": "2026-11-08T12:12:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Stability AI",
+      "timestamp": "2026-11-08T12:12:39Z",
+      "http_status": 200,
+      "returned": 12
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Midjourney",
+      "timestamp": "2026-11-08T12:12:39Z",
+      "http_status": 200,
+      "returned": 14
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:DeepLearning.AI",
+      "timestamp": "2026-11-08T12:12:40Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Mistral AI",
+      "timestamp": "2026-11-08T12:12:40Z",
+      "http_status": 404,
+      "returned": 0
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Cohere",
+      "timestamp": "2026-11-08T12:12:40Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Perplexity",
+      "timestamp": "2026-11-08T12:12:40Z",
+      "http_status": 404,
+      "returned": 0
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Runway",
+      "timestamp": "2026-11-08T12:12:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:ElevenLabs",
+      "timestamp": "2026-11-08T12:12:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Character.AI",
+      "timestamp": "2026-11-08T12:12:41Z",
+      "http_status": 404,
+      "returned": 0
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Scale AI",
+      "timestamp": "2026-11-08T12:12:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Together AI",
+      "timestamp": "2026-11-08T12:12:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Cursor",
+      "timestamp": "2026-11-08T12:12:42Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:LangChain",
+      "timestamp": "2026-11-08T12:12:42Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Pinecone",
+      "timestamp": "2026-11-08T12:12:42Z",
+      "http_status": 200,
+      "returned": 37
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:AI Engineer",
+      "timestamp": "2026-11-08T12:12:43Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:The Rundown AI",
+      "timestamp": "2026-11-08T12:12:43Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Latent Space",
+      "timestamp": "2026-11-08T12:12:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Andrej Karpathy",
+      "timestamp": "2026-11-08T12:12:44Z",
+      "http_status": 200,
+      "returned": 5
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Andrew Ng",
+      "timestamp": "2026-11-08T12:12:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Yann LeCun",
+      "timestamp": "2026-11-08T12:12:44Z",
+      "http_status": 200,
+      "returned": 26
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:François Chollet",
+      "timestamp": "2026-11-08T12:12:44Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Greg Brockman",
+      "timestamp": "2026-11-08T12:12:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Jack Clark",
+      "timestamp": "2026-11-08T12:12:45Z",
+      "http_status": 200,
+      "returned": 2
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Jim Fan",
+      "timestamp": "2026-11-08T12:12:45Z",
+      "http_status": 404,
+      "returned": 0
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:hardmaru",
+      "timestamp": "2026-11-08T12:12:45Z",
+      "http_status": 200,
+      "returned": 6
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Lex Fridman",
+      "timestamp": "2026-11-08T12:12:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Two Minute Papers",
+      "timestamp": "2026-11-08T12:12:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Sentdex",
+      "timestamp": "2026-11-08T12:12:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:3Blue1Brown",
+      "timestamp": "2026-11-08T12:12:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:AI Explained",
+      "timestamp": "2026-11-08T12:12:47Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Siraj Raval",
+      "timestamp": "2026-11-08T12:12:47Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:swyx",
+      "timestamp": "2026-11-08T12:12:47Z",
+      "http_status": 404,
+      "returned": 0
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Ethan Mollick",
+      "timestamp": "2026-11-08T12:12:47Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Rowan Cheung",
+      "timestamp": "2026-11-08T12:12:47Z",
+      "http_status": 404,
+      "returned": 0
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Linus Ekenstam",
+      "timestamp": "2026-11-08T12:12:48Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "channel_uploads:Mckay Wrigley",
+      "timestamp": "2026-11-08T12:12:48Z",
+      "http_status": 200,
+      "returned": 22
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:48Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:48Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T12:12:51Z",
+      "http_status": 200,
+      "returned": 9
+    }
+  ],
+  "search_calls": 15,
+  "other_units": 55,
+  "old_model_units": 1555,
+  "aborted_reason": null
+}

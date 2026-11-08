@@ -1,0 +1,234 @@
+{
+ "mEtRe_KKYm0": {
+  "verdict": "相关",
+  "note": "RL 论文研读，研究向"
+ },
+ "bR5mzluCO5I": {
+  "verdict": "相关",
+  "note": "讨论 LLM 研究结论时效性"
+ },
+ "YphV2bVmHhc": {
+  "verdict": "相关",
+  "note": "评测论文解读；频道播放量极低，像自动化论文摘要"
+ },
+ "2K_Rm8cho1I": {
+  "verdict": "相关",
+  "note": "DeepSeek 推理引擎；标题偏夸张"
+ },
+ "cdW2CYF6fhM": {
+  "verdict": "部分相关",
+  "note": "信息安全播客，混合谈 scaling/agent/欧洲 AI 栈"
+ },
+ "o3Z8ajFXAgU": {
+  "verdict": "部分相关",
+  "note": "论文内容是 LLM Agent，更贴近 AI Agent"
+ },
+ "kIlVNGZZr8o": {
+  "verdict": "相关",
+  "note": "AI Engineer 实践演讲"
+ },
+ "pz74r-4dGfQ": {
+  "verdict": "相关",
+  "note": "Agent 可靠性实践演讲"
+ },
+ "F8jidmEkIeM": {
+  "verdict": "相关",
+  "note": "入门无代码教程；与 rCkYVxOX-dI 内容相近"
+ },
+ "ibdmyMFd_z8": {
+  "verdict": "相关",
+  "note": "Agent 联网实验"
+ },
+ "rCkYVxOX-dI": {
+  "verdict": "相关",
+  "note": "入门无代码教程；与 F8jidmEkIeM 相近"
+ },
+ "DQBqh6gcx7U": {
+  "verdict": "相关",
+  "note": "IBM 概念讲解"
+ },
+ "y9Sg--RDtks": {
+  "verdict": "不相关",
+  "note": "因“ex-Cursor”命中关键词 Cursor；内容是产品/设计理念演讲"
+ },
+ "BT1Mo-fD-g0": {
+  "verdict": "相关",
+  "note": "编码 Agent 实践演讲"
+ },
+ "DHZECISfaMc": {
+  "verdict": "相关",
+  "note": "编码 Agent 越狱；标题偏 clickbait"
+ },
+ "Wi83iStXpio": {
+  "verdict": "相关",
+  "note": "新编码 Agent 安装教程；偏推广"
+ },
+ "QwYKWW17xO8": {
+  "verdict": "相关",
+  "note": "OpenCode；标题 clickbait"
+ },
+ "oFtTodDCbkE": {
+  "verdict": "相关",
+  "note": "编码 Agent 常见错误，实用"
+ },
+ "ZJjRgvjhq3M": {
+  "verdict": "部分相关",
+  "note": "在 ChatGPT 内做金融 Agent 的开发工作坊，偏 Agent/开发"
+ },
+ "08XjzXEugNw": {
+  "verdict": "部分相关",
+  "note": "用 AI 工具做完整 App，更贴近 AI 编程/无代码"
+ },
+ "CvmZtAPmAW4": {
+  "verdict": "相关",
+  "note": "Bumble AI 功能的真实采用数据"
+ },
+ "v-d1WTqIULs": {
+  "verdict": "相关",
+  "note": "ChatGPT 金融产品访谈"
+ },
+ "84CkBM_jF4g": {
+  "verdict": "部分相关",
+  "note": "AI 助手工具演示；标题 clickbait"
+ },
+ "qxED97f4i7A": {
+  "verdict": "相关",
+  "note": "AI App Builder 横向比较"
+ },
+ "EAtLq9_vrE0": {
+  "verdict": "相关",
+  "note": "算力/数据中心产业访谈"
+ },
+ "7eQree8FhKI": {
+  "verdict": "部分相关",
+  "note": "实为模型发布新闻；标题 clickbait"
+ },
+ "eDiQNFa-zYg": {
+  "verdict": "相关",
+  "note": "每周 AI 新闻汇总"
+ },
+ "qMp7Gpu2OXA": {
+  "verdict": "部分相关",
+  "note": "传闻/泄露汇总，可信度低"
+ },
+ "-604wcjbg6Y": {
+  "verdict": "相关",
+  "note": "Bloomberg：AI 投资与市场"
+ },
+ "Sp3JwHxmtlY": {
+  "verdict": "部分相关",
+  "note": "股市行情角度，偏投资"
+ },
+ "ekxRIK8uAu0": {
+  "verdict": "部分相关",
+  "note": "模型传闻，标题 clickbait"
+ },
+ "IrAHINf0M6E": {
+  "verdict": "部分相关",
+  "note": "新闻汇总，含模型更新"
+ },
+ "h1MEtoxegzw": {
+  "verdict": "相关",
+  "note": "模型科普；发布于 4 个月前"
+ },
+ "HtjwDUMHxmY": {
+  "verdict": "部分相关",
+  "note": "仅凭标题无法判断具体模型"
+ },
+ "w-Mo1Ldg-qs": {
+  "verdict": "不相关",
+  "note": "用 AI 规划职业，非模型研究"
+ },
+ "jZWFWjYc7V4": {
+  "verdict": "相关",
+  "note": "Agent 产品介绍；标题 clickbait"
+ },
+ "Bm84BAtOfQw": {
+  "verdict": "相关",
+  "note": "入门指南；4 个月前"
+ },
+ "FwOTs4UxQS4": {
+  "verdict": "相关",
+  "note": "经典概念讲解；2025-04 发布"
+ },
+ "HTNz4L2XM58": {
+  "verdict": "相关",
+  "note": "入门讲解"
+ },
+ "BjWL_Gxqrxo": {
+  "verdict": "相关",
+  "note": "仅 64 秒，接近 Shorts"
+ },
+ "SJywU4UQryQ": {
+  "verdict": "相关",
+  "note": "效率博主的 Agent 用法"
+ },
+ "qvOxAbC3d0U": {
+  "verdict": "部分相关",
+  "note": "地方新闻故事，3 分钟"
+ },
+ "NsgjLVOcVMs": {
+  "verdict": "相关",
+  "note": "AI 编程经验"
+ },
+ "5fhcklZe-qE": {
+  "verdict": "相关",
+  "note": "AI 编程方法；2025-10 发布"
+ },
+ "wlpBCazAY9Q": {
+  "verdict": "相关",
+  "note": "freeCodeCamp 长教程"
+ },
+ "hTAWHgQI4xg": {
+  "verdict": "相关",
+  "note": "IBM 概念讲解"
+ },
+ "-QFHIoCo-Ko": {
+  "verdict": "相关",
+  "note": "Matt Pocock 工作流，AI Engineer 频道"
+ },
+ "5Z4jFafRcr4": {
+  "verdict": "不相关",
+  "note": "买假 AI 广告商品，娱乐向"
+ },
+ "wumi-4xh2Jk": {
+  "verdict": "不相关",
+  "note": "喜剧吐槽；2024 年发布"
+ },
+ "zDIX1eWeWNs": {
+  "verdict": "不相关",
+  "note": "44 秒 Shorts，AI 生成商品骗局"
+ },
+ "OKNRbKvlIwo": {
+  "verdict": "不相关",
+  "note": "112 秒，AI 生成商品开箱"
+ },
+ "MJcrIRvb4Nk": {
+  "verdict": "不相关",
+  "note": "69 秒，AI 骗局商品"
+ },
+ "CU_YGNyIe48": {
+  "verdict": "部分相关",
+  "note": "测评奇怪 AI 产品，娱乐向"
+ },
+ "e2zjpCqTmyo": {
+  "verdict": "相关",
+  "note": "ColdFusion 行业分析"
+ },
+ "_fEqQa5hBmI": {
+  "verdict": "部分相关",
+  "note": "观点视频，标题 clickbait"
+ },
+ "s8qkejdyffk": {
+  "verdict": "相关",
+  "note": "AI 泡沫讨论（硬件博主视角）"
+ },
+ "mUw27wG7uFA": {
+  "verdict": "不相关",
+  "note": "AI 概念科普，非产业动态"
+ },
+ "kVBXHzdCOP0": {
+  "verdict": "部分相关",
+  "note": "AI 对音频插件行业影响"
+ }
+}
