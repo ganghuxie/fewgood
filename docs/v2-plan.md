@@ -21,7 +21,7 @@
 
 ### 1.2 内容来源、缓存和刷新作业
 
-- [已检查] 公共“社区推荐”源是 Hacker News Algolia：爬取 story/comment 中的 YouTube 链接，持久化到 SQLite，按作者、月份和时间跨度筛选（`ytrec/core.py` 的 `crawl`/`extract`/`aggregate`，`README.md`）。不是 Reddit。仓库和说明中没有 Reddit 抓取模块、配置或输出；若 2.0 要加入 Reddit，须另行确认社区、API/条款、认证与配额，不能声称目前已接入。
+- [已检查] 公共“社区推荐”源是 Hacker News Algolia：爬取 story/comment 中的 YouTube 链接，持久化到 SQLite，按作者、月份和时间跨度筛选（`ytrec/core.py` 的 `crawl`/`extract`/`aggregate`，`README.md`）。仓库和说明中没有其他社区抓取模块、配置或输出；不得把当前来源标为其他社区。
 - [已检查] HN SQLite 缓存位于 `data/ytrec.sqlite`，含原始项、已完成时间窗、mentions、视频 metadata、配额记录与入选时间；`metadata` 缓存默认 30 天（`ytrec/core.py`、`config.yaml`）。
 - [已检查] 趋势、播客、音乐各使用五个六日窗口、每窗两个 duration bucket（`medium`、`long`）的 YouTube `search`，再用 `videos` 批量补全；所以日常 `refresh()` 的这三条路径是 `3 × 5 × 2 = 30` 次 `search`，不是 15 次。若把“一条 feed 的五个窗口”误计为 5，则三条 feed 是 15 个逻辑窗口，但每个窗口实际发两次 search。AI 通过已审核频道的 uploads playlist 取得近期视频（`ytrec/core.py` 的 `windowed_viewcount_feed`、`ai_feed`）。这类短窗口栏目有意直接输出提交的 JSON，而非复用社区 SQLite metadata 缓存。
 - [已检查] `Client` 有至少约 1 秒（HN）或 0.05 秒（feed）的节流、最多 7 次尝试、指数退避、90 秒请求截止；请求异常不会输出 URL/密钥（`ytrec/core.py`）。现有实现只在第一次尝试记一次 API 单位，故计划中的主题作业需另行记录“尝试数、实际调用数、失败原因类别”，不可把现有近似账当成服务端权威账。
@@ -250,7 +250,7 @@ N < (8000 - 3344) / 102 = 45.647...
 | `.github/workflows/pages.yml` | 原则上不改 | 既有 push Pages 已足够；仅若构建产物路径/Node 要求变化才最小改动 |
 | 本机 scheduler unit/脚本 | 新增位置 [待确认] | 用户要求本机小时任务，但仓库未发现现有定义；须先确认是否版本化及运行账户 |
 
-不计划修改 `site/src/scripts/library.js`、`sync.js` 的历史/收藏/稍后看/关注协议，或重构认证、切换前端框架。Reddit 接入不列入本 MVP 文件清单，除非获得独立确认。
+不计划修改 `site/src/scripts/library.js`、`sync.js` 的历史/收藏/稍后看/关注协议，或重构认证、切换前端框架。当前社区来源保持 Hacker News。
 
 ## 7. 分阶段实施与粗略工作量
 
@@ -262,7 +262,7 @@ N < (8000 - 3344) / 102 = 45.647...
 | 3. 静态构建与 UI | 双模式、创建/改名/删除/排序/状态、匿名已有主题、移动端头部修复 | 2–3 天 |
 | 4. 集成与灰度 | 测试、配额护栏、手动小主题集、部署/回滚演练、观察 | 1–2 天 |
 
-合计约 **6.5–11.5 个工程日**，不含 Reddit、私人主题、多采集者、人工 alias 运营或官方政策变更导致的返工。第 0 阶段还要建立 staging fixtures（固定 topic queue、假 API 响应、预期静态 catalog/路由），再进行 SQL/RLS、quota guard 和 build 测试；本次计划回合没有运行这些或任何真实回归。先完成第 0 阶段才应进行生产 SQL 或定时任务安装。
+合计约 **6.5–11.5 个工程日**，不含新增社区来源、私人主题、多采集者、人工 alias 运营或官方政策变更导致的返工。第 0 阶段还要建立 staging fixtures（固定 topic queue、假 API 响应、预期静态 catalog/路由），再进行 SQL/RLS、quota guard 和 build 测试；本次计划回合没有运行这些或任何真实回归。先完成第 0 阶段才应进行生产 SQL 或定时任务安装。
 
 ## 8. 回归、验收与部署配置（需求八）
 
@@ -296,8 +296,8 @@ N < (8000 - 3344) / 102 = 45.647...
 - **隐私/滥用风险**：公开主题可透露兴趣；需产品确认公开复用提示、敏感输入拦截范围、每用户/全局日 cap、登录门槛和删除后公共缓存的生命周期。匿名新主题请求会被拒绝，避免配额滥用。
 - **容量风险**：按 3344/8000 的算式新主题理论上限约 45，但正常运营应远低于此并预留旧刷新；现有 `quota.json` 无跨进程原子性，必须以锁改进。
 - **发布风险**：Git push 到 Pages 的端到端延迟非本机可完全控制；状态需诚实表达排队、耗尽和旧内容，不能把提交成功当成已上线。
-- **Reddit 不确定性**：现有来源是 HN，不是 Reddit；若需求中的“Reddit source”是要新增功能，应另开范围、选择来源方式并检查条款/额度/隐私后再估时。
+- **社区来源不确定性**：现有来源是 Hacker News；若要新增其他社区，应另开范围、选择来源方式并检查条款/额度/隐私后再估时。
 
 ## 简要总结
 
-建议以“认证用户提交、公共规范主题复用、本机单采集者按小时处理 pending、每日全量刷新、Git/Pages 发布每主题静态 JSON”为 MVP。保持 Astro 静态站、现有认证及所有历史/收藏/稍后看/关注/搜索/嵌入行为；不使用 Supabase service_role 或任何 secret key。当前最大不确定性是官方 YouTube 规则、实际本机调度环境、Supabase RPC 能力，以及 Reddit 是否真需进入本期范围。
+建议以“认证用户提交、公共规范主题复用、本机单采集者按小时处理 pending、每日全量刷新、Git/Pages 发布每主题静态 JSON”为 MVP。保持 Astro 静态站、现有认证及所有历史/收藏/稍后看/关注/搜索/嵌入行为；不使用 Supabase service_role 或任何 secret key。当前最大不确定性是官方 YouTube 规则、实际本机调度环境、Supabase RPC 能力，以及是否需要新增社区来源。
