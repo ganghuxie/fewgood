@@ -1,4 +1,25 @@
 creators:
+- name: Gary Chen
+  channel_id: UC9C3t-3ocL0LiwGRD0gBJ8A
+  lang: zh
+  subtopics: [ai-agents, ai-products]
+  evidence: [group_c_reference]
+  subscriber_count_at_check: 103000
+  checked_at: '2026-11-08T00:00:00Z'
+- name: 傑少 JAY
+  channel_id: UCz-Sx71_C4d3AYFBj6e3ENw
+  lang: zh
+  subtopics: [ai-agents, ai-products]
+  evidence: [group_c_reference]
+  subscriber_count_at_check: 20700
+  checked_at: '2026-11-08T00:00:00Z'
+- name: Metics Media
+  channel_id: UCuwpzP90g1LuGk6JUNms_AQ
+  lang: en
+  subtopics: [ai-agents, ai-products]
+  evidence: [group_c_reference]
+  subscriber_count_at_check: 759000
+  checked_at: '2026-11-08T00:00:00Z'
 - name: Linus Ekenstam
   channel_id: UCFnSHboIJpG6-hriXMyHvYg
   handle: '@linusekenstam'

@@ -179,7 +179,13 @@ def topic_match(row, topic):
     title = snippet.get('title', '')
     other = ' '.join([snippet.get('description', '')[:500], ' '.join(snippet.get('tags', []))])
     strong_title = next((x for x in topic['include_terms']['strong'] if hit(title, x)), None)
-    strong_other = next((x for x in topic['include_terms']['strong'] if hit(other, x)), None)
+    # Standalone product names in boilerplate descriptions are too broad to
+    # promote a video into AI products.  Keep them as configured title rules;
+    # this also leaves a description-only "Claude" as the models tier-3
+    # diagnostic rather than a displayable product match.
+    other_strong = [x for x in topic['include_terms']['strong']
+                    if x not in topic['include_terms'].get('title_only_strong', [])]
+    strong_other = next((x for x in other_strong if hit(other, x)), None)
     weak_title = next((x for x in topic['include_terms']['weak'] if hit(title, x)), None)
     weak_other = next((x for x in topic['include_terms']['weak'] if hit(other, x)), None)
     if strong_title:
@@ -191,7 +197,7 @@ def topic_match(row, topic):
     return None
 
 
-def basic_failure(row, topic, now):
+def basic_failure(row, topic, now, check_published_within=True):
     snippet = row.get('snippet', {})
     text = ' '.join([snippet.get('title', ''), snippet.get('description', '')[:500], ' '.join(snippet.get('tags', []))])
     excluded = next((x for x in topic['exclude_terms'] if hit(text, x)), None)
@@ -207,7 +213,7 @@ def basic_failure(row, topic, now):
     player = row.get('player') or {}
     if ('embedWidth' in player and 'embedHeight' in player) and not landscape_video(row):
         return 'vertical'
-    if parse_time(snippet.get('publishedAt', '')) < now - timedelta(days=topic['published_within_days']):
+    if check_published_within and parse_time(snippet.get('publishedAt', '')) < now - timedelta(days=topic['published_within_days']):
         return 'too_old'
     return None
 
@@ -243,7 +249,15 @@ def select(raw, mode='select', usage=None):
     for index, topic in enumerate(cfg['topics']):
         allocated = [(row, assignments[row['id']][2]) for row in kept
                      if row['id'] in assignments and assignments[row['id']][0] == index]
-        tiers = {n: sum(1 for _, match in allocated if match[0] == n) for n in (1, 2, 3)}
+        # Matching statistics describe every textual hit for this topic, while
+        # ``allocated`` below still guarantees a video is displayed under only
+        # its single best topic.  This preserves the useful tier-3 diagnostic
+        # when, for example, a description mentions Claude (AI models) but the
+        # stronger product-name match assigns the video to AI products.
+        tiers = {n: sum(1 for row in kept
+                        for match_topic_index, _, match in matches.get(row['id'], [])
+                        if match_topic_index == index and match[0] == n)
+                 for n in (1, 2, 3)}
         excluded = {}
         # This is intentionally based on textual matches, not every pool row: an
         # unrelated cooking video must not inflate a topic's "too_old" count.

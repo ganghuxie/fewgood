@@ -36,7 +36,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -45,7 +45,17 @@ def main():
     parser.add_argument('--limit', type=int)
     parser.add_argument('--force', action='store_true')
     parser.add_argument('--provider', choices=['gemini','deepseek'])
+    parser.add_argument('--estimate', action='store_true', help='R3 fetch plan only')
+    parser.add_argument('--unit-cap', type=int, default=250, help='R3 non-search unit cap')
     args = parser.parse_args()
+    if args.command in ('fewgood-r3-fetch','fewgood-r3-select'):
+        from . import fewgood_r3
+        forwarded=['fetch' if args.command.endswith('fetch') else 'select']
+        if args.estimate: forwarded.append('--estimate')
+        if args.unit_cap != 250: forwarded += ['--unit-cap', str(args.unit_cap)]
+        # The public command has a deliberately separate parser so normal
+        # recommendation config cannot alter the R3 quota or endpoint plan.
+        return fewgood_r3.main(forwarded)
     config = yaml.safe_load(Path(args.config).read_text())
     limit = daily_limit(config)
     if args.command == 'trending':

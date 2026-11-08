@@ -5,6 +5,7 @@ The raw file is deliberately sufficient to replay ``select`` without a key.
 import argparse, copy, hashlib, json, math, os, re, shutil, time
 from collections import Counter, defaultdict
 from datetime import datetime, timezone, timedelta
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -19,6 +20,7 @@ USAGE = ROOT / 'data/experiments/fewgood-r2-usage.json'
 DEMO = ROOT / 'site/src/data/fewgood-mvp.json'
 DEMO_CREATOR_FIELDS = ('name', 'lang', 'subtopics', 'evidence', 'channel_id', 'handle', 'subscriber_count', 'last_upload_at')
 
+@lru_cache(maxsize=None)
 def load(name): return yaml.safe_load((ROOT / 'config' / name).read_text())
 def cfg(): return load('fewgood_topics.yaml')
 def rules(): return load('fewgood_creator_rules.yaml')
@@ -161,6 +163,12 @@ def official_channel(creator, rule):
 def replay_subscriber_rule(creators, rule):
     """Apply the round-2 personal-channel threshold to every resolved channel."""
     for creator in creators:
+        # Group C was manually curated for R3.  Its provenance restores a
+        # stale replay status, but it deliberately does not bypass the same
+        # minimum-subscriber rule used for every personal channel.
+        if 'group_c_reference' in (creator.get('evidence') or []) and creator.get('status') != 'unverified':
+            creator['status']='included'
+            creator['reason']='group_c_reference'
         if creator.get('status') == 'unverified' or official_channel(creator, rule):
             continue
         subscribers=creator.get('subscriber_count')

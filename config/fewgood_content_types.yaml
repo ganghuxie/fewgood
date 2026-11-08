@@ -1,0 +1,44 @@
+# R3 is intentionally rule based: these signals are matched against title and
+# description only; no model inference is involved.  A news/update title is
+# always an explainer, even when the description advertises tutorials.
+windows_days:
+  tutorial: 30
+  explainer: 180
+  talk: 730
+new_tech_explainer_days: 30
+talk_subscriber_minimum: 500000
+mix:
+  tutorial: 3
+  explainer: 2
+  talk: 1
+# Instructional intent must be explicit in the title.  Descriptions often
+# mention a channel's unrelated tutorials and must not reclassify a news clip.
+title_only: [tutorial]
+news_or_update_terms: ["AI news", news, update, updates, "what's new", "new feature", "发布", "發佈", "更新", "新闻", "新聞"]
+keywords:
+  # Tutorial requires an explicit instructional phrase.  Product/news words
+  # such as "new", "tested", or "use" intentionally do not qualify alone.
+  tutorial: [tutorial, how to, beginner, guide, step by step, full course, walkthrough, hands-on, 教程, 教學, 新手, 上手, 实操, 實操, 從零, 从零, 不用寫程式, 不用写程序, build your first, 使用教程]
+  explainer: [explained, what is, how does, how .* works, under the hood, deep dive, principles, architecture, 原理, 底层, 底層, 详解, 詳解, 架构, 架構, 解读, 解讀]
+  talk: [talk, keynote, lecture, interview, podcast, fireside, conference, panel, 演讲, 演講, 讲座, 講座, 访谈, 訪談, 峰会, 峰會]
+channel_hints:
+  talk: [AI Engineer, Latent Space, Y Combinator, Lenny's Podcast, Stanford, Dwarkesh, Lex Fridman, Sequoia, a16z]
+  explainer: [IBM Technology]
+talk_whitelist:
+  # IDs are only recorded where they already exist in repository data/config.
+  channels:
+    - {name: AI Engineer, channel_id: UCLKPca3kwwd-B59HNr-_lvA}
+    - {name: Latent Space, channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ}
+    - {name: Y Combinator, channel_id: UCcefcZRL2oaA_uBNeo5UOWg}
+    - {name: Lenny's Podcast, channel_id: UC6t1O76G0jYXOAoYCm153dA}
+    - {name: Sequoia Capital, channel_id: UCWrF0oN6unbXrWsTN7RctTw}
+    - {name: a16z, channel_id: UC9cn0TuPq4dnbTY-CBsm8XA}
+    - {name: IBM Technology, channel_id: UCKWaEZ-_VweaEx1j62do_vQ, type: explainer}
+    - {name: Stanford Online, channel_id: UCBa5G_ESCn8Yd4vw5U-gIcg}
+    - {name: Dwarkesh Patel, channel_id: UCXl4i9dYBrFOabk0xGmbkRA}
+    - {name: Lex Fridman, channel_id: UCSHZKyawb77ixDdsGog4iWA}
+    - {name: Anthropic, channel_id: UCrDwWp7EBBv4NwvScIpBDOA}
+    - {name: OpenAI, channel_id: UCXZCJLdBC09xxGZ6gcdrc6A}
+    - {name: Google DeepMind, channel_id: UCP7jMXSY2xbc3KCAE0MHQ-A}
+    - {name: LangChain, channel_id: UCC-lyoTfSrcJzA1ab3APAgw}
+  todo_names: [Andrej Karpathy]

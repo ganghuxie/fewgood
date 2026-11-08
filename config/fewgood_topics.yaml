@@ -18,7 +18,7 @@ topics:
   - id: ai-agents
     name_zh: AI Agent
     definition: 关注能规划、调用工具或执行任务的 AI Agent。
-    include_terms: {strong: ["AI agent", "AI agents", "agentic AI", agentic, MCP, "Model Context Protocol", "computer use", "agent framework", LangGraph, "multi-agent", "智能体", "AI 智能体"], weak: [agent, agents, "tool calling"]}
+    include_terms: {strong: ["AI agent", "AI agents", "agentic AI", agentic, MCP, "Model Context Protocol", "computer use", "agent framework", LangGraph, "multi-agent", "智能体", "AI 智能体", "Grok Bot", OpenClaw, Manus, "AI 團隊", "AI 团队"], weak: [agent, agents, "tool calling"]}
     exclude_terms: ["real estate agent", "travel agent", "valorant agent", "movie agent", "secret agent", "insurance agent", "agent 007", "free agent", "fbi agent"]
     queries: ["AI agents", "agentic AI tutorial"]
     trusted_channels: [{name: LangChain, youtube_channel_id: UCC-lyoTfSrcJzA1ab3APAgw}, {name: AI Engineer, youtube_channel_id: UCLKPca3kwwd-B59HNr-_lvA}, {name: OpenAI, youtube_channel_id: UCXZCJLdBC09xxGZ6gcdrc6A}]
@@ -42,7 +42,7 @@ topics:
   - id: ai-products
     name_zh: AI 产品与应用
     definition: 关注面向真实用户的 AI 产品、功能与使用案例。
-    include_terms: {strong: ["AI product", "AI app", "AI application", ChatGPT, "AI tool", "AI tools", "AI feature", "AI assistant", NotebookLM, "AI video generator", "AI 产品", "AI 应用"], weak: ["product launch", "new feature", "use case", demo, launch, app, workflow]}
+    include_terms: {strong: ["AI product", "AI app", "AI application", ChatGPT, Claude, Gemini, "AI tool", "AI tools", "AI feature", "AI assistant", NotebookLM, "AI video generator", "AI 产品", "AI 应用", "Meta Muse", "ChatGPT Dots", "OpenAI Dots", "Claude Duet"], title_only_strong: [ChatGPT, Claude, Gemini, NotebookLM, "Meta Muse", "ChatGPT Dots", "OpenAI Dots", "Claude Duet"], weak: ["product launch", "new feature", "use case", demo, launch, app, workflow]}
     exclude_terms: ["make money with AI", "passive income", "get rich", clickbait, "top 10 AI tools to make money"]
     queries: ["new AI products", "AI application demo"]
     trusted_channels: [{name: Perplexity, youtube_channel_id: UCTSqI4c58ffN6l5Mbdat6dg}, {name: Runway, youtube_channel_id: UCUBqu_z5uP0AZhYtuyFZB3g}, {name: ElevenLabs, youtube_channel_id: UC-ew9TfeD887qUSiWWAAj1w}]
