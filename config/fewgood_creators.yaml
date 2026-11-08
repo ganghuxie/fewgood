@@ -1,0 +1,976 @@
+creators:
+- name: Linus Ekenstam
+  channel_id: UCFnSHboIJpG6-hriXMyHvYg
+  handle: '@linusekenstam'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 3100
+  checked_at: '2026-11-08T13:10:13Z'
+- name: Anthropic
+  channel_id: UCrDwWp7EBBv4NwvScIpBDOA
+  handle: '@anthropic-ai'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-coding
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 834000
+  checked_at: '2026-11-08T13:10:14Z'
+- name: AI at Meta
+  channel_id: UC5qxlwEKM7-5YZudb24l0bg
+  handle: '@aiatmeta'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 46200
+  checked_at: '2026-11-08T13:10:14Z'
+- name: Together AI
+  channel_id: UCgiSqzt-AFeQFa6-pAxTIvA
+  handle: '@togetherdotai'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 4730
+  checked_at: '2026-11-08T13:10:15Z'
+- name: Hugging Face
+  channel_id: UCHlNU7kIZhRgSbhHvFoy72w
+  handle: '@huggingface'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-agents
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 150000
+  checked_at: '2026-11-08T13:10:15Z'
+- name: Cohere
+  channel_id: UCAKTUy0tz47ZY02DFpxMqoQ
+  handle: '@cohereai'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 19000
+  checked_at: '2026-11-08T13:10:15Z'
+- name: Midjourney
+  channel_id: UCldFPBqAVrok5DPUQeSMEqQ
+  handle: '@midjourney'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 12300
+  checked_at: '2026-11-08T13:10:16Z'
+- name: Greg Brockman
+  channel_id: UCF3n5QTuQ6qel9kEZ6JWO7g
+  handle: '@gregbrockman1586'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 2
+  checked_at: '2026-11-08T13:10:16Z'
+- name: Google DeepMind
+  channel_id: UCP7jMXSY2xbc3KCAE0MHQ-A
+  handle: '@googledeepmind'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 941000
+  checked_at: '2026-11-08T13:10:16Z'
+- name: OpenAI
+  channel_id: UCXZCJLdBC09xxGZ6gcdrc6A
+  handle: '@openai'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-products
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 2110000
+  checked_at: '2026-11-08T13:10:17Z'
+- name: 3Blue1Brown
+  channel_id: UCYO_jab_esuFRV4b17AJtAw
+  handle: '@3blue1brown'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 8740000
+  checked_at: '2026-11-08T13:10:17Z'
+- name: NVIDIA
+  channel_id: UCHuiy8bXnmK5nisYHUd1J5g
+  handle: '@nvidia'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-models
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 2260000
+  checked_at: '2026-11-08T13:10:18Z'
+- name: Lex Fridman
+  channel_id: UCSHZKyawb77ixDdsGog4iWA
+  handle: '@lexfridman'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 5070000
+  checked_at: '2026-11-08T13:10:18Z'
+- name: Scale AI
+  channel_id: UCAHS4cP-uIXdrpCsSfGq_OA
+  handle: '@scale_ai'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 454000
+  checked_at: '2026-11-08T13:10:18Z'
+- name: AI Explained
+  channel_id: UCNJ1Ymd5yFuUPtn21xtRbbw
+  handle: '@aiexplained-official'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 458000
+  checked_at: '2026-11-08T13:10:18Z'
+- name: Ethan Mollick
+  channel_id: UCuEvINOL2TLekZeeCk50Yug
+  handle: '@profethanmollick'
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-industry
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 1890
+  checked_at: '2026-11-08T13:10:19Z'
+- name: Cursor
+  channel_id: UC6YYHJzM6PhZ2Yey9BQiUaw
+  handle: '@cursor_ai'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 81900
+  checked_at: '2026-11-08T13:10:19Z'
+- name: LangChain
+  channel_id: UCC-lyoTfSrcJzA1ab3APAgw
+  handle: '@langchain'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 210000
+  checked_at: '2026-11-08T13:10:19Z'
+- name: DeepLearning.AI
+  channel_id: UCcIXc5mJsHVYTZR1maL5l9w
+  handle: '@deeplearningai'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-agents
+  - ai-coding
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 741000
+  checked_at: '2026-11-08T13:10:19Z'
+- name: Latent Space
+  channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ
+  handle: '@latentspacepod'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-agents
+  - ai-coding
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 450000
+  checked_at: '2026-11-08T13:10:20Z'
+- name: The Rundown AI
+  channel_id: UC8LUzR34nNX8KH3Edd0un1g
+  handle: '@therundownai'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 203000
+  checked_at: '2026-11-08T13:10:21Z'
+- name: Runway
+  channel_id: UCUBqu_z5uP0AZhYtuyFZB3g
+  handle: '@runwayml'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 140000
+  checked_at: '2026-11-08T13:10:21Z'
+- name: ElevenLabs
+  channel_id: UC-ew9TfeD887qUSiWWAAj1w
+  handle: '@elevenlabs'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 289000
+  checked_at: '2026-11-08T13:10:21Z'
+- name: Stability AI
+  channel_id: UCrhOqMww3ItTHOKxtYM56cg
+  handle: '@stabilityai'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 57
+  checked_at: '2026-11-08T13:10:21Z'
+- name: Siraj Raval
+  channel_id: UCWN3xxRkmTPmbKwht9FuE5A
+  handle: '@sirajraval'
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 768000
+  checked_at: '2026-11-08T13:10:22Z'
+- name: IndyDevDan
+  channel_id: UC_x36zCEGilGpB1m-V4gmjg
+  handle: '@indydevdan'
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 154000
+  checked_at: '2026-11-08T13:10:22Z'
+- name: Sentdex
+  channel_id: UCfzlCWGWYyIQ0aLC5w48gBQ
+  handle: '@sentdex'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1440000
+  checked_at: '2026-11-08T13:10:22Z'
+- name: ColdFusion
+  channel_id: UC4QZ_LsYcvcq7qOsOhpAX4A
+  handle: '@coldfusion'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 5260000
+  checked_at: '2026-11-08T13:10:23Z'
+- name: AI Engineer
+  channel_id: UCLKPca3kwwd-B59HNr-_lvA
+  handle: '@aidotengineer'
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  - ai-products
+  evidence:
+  - existing_registry
+  subscriber_count_at_check: 1000000
+  checked_at: '2026-11-08T13:10:23Z'
+- name: Two Minute Papers
+  channel_id: UCbfYPyITQ-7l4upoX8nvctg
+  handle: '@twominutepapers'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1840000
+  checked_at: '2026-11-08T13:10:23Z'
+- name: bycloud
+  channel_id: UCgfe2ooZD3VJPB6aJAnuQng
+  handle: '@bycloudai'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 238000
+  checked_at: '2026-11-08T13:10:24Z'
+- name: Umar Jamil
+  channel_id: UCtAcpQcYerN8xxZJYTfWBMw
+  handle: '@umarjamilai'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 92600
+  checked_at: '2026-11-08T13:10:24Z'
+- name: Dwarkesh Patel
+  channel_id: UCXl4i9dYBrFOabk0xGmbkRA
+  handle: '@dwarkeshpatel'
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1460000
+  checked_at: '2026-11-08T13:10:25Z'
+- name: Sam Witteveen
+  channel_id: UC55ODQSvARtgSyc8ThfiepQ
+  handle: '@samwitteveenai'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 140000
+  checked_at: '2026-11-08T13:10:25Z'
+- name: Nate Herk
+  channel_id: UC2ojq-nuP8ceeHqiroeKhBA
+  handle: '@nateherk'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1120000
+  checked_at: '2026-11-08T13:10:25Z'
+- name: ThePrimeTime
+  channel_id: UCUyeluBRhGPCW4rPe_UvBZQ
+  handle: '@theprimetimeagen'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1170000
+  checked_at: '2026-11-08T13:10:26Z'
+- name: Fireship
+  channel_id: UCsBjURrPoezykLs9EqgamOA
+  handle: '@fireship'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 4330000
+  checked_at: '2026-11-08T13:10:26Z'
+- name: ByteByteGo
+  channel_id: UCZgt6AzoyjslHTC9dz0UoTw
+  handle: '@bytebytego'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1440000
+  checked_at: '2026-11-08T13:10:26Z'
+- name: Matt Wolfe
+  channel_id: UChpleBmo18P08aKCIgti38g
+  handle: '@mreflow'
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-industry
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1030000
+  checked_at: '2026-11-08T13:10:26Z'
+- name: MattVidPro AI
+  channel_id: UC5Wz4fFacYuON6IKbhSa7Zw
+  handle: '@mattvidpro'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 305000
+  checked_at: '2026-11-08T13:10:27Z'
+- name: The AI Advantage
+  channel_id: UCHhYXsLBEVVnbvsq57n1MTQ
+  handle: '@aiadvantage'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 493000
+  checked_at: '2026-11-08T13:10:27Z'
+- name: TheAIGRID
+  channel_id: UCbY9xX3_jW5c2fjlZVBI4cg
+  handle: '@theaigrid'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-models
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 405000
+  checked_at: '2026-11-08T13:10:27Z'
+- name: All-In Podcast
+  channel_id: UCESLZhusAkFfsNsApnjF_Cg
+  handle: '@allin'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 1170000
+  checked_at: '2026-11-08T13:10:28Z'
+- name: Underfitted (Santiago)
+  channel_id: UCgLxmJ8xER7Y7sywMN5SfWg
+  handle: '@underfitted'
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-agents
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 62100
+  checked_at: '2026-11-08T13:10:28Z'
+- name: AI超元域
+  channel_id: UCIomFkAj4Vq_rGX2Jot7D8A
+  handle: '@aisuperdomain'
+  lang: zh
+  subtopics:
+  - ai-products
+  - ai-agents
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 78100
+  checked_at: '2026-11-08T13:10:28Z'
+- name: 遁一子 Jesse Lau
+  channel_id: UCRy_AScJwP-Tt3iVcMMWCxw
+  handle: '@dunyizi'
+  lang: zh
+  subtopics:
+  - ai-products
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 83
+  checked_at: '2026-11-08T13:10:29Z'
+- name: howie.serious
+  channel_id: UCh1TRnUd33z_CWWDKyPTwtw
+  handle: '@howieserious'
+  lang: zh
+  subtopics:
+  - ai-products
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 10900
+  checked_at: '2026-11-08T13:10:29Z'
+- name: 雪踏乌云
+  channel_id: UCucA8x8KOd05KjU7Cgaj7wA
+  handle: '@wuyun_ai'
+  lang: zh
+  subtopics:
+  - ai-agents
+  - ai-coding
+  evidence:
+  - x_bio_youtube_link
+  subscriber_count_at_check: 12
+  checked_at: '2026-11-08T13:10:29Z'
+- name: Sebastian Raschka
+  channel_id: UC_CzsS7UTjcxJ-xXp1ftxtA
+  handle: '@sebastianraschka'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 102000
+  checked_at: '2026-11-08T13:10:30Z'
+- name: LlamaIndex
+  channel_id: UCeRjipR4_SsCddq9VZ2AeKg
+  handle: '@llamaindex'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 28700
+  checked_at: '2026-11-08T13:10:30Z'
+- name: CrewAI
+  channel_id: UCTulKzR5sldNq2eAxxdaEuA
+  handle: '@crewaiinc'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 8180
+  checked_at: '2026-11-08T13:10:30Z'
+- name: Cole Medin
+  channel_id: UCMwVTLZIRRUyyVrkjDpn4pA
+  handle: '@colemedin'
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 231000
+  checked_at: '2026-11-08T13:10:31Z'
+- name: David Shapiro
+  channel_id: UCvKRFNawVcuz4b9ihUTApCg
+  handle: '@daveshap'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-agents
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 193000
+  checked_at: '2026-11-08T13:10:31Z'
+- name: Theo - t3.gg
+  channel_id: UCbRP3c757lWg9M-U7TyEkXA
+  handle: '@theo'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 578000
+  checked_at: '2026-11-08T13:10:31Z'
+- name: Matt Pocock
+  channel_id: UCswG6FSbgZjbWtdf_hMLaow
+  handle: '@mattpocockuk'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 434000
+  checked_at: '2026-11-08T13:10:32Z'
+- name: ArjanCodes
+  channel_id: UCVhQ2NnY5Rskt6UjCUkJ_DA
+  handle: '@arjancodes'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 345000
+  checked_at: '2026-11-08T13:10:32Z'
+- name: Syntax (Wes Bos)
+  channel_id: UCyU5wkjgQYGRB0hIHMwm2Sg
+  handle: '@syntaxfm'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 511000
+  checked_at: '2026-11-08T13:10:32Z'
+- name: Lee Robinson
+  channel_id: UCZMli3czZnd1uoc1ShTouQw
+  handle: '@leerob'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 83400
+  checked_at: '2026-11-08T13:10:33Z'
+- name: Replit
+  channel_id: UCgoJjdR6-7AMu9fDitb6nVw
+  handle: '@replit'
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-products
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 129000
+  checked_at: '2026-11-08T13:10:33Z'
+- name: a16z
+  channel_id: UC9cn0TuPq4dnbTY-CBsm8XA
+  handle: '@a16z'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 308000
+  checked_at: '2026-11-08T13:10:33Z'
+- name: Y Combinator
+  channel_id: UCcefcZRL2oaA_uBNeo5UOWg
+  handle: '@ycombinator'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-products
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 2430000
+  checked_at: '2026-11-08T13:10:34Z'
+- name: Lenny's Podcast
+  channel_id: UC6t1O76G0jYXOAoYCm153dA
+  handle: '@lennyspodcast'
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 651000
+  checked_at: '2026-11-08T13:10:34Z'
+- name: No Priors
+  channel_id: UCSI7h9hydQ40K5MJHnCrQvw
+  handle: '@nopriorspodcast'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 100000
+  checked_at: '2026-11-08T13:10:34Z'
+- name: 20VC
+  channel_id: UCf0PBRjhf0rF8fWBIxTuoWA
+  handle: '@20vc'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 225000
+  checked_at: '2026-11-08T13:10:35Z'
+- name: Big Technology Podcast
+  channel_id: UCaKiCexVhZ459j9sZ2e7XdQ
+  handle: '@bigtechnologypodcast'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 11700
+  checked_at: '2026-11-08T13:10:35Z'
+- name: Acquired
+  channel_id: UCyFqFYfTW2VoIQKylJ04Rtw
+  handle: '@acquiredfm'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 340000
+  checked_at: '2026-11-08T13:10:35Z'
+- name: Sequoia Capital
+  channel_id: UCWrF0oN6unbXrWsTN7RctTw
+  handle: '@sequoiacapital'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 257000
+  checked_at: '2026-11-08T13:10:36Z'
+- name: 回到Axton
+  channel_id: UCBj9S8TBRlCU4QnhTEOdWZQ
+  handle: '@axtonliu'
+  lang: zh
+  subtopics:
+  - ai-agents
+  - ai-products
+  evidence:
+  - x_profile_plus_known_channel
+  subscriber_count_at_check: 154000
+  checked_at: '2026-11-08T13:10:36Z'
+- name: Machine Learning Street Talk
+  channel_id: UCMLtBahI5DMrt0NPvDSoIRQ
+  handle: '@machinelearningstreettalk'
+  lang: en
+  subtopics:
+  - ai-models
+  evidence:
+  - x_post_lead
+  subscriber_count_at_check: 221000
+  checked_at: '2026-11-08T13:10:36Z'
+- name: Matthew Berman
+  channel_id: UCawZsQWqfGSbCI5yjkdVkTA
+  handle: '@matthew_berman'
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-agents
+  - ai-industry
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 644000
+  checked_at: '2026-11-08T13:10:37Z'
+- name: IBM Technology
+  channel_id: UCKWaEZ-_VweaEx1j62do_vQ
+  handle: '@ibmtechnology'
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-models
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 1840000
+  checked_at: '2026-11-08T13:10:37Z'
+- name: Prompt Engineering
+  channel_id: UCDq7SjbgRKty5TgGafW8Clg
+  handle: '@engineerprompt'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 253000
+  checked_at: '2026-11-08T13:10:37Z'
+- name: AI Jason
+  channel_id: UCrXSVX9a1mj8l0CMLwKgMVw
+  handle: '@aijasonz'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 235000
+  checked_at: '2026-11-08T13:10:37Z'
+- name: Dave Ebbelaar
+  channel_id: UCn8ujwUInbJkBhffxqAPBVQ
+  handle: '@daveebbelaar'
+  lang: en
+  subtopics:
+  - ai-agents
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 307000
+  checked_at: '2026-11-08T13:10:38Z'
+- name: freeCodeCamp.org
+  channel_id: UC8butISFwT-Wl7EV0hUK0BQ
+  handle: '@freecodecamp'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 12000000
+  checked_at: '2026-11-08T13:10:38Z'
+- name: GitHub
+  channel_id: UC7c3Kb6jYCRj4JOHHZTxKsQ
+  handle: '@github'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 706000
+  checked_at: '2026-11-08T13:10:38Z'
+- name: Riley Brown
+  channel_id: UCMcoud_ZW7cfxeIugBflSBw
+  handle: '@rileybrownai'
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-products
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 310000
+  checked_at: '2026-11-08T13:10:39Z'
+- name: Skill Leap AI
+  channel_id: UCwSozl89jl2zUDzQ4jGJD3g
+  handle: '@skillleapai'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 344000
+  checked_at: '2026-11-08T13:10:39Z'
+- name: Kevin Stratvert
+  channel_id: UCfJT_eYDTmDE-ovKaxVE1ig
+  handle: '@kevinstratvert'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 4490000
+  checked_at: '2026-11-08T13:10:39Z'
+- name: Futurepedia
+  channel_id: UC_RovKmk0OCbuZjA8f08opw
+  handle: '@futurepedia_io'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 767000
+  checked_at: '2026-11-08T13:10:39Z'
+- name: Jeff Su
+  channel_id: UCwAnu01qlnVg1Ai2AbtTMaA
+  handle: '@jeffsu'
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-agents
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 1940000
+  checked_at: '2026-11-08T13:10:40Z'
+- name: Tina Huang
+  channel_id: UC2UXDak6o7rBm23k3Vv5dww
+  handle: '@tinahuang1'
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-coding
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 1370000
+  checked_at: '2026-11-08T13:10:40Z'
+- name: Wes Roth
+  channel_id: UCqcbQf6yw5KzRoDDcZ_wBSw
+  handle: '@wesroth'
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-models
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 335000
+  checked_at: '2026-11-08T13:10:40Z'
+- name: Asianometry
+  channel_id: UC1LpsuAUaKoMzzJSEt5WImw
+  handle: '@asianometry'
+  lang: en
+  subtopics:
+  - ai-industry
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 968000
+  checked_at: '2026-11-08T13:10:41Z'
+- name: 最佳拍档
+  channel_id: UCGWYKICLOE8Wxy7q3eYXmPA
+  handle: '@bestpartners'
+  lang: zh
+  subtopics:
+  - ai-industry
+  - ai-models
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 250000
+  checked_at: '2026-11-08T13:10:41Z'
+- name: 零度解说
+  channel_id: UCvijahEyGtvMpmMHBu4FS2w
+  handle: '@lingdujieshuo'
+  lang: zh
+  subtopics:
+  - ai-products
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 1150000
+  checked_at: '2026-11-08T13:10:41Z'
+- name: 秋芝2046
+  channel_id: UCrC3GjeSkxXgJ2hLQ2D-m4w
+  handle: '@qiuzhi2046'
+  lang: zh
+  subtopics:
+  - ai-products
+  evidence:
+  - knowledge_lead
+  subscriber_count_at_check: 91300
+  checked_at: '2026-11-08T13:10:42Z'
+- name: Apna College
+  channel_id: UCBwmMxybNva6P_5VmxjzwqA
+  handle: '@apnacollegeofficial'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - youtube_discovery:AI coding agent
+  - youtube_discovery:AI 编程
+  subscriber_count_at_check: 7980000
+  checked_at: '2026-11-08T13:10:43Z'
+- name: Android Developers
+  channel_id: UCVHFbqXqoYvEWM1Ddxl0QDg
+  handle: '@androiddevelopers'
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  evidence:
+  - youtube_discovery:AI Agent 智能体
+  - youtube_discovery:AI coding agent
+  subscriber_count_at_check: 1440000
+  checked_at: '2026-11-08T13:10:44Z'
+- name: JavaScript Mastery
+  channel_id: UCmXmlB4-HJytD7wek0Uo97A
+  handle: '@javascriptmastery'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - youtube_discovery:AI coding agent
+  - youtube_discovery:AI 编程
+  subscriber_count_at_check: 1280000
+  checked_at: '2026-11-08T13:10:46Z'
+- name: Ayushman Pandita
+  channel_id: UCyWN-BnWSKeHEnNOYvvpNnA
+  handle: '@ayushmanpandita'
+  lang: en
+  subtopics:
+  - ai-products
+  evidence:
+  - youtube_discovery:best AI tools
+  subscriber_count_at_check: 1040000
+  checked_at: '2026-11-08T13:10:49Z'
+- name: AI学长小林
+  channel_id: UCXYvWkR9LAOsOZjYhghDiXw
+  handle: '@linbintalk'
+  lang: zh
+  subtopics:
+  - ai-models
+  evidence:
+  - youtube_discovery:人工智能 AI
+  subscriber_count_at_check: 86800
+  checked_at: '2026-11-08T13:10:51Z'
+- name: Visual Studio Code
+  channel_id: UCs5Y5_7XK8HLDX0SLNwkd3w
+  handle: '@code'
+  lang: en
+  subtopics:
+  - ai-coding
+  evidence:
+  - youtube_discovery:AI 编程 教程
+  subscriber_count_at_check: 1040000
+  checked_at: '2026-11-08T13:10:52Z'

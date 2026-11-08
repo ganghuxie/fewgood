@@ -1,0 +1,17 @@
+video_queries:
+  - {topic: ai-models, lang: en, query: "LLM explained"}
+  - {topic: ai-models, lang: zh, query: "大模型 原理"}
+  - {topic: ai-agents, lang: en, query: "AI agents"}
+  - {topic: ai-agents, lang: zh, query: "AI Agent 智能体"}
+  - {topic: ai-coding, lang: en, query: "AI coding agent"}
+  - {topic: ai-coding, lang: zh, query: "AI 编程"}
+  - {topic: ai-products, lang: en, query: "best AI tools"}
+  - {topic: ai-products, lang: zh, query: "AI 工具 推荐"}
+  - {topic: ai-industry, lang: en, query: "AI news"}
+  - {topic: ai-industry, lang: zh, query: "AI 新闻"}
+channel_queries:
+  - {topic: ai-models, query: "人工智能 AI"}
+  - {topic: ai-agents, query: "大模型"}
+  - {topic: ai-coding, query: "AI 编程 教程"}
+  - {topic: ai-products, query: "AI 工具"}
+  - {topic: ai-industry, query: "AI 科技 资讯"}

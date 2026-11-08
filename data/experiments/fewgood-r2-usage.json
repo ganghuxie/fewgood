@@ -1,0 +1,2073 @@
+{
+  "calls": [
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_ids",
+      "timestamp": "2026-11-08T13:09:54Z",
+      "http_status": 200,
+      "returned": 38
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:54Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:54Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:54Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:54Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:54Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:55Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:56Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:57Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:58Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:09:59Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:00Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:01Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:02Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:03Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "resolve_handle",
+      "timestamp": "2026-11-08T13:10:03Z",
+      "http_status": 200,
+      "returned": 0
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:03Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:03Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:04Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:04Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:05Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:05Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:06Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:06Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:06Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:07Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:07Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:08Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:08Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:09Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "discover_search",
+      "timestamp": "2026-11-08T13:10:09Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:09Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:09Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:09Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:10Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:10Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:10Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:10Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:11Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:11Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "discover_video_stats",
+      "timestamp": "2026-11-08T13:10:11Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:11Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:11Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:12Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:13Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "discover_channel_stats",
+      "timestamp": "2026-11-08T13:10:13Z",
+      "http_status": 200,
+      "returned": 12
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:13Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:14Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:14Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:15Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:15Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:15Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:15Z",
+      "http_status": 200,
+      "returned": 5
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:16Z",
+      "http_status": 200,
+      "returned": 14
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:16Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:16Z",
+      "http_status": 200,
+      "returned": 6
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:16Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:16Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:17Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:17Z",
+      "http_status": 200,
+      "returned": 37
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:17Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:18Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:18Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:18Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:18Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:19Z",
+      "http_status": 200,
+      "returned": 1
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:19Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:19Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:19Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:19Z",
+      "http_status": 200,
+      "returned": 2
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:20Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:20Z",
+      "http_status": 200,
+      "returned": 26
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:20Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:21Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:21Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:21Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:21Z",
+      "http_status": 200,
+      "returned": 12
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:22Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:22Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:22Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:23Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:23Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:23Z",
+      "http_status": 200,
+      "returned": 22
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:23Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:24Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:24Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:24Z",
+      "http_status": 200,
+      "returned": 26
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:25Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:25Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:25Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:25Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:26Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:26Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:26Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:26Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:27Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:27Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:27Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:28Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:28Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:28Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:29Z",
+      "http_status": 200,
+      "returned": 43
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:29Z",
+      "http_status": 200,
+      "returned": 33
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:29Z",
+      "http_status": 200,
+      "returned": 13
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:30Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:30Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:30Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:30Z",
+      "http_status": 200,
+      "returned": 27
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:31Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:31Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:31Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:32Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:32Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:32Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:34Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:34Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:34Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:35Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:35Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:35Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:37Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:37Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:37Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:37Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:38Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:38Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:38Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:39Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:40Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:40Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:40Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:41Z",
+      "http_status": 200,
+      "returned": 17
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:41Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:42Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:42Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:42Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:43Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:43Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:43Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:43Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:44Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:45Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:45Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:45Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:45Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:46Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:47Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:47Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:48Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:48Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:48Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:49Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:50Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:51Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:51Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:51Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:51Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:52Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "uploads",
+      "timestamp": "2026-11-08T13:10:52Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:52Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:53Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:53Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:53Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:54Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:54Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:54Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:54Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:54Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:55Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:55Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:55Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:55Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:55Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:56Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:56Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:56Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:56Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:56Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:57Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:57Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:57Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:57Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:57Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:57Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:58Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:58Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:58Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:58Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:59Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:59Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:59Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:59Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:59Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:10:59Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:00Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:00Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:00Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:00Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:01Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:01Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:01Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:01Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:01Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:02Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:02Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:02Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "details",
+      "timestamp": "2026-11-08T13:11:02Z",
+      "http_status": 200,
+      "returned": 43
+    }
+  ],
+  "search_calls": 15,
+  "other_units": 280,
+  "old_model_units": 1780,
+  "aborted_reason": null
+}

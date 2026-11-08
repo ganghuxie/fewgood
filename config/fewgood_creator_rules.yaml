@@ -1,0 +1,15 @@
+seed_min_subscribers: 1000
+discovered_min_subscribers: {en: 100000, zh: 20000}
+max_discovered_per_topic: 8
+active_within_days: 90
+candidate_within_days: 30
+# Applied during the offline select replay.  Keep this empty unless a channel has
+# been reviewed and should never appear in this experiment.
+manual_exclude_channel_ids: []
+discovery_focus_min_videos: 3
+discovery_focus_min_ratio: 0.4
+unsupported_language_min_ratio: 0.5
+exclude_patterns: ["make money", "passive income", "赚钱", "副业", "搞钱", crypto, "币圈", "股票", "美股", kids, "儿童", "小说", "游戏攻略"]
+general_ai_terms: [AI, "人工智能", "大模型", LLM, Agent, "智能体"]
+brands: [Cursor, Codex, Copilot, Claude, Gemini, ChatGPT, GPT, Windsurf, Llama, Qwen, DeepSeek]
+clickbait_terms: [insane, shocked, shocking, crazy, unbelievable, mind-blowing, "game changer", "you won't believe", destroyed, "for free", "free!", rumor, rumors, leak, leaks, leaked, "炸裂", "震惊", "封神", "太强了", "必看", "白嫖"]

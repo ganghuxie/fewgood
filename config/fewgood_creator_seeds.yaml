@@ -1,0 +1,850 @@
+note: 种子博主名单：X 公共资料核查于 2026-11-08（北京时间）；所有 YouTube 频道必须经 channels.list 验证后才进入池子。evidence
+  取值：existing_registry / x_bio_youtube_link / x_profile_plus_known_channel / x_post_lead
+  / knowledge_lead
+seeds:
+- name: OpenAI
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-products
+  - ai-industry
+  x: OpenAI
+  evidence: existing_registry
+  youtube_channel_id: UCXZCJLdBC09xxGZ6gcdrc6A
+- name: Anthropic
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-coding
+  - ai-industry
+  x: AnthropicAI
+  evidence: existing_registry
+  youtube_channel_id: UCrDwWp7EBBv4NwvScIpBDOA
+- name: Google DeepMind
+  lang: en
+  subtopics:
+  - ai-models
+  x: GoogleDeepMind
+  evidence: existing_registry
+  youtube_channel_id: UCP7jMXSY2xbc3KCAE0MHQ-A
+- name: AI at Meta
+  lang: en
+  subtopics:
+  - ai-models
+  x: AIatMeta
+  evidence: existing_registry
+  youtube_channel_id: UC5qxlwEKM7-5YZudb24l0bg
+- name: NVIDIA
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-models
+  x: nvidia
+  evidence: existing_registry
+  youtube_channel_id: UCHuiy8bXnmK5nisYHUd1J5g
+- name: Hugging Face
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-agents
+  x: huggingface
+  evidence: existing_registry
+  youtube_channel_id: UCHlNU7kIZhRgSbhHvFoy72w
+- name: Stability AI
+  lang: en
+  subtopics:
+  - ai-products
+  x: StabilityAI
+  evidence: existing_registry
+  youtube_channel_id: UCrhOqMww3ItTHOKxtYM56cg
+- name: Midjourney
+  lang: en
+  subtopics:
+  - ai-products
+  x: midjourney
+  evidence: existing_registry
+  youtube_channel_id: UCldFPBqAVrok5DPUQeSMEqQ
+- name: DeepLearning.AI
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-agents
+  - ai-coding
+  x: DeepLearningAI
+  evidence: existing_registry
+  youtube_channel_id: UCcIXc5mJsHVYTZR1maL5l9w
+- name: Cohere
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  x: cohere
+  evidence: existing_registry
+  youtube_channel_id: UCAKTUy0tz47ZY02DFpxMqoQ
+- name: Runway
+  lang: en
+  subtopics:
+  - ai-products
+  x: runwayml
+  evidence: existing_registry
+  youtube_channel_id: UCUBqu_z5uP0AZhYtuyFZB3g
+- name: ElevenLabs
+  lang: en
+  subtopics:
+  - ai-products
+  x: ElevenLabs
+  evidence: existing_registry
+  youtube_channel_id: UC-ew9TfeD887qUSiWWAAj1w
+- name: Scale AI
+  lang: en
+  subtopics:
+  - ai-industry
+  x: scale_AI
+  evidence: existing_registry
+  youtube_channel_id: UCAHS4cP-uIXdrpCsSfGq_OA
+- name: Together AI
+  lang: en
+  subtopics:
+  - ai-models
+  x: togethercompute
+  evidence: existing_registry
+  youtube_channel_id: UCgiSqzt-AFeQFa6-pAxTIvA
+- name: Cursor
+  lang: en
+  subtopics:
+  - ai-coding
+  x: cursor_ai
+  evidence: existing_registry
+  youtube_channel_id: UC6YYHJzM6PhZ2Yey9BQiUaw
+- name: LangChain
+  lang: en
+  subtopics:
+  - ai-agents
+  x: LangChain
+  evidence: existing_registry
+  youtube_channel_id: UCC-lyoTfSrcJzA1ab3APAgw
+- name: Pinecone
+  lang: en
+  subtopics:
+  - ai-agents
+  x: pinecone
+  evidence: existing_registry
+  youtube_channel_id: UCulYMQ-GOvXkDeoxFojwKQw
+- name: AI Engineer
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  - ai-products
+  x: aiDotEngineer
+  evidence: existing_registry
+  youtube_channel_id: UCLKPca3kwwd-B59HNr-_lvA
+- name: The Rundown AI
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-products
+  x: TheRundownAI
+  evidence: existing_registry
+  youtube_channel_id: UC8LUzR34nNX8KH3Edd0un1g
+- name: Latent Space
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-agents
+  - ai-coding
+  x: latentspacepod
+  evidence: existing_registry
+  youtube_channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ
+- name: Andrej Karpathy
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-coding
+  x: karpathy
+  evidence: existing_registry
+  youtube_channel_id: UCe4jUOmQPKMDvOkzJpDfMRQ
+- name: Andrew Ng
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-agents
+  x: AndrewYNg
+  evidence: existing_registry
+  youtube_channel_id: UC0nw93YVMDAuABkfDexpF2Q
+- name: Yann LeCun
+  lang: en
+  subtopics:
+  - ai-models
+  x: ylecun
+  evidence: existing_registry
+  youtube_channel_id: UCMU7l2bIv6MXlgJR3-E33Dw
+- name: François Chollet
+  lang: en
+  subtopics:
+  - ai-models
+  x: fchollet
+  evidence: existing_registry
+  youtube_channel_id: UC820bCs6DQWEozZnLeBPpaQ
+- name: Greg Brockman
+  lang: en
+  subtopics:
+  - ai-industry
+  x: gdb
+  evidence: existing_registry
+  youtube_channel_id: UCF3n5QTuQ6qel9kEZ6JWO7g
+- name: Jack Clark
+  lang: en
+  subtopics:
+  - ai-industry
+  x: jackclarkSF
+  evidence: existing_registry
+  youtube_channel_id: UCNFv-eBKW_xhTCiziy8zjJA
+- name: hardmaru
+  lang: en
+  subtopics:
+  - ai-models
+  x: hardmaru
+  evidence: existing_registry
+  youtube_channel_id: UCw-ZrGIgic129_VsuwUHWFg
+- name: Lex Fridman
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  x: lexfridman
+  evidence: x_bio_youtube_link
+  youtube_channel_id: UCSHZKyawb77ixDdsGog4iWA
+- name: Two Minute Papers
+  lang: en
+  subtopics:
+  - ai-models
+  x: twominutepapers
+  evidence: x_bio_youtube_link
+  youtube_channel_id: UCbfYPyITQ-7l4upoX8nvctg
+- name: Sentdex
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-coding
+  x: Sentdex
+  evidence: x_bio_youtube_link
+  youtube_channel_id: UCfzlCWGWYyIQ0aLC5w48gBQ
+- name: 3Blue1Brown
+  lang: en
+  subtopics:
+  - ai-models
+  x: 3blue1brown
+  evidence: existing_registry
+  youtube_channel_id: UCYO_jab_esuFRV4b17AJtAw
+- name: AI Explained
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  x: AIExplainedYT
+  evidence: existing_registry
+  youtube_channel_id: UCNJ1Ymd5yFuUPtn21xtRbbw
+- name: Siraj Raval
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  x: sirajraval
+  evidence: existing_registry
+  youtube_channel_id: UCWN3xxRkmTPmbKwht9FuE5A
+- name: Ethan Mollick
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-industry
+  x: emollick
+  evidence: existing_registry
+  youtube_channel_id: UCuEvINOL2TLekZeeCk50Yug
+- name: Linus Ekenstam
+  lang: en
+  subtopics:
+  - ai-products
+  x: LinusEkenstam
+  evidence: existing_registry
+  youtube_channel_id: UCFnSHboIJpG6-hriXMyHvYg
+- name: Mckay Wrigley
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-agents
+  x: mckaywrigley
+  evidence: existing_registry
+  youtube_channel_id: UCXZFVVCFahewxr3est7aT7Q
+- name: Yannic Kilcher
+  lang: en
+  subtopics:
+  - ai-models
+  x: ykilcher
+  evidence: x_bio_youtube_link
+  youtube_handle: YannicKilcher
+- name: bycloud
+  lang: en
+  subtopics:
+  - ai-models
+  x: bycloudai
+  evidence: x_bio_youtube_link
+  youtube_handle: bycloudAI
+- name: Umar Jamil
+  lang: en
+  subtopics:
+  - ai-models
+  x: hkproj
+  evidence: x_bio_youtube_link
+  youtube_handle: umarjamilai
+- name: Sasha Rush
+  lang: en
+  subtopics:
+  - ai-models
+  x: srush_nlp
+  evidence: x_bio_youtube_link
+  youtube_handle: srush_nlp
+- name: Dwarkesh Patel
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-industry
+  x: dwarkesh_sp
+  evidence: x_bio_youtube_link
+  youtube_handle: DwarkeshPatel
+- name: Sam Witteveen
+  lang: en
+  subtopics:
+  - ai-agents
+  x: Sam_Witteveen
+  evidence: x_bio_youtube_link
+  youtube_handle: samwitteveenai
+- name: IndyDevDan
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  x: IndyDevDan
+  evidence: x_bio_youtube_link
+  youtube_channel_id: UC_x36zCEGilGpB1m-V4gmjg
+- name: Nate Herk
+  lang: en
+  subtopics:
+  - ai-agents
+  x: nateherk
+  evidence: x_bio_youtube_link
+  youtube_handle: nateherk
+- name: ThePrimeTime
+  lang: en
+  subtopics:
+  - ai-coding
+  x: ThePrimeagen
+  evidence: x_bio_youtube_link
+  youtube_handle: ThePrimeTimeagen
+- name: Fireship
+  lang: en
+  subtopics:
+  - ai-coding
+  x: fireship_dev
+  evidence: x_bio_youtube_link
+  youtube_handle: Fireship
+- name: ByteByteGo
+  lang: en
+  subtopics:
+  - ai-coding
+  x: alexxubyte
+  evidence: x_bio_youtube_link
+  youtube_handle: ByteByteGo
+- name: Matt Wolfe
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-industry
+  x: mreflow
+  evidence: x_bio_youtube_link
+  youtube_handle: mreflow
+- name: MattVidPro AI
+  lang: en
+  subtopics:
+  - ai-products
+  x: MattVidPro
+  evidence: x_bio_youtube_link
+  youtube_handle: MattVidPro
+- name: The AI Advantage
+  lang: en
+  subtopics:
+  - ai-products
+  x: IgorPogany
+  evidence: x_bio_youtube_link
+  youtube_handle: aiadvantage
+- name: TheAIGRID
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-models
+  x: TheAiGrid
+  evidence: x_bio_youtube_link
+  youtube_handle: TheAiGrid
+- name: ColdFusion
+  lang: en
+  subtopics:
+  - ai-industry
+  x: ColdFusion_TV
+  evidence: x_bio_youtube_link
+  youtube_channel_id: UC4QZ_LsYcvcq7qOsOhpAX4A
+- name: All-In Podcast
+  lang: en
+  subtopics:
+  - ai-industry
+  x: theallinpod
+  evidence: x_bio_youtube_link
+  youtube_handle: allin
+- name: Underfitted (Santiago)
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-agents
+  x: svpino
+  evidence: x_bio_youtube_link
+  youtube_handle: underfitted
+- name: AI超元域
+  lang: zh
+  subtopics:
+  - ai-products
+  - ai-agents
+  - ai-coding
+  x: AISuperDomain
+  evidence: x_bio_youtube_link
+  youtube_handle: AIsuperdomain
+- name: 遁一子 Jesse Lau
+  lang: zh
+  subtopics:
+  - ai-products
+  x: jesselaunz
+  evidence: x_bio_youtube_link
+  youtube_handle: dunyizi
+- name: howie.serious
+  lang: zh
+  subtopics:
+  - ai-products
+  x: howie_serious
+  evidence: x_bio_youtube_link
+  youtube_handle: howieserious
+- name: 雪踏乌云
+  lang: zh
+  subtopics:
+  - ai-agents
+  - ai-coding
+  x: Pluvio9yte
+  evidence: x_bio_youtube_link
+  youtube_handle: wuyun_ai
+- name: Jeremy Howard
+  lang: en
+  subtopics:
+  - ai-models
+  - ai-coding
+  x: jeremyphoward
+  evidence: x_profile_plus_known_channel
+  youtube_handle: howardjeremyp
+- name: Sebastian Raschka
+  lang: en
+  subtopics:
+  - ai-models
+  x: rasbt
+  evidence: x_profile_plus_known_channel
+  youtube_handle: SebastianRaschka
+- name: Welch Labs
+  lang: en
+  subtopics:
+  - ai-models
+  x: welchlabs
+  evidence: x_profile_plus_known_channel
+  youtube_handle: WelchLabsVideo
+- name: LlamaIndex
+  lang: en
+  subtopics:
+  - ai-agents
+  x: llama_index
+  evidence: x_profile_plus_known_channel
+  youtube_handle: LlamaIndex
+- name: CrewAI
+  lang: en
+  subtopics:
+  - ai-agents
+  x: crewAIInc
+  evidence: x_profile_plus_known_channel
+  youtube_handle: crewAIInc
+- name: Cole Medin
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-coding
+  x: cole_medin
+  evidence: x_profile_plus_known_channel
+  youtube_handle: ColeMedin
+- name: David Shapiro
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-agents
+  x: DaveShapi
+  evidence: x_profile_plus_known_channel
+  youtube_handle: DaveShap
+- name: Theo - t3.gg
+  lang: en
+  subtopics:
+  - ai-coding
+  x: theo
+  evidence: x_profile_plus_known_channel
+  youtube_handle: t3dotgg
+- name: Matt Pocock
+  lang: en
+  subtopics:
+  - ai-coding
+  x: mattpocockuk
+  evidence: x_profile_plus_known_channel
+  youtube_handle: mattpocockuk
+- name: ArjanCodes
+  lang: en
+  subtopics:
+  - ai-coding
+  x: ArjanCodes
+  evidence: x_profile_plus_known_channel
+  youtube_handle: ArjanCodes
+- name: Cline
+  lang: en
+  subtopics:
+  - ai-coding
+  x: cline
+  evidence: x_profile_plus_known_channel
+  youtube_handle: cline
+- name: Syntax (Wes Bos)
+  lang: en
+  subtopics:
+  - ai-coding
+  x: wesbos
+  evidence: x_profile_plus_known_channel
+  youtube_handle: syntaxfm
+- name: Lee Robinson
+  lang: en
+  subtopics:
+  - ai-coding
+  x: leerob
+  evidence: x_profile_plus_known_channel
+  youtube_handle: leerob
+- name: Replit
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-products
+  x: Replit
+  evidence: x_profile_plus_known_channel
+  youtube_handle: Replit
+- name: a16z
+  lang: en
+  subtopics:
+  - ai-industry
+  x: a16z
+  evidence: x_profile_plus_known_channel
+  youtube_handle: a16z
+- name: Y Combinator
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-products
+  x: ycombinator
+  evidence: x_profile_plus_known_channel
+  youtube_handle: ycombinator
+- name: Lenny's Podcast
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-industry
+  x: lennysan
+  evidence: x_profile_plus_known_channel
+  youtube_handle: LennysPodcast
+- name: No Priors
+  lang: en
+  subtopics:
+  - ai-industry
+  x: NoPriorsPod
+  evidence: x_profile_plus_known_channel
+  youtube_handle: NoPriorsPodcast
+- name: 20VC
+  lang: en
+  subtopics:
+  - ai-industry
+  x: HarryStebbings
+  evidence: x_profile_plus_known_channel
+  youtube_handle: 20VC
+- name: Big Technology Podcast
+  lang: en
+  subtopics:
+  - ai-industry
+  x: Kantrowitz
+  evidence: x_profile_plus_known_channel
+  youtube_handle: BigTechnologyPodcast
+- name: Acquired
+  lang: en
+  subtopics:
+  - ai-industry
+  x: AcquiredFM
+  evidence: x_profile_plus_known_channel
+  youtube_handle: AcquiredFM
+- name: Sequoia Capital
+  lang: en
+  subtopics:
+  - ai-industry
+  x: sequoia
+  evidence: x_profile_plus_known_channel
+  youtube_handle: sequoiacapital
+- name: Hung-yi Lee 李宏毅
+  lang: zh
+  subtopics:
+  - ai-models
+  x: HungyiLee2
+  evidence: x_profile_plus_known_channel
+  youtube_handle: HungyiLeeNTU
+- name: 技术爬爬虾
+  lang: zh
+  subtopics:
+  - ai-coding
+  - ai-products
+  x: tech_shrimp
+  evidence: x_profile_plus_known_channel
+  youtube_handle: Tech_Shrimp
+  note: X 简介写“Youtube…全网同名”
+- name: 回到Axton
+  lang: zh
+  subtopics:
+  - ai-agents
+  - ai-products
+  x: AxtonLiu
+  evidence: x_profile_plus_known_channel
+  youtube_handle: axtonliu
+- name: Machine Learning Street Talk
+  lang: en
+  subtopics:
+  - ai-models
+  x: null
+  evidence: x_post_lead
+  youtube_handle: MachineLearningStreetTalk
+- name: Matthew Berman
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-agents
+  - ai-industry
+  x: MatthewBerman
+  evidence: knowledge_lead
+  youtube_handle: matthew_berman
+- name: IBM Technology
+  lang: en
+  subtopics:
+  - ai-agents
+  - ai-models
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: IBMTechnology
+  note: round1 中出现
+- name: Prompt Engineering
+  lang: en
+  subtopics:
+  - ai-agents
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: engineerprompt
+- name: AI Jason
+  lang: en
+  subtopics:
+  - ai-agents
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: AIJasonZ
+- name: Dave Ebbelaar
+  lang: en
+  subtopics:
+  - ai-agents
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: daveebbelaar
+- name: freeCodeCamp.org
+  lang: en
+  subtopics:
+  - ai-coding
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: freecodecamp
+  note: round1 A 组出现
+- name: GitHub
+  lang: en
+  subtopics:
+  - ai-coding
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: GitHub
+- name: Riley Brown
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-products
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: rileybrownai
+- name: Skill Leap AI
+  lang: en
+  subtopics:
+  - ai-products
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: SkillLeapAI
+- name: Kevin Stratvert
+  lang: en
+  subtopics:
+  - ai-products
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: KevinStratvert
+- name: Futurepedia
+  lang: en
+  subtopics:
+  - ai-products
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: futurepedia_io
+- name: Jeff Su
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-agents
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: JeffSu
+  note: round1 A 组出现
+- name: Tina Huang
+  lang: en
+  subtopics:
+  - ai-products
+  - ai-coding
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: TinaHuang1
+- name: Wes Roth
+  lang: en
+  subtopics:
+  - ai-industry
+  - ai-models
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: WesRoth
+- name: Bloomberg Technology
+  lang: en
+  subtopics:
+  - ai-industry
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: BloombergTechnology
+- name: Asianometry
+  lang: en
+  subtopics:
+  - ai-industry
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: Asianometry
+- name: Andrej Karpathy (handle check)
+  lang: en
+  subtopics:
+  - ai-models
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: AndrejKarpathy
+  note: 与已有 ID 去重
+- name: 最佳拍档
+  lang: zh
+  subtopics:
+  - ai-industry
+  - ai-models
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: bestpartners
+- name: 硅谷101
+  lang: zh
+  subtopics:
+  - ai-industry
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: valley101
+- name: 零度解说
+  lang: zh
+  subtopics:
+  - ai-products
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: lingdujieshuo
+- name: 马克的技术工作坊
+  lang: zh
+  subtopics:
+  - ai-models
+  - ai-coding
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: MarkTechStation
+- name: 林亦LYi
+  lang: zh
+  subtopics:
+  - ai-products
+  - ai-models
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: linyilyi
+- name: 秋芝2046
+  lang: zh
+  subtopics:
+  - ai-products
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: qiuzhi2046
+- name: 老范讲故事
+  lang: zh
+  subtopics:
+  - ai-industry
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: laofanjianggushi
+- name: 老石谈芯
+  lang: zh
+  subtopics:
+  - ai-industry
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: laoshitanxin
+- name: 01Coder
+  lang: zh
+  subtopics:
+  - ai-coding
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: 01coder
+- name: 李自然说
+  lang: zh
+  subtopics:
+  - ai-industry
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: lizirantalk
+- name: 量子位
+  lang: zh
+  subtopics:
+  - ai-industry
+  - ai-models
+  x: null
+  evidence: knowledge_lead
+  youtube_handle: QbitAI
+- name: 跟李沐学AI
+  lang: zh
+  subtopics:
+  - ai-models
+  x: mli65
+  evidence: x_profile_plus_known_channel
+  youtube_handle: mli65
+  note: 李沐主要在 B 站，YouTube 是否存在待验证

@@ -1,595 +1,3482 @@
 {
-  "generated_at": "2026-11-08T12:14:38Z",
-  "data_refreshed_at": "2026-11-08T12:12:51Z",
+  "generated_at": "2026-11-08T13:11:02Z",
+  "data_refreshed_at": "2026-11-08T13:11:02Z",
+  "round": 2,
   "mode": "select",
-  "config_digest": "18247ac746873dc81c426f0c964badca7fd21c2e2cb8ffacdc698a711a86dc7a",
   "usage_summary": {
     "calls": [
       {
-        "endpoint": "search",
-        "purpose": "baseline:ai-models",
-        "timestamp": "2026-11-08T12:12:32Z",
+        "endpoint": "channels",
+        "purpose": "resolve_ids",
+        "timestamp": "2026-11-08T13:09:54Z",
         "http_status": 200,
-        "returned": 10
+        "returned": 38
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:54Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:54Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:54Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:54Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:54Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:55Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:56Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:57Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:58Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:09:59Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:00Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:01Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:02Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:03Z",
+        "http_status": 200,
+        "returned": 0
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "resolve_handle",
+        "timestamp": "2026-11-08T13:10:03Z",
+        "http_status": 200,
+        "returned": 0
       },
       {
         "endpoint": "search",
-        "purpose": "baseline:ai-agents",
-        "timestamp": "2026-11-08T12:12:33Z",
-        "http_status": 200,
-        "returned": 10
-      },
-      {
-        "endpoint": "search",
-        "purpose": "baseline:ai-coding",
-        "timestamp": "2026-11-08T12:12:33Z",
-        "http_status": 200,
-        "returned": 10
-      },
-      {
-        "endpoint": "search",
-        "purpose": "baseline:ai-products",
-        "timestamp": "2026-11-08T12:12:33Z",
-        "http_status": 200,
-        "returned": 10
-      },
-      {
-        "endpoint": "search",
-        "purpose": "baseline:ai-industry",
-        "timestamp": "2026-11-08T12:12:34Z",
-        "http_status": 200,
-        "returned": 10
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-models:AI model research",
-        "timestamp": "2026-11-08T12:12:34Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-models:LLM research",
-        "timestamp": "2026-11-08T12:12:34Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-agents:AI agents",
-        "timestamp": "2026-11-08T12:12:35Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-agents:agentic AI tutorial",
-        "timestamp": "2026-11-08T12:12:35Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-coding:AI coding tools",
-        "timestamp": "2026-11-08T12:12:36Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-coding:coding agents",
-        "timestamp": "2026-11-08T12:12:36Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-products:new AI products",
-        "timestamp": "2026-11-08T12:12:37Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-products:AI application demo",
-        "timestamp": "2026-11-08T12:12:37Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-industry:AI industry news",
-        "timestamp": "2026-11-08T12:12:37Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "search",
-        "purpose": "topic:ai-industry:AI company news",
-        "timestamp": "2026-11-08T12:12:38Z",
-        "http_status": 200,
-        "returned": 25
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:OpenAI",
-        "timestamp": "2026-11-08T12:12:38Z",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:03Z",
         "http_status": 200,
         "returned": 50
       },
       {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Anthropic",
-        "timestamp": "2026-11-08T12:12:38Z",
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:03Z",
         "http_status": 200,
         "returned": 50
       },
       {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Google DeepMind",
-        "timestamp": "2026-11-08T12:12:39Z",
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:04Z",
         "http_status": 200,
         "returned": 50
       },
       {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:AI at Meta",
-        "timestamp": "2026-11-08T12:12:39Z",
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:04Z",
         "http_status": 200,
         "returned": 50
       },
       {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:NVIDIA",
-        "timestamp": "2026-11-08T12:12:39Z",
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:05Z",
         "http_status": 200,
         "returned": 50
       },
       {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Hugging Face",
-        "timestamp": "2026-11-08T12:12:39Z",
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:05Z",
         "http_status": 200,
         "returned": 50
       },
       {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Stability AI",
-        "timestamp": "2026-11-08T12:12:39Z",
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:06Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:06Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:06Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:07Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:07Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:08Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:08Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:09Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "discover_search",
+        "timestamp": "2026-11-08T13:10:09Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:09Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:09Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:09Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:10Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:10Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:10Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:10Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:11Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:11Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "discover_video_stats",
+        "timestamp": "2026-11-08T13:10:11Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:11Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:11Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:12Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:13Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "discover_channel_stats",
+        "timestamp": "2026-11-08T13:10:13Z",
         "http_status": 200,
         "returned": 12
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Midjourney",
-        "timestamp": "2026-11-08T12:12:39Z",
-        "http_status": 200,
-        "returned": 14
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:DeepLearning.AI",
-        "timestamp": "2026-11-08T12:12:40Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:13Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Mistral AI",
-        "timestamp": "2026-11-08T12:12:40Z",
-        "http_status": 404,
-        "returned": 0
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Cohere",
-        "timestamp": "2026-11-08T12:12:40Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:14Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Perplexity",
-        "timestamp": "2026-11-08T12:12:40Z",
-        "http_status": 404,
-        "returned": 0
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Runway",
-        "timestamp": "2026-11-08T12:12:41Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:14Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:ElevenLabs",
-        "timestamp": "2026-11-08T12:12:41Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:15Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Character.AI",
-        "timestamp": "2026-11-08T12:12:41Z",
-        "http_status": 404,
-        "returned": 0
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Scale AI",
-        "timestamp": "2026-11-08T12:12:41Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:15Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Together AI",
-        "timestamp": "2026-11-08T12:12:41Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:15Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Cursor",
-        "timestamp": "2026-11-08T12:12:42Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:LangChain",
-        "timestamp": "2026-11-08T12:12:42Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Pinecone",
-        "timestamp": "2026-11-08T12:12:42Z",
-        "http_status": 200,
-        "returned": 37
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:AI Engineer",
-        "timestamp": "2026-11-08T12:12:43Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:The Rundown AI",
-        "timestamp": "2026-11-08T12:12:43Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Latent Space",
-        "timestamp": "2026-11-08T12:12:44Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Andrej Karpathy",
-        "timestamp": "2026-11-08T12:12:44Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:15Z",
         "http_status": 200,
         "returned": 5
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Andrew Ng",
-        "timestamp": "2026-11-08T12:12:44Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:16Z",
+        "http_status": 200,
+        "returned": 14
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:16Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Yann LeCun",
-        "timestamp": "2026-11-08T12:12:44Z",
-        "http_status": 200,
-        "returned": 26
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:François Chollet",
-        "timestamp": "2026-11-08T12:12:44Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Greg Brockman",
-        "timestamp": "2026-11-08T12:12:44Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Jack Clark",
-        "timestamp": "2026-11-08T12:12:45Z",
-        "http_status": 200,
-        "returned": 2
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Jim Fan",
-        "timestamp": "2026-11-08T12:12:45Z",
-        "http_status": 404,
-        "returned": 0
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:hardmaru",
-        "timestamp": "2026-11-08T12:12:45Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:16Z",
         "http_status": 200,
         "returned": 6
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Lex Fridman",
-        "timestamp": "2026-11-08T12:12:46Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:16Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Two Minute Papers",
-        "timestamp": "2026-11-08T12:12:46Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Sentdex",
-        "timestamp": "2026-11-08T12:12:46Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:3Blue1Brown",
-        "timestamp": "2026-11-08T12:12:46Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:AI Explained",
-        "timestamp": "2026-11-08T12:12:47Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Siraj Raval",
-        "timestamp": "2026-11-08T12:12:47Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:swyx",
-        "timestamp": "2026-11-08T12:12:47Z",
-        "http_status": 404,
-        "returned": 0
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Ethan Mollick",
-        "timestamp": "2026-11-08T12:12:47Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:16Z",
         "http_status": 200,
         "returned": 1
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Rowan Cheung",
-        "timestamp": "2026-11-08T12:12:47Z",
-        "http_status": 404,
-        "returned": 0
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Linus Ekenstam",
-        "timestamp": "2026-11-08T12:12:48Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:17Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "channel_uploads:Mckay Wrigley",
-        "timestamp": "2026-11-08T12:12:48Z",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:17Z",
+        "http_status": 200,
+        "returned": 37
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:17Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:18Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:18Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:18Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:18Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:19Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:19Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:19Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:19Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:19Z",
+        "http_status": 200,
+        "returned": 2
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:20Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:20Z",
+        "http_status": 200,
+        "returned": 26
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:20Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:21Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:21Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:21Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:21Z",
+        "http_status": 200,
+        "returned": 12
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:22Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:22Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:22Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:23Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:23Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:23Z",
         "http_status": 200,
         "returned": 22
       },
       {
-        "endpoint": "videos",
-        "purpose": "details",
-        "timestamp": "2026-11-08T12:12:48Z",
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:23Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:24Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:24Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:24Z",
+        "http_status": 200,
+        "returned": 26
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:25Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:25Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:25Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:25Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:26Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:26Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:26Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:26Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:27Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:27Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:27Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:28Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:28Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:28Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:29Z",
+        "http_status": 200,
+        "returned": 43
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:29Z",
+        "http_status": 200,
+        "returned": 33
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:29Z",
+        "http_status": 200,
+        "returned": 13
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:30Z",
+        "http_status": 200,
+        "returned": 27
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:31Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:31Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:31Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:32Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:32Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:32Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:33Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:33Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:33Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:35Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:35Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:35Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:40Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:40Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:40Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:41Z",
+        "http_status": 200,
+        "returned": 17
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:44Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:45Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:45Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:45Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:45Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:46Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:47Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:47Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:48Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:48Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:48Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:49Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:50Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:51Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:51Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:51Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:51Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:52Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "uploads",
+        "timestamp": "2026-11-08T13:10:52Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:48Z",
+        "timestamp": "2026-11-08T13:10:52Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:49Z",
+        "timestamp": "2026-11-08T13:10:53Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:49Z",
+        "timestamp": "2026-11-08T13:10:53Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:49Z",
+        "timestamp": "2026-11-08T13:10:53Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:49Z",
+        "timestamp": "2026-11-08T13:10:54Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:49Z",
+        "timestamp": "2026-11-08T13:10:54Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:50Z",
+        "timestamp": "2026-11-08T13:10:54Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:50Z",
+        "timestamp": "2026-11-08T13:10:54Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:50Z",
+        "timestamp": "2026-11-08T13:10:54Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:50Z",
+        "timestamp": "2026-11-08T13:10:55Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:50Z",
+        "timestamp": "2026-11-08T13:10:55Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
         "purpose": "details",
-        "timestamp": "2026-11-08T12:12:51Z",
+        "timestamp": "2026-11-08T13:10:55Z",
         "http_status": 200,
-        "returned": 9
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:55Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:55Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:56Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:56Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:56Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:56Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:56Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:57Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:57Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:57Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:57Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:57Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:57Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:58Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:58Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:58Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:58Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:59Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:59Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:59Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:59Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:59Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:10:59Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:00Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:00Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:00Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:00Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:01Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:01Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:01Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:01Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:01Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:02Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:02Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:02Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "details",
+        "timestamp": "2026-11-08T13:11:02Z",
+        "http_status": 200,
+        "returned": 43
       }
     ],
     "search_calls": 15,
-    "other_units": 55,
-    "old_model_units": 1555,
+    "other_units": 280,
+    "old_model_units": 1780,
     "aborted_reason": null
   },
-  "pool_stats": {
-    "existing_pool_raw": 783,
-    "existing_pool_selected": 129,
-    "channel_upload_raw": 364,
-    "search_raw": 250,
-    "merged_unique": 587,
-    "after_title_dedup": 573,
-    "fetched_details": 609,
-    "missing_details": 0,
-    "duplicates_removed": 14,
-    "duplicate_pairs": [
-      {
-        "kept": "T2YGD6TZXtg",
-        "removed": "5HyG_FKtVmo",
-        "title": "Full Stack Generative AI with AI Agents, Agentic AI tutorials || Demo - 1 || by Khan Trainer"
-      },
-      {
-        "kept": "KhDzPY5PwN0",
-        "removed": "aeFED_MT7WI",
-        "title": "Demo-1 | Generative AI & Agentic AI Demo | Build Intelligent AI Applications"
-      },
-      {
-        "kept": "-fQ4eadD4dQ",
-        "removed": "7Zglgny1WBc",
-        "title": "Goldman Limits Traders and Bankers From Using Some AI Tools"
-      },
-      {
-        "kept": "44GBqQGc-v0",
-        "removed": "0LDs5rvx1EI",
-        "title": "How Figma Is Building Self-Serve Analytics with OpenAI"
-      },
-      {
-        "kept": "2h16j4K_NbA",
-        "removed": "JR7xBi2kJjY",
-        "title": "Glean on privacy and OpenAI Private Intelligence"
-      },
-      {
-        "kept": "Amm9ySSET4c",
-        "removed": "NbDF90z-g6w",
-        "title": "Coinbase on OpenAI Private Intelligence"
-      },
-      {
-        "kept": "Oi9DHk57KeQ",
-        "removed": "7TtGMileCus",
-        "title": "How Gen uses ChatGPT Work to turn data Into decisions | OpenAI"
-      },
-      {
-        "kept": "L6pzlo1QvoM",
-        "removed": "GNYHDltnwZQ",
-        "title": "ChatGPT Enterprise at Zendesk: Putting Company Data to Work"
-      },
-      {
-        "kept": "ilG7LPrngkI",
-        "removed": "vKMDQJpRSvA",
-        "title": "AI for Detection and Response | Cloudflare’s Mark Anderson"
-      },
-      {
-        "kept": "0qb0FQo3M5c",
-        "removed": "tFmlEKQkZi0",
-        "title": "Why Cybersecurity Needs AI | Cisco’s Jeetu Patel"
-      },
-      {
-        "kept": "crEHJon4iD4",
-        "removed": "Wanw4woz7zc",
-        "title": "How Sullivan & Cromwell builds legal tools with Codex | OpenAI"
-      },
-      {
-        "kept": "4ZwVP0-ylZU",
-        "removed": "xuQhEr3G2LQ",
-        "title": "Introducing Muse Wonder & Muse Wonder Full: frontier models for agentic tasks"
-      },
-      {
-        "kept": "PzzGrl6RW0I",
-        "removed": "pkXcc6aKyGU",
-        "title": "What You Missed at Hugging Face Open Together"
-      },
-      {
-        "kept": "WV5nqvHJ0Rw",
-        "removed": "ozXE36jAP0M",
-        "title": "Try Recast in ElevenCreative"
-      }
+  "timing": {
+    "collect_seconds": 68.540395,
+    "select_seconds": 18.072563
+  },
+  "creator_pool": {
+    "by_topic": {
+      "ai-models": 24,
+      "ai-agents": 24,
+      "ai-coding": 29,
+      "ai-products": 29,
+      "ai-industry": 29
+    },
+    "by_lang": {
+      "en": 84,
+      "zh": 9
+    },
+    "by_evidence": {
+      "existing_registry": 25,
+      "x_bio_youtube_link": 23,
+      "x_profile_plus_known_channel": 20,
+      "x_post_lead": 1,
+      "knowledge_lead": 18,
+      "youtube_discovery:AI coding agent": 3,
+      "youtube_discovery:AI 编程": 2,
+      "youtube_discovery:AI Agent 智能体": 1,
+      "youtube_discovery:best AI tools": 1,
+      "youtube_discovery:人工智能 AI": 1,
+      "youtube_discovery:AI 编程 教程": 1
+    },
+    "by_status": {
+      "included": 93,
+      "inactive": 13,
+      "unverified": 12,
+      "below_subscribers": 318,
+      "not_focused": 26,
+      "not_topical": 101,
+      "over_cap": 45,
+      "excluded_pattern": 14,
+      "unsupported_language": 3
+    },
+    "examples": [
+      "Linus Ekenstam",
+      "Anthropic",
+      "AI at Meta",
+      "Together AI",
+      "Hugging Face",
+      "Cohere",
+      "Midjourney",
+      "Greg Brockman",
+      "Google DeepMind",
+      "OpenAI"
     ]
   },
-  "timing": {
-    "collect_seconds": 19.14751,
-    "select_seconds": 1.655549
-  },
-  "rules_notes": [
-    "竖屏判断：videos.list 未返回 embedWidth/embedHeight 时不按方向排除，依靠最短 4 分钟时长排除 Shorts"
+  "creators": [
+    {
+      "name": "Linus Ekenstam",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCFnSHboIJpG6-hriXMyHvYg",
+      "handle": "@linusekenstam",
+      "subscriber_count": 3100,
+      "last_upload_at": "2026-10-04T06:25:39Z"
+    },
+    {
+      "name": "Anthropic",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-coding",
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCrDwWp7EBBv4NwvScIpBDOA",
+      "handle": "@anthropic-ai",
+      "subscriber_count": 834000,
+      "last_upload_at": "2026-09-23T18:01:32Z"
+    },
+    {
+      "name": "AI at Meta",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UC5qxlwEKM7-5YZudb24l0bg",
+      "handle": "@aiatmeta",
+      "subscriber_count": 46200,
+      "last_upload_at": "2026-10-12T17:53:48Z"
+    },
+    {
+      "name": "Together AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
+      "handle": "@togetherdotai",
+      "subscriber_count": 4730,
+      "last_upload_at": "2026-11-06T20:10:16Z"
+    },
+    {
+      "name": "Hugging Face",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-agents"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w",
+      "handle": "@huggingface",
+      "subscriber_count": 150000,
+      "last_upload_at": "2026-11-06T10:41:04Z"
+    },
+    {
+      "name": "Cohere",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCAKTUy0tz47ZY02DFpxMqoQ",
+      "handle": "@cohereai",
+      "subscriber_count": 19000,
+      "last_upload_at": "2026-10-30T20:51:25Z"
+    },
+    {
+      "name": "Midjourney",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCldFPBqAVrok5DPUQeSMEqQ",
+      "handle": "@midjourney",
+      "subscriber_count": 12300,
+      "last_upload_at": "2026-09-24T19:49:49Z"
+    },
+    {
+      "name": "Greg Brockman",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCF3n5QTuQ6qel9kEZ6JWO7g",
+      "handle": "@gregbrockman1586",
+      "subscriber_count": 2,
+      "last_upload_at": "2026-10-30T22:34:22Z"
+    },
+    {
+      "name": "Google DeepMind",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCP7jMXSY2xbc3KCAE0MHQ-A",
+      "handle": "@googledeepmind",
+      "subscriber_count": 941000,
+      "last_upload_at": "2026-10-27T16:00:41Z"
+    },
+    {
+      "name": "OpenAI",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-products",
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "handle": "@openai",
+      "subscriber_count": 2110000,
+      "last_upload_at": "2026-11-06T21:11:34Z"
+    },
+    {
+      "name": "3Blue1Brown",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCYO_jab_esuFRV4b17AJtAw",
+      "handle": "@3blue1brown",
+      "subscriber_count": 8740000,
+      "last_upload_at": "2026-10-25T14:30:46Z"
+    },
+    {
+      "name": "NVIDIA",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-models"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+      "handle": "@nvidia",
+      "subscriber_count": 2260000,
+      "last_upload_at": "2026-11-06T23:10:49Z"
+    },
+    {
+      "name": "Lex Fridman",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+      "handle": "@lexfridman",
+      "subscriber_count": 5070000,
+      "last_upload_at": "2026-10-26T22:51:51Z"
+    },
+    {
+      "name": "Scale AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCAHS4cP-uIXdrpCsSfGq_OA",
+      "handle": "@scale_ai",
+      "subscriber_count": 454000,
+      "last_upload_at": "2026-11-05T19:47:52Z"
+    },
+    {
+      "name": "AI Explained",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
+      "handle": "@aiexplained-official",
+      "subscriber_count": 458000,
+      "last_upload_at": "2026-11-02T17:02:16Z"
+    },
+    {
+      "name": "Ethan Mollick",
+      "lang": "en",
+      "subtopics": [
+        "ai-products",
+        "ai-industry"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCuEvINOL2TLekZeeCk50Yug",
+      "handle": "@profethanmollick",
+      "subscriber_count": 1890,
+      "last_upload_at": "2026-10-02T19:54:42Z"
+    },
+    {
+      "name": "Cursor",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UC6YYHJzM6PhZ2Yey9BQiUaw",
+      "handle": "@cursor_ai",
+      "subscriber_count": 81900,
+      "last_upload_at": "2026-09-30T22:51:00Z"
+    },
+    {
+      "name": "LangChain",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
+      "handle": "@langchain",
+      "subscriber_count": 210000,
+      "last_upload_at": "2026-11-05T17:33:36Z"
+    },
+    {
+      "name": "DeepLearning.AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCcIXc5mJsHVYTZR1maL5l9w",
+      "handle": "@deeplearningai",
+      "subscriber_count": 741000,
+      "last_upload_at": "2026-11-05T16:00:22Z"
+    },
+    {
+      "name": "Latent Space",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "handle": "@latentspacepod",
+      "subscriber_count": 450000,
+      "last_upload_at": "2026-11-08T01:22:17Z"
+    },
+    {
+      "name": "The Rundown AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
+      "handle": "@therundownai",
+      "subscriber_count": 203000,
+      "last_upload_at": "2026-11-07T15:00:23Z"
+    },
+    {
+      "name": "Runway",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCUBqu_z5uP0AZhYtuyFZB3g",
+      "handle": "@runwayml",
+      "subscriber_count": 140000,
+      "last_upload_at": "2026-11-03T14:35:19Z"
+    },
+    {
+      "name": "ElevenLabs",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
+      "handle": "@elevenlabs",
+      "subscriber_count": 289000,
+      "last_upload_at": "2026-11-06T16:57:12Z"
+    },
+    {
+      "name": "Stability AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCrhOqMww3ItTHOKxtYM56cg",
+      "handle": "@stabilityai",
+      "subscriber_count": 57,
+      "last_upload_at": "2026-10-01T04:06:09Z"
+    },
+    {
+      "name": "Siraj Raval",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCWN3xxRkmTPmbKwht9FuE5A",
+      "handle": "@sirajraval",
+      "subscriber_count": 768000,
+      "last_upload_at": "2026-11-06T14:51:09Z"
+    },
+    {
+      "name": "IndyDevDan",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UC_x36zCEGilGpB1m-V4gmjg",
+      "handle": "@indydevdan",
+      "subscriber_count": 154000,
+      "last_upload_at": "2026-11-02T14:00:24Z"
+    },
+    {
+      "name": "Sentdex",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCfzlCWGWYyIQ0aLC5w48gBQ",
+      "handle": "@sentdex",
+      "subscriber_count": 1440000,
+      "last_upload_at": "2026-10-18T22:01:38Z"
+    },
+    {
+      "name": "ColdFusion",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UC4QZ_LsYcvcq7qOsOhpAX4A",
+      "handle": "@coldfusion",
+      "subscriber_count": 5260000,
+      "last_upload_at": "2026-11-02T14:49:00Z"
+    },
+    {
+      "name": "AI Engineer",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents",
+        "ai-coding",
+        "ai-products"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "handle": "@aidotengineer",
+      "subscriber_count": 1000000,
+      "last_upload_at": "2026-11-08T08:00:14Z"
+    },
+    {
+      "name": "Two Minute Papers",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
+      "handle": "@twominutepapers",
+      "subscriber_count": 1840000,
+      "last_upload_at": "2026-11-07T16:24:47Z"
+    },
+    {
+      "name": "bycloud",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCgfe2ooZD3VJPB6aJAnuQng",
+      "handle": "@bycloudai",
+      "subscriber_count": 238000,
+      "last_upload_at": "2026-11-03T16:07:50Z"
+    },
+    {
+      "name": "Umar Jamil",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCtAcpQcYerN8xxZJYTfWBMw",
+      "handle": "@umarjamilai",
+      "subscriber_count": 92600,
+      "last_upload_at": "2026-08-18T04:19:10Z"
+    },
+    {
+      "name": "Dwarkesh Patel",
+      "lang": "en",
+      "subtopics": [
+        "ai-models",
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+      "handle": "@dwarkeshpatel",
+      "subscriber_count": 1460000,
+      "last_upload_at": "2026-11-07T21:53:54Z"
+    },
+    {
+      "name": "Sam Witteveen",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ",
+      "handle": "@samwitteveenai",
+      "subscriber_count": 140000,
+      "last_upload_at": "2026-11-06T14:00:01Z"
+    },
+    {
+      "name": "Nate Herk",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+      "handle": "@nateherk",
+      "subscriber_count": 1120000,
+      "last_upload_at": "2026-11-07T02:00:49Z"
+    },
+    {
+      "name": "ThePrimeTime",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ",
+      "handle": "@theprimetimeagen",
+      "subscriber_count": 1170000,
+      "last_upload_at": "2026-11-06T01:11:09Z"
+    },
+    {
+      "name": "Fireship",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+      "handle": "@fireship",
+      "subscriber_count": 4330000,
+      "last_upload_at": "2026-11-06T16:42:38Z"
+    },
+    {
+      "name": "ByteByteGo",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCZgt6AzoyjslHTC9dz0UoTw",
+      "handle": "@bytebytego",
+      "subscriber_count": 1440000,
+      "last_upload_at": "2026-10-22T15:30:15Z"
+    },
+    {
+      "name": "Matt Wolfe",
+      "lang": "en",
+      "subtopics": [
+        "ai-products",
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UChpleBmo18P08aKCIgti38g",
+      "handle": "@mreflow",
+      "subscriber_count": 1030000,
+      "last_upload_at": "2026-11-07T17:00:37Z"
+    },
+    {
+      "name": "MattVidPro AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw",
+      "handle": "@mattvidpro",
+      "subscriber_count": 305000,
+      "last_upload_at": "2026-11-08T02:00:18Z"
+    },
+    {
+      "name": "The AI Advantage",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ",
+      "handle": "@aiadvantage",
+      "subscriber_count": 493000,
+      "last_upload_at": "2026-11-06T19:28:35Z"
+    },
+    {
+      "name": "TheAIGRID",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-models"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg",
+      "handle": "@theaigrid",
+      "subscriber_count": 405000,
+      "last_upload_at": "2026-11-06T23:00:13Z"
+    },
+    {
+      "name": "All-In Podcast",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+      "handle": "@allin",
+      "subscriber_count": 1170000,
+      "last_upload_at": "2026-11-08T02:00:37Z"
+    },
+    {
+      "name": "Underfitted (Santiago)",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding",
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCgLxmJ8xER7Y7sywMN5SfWg",
+      "handle": "@underfitted",
+      "subscriber_count": 62100,
+      "last_upload_at": "2026-09-30T12:00:34Z"
+    },
+    {
+      "name": "AI超元域",
+      "lang": "zh",
+      "subtopics": [
+        "ai-products",
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A",
+      "handle": "@aisuperdomain",
+      "subscriber_count": 78100,
+      "last_upload_at": "2026-11-07T12:25:48Z"
+    },
+    {
+      "name": "遁一子 Jesse Lau",
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCRy_AScJwP-Tt3iVcMMWCxw",
+      "handle": "@dunyizi",
+      "subscriber_count": 83,
+      "last_upload_at": "2026-10-28T23:48:48Z"
+    },
+    {
+      "name": "howie.serious",
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCh1TRnUd33z_CWWDKyPTwtw",
+      "handle": "@howieserious",
+      "subscriber_count": 10900,
+      "last_upload_at": "2026-10-03T05:47:42Z"
+    },
+    {
+      "name": "雪踏乌云",
+      "lang": "zh",
+      "subtopics": [
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_bio_youtube_link"
+      ],
+      "channel_id": "UCucA8x8KOd05KjU7Cgaj7wA",
+      "handle": "@wuyun_ai",
+      "subscriber_count": 12,
+      "last_upload_at": "2026-11-03T16:32:26Z"
+    },
+    {
+      "name": "Sebastian Raschka",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UC_CzsS7UTjcxJ-xXp1ftxtA",
+      "handle": "@sebastianraschka",
+      "subscriber_count": 102000,
+      "last_upload_at": "2026-10-17T12:00:02Z"
+    },
+    {
+      "name": "LlamaIndex",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCeRjipR4_SsCddq9VZ2AeKg",
+      "handle": "@llamaindex",
+      "subscriber_count": 28700,
+      "last_upload_at": "2026-11-04T22:24:57Z"
+    },
+    {
+      "name": "CrewAI",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCTulKzR5sldNq2eAxxdaEuA",
+      "handle": "@crewaiinc",
+      "subscriber_count": 8180,
+      "last_upload_at": "2026-11-03T16:14:53Z"
+    },
+    {
+      "name": "Cole Medin",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA",
+      "handle": "@colemedin",
+      "subscriber_count": 231000,
+      "last_upload_at": "2026-11-06T15:15:48Z"
+    },
+    {
+      "name": "David Shapiro",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCvKRFNawVcuz4b9ihUTApCg",
+      "handle": "@daveshap",
+      "subscriber_count": 193000,
+      "last_upload_at": "2026-11-08T13:00:32Z"
+    },
+    {
+      "name": "Theo - t3.gg",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA",
+      "handle": "@theo",
+      "subscriber_count": 578000,
+      "last_upload_at": "2026-11-06T23:00:39Z"
+    },
+    {
+      "name": "Matt Pocock",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCswG6FSbgZjbWtdf_hMLaow",
+      "handle": "@mattpocockuk",
+      "subscriber_count": 434000,
+      "last_upload_at": "2026-11-06T21:19:15Z"
+    },
+    {
+      "name": "ArjanCodes",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA",
+      "handle": "@arjancodes",
+      "subscriber_count": 345000,
+      "last_upload_at": "2026-11-06T16:00:29Z"
+    },
+    {
+      "name": "Syntax (Wes Bos)",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCyU5wkjgQYGRB0hIHMwm2Sg",
+      "handle": "@syntaxfm",
+      "subscriber_count": 511000,
+      "last_upload_at": "2026-11-06T22:02:48Z"
+    },
+    {
+      "name": "Lee Robinson",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCZMli3czZnd1uoc1ShTouQw",
+      "handle": "@leerob",
+      "subscriber_count": 83400,
+      "last_upload_at": "2026-10-11T17:58:56Z"
+    },
+    {
+      "name": "Replit",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding",
+        "ai-products"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCgoJjdR6-7AMu9fDitb6nVw",
+      "handle": "@replit",
+      "subscriber_count": 129000,
+      "last_upload_at": "2026-11-06T06:00:11Z"
+    },
+    {
+      "name": "a16z",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+      "handle": "@a16z",
+      "subscriber_count": 308000,
+      "last_upload_at": "2026-11-06T15:30:09Z"
+    },
+    {
+      "name": "Y Combinator",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-products"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
+      "handle": "@ycombinator",
+      "subscriber_count": 2430000,
+      "last_upload_at": "2026-11-07T15:00:14Z"
+    },
+    {
+      "name": "Lenny's Podcast",
+      "lang": "en",
+      "subtopics": [
+        "ai-products",
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
+      "handle": "@lennyspodcast",
+      "subscriber_count": 651000,
+      "last_upload_at": "2026-11-08T13:00:30Z"
+    },
+    {
+      "name": "No Priors",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
+      "handle": "@nopriorspodcast",
+      "subscriber_count": 100000,
+      "last_upload_at": "2026-11-07T22:51:41Z"
+    },
+    {
+      "name": "20VC",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA",
+      "handle": "@20vc",
+      "subscriber_count": 225000,
+      "last_upload_at": "2026-11-07T15:00:33Z"
+    },
+    {
+      "name": "Big Technology Podcast",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCaKiCexVhZ459j9sZ2e7XdQ",
+      "handle": "@bigtechnologypodcast",
+      "subscriber_count": 11700,
+      "last_upload_at": "2026-11-08T03:53:29Z"
+    },
+    {
+      "name": "Acquired",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
+      "handle": "@acquiredfm",
+      "subscriber_count": 340000,
+      "last_upload_at": "2026-10-19T04:22:04Z"
+    },
+    {
+      "name": "Sequoia Capital",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCWrF0oN6unbXrWsTN7RctTw",
+      "handle": "@sequoiacapital",
+      "subscriber_count": 257000,
+      "last_upload_at": "2026-11-05T19:15:27Z"
+    },
+    {
+      "name": "回到Axton",
+      "lang": "zh",
+      "subtopics": [
+        "ai-agents",
+        "ai-products"
+      ],
+      "evidence": [
+        "x_profile_plus_known_channel"
+      ],
+      "channel_id": "UCBj9S8TBRlCU4QnhTEOdWZQ",
+      "handle": "@axtonliu",
+      "subscriber_count": 154000,
+      "last_upload_at": "2026-11-08T12:00:21Z"
+    },
+    {
+      "name": "Machine Learning Street Talk",
+      "lang": "en",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "x_post_lead"
+      ],
+      "channel_id": "UCMLtBahI5DMrt0NPvDSoIRQ",
+      "handle": "@machinelearningstreettalk",
+      "subscriber_count": 221000,
+      "last_upload_at": "2026-11-04T08:27:06Z"
+    },
+    {
+      "name": "Matthew Berman",
+      "lang": "en",
+      "subtopics": [
+        "ai-products",
+        "ai-agents",
+        "ai-industry"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCawZsQWqfGSbCI5yjkdVkTA",
+      "handle": "@matthew_berman",
+      "subscriber_count": 644000,
+      "last_upload_at": "2026-11-07T17:28:06Z"
+    },
+    {
+      "name": "IBM Technology",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents",
+        "ai-models"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ",
+      "handle": "@ibmtechnology",
+      "subscriber_count": 1840000,
+      "last_upload_at": "2026-11-08T12:00:25Z"
+    },
+    {
+      "name": "Prompt Engineering",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg",
+      "handle": "@engineerprompt",
+      "subscriber_count": 253000,
+      "last_upload_at": "2026-11-06T14:00:21Z"
+    },
+    {
+      "name": "AI Jason",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCrXSVX9a1mj8l0CMLwKgMVw",
+      "handle": "@aijasonz",
+      "subscriber_count": 235000,
+      "last_upload_at": "2026-09-23T11:51:06Z"
+    },
+    {
+      "name": "Dave Ebbelaar",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCn8ujwUInbJkBhffxqAPBVQ",
+      "handle": "@daveebbelaar",
+      "subscriber_count": 307000,
+      "last_upload_at": "2026-10-30T17:13:44Z"
+    },
+    {
+      "name": "freeCodeCamp.org",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UC8butISFwT-Wl7EV0hUK0BQ",
+      "handle": "@freecodecamp",
+      "subscriber_count": 12000000,
+      "last_upload_at": "2026-11-06T15:22:02Z"
+    },
+    {
+      "name": "GitHub",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UC7c3Kb6jYCRj4JOHHZTxKsQ",
+      "handle": "@github",
+      "subscriber_count": 706000,
+      "last_upload_at": "2026-11-08T13:00:21Z"
+    },
+    {
+      "name": "Riley Brown",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding",
+        "ai-products"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCMcoud_ZW7cfxeIugBflSBw",
+      "handle": "@rileybrownai",
+      "subscriber_count": 310000,
+      "last_upload_at": "2026-11-02T21:20:19Z"
+    },
+    {
+      "name": "Skill Leap AI",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCwSozl89jl2zUDzQ4jGJD3g",
+      "handle": "@skillleapai",
+      "subscriber_count": 344000,
+      "last_upload_at": "2026-11-07T18:43:29Z"
+    },
+    {
+      "name": "Kevin Stratvert",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig",
+      "handle": "@kevinstratvert",
+      "subscriber_count": 4490000,
+      "last_upload_at": "2026-11-05T19:32:49Z"
+    },
+    {
+      "name": "Futurepedia",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UC_RovKmk0OCbuZjA8f08opw",
+      "handle": "@futurepedia_io",
+      "subscriber_count": 767000,
+      "last_upload_at": "2026-11-07T16:00:38Z"
+    },
+    {
+      "name": "Jeff Su",
+      "lang": "en",
+      "subtopics": [
+        "ai-products",
+        "ai-agents"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCwAnu01qlnVg1Ai2AbtTMaA",
+      "handle": "@jeffsu",
+      "subscriber_count": 1940000,
+      "last_upload_at": "2026-10-27T13:02:29Z"
+    },
+    {
+      "name": "Tina Huang",
+      "lang": "en",
+      "subtopics": [
+        "ai-products",
+        "ai-coding"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UC2UXDak6o7rBm23k3Vv5dww",
+      "handle": "@tinahuang1",
+      "subscriber_count": 1370000,
+      "last_upload_at": "2026-10-19T12:59:11Z"
+    },
+    {
+      "name": "Wes Roth",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry",
+        "ai-models"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCqcbQf6yw5KzRoDDcZ_wBSw",
+      "handle": "@wesroth",
+      "subscriber_count": 335000,
+      "last_upload_at": "2026-11-06T14:35:24Z"
+    },
+    {
+      "name": "Asianometry",
+      "lang": "en",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UC1LpsuAUaKoMzzJSEt5WImw",
+      "handle": "@asianometry",
+      "subscriber_count": 968000,
+      "last_upload_at": "2026-11-06T23:00:05Z"
+    },
+    {
+      "name": "最佳拍档",
+      "lang": "zh",
+      "subtopics": [
+        "ai-industry",
+        "ai-models"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCGWYKICLOE8Wxy7q3eYXmPA",
+      "handle": "@bestpartners",
+      "subscriber_count": 250000,
+      "last_upload_at": "2026-11-08T09:00:42Z"
+    },
+    {
+      "name": "零度解说",
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w",
+      "handle": "@lingdujieshuo",
+      "subscriber_count": 1150000,
+      "last_upload_at": "2026-11-07T12:17:13Z"
+    },
+    {
+      "name": "秋芝2046",
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "knowledge_lead"
+      ],
+      "channel_id": "UCrC3GjeSkxXgJ2hLQ2D-m4w",
+      "handle": "@qiuzhi2046",
+      "subscriber_count": 91300,
+      "last_upload_at": "2026-11-03T05:07:57Z"
+    },
+    {
+      "name": "Apna College",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "youtube_discovery:AI coding agent",
+        "youtube_discovery:AI 编程"
+      ],
+      "channel_id": "UCBwmMxybNva6P_5VmxjzwqA",
+      "handle": "@apnacollegeofficial",
+      "subscriber_count": 7980000,
+      "last_upload_at": "2026-11-06T15:25:07Z"
+    },
+    {
+      "name": "Android Developers",
+      "lang": "en",
+      "subtopics": [
+        "ai-agents",
+        "ai-coding"
+      ],
+      "evidence": [
+        "youtube_discovery:AI Agent 智能体",
+        "youtube_discovery:AI coding agent"
+      ],
+      "channel_id": "UCVHFbqXqoYvEWM1Ddxl0QDg",
+      "handle": "@androiddevelopers",
+      "subscriber_count": 1440000,
+      "last_upload_at": "2026-11-06T17:02:22Z"
+    },
+    {
+      "name": "JavaScript Mastery",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "youtube_discovery:AI coding agent",
+        "youtube_discovery:AI 编程"
+      ],
+      "channel_id": "UCmXmlB4-HJytD7wek0Uo97A",
+      "handle": "@javascriptmastery",
+      "subscriber_count": 1280000,
+      "last_upload_at": "2026-11-08T12:00:15Z"
+    },
+    {
+      "name": "Ayushman Pandita",
+      "lang": "en",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "youtube_discovery:best AI tools"
+      ],
+      "channel_id": "UCyWN-BnWSKeHEnNOYvvpNnA",
+      "handle": "@ayushmanpandita",
+      "subscriber_count": 1040000,
+      "last_upload_at": "2026-11-06T15:56:39Z"
+    },
+    {
+      "name": "AI学长小林",
+      "lang": "zh",
+      "subtopics": [
+        "ai-models"
+      ],
+      "evidence": [
+        "youtube_discovery:人工智能 AI"
+      ],
+      "channel_id": "UCXYvWkR9LAOsOZjYhghDiXw",
+      "handle": "@linbintalk",
+      "subscriber_count": 86800,
+      "last_upload_at": "2026-11-08T09:00:11Z"
+    },
+    {
+      "name": "Visual Studio Code",
+      "lang": "en",
+      "subtopics": [
+        "ai-coding"
+      ],
+      "evidence": [
+        "youtube_discovery:AI 编程 教程"
+      ],
+      "channel_id": "UCs5Y5_7XK8HLDX0SLNwkd3w",
+      "handle": "@code",
+      "subscriber_count": 1040000,
+      "last_upload_at": "2026-11-05T15:00:03Z"
+    }
   ],
   "topics": [
     {
@@ -597,103 +3484,34 @@
       "name_zh": "AI 模型与研究",
       "definition": "关注模型能力、训练方法、评测与研究进展。",
       "stats": {
-        "searches": 2,
-        "baseline_searches": 1,
-        "topic_search_results": 50,
-        "matched": 112,
-        "matched_tier1": 25,
-        "matched_tier2": 76,
-        "matched_tier3": 11,
-        "eligible": 64,
+        "creators_in_topic": 24,
+        "candidates_from_creators": 1453,
+        "matched_tier1": 15,
+        "matched_tier2": 182,
+        "matched_tier3": 0,
+        "matched": 197,
+        "eligible": 36,
         "shown": 6,
-        "channel_distribution_shown": {
-          "Hugging Face": 1,
-          "The Pretrained Pod": 1,
-          "AI Research Roundup": 2,
-          "bycloud": 1,
-          "Breach FM - der Infosec Podcast": 1
-        },
-        "channel_distribution_eligible": {
-          "Hugging Face": 1,
-          "The Pretrained Pod": 1,
-          "AI Research Roundup": 2,
-          "bycloud": 1,
-          "Breach FM - der Infosec Podcast": 1
-        },
         "excluded_by_rule": {
-          "duration": 69,
-          "exclude:make money": 3,
-          "live_or_upcoming": 1
+          "duration": 62,
+          "creator_not_topic_tier2": 56,
+          "exclude:make money": 1,
+          "exclude:3d model": 1
         },
-        "duplicates_in_topic": 0
+        "excluded_creators_by_rule": {
+          "not_focused": 4
+        },
+        "channel_distribution_shown": {
+          "bycloud": 1,
+          "Cohere": 1,
+          "Sebastian Raschka": 1,
+          "最佳拍档": 1,
+          "IBM Technology": 1,
+          "TheAIGRID": 1
+        },
+        "relaxed_channel_cap": false
       },
       "videos": [
-        {
-          "video_id": "mEtRe_KKYm0",
-          "title": "Hugging Face Journal Club: Score Centering Stabilizes Off-policy Reinforcement Learning",
-          "channel_title": "Hugging Face",
-          "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w",
-          "published_at": "2026-10-26T13:38:50Z",
-          "duration_seconds": 1946,
-          "view_count": 3008,
-          "topic": "ai-models",
-          "sources": [
-            "channel_uploads:Hugging Face"
-          ],
-          "reasons": [
-            "标题含关键词「reinforcement learning」",
-            "也匹配：AI 产业动态",
-            "来自可信频道：Hugging Face",
-            "发布于 2026-10-26（13 天前）",
-            "时长 32:26，非 Shorts",
-            "被 1 个来源发现：频道上传"
-          ],
-          "url": "https://www.youtube.com/watch?v=mEtRe_KKYm0",
-          "thumbnail": "https://i.ytimg.com/vi/mEtRe_KKYm0/mqdefault.jpg"
-        },
-        {
-          "video_id": "bR5mzluCO5I",
-          "title": "The Shelf Life of LLM Findings",
-          "channel_title": "The Pretrained Pod",
-          "channel_id": "UCFVfVVrJzZStqDWu7mbp1mw",
-          "published_at": "2026-11-05T13:26:26Z",
-          "duration_seconds": 1328,
-          "view_count": 376,
-          "topic": "ai-models",
-          "sources": [
-            "search:LLM research"
-          ],
-          "reasons": [
-            "标题含关键词「LLM」",
-            "发布于 2026-11-05（3 天前）",
-            "时长 22:08，非 Shorts",
-            "被 1 个来源发现：搜索「LLM research」"
-          ],
-          "url": "https://www.youtube.com/watch?v=bR5mzluCO5I",
-          "thumbnail": "https://i.ytimg.com/vi/bR5mzluCO5I/mqdefault.jpg"
-        },
-        {
-          "video_id": "YphV2bVmHhc",
-          "title": "IdeaTaste: Benchmarking LLM Research Taste",
-          "channel_title": "AI Research Roundup",
-          "channel_id": "UCgan40EwxkwM9ot1pV8lTFA",
-          "published_at": "2026-11-05T05:43:02Z",
-          "duration_seconds": 286,
-          "view_count": 54,
-          "topic": "ai-models",
-          "sources": [
-            "search:LLM research"
-          ],
-          "reasons": [
-            "标题含关键词「LLM」",
-            "也匹配：AI Agent",
-            "发布于 2026-11-05（3 天前）",
-            "时长 4:46，非 Shorts",
-            "被 1 个来源发现：搜索「LLM research」"
-          ],
-          "url": "https://www.youtube.com/watch?v=YphV2bVmHhc",
-          "thumbnail": "https://i.ytimg.com/vi/YphV2bVmHhc/mqdefault.jpg"
-        },
         {
           "video_id": "2K_Rm8cho1I",
           "title": "DeepSeek's New LLM Engine Just Made GPUs 3x More Valuable",
@@ -701,64 +3519,130 @@
           "channel_id": "UCgfe2ooZD3VJPB6aJAnuQng",
           "published_at": "2026-11-03T16:07:50Z",
           "duration_seconds": 1159,
-          "view_count": 227350,
+          "view_count": 227900,
           "topic": "ai-models",
           "sources": [
-            "search:LLM research"
+            "creator_uploads:bycloud"
           ],
           "reasons": [
+            "来自精选博主 bycloud（入池依据：X 资料直接链接 YouTube；本主题博主）",
             "标题含关键词「LLM」",
-            "也匹配：AI Agent、AI 编程、AI 产业动态",
-            "发布于 2026-11-03（5 天前）",
-            "时长 19:19，非 Shorts",
-            "被 1 个来源发现：搜索「LLM research」"
+            "发布于 2026-11-03（4 天前）",
+            "时长 19:19",
+            "订阅数 238000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=2K_Rm8cho1I",
           "thumbnail": "https://i.ytimg.com/vi/2K_Rm8cho1I/mqdefault.jpg"
         },
         {
-          "video_id": "cdW2CYF6fhM",
-          "title": "LLM scaling, agent reliability and Europe’s AI stack ft. Daniel Gillblad",
-          "channel_title": "Breach FM - der Infosec Podcast",
-          "channel_id": "UCCGRGi0-jxQtVE12S8ykrIw",
-          "published_at": "2026-10-28T00:58:08Z",
-          "duration_seconds": 5754,
-          "view_count": 19,
+          "video_id": "jrApblKyLSQ",
+          "title": "Matthew Kowal - Interpretability Across the Model Design Pipeline",
+          "channel_title": "Cohere",
+          "channel_id": "UCAKTUy0tz47ZY02DFpxMqoQ",
+          "published_at": "2026-10-22T22:01:48Z",
+          "duration_seconds": 3371,
+          "view_count": 531,
           "topic": "ai-models",
           "sources": [
-            "search:LLM research"
+            "creator_uploads:Cohere"
           ],
           "reasons": [
-            "标题含关键词「LLM」",
-            "也匹配：AI Agent",
-            "发布于 2026-10-28（11 天前）",
-            "时长 95:54，非 Shorts",
-            "被 1 个来源发现：搜索「LLM research」"
+            "来自精选博主 Cohere（入池依据：原有 X→YouTube 名单；本主题博主）",
+            "标题含关键词「interpretability」",
+            "发布于 2026-10-22（16 天前）",
+            "时长 56:11",
+            "订阅数 19000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=cdW2CYF6fhM",
-          "thumbnail": "https://i.ytimg.com/vi/cdW2CYF6fhM/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=jrApblKyLSQ",
+          "thumbnail": "https://i.ytimg.com/vi/jrApblKyLSQ/mqdefault.jpg"
         },
         {
-          "video_id": "o3Z8ajFXAgU",
-          "title": "AutoTavern: LLM Agents Build Top Hearthstone Bot",
-          "channel_title": "AI Research Roundup",
-          "channel_id": "UCgan40EwxkwM9ot1pV8lTFA",
-          "published_at": "2026-10-28T00:22:19Z",
-          "duration_seconds": 283,
-          "view_count": 160,
+          "video_id": "msp69FR5NZs",
+          "title": "Build A Reasoning Model From Scratch 8: Distillation",
+          "channel_title": "Sebastian Raschka",
+          "channel_id": "UC_CzsS7UTjcxJ-xXp1ftxtA",
+          "published_at": "2026-10-17T12:00:02Z",
+          "duration_seconds": 4878,
+          "view_count": 18768,
           "topic": "ai-models",
           "sources": [
-            "search:LLM research"
+            "creator_uploads:Sebastian Raschka"
           ],
           "reasons": [
-            "标题含关键词「LLM」",
-            "也匹配：AI Agent",
-            "发布于 2026-10-28（11 天前）",
-            "时长 4:43，非 Shorts",
-            "被 1 个来源发现：搜索「LLM research」"
+            "来自精选博主 Sebastian Raschka（入池依据：X 认证资料 + YouTube 核验；本主题博主）",
+            "标题含关键词「reasoning model」",
+            "发布于 2026-10-17（22 天前）",
+            "时长 81:18",
+            "订阅数 102000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=o3Z8ajFXAgU",
-          "thumbnail": "https://i.ytimg.com/vi/o3Z8ajFXAgU/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=msp69FR5NZs",
+          "thumbnail": "https://i.ytimg.com/vi/msp69FR5NZs/mqdefault.jpg"
+        },
+        {
+          "video_id": "WMD90rttSaw",
+          "title": "意识会不会在算法里醒来？| 意识 | 机器意识 | Joscha Bach | Transformer | 因果模式 | 整合信息理论 | 自组织学习 | 表征收敛 | 大语言模型 | 哲学僵尸",
+          "channel_title": "最佳拍档",
+          "channel_id": "UCGWYKICLOE8Wxy7q3eYXmPA",
+          "published_at": "2026-11-06T12:00:35Z",
+          "duration_seconds": 1207,
+          "view_count": 12050,
+          "topic": "ai-models",
+          "sources": [
+            "creator_uploads:最佳拍档"
+          ],
+          "reasons": [
+            "来自精选博主 最佳拍档（入池依据：公开线索 + YouTube 核验；本主题博主）",
+            "标题含关键词「大语言模型」",
+            "发布于 2026-11-06（2 天前）",
+            "时长 20:07",
+            "订阅数 250000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=WMD90rttSaw",
+          "thumbnail": "https://i.ytimg.com/vi/WMD90rttSaw/mqdefault.jpg"
+        },
+        {
+          "video_id": "615-yWyS1n0",
+          "title": "What Is LLM Inference? How AI Models Generate Responses",
+          "channel_title": "IBM Technology",
+          "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ",
+          "published_at": "2026-10-22T11:00:04Z",
+          "duration_seconds": 466,
+          "view_count": 119578,
+          "topic": "ai-models",
+          "sources": [
+            "creator_uploads:IBM Technology"
+          ],
+          "reasons": [
+            "来自精选博主 IBM Technology（入池依据：公开线索 + YouTube 核验；本主题博主）",
+            "标题含关键词「LLM」",
+            "发布于 2026-10-22（17 天前）",
+            "时长 7:46",
+            "订阅数 1840000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=615-yWyS1n0",
+          "thumbnail": "https://i.ytimg.com/vi/615-yWyS1n0/mqdefault.jpg"
+        },
+        {
+          "video_id": "R-OeFlyzveI",
+          "title": "Something Strange Is Happening With GPT-6.2",
+          "channel_title": "TheAIGRID",
+          "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg",
+          "published_at": "2026-11-06T08:30:00Z",
+          "duration_seconds": 1494,
+          "view_count": 60160,
+          "topic": "ai-models",
+          "sources": [
+            "creator_uploads:TheAIGRID"
+          ],
+          "reasons": [
+            "来自精选博主 TheAIGRID（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「GPT」",
+            "发布于 2026-11-06（2 天前）",
+            "时长 24:54",
+            "订阅数 405000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=R-OeFlyzveI",
+          "thumbnail": "https://i.ytimg.com/vi/R-OeFlyzveI/mqdefault.jpg"
         }
       ]
     },
@@ -767,33 +3651,31 @@
       "name_zh": "AI Agent",
       "definition": "关注能规划、调用工具或执行任务的 AI Agent。",
       "stats": {
-        "searches": 2,
-        "baseline_searches": 1,
-        "topic_search_results": 50,
-        "matched": 167,
-        "matched_tier1": 92,
-        "matched_tier2": 66,
-        "matched_tier3": 9,
-        "eligible": 104,
+        "creators_in_topic": 24,
+        "candidates_from_creators": 1453,
+        "matched_tier1": 89,
+        "matched_tier2": 76,
+        "matched_tier3": 0,
+        "matched": 165,
+        "eligible": 87,
         "shown": 6,
-        "channel_distribution_shown": {
-          "AI Engineer": 2,
-          "Grace Leung": 1,
-          "Siraj Raval": 1,
-          "Metics Media": 1,
-          "IBM Technology": 1
-        },
-        "channel_distribution_eligible": {
-          "AI Engineer": 15,
-          "Grace Leung": 1,
-          "Siraj Raval": 1,
-          "Metics Media": 1,
-          "IBM Technology": 1
-        },
         "excluded_by_rule": {
-          "duration": 79
+          "duration": 48,
+          "creator_not_topic_tier2": 16,
+          "live_or_upcoming": 1
         },
-        "duplicates_in_topic": 0
+        "excluded_creators_by_rule": {
+          "not_focused": 7
+        },
+        "channel_distribution_shown": {
+          "AI Engineer": 1,
+          "Siraj Raval": 1,
+          "Latent Space": 1,
+          "Nate Herk": 1,
+          "Hugging Face": 1,
+          "Cole Medin": 1
+        },
+        "relaxed_channel_cap": false
       },
       "videos": [
         {
@@ -806,70 +3688,18 @@
           "view_count": 5334,
           "topic": "ai-agents",
           "sources": [
-            "existing:ai.json",
-            "existing:catalog.json",
-            "channel_uploads:AI Engineer"
+            "creator_uploads:AI Engineer"
           ],
           "reasons": [
+            "来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单；本主题博主）",
             "标题含关键词「agentic」",
-            "来自可信频道：AI Engineer",
+            "边界规则：含 Agent 信号 → AI Agent",
             "发布于 2026-11-07（1 天前）",
-            "时长 19:34，非 Shorts",
-            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+            "时长 19:34",
+            "订阅数 1000000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=kIlVNGZZr8o",
           "thumbnail": "https://i.ytimg.com/vi/kIlVNGZZr8o/mqdefault.jpg"
-        },
-        {
-          "video_id": "pz74r-4dGfQ",
-          "title": "Your AI Agent Is Hiding Its Mistakes From You - Ben Holmes, Warp",
-          "channel_title": "AI Engineer",
-          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-          "published_at": "2026-11-06T22:00:01Z",
-          "duration_seconds": 1160,
-          "view_count": 29625,
-          "topic": "ai-agents",
-          "sources": [
-            "existing:ai.json",
-            "existing:catalog.json",
-            "channel_uploads:AI Engineer"
-          ],
-          "reasons": [
-            "标题含关键词「AI agent」",
-            "也匹配：AI 模型与研究、AI 编程",
-            "来自可信频道：AI Engineer",
-            "发布于 2026-11-06（2 天前）",
-            "时长 19:20，非 Shorts",
-            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
-          ],
-          "url": "https://www.youtube.com/watch?v=pz74r-4dGfQ",
-          "thumbnail": "https://i.ytimg.com/vi/pz74r-4dGfQ/mqdefault.jpg"
-        },
-        {
-          "video_id": "F8jidmEkIeM",
-          "title": "Claude Code: Build Your First AI Agent in 20 Minutes (100% No Coding)",
-          "channel_title": "Grace Leung",
-          "channel_id": "UCrB7UFnkosBjAhOg3a9NdWw",
-          "published_at": "2026-10-30T13:00:10Z",
-          "duration_seconds": 1201,
-          "view_count": 250782,
-          "topic": "ai-agents",
-          "sources": [
-            "search:AI agents",
-            "search:agentic AI tutorial",
-            "search:AI coding tools",
-            "search:coding agents",
-            "search:AI application demo"
-          ],
-          "reasons": [
-            "标题含关键词「AI agent」",
-            "也匹配：AI 模型与研究、AI 编程、AI 产品与应用",
-            "发布于 2026-10-30（9 天前）",
-            "时长 20:01，非 Shorts",
-            "被 5 个来源发现：搜索「AI agents」 / 搜索「agentic AI tutorial」 / 搜索「AI coding tools」 / 搜索「coding agents」 / 搜索「AI application demo」"
-          ],
-          "url": "https://www.youtube.com/watch?v=F8jidmEkIeM",
-          "thumbnail": "https://i.ytimg.com/vi/F8jidmEkIeM/mqdefault.jpg"
         },
         {
           "video_id": "ibdmyMFd_z8",
@@ -878,69 +3708,113 @@
           "channel_id": "UCWN3xxRkmTPmbKwht9FuE5A",
           "published_at": "2026-11-06T14:51:09Z",
           "duration_seconds": 1154,
-          "view_count": 2296,
+          "view_count": 2295,
           "topic": "ai-agents",
           "sources": [
-            "existing:ai.json",
-            "existing:catalog.json",
-            "channel_uploads:Siraj Raval"
+            "creator_uploads:Siraj Raval"
           ],
           "reasons": [
+            "来自精选博主 Siraj Raval（入池依据：原有 X→YouTube 名单；本主题博主）",
             "标题含关键词「AI agent」",
-            "也匹配：AI 模型与研究",
-            "发布于 2026-11-06（2 天前）",
-            "时长 19:14，非 Shorts",
-            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+            "边界规则：含 Agent 信号 → AI Agent",
+            "发布于 2026-11-06（1 天前）",
+            "时长 19:14",
+            "订阅数 768000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=ibdmyMFd_z8",
           "thumbnail": "https://i.ytimg.com/vi/ibdmyMFd_z8/mqdefault.jpg"
         },
         {
-          "video_id": "rCkYVxOX-dI",
-          "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-          "channel_title": "Metics Media",
-          "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ",
-          "published_at": "2026-10-19T11:00:25Z",
-          "duration_seconds": 1274,
-          "view_count": 670936,
+          "video_id": "vhPCo-8K78U",
+          "title": "What 90,000 Rollouts Reveal About AI Agents Doing Science - Ian Quigley, Leash Bio",
+          "channel_title": "Latent Space",
+          "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+          "published_at": "2026-10-26T15:00:07Z",
+          "duration_seconds": 994,
+          "view_count": 29879,
           "topic": "ai-agents",
           "sources": [
-            "search:agentic AI tutorial",
-            "search:AI coding tools",
-            "search:coding agents"
+            "creator_uploads:Latent Space"
           ],
           "reasons": [
-            "标题含关键词「AI agent」",
-            "也匹配：AI 编程",
-            "发布于 2026-10-19（20 天前）",
-            "时长 21:14，非 Shorts",
-            "被 3 个来源发现：搜索「agentic AI tutorial」 / 搜索「AI coding tools」 / 搜索「coding agents」"
+            "来自精选博主 Latent Space（入池依据：原有 X→YouTube 名单；本主题博主）",
+            "标题含关键词「AI agents」",
+            "边界规则：含 Agent 信号 → AI Agent",
+            "发布于 2026-10-26（12 天前）",
+            "时长 16:34",
+            "订阅数 450000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=rCkYVxOX-dI",
-          "thumbnail": "https://i.ytimg.com/vi/rCkYVxOX-dI/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=vhPCo-8K78U",
+          "thumbnail": "https://i.ytimg.com/vi/vhPCo-8K78U/mqdefault.jpg"
         },
         {
-          "video_id": "DQBqh6gcx7U",
-          "title": "What Is Loop Engineering? Building Better AI Agents",
-          "channel_title": "IBM Technology",
-          "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ",
-          "published_at": "2026-10-19T11:00:06Z",
-          "duration_seconds": 648,
-          "view_count": 133156,
+          "video_id": "KZiF2J83zaY",
+          "title": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+          "channel_title": "Nate Herk | AI Automation",
+          "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+          "published_at": "2026-10-15T15:16:33Z",
+          "duration_seconds": 1344,
+          "view_count": 106486,
           "topic": "ai-agents",
           "sources": [
-            "search:AI agents",
-            "search:agentic AI tutorial",
-            "search:coding agents"
+            "creator_uploads:Nate Herk"
           ],
           "reasons": [
+            "来自精选博主 Nate Herk（入池依据：X 资料直接链接 YouTube；本主题博主）",
             "标题含关键词「AI agents」",
-            "发布于 2026-10-19（20 天前）",
-            "时长 10:48，非 Shorts",
-            "被 3 个来源发现：搜索「AI agents」 / 搜索「agentic AI tutorial」 / 搜索「coding agents」"
+            "边界规则：含 Agent 信号 → AI Agent",
+            "发布于 2026-10-15（23 天前）",
+            "时长 22:24",
+            "订阅数 1120000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=DQBqh6gcx7U",
-          "thumbnail": "https://i.ytimg.com/vi/DQBqh6gcx7U/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=KZiF2J83zaY",
+          "thumbnail": "https://i.ytimg.com/vi/KZiF2J83zaY/mqdefault.jpg"
+        },
+        {
+          "video_id": "EuN8WCWQf7g",
+          "title": "How to Build Your Own AI Agent (Like PewDiePie)",
+          "channel_title": "Hugging Face",
+          "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w",
+          "published_at": "2026-10-13T03:37:35Z",
+          "duration_seconds": 1449,
+          "view_count": 18671,
+          "topic": "ai-agents",
+          "sources": [
+            "creator_uploads:Hugging Face"
+          ],
+          "reasons": [
+            "来自精选博主 Hugging Face（入池依据：原有 X→YouTube 名单；本主题博主）",
+            "标题含关键词「AI agent」",
+            "边界规则：含 Agent 信号 → AI Agent",
+            "发布于 2026-10-13（26 天前）",
+            "时长 24:09",
+            "订阅数 150000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=EuN8WCWQf7g",
+          "thumbnail": "https://i.ytimg.com/vi/EuN8WCWQf7g/mqdefault.jpg"
+        },
+        {
+          "video_id": "TVhhmhvCovg",
+          "title": "Let Your AI Agent Do ITS OWN Harness Engineering (Here's How)",
+          "channel_title": "Cole Medin",
+          "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA",
+          "published_at": "2026-10-20T16:06:59Z",
+          "duration_seconds": 979,
+          "view_count": 32268,
+          "topic": "ai-agents",
+          "sources": [
+            "creator_uploads:Cole Medin"
+          ],
+          "reasons": [
+            "来自精选博主 Cole Medin（入池依据：X 认证资料 + YouTube 核验；本主题博主）",
+            "标题含关键词「AI agent」",
+            "边界规则：含 Agent 信号 → AI Agent",
+            "发布于 2026-10-20（18 天前）",
+            "时长 16:19",
+            "订阅数 231000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=TVhhmhvCovg",
+          "thumbnail": "https://i.ytimg.com/vi/TVhhmhvCovg/mqdefault.jpg"
         }
       ]
     },
@@ -949,62 +3823,32 @@
       "name_zh": "AI 编程",
       "definition": "关注 AI 辅助开发、代码生成与工程实践。",
       "stats": {
-        "searches": 2,
-        "baseline_searches": 1,
-        "topic_search_results": 50,
-        "matched": 49,
-        "matched_tier1": 32,
-        "matched_tier2": 11,
-        "matched_tier3": 6,
+        "creators_in_topic": 29,
+        "candidates_from_creators": 1453,
+        "matched_tier1": 66,
+        "matched_tier2": 28,
+        "matched_tier3": 0,
+        "matched": 94,
         "eligible": 25,
         "shown": 6,
-        "channel_distribution_shown": {
-          "AI Engineer": 2,
-          "RGSecurityTeam": 1,
-          "EarnixLab": 1,
-          "Julian Goldie SEO": 1,
-          "ArjanCodes": 1
-        },
-        "channel_distribution_eligible": {
-          "AI Engineer": 2,
-          "RGSecurityTeam": 1,
-          "EarnixLab": 1,
-          "Julian Goldie SEO": 1,
-          "ArjanCodes": 1
-        },
         "excluded_by_rule": {
-          "duration": 39,
-          "too_old": 3,
-          "exclude:make money with AI": 2
+          "creator_not_topic_tier2": 6,
+          "duration": 52
         },
-        "duplicates_in_topic": 0
+        "excluded_creators_by_rule": {
+          "not_focused": 4
+        },
+        "channel_distribution_shown": {
+          "AI Engineer": 1,
+          "雪踏乌云": 1,
+          "ArjanCodes": 1,
+          "GitHub": 1,
+          "Android Developers": 1,
+          "Visual Studio Code": 1
+        },
+        "relaxed_channel_cap": false
       },
       "videos": [
-        {
-          "video_id": "y9Sg--RDtks",
-          "title": "当我们什么都能做，还知道自己想做什么吗？When We Can Do Anything, Do We Still Know What We Want? — Ryo Lu, ex-Cursor",
-          "channel_title": "AI Engineer",
-          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-          "published_at": "2026-11-06T14:44:57Z",
-          "duration_seconds": 1385,
-          "view_count": 7029,
-          "topic": "ai-coding",
-          "sources": [
-            "existing:ai.json",
-            "existing:catalog.json",
-            "channel_uploads:AI Engineer"
-          ],
-          "reasons": [
-            "标题含关键词「Cursor」",
-            "也匹配：AI 产品与应用",
-            "来自可信频道：AI Engineer",
-            "发布于 2026-11-06（2 天前）",
-            "时长 23:05，非 Shorts",
-            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
-          ],
-          "url": "https://www.youtube.com/watch?v=y9Sg--RDtks",
-          "thumbnail": "https://i.ytimg.com/vi/y9Sg--RDtks/mqdefault.jpg"
-        },
         {
           "video_id": "BT1Mo-fD-g0",
           "title": "Your Coding Agent Can't Undo Its Own Mistakes - Tanmay Sah & Dolly Sah",
@@ -1012,89 +3856,44 @@
           "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
           "published_at": "2026-11-08T08:00:03Z",
           "duration_seconds": 998,
-          "view_count": 1276,
+          "view_count": 1575,
           "topic": "ai-coding",
           "sources": [
-            "search:coding agents",
-            "channel_uploads:AI Engineer"
+            "creator_uploads:AI Engineer"
           ],
           "reasons": [
+            "来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单；本主题博主）",
             "标题含关键词「coding agent」",
-            "也匹配：AI 模型与研究、AI Agent",
-            "来自可信频道：AI Engineer",
+            "边界规则：含编程 Agent 信号 → AI 编程",
             "发布于 2026-11-08（0 天前）",
-            "时长 16:38，非 Shorts",
-            "被 2 个来源发现：搜索「coding agents」 / 频道上传"
+            "时长 16:38",
+            "订阅数 1000000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=BT1Mo-fD-g0",
           "thumbnail": "https://i.ytimg.com/vi/BT1Mo-fD-g0/mqdefault.jpg"
         },
         {
-          "video_id": "DHZECISfaMc",
-          "title": "I Jailbroke My AI Coding Agent… It Actually Worked! 😳",
-          "channel_title": "RGSecurityTeam",
-          "channel_id": "UCt3ErdvpKHBGAbg8qoLIZSA",
-          "published_at": "2026-10-31T14:30:35Z",
-          "duration_seconds": 289,
-          "view_count": 35842,
+          "video_id": "kXJ1iOM89fs",
+          "title": "Codex+Blender自动搭3D白模，让AI视频抽卡率暴涨",
+          "channel_title": "雪踏乌云",
+          "channel_id": "UCucA8x8KOd05KjU7Cgaj7wA",
+          "published_at": "2026-10-09T16:14:11Z",
+          "duration_seconds": 567,
+          "view_count": 743,
           "topic": "ai-coding",
           "sources": [
-            "search:AI coding tools",
-            "search:coding agents"
+            "creator_uploads:雪踏乌云"
           ],
           "reasons": [
-            "标题含关键词「AI coding」",
-            "也匹配：AI 模型与研究、AI Agent、AI 产业动态",
-            "发布于 2026-10-31（8 天前）",
-            "时长 4:49，非 Shorts",
-            "被 2 个来源发现：搜索「AI coding tools」 / 搜索「coding agents」"
+            "来自精选博主 雪踏乌云（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「Codex」",
+            "边界规则：含编程 Agent 信号 → AI 编程",
+            "发布于 2026-10-09（29 天前）",
+            "时长 9:27",
+            "订阅数 12（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=DHZECISfaMc",
-          "thumbnail": "https://i.ytimg.com/vi/DHZECISfaMc/mqdefault.jpg"
-        },
-        {
-          "video_id": "Wi83iStXpio",
-          "title": "Use Tencent HY4 for FREE! Best New AI Coding Agent (Full Setup Guide)",
-          "channel_title": "EarnixLab",
-          "channel_id": "UC8jIq2GuOzQp2NrX4f2nGVQ",
-          "published_at": "2026-11-07T17:30:07Z",
-          "duration_seconds": 560,
-          "view_count": 7702,
-          "topic": "ai-coding",
-          "sources": [
-            "search:coding agents"
-          ],
-          "reasons": [
-            "标题含关键词「AI coding」",
-            "也匹配：AI 模型与研究、AI Agent、AI 产品与应用",
-            "发布于 2026-11-07（1 天前）",
-            "时长 9:20，非 Shorts",
-            "被 1 个来源发现：搜索「coding agents」"
-          ],
-          "url": "https://www.youtube.com/watch?v=Wi83iStXpio",
-          "thumbnail": "https://i.ytimg.com/vi/Wi83iStXpio/mqdefault.jpg"
-        },
-        {
-          "video_id": "QwYKWW17xO8",
-          "title": "OpenCode Just Made AI Coding Automation INSANE!",
-          "channel_title": "Julian Goldie SEO",
-          "channel_id": "UCGpsgNbzdF7BECCVbB1COHw",
-          "published_at": "2026-11-06T23:00:12Z",
-          "duration_seconds": 510,
-          "view_count": 8302,
-          "topic": "ai-coding",
-          "sources": [
-            "search:AI coding tools"
-          ],
-          "reasons": [
-            "标题含关键词「AI coding」",
-            "也匹配：AI Agent、AI 产品与应用",
-            "发布于 2026-11-06（2 天前）",
-            "时长 8:30，非 Shorts",
-            "被 1 个来源发现：搜索「AI coding tools」"
-          ],
-          "url": "https://www.youtube.com/watch?v=QwYKWW17xO8",
-          "thumbnail": "https://i.ytimg.com/vi/QwYKWW17xO8/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=kXJ1iOM89fs",
+          "thumbnail": "https://i.ytimg.com/vi/kXJ1iOM89fs/mqdefault.jpg"
         },
         {
           "video_id": "oFtTodDCbkE",
@@ -1103,20 +3902,88 @@
           "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA",
           "published_at": "2026-11-06T16:00:29Z",
           "duration_seconds": 836,
-          "view_count": 24626,
+          "view_count": 24839,
           "topic": "ai-coding",
           "sources": [
-            "search:coding agents"
+            "creator_uploads:ArjanCodes"
           ],
           "reasons": [
+            "来自精选博主 ArjanCodes（入池依据：X 认证资料 + YouTube 核验；本主题博主）",
             "标题含关键词「AI coding」",
-            "也匹配：AI 模型与研究、AI Agent",
-            "发布于 2026-11-06（2 天前）",
-            "时长 13:56，非 Shorts",
-            "被 1 个来源发现：搜索「coding agents」"
+            "边界规则：含编程 Agent 信号 → AI 编程",
+            "发布于 2026-11-06（1 天前）",
+            "时长 13:56",
+            "订阅数 345000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=oFtTodDCbkE",
           "thumbnail": "https://i.ytimg.com/vi/oFtTodDCbkE/mqdefault.jpg"
+        },
+        {
+          "video_id": "VJBTPepfWUI",
+          "title": "Work together, your way, with GitHub Copilot",
+          "channel_title": "GitHub",
+          "channel_id": "UC7c3Kb6jYCRj4JOHHZTxKsQ",
+          "published_at": "2026-11-07T15:00:51Z",
+          "duration_seconds": 1971,
+          "view_count": 4980,
+          "topic": "ai-coding",
+          "sources": [
+            "creator_uploads:GitHub"
+          ],
+          "reasons": [
+            "来自精选博主 GitHub（入池依据：公开线索 + YouTube 核验；本主题博主）",
+            "标题含关键词「Copilot」",
+            "发布于 2026-11-07（0 天前）",
+            "时长 32:51",
+            "订阅数 706000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=VJBTPepfWUI",
+          "thumbnail": "https://i.ytimg.com/vi/VJBTPepfWUI/mqdefault.jpg"
+        },
+        {
+          "video_id": "Mb9H43ia0kE",
+          "title": "Agentic engineering with Claude Code and Android CLI",
+          "channel_title": "Android Developers",
+          "channel_id": "UCVHFbqXqoYvEWM1Ddxl0QDg",
+          "published_at": "2026-10-29T20:46:57Z",
+          "duration_seconds": 1823,
+          "view_count": 14687,
+          "topic": "ai-coding",
+          "sources": [
+            "creator_uploads:Android Developers"
+          ],
+          "reasons": [
+            "来自精选博主 Android Developers（入池依据：YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」；本主题博主）",
+            "标题含关键词「Claude Code」",
+            "边界规则：含编程 Agent 信号 → AI 编程",
+            "发布于 2026-10-29（9 天前）",
+            "时长 30:23",
+            "订阅数 1440000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=Mb9H43ia0kE",
+          "thumbnail": "https://i.ytimg.com/vi/Mb9H43ia0kE/mqdefault.jpg"
+        },
+        {
+          "video_id": "lLp58sDAixQ",
+          "title": "Write and Optimize PostgreSQL Queries Faster in VS Code with Copilot",
+          "channel_title": "Visual Studio Code",
+          "channel_id": "UCs5Y5_7XK8HLDX0SLNwkd3w",
+          "published_at": "2026-10-26T14:02:30Z",
+          "duration_seconds": 361,
+          "view_count": 7414,
+          "topic": "ai-coding",
+          "sources": [
+            "creator_uploads:Visual Studio Code"
+          ],
+          "reasons": [
+            "来自精选博主 Visual Studio Code（入池依据：YouTube 高播放发现「AI 编程 教程」；本主题博主）",
+            "标题含关键词「Copilot」",
+            "发布于 2026-10-26（12 天前）",
+            "时长 6:01",
+            "订阅数 1040000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=lLp58sDAixQ",
+          "thumbnail": "https://i.ytimg.com/vi/lLp58sDAixQ/mqdefault.jpg"
         }
       ]
     },
@@ -1125,82 +3992,100 @@
       "name_zh": "AI 产品与应用",
       "definition": "关注面向真实用户的 AI 产品、功能与使用案例。",
       "stats": {
-        "searches": 2,
-        "baseline_searches": 1,
-        "topic_search_results": 50,
-        "matched": 67,
-        "matched_tier1": 19,
-        "matched_tier2": 25,
-        "matched_tier3": 23,
-        "eligible": 15,
+        "creators_in_topic": 29,
+        "candidates_from_creators": 1453,
+        "matched_tier1": 55,
+        "matched_tier2": 34,
+        "matched_tier3": 0,
+        "matched": 89,
+        "eligible": 24,
         "shown": 6,
-        "channel_distribution_shown": {
-          "AI Engineer": 2,
-          "AI with Hassan": 1,
-          "Latent Space": 1,
-          "Zubair Trabzada | AI Workshop": 1,
-          "Mikey No Code": 1
-        },
-        "channel_distribution_eligible": {
-          "AI Engineer": 2,
-          "AI with Hassan": 1,
-          "Latent Space": 1,
-          "Zubair Trabzada | AI Workshop": 1,
-          "Mikey No Code": 1
-        },
         "excluded_by_rule": {
-          "duration": 64,
-          "too_old": 1,
-          "exclude:make money with AI": 3
+          "duration": 39,
+          "creator_not_topic_tier2": 7,
+          "live_or_upcoming": 1,
+          "exclude:get rich": 1
         },
-        "duplicates_in_topic": 0
+        "excluded_creators_by_rule": {
+          "not_focused": 4,
+          "unsupported_language": 3
+        },
+        "channel_distribution_shown": {
+          "MattVidPro AI": 1,
+          "The AI Advantage": 1,
+          "AI超元域": 1,
+          "AI Engineer": 1,
+          "Riley Brown": 1,
+          "Kevin Stratvert": 1
+        },
+        "relaxed_channel_cap": false
       },
       "videos": [
         {
-          "video_id": "ZJjRgvjhq3M",
-          "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
-          "channel_title": "AI Engineer",
-          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-          "published_at": "2026-11-07T19:00:33Z",
-          "duration_seconds": 6632,
-          "view_count": 9595,
+          "video_id": "fQnrdr2DcqQ",
+          "title": "ChatGPT Can Make GIFs Now (Images 2.6 Tested)",
+          "channel_title": "MattVidPro",
+          "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw",
+          "published_at": "2026-11-07T23:00:31Z",
+          "duration_seconds": 1078,
+          "view_count": 5979,
           "topic": "ai-products",
           "sources": [
-            "existing:ai.json",
-            "existing:catalog.json",
-            "channel_uploads:AI Engineer"
+            "creator_uploads:MattVidPro AI"
           ],
           "reasons": [
+            "来自精选博主 MattVidPro AI（入池依据：X 资料直接链接 YouTube；本主题博主）",
             "标题含关键词「ChatGPT」",
-            "也匹配：AI Agent、AI 编程、AI 产业动态",
-            "发布于 2026-11-07（1 天前）",
-            "时长 110:32，非 Shorts",
-            "被 3 个来源发现：已有数据 ai.json / 已有数据 catalog.json / 频道上传"
+            "发布于 2026-11-07（0 天前）",
+            "时长 17:58",
+            "订阅数 305000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=ZJjRgvjhq3M",
-          "thumbnail": "https://i.ytimg.com/vi/ZJjRgvjhq3M/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=fQnrdr2DcqQ",
+          "thumbnail": "https://i.ytimg.com/vi/fQnrdr2DcqQ/mqdefault.jpg"
         },
         {
-          "video_id": "08XjzXEugNw",
-          "title": "Build Complete AI App Frontend, Backend, Payments, Authentication with FREE AI tools (0% Coding)",
-          "channel_title": "AI with Hassan",
-          "channel_id": "UC7JIdd6JEcDHe1nQNbA8lvg",
-          "published_at": "2026-11-07T13:00:20Z",
-          "duration_seconds": 1111,
-          "view_count": 5716,
+          "video_id": "5LkRDoGVook",
+          "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
+          "channel_title": "The AI Advantage",
+          "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ",
+          "published_at": "2026-11-06T19:28:35Z",
+          "duration_seconds": 693,
+          "view_count": 24248,
           "topic": "ai-products",
           "sources": [
-            "search:AI coding tools"
+            "creator_uploads:The AI Advantage"
           ],
           "reasons": [
-            "标题含关键词「AI app」",
-            "也匹配：AI Agent、AI 编程",
-            "发布于 2026-11-07（1 天前）",
-            "时长 18:31，非 Shorts",
-            "被 1 个来源发现：搜索「AI coding tools」"
+            "来自精选博主 The AI Advantage（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「ChatGPT」",
+            "发布于 2026-11-06（1 天前）",
+            "时长 11:33",
+            "订阅数 493000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=08XjzXEugNw",
-          "thumbnail": "https://i.ytimg.com/vi/08XjzXEugNw/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=5LkRDoGVook",
+          "thumbnail": "https://i.ytimg.com/vi/5LkRDoGVook/mqdefault.jpg"
+        },
+        {
+          "video_id": "9fGwwQaaLSQ",
+          "title": "🚀ChatGPT Images 2.6全方位实测！原生GIF生成、图像编辑一致性、电影分镜生成、产品摄影和UI界面原型生成、书法作品生成、换场景、改光影、多轮P图！样样精通！取代设计师！开发者效率倍增",
+          "channel_title": "AI超元域",
+          "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A",
+          "published_at": "2026-11-05T11:41:07Z",
+          "duration_seconds": 627,
+          "view_count": 14105,
+          "topic": "ai-products",
+          "sources": [
+            "creator_uploads:AI超元域"
+          ],
+          "reasons": [
+            "来自精选博主 AI超元域（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「ChatGPT」",
+            "发布于 2026-11-05（3 天前）",
+            "时长 10:27",
+            "订阅数 78100（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=9fGwwQaaLSQ",
+          "thumbnail": "https://i.ytimg.com/vi/9fGwwQaaLSQ/mqdefault.jpg"
         },
         {
           "video_id": "CvmZtAPmAW4",
@@ -1212,83 +4097,61 @@
           "view_count": 10095,
           "topic": "ai-products",
           "sources": [
-            "channel_uploads:AI Engineer"
+            "creator_uploads:AI Engineer"
           ],
           "reasons": [
+            "来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单；本主题博主）",
             "标题含关键词「AI feature」",
-            "也匹配：AI 模型与研究、AI 产业动态",
             "发布于 2026-10-31（8 天前）",
-            "时长 14:44，非 Shorts",
-            "被 1 个来源发现：频道上传"
+            "时长 14:44",
+            "订阅数 1000000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=CvmZtAPmAW4",
           "thumbnail": "https://i.ytimg.com/vi/CvmZtAPmAW4/mqdefault.jpg"
         },
         {
-          "video_id": "v-d1WTqIULs",
-          "title": "Building ChatGPT for Finance — Joseph Kim, OpenAI's Head of Financial Services",
-          "channel_title": "Latent Space",
-          "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-          "published_at": "2026-10-31T03:41:20Z",
-          "duration_seconds": 1655,
-          "view_count": 6413,
+          "video_id": "vMvkR8WEOpE",
+          "title": "ChatGPT Just Changed A LOT AGAIN (Here’s What’s New)",
+          "channel_title": "Riley Brown",
+          "channel_id": "UCMcoud_ZW7cfxeIugBflSBw",
+          "published_at": "2026-10-31T14:00:02Z",
+          "duration_seconds": 1019,
+          "view_count": 144754,
           "topic": "ai-products",
           "sources": [
-            "channel_uploads:Latent Space"
+            "creator_uploads:Riley Brown"
           ],
           "reasons": [
+            "来自精选博主 Riley Brown（入池依据：公开线索 + YouTube 核验；本主题博主）",
             "标题含关键词「ChatGPT」",
-            "也匹配：AI 产业动态",
-            "发布于 2026-10-31（8 天前）",
-            "时长 27:35，非 Shorts",
-            "被 1 个来源发现：频道上传"
+            "发布于 2026-10-31（7 天前）",
+            "时长 16:59",
+            "订阅数 310000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=v-d1WTqIULs",
-          "thumbnail": "https://i.ytimg.com/vi/v-d1WTqIULs/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=vMvkR8WEOpE",
+          "thumbnail": "https://i.ytimg.com/vi/vMvkR8WEOpE/mqdefault.jpg"
         },
         {
-          "video_id": "84CkBM_jF4g",
-          "title": "I Gave My AI Assistant the Power to Reverse Engineer ANYTHING!",
-          "channel_title": "Zubair Trabzada | AI Workshop",
-          "channel_id": "UC2b2wgxm0vFjQfJJ0iRcFRw",
-          "published_at": "2026-10-14T18:06:55Z",
-          "duration_seconds": 1092,
-          "view_count": 381466,
+          "video_id": "9PwpJpJJ3IY",
+          "title": "How to Use Remotion with ChatGPT",
+          "channel_title": "Kevin Stratvert",
+          "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig",
+          "published_at": "2026-10-30T07:00:34Z",
+          "duration_seconds": 481,
+          "view_count": 43948,
           "topic": "ai-products",
           "sources": [
-            "search:AI application demo"
+            "creator_uploads:Kevin Stratvert"
           ],
           "reasons": [
-            "标题含关键词「AI assistant」",
-            "也匹配：AI 模型与研究、AI Agent、AI 编程",
-            "发布于 2026-10-14（25 天前）",
-            "时长 18:12，非 Shorts",
-            "被 1 个来源发现：搜索「AI application demo」"
+            "来自精选博主 Kevin Stratvert（入池依据：公开线索 + YouTube 核验；本主题博主）",
+            "标题含关键词「ChatGPT」",
+            "发布于 2026-10-30（9 天前）",
+            "时长 8:01",
+            "订阅数 4490000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=84CkBM_jF4g",
-          "thumbnail": "https://i.ytimg.com/vi/84CkBM_jF4g/mqdefault.jpg"
-        },
-        {
-          "video_id": "qxED97f4i7A",
-          "title": "Best AI App Builder in 2026 (Ranked Worst to Best!)",
-          "channel_title": "Mikey No Code",
-          "channel_id": "UCde0vB0fTwC8AT3sJofFV0w",
-          "published_at": "2026-10-13T14:15:29Z",
-          "duration_seconds": 1507,
-          "view_count": 35443,
-          "topic": "ai-products",
-          "sources": [
-            "search:AI coding tools"
-          ],
-          "reasons": [
-            "标题含关键词「AI app」",
-            "也匹配：AI Agent",
-            "发布于 2026-10-13（26 天前）",
-            "时长 25:07，非 Shorts",
-            "被 1 个来源发现：搜索「AI coding tools」"
-          ],
-          "url": "https://www.youtube.com/watch?v=qxED97f4i7A",
-          "thumbnail": "https://i.ytimg.com/vi/qxED97f4i7A/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=9PwpJpJJ3IY",
+          "thumbnail": "https://i.ytimg.com/vi/9PwpJpJJ3IY/mqdefault.jpg"
         }
       ]
     },
@@ -1297,39 +4160,101 @@
       "name_zh": "AI 产业动态",
       "definition": "关注 AI 公司、政策、融资、合作与行业变化。",
       "stats": {
-        "searches": 2,
-        "baseline_searches": 1,
-        "topic_search_results": 50,
-        "matched": 83,
-        "matched_tier1": 15,
-        "matched_tier2": 46,
-        "matched_tier3": 22,
-        "eligible": 23,
+        "creators_in_topic": 29,
+        "candidates_from_creators": 1453,
+        "matched_tier1": 16,
+        "matched_tier2": 137,
+        "matched_tier3": 0,
+        "matched": 153,
+        "eligible": 48,
         "shown": 6,
-        "channel_distribution_shown": {
-          "Latent Space": 1,
-          "TheAIGRID": 1,
-          "Matt Wolfe": 1,
-          "AI Decode": 1,
-          "Bloomberg Television": 1,
-          "FinnovationZ by Prasad": 1
-        },
-        "channel_distribution_eligible": {
-          "Latent Space": 1,
-          "TheAIGRID": 1,
-          "Matt Wolfe": 1,
-          "AI Decode": 1,
-          "Bloomberg Television": 1,
-          "FinnovationZ by Prasad": 1
-        },
         "excluded_by_rule": {
-          "duration": 107,
-          "too_old": 2,
-          "exclude:make money with AI": 1
+          "creator_not_topic_tier2": 16,
+          "duration": 60,
+          "clickbait": 1
         },
-        "duplicates_in_topic": 0
+        "excluded_creators_by_rule": {
+          "not_focused": 8
+        },
+        "channel_distribution_shown": {
+          "All-In Podcast": 1,
+          "Matt Wolfe": 1,
+          "TheAIGRID": 1,
+          "Latent Space": 1,
+          "NVIDIA": 1,
+          "Dwarkesh Patel": 1
+        },
+        "relaxed_channel_cap": false
       },
       "videos": [
+        {
+          "video_id": "2v8b062QzTI",
+          "title": "Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze, What’s Next for Trump",
+          "channel_title": "All-In Podcast",
+          "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+          "published_at": "2026-11-07T18:32:58Z",
+          "duration_seconds": 5584,
+          "view_count": 465638,
+          "topic": "ai-industry",
+          "sources": [
+            "creator_uploads:All-In Podcast"
+          ],
+          "reasons": [
+            "来自精选博主 All-In Podcast（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「data center」",
+            "边界规则：含产业动态信号 → AI 产业动态",
+            "发布于 2026-11-07（0 天前）",
+            "时长 93:04",
+            "订阅数 1170000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=2v8b062QzTI",
+          "thumbnail": "https://i.ytimg.com/vi/2v8b062QzTI/mqdefault.jpg"
+        },
+        {
+          "video_id": "IrAHINf0M6E",
+          "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
+          "channel_title": "Matt Wolfe",
+          "channel_id": "UChpleBmo18P08aKCIgti38g",
+          "published_at": "2026-11-06T18:20:31Z",
+          "duration_seconds": 1484,
+          "view_count": 101529,
+          "topic": "ai-industry",
+          "sources": [
+            "creator_uploads:Matt Wolfe"
+          ],
+          "reasons": [
+            "来自精选博主 Matt Wolfe（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「AI news」",
+            "边界规则：含产业动态信号 → AI 产业动态",
+            "发布于 2026-11-06（1 天前）",
+            "时长 24:44",
+            "订阅数 1030000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=IrAHINf0M6E",
+          "thumbnail": "https://i.ytimg.com/vi/IrAHINf0M6E/mqdefault.jpg"
+        },
+        {
+          "video_id": "_fEqQa5hBmI",
+          "title": "The AI Godfather Just Proved The Entire AI Industry Wrong",
+          "channel_title": "TheAIGRID",
+          "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg",
+          "published_at": "2026-11-05T08:45:26Z",
+          "duration_seconds": 1801,
+          "view_count": 155634,
+          "topic": "ai-industry",
+          "sources": [
+            "creator_uploads:TheAIGRID"
+          ],
+          "reasons": [
+            "来自精选博主 TheAIGRID（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「AI industry」",
+            "发布于 2026-11-05（3 天前）",
+            "时长 30:01",
+            "订阅数 405000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=_fEqQa5hBmI",
+          "thumbnail": "https://i.ytimg.com/vi/_fEqQa5hBmI/mqdefault.jpg"
+        },
         {
           "video_id": "EAtLq9_vrE0",
           "title": "The Programmable Data Center — Evan Conrad, SF Compute",
@@ -1337,131 +4262,65 @@
           "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
           "published_at": "2026-10-20T14:00:07Z",
           "duration_seconds": 2204,
-          "view_count": 62026,
+          "view_count": 62014,
           "topic": "ai-industry",
           "sources": [
-            "channel_uploads:Latent Space"
+            "creator_uploads:Latent Space"
           ],
           "reasons": [
+            "来自精选博主 Latent Space（入池依据：原有 X→YouTube 名单；本主题博主）",
             "标题含关键词「data center」",
-            "也匹配：AI 模型与研究",
-            "来自可信频道：Latent Space",
-            "发布于 2026-10-20（19 天前）",
-            "时长 36:44，非 Shorts",
-            "被 1 个来源发现：频道上传"
+            "边界规则：含产业动态信号 → AI 产业动态",
+            "发布于 2026-10-20（18 天前）",
+            "时长 36:44",
+            "订阅数 450000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=EAtLq9_vrE0",
           "thumbnail": "https://i.ytimg.com/vi/EAtLq9_vrE0/mqdefault.jpg"
         },
         {
-          "video_id": "7eQree8FhKI",
-          "title": "Anthropics Model 4 Just Shocked The AI Industry",
-          "channel_title": "TheAIGRID",
-          "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg",
-          "published_at": "2026-11-06T23:00:13Z",
-          "duration_seconds": 1801,
-          "view_count": 85918,
+          "video_id": "rySnll4sgu4",
+          "title": "NVIDIA GTC Berlin 2026 | Live Keynote Pregame",
+          "channel_title": "NVIDIA",
+          "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+          "published_at": "2026-10-24T10:42:33Z",
+          "duration_seconds": 6914,
+          "view_count": 4965183,
           "topic": "ai-industry",
           "sources": [
-            "search:AI model research",
-            "search:AI industry news"
+            "creator_uploads:NVIDIA"
           ],
           "reasons": [
-            "标题含关键词「AI industry」",
-            "发布于 2026-11-06（2 天前）",
-            "时长 30:01，非 Shorts",
-            "被 2 个来源发现：搜索「AI model research」 / 搜索「AI industry news」"
+            "来自精选博主 NVIDIA（入池依据：原有 X→YouTube 名单；本主题博主）",
+            "标题含关键词「Nvidia」",
+            "发布于 2026-10-24（15 天前）",
+            "时长 115:14",
+            "订阅数 2260000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=7eQree8FhKI",
-          "thumbnail": "https://i.ytimg.com/vi/7eQree8FhKI/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=rySnll4sgu4",
+          "thumbnail": "https://i.ytimg.com/vi/rySnll4sgu4/mqdefault.jpg"
         },
         {
-          "video_id": "eDiQNFa-zYg",
-          "title": "AI News: The Only 6 Stories Worth Knowing This Week",
-          "channel_title": "Matt Wolfe",
-          "channel_id": "UChpleBmo18P08aKCIgti38g",
-          "published_at": "2026-10-30T21:15:04Z",
-          "duration_seconds": 1761,
-          "view_count": 130307,
+          "video_id": "frYSOKvNiiE",
+          "title": "What will computer chips look like in 2045?",
+          "channel_title": "Dwarkesh Patel",
+          "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+          "published_at": "2026-10-22T16:00:07Z",
+          "duration_seconds": 4141,
+          "view_count": 319420,
           "topic": "ai-industry",
           "sources": [
-            "search:AI industry news",
-            "search:AI company news"
+            "creator_uploads:Dwarkesh Patel"
           ],
           "reasons": [
-            "标题含关键词「AI news」",
-            "也匹配：AI 模型与研究、AI Agent、AI 产品与应用",
-            "发布于 2026-10-30（9 天前）",
-            "时长 29:21，非 Shorts",
-            "被 2 个来源发现：搜索「AI industry news」 / 搜索「AI company news」"
+            "来自精选博主 Dwarkesh Patel（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「chips」",
+            "发布于 2026-10-22（16 天前）",
+            "时长 69:01",
+            "订阅数 1460000（入池时）"
           ],
-          "url": "https://www.youtube.com/watch?v=eDiQNFa-zYg",
-          "thumbnail": "https://i.ytimg.com/vi/eDiQNFa-zYg/mqdefault.jpg"
-        },
-        {
-          "video_id": "qMp7Gpu2OXA",
-          "title": "HUGE AI NEWS! GPT-7 Rumors, Gemini 4 Breakthroughs, Qwen 4 Leaks & Claude Controversy!”",
-          "channel_title": "AI Decode",
-          "channel_id": "UCqVCu-qZtOJUEZC7RVYQnjQ",
-          "published_at": "2026-10-26T07:30:39Z",
-          "duration_seconds": 1403,
-          "view_count": 8139,
-          "topic": "ai-industry",
-          "sources": [
-            "search:AI industry news",
-            "search:AI company news"
-          ],
-          "reasons": [
-            "标题含关键词「AI news」",
-            "也匹配：AI 模型与研究、AI Agent、AI 编程",
-            "发布于 2026-10-26（13 天前）",
-            "时长 23:23，非 Shorts",
-            "被 2 个来源发现：搜索「AI industry news」 / 搜索「AI company news」"
-          ],
-          "url": "https://www.youtube.com/watch?v=qMp7Gpu2OXA",
-          "thumbnail": "https://i.ytimg.com/vi/qMp7Gpu2OXA/mqdefault.jpg"
-        },
-        {
-          "video_id": "-604wcjbg6Y",
-          "title": "Global Stock Selloff: AI Investment Will Continue, George Colony Says",
-          "channel_title": "Bloomberg Television",
-          "channel_id": "UCIALMKvObZNtJ6AmdCLP7Lg",
-          "published_at": "2026-11-05T17:23:56Z",
-          "duration_seconds": 624,
-          "view_count": 129532,
-          "topic": "ai-industry",
-          "sources": [
-            "search:AI company news"
-          ],
-          "reasons": [
-            "标题含关键词「AI investment」",
-            "发布于 2026-11-05（3 天前）",
-            "时长 10:24，非 Shorts",
-            "被 1 个来源发现：搜索「AI company news」"
-          ],
-          "url": "https://www.youtube.com/watch?v=-604wcjbg6Y",
-          "thumbnail": "https://i.ytimg.com/vi/-604wcjbg6Y/mqdefault.jpg"
-        },
-        {
-          "video_id": "Sp3JwHxmtlY",
-          "title": "AI bubble finally bursting ?? Market Update !!",
-          "channel_title": "FinnovationZ by Prasad",
-          "channel_id": "UCUMccND2H_CVS0dMZKCPCXA",
-          "published_at": "2026-11-05T15:14:45Z",
-          "duration_seconds": 1312,
-          "view_count": 681186,
-          "topic": "ai-industry",
-          "sources": [
-            "search:AI company news"
-          ],
-          "reasons": [
-            "标题含关键词「AI bubble」",
-            "发布于 2026-11-05（3 天前）",
-            "时长 21:52，非 Shorts",
-            "被 1 个来源发现：搜索「AI company news」"
-          ],
-          "url": "https://www.youtube.com/watch?v=Sp3JwHxmtlY",
-          "thumbnail": "https://i.ytimg.com/vi/Sp3JwHxmtlY/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=frYSOKvNiiE",
+          "thumbnail": "https://i.ytimg.com/vi/frYSOKvNiiE/mqdefault.jpg"
         }
       ]
     }
@@ -1477,7 +4336,8 @@
         "duration_seconds": 1801,
         "view_count": 85918,
         "url": "https://www.youtube.com/watch?v=7eQree8FhKI",
-        "also_in_fewgood_topN": true
+        "reused_from_round1": true,
+        "also_in_fewgood_topN": false
       },
       {
         "rank": 2,
@@ -1488,6 +4348,7 @@
         "duration_seconds": 1444,
         "view_count": 10687,
         "url": "https://www.youtube.com/watch?v=ekxRIK8uAu0",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1499,7 +4360,8 @@
         "duration_seconds": 1484,
         "view_count": 100967,
         "url": "https://www.youtube.com/watch?v=IrAHINf0M6E",
-        "also_in_fewgood_topN": false
+        "reused_from_round1": true,
+        "also_in_fewgood_topN": true
       },
       {
         "rank": 4,
@@ -1510,6 +4372,7 @@
         "duration_seconds": 1038,
         "view_count": 629536,
         "url": "https://www.youtube.com/watch?v=h1MEtoxegzw",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1521,6 +4384,7 @@
         "duration_seconds": 400,
         "view_count": 785307,
         "url": "https://www.youtube.com/watch?v=HtjwDUMHxmY",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1532,6 +4396,7 @@
         "duration_seconds": 1371,
         "view_count": 980526,
         "url": "https://www.youtube.com/watch?v=w-Mo1Ldg-qs",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       }
     ],
@@ -1545,6 +4410,7 @@
         "duration_seconds": 518,
         "view_count": 6729,
         "url": "https://www.youtube.com/watch?v=jZWFWjYc7V4",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1556,6 +4422,7 @@
         "duration_seconds": 1345,
         "view_count": 963810,
         "url": "https://www.youtube.com/watch?v=Bm84BAtOfQw",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1567,6 +4434,7 @@
         "duration_seconds": 609,
         "view_count": 5658397,
         "url": "https://www.youtube.com/watch?v=FwOTs4UxQS4",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1578,6 +4446,7 @@
         "duration_seconds": 700,
         "view_count": 215643,
         "url": "https://www.youtube.com/watch?v=HTNz4L2XM58",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1589,6 +4458,7 @@
         "duration_seconds": 64,
         "view_count": 83620,
         "url": "https://www.youtube.com/watch?v=BjWL_Gxqrxo",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1600,6 +4470,7 @@
         "duration_seconds": 1671,
         "view_count": 429212,
         "url": "https://www.youtube.com/watch?v=SJywU4UQryQ",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       }
     ],
@@ -1613,6 +4484,7 @@
         "duration_seconds": 200,
         "view_count": 382459,
         "url": "https://www.youtube.com/watch?v=qvOxAbC3d0U",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1624,6 +4496,7 @@
         "duration_seconds": 626,
         "view_count": 37003,
         "url": "https://www.youtube.com/watch?v=NsgjLVOcVMs",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1635,6 +4508,7 @@
         "duration_seconds": 795,
         "view_count": 354237,
         "url": "https://www.youtube.com/watch?v=5fhcklZe-qE",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1646,6 +4520,7 @@
         "duration_seconds": 5126,
         "view_count": 304993,
         "url": "https://www.youtube.com/watch?v=wlpBCazAY9Q",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1657,6 +4532,7 @@
         "duration_seconds": 603,
         "view_count": 178501,
         "url": "https://www.youtube.com/watch?v=hTAWHgQI4xg",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1668,6 +4544,7 @@
         "duration_seconds": 5790,
         "view_count": 1993049,
         "url": "https://www.youtube.com/watch?v=-QFHIoCo-Ko",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       }
     ],
@@ -1681,6 +4558,7 @@
         "duration_seconds": 1173,
         "view_count": 106888,
         "url": "https://www.youtube.com/watch?v=5Z4jFafRcr4",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1692,6 +4570,7 @@
         "duration_seconds": 2261,
         "view_count": 8508300,
         "url": "https://www.youtube.com/watch?v=wumi-4xh2Jk",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1703,6 +4582,7 @@
         "duration_seconds": 44,
         "view_count": 5219764,
         "url": "https://www.youtube.com/watch?v=zDIX1eWeWNs",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1714,6 +4594,7 @@
         "duration_seconds": 112,
         "view_count": 819826,
         "url": "https://www.youtube.com/watch?v=OKNRbKvlIwo",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1725,6 +4606,7 @@
         "duration_seconds": 69,
         "view_count": 18653069,
         "url": "https://www.youtube.com/watch?v=MJcrIRvb4Nk",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1736,6 +4618,7 @@
         "duration_seconds": 5592,
         "view_count": 871300,
         "url": "https://www.youtube.com/watch?v=CU_YGNyIe48",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       }
     ],
@@ -1749,6 +4632,7 @@
         "duration_seconds": 1284,
         "view_count": 1573551,
         "url": "https://www.youtube.com/watch?v=e2zjpCqTmyo",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1760,7 +4644,8 @@
         "duration_seconds": 1801,
         "view_count": 154033,
         "url": "https://www.youtube.com/watch?v=_fEqQa5hBmI",
-        "also_in_fewgood_topN": false
+        "reused_from_round1": true,
+        "also_in_fewgood_topN": true
       },
       {
         "rank": 3,
@@ -1771,6 +4656,7 @@
         "duration_seconds": 1662,
         "view_count": 1453101,
         "url": "https://www.youtube.com/watch?v=s8qkejdyffk",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1782,6 +4668,7 @@
         "duration_seconds": 529,
         "view_count": 1089164,
         "url": "https://www.youtube.com/watch?v=mUw27wG7uFA",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1793,6 +4680,7 @@
         "duration_seconds": 985,
         "view_count": 754158,
         "url": "https://www.youtube.com/watch?v=kVBXHzdCOP0",
+        "reused_from_round1": true,
         "also_in_fewgood_topN": false
       },
       {
@@ -1804,8 +4692,12 @@
         "duration_seconds": 1801,
         "view_count": 85918,
         "url": "https://www.youtube.com/watch?v=7eQree8FhKI",
-        "also_in_fewgood_topN": true
+        "reused_from_round1": true,
+        "also_in_fewgood_topN": false
       }
     ]
-  }
+  },
+  "rules_notes": [
+    "博主优先：候选只来自已入池频道 uploads；播放量与订阅数不参与排序。"
+  ]
 }
