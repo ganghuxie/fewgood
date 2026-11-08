@@ -23,12 +23,12 @@ def refresh():
         trending_feed(quota_limit=limit); ai_feed(quota_limit=limit); podcast_feed(quota_limit=limit); music_feed(quota_limit=limit); channels_feed(quota_limit=limit)
         print(quota_line(limit))
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True, stdout=handle, stderr=handle)
-        paths = ['site/src/data', 'site/public/catalog.json', 'site/public/channels.json']
+        paths = ['site/src/data', 'site/public/catalog.json', 'site/public/channels.json', 'site/public/search-index.json']
         changed = subprocess.run(['git', 'status', '--porcelain', '--', *paths], text=True, stdout=subprocess.PIPE, check=True).stdout
         if changed:
             subprocess.run(['git', 'add', *paths], check=True, stdout=handle, stderr=handle)
             subprocess.run(['git', 'commit', '-m', f"data: refresh {datetime.now(timezone.utc):%F}"], check=True, stdout=handle, stderr=handle)
-            subprocess.run(['git', 'push'], check=True, stdout=handle, stderr=handle)
+            subprocess.run(['git', 'push', 'origin', 'HEAD'], check=True, stdout=handle, stderr=handle)
             print('Committed and pushed refreshed data.')
         else:
             print('No data or catalog changes; nothing committed.')

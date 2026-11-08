@@ -1,0 +1,129 @@
+name: Daily data refresh
+
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Refresh mode
+        type: choice
+        options:
+          - full
+          - check
+        default: full
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      MODE: ${{ github.event_name == 'schedule' && 'full' || inputs.mode }}
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python package
+        run: python -m pip install -e .
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install site dependencies
+        run: npm ci
+        working-directory: site
+
+      - name: Supabase keepalive
+        continue-on-error: true
+        shell: bash
+        run: |
+          URL="$(grep -E '^PUBLIC_SUPABASE_.*URL=' site/.env.production | head -n 1 | cut -d= -f2-)"
+          KEY="$(grep -E '^PUBLIC_SUPABASE_.*(ANON_KEY|KEY)=' site/.env.production | head -n 1 | cut -d= -f2-)"
+          curl -sS -o /dev/null -w '%{http_code}\n' "$URL/auth/v1/health" -H "apikey: $KEY"
+
+      - name: Quota state
+        run: mkdir -p data
+
+      - name: Tests
+        if: env.MODE == 'full' || env.MODE == 'check'
+        run: |
+          python -m pip install -e '.[test]'
+          if python -c 'import pytest' 2>/dev/null; then
+            python -m pytest -q
+          else
+            echo 'pytest is not installed; skipping tests'
+          fi
+
+      - name: Full refresh
+        if: env.MODE == 'full'
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898699+github-actions[bot]@users.noreply.github.com'
+          python3 -m ytrec refresh
+          cat logs/refresh-*.log | tail -50
+          git add -f data/quota.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: quota state'
+            git push origin HEAD
+          fi
+          git push origin HEAD:master
+          if ! git push origin HEAD:main; then
+            git fetch origin master main
+            if git merge-base --is-ancestor origin/main origin/master; then
+              if ! git push origin origin/master:main; then
+                echo 'Warning: could not update main after the fast-forward check; leaving main unchanged.'
+              fi
+            else
+              echo 'Warning: main is not a fast-forward from master; leaving main unchanged.'
+            fi
+          fi
+
+      - name: Check build
+        if: env.MODE == 'check'
+        run: npm run build
+        working-directory: site
+
+      - name: Build site if needed
+        run: |
+          if [ ! -d dist ]; then
+            npm run build
+          fi
+        working-directory: site
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
