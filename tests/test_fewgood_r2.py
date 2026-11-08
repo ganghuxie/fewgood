@@ -3,7 +3,7 @@ import json
 import pytest
 from ytrec.fewgood import Fetcher
 import ytrec.fewgood_creators as creators_module
-from ytrec.fewgood_creators import boundary, branded_match, clickbait_signals, classify_creators, cfg, demo_result, evidence_label, rules, select
+from ytrec.fewgood_creators import boundary, branded_match, clickbait_signals, classify_creators, cfg, demo_result, event_tokens, evidence_label, rules, same_event, select
 
 
 def select_without_clock(raw):
@@ -56,7 +56,7 @@ def test_creator_admission_and_one_per_channel_relaxes():
               {'name':'known','channel_id':'b','subscriber_count':None,'evidence':['existing_registry'],'subtopics':['ai-models'],'status':'pending','discovered':[]}]
     classify_creators(creators,topics,rule)
     assert creators[0]['status']=='below_subscribers' and creators[1]['status']=='pending'
-    raw={'data_refreshed_at':'2026-11-08T00:00:00Z','usage_summary':{},'baseline':{},'creators':[{'name':'C','channel_id':'c','lang':'en','subtopics':['ai-agents'],'evidence':['existing_registry'],'subscriber_count':10,'status':'included'}], 'candidate_videos':[
+    raw={'data_refreshed_at':'2026-11-08T00:00:00Z','usage_summary':{},'baseline':{},'creators':[{'name':'C','channel_id':'c','lang':'en','subtopics':['ai-agents'],'evidence':['existing_registry'],'subscriber_count':1000,'status':'included'}], 'candidate_videos':[
       {'id':'1','snippet':{'title':'AI agent one','channelId':'c','channelTitle':'C','publishedAt':'2026-11-07T00:00:00Z'},'contentDetails':{'duration':'PT5M'},'statistics':{},'status':{'privacyStatus':'public'}},
       {'id':'2','snippet':{'title':'AI agent two','channelId':'c','channelTitle':'C','publishedAt':'2026-11-06T00:00:00Z'},'contentDetails':{'duration':'PT5M'},'statistics':{},'status':{'privacyStatus':'public'}}]}
     result=select(raw); agents=next(x for x in result['topics'] if x['id']=='ai-agents')
@@ -74,11 +74,11 @@ def test_evidence_labels_are_precise_and_bounded():
 def test_select_replay_creator_safeguards(monkeypatch):
     # 1/3 topical discovery uploads is insufficient; 2/3 remains in the pool.
     raw=replay_raw([
-        creator('one hit','one',['youtube_discovery:AI agents']),
-        creator('two hits','two',['youtube_discovery:AI agents']),
-        creator('seed','seed',['existing_registry']),
-        creator('देवनागरी','dev',['existing_registry']),
-        creator('manual','manual',['existing_registry']),
+        dict(creator('one hit','one',['youtube_discovery:AI agents']),subscriber_count=1000),
+        dict(creator('two hits','two',['youtube_discovery:AI agents']),subscriber_count=1000),
+        dict(creator('seed','seed',['existing_registry']),subscriber_count=1000),
+        dict(creator('देवनागरी','dev',['existing_registry']),subscriber_count=1000),
+        dict(creator('manual','manual',['existing_registry']),subscriber_count=1000),
     ],[
         upload('o1','one','one hit','AI agent update'), upload('o2','one','one hit','cooking'), upload('o3','one','one hit','weather'),
         upload('t1','two','two hits','AI agent update'), upload('t2','two','two hits','agentic AI guide'), upload('t3','two','two hits','weather'),
@@ -102,12 +102,45 @@ def test_select_replay_creator_safeguards(monkeypatch):
 
 
 def test_distribution_uses_channel_names_and_repeat_replay_is_stable():
-    raw=replay_raw([creator('Readable Name','channel',['existing_registry'])],[
+    raw=replay_raw([dict(creator('Readable Name','channel',['existing_registry']),subscriber_count=1000)],[
         upload('1','channel','Readable Name','AI agent one'), upload('2','channel','Readable Name','AI agent two')])
     result=select(raw)
     stats=next(t['stats'] for t in result['topics'] if t['id']=='ai-agents')
     assert stats['channel_distribution_shown']=={'Readable Name':2}
     assert select_without_clock(raw)==select_without_clock(raw)
+
+
+def test_official_channels_are_exempt_but_personal_and_xbio_channels_are_not():
+    raw=replay_raw([
+        {'name':'Stability AI','title':'Stability AI','channel_id':'official','lang':'en','subtopics':['ai-models'],'evidence':['existing_registry'],'subscriber_count':57,'status':'included'},
+        {'name':'Personal','title':'Personal','channel_id':'personal','lang':'en','subtopics':['ai-models'],'evidence':['x_bio_youtube_link'],'subscriber_count':999,'status':'included'},
+        {'name':'Known','title':'Known','channel_id':'known','lang':'en','subtopics':['ai-models'],'evidence':['existing_registry'],'subscriber_count':None,'status':'included'},
+    ],[])
+    rows={x['channel_id']:x for x in select(raw)['creators']}
+    assert rows['official']['status']=='included'
+    assert rows['personal']['status']==rows['known']['status']=='below_subscribers'
+    assert rows['personal']['reason']==rows['known']['reason']=='individual_below_1000'
+
+
+def test_same_event_tokens_and_thresholds():
+    a='ChatGPT Can Make GIFs Now (Images 2.6 Tested)'
+    b='ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More'
+    c='🚀ChatGPT Images 2.6全方位实测！'
+    assert same_event(a,b)[0] and same_event(a,c)[0] and same_event(b,c)[0]
+    assert not same_event('ChatGPT Just Changed A LOT AGAIN (Here’s What’s New)',b)[0]
+    assert not same_event("Your Coding Agent Can't Undo Its Own Mistakes",'7 Things AI Coding Agents Get Wrong')[0]
+    versions,other=event_tokens(c)
+    assert versions=={'2.6'} and {'chatgpt','images'} <= other
+
+
+def test_same_event_skips_and_top6_fills_slot():
+    titles=['AI agent ChatGPT Can Make GIFs Now (Images 2.6 Tested)','AI agent ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More','AI agent 🚀ChatGPT Images 2.6全方位实测！','AI agent ChatGPT Just Changed A LOT AGAIN (Here’s What’s New)','AI agent Claude News','AI agent OpenAI Funding News','AI agent Industry Funding Update','AI agent Product Launch Briefing']
+    videos=[upload(str(i),'c'+str(i),'C'+str(i),title) for i,title in enumerate(titles)]
+    raw=replay_raw([dict(creator('C'+str(i),'c'+str(i),['existing_registry']),subscriber_count=1000) for i in range(len(titles))],videos)
+    topic=next(t for t in select(raw)['topics'] if t['id']=='ai-agents')
+    assert len(topic['videos'])==6
+    assert len(topic['stats']['same_event_skipped'])>=2
+    assert any('同一事件已合并' in reason for v in topic['videos'] for reason in v['reasons'])
 
 
 def test_demo_output_crops_creators_to_included_public_fields():

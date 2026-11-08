@@ -46,7 +46,6 @@
 | Nate Herk | en | @nateherk | https://www.youtube.com/channel/UC2ojq-nuP8ceeHqiroeKhBA | 1120000 | 2026-11-07 | X 资料直接链接 YouTube |
 | Underfitted (Santiago) | en | @svpino | https://www.youtube.com/channel/UCgLxmJ8xER7Y7sywMN5SfWg | 62100 | 2026-09-30 | X 资料直接链接 YouTube |
 | AI超元域 | zh | @AISuperDomain | https://www.youtube.com/channel/UCIomFkAj4Vq_rGX2Jot7D8A | 78100 | 2026-11-07 | X 资料直接链接 YouTube |
-| 雪踏乌云 | zh | @Pluvio9yte | https://www.youtube.com/channel/UCucA8x8KOd05KjU7Cgaj7wA | 12 | 2026-11-04 | X 资料直接链接 YouTube |
 | LlamaIndex | en | @llama_index | https://www.youtube.com/channel/UCeRjipR4_SsCddq9VZ2AeKg | 28700 | 2026-11-05 | X 认证资料 + YouTube 核验 |
 | CrewAI | en | @crewAIInc | https://www.youtube.com/channel/UCTulKzR5sldNq2eAxxdaEuA | 8180 | 2026-11-04 | X 认证资料 + YouTube 核验 |
 | Cole Medin | en | @cole_medin | https://www.youtube.com/channel/UCMwVTLZIRRUyyVrkjDpn4pA | 231000 | 2026-11-06 | X 认证资料 + YouTube 核验 |
@@ -77,7 +76,6 @@
 | ByteByteGo | en | @alexxubyte | https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw | 1440000 | 2026-10-22 | X 资料直接链接 YouTube |
 | Underfitted (Santiago) | en | @svpino | https://www.youtube.com/channel/UCgLxmJ8xER7Y7sywMN5SfWg | 62100 | 2026-09-30 | X 资料直接链接 YouTube |
 | AI超元域 | zh | @AISuperDomain | https://www.youtube.com/channel/UCIomFkAj4Vq_rGX2Jot7D8A | 78100 | 2026-11-07 | X 资料直接链接 YouTube |
-| 雪踏乌云 | zh | @Pluvio9yte | https://www.youtube.com/channel/UCucA8x8KOd05KjU7Cgaj7wA | 12 | 2026-11-04 | X 资料直接链接 YouTube |
 | Cole Medin | en | @cole_medin | https://www.youtube.com/channel/UCMwVTLZIRRUyyVrkjDpn4pA | 231000 | 2026-11-06 | X 认证资料 + YouTube 核验 |
 | Theo - t3.gg | en | @theo | https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA | 578000 | 2026-11-07 | X 认证资料 + YouTube 核验 |
 | Matt Pocock | en | @mattpocockuk | https://www.youtube.com/channel/UCswG6FSbgZjbWtdf_hMLaow | 434000 | 2026-11-07 | X 认证资料 + YouTube 核验 |
@@ -111,7 +109,6 @@
 | MattVidPro AI | en | @MattVidPro | https://www.youtube.com/channel/UC5Wz4fFacYuON6IKbhSa7Zw | 305000 | 2026-11-08 | X 资料直接链接 YouTube |
 | The AI Advantage | en | @IgorPogany | https://www.youtube.com/channel/UCHhYXsLBEVVnbvsq57n1MTQ | 493000 | 2026-11-07 | X 资料直接链接 YouTube |
 | AI超元域 | zh | @AISuperDomain | https://www.youtube.com/channel/UCIomFkAj4Vq_rGX2Jot7D8A | 78100 | 2026-11-07 | X 资料直接链接 YouTube |
-| 遁一子 Jesse Lau | zh | @jesselaunz | https://www.youtube.com/channel/UCRy_AScJwP-Tt3iVcMMWCxw | 83 | 2026-10-29 | X 资料直接链接 YouTube |
 | howie.serious | zh | @howie_serious | https://www.youtube.com/channel/UCh1TRnUd33z_CWWDKyPTwtw | 10900 | 2026-10-03 | X 资料直接链接 YouTube |
 | Replit | en | @Replit | https://www.youtube.com/channel/UCgoJjdR6-7AMu9fDitb6nVw | 129000 | 2026-11-06 | X 认证资料 + YouTube 核验 |
 | Y Combinator | en | @ycombinator | https://www.youtube.com/channel/UCcefcZRL2oaA_uBNeo5UOWg | 2430000 | 2026-11-07 | X 认证资料 + YouTube 核验 |
@@ -134,7 +131,6 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | Anthropic | en | @AnthropicAI | https://www.youtube.com/channel/UCrDwWp7EBBv4NwvScIpBDOA | 834000 | 2026-09-24 | 原有 X→YouTube 名单 |
 | Cohere | en | @cohere | https://www.youtube.com/channel/UCAKTUy0tz47ZY02DFpxMqoQ | 19000 | 2026-10-31 | 原有 X→YouTube 名单 |
-| Greg Brockman | en | @gdb | https://www.youtube.com/channel/UCF3n5QTuQ6qel9kEZ6JWO7g | 2 | 2026-10-31 | 原有 X→YouTube 名单 |
 | OpenAI | en | @OpenAI | https://www.youtube.com/channel/UCXZCJLdBC09xxGZ6gcdrc6A | 2110000 | 2026-11-07 | 原有 X→YouTube 名单 |
 | NVIDIA | en | @nvidia | https://www.youtube.com/channel/UCHuiy8bXnmK5nisYHUd1J5g | 2260000 | 2026-11-07 | 原有 X→YouTube 名单 |
 | Lex Fridman | en | @lexfridman | https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA | 5070000 | 2026-10-27 | X 资料直接链接 YouTube |
@@ -166,12 +162,13 @@
 
 | 名称 | 频道 ID | 状态 | 原因 |
 | --- | --- | --- | --- |
-| Andrej Karpathy | UCe4jUOmQPKMDvOkzJpDfMRQ | inactive | inactive |
-| hardmaru | UCw-ZrGIgic129_VsuwUHWFg | inactive | inactive |
-| François Chollet | UC820bCs6DQWEozZnLeBPpaQ | inactive | inactive |
+| Andrej Karpathy | UCe4jUOmQPKMDvOkzJpDfMRQ | below_subscribers | individual_below_1000 |
+| Greg Brockman | UCF3n5QTuQ6qel9kEZ6JWO7g | below_subscribers | individual_below_1000 |
+| hardmaru | UCw-ZrGIgic129_VsuwUHWFg | below_subscribers | individual_below_1000 |
+| François Chollet | UC820bCs6DQWEozZnLeBPpaQ | below_subscribers | individual_below_1000 |
 | Pinecone | UCulYMQ-GOvXkDeoxFojwKQw | inactive | inactive |
-| Jack Clark | UCNFv-eBKW_xhTCiziy8zjJA | inactive | inactive |
-| Andrew Ng | UC0nw93YVMDAuABkfDexpF2Q | inactive | inactive |
+| Jack Clark | UCNFv-eBKW_xhTCiziy8zjJA | below_subscribers | individual_below_1000 |
+| Andrew Ng | UC0nw93YVMDAuABkfDexpF2Q | below_subscribers | individual_below_1000 |
 | Yann LeCun | UCMU7l2bIv6MXlgJR3-E33Dw | inactive | inactive |
 | Mckay Wrigley | UCXZFVVCFahewxr3est7aT7Q | inactive | inactive |
 | Welch Labs |  | unverified | channels.list 未返回频道 |
@@ -188,20 +185,22 @@
 | 跟李沐学AI |  | unverified | channels.list 未返回频道 |
 | Yannic Kilcher | UCZHmQk67mSJgfCCTn7xBfew | inactive | inactive |
 | Sasha Rush | UCCnH8mxROOqii6gesCmMRzQ | inactive | inactive |
+| 遁一子 Jesse Lau | UCRy_AScJwP-Tt3iVcMMWCxw | below_subscribers | individual_below_1000 |
+| 雪踏乌云 | UCucA8x8KOd05KjU7Cgaj7wA | below_subscribers | individual_below_1000 |
 | Jeremy Howard | UCX7Y2qWriXpqocG97SFW2OQ | inactive | inactive |
 | Hung-yi Lee 李宏毅 | UC2ggjtuuWvxrHHHiaDH1dlQ | inactive | inactive |
 | Andrej Karpathy (handle check) | UCXUPKJO5MZQN11PqgIvyuvQ | inactive | inactive |
-| 硅谷101 | UC7Me1FDGlXlX2DNeep6gC5g | below_subscribers | below_subscribers |
+| 硅谷101 | UC7Me1FDGlXlX2DNeep6gC5g | below_subscribers | individual_below_1000 |
 | Dan Grib | UC8wsrGnERmE2UDpH4izaTww | below_subscribers | below_subscribers |
 | Xplained with MUSHROOMS | UCXDu_W0USvqHaA63gVuAz3A | below_subscribers | below_subscribers |
 | SuSan Novel | UCxFJhKqxXLkXLuPy8FqaeMw | below_subscribers | below_subscribers |
 | 日常科學動起來 | UCRUNnIx3Q5Nlo-B7B0yFM3g | below_subscribers | below_subscribers |
-| Under the Hood AI | UC0pcBAEdvcUJXK2VG6gpRmw | below_subscribers | below_subscribers |
+| Under the Hood AI | UC0pcBAEdvcUJXK2VG6gpRmw | below_subscribers | individual_below_1000 |
 | KodeKloud | UCSWj8mqQCcrcBlXPi4ThRDQ | not_focused | 主题标题命中 4/38（要求至少 3 条且比例 ≥ 0.4） |
 | The Data Girl | UCAFDJBMow-e99spGq2lq9Jw | below_subscribers | below_subscribers |
-| 老蔡 | UCQXpG6HeSEX0c6-qck0uBCQ | below_subscribers | below_subscribers |
+| 老蔡 | UCQXpG6HeSEX0c6-qck0uBCQ | below_subscribers | individual_below_1000 |
 | 畅的科技工坊 | UCqSM1n2m0HJrqpvaG64SiuA | below_subscribers | below_subscribers |
-| 荒野全栈AI | UCvbeqeuRfAOX4p8reQSu_UQ | below_subscribers | below_subscribers |
+| 荒野全栈AI | UCvbeqeuRfAOX4p8reQSu_UQ | below_subscribers | individual_below_1000 |
 | Tech With Tim | UC4JX40jDee_tINbkjycV4Sg | not_topical | not_topical |
 | 硬核刘大 | UCCeMdcZw1LJsAGKeoYXZw6A | not_topical | not_topical |
 | Alberta Tech | UCkdgAA0rfK7lG5dv4o__Paw | not_focused | 主题标题命中 2/14（要求至少 3 条且比例 ≥ 0.4） |
@@ -217,7 +216,7 @@
 | Techquickie | UC0vBXGSyV14uvJ4hECDOl0Q | not_topical | not_topical |
 | Pankaj Shukla | UCOgHTpcASdc3Dr7mP-dLu3w | below_subscribers | below_subscribers |
 | Caleb Writes Code | UCuU9jE4MHHEIyYMbDfUPSew | not_focused | 主题标题命中 2/8（要求至少 3 条且比例 ≥ 0.4） |
-| 智能商業論 | UC9EClR6t1ZZLWMyxAO0OHuA | below_subscribers | below_subscribers |
+| 智能商業論 | UC9EClR6t1ZZLWMyxAO0OHuA | below_subscribers | individual_below_1000 |
 | Julien Simon | UCVonoXm3SI_Q0ZNHd5JPawA | not_topical | not_topical |
 | 人工智能AI课堂-卢菁博士(北大) | UCnFwIEF9BqzC3PXY1VhafbA | below_subscribers | below_subscribers |
 | Iveai - I've AI | UCu41gi0anqX-IcSh-oHmZfQ | below_subscribers | below_subscribers |
@@ -228,16 +227,16 @@
 | CloudYeti \| Practical AI Engineering | UCbbp2FFbVQkuFYTJCZ92JQg | below_subscribers | below_subscribers |
 | best大模型 | UCMrUsG-fj9sL2uYiX_vXxcw | below_subscribers | below_subscribers |
 | Cosmo Explains | UCIhxIGwGDetnoPGiHfXTsTg | below_subscribers | below_subscribers |
-| HelloHuman你好人类 | UC3NkjBOxUV2q9Sl9RgxRUsg | below_subscribers | below_subscribers |
+| HelloHuman你好人类 | UC3NkjBOxUV2q9Sl9RgxRUsg | below_subscribers | individual_below_1000 |
 | Stanford Online | UCBa5G_ESCn8Yd4vw5U-gIcg | not_topical | not_topical |
 | MrToucan Explains Memes | UC1SZ-1Ydb7Ri6zEOF0CcwrA | below_subscribers | below_subscribers |
 | DeeL Mind | UCWrelXDdvGYo6CCsGKMmuSQ | below_subscribers | below_subscribers |
-| 老鐸 AI 小白 Agent 社区 | UCsClGgPX9HhsdQKoytyQZKA | below_subscribers | below_subscribers |
+| 老鐸 AI 小白 Agent 社区 | UCsClGgPX9HhsdQKoytyQZKA | below_subscribers | individual_below_1000 |
 | AI打工人 | UC_BHrc3mkMgGiWxQ_-v9ZAw | below_subscribers | below_subscribers |
 | 程序员alan | UCTHNJZg_Ws5Zxr-1HKuqTwg | below_subscribers | below_subscribers |
 | Cloud X Berry | UCa4bTXWVuhtMJh6bQXAK38A | below_subscribers | below_subscribers |
 | Devsplainers | UCf4sXk66VuWGlg4Nh0tuCdA | below_subscribers | below_subscribers |
-| 量子上骑士 Quantum | UC0kTcnVsWGKq3GwiA0gtfSw | below_subscribers | below_subscribers |
+| 量子上骑士 Quantum | UC0kTcnVsWGKq3GwiA0gtfSw | below_subscribers | individual_below_1000 |
 | Aishwarya Srinivasan | UCzd4ZN716evEjtbJERBMTfg | not_topical | not_topical |
 | Alibaba Cloud | UCipPA-ZHX6UYGH_Iyti1-Jw | not_topical | not_topical |
 | 程序员老王 | UCL7SP6Q4VLVPv_zvzuZ_mwQ | not_topical | not_topical |
@@ -246,27 +245,27 @@
 | Okta | UC8uqguTIYs5qW9uaziSnZ0Q | below_subscribers | below_subscribers |
 | Paper Design | UCcP5eVhyXKkCYI0Qo548XsA | below_subscribers | below_subscribers |
 | Breaking Points | UCDRIjKy6eZOvKtOELtTdeUA | not_focused | 主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4） |
-| 懂王Ai | UCKZenVgUOyGCg5rF8qUnbeg | below_subscribers | below_subscribers |
+| 懂王Ai | UCKZenVgUOyGCg5rF8qUnbeg | below_subscribers | individual_below_1000 |
 | InsideAI | UC0_M9eztZvetcyLAb5f-o5w | over_cap | over_cap |
 | UFD Tech | UC4Z8mPYjn6Dhr6n531YDh0Q | not_focused | 主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4） |
 | Grok | UCxgo0OMZU9SiaYpJsuZKWkQ | below_subscribers | below_subscribers |
-| 算法魔法师 | UC16xszr_kj1dZOC8N3G730A | below_subscribers | below_subscribers |
+| 算法魔法师 | UC16xszr_kj1dZOC8N3G730A | below_subscribers | individual_below_1000 |
 | NetworkChuck | UC9x0AN7BWHpCDHSm9NiJFJQ | not_topical | not_topical |
 | 尚硅谷AI培训学校 | UCIgDN-g8qBfjtcu0UfkgdEA | not_topical | not_topical |
 | Jay E \| RoboNuggets | UCgscS8mBsQZ5sFRkJIFWD7Q | over_cap | over_cap |
-| 李出戏 | UC3lom9A0N-KwXj4UXUSfAqw | below_subscribers | below_subscribers |
-| EasyPay虚拟信用卡 | UCDlaCBX98oUlZMzTrQfPjfg | below_subscribers | below_subscribers |
+| 李出戏 | UC3lom9A0N-KwXj4UXUSfAqw | below_subscribers | individual_below_1000 |
+| EasyPay虚拟信用卡 | UCDlaCBX98oUlZMzTrQfPjfg | below_subscribers | individual_below_1000 |
 | Journey With The Hintons | UCMkrhE-kVtq06xUZDN3FD8Q | over_cap | over_cap |
 | CNN | UCupvZG-5ko_eiXAupbDfxWw | not_focused | 主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4） |
 | 80,000 Hours | UCafjal1QYJ3rb0Y9xZk1Ezg | below_subscribers | below_subscribers |
-| Zero \| Explorer the World | UCgOyBxzlzgZ7ybtpqHJrpeQ | below_subscribers | below_subscribers |
+| Zero \| Explorer the World | UCgOyBxzlzgZ7ybtpqHJrpeQ | below_subscribers | individual_below_1000 |
 | The Diary Of A CEO Clips | UCnjgxChqYYnyoqO4k_Q1d6Q | not_topical | not_topical |
 | Dinge Erklärt – Kurzgesagt | UCwRH985XgMYXQ6NxXDo8npw | not_topical | not_topical |
 | Khabargaon | UClhHB0_iXbn8Cc0x5YzcvIg | over_cap | over_cap |
 | AI产品狙击手 kzhu | UCO7gHu_DklxoF8I3kXiNFBA | below_subscribers | below_subscribers |
 | Ravate | UCJe7zYL2b7mMhtsODdV52gA | excluded_pattern | excluded_pattern |
 | Cleo Abram | UC415bOPUcGSamy543abLmRA | not_topical | not_topical |
-| 程序员老韩 | UCSXv_jei46Wtdp7xFdbk1Dg | below_subscribers | below_subscribers |
+| 程序员老韩 | UCSXv_jei46Wtdp7xFdbk1Dg | below_subscribers | individual_below_1000 |
 | CBC News | UCuFFtHWoLl5fauMMD5Ww2jA | not_topical | not_topical |
 | Brainy Byte | UCen94jjXn9oSQdHFLOKgQuw | over_cap | over_cap |
 | Kurzgesagt – In a Nutshell | UCsXVk37bltHxD1rDPwtNM8Q | not_topical | not_topical |
@@ -282,10 +281,10 @@
 | AI大模型小冉Agent | UCeTRBz1DgVfZaGHCYBdKfgw | below_subscribers | below_subscribers |
 | The Diary Of A CEO | UCGq-a57w-aPwyi3pW7XLiHw | not_topical | not_topical |
 | Dave's Garage | UCNzszbnvQeFzObW0ghk0Ckw | over_cap | over_cap |
-| AI大模型干货 | UCDxkZztXMgzjclU-BYEMoJA | below_subscribers | below_subscribers |
+| AI大模型干货 | UCDxkZztXMgzjclU-BYEMoJA | below_subscribers | individual_below_1000 |
 | Mark Tilbury | UCxgAuX3XZROujMmGphN_scA | not_topical | not_topical |
-| 马文高Marvin | UCHUoEkmxGmQ-qGalPcedYbg | below_subscribers | below_subscribers |
-| Vstrel | UCkN_tQZZCmbxlW9PiTJZKZQ | below_subscribers | below_subscribers |
+| 马文高Marvin | UCHUoEkmxGmQ-qGalPcedYbg | below_subscribers | individual_below_1000 |
+| Vstrel | UCkN_tQZZCmbxlW9PiTJZKZQ | below_subscribers | individual_below_1000 |
 | AI In Context | UCwicfou4Ewu-koikmga-bEg | not_topical | not_topical |
 | 张司机在路上 | UCvfWeAeAzUIYhVpRzTze1JQ | below_subscribers | below_subscribers |
 | Raj Shamani | UCzwCEE_PchiBULMnAJqhGVg | not_topical | not_topical |
@@ -293,7 +292,7 @@
 | Mayankshah | UCk5bonSqXxRqd3miJGNGYpg | not_topical | not_topical |
 | Tim Chan AI | UCF46qxGNea5kWYsv09NkY0Q | below_subscribers | below_subscribers |
 | 哈佛姐夢遊矽谷 AliceInSiliconWonderland | UCB9ryAh6vhavNxALJUJT6-Q | not_topical | not_topical |
-| Symphony App | UCFtAiNnTUdrQNLrhEe7q4WQ | below_subscribers | below_subscribers |
+| Symphony App | UCFtAiNnTUdrQNLrhEe7q4WQ | below_subscribers | individual_below_1000 |
 | The Tech Girl | UCjzWsRM05uCgkSEELJZWciA | over_cap | over_cap |
 | InsiderForce | UC8L6EV01fAJ2A0sDpsQ-T5g | below_subscribers | below_subscribers |
 | Alex Finn | UCfQNB91qRP_5ILeu_S_bSkg | over_cap | over_cap |
@@ -367,7 +366,7 @@
 | Fresher Ki Naukri | UCir6kdJGoPTPCmvegeyj4OQ | below_subscribers | below_subscribers |
 | Roboverse | UCZ3KGRwOA_uONNE_6VGG2bA | over_cap | over_cap |
 | Dan Kieft | UCdNj_PP__5kKtjZabuEjbqA | not_topical | not_topical |
-| Sakshi Mutha  | UCOMFfkjCYrZvBWRoRRV99hQ | below_subscribers | below_subscribers |
+| Sakshi Mutha  | UCOMFfkjCYrZvBWRoRRV99hQ | below_subscribers | individual_below_1000 |
 | Andrew Olsson | UChm5pvLdj0yZ7RQ7UC3pNpw | below_subscribers | below_subscribers |
 | Active Rahul | UC-RePsOrv62H7p5ZPpo05Vg | unsupported_language | 不支持文字标题 14/22 |
 | Perfology Clips | UCqonLaJbU-uBfy0EhUffM7Q | below_subscribers | below_subscribers |
@@ -388,34 +387,34 @@
 | LearnCodez | UC1FwR0JdAwOjzlnEsdBPERw | below_subscribers | below_subscribers |
 | 七七行銷筆記 | UCo2eY8Nk3lPOh6sef1sQx_Q | not_topical | not_topical |
 | Cool Dude Explains | UCHN1Bey32UXz1tTVjBwi3Mw | below_subscribers | below_subscribers |
-| Jason Tang | UCwFxfhxqatJJRQg8pCEL3Ww | below_subscribers | below_subscribers |
+| Jason Tang | UCwFxfhxqatJJRQg8pCEL3Ww | below_subscribers | individual_below_1000 |
 | 婁哥教你學 AI \| Lou Teaches AI | UCR-8ImhyPuCUewUEX2Z3Jjw | below_subscribers | below_subscribers |
 | The Daily Show | UCwWhs_6x42TyRM4Wstoq8HA | not_topical | not_topical |
 | Yeye_wan | UCrwiEuBLqKthCvXRsi7C3VQ | below_subscribers | below_subscribers |
 | 偉代碼 Rick Hau | UCKMtbQbyhpBgyKaNX5vJUsw | below_subscribers | below_subscribers |
-| Daniel.S | UCMVWkrk1_sExheO7hWJ31Ug | below_subscribers | below_subscribers |
+| Daniel.S | UCMVWkrk1_sExheO7hWJ31Ug | below_subscribers | individual_below_1000 |
 | brain 學霸 | UCS85mqYCUZlTCYHCQW2kkTQ | not_topical | not_topical |
 | AI每日俱乐部 | UCGjlXmWhvAwfPnrMTsMK9nQ | over_cap | over_cap |
 | 三颗门牙X | UCJEGB4IvGVe4vJq5NnLXZJg | below_subscribers | below_subscribers |
-| Wendy玩ai -Ai News | UCRb3RMZXBF3QRYN9oIqREoA | below_subscribers | below_subscribers |
+| Wendy玩ai -Ai News | UCRb3RMZXBF3QRYN9oIqREoA | below_subscribers | individual_below_1000 |
 | 小陳愛極簡 | UCRCHeBckcEpvZ0PMzFxHUyw | not_topical | not_topical |
 | 盈夏AI轻创业 | UC9y_dhqHFtMYQx8jfZqZCvA | excluded_pattern | excluded_pattern |
-| 百年风云录 | UC69ezhORKs7YMAwHe2B8kmg | below_subscribers | below_subscribers |
-| Evan的AI第二曲线 | UCWaxD1wWT6Dsr2ECq0riBJA | excluded_pattern | excluded_pattern |
+| 百年风云录 | UC69ezhORKs7YMAwHe2B8kmg | below_subscribers | individual_below_1000 |
+| Evan的AI第二曲线 | UCWaxD1wWT6Dsr2ECq0riBJA | below_subscribers | individual_below_1000 |
 | Zack Shutt | UCtn7DJgu_AHaAWc2kO-o9eA | not_topical | not_topical |
 | 度白視界 | UCoWmUZVAYBC2UZCHvLEdofA | below_subscribers | below_subscribers |
 | 秋叶课堂 | UCZrNBeAIf3MsSe-aR8AvlKg | not_topical | not_topical |
-| Duke商业观察 | UCtK8hy_19VOOZHq9492GVdQ | excluded_pattern | excluded_pattern |
+| Duke商业观察 | UCtK8hy_19VOOZHq9492GVdQ | below_subscribers | individual_below_1000 |
 | Terry Ong | UCYHdMN-Rp8NromYunsMR5gQ | below_subscribers | below_subscribers |
 | NBC News | UCeY0bbntWzzVIaj2z3QigXg | not_topical | not_topical |
 | AI Fiesta | UC7Yb5hzFegbnEeBIs_HXrcg | not_topical | not_topical |
 | 說人話的AI工程師 | UCANCzh3p8iGfnzAke8AsX_g | below_subscribers | below_subscribers |
 | Hank Green | UCOT2iLov0V7Re7ku_3UBtcQ | not_topical | not_topical |
 | 獅心瘋 | UCM1oqKXwENQ8dxOJa8BkmOQ | not_topical | not_topical |
-| 老陈打分 | UCg8K6Za1ZMmRPh6WPDWzNVw | below_subscribers | below_subscribers |
+| 老陈打分 | UCg8K6Za1ZMmRPh6WPDWzNVw | below_subscribers | individual_below_1000 |
 | 然冉创业说 | UCEczTn9zhrGSalzNP-FUY5A | not_topical | not_topical |
 | AI零成本实验室 (AI For Free) | UCQe8R3r-7Oy4lpVs39OBBIQ | excluded_pattern | excluded_pattern |
-| 小白互联网神器店 | UCtTDLk0u0oPX-iWxDBEstyg | below_subscribers | below_subscribers |
+| 小白互联网神器店 | UCtTDLk0u0oPX-iWxDBEstyg | below_subscribers | individual_below_1000 |
 | 成叔 | UCRjvq0JF-eTA2ZrUR4y6i2Q | below_subscribers | below_subscribers |
 | Ryan Kelly Comedy | UCXxCruD2b-S0P2k9D-wqKZQ | not_topical | not_topical |
 | 大力Thinking | UCh4pbuIMCG6clVR-VRnmwjw | below_subscribers | below_subscribers |
@@ -430,13 +429,13 @@
 | AI工具箱 | UCbwDCr-lTbgLqPQeBUYOVkQ | over_cap | over_cap |
 | 小in分享 | UC3Tk2fIl27ddeGOh-BdrOWg | not_topical | not_topical |
 | 科技猎奇 | UCiZ-vPsF_30ZyEBRfOYnsdg | not_topical | not_topical |
-| 美女程式員 | UCpg6GtoDnqW4dNCs1VLfIeg | below_subscribers | below_subscribers |
+| 美女程式員 | UCpg6GtoDnqW4dNCs1VLfIeg | below_subscribers | individual_below_1000 |
 | India Global Review | UC83iGbaOhZR8AWNYYNzSNjg | over_cap | over_cap |
 | Bill Gates | UCnEiGCE13SUI7ZvojTAVBKw | not_topical | not_topical |
 | 漢克蔡 \| Ai 集 | UCiqtD7G-JFdLeuSljvhzYhQ | not_topical | not_topical |
 | The Deshbhakt | UCmTM_hPCeckqN3cPWtYZZcg | not_focused | 主题标题命中 1/25（要求至少 3 条且比例 ≥ 0.4） |
 | 小爱crypto | UCm1IB3I5AWwcZ_3Z-gwZVlA | excluded_pattern | excluded_pattern |
-| EJ观察 | UCIMkdn9f3Wbl6jFbZOd2M0Q | below_subscribers | below_subscribers |
+| EJ观察 | UCIMkdn9f3Wbl6jFbZOd2M0Q | below_subscribers | individual_below_1000 |
 | Professor Of AI | UCM8c-d9_dBw6nVJpqltKgEQ | over_cap | over_cap |
 | Second Chances | UCfV1hc_MFv7CNrWMVPmFoZQ | below_subscribers | below_subscribers |
 | 無綫新聞 TVB NEWS Official | UC_ifDTtFAcsj-wJ5JfM27CQ | not_topical | not_topical |
@@ -444,35 +443,35 @@
 | Gamers Nexus | UChIs72whgZI9w6d6FhwGGHA | over_cap | over_cap |
 | MS NOW | UCaXkIU1QidjPwiAYu6GcHjg | not_focused | 主题标题命中 2/50（要求至少 3 条且比例 ≥ 0.4） |
 | ABC News | UCBi2mrWuNuyYy4gbM6fU18Q | not_focused | 主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4） |
-| 张茂霖 | UCI0BC6G_lOVoY9EdGg65Kpg | below_subscribers | below_subscribers |
+| 张茂霖 | UCI0BC6G_lOVoY9EdGg65Kpg | below_subscribers | individual_below_1000 |
 | TVBS NEWS | UC5nwNW4KdC0SzrhF9BXEYOQ | not_topical | not_topical |
 | Agogo107.5fm | UCU1BSJ0ix5FRJlZdgBlmNSg | below_subscribers | below_subscribers |
 | Prabhjot Speaks | UCHvKJ6u9t9weize9wSSwbBQ | not_topical | not_topical |
 | China Press 中國報 | UC0x51OBWjnUTMOehT3-4lpg | not_topical | not_topical |
-| Ai3人工智能 | UCnCq_McTxqr3SjQzEqCJPhQ | below_subscribers | below_subscribers |
+| Ai3人工智能 | UCnCq_McTxqr3SjQzEqCJPhQ | below_subscribers | individual_below_1000 |
 | BBC News 中文 | UCb3TZ4SD_Ys3j4z0-8o6auA | not_topical | not_topical |
 | Democracy Now! | UCzuqE7-t13O4NIDYJfakrhw | not_topical | not_topical |
-| 人工智能师叔 AI师叔 | UCCRj53gqTCZ0ZYg6yhdR8Qw | excluded_pattern | excluded_pattern |
-| ai人工智能 | UCgx8G0b7L1c-53bFOLsKZrw | below_subscribers | below_subscribers |
-| AI-人工智能-电影 | UC_tibl1QdZxr7yJ3d6iPtvA | below_subscribers | below_subscribers |
+| 人工智能师叔 AI师叔 | UCCRj53gqTCZ0ZYg6yhdR8Qw | below_subscribers | individual_below_1000 |
+| ai人工智能 | UCgx8G0b7L1c-53bFOLsKZrw | below_subscribers | individual_below_1000 |
+| AI-人工智能-电影 | UC_tibl1QdZxr7yJ3d6iPtvA | below_subscribers | individual_below_1000 |
 | The Weekly Show with Jon Stewart | UCQlJ7XpBtiMLKNSd4RAJmRQ | not_topical | not_topical |
 | Tucker Carlson | UCGttrUON87gWfU6dMWm1fcA | not_focused | 主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4） |
-| 人工智能AI + IC | UCRnV4kI2hM-KccPZ_70uYVA | below_subscribers | below_subscribers |
+| 人工智能AI + IC | UCRnV4kI2hM-KccPZ_70uYVA | below_subscribers | individual_below_1000 |
 | Nippon Television News Japan | UCJD2Br_xC-3vY4nkJ9YPYDA | not_topical | not_topical |
 | 一分鐘學人工智慧 AI | UCp5PaLzRJCuxbklnCLsFvnw | below_subscribers | below_subscribers |
-| 潘忠安AI人工智能 | UCjeWFUkPLw8jPPWeiKCrV4A | below_subscribers | below_subscribers |
+| 潘忠安AI人工智能 | UCjeWFUkPLw8jPPWeiKCrV4A | below_subscribers | individual_below_1000 |
 | Republic World | UCwqusr8YDwM-3mEYTDeJHzw | not_topical | not_topical |
 | DeFranco News Clips | UCpLB7kBu9O5dbBKhaIOmqcQ | not_topical | not_topical |
 | Forbes Breaking News | UCg40OxZ1GYh3u3jBntB6DLg | not_focused | 主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4） |
 | CBS Evening News | UCAeWdyKJXGWmVAXFpgLNNTg | not_topical | not_topical |
-| 人工智能时代 | UCNjgNag0eCCqtSR6eWj006A | below_subscribers | below_subscribers |
+| 人工智能时代 | UCNjgNag0eCCqtSR6eWj006A | below_subscribers | individual_below_1000 |
 | Think School | UCKZozRVHRYsYHGEyNKuhhdA | not_topical | not_topical |
 | CBS News | UC8p1vwvWtl6T73JiExfWs1g | not_topical | not_topical |
-| AI人工智能应用软件 | UCqzXz5z_N0HvRXbViFtQsVQ | below_subscribers | below_subscribers |
-| Ai人工智能 - Topic | UCbvEmbxJtD2ce3_al8kWKfQ | below_subscribers | below_subscribers |
+| AI人工智能应用软件 | UCqzXz5z_N0HvRXbViFtQsVQ | below_subscribers | individual_below_1000 |
+| Ai人工智能 - Topic | UCbvEmbxJtD2ce3_al8kWKfQ | below_subscribers | individual_below_1000 |
 | CNBC Television | UCrp_UI8XtuYfpiqluWLD7Lw | not_topical | not_topical |
-| Ai人工智能 | UCQ9Re595g71-8NWrSA2dfRg | below_subscribers | below_subscribers |
-| AI人工智能 | UCUtppApFydGkvNhzeGwLWOw | below_subscribers | below_subscribers |
+| Ai人工智能 | UCQ9Re595g71-8NWrSA2dfRg | below_subscribers | individual_below_1000 |
+| AI人工智能 | UCUtppApFydGkvNhzeGwLWOw | below_subscribers | individual_below_1000 |
 | 60 Minutes | UCsN32BtMd0IoByjJRNF12cw | not_topical | not_topical |
 | 人工智能 AI 機器人 & 無人機：應驗聖經預言 | UC7sC7Uom7znrx_hZ1Ae1VfA | below_subscribers | below_subscribers |
 | 唐宇迪【人工智能实战专家】 | UCcpuYUac23j9pBzxCExpRAw | below_subscribers | below_subscribers |
@@ -480,231 +479,231 @@
 | Bloomberg Television | UCIALMKvObZNtJ6AmdCLP7Lg | over_cap | over_cap |
 | DD News | UCKwucPzHZ7zCUIf7If-Wo1g | not_topical | not_topical |
 | NDTV Profit | UC3uJIdRFTGgLWrUziaHbzrg | not_topical | not_topical |
-| AiDLab人工智能設計研究所 | UCume_co0gqGonDhaAdPkn5g | below_subscribers | below_subscribers |
+| AiDLab人工智能設計研究所 | UCume_co0gqGonDhaAdPkn5g | below_subscribers | individual_below_1000 |
 | DW News | UCknLrEdhRCp1aegoMqRaCZg | not_focused | 主题标题命中 3/50（要求至少 3 条且比例 ≥ 0.4） |
-| AI人工智能 | UC3cIlzFPs_s6ALZSQ3XCcwg | below_subscribers | below_subscribers |
-| 家威人工智能研究室 Kavi AI Lab | UCUj0QPhVnFJ6FZEVmVfDpDA | below_subscribers | below_subscribers |
+| AI人工智能 | UC3cIlzFPs_s6ALZSQ3XCcwg | below_subscribers | individual_below_1000 |
+| 家威人工智能研究室 Kavi AI Lab | UCUj0QPhVnFJ6FZEVmVfDpDA | below_subscribers | individual_below_1000 |
 | New Money | UCvSXMi2LebwJEM1s4bz5IBA | over_cap | over_cap |
 | Aism India | UCveMk-nhkgojmeUMWndZ8-w | not_topical | not_topical |
-| AI人工智能 | UCuSQX8QcMzIgetY47dZ4LCQ | below_subscribers | below_subscribers |
-| AI Learning Path 學習如何學習人工智能 | UCK5Yu-77EtIoHszo9_xvFnQ | below_subscribers | below_subscribers |
-| 人工智能机器人 | UC5u6wb65NTm_0LQ6HErrtlA | below_subscribers | below_subscribers |
-| AImpact人工智能参谋 | UCpvM3By5UUvzV4FAp2j8PKQ | below_subscribers | below_subscribers |
-| cybersmart | UCI_5ddhzNNzmaDEttNQclwg | below_subscribers | below_subscribers |
-| AI人工智能頻道 | UCj3aI_4Wq5oVKw_2UD4mHlA | below_subscribers | below_subscribers |
-| AI大模型教程 | UCSJX3zIWICZdf2TWg3INhRA | below_subscribers | below_subscribers |
-| AI3人工智能 | UC9_SqDqQ84hieTslHuCte7A | below_subscribers | below_subscribers |
-| 企鹅大模型 | UCZihbCYD4qQgXPndPJd921g | below_subscribers | below_subscribers |
-| 王自如讲AI | UCMCMnITZXfUDU9L5IqjwEJw | below_subscribers | below_subscribers |
-| W AI Agent 教室 | UCVDu1eauZWHN5ZxUq8RbXmw | below_subscribers | below_subscribers |
-| 画说AI | UCUawadLHUZhnuabVLKcDqOw | below_subscribers | below_subscribers |
-| 巔峰人工智能金融研究院講座 | UCs0jSSfJTPHoCdg3Uze0oow | below_subscribers | below_subscribers |
+| AI人工智能 | UCuSQX8QcMzIgetY47dZ4LCQ | below_subscribers | individual_below_1000 |
+| AI Learning Path 學習如何學習人工智能 | UCK5Yu-77EtIoHszo9_xvFnQ | below_subscribers | individual_below_1000 |
+| 人工智能机器人 | UC5u6wb65NTm_0LQ6HErrtlA | below_subscribers | individual_below_1000 |
+| AImpact人工智能参谋 | UCpvM3By5UUvzV4FAp2j8PKQ | below_subscribers | individual_below_1000 |
+| cybersmart | UCI_5ddhzNNzmaDEttNQclwg | below_subscribers | individual_below_1000 |
+| AI人工智能頻道 | UCj3aI_4Wq5oVKw_2UD4mHlA | below_subscribers | individual_below_1000 |
+| AI大模型教程 | UCSJX3zIWICZdf2TWg3INhRA | below_subscribers | individual_below_1000 |
+| AI3人工智能 | UC9_SqDqQ84hieTslHuCte7A | below_subscribers | individual_below_1000 |
+| 企鹅大模型 | UCZihbCYD4qQgXPndPJd921g | below_subscribers | individual_below_1000 |
+| 王自如讲AI | UCMCMnITZXfUDU9L5IqjwEJw | below_subscribers | individual_below_1000 |
+| W AI Agent 教室 | UCVDu1eauZWHN5ZxUq8RbXmw | below_subscribers | individual_below_1000 |
+| 画说AI | UCUawadLHUZhnuabVLKcDqOw | below_subscribers | individual_below_1000 |
+| 巔峰人工智能金融研究院講座 | UCs0jSSfJTPHoCdg3Uze0oow | below_subscribers | individual_below_1000 |
 | 大模型教程 | UCVANTjIQjvY_217rELPnWrg | below_subscribers | below_subscribers |
-| AI大模型官方实战教程 | UChTGNyme4buuEiAo4th8o5g | below_subscribers | below_subscribers |
-| AI人工智能愛醬 | UCnnr0Jt_C5Gz7EpwGWtju4A | below_subscribers | below_subscribers |
+| AI大模型官方实战教程 | UChTGNyme4buuEiAo4th8o5g | below_subscribers | individual_below_1000 |
+| AI人工智能愛醬 | UCnnr0Jt_C5Gz7EpwGWtju4A | below_subscribers | individual_below_1000 |
 | 台灣人工智慧學校 | UC3ELdsm6nd2bscSqPokphow | below_subscribers | below_subscribers |
-| AI从零到专家 | UCm-6AmUspZd9LcrBb1ABJgw | below_subscribers | below_subscribers |
+| AI从零到专家 | UCm-6AmUspZd9LcrBb1ABJgw | below_subscribers | individual_below_1000 |
 | 大模型 | UCNHBf_6_51eHqCUWzhVpmFg | below_subscribers | below_subscribers |
 | 大模型学习 | UCkAoi2sBIBzi13JUl93Vc5Q | below_subscribers | below_subscribers |
 | AI大模型应用开发 | UCZMkZPr1fMhj9HdPunblgKQ | below_subscribers | below_subscribers |
 | 人工智能 肥鹅 | UCAyOg1KlYZkz30J0L8Ulruw | below_subscribers | below_subscribers |
 | AI爸爸@after6labs | UCqGZ7yEOj8MvkXX4i7rNtsg | below_subscribers | below_subscribers |
 | AI Movie Lab 人工智能实验室 | UCeDlBP8aNHYZHvcPHWt1Msw | below_subscribers | below_subscribers |
-| chatgpt及其他人工智能AI分享 | UC6uRdGLStc7gRmCz4G5TOHg | below_subscribers | below_subscribers |
-| 大模型学习路线 | UCnJLAkLVmkqC0E92Ku25Lqw | below_subscribers | below_subscribers |
-| 大模型入门 | UCht37bLdDwUOaREgWqvTCaA | below_subscribers | below_subscribers |
-| AI大模型应用开发 | UCv-Q0o1ZMQcSfc768zzzunQ | below_subscribers | below_subscribers |
-| AI大模型学习教程 | UCw9dJ1YI8Ju4r6HXM1wA-gw | below_subscribers | below_subscribers |
+| chatgpt及其他人工智能AI分享 | UC6uRdGLStc7gRmCz4G5TOHg | below_subscribers | individual_below_1000 |
+| 大模型学习路线 | UCnJLAkLVmkqC0E92Ku25Lqw | below_subscribers | individual_below_1000 |
+| 大模型入门 | UCht37bLdDwUOaREgWqvTCaA | below_subscribers | individual_below_1000 |
+| AI大模型应用开发 | UCv-Q0o1ZMQcSfc768zzzunQ | below_subscribers | individual_below_1000 |
+| AI大模型学习教程 | UCw9dJ1YI8Ju4r6HXM1wA-gw | below_subscribers | individual_below_1000 |
 | 大模型学习教程 | UCFBN5d1WXSbAIwhkPCIwR0g | below_subscribers | below_subscribers |
 | 大模型小新 | UCkdT3psy1vO7pldA-_WUKEg | below_subscribers | below_subscribers |
 | 翔大模型 | UCiBzG3GmDJ1_crSuObV21GQ | below_subscribers | below_subscribers |
-| 小智AI 实验室 | UC_TPhC4tfZrqJfRU1-oMX1Q | below_subscribers | below_subscribers |
+| 小智AI 实验室 | UC_TPhC4tfZrqJfRU1-oMX1Q | below_subscribers | individual_below_1000 |
 | 大模型唐文 | UCH2ihwPfBneaw0CG9P1sQOw | below_subscribers | below_subscribers |
-| AI大模型 | UCcyzVjcsjVXipLoZZeu_gwQ | below_subscribers | below_subscribers |
-| AI FRONTIER | UCYjTN934FMHFEqxlFrXO0hA | below_subscribers | below_subscribers |
-| Cool Smart AI  智爽 | UCxCBvyxVz2GFAG7rr1jBKnw | below_subscribers | below_subscribers |
+| AI大模型 | UCcyzVjcsjVXipLoZZeu_gwQ | below_subscribers | individual_below_1000 |
+| AI FRONTIER | UCYjTN934FMHFEqxlFrXO0hA | below_subscribers | individual_below_1000 |
+| Cool Smart AI  智爽 | UCxCBvyxVz2GFAG7rr1jBKnw | below_subscribers | individual_below_1000 |
 | l l | UCpTCxTat89vq4AkfePjM35w | below_subscribers | below_subscribers |
-| 玩转AI大模型 | UCkY_tNz0qzj_mqrePQ4-48w | below_subscribers | below_subscribers |
-| AI Zen人工智能的禅意 | UCtMcWM9qvN7zgTpRY5smAtw | below_subscribers | below_subscribers |
+| 玩转AI大模型 | UCkY_tNz0qzj_mqrePQ4-48w | below_subscribers | individual_below_1000 |
+| AI Zen人工智能的禅意 | UCtMcWM9qvN7zgTpRY5smAtw | below_subscribers | individual_below_1000 |
 | AI大模型产品经理老蓝 | UC_jX7YX7qLlUu_D5OMEyibA | below_subscribers | below_subscribers |
 | 大模型-十一 | UCdK_sgRDVhAKWbQcMSatiSQ | below_subscribers | below_subscribers |
-| 富思人工智能 | UCu6l421pYqDQVcIDF6Thcwg | below_subscribers | below_subscribers |
+| 富思人工智能 | UCu6l421pYqDQVcIDF6Thcwg | below_subscribers | individual_below_1000 |
 | 大模型入门教程 | UCIf0t9x8ETLmkIM5YBZikQQ | below_subscribers | below_subscribers |
 | AI 發燒站 | UCqOj-epQL_YTLxRic6bNPTw | below_subscribers | below_subscribers |
-| 大模型老猫 | UCU3iXaNQ3ylTCx5M2JN2owQ | below_subscribers | below_subscribers |
+| 大模型老猫 | UCU3iXaNQ3ylTCx5M2JN2owQ | below_subscribers | individual_below_1000 |
 | 大模型学习路线 | UCC6Sk5n6vfOqg2kba7F6e4g | below_subscribers | below_subscribers |
 | 白白说大模型 | UCHrUrG5wJR1rjKkINFxm8yQ | below_subscribers | below_subscribers |
-| AI 人工智能實驗室 AI Experimental Lab | UCO1u0PonF2kRG1LG5NiWs_g | below_subscribers | below_subscribers |
-| AI有点意思 | UC2Hw4vaeVKfFtUW8LwI43rg | below_subscribers | below_subscribers |
+| AI 人工智能實驗室 AI Experimental Lab | UCO1u0PonF2kRG1LG5NiWs_g | below_subscribers | individual_below_1000 |
+| AI有点意思 | UC2Hw4vaeVKfFtUW8LwI43rg | below_subscribers | individual_below_1000 |
 | 人工智能應用學院 | UCaDAr9echRzDsrqstP2UGgA | below_subscribers | below_subscribers |
-| AI大模型知识库 | UCcGz9q2neFcuD9-f4XbdPhw | below_subscribers | below_subscribers |
-| AI研习官 | UC874DrJ_aFhYL1hSlUJOGtA | below_subscribers | below_subscribers |
+| AI大模型知识库 | UCcGz9q2neFcuD9-f4XbdPhw | below_subscribers | individual_below_1000 |
+| AI研习官 | UC874DrJ_aFhYL1hSlUJOGtA | below_subscribers | individual_below_1000 |
 | Crossin的编程教室 | UC3r2c5Qd4hKqxuwhDAERMUw | below_subscribers | below_subscribers |
-| 大模型干货教程 | UCP7o90Vscqt69t695jGgCng | below_subscribers | below_subscribers |
+| 大模型干货教程 | UCP7o90Vscqt69t695jGgCng | below_subscribers | individual_below_1000 |
 | Leon van Zyl | UCtevzRsHEKhs-RK8pAqwSyQ | over_cap | over_cap |
 | CogniVis AI | UC5CF7mLQZhvx8O5GODZAhdA | below_subscribers | below_subscribers |
 | aiwithbrandon | UCEzrs7gK6Nf6t_tadEprzxQ | below_subscribers | below_subscribers |
 | 海拉鲁编程客 | UCPrN2OUsJHOha26GyKOm5HA | over_cap | over_cap |
-| AI大模型Agent | UC2nvbJZrP5rH36rGngrBf8w | below_subscribers | below_subscribers |
-| AI-大模型教程 | UCI1v1qIfC4nNa9TjwupZ_rw | below_subscribers | below_subscribers |
+| AI大模型Agent | UC2nvbJZrP5rH36rGngrBf8w | below_subscribers | individual_below_1000 |
+| AI-大模型教程 | UCI1v1qIfC4nNa9TjwupZ_rw | below_subscribers | individual_below_1000 |
 | AI Sciences | UC8kFF39hsRrFfHM6-7A6APQ | below_subscribers | below_subscribers |
-| 七喜-AI大模型 | UCBciHOyarPrDShQua4XFNew | below_subscribers | below_subscribers |
-| AI大模型 | UCCFYnEyletKwVcBVBf26MXA | below_subscribers | below_subscribers |
-| AI大模型开发 | UC1yfyCquCndtWeG1dtsfTpg | below_subscribers | below_subscribers |
-| 无忌也-AI | UCe9jEiBY9gVyIbPbBy8PswQ | below_subscribers | below_subscribers |
+| 七喜-AI大模型 | UCBciHOyarPrDShQua4XFNew | below_subscribers | individual_below_1000 |
+| AI大模型 | UCCFYnEyletKwVcBVBf26MXA | below_subscribers | individual_below_1000 |
+| AI大模型开发 | UC1yfyCquCndtWeG1dtsfTpg | below_subscribers | individual_below_1000 |
+| 无忌也-AI | UCe9jEiBY9gVyIbPbBy8PswQ | below_subscribers | individual_below_1000 |
 | AICodeKing | UC0m81bQuthaQZmFbXEY9QSw | over_cap | over_cap |
-| 大模型入门学习 | UCuHV5qw4Jw9X8N5QT6z4PvQ | below_subscribers | below_subscribers |
-| 大模型研究站 | UCot6tmPxo5B_B58Zxc-PiHw | below_subscribers | below_subscribers |
+| 大模型入门学习 | UCuHV5qw4Jw9X8N5QT6z4PvQ | below_subscribers | individual_below_1000 |
+| 大模型研究站 | UCot6tmPxo5B_B58Zxc-PiHw | below_subscribers | individual_below_1000 |
 | 讲大模型的老杨 | UC769IcULAzV4Qhz6c59SMIA | below_subscribers | below_subscribers |
 | AI编程王真行 | UChRzURKbG68HtRVYzUm81qg | below_subscribers | below_subscribers |
-| 大模型jack | UC6L6Zjr2N4P6GWhR4ZVGu-g | below_subscribers | below_subscribers |
-| 大模型学习官 | UCRRHxyiEUloXAX4kH6JRspQ | below_subscribers | below_subscribers |
-| 汤姆CC的AI工具箱 | UC_P-cci1HhXL7eh309FEKfQ | below_subscribers | below_subscribers |
-| AI大模型知识库 | UCkrYNyfzD0ktPjdyt_svpOA | below_subscribers | below_subscribers |
-| Aitrainee | UCOl3p8J5OGfgADg9VjXdf0A | below_subscribers | below_subscribers |
-| AI编程 | UCEUPxvmOwY6QjaAdGPhSgmg | below_subscribers | below_subscribers |
+| 大模型jack | UC6L6Zjr2N4P6GWhR4ZVGu-g | below_subscribers | individual_below_1000 |
+| 大模型学习官 | UCRRHxyiEUloXAX4kH6JRspQ | below_subscribers | individual_below_1000 |
+| 汤姆CC的AI工具箱 | UC_P-cci1HhXL7eh309FEKfQ | below_subscribers | individual_below_1000 |
+| AI大模型知识库 | UCkrYNyfzD0ktPjdyt_svpOA | below_subscribers | individual_below_1000 |
+| Aitrainee | UCOl3p8J5OGfgADg9VjXdf0A | below_subscribers | individual_below_1000 |
+| AI编程 | UCEUPxvmOwY6QjaAdGPhSgmg | below_subscribers | individual_below_1000 |
 | 程序员鱼皮 | UCpdhHoryE8hB6jb5hQROx4Q | over_cap | over_cap |
-| AI大模型 | UCfhgN7lOsqBgFaEorsZiG1Q | below_subscribers | below_subscribers |
+| AI大模型 | UCfhgN7lOsqBgFaEorsZiG1Q | below_subscribers | individual_below_1000 |
 | Zhu的AI日记 | UCHXd4EGj5O7DB3K8WvFdZdg | below_subscribers | below_subscribers |
-| AI Masterclass 小天 | UCuZZsNQGm2CWyF36x7Yj_vg | below_subscribers | below_subscribers |
-| AI大模型应用开发 | UCze0OEPd0LN3sLhSG911cTA | below_subscribers | below_subscribers |
-| 大模型学习分享 | UCKUaJq4Uf74AtwTRe7ijPyA | below_subscribers | below_subscribers |
+| AI Masterclass 小天 | UCuZZsNQGm2CWyF36x7Yj_vg | below_subscribers | individual_below_1000 |
+| AI大模型应用开发 | UCze0OEPd0LN3sLhSG911cTA | below_subscribers | individual_below_1000 |
+| 大模型学习分享 | UCKUaJq4Uf74AtwTRe7ijPyA | below_subscribers | individual_below_1000 |
 | AI学习指南 | UC2_VpVT0jxO9-jhsIDEd7CQ | below_subscribers | below_subscribers |
 | 与有风一起学习AI搭建网站 | UCRrabL0r2bWuVVdl3538q7A | below_subscribers | below_subscribers |
 | 乐心 | UC7St5TO-dshm4sJX7pBgNmQ | below_subscribers | below_subscribers |
 | AyyazTech | UCL5nKCmpReJZZMe9_bYR89w | below_subscribers | below_subscribers |
-| 西瓜AI | UCEcpT5xBGkbzr1Jci1jVKvQ | below_subscribers | below_subscribers |
-| AI大模型 | UCnspCFLH2w_angiI_n3luYg | below_subscribers | below_subscribers |
+| 西瓜AI | UCEcpT5xBGkbzr1Jci1jVKvQ | below_subscribers | individual_below_1000 |
+| AI大模型 | UCnspCFLH2w_angiI_n3luYg | below_subscribers | individual_below_1000 |
 | 野码AI | UCHJZYm6dK4uBV1kHZUZnB4A | below_subscribers | below_subscribers |
-| AI共生阁 | UCt2i0FgduUsUgH3ZwHCJqIQ | below_subscribers | below_subscribers |
-| yichen | UC5Sazr4AsytgH1MEuxCI8sg | below_subscribers | below_subscribers |
-| AI大模型干货教程 | UCkRONhfmZL-9UvKg-Gf7M5A | below_subscribers | below_subscribers |
-| 大模型老张 | UCrkNpRlMG69V8Og4yZE6YtQ | below_subscribers | below_subscribers |
-| 大模型老餘 | UC0NZ4pFtcOWJPxGnCjWhdTQ | below_subscribers | below_subscribers |
+| AI共生阁 | UCt2i0FgduUsUgH3ZwHCJqIQ | below_subscribers | individual_below_1000 |
+| yichen | UC5Sazr4AsytgH1MEuxCI8sg | below_subscribers | individual_below_1000 |
+| AI大模型干货教程 | UCkRONhfmZL-9UvKg-Gf7M5A | below_subscribers | individual_below_1000 |
+| 大模型老张 | UCrkNpRlMG69V8Og4yZE6YtQ | below_subscribers | individual_below_1000 |
+| 大模型老餘 | UC0NZ4pFtcOWJPxGnCjWhdTQ | below_subscribers | individual_below_1000 |
 | ChatGPT Tutorials | UCnfaBjtUeuVoUrTuBBGH40g | over_cap | over_cap |
 | 吴悠讲编程 | UCTSZYLCUM5GL7yjxYRwv9RQ | below_subscribers | below_subscribers |
-| 学大模型的番茄 | UC8GL-rsXydnntBQIhqNjo8Q | below_subscribers | below_subscribers |
+| 学大模型的番茄 | UC8GL-rsXydnntBQIhqNjo8Q | below_subscribers | individual_below_1000 |
 | 艾克ai分享 | UCM2OvyhFzGEbpW4O55vbEFw | below_subscribers | below_subscribers |
-| AI大模型实战 | UCQgmYlaq2DW5kvpu7B23jug | below_subscribers | below_subscribers |
+| AI大模型实战 | UCQgmYlaq2DW5kvpu7B23jug | below_subscribers | individual_below_1000 |
 | Mervin Praison | UCWTyktbw5JYoSBduu8LsBgQ | below_subscribers | below_subscribers |
-| 大智 AI 工具导航 | UCJR3b8OvAp-LkLvpY8T-kpQ | excluded_pattern | excluded_pattern |
+| 大智 AI 工具导航 | UCJR3b8OvAp-LkLvpY8T-kpQ | below_subscribers | individual_below_1000 |
 | Connor Shorten | UCHB9VepY6kYvZjj0Bgxnpbw | below_subscribers | below_subscribers |
-| 黑马程序员官方账号 | UCShDH2q7sZaaCkGSAYxdUXQ | below_subscribers | below_subscribers |
-| 老師AI工具測試區 | UC8S78HtdN0AdRGNcG_P3HGw | below_subscribers | below_subscribers |
+| 黑马程序员官方账号 | UCShDH2q7sZaaCkGSAYxdUXQ | below_subscribers | individual_below_1000 |
+| 老師AI工具測試區 | UC8S78HtdN0AdRGNcG_P3HGw | below_subscribers | individual_below_1000 |
 | CodingNepal | UCk7xIEmd3MeyhIu2StLX5yA | not_topical | not_topical |
-| AI工具 | UCPUJwkKyR25iQeNgvPAPavA | below_subscribers | below_subscribers |
-| Ai-Wisdom AI 工具實用教學 | UCeIUOn3e8QzITwPhLaYK4Yw | below_subscribers | below_subscribers |
+| AI工具 | UCPUJwkKyR25iQeNgvPAPavA | below_subscribers | individual_below_1000 |
+| Ai-Wisdom AI 工具實用教學 | UCeIUOn3e8QzITwPhLaYK4Yw | below_subscribers | individual_below_1000 |
 | RANJI RAJ | UCl1Tqc3U-TAOjuh4izHLsUw | below_subscribers | below_subscribers |
-| AI工具測試區 | UC2cDSanr6yRUP9cHhohp-rQ | below_subscribers | below_subscribers |
+| AI工具測試區 | UC2cDSanr6yRUP9cHhohp-rQ | below_subscribers | individual_below_1000 |
 | Levity | UC3_1NF6DnzTYQKB7cfWDlxg | below_subscribers | below_subscribers |
-| 抖音协议留痕 | UCc8YGhPi09AWRYSg8y4IOMw | below_subscribers | below_subscribers |
-| 米柒说 | UCpjcL6DkZPTrL4HkJnj9_tQ | below_subscribers | below_subscribers |
+| 抖音协议留痕 | UCc8YGhPi09AWRYSg8y4IOMw | below_subscribers | individual_below_1000 |
+| 米柒说 | UCpjcL6DkZPTrL4HkJnj9_tQ | below_subscribers | individual_below_1000 |
 | AI工具玩法精选 | UCtP3Pi6-htfDoIK5uKe6kOA | below_subscribers | below_subscribers |
-| ai工具研究所 | UC497PEVlOhe4QM6GxJt0j6g | below_subscribers | below_subscribers |
-| AI工具的艺术 | UC0oMXe3m0B2dh-o2KhjuGeA | below_subscribers | below_subscribers |
-| AI工具人老墨 | UCwAswK7-TBT42yTlb20IsOA | below_subscribers | below_subscribers |
+| ai工具研究所 | UC497PEVlOhe4QM6GxJt0j6g | below_subscribers | individual_below_1000 |
+| AI工具的艺术 | UC0oMXe3m0B2dh-o2KhjuGeA | below_subscribers | individual_below_1000 |
+| AI工具人老墨 | UCwAswK7-TBT42yTlb20IsOA | below_subscribers | individual_below_1000 |
 | 工具人AI-bot | UCH1fnAGcKLOirqYgi-gKcMw | excluded_pattern | excluded_pattern |
-| AI 工具实操 | UCujwFmew0OwXxAwJANiFCBg | below_subscribers | below_subscribers |
-| AI工具箱 | UCQ_LVeFazfcuZcZmosuXSjw | below_subscribers | below_subscribers |
+| AI 工具实操 | UCujwFmew0OwXxAwJANiFCBg | below_subscribers | individual_below_1000 |
+| AI工具箱 | UCQ_LVeFazfcuZcZmosuXSjw | below_subscribers | individual_below_1000 |
 | corbin | UCJFMlSxcvlZg5yZUYJT0Pug | not_topical | not_topical |
-| ai资料分享 | UCJe8eoWLIv-Z091fiVgKXNw | below_subscribers | below_subscribers |
-| 一木的AI工具库 | UCflsV33jLqXVU-eY3Cyv6DA | below_subscribers | below_subscribers |
-| 好用的AI工具 | UCM8ZZNMN-eBEUdrFG0_VWmA | below_subscribers | below_subscribers |
-| AI工具之家 | UCwjkbFDuJEPo9U5rvHvulLw | below_subscribers | below_subscribers |
-| Smartbro Ai工具室 | UCG98XeGkHF1PPIm48DgvCQQ | below_subscribers | below_subscribers |
+| ai资料分享 | UCJe8eoWLIv-Z091fiVgKXNw | below_subscribers | individual_below_1000 |
+| 一木的AI工具库 | UCflsV33jLqXVU-eY3Cyv6DA | below_subscribers | individual_below_1000 |
+| 好用的AI工具 | UCM8ZZNMN-eBEUdrFG0_VWmA | below_subscribers | individual_below_1000 |
+| AI工具之家 | UCwjkbFDuJEPo9U5rvHvulLw | below_subscribers | individual_below_1000 |
+| Smartbro Ai工具室 | UCG98XeGkHF1PPIm48DgvCQQ | below_subscribers | individual_below_1000 |
 | Kite | UCxVRDu9ujwOrmDxu72V3ujQ | below_subscribers | below_subscribers |
-| AI工具库 | UC5wu157UoIZTYyznYKZe74Q | below_subscribers | below_subscribers |
+| AI工具库 | UC5wu157UoIZTYyznYKZe74Q | below_subscribers | individual_below_1000 |
 | Chai aur Code | UCNQ6FEtztATuaVhZKCY28Yw | not_topical | not_topical |
 | The AI Guy | UCrydcKaojc44XnuXrfhlV8Q | below_subscribers | below_subscribers |
-| Ai工具道场 | UCTzpzefbAaDODUVOgPfqUAw | below_subscribers | below_subscribers |
-| 有AI工具箱 | UCmaLrhTSxUvFtubNR0gB1Dw | below_subscribers | below_subscribers |
-| 恋爱pua技能AI工具 | UCp5a9EV5SZfOwbCzOS5qzFw | below_subscribers | below_subscribers |
-| 木子的AI工具库 | UCGdlD1uL-ytKYrg2hds-kRg | below_subscribers | below_subscribers |
-| Ethan AI 工具分享 | UCtw7Unt2a6wHIaapqPe8EaA | below_subscribers | below_subscribers |
+| Ai工具道场 | UCTzpzefbAaDODUVOgPfqUAw | below_subscribers | individual_below_1000 |
+| 有AI工具箱 | UCmaLrhTSxUvFtubNR0gB1Dw | below_subscribers | individual_below_1000 |
+| 恋爱pua技能AI工具 | UCp5a9EV5SZfOwbCzOS5qzFw | below_subscribers | individual_below_1000 |
+| 木子的AI工具库 | UCGdlD1uL-ytKYrg2hds-kRg | below_subscribers | individual_below_1000 |
+| Ethan AI 工具分享 | UCtw7Unt2a6wHIaapqPe8EaA | below_subscribers | individual_below_1000 |
 | Trae | UC_wfZ8xXYpJcf4oGPUFIerA | over_cap | over_cap |
-| AI工具教室 | UCjmYu4U9UO1Hgm9ri2LtaLA | below_subscribers | below_subscribers |
-| 小轩AI工具 | UCFYhYlFYp9jlIaQwDMINgJQ | below_subscribers | below_subscribers |
-| 创自由AI工具 | UC_vIbg87PhTIvRTaa0dCzng | below_subscribers | below_subscribers |
-| 青舟的AI工具箱 | UCcza6iooe_xw434-kY2nPVA | below_subscribers | below_subscribers |
-| AI工具分享 | UCu_0vkPCPPu8fGCZS0tMDGQ | below_subscribers | below_subscribers |
-| AI工具 | UC66P9a4ol6kv_1-Jbbnz0Lg | below_subscribers | below_subscribers |
-| AI工具人 | UCej-y6xEXq-vMEFZteb3M1Q | below_subscribers | below_subscribers |
-| ella AI 工具與創作教學 | UC0WlIGqr5b9YIgjrnvexcNA | below_subscribers | below_subscribers |
-| AI产品经理Chen | UCI-pOgbRsrDPc1ndqQLBQDA | below_subscribers | below_subscribers |
-| 小新的AI工具箱 | UC7c0EGETiEqfFJqWuD7EgHA | below_subscribers | below_subscribers |
+| AI工具教室 | UCjmYu4U9UO1Hgm9ri2LtaLA | below_subscribers | individual_below_1000 |
+| 小轩AI工具 | UCFYhYlFYp9jlIaQwDMINgJQ | below_subscribers | individual_below_1000 |
+| 创自由AI工具 | UC_vIbg87PhTIvRTaa0dCzng | below_subscribers | individual_below_1000 |
+| 青舟的AI工具箱 | UCcza6iooe_xw434-kY2nPVA | below_subscribers | individual_below_1000 |
+| AI工具分享 | UCu_0vkPCPPu8fGCZS0tMDGQ | below_subscribers | individual_below_1000 |
+| AI工具 | UC66P9a4ol6kv_1-Jbbnz0Lg | below_subscribers | individual_below_1000 |
+| AI工具人 | UCej-y6xEXq-vMEFZteb3M1Q | below_subscribers | individual_below_1000 |
+| ella AI 工具與創作教學 | UC0WlIGqr5b9YIgjrnvexcNA | below_subscribers | individual_below_1000 |
+| AI产品经理Chen | UCI-pOgbRsrDPc1ndqQLBQDA | below_subscribers | individual_below_1000 |
+| 小新的AI工具箱 | UC7c0EGETiEqfFJqWuD7EgHA | below_subscribers | individual_below_1000 |
 | Code Nust | UCVmKVD1r-RwmagvXCLR_dcw | below_subscribers | below_subscribers |
 | 股票分析 , AI 工具分享 | UCPK4Yufo8tvr7XZWj35HXtA | excluded_pattern | excluded_pattern |
-| AI 工具人 | UC46X-pjoXEn9vO-kr9Anw9w | below_subscribers | below_subscribers |
+| AI 工具人 | UC46X-pjoXEn9vO-kr9Anw9w | below_subscribers | individual_below_1000 |
 | Ciao AI 工具實驗室 | UCYXMpEGCEoWPPjQ7FXmm4bg | over_cap | over_cap |
-| 卢克的Ai工具箱 | UC4QLZzJuFVMasv2bXIVucHQ | below_subscribers | below_subscribers |
-| AI黑科技 | UCEDJrmk8d_6xfIGgQoO1YOg | below_subscribers | below_subscribers |
-| EduPro · 留学AI工具箱 | UCylsrSMazakSQ7-M0Rr3ZxA | below_subscribers | below_subscribers |
-| DeepRead AI | UC0jkNbn9bQK1sBp9DYUFRZg | below_subscribers | below_subscribers |
+| 卢克的Ai工具箱 | UC4QLZzJuFVMasv2bXIVucHQ | below_subscribers | individual_below_1000 |
+| AI黑科技 | UCEDJrmk8d_6xfIGgQoO1YOg | below_subscribers | individual_below_1000 |
+| EduPro · 留学AI工具箱 | UCylsrSMazakSQ7-M0Rr3ZxA | below_subscribers | individual_below_1000 |
+| DeepRead AI | UC0jkNbn9bQK1sBp9DYUFRZg | below_subscribers | individual_below_1000 |
 | 爱否科技 | UC6ISXkvMtP_Je1ITiYIJSSA | not_topical | not_topical |
 | 科技新報 | UCmRq5PBq7c38aiKRNRVl1ZA | not_topical | not_topical |
 | MacBreak Weekly | UC7DLT1zdSVGvnW11y4kqDng | below_subscribers | below_subscribers |
-| AI工具日记 | UChXB2zzEttnKrSkE2T0iN8Q | excluded_pattern | excluded_pattern |
-| AI工具日常 | UC0MdJzKlUJZxfZDAY_IvbZg | below_subscribers | below_subscribers |
-| Lexion | UCRpF3a3Swt_f5Ibd5NqUm7g | below_subscribers | below_subscribers |
+| AI工具日记 | UChXB2zzEttnKrSkE2T0iN8Q | below_subscribers | individual_below_1000 |
+| AI工具日常 | UC0MdJzKlUJZxfZDAY_IvbZg | below_subscribers | individual_below_1000 |
+| Lexion | UCRpF3a3Swt_f5Ibd5NqUm7g | below_subscribers | individual_below_1000 |
 | 大愛新聞DaaiNews | UC4NL28kbpJjq42NM9XLN2Rw | not_topical | not_topical |
-| Klart AI | UCt-3EgaG5xj_-a6-GBtyIxg | below_subscribers | below_subscribers |
+| Klart AI | UCt-3EgaG5xj_-a6-GBtyIxg | below_subscribers | individual_below_1000 |
 | 凱文大叔AI程式設計教室 | UClPN2rjY4im2LC9vG3Y8vkg | below_subscribers | below_subscribers |
-| AI科技宅 | UCl1Dx-QP_mwJNyx4RG_P9kw | below_subscribers | below_subscribers |
-| PLANET AI | UC0hywaWRK5dyw5iPsbhUopQ | below_subscribers | below_subscribers |
-| AI工具人 | UCr6nQqaX3T-z-9N849rmmow | below_subscribers | below_subscribers |
-| AI、科技、生活、共學讀書會 | UCWyR_xZsJKjZnGWo7V2BUkw | below_subscribers | below_subscribers |
-| AI科技淘金客 | UCIpAp8x7KaYdZoo6YnufVCA | below_subscribers | below_subscribers |
+| AI科技宅 | UCl1Dx-QP_mwJNyx4RG_P9kw | below_subscribers | individual_below_1000 |
+| PLANET AI | UC0hywaWRK5dyw5iPsbhUopQ | below_subscribers | individual_below_1000 |
+| AI工具人 | UCr6nQqaX3T-z-9N849rmmow | below_subscribers | individual_below_1000 |
+| AI、科技、生活、共學讀書會 | UCWyR_xZsJKjZnGWo7V2BUkw | below_subscribers | individual_below_1000 |
+| AI科技淘金客 | UCIpAp8x7KaYdZoo6YnufVCA | below_subscribers | individual_below_1000 |
 | Browse AI | UC4uFs96Q4HQRIAt6mVB262g | below_subscribers | below_subscribers |
-| AI工具仓库 | UC5unug7-Vh1zhNDhQo-86rw | below_subscribers | below_subscribers |
-| 玩转AI工具 | UC4mgoerNKgotMwYnYm8PNzg | below_subscribers | below_subscribers |
+| AI工具仓库 | UC5unug7-Vh1zhNDhQo-86rw | below_subscribers | individual_below_1000 |
+| 玩转AI工具 | UC4mgoerNKgotMwYnYm8PNzg | below_subscribers | individual_below_1000 |
 | DIGITIMES | UCy8gqpO_9WK1nG9WMs6Fxwg | over_cap | over_cap |
-| AI 科技方舟 (AI Tech Ark) | UCDe2dcfdGbP1v0MXkBEbdDg | below_subscribers | below_subscribers |
-| 中央研究院 資訊科技創新研究中心 | UC4rbSbanmYh8yvfGzN4B2Ag | below_subscribers | below_subscribers |
+| AI 科技方舟 (AI Tech Ark) | UCDe2dcfdGbP1v0MXkBEbdDg | below_subscribers | individual_below_1000 |
+| 中央研究院 資訊科技創新研究中心 | UC4rbSbanmYh8yvfGzN4B2Ag | below_subscribers | individual_below_1000 |
 | New SciTech 新科技 | UCMTL4hhnjYNncfmHfjm09rw | over_cap | over_cap |
-| 小羊SHEEPtalkAI | UC5OzJDat-K6PYCQ-0ab_SrQ | below_subscribers | below_subscribers |
-| AI 工具箱日記 | UCzrRl3KirX87Z9WrQzkLhgw | below_subscribers | below_subscribers |
+| 小羊SHEEPtalkAI | UC5OzJDat-K6PYCQ-0ab_SrQ | below_subscribers | individual_below_1000 |
+| AI 工具箱日記 | UCzrRl3KirX87Z9WrQzkLhgw | below_subscribers | individual_below_1000 |
 | Vectra AI | UCL9kLocmg2pcK-_k2vvoWrQ | below_subscribers | below_subscribers |
 | EE Journal | UCitjOEmRnBEvfn6fbAUmNjg | not_topical | not_topical |
 | 科技啟示錄 | UCedNx9ifc5v7EUY9G-Y2FsA | over_cap | over_cap |
-| AI工具盒Allis | UCj_bysMpkJ2gGXfWkGl-YHQ | below_subscribers | below_subscribers |
-| 國立高雄科技大學AI金融科技中心 | UCtiTpNdEhqvQBAnpBhPiqvw | below_subscribers | below_subscribers |
+| AI工具盒Allis | UCj_bysMpkJ2gGXfWkGl-YHQ | below_subscribers | individual_below_1000 |
+| 國立高雄科技大學AI金融科技中心 | UCtiTpNdEhqvQBAnpBhPiqvw | below_subscribers | individual_below_1000 |
 | AI Captain | UCx9mhvLaKCpQ6rMLwK9t57Q | over_cap | over_cap |
-| AI科技 | UCeoSIEGN0ViuW1PBEtshO-w | below_subscribers | below_subscribers |
-| AI工具人 | UCZXB6Fk3Znor3EQkE987uBg | below_subscribers | below_subscribers |
+| AI科技 | UCeoSIEGN0ViuW1PBEtshO-w | below_subscribers | individual_below_1000 |
+| AI工具人 | UCZXB6Fk3Znor3EQkE987uBg | below_subscribers | individual_below_1000 |
 | TVBS 文茜的世界周報 TVBS Sisy's World News | UC6ebRQXZfOLrKALxwUh84Sg | not_topical | not_topical |
-| AI链科技 | UCdUyMa7AW0OKtAA8RWq5BTg | below_subscribers | below_subscribers |
+| AI链科技 | UCdUyMa7AW0OKtAA8RWq5BTg | below_subscribers | individual_below_1000 |
 | @Rihan AI 科技前沿搬運站 | UCF48XiAOdPUurQ1LBzHbtfA | below_subscribers | below_subscribers |
-| Dono \| AI Automation | UCWlQH3x5-EWwfnYvDnXdkUQ | below_subscribers | below_subscribers |
-| 艾倫AI工具庫 | UCu46d1kPkVlWqBpP0Jwarew | below_subscribers | below_subscribers |
+| Dono \| AI Automation | UCWlQH3x5-EWwfnYvDnXdkUQ | below_subscribers | individual_below_1000 |
+| 艾倫AI工具庫 | UCu46d1kPkVlWqBpP0Jwarew | below_subscribers | individual_below_1000 |
 | Amazing World | UCMDw-qDEQCkDuS98FkopMDw | not_topical | not_topical |
 | 小薇官方频道 | UCONNhb6zEaCRgkLkbA-bwlQ | not_topical | not_topical |
-| AI工具学徒~大洋丨AI tool apprentice ~ DaYang | UCKjHCkO3YtQQk_HkjYCy9kg | below_subscribers | below_subscribers |
-| AI科技视界 | UCcMahVepBDnXEFyUjdLQ8DA | below_subscribers | below_subscribers |
-| 冰零的AI工具库 | UCvlXjHbHKTtbhYiN8eiid0Q | below_subscribers | below_subscribers |
+| AI工具学徒~大洋丨AI tool apprentice ~ DaYang | UCKjHCkO3YtQQk_HkjYCy9kg | below_subscribers | individual_below_1000 |
+| AI科技视界 | UCcMahVepBDnXEFyUjdLQ8DA | below_subscribers | individual_below_1000 |
+| 冰零的AI工具库 | UCvlXjHbHKTtbhYiN8eiid0Q | below_subscribers | individual_below_1000 |
 | ToolifyAI | UClFQ9cEUi7zQ-diI-HpKx5A | over_cap | over_cap |
 | Paraben Digital Investigations | UC-LCu1ZstGYgOOD35iCAjEA | below_subscribers | below_subscribers |
-| SodiusWillert | UCtrSdK4U9lRcikgdW_I5qaA | below_subscribers | below_subscribers |
-| AI进化论.谈 \| AI Evolution Talk | UCn8rVvkPT0YKR0lCtkmbj3A | below_subscribers | below_subscribers |
-| TitiKey AI工具充值中心 | UChqgN4heBtVnCoxWelsh2cw | below_subscribers | below_subscribers |
+| SodiusWillert | UCtrSdK4U9lRcikgdW_I5qaA | below_subscribers | individual_below_1000 |
+| AI进化论.谈 \| AI Evolution Talk | UCn8rVvkPT0YKR0lCtkmbj3A | below_subscribers | individual_below_1000 |
+| TitiKey AI工具充值中心 | UChqgN4heBtVnCoxWelsh2cw | below_subscribers | individual_below_1000 |
 | USA Tech | UCFJLPQtAWW3du1KFaPnKNOA | below_subscribers | below_subscribers |
 | IdeaSpot | UC-jn4QgSxr77aUEX9RX1jbA | below_subscribers | below_subscribers |
 | Ulap | UC5bedh76PcxGClNXinUPpOw | below_subscribers | below_subscribers |
-| Industrial Digital Twin Association | UCvYk-bRkF9-x0HdpJfEcV7g | below_subscribers | below_subscribers |
-| MSPCorp | UCMQdsR9qjzEHx0FjnvOKU4w | below_subscribers | below_subscribers |
-| Protegrity | UCEvfydmEjdcDo4AM3l3s5-w | below_subscribers | below_subscribers |
-| 鳳凰AI智慧黑科技 | UCB8ylkjHsaqcYqIgnyU9Y-w | below_subscribers | below_subscribers |
-| Logpoint | UC506IBSoGIDmTe-uw8PzesA | below_subscribers | below_subscribers |
-| InLoox, Inc. | UCTI0vxxISS7PQSyLqvQ1ruQ | below_subscribers | below_subscribers |
+| Industrial Digital Twin Association | UCvYk-bRkF9-x0HdpJfEcV7g | below_subscribers | individual_below_1000 |
+| MSPCorp | UCMQdsR9qjzEHx0FjnvOKU4w | below_subscribers | individual_below_1000 |
+| Protegrity | UCEvfydmEjdcDo4AM3l3s5-w | below_subscribers | individual_below_1000 |
+| 鳳凰AI智慧黑科技 | UCB8ylkjHsaqcYqIgnyU9Y-w | below_subscribers | individual_below_1000 |
+| Logpoint | UC506IBSoGIDmTe-uw8PzesA | below_subscribers | individual_below_1000 |
+| InLoox, Inc. | UCTI0vxxISS7PQSyLqvQ1ruQ | below_subscribers | individual_below_1000 |
 | ThreatConnect | UCPyjrU8mqhsHl0EhB7ZIfgw | below_subscribers | below_subscribers |
 | cPanelTV | UClV3pzB3Sl_evL367Po-gww | below_subscribers | below_subscribers |
-| AI汽車科技內幕 | UCN1IDEliYDVpnmBCmh5fCgQ | below_subscribers | below_subscribers |
+| AI汽車科技內幕 | UCN1IDEliYDVpnmBCmh5fCgQ | below_subscribers | individual_below_1000 |
 
 ## 统计
 
 | 指标 | 值 |
 | --- | --- |
-| by_topic | {'ai-models': 24, 'ai-agents': 24, 'ai-coding': 29, 'ai-products': 29, 'ai-industry': 29} |
-| by_lang | {'en': 84, 'zh': 9} |
-| by_evidence | {'existing_registry': 25, 'x_bio_youtube_link': 23, 'x_profile_plus_known_channel': 20, 'x_post_lead': 1, 'knowledge_lead': 18, 'youtube_discovery:AI coding agent': 3, 'youtube_discovery:AI 编程': 2, 'youtube_discovery:AI Agent 智能体': 1, 'youtube_discovery:best AI tools': 1, 'youtube_discovery:人工智能 AI': 1, 'youtube_discovery:AI 编程 教程': 1} |
-| by_status | {'included': 93, 'inactive': 13, 'unverified': 12, 'below_subscribers': 318, 'not_focused': 26, 'not_topical': 101, 'over_cap': 45, 'excluded_pattern': 14, 'unsupported_language': 3} |
-| examples | ['Linus Ekenstam', 'Anthropic', 'AI at Meta', 'Together AI', 'Hugging Face', 'Cohere', 'Midjourney', 'Greg Brockman', 'Google DeepMind', 'OpenAI'] |
+| by_topic | {'ai-models': 24, 'ai-agents': 23, 'ai-coding': 28, 'ai-products': 28, 'ai-industry': 28} |
+| by_lang | {'en': 83, 'zh': 7} |
+| by_evidence | {'existing_registry': 24, 'x_bio_youtube_link': 21, 'x_profile_plus_known_channel': 20, 'x_post_lead': 1, 'knowledge_lead': 18, 'youtube_discovery:AI coding agent': 3, 'youtube_discovery:AI 编程': 2, 'youtube_discovery:AI Agent 智能体': 1, 'youtube_discovery:best AI tools': 1, 'youtube_discovery:人工智能 AI': 1, 'youtube_discovery:AI 编程 教程': 1} |
+| by_status | {'included': 90, 'below_subscribers': 331, 'inactive': 8, 'unverified': 12, 'not_focused': 26, 'not_topical': 101, 'over_cap': 45, 'excluded_pattern': 9, 'unsupported_language': 3} |
+| examples | ['Linus Ekenstam', 'Anthropic', 'AI at Meta', 'Together AI', 'Hugging Face', 'Cohere', 'Midjourney', 'Google DeepMind', 'OpenAI', '3Blue1Brown'] |

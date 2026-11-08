@@ -154,6 +154,42 @@ def discovery_only(creator):
     evidence=creator.get('evidence') or []
     return bool(evidence) and all(str(item).startswith('youtube_discovery:') for item in evidence)
 
+def official_channel(creator, rule):
+    official={str(x).casefold() for x in rule.get('official_channels', [])}
+    return any(str(creator.get(field) or '').casefold() in official for field in ('name','title'))
+
+def replay_subscriber_rule(creators, rule):
+    """Apply the round-2 personal-channel threshold to every resolved channel."""
+    for creator in creators:
+        if creator.get('status') == 'unverified' or official_channel(creator, rule):
+            continue
+        subscribers=creator.get('subscriber_count')
+        if not isinstance(subscribers, int) or subscribers < rule.get('seed_min_subscribers', 1000):
+            creator['status']='below_subscribers'
+            creator['reason']='individual_below_1000'
+    return creators
+
+def event_tokens(title, rule=None):
+    """Return (version markers, other markers) from a title, deterministically."""
+    rule=rule or rules()
+    stop={str(x).casefold() for x in rule.get('event_stopwords', [])}
+    # Keep gpt-5 / 2.6 / 4o / 3x together; ordinary Latin words remain separate.
+    raw=re.findall(r"[A-Za-z]+(?:[-.]\d+(?:\.\d+)?[A-Za-z]?|[-.]\d+[A-Za-z]?)?|\d+(?:\.\d+)?[A-Za-z]?", title or '')
+    versions=[]; other=[]
+    for token in raw:
+        token=token.casefold().strip('.-')
+        if not token: continue
+        if re.search(r'\d', token):
+            versions.append(token)
+        elif len(token)>2 and token not in stop:
+            other.append(token)
+    return set(versions),set(other)
+
+def same_event(left_title, right_title, rule=None):
+    lv,lo=event_tokens(left_title,rule); rv,ro=event_tokens(right_title,rule)
+    shared=sorted((lv & rv) | (lo & ro))
+    return (bool(lv & rv) and bool(lo & ro)) or len(lo & ro)>=3, shared
+
 def replay_creator_rules(creators, candidate_videos, topics, rule):
     """Re-evaluate select-only safeguards from saved uploads; makes no API calls."""
     uploads=defaultdict(list)
@@ -188,6 +224,7 @@ def clickbait_signals(title):
 def select(raw, mode='select'):
     started=time.monotonic()
     topics=cfg()['topics']; rule=rules(); reference=parse_time(raw.get('data_refreshed_at',iso())); creators=copy.deepcopy(raw.get('creators',[]))
+    replay_subscriber_rule(creators,rule)
     new_exclusion_statuses=replay_creator_rules(creators,raw.get('candidate_videos',[]),topics,rule)
     creator_map={c.get('channel_id'):c for c in creators if c.get('status')=='included'}
     out=[]
@@ -208,15 +245,26 @@ def select(raw, mode='select'):
             candidates.append((row,creator,match,signals,why))
         candidates.sort(key=lambda x:(bool(x[3]), topic['id'] not in x[1]['subtopics'],x[2][0],evidence_rank(x[1]['evidence']),-parse_time(x[0]['snippet'].get('publishedAt','')).timestamp(),x[0].get('id','')))
         def take(cap):
-            show=[]; counts=Counter()
+            show=[]; counts=Counter(); same_event_skipped=[]; merged=Counter()
             for x in candidates:
                 cid=x[1]['channel_id']
                 if counts[cid]>=cap: continue
+                duplicate=None
+                for kept in show:
+                    is_same,shared=same_event(x[0].get('snippet',{}).get('title',''), kept[0].get('snippet',{}).get('title',''),rule)
+                    if is_same:
+                        duplicate=(kept,shared)
+                        break
+                if duplicate:
+                    kept,shared=duplicate
+                    same_event_skipped.append({'skipped':x[0].get('id'),'kept':kept[0].get('id'),'shared_tokens':shared})
+                    merged[kept[0].get('id')]+=1
+                    continue
                 counts[cid]+=1; show.append(x)
                 if len(show)==6: break
-            return show,counts
-        shown,dist=take(1); relaxed=False
-        if len(shown)<6: shown,dist=take(2); relaxed=True
+            return show,counts,same_event_skipped,merged
+        shown,dist,same_event_skipped,merged=take(1); relaxed=False
+        if len(shown)<6: shown,dist,same_event_skipped,merged=take(2); relaxed=True
         videos=[]
         for row,c,m,signals,why in shown:
             sn=row['snippet']; sec=duration(row.get('contentDetails',{}).get('duration','')) or 0; days=max(0,(reference-parse_time(sn.get('publishedAt',''))).days)
@@ -224,13 +272,14 @@ def select(raw, mode='select'):
             reasons=[f'来自精选博主 {c["name"]}（入池依据：{evidence}；'+('本主题博主）' if topic['id'] in c['subtopics'] else '标题 tier1 跨主题）'),f'标题含关键词「{m[1]}」']
             if why: reasons.append('边界规则：'+why)
             if signals: reasons.append('标题含营销/夸张信号：'+ '、'.join(signals)+'，已降权')
+            if merged.get(row.get('id'),0): reasons.append(f'同一事件已合并：另有 {merged[row.get("id")]} 条同题视频未展示')
             reasons += [f'发布于 {sn.get("publishedAt","")[:10]}（{days} 天前）',f'时长 {sec//60}:{sec%60:02d}',f'订阅数 {c.get("subscriber_count") if c.get("subscriber_count") is not None else "未知"}（入池时）']
             videos.append({'video_id':row['id'],'title':sn.get('title',''),'channel_title':sn.get('channelTitle',''),'channel_id':c['channel_id'],'published_at':sn.get('publishedAt'),'duration_seconds':sec,'view_count':int(row.get('statistics',{}).get('viewCount',0) or 0),'topic':topic['id'],'sources':['creator_uploads:'+c['name']],'reasons':reasons,'url':'https://www.youtube.com/watch?v='+row['id'],'thumbnail':(sn.get('thumbnails',{}).get('medium') or sn.get('thumbnails',{}).get('default') or {}).get('url')})
         in_topic=[c for c in creator_map.values() if topic['id'] in c['subtopics']]
         shown_by_name=Counter()
         for cid,count in dist.items(): shown_by_name[creator_map[cid].get('name') or cid]+=count
         excluded_creators=Counter(c['status'] for c in creators if topic['id'] in c.get('subtopics',[]) and c.get('status') in new_exclusion_statuses)
-        out.append({'id':topic['id'],'name_zh':topic['name_zh'],'definition':topic['definition'],'stats':{'creators_in_topic':len(in_topic),'candidates_from_creators':sum(1 for r in raw.get('candidate_videos',[]) if r.get('snippet',{}).get('channelId') in creator_map),'matched_tier1':tier_counts[1],'matched_tier2':tier_counts[2],'matched_tier3':tier_counts[3],'matched':sum(tier_counts.values()),'eligible':len(candidates),'shown':len(videos),'excluded_by_rule':dict(excluded),'excluded_creators_by_rule':dict(excluded_creators),'channel_distribution_shown':dict(shown_by_name),'relaxed_channel_cap':relaxed},'videos':videos})
+        out.append({'id':topic['id'],'name_zh':topic['name_zh'],'definition':topic['definition'],'stats':{'creators_in_topic':len(in_topic),'candidates_from_creators':sum(1 for r in raw.get('candidate_videos',[]) if r.get('snippet',{}).get('channelId') in creator_map),'matched_tier1':tier_counts[1],'matched_tier2':tier_counts[2],'matched_tier3':tier_counts[3],'matched':sum(tier_counts.values()),'eligible':len(candidates),'shown':len(videos),'excluded_by_rule':dict(excluded),'excluded_creators_by_rule':dict(excluded_creators),'channel_distribution_shown':dict(shown_by_name),'relaxed_channel_cap':relaxed,'same_event_skipped':same_event_skipped},'videos':videos})
     baseline={}
     for tid,rows in raw.get('baseline',{}).items():
         baseline[tid]=[{'rank':i,'video_id':r.get('id'),'title':r.get('snippet',{}).get('title',''),'channel_title':r.get('snippet',{}).get('channelTitle',''),'published_at':r.get('snippet',{}).get('publishedAt'),'duration_seconds':duration(r.get('contentDetails',{}).get('duration','')),'view_count':int(r.get('statistics',{}).get('viewCount',0) or 0),'url':'https://www.youtube.com/watch?v='+r.get('id',''),'reused_from_round1':True,'also_in_fewgood_topN':any(r.get('id')==v['video_id'] for t in out for v in t['videos'])} for i,r in enumerate(rows[:6],1)]

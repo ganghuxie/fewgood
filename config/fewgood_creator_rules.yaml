@@ -1,4 +1,94 @@
 seed_min_subscribers: 1000
+official_channels:
+  - OpenAI
+  - Anthropic
+  - Google DeepMind
+  - AI at Meta
+  - NVIDIA
+  - Hugging Face
+  - Stability AI
+  - Midjourney
+  - DeepLearning.AI
+  - Mistral AI
+  - Cohere
+  - Perplexity
+  - Runway
+  - ElevenLabs
+  - Character.AI
+  - Scale AI
+  - Together AI
+  - Cursor
+  - LangChain
+  - Pinecone
+  - AI Engineer
+  - The Rundown AI
+  - Latent Space
+  - LlamaIndex
+  - CrewAI
+  - Replit
+  - a16z
+  - Y Combinator
+  - Sequoia Capital
+  - GitHub
+  - IBM Technology
+  - Android Developers
+  - Visual Studio Code
+  - freeCodeCamp.org
+  - Bloomberg Technology
+event_stopwords:
+  - the
+  - a
+  - an
+  - and
+  - or
+  - of
+  - to
+  - in
+  - on
+  - for
+  - with
+  - is
+  - are
+  - how
+  - what
+  - why
+  - your
+  - you
+  - my
+  - i
+  - it
+  - this
+  - that
+  - new
+  - now
+  - just
+  - here
+  - ai
+  - llm
+  - llms
+  - model
+  - models
+  - agent
+  - agents
+  - agentic
+  - coding
+  - code
+  - tool
+  - tools
+  - video
+  - videos
+  - tutorial
+  - guide
+  - build
+  - using
+  - use
+  - vs
+  - full
+  - best
+  - top
+  - more
+  - can
+  - will
 discovered_min_subscribers: {en: 100000, zh: 20000}
 max_discovered_per_topic: 8
 active_within_days: 90

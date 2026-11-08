@@ -2078,23 +2078,23 @@
   },
   "timing": {
     "collect_seconds": 68.540395,
-    "select_seconds": 18.072563
+    "select_seconds": 34.488551
   },
   "creator_pool": {
     "by_topic": {
       "ai-models": 24,
-      "ai-agents": 24,
-      "ai-coding": 29,
-      "ai-products": 29,
-      "ai-industry": 29
+      "ai-agents": 23,
+      "ai-coding": 28,
+      "ai-products": 28,
+      "ai-industry": 28
     },
     "by_lang": {
-      "en": 84,
-      "zh": 9
+      "en": 83,
+      "zh": 7
     },
     "by_evidence": {
-      "existing_registry": 25,
-      "x_bio_youtube_link": 23,
+      "existing_registry": 24,
+      "x_bio_youtube_link": 21,
       "x_profile_plus_known_channel": 20,
       "x_post_lead": 1,
       "knowledge_lead": 18,
@@ -2106,14 +2106,14 @@
       "youtube_discovery:AI 编程 教程": 1
     },
     "by_status": {
-      "included": 93,
-      "inactive": 13,
+      "included": 90,
+      "below_subscribers": 331,
+      "inactive": 8,
       "unverified": 12,
-      "below_subscribers": 318,
       "not_focused": 26,
       "not_topical": 101,
       "over_cap": 45,
-      "excluded_pattern": 14,
+      "excluded_pattern": 9,
       "unsupported_language": 3
     },
     "examples": [
@@ -2124,9 +2124,9 @@
       "Hugging Face",
       "Cohere",
       "Midjourney",
-      "Greg Brockman",
       "Google DeepMind",
-      "OpenAI"
+      "OpenAI",
+      "3Blue1Brown"
     ]
   },
   "creators": [
@@ -2231,20 +2231,6 @@
       "handle": "@midjourney",
       "subscriber_count": 12300,
       "last_upload_at": "2026-09-24T19:49:49Z"
-    },
-    {
-      "name": "Greg Brockman",
-      "lang": "en",
-      "subtopics": [
-        "ai-industry"
-      ],
-      "evidence": [
-        "existing_registry"
-      ],
-      "channel_id": "UCF3n5QTuQ6qel9kEZ6JWO7g",
-      "handle": "@gregbrockman1586",
-      "subscriber_count": 2,
-      "last_upload_at": "2026-10-30T22:34:22Z"
     },
     {
       "name": "Google DeepMind",
@@ -2787,20 +2773,6 @@
       "last_upload_at": "2026-11-07T12:25:48Z"
     },
     {
-      "name": "遁一子 Jesse Lau",
-      "lang": "zh",
-      "subtopics": [
-        "ai-products"
-      ],
-      "evidence": [
-        "x_bio_youtube_link"
-      ],
-      "channel_id": "UCRy_AScJwP-Tt3iVcMMWCxw",
-      "handle": "@dunyizi",
-      "subscriber_count": 83,
-      "last_upload_at": "2026-10-28T23:48:48Z"
-    },
-    {
       "name": "howie.serious",
       "lang": "zh",
       "subtopics": [
@@ -2813,21 +2785,6 @@
       "handle": "@howieserious",
       "subscriber_count": 10900,
       "last_upload_at": "2026-10-03T05:47:42Z"
-    },
-    {
-      "name": "雪踏乌云",
-      "lang": "zh",
-      "subtopics": [
-        "ai-agents",
-        "ai-coding"
-      ],
-      "evidence": [
-        "x_bio_youtube_link"
-      ],
-      "channel_id": "UCucA8x8KOd05KjU7Cgaj7wA",
-      "handle": "@wuyun_ai",
-      "subscriber_count": 12,
-      "last_upload_at": "2026-11-03T16:32:26Z"
     },
     {
       "name": "Sebastian Raschka",
@@ -3485,7 +3442,7 @@
       "definition": "关注模型能力、训练方法、评测与研究进展。",
       "stats": {
         "creators_in_topic": 24,
-        "candidates_from_creators": 1453,
+        "candidates_from_creators": 1443,
         "matched_tier1": 15,
         "matched_tier2": 182,
         "matched_tier3": 0,
@@ -3509,7 +3466,8 @@
           "IBM Technology": 1,
           "TheAIGRID": 1
         },
-        "relaxed_channel_cap": false
+        "relaxed_channel_cap": false,
+        "same_event_skipped": []
       },
       "videos": [
         {
@@ -3651,8 +3609,8 @@
       "name_zh": "AI Agent",
       "definition": "关注能规划、调用工具或执行任务的 AI Agent。",
       "stats": {
-        "creators_in_topic": 24,
-        "candidates_from_creators": 1453,
+        "creators_in_topic": 23,
+        "candidates_from_creators": 1443,
         "matched_tier1": 89,
         "matched_tier2": 76,
         "matched_tier3": 0,
@@ -3675,7 +3633,8 @@
           "Hugging Face": 1,
           "Cole Medin": 1
         },
-        "relaxed_channel_cap": false
+        "relaxed_channel_cap": false,
+        "same_event_skipped": []
       },
       "videos": [
         {
@@ -3823,13 +3782,13 @@
       "name_zh": "AI 编程",
       "definition": "关注 AI 辅助开发、代码生成与工程实践。",
       "stats": {
-        "creators_in_topic": 29,
-        "candidates_from_creators": 1453,
-        "matched_tier1": 66,
+        "creators_in_topic": 28,
+        "candidates_from_creators": 1443,
+        "matched_tier1": 65,
         "matched_tier2": 28,
         "matched_tier3": 0,
-        "matched": 94,
-        "eligible": 25,
+        "matched": 93,
+        "eligible": 24,
         "shown": 6,
         "excluded_by_rule": {
           "creator_not_topic_tier2": 6,
@@ -3840,13 +3799,14 @@
         },
         "channel_distribution_shown": {
           "AI Engineer": 1,
-          "雪踏乌云": 1,
           "ArjanCodes": 1,
           "GitHub": 1,
           "Android Developers": 1,
-          "Visual Studio Code": 1
+          "Visual Studio Code": 1,
+          "Riley Brown": 1
         },
-        "relaxed_channel_cap": false
+        "relaxed_channel_cap": false,
+        "same_event_skipped": []
       },
       "videos": [
         {
@@ -3871,29 +3831,6 @@
           ],
           "url": "https://www.youtube.com/watch?v=BT1Mo-fD-g0",
           "thumbnail": "https://i.ytimg.com/vi/BT1Mo-fD-g0/mqdefault.jpg"
-        },
-        {
-          "video_id": "kXJ1iOM89fs",
-          "title": "Codex+Blender自动搭3D白模，让AI视频抽卡率暴涨",
-          "channel_title": "雪踏乌云",
-          "channel_id": "UCucA8x8KOd05KjU7Cgaj7wA",
-          "published_at": "2026-10-09T16:14:11Z",
-          "duration_seconds": 567,
-          "view_count": 743,
-          "topic": "ai-coding",
-          "sources": [
-            "creator_uploads:雪踏乌云"
-          ],
-          "reasons": [
-            "来自精选博主 雪踏乌云（入池依据：X 资料直接链接 YouTube；本主题博主）",
-            "标题含关键词「Codex」",
-            "边界规则：含编程 Agent 信号 → AI 编程",
-            "发布于 2026-10-09（29 天前）",
-            "时长 9:27",
-            "订阅数 12（入池时）"
-          ],
-          "url": "https://www.youtube.com/watch?v=kXJ1iOM89fs",
-          "thumbnail": "https://i.ytimg.com/vi/kXJ1iOM89fs/mqdefault.jpg"
         },
         {
           "video_id": "oFtTodDCbkE",
@@ -3984,6 +3921,29 @@
           ],
           "url": "https://www.youtube.com/watch?v=lLp58sDAixQ",
           "thumbnail": "https://i.ytimg.com/vi/lLp58sDAixQ/mqdefault.jpg"
+        },
+        {
+          "video_id": "fDE5R4fSq2w",
+          "title": "Start Using Claude Code For EVERYTHING (Trust Me)",
+          "channel_title": "Riley Brown",
+          "channel_id": "UCMcoud_ZW7cfxeIugBflSBw",
+          "published_at": "2026-10-15T18:24:45Z",
+          "duration_seconds": 1655,
+          "view_count": 88087,
+          "topic": "ai-coding",
+          "sources": [
+            "creator_uploads:Riley Brown"
+          ],
+          "reasons": [
+            "来自精选博主 Riley Brown（入池依据：公开线索 + YouTube 核验；本主题博主）",
+            "标题含关键词「Claude Code」",
+            "边界规则：含编程 Agent 信号 → AI 编程",
+            "发布于 2026-10-15（23 天前）",
+            "时长 27:35",
+            "订阅数 310000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=fDE5R4fSq2w",
+          "thumbnail": "https://i.ytimg.com/vi/fDE5R4fSq2w/mqdefault.jpg"
         }
       ]
     },
@@ -3992,8 +3952,8 @@
       "name_zh": "AI 产品与应用",
       "definition": "关注面向真实用户的 AI 产品、功能与使用案例。",
       "stats": {
-        "creators_in_topic": 29,
-        "candidates_from_creators": 1453,
+        "creators_in_topic": 28,
+        "candidates_from_creators": 1443,
         "matched_tier1": 55,
         "matched_tier2": 34,
         "matched_tier3": 0,
@@ -4012,13 +3972,34 @@
         },
         "channel_distribution_shown": {
           "MattVidPro AI": 1,
-          "The AI Advantage": 1,
-          "AI超元域": 1,
           "AI Engineer": 1,
+          "The AI Advantage": 1,
           "Riley Brown": 1,
-          "Kevin Stratvert": 1
+          "Kevin Stratvert": 1,
+          "Skill Leap AI": 1
         },
-        "relaxed_channel_cap": false
+        "relaxed_channel_cap": false,
+        "same_event_skipped": [
+          {
+            "skipped": "5LkRDoGVook",
+            "kept": "fQnrdr2DcqQ",
+            "shared_tokens": [
+              "2.6",
+              "chatgpt",
+              "gifs",
+              "images"
+            ]
+          },
+          {
+            "skipped": "9fGwwQaaLSQ",
+            "kept": "fQnrdr2DcqQ",
+            "shared_tokens": [
+              "2.6",
+              "chatgpt",
+              "images"
+            ]
+          }
+        ]
       },
       "videos": [
         {
@@ -4036,56 +4017,13 @@
           "reasons": [
             "来自精选博主 MattVidPro AI（入池依据：X 资料直接链接 YouTube；本主题博主）",
             "标题含关键词「ChatGPT」",
+            "同一事件已合并：另有 2 条同题视频未展示",
             "发布于 2026-11-07（0 天前）",
             "时长 17:58",
             "订阅数 305000（入池时）"
           ],
           "url": "https://www.youtube.com/watch?v=fQnrdr2DcqQ",
           "thumbnail": "https://i.ytimg.com/vi/fQnrdr2DcqQ/mqdefault.jpg"
-        },
-        {
-          "video_id": "5LkRDoGVook",
-          "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
-          "channel_title": "The AI Advantage",
-          "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ",
-          "published_at": "2026-11-06T19:28:35Z",
-          "duration_seconds": 693,
-          "view_count": 24248,
-          "topic": "ai-products",
-          "sources": [
-            "creator_uploads:The AI Advantage"
-          ],
-          "reasons": [
-            "来自精选博主 The AI Advantage（入池依据：X 资料直接链接 YouTube；本主题博主）",
-            "标题含关键词「ChatGPT」",
-            "发布于 2026-11-06（1 天前）",
-            "时长 11:33",
-            "订阅数 493000（入池时）"
-          ],
-          "url": "https://www.youtube.com/watch?v=5LkRDoGVook",
-          "thumbnail": "https://i.ytimg.com/vi/5LkRDoGVook/mqdefault.jpg"
-        },
-        {
-          "video_id": "9fGwwQaaLSQ",
-          "title": "🚀ChatGPT Images 2.6全方位实测！原生GIF生成、图像编辑一致性、电影分镜生成、产品摄影和UI界面原型生成、书法作品生成、换场景、改光影、多轮P图！样样精通！取代设计师！开发者效率倍增",
-          "channel_title": "AI超元域",
-          "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A",
-          "published_at": "2026-11-05T11:41:07Z",
-          "duration_seconds": 627,
-          "view_count": 14105,
-          "topic": "ai-products",
-          "sources": [
-            "creator_uploads:AI超元域"
-          ],
-          "reasons": [
-            "来自精选博主 AI超元域（入池依据：X 资料直接链接 YouTube；本主题博主）",
-            "标题含关键词「ChatGPT」",
-            "发布于 2026-11-05（3 天前）",
-            "时长 10:27",
-            "订阅数 78100（入池时）"
-          ],
-          "url": "https://www.youtube.com/watch?v=9fGwwQaaLSQ",
-          "thumbnail": "https://i.ytimg.com/vi/9fGwwQaaLSQ/mqdefault.jpg"
         },
         {
           "video_id": "CvmZtAPmAW4",
@@ -4108,6 +4046,28 @@
           ],
           "url": "https://www.youtube.com/watch?v=CvmZtAPmAW4",
           "thumbnail": "https://i.ytimg.com/vi/CvmZtAPmAW4/mqdefault.jpg"
+        },
+        {
+          "video_id": "MNiurW07nLs",
+          "title": "ChatGPT & Grok Bot: 7 Useful Updates for Everyday Life",
+          "channel_title": "The AI Advantage",
+          "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ",
+          "published_at": "2026-10-30T19:20:20Z",
+          "duration_seconds": 726,
+          "view_count": 29759,
+          "topic": "ai-products",
+          "sources": [
+            "creator_uploads:The AI Advantage"
+          ],
+          "reasons": [
+            "来自精选博主 The AI Advantage（入池依据：X 资料直接链接 YouTube；本主题博主）",
+            "标题含关键词「ChatGPT」",
+            "发布于 2026-10-30（8 天前）",
+            "时长 12:06",
+            "订阅数 493000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=MNiurW07nLs",
+          "thumbnail": "https://i.ytimg.com/vi/MNiurW07nLs/mqdefault.jpg"
         },
         {
           "video_id": "vMvkR8WEOpE",
@@ -4152,6 +4112,28 @@
           ],
           "url": "https://www.youtube.com/watch?v=9PwpJpJJ3IY",
           "thumbnail": "https://i.ytimg.com/vi/9PwpJpJJ3IY/mqdefault.jpg"
+        },
+        {
+          "video_id": "nJut4s0DTx8",
+          "title": "Ultimate Guide to ChatGPT Work (Updated for ChatGPT 6 Astra)",
+          "channel_title": "Skill Leap AI",
+          "channel_id": "UCwSozl89jl2zUDzQ4jGJD3g",
+          "published_at": "2026-10-09T18:49:11Z",
+          "duration_seconds": 1025,
+          "view_count": 45774,
+          "topic": "ai-products",
+          "sources": [
+            "creator_uploads:Skill Leap AI"
+          ],
+          "reasons": [
+            "来自精选博主 Skill Leap AI（入池依据：公开线索 + YouTube 核验；本主题博主）",
+            "标题含关键词「ChatGPT」",
+            "发布于 2026-10-09（29 天前）",
+            "时长 17:05",
+            "订阅数 344000（入池时）"
+          ],
+          "url": "https://www.youtube.com/watch?v=nJut4s0DTx8",
+          "thumbnail": "https://i.ytimg.com/vi/nJut4s0DTx8/mqdefault.jpg"
         }
       ]
     },
@@ -4160,8 +4142,8 @@
       "name_zh": "AI 产业动态",
       "definition": "关注 AI 公司、政策、融资、合作与行业变化。",
       "stats": {
-        "creators_in_topic": 29,
-        "candidates_from_creators": 1453,
+        "creators_in_topic": 28,
+        "candidates_from_creators": 1443,
         "matched_tier1": 16,
         "matched_tier2": 137,
         "matched_tier3": 0,
@@ -4184,7 +4166,8 @@
           "NVIDIA": 1,
           "Dwarkesh Patel": 1
         },
-        "relaxed_channel_cap": false
+        "relaxed_channel_cap": false,
+        "same_event_skipped": []
       },
       "videos": [
         {

@@ -73,16 +73,6 @@ creators:
   - existing_registry
   subscriber_count_at_check: 12300
   checked_at: '2026-11-08T13:10:16Z'
-- name: Greg Brockman
-  channel_id: UCF3n5QTuQ6qel9kEZ6JWO7g
-  handle: '@gregbrockman1586'
-  lang: en
-  subtopics:
-  - ai-industry
-  evidence:
-  - existing_registry
-  subscriber_count_at_check: 2
-  checked_at: '2026-11-08T13:10:16Z'
 - name: Google DeepMind
   channel_id: UCP7jMXSY2xbc3KCAE0MHQ-A
   handle: '@googledeepmind'
@@ -475,16 +465,6 @@ creators:
   - x_bio_youtube_link
   subscriber_count_at_check: 78100
   checked_at: '2026-11-08T13:10:28Z'
-- name: 遁一子 Jesse Lau
-  channel_id: UCRy_AScJwP-Tt3iVcMMWCxw
-  handle: '@dunyizi'
-  lang: zh
-  subtopics:
-  - ai-products
-  evidence:
-  - x_bio_youtube_link
-  subscriber_count_at_check: 83
-  checked_at: '2026-11-08T13:10:29Z'
 - name: howie.serious
   channel_id: UCh1TRnUd33z_CWWDKyPTwtw
   handle: '@howieserious'
@@ -494,17 +474,6 @@ creators:
   evidence:
   - x_bio_youtube_link
   subscriber_count_at_check: 10900
-  checked_at: '2026-11-08T13:10:29Z'
-- name: 雪踏乌云
-  channel_id: UCucA8x8KOd05KjU7Cgaj7wA
-  handle: '@wuyun_ai'
-  lang: zh
-  subtopics:
-  - ai-agents
-  - ai-coding
-  evidence:
-  - x_bio_youtube_link
-  subscriber_count_at_check: 12
   checked_at: '2026-11-08T13:10:29Z'
 - name: Sebastian Raschka
   channel_id: UC_CzsS7UTjcxJ-xXp1ftxtA

@@ -18,7 +18,7 @@
 | 指标 | 值 |
 | --- | --- |
 | creators_in_topic | 24 |
-| candidates_from_creators | 1453 |
+| candidates_from_creators | 1443 |
 | matched_tier1 | 15 |
 | matched_tier2 | 182 |
 | matched_tier3 | 0 |
@@ -29,6 +29,7 @@
 | excluded_creators_by_rule | {'not_focused': 4} |
 | channel_distribution_shown | {'bycloud': 1, 'Cohere': 1, 'Sebastian Raschka': 1, '最佳拍档': 1, 'IBM Technology': 1, 'TheAIGRID': 1} |
 | relaxed_channel_cap | False |
+| same_event_skipped | [] |
 
 ### Top 6
 
@@ -47,8 +48,8 @@
 
 | 指标 | 值 |
 | --- | --- |
-| creators_in_topic | 24 |
-| candidates_from_creators | 1453 |
+| creators_in_topic | 23 |
+| candidates_from_creators | 1443 |
 | matched_tier1 | 89 |
 | matched_tier2 | 76 |
 | matched_tier3 | 0 |
@@ -59,6 +60,7 @@
 | excluded_creators_by_rule | {'not_focused': 7} |
 | channel_distribution_shown | {'AI Engineer': 1, 'Siraj Raval': 1, 'Latent Space': 1, 'Nate Herk': 1, 'Hugging Face': 1, 'Cole Medin': 1} |
 | relaxed_channel_cap | False |
+| same_event_skipped | [] |
 
 ### Top 6
 
@@ -77,29 +79,30 @@
 
 | 指标 | 值 |
 | --- | --- |
-| creators_in_topic | 29 |
-| candidates_from_creators | 1453 |
-| matched_tier1 | 66 |
+| creators_in_topic | 28 |
+| candidates_from_creators | 1443 |
+| matched_tier1 | 65 |
 | matched_tier2 | 28 |
 | matched_tier3 | 0 |
-| matched | 94 |
-| eligible | 25 |
+| matched | 93 |
+| eligible | 24 |
 | shown | 6 |
 | excluded_by_rule | {'creator_not_topic_tier2': 6, 'duration': 52} |
 | excluded_creators_by_rule | {'not_focused': 4} |
-| channel_distribution_shown | {'AI Engineer': 1, '雪踏乌云': 1, 'ArjanCodes': 1, 'GitHub': 1, 'Android Developers': 1, 'Visual Studio Code': 1} |
+| channel_distribution_shown | {'AI Engineer': 1, 'ArjanCodes': 1, 'GitHub': 1, 'Android Developers': 1, 'Visual Studio Code': 1, 'Riley Brown': 1} |
 | relaxed_channel_cap | False |
+| same_event_skipped | [] |
 
 ### Top 6
 
 | # | 标题 | 频道 | 发布日期 | 时长 | 播放量 | 推荐依据 | 初步相关性 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [Your Coding Agent Can't Undo Its Own Mistakes - Tanmay Sah & Dolly Sah](https://www.youtube.com/watch?v=BT1Mo-fD-g0) | AI Engineer | 2026-11-08 | 16:38 | 1,575 | 来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单；本主题博主）<br>标题含关键词「coding agent」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-11-08（0 天前）<br>时长 16:38<br>订阅数 1000000（入池时） | 相关：编码 Agent 实践演讲 |
-| 2 | [Codex+Blender自动搭3D白模，让AI视频抽卡率暴涨](https://www.youtube.com/watch?v=kXJ1iOM89fs) | 雪踏乌云 | 2026-10-10 | 9:27 | 743 | 来自精选博主 雪踏乌云（入池依据：X 资料直接链接 YouTube；本主题博主）<br>标题含关键词「Codex」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-10-09（29 天前）<br>时长 9:27<br>订阅数 12（入池时） | 部分相关：用 Codex 驱动 Blender 建模，偏 AI 视频创作 |
-| 3 | [7 Things AI Coding Agents Get Wrong (Because You Let Them)](https://www.youtube.com/watch?v=oFtTodDCbkE) | ArjanCodes | 2026-11-07 | 13:56 | 24,839 | 来自精选博主 ArjanCodes（入池依据：X 认证资料 + YouTube 核验；本主题博主）<br>标题含关键词「AI coding」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-11-06（1 天前）<br>时长 13:56<br>订阅数 345000（入池时） | 相关：编码 Agent 常见错误 |
-| 4 | [Work together, your way, with GitHub Copilot](https://www.youtube.com/watch?v=VJBTPepfWUI) | GitHub | 2026-11-07 | 32:51 | 4,980 | 来自精选博主 GitHub（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「Copilot」<br>发布于 2026-11-07（0 天前）<br>时长 32:51<br>订阅数 706000（入池时） | 相关：GitHub Copilot 协作功能（官方） |
-| 5 | [Agentic engineering with Claude Code and Android CLI](https://www.youtube.com/watch?v=Mb9H43ia0kE) | Android Developers | 2026-10-30 | 30:23 | 14,687 | 来自精选博主 Android Developers（入池依据：YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」；本主题博主）<br>标题含关键词「Claude Code」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-10-29（9 天前）<br>时长 30:23<br>订阅数 1440000（入池时） | 相关：Claude Code + Android CLI（官方） |
-| 6 | [Write and Optimize PostgreSQL Queries Faster in VS Code with Copilot](https://www.youtube.com/watch?v=lLp58sDAixQ) | Visual Studio Code | 2026-10-26 | 6:01 | 7,414 | 来自精选博主 Visual Studio Code（入池依据：YouTube 高播放发现「AI 编程 教程」；本主题博主）<br>标题含关键词「Copilot」<br>发布于 2026-10-26（12 天前）<br>时长 6:01<br>订阅数 1040000（入池时） | 相关：VS Code Copilot 写 SQL（官方，6 分钟） |
+| 2 | [7 Things AI Coding Agents Get Wrong (Because You Let Them)](https://www.youtube.com/watch?v=oFtTodDCbkE) | ArjanCodes | 2026-11-07 | 13:56 | 24,839 | 来自精选博主 ArjanCodes（入池依据：X 认证资料 + YouTube 核验；本主题博主）<br>标题含关键词「AI coding」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-11-06（1 天前）<br>时长 13:56<br>订阅数 345000（入池时） | 相关：编码 Agent 常见错误 |
+| 3 | [Work together, your way, with GitHub Copilot](https://www.youtube.com/watch?v=VJBTPepfWUI) | GitHub | 2026-11-07 | 32:51 | 4,980 | 来自精选博主 GitHub（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「Copilot」<br>发布于 2026-11-07（0 天前）<br>时长 32:51<br>订阅数 706000（入池时） | 相关：GitHub Copilot 协作功能（官方） |
+| 4 | [Agentic engineering with Claude Code and Android CLI](https://www.youtube.com/watch?v=Mb9H43ia0kE) | Android Developers | 2026-10-30 | 30:23 | 14,687 | 来自精选博主 Android Developers（入池依据：YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」；本主题博主）<br>标题含关键词「Claude Code」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-10-29（9 天前）<br>时长 30:23<br>订阅数 1440000（入池时） | 相关：Claude Code + Android CLI（官方） |
+| 5 | [Write and Optimize PostgreSQL Queries Faster in VS Code with Copilot](https://www.youtube.com/watch?v=lLp58sDAixQ) | Visual Studio Code | 2026-10-26 | 6:01 | 7,414 | 来自精选博主 Visual Studio Code（入池依据：YouTube 高播放发现「AI 编程 教程」；本主题博主）<br>标题含关键词「Copilot」<br>发布于 2026-10-26（12 天前）<br>时长 6:01<br>订阅数 1040000（入池时） | 相关：VS Code Copilot 写 SQL（官方，6 分钟） |
+| 6 | [Start Using Claude Code For EVERYTHING (Trust Me)](https://www.youtube.com/watch?v=fDE5R4fSq2w) | Riley Brown | 2026-10-16 | 27:35 | 88,087 | 来自精选博主 Riley Brown（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「Claude Code」<br>边界规则：含编程 Agent 信号 → AI 编程<br>发布于 2026-10-15（23 天前）<br>时长 27:35<br>订阅数 310000（入池时） | 相关：Claude Code 日常使用教程（Riley Brown）；标题略带诱导 |
 
 ## AI 产品与应用
 
@@ -107,8 +110,8 @@
 
 | 指标 | 值 |
 | --- | --- |
-| creators_in_topic | 29 |
-| candidates_from_creators | 1453 |
+| creators_in_topic | 28 |
+| candidates_from_creators | 1443 |
 | matched_tier1 | 55 |
 | matched_tier2 | 34 |
 | matched_tier3 | 0 |
@@ -117,19 +120,20 @@
 | shown | 6 |
 | excluded_by_rule | {'duration': 39, 'creator_not_topic_tier2': 7, 'live_or_upcoming': 1, 'exclude:get rich': 1} |
 | excluded_creators_by_rule | {'not_focused': 4, 'unsupported_language': 3} |
-| channel_distribution_shown | {'MattVidPro AI': 1, 'The AI Advantage': 1, 'AI超元域': 1, 'AI Engineer': 1, 'Riley Brown': 1, 'Kevin Stratvert': 1} |
+| channel_distribution_shown | {'MattVidPro AI': 1, 'AI Engineer': 1, 'The AI Advantage': 1, 'Riley Brown': 1, 'Kevin Stratvert': 1, 'Skill Leap AI': 1} |
 | relaxed_channel_cap | False |
+| same_event_skipped | [{'skipped': '5LkRDoGVook', 'kept': 'fQnrdr2DcqQ', 'shared_tokens': ['2.6', 'chatgpt', 'gifs', 'images']}, {'skipped': '9fGwwQaaLSQ', 'kept': 'fQnrdr2DcqQ', 'shared_tokens': ['2.6', 'chatgpt', 'images']}] |
 
 ### Top 6
 
 | # | 标题 | 频道 | 发布日期 | 时长 | 播放量 | 推荐依据 | 初步相关性 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [ChatGPT Can Make GIFs Now (Images 2.6 Tested)](https://www.youtube.com/watch?v=fQnrdr2DcqQ) | MattVidPro | 2026-11-08 | 17:58 | 5,979 | 来自精选博主 MattVidPro AI（入池依据：X 资料直接链接 YouTube；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-11-07（0 天前）<br>时长 17:58<br>订阅数 305000（入池时） | 相关：ChatGPT Images 2.6 实测；与另 2 条同题 |
-| 2 | [ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More](https://www.youtube.com/watch?v=5LkRDoGVook) | The AI Advantage | 2026-11-07 | 11:33 | 24,248 | 来自精选博主 The AI Advantage（入池依据：X 资料直接链接 YouTube；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-11-06（1 天前）<br>时长 11:33<br>订阅数 493000（入池时） | 相关：ChatGPT Images 2.6 介绍；同题 |
-| 3 | [🚀ChatGPT Images 2.6全方位实测！原生GIF生成、图像编辑一致性、电影分镜生成、产品摄影和UI界面原型生成、书法作品生成、换场景、改光影、多轮P图！样样精通！取代设计师！开发者效率倍增](https://www.youtube.com/watch?v=9fGwwQaaLSQ) | AI超元域 | 2026-11-05 | 10:27 | 14,105 | 来自精选博主 AI超元域（入池依据：X 资料直接链接 YouTube；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-11-05（3 天前）<br>时长 10:27<br>订阅数 78100（入池时） | 相关：中文 ChatGPT Images 2.6 实测；同题 |
-| 4 | [78% Wanted This AI Feature. Almost Nobody Used It - Supriya Subudhi, Bumble](https://www.youtube.com/watch?v=CvmZtAPmAW4) | AI Engineer | 2026-10-31 | 14:44 | 10,095 | 来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单；本主题博主）<br>标题含关键词「AI feature」<br>发布于 2026-10-31（8 天前）<br>时长 14:44<br>订阅数 1000000（入池时） | 相关：Bumble AI 功能采用数据 |
-| 5 | [ChatGPT Just Changed A LOT AGAIN (Here’s What’s New)](https://www.youtube.com/watch?v=vMvkR8WEOpE) | Riley Brown | 2026-10-31 | 16:59 | 144,754 | 来自精选博主 Riley Brown（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-10-31（7 天前）<br>时长 16:59<br>订阅数 310000（入池时） | 相关：ChatGPT 更新汇总 |
-| 6 | [How to Use Remotion with ChatGPT](https://www.youtube.com/watch?v=9PwpJpJJ3IY) | Kevin Stratvert | 2026-10-30 | 8:01 | 43,948 | 来自精选博主 Kevin Stratvert（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-10-30（9 天前）<br>时长 8:01<br>订阅数 4490000（入池时） | 部分相关：Remotion + ChatGPT 做视频，偏编程教程 |
+| 1 | [ChatGPT Can Make GIFs Now (Images 2.6 Tested)](https://www.youtube.com/watch?v=fQnrdr2DcqQ) | MattVidPro | 2026-11-08 | 17:58 | 5,979 | 来自精选博主 MattVidPro AI（入池依据：X 资料直接链接 YouTube；本主题博主）<br>标题含关键词「ChatGPT」<br>同一事件已合并：另有 2 条同题视频未展示<br>发布于 2026-11-07（0 天前）<br>时长 17:58<br>订阅数 305000（入池时） | 相关：ChatGPT Images 2.6 实测；与另 2 条同题 |
+| 2 | [78% Wanted This AI Feature. Almost Nobody Used It - Supriya Subudhi, Bumble](https://www.youtube.com/watch?v=CvmZtAPmAW4) | AI Engineer | 2026-10-31 | 14:44 | 10,095 | 来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单；本主题博主）<br>标题含关键词「AI feature」<br>发布于 2026-10-31（8 天前）<br>时长 14:44<br>订阅数 1000000（入池时） | 相关：Bumble AI 功能采用数据 |
+| 3 | [ChatGPT & Grok Bot: 7 Useful Updates for Everyday Life](https://www.youtube.com/watch?v=MNiurW07nLs) | The AI Advantage | 2026-10-31 | 12:06 | 29,759 | 来自精选博主 The AI Advantage（入池依据：X 资料直接链接 YouTube；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-10-30（8 天前）<br>时长 12:06<br>订阅数 493000（入池时） | 相关：ChatGPT/Grok 产品更新盘点，面向普通用户 |
+| 4 | [ChatGPT Just Changed A LOT AGAIN (Here’s What’s New)](https://www.youtube.com/watch?v=vMvkR8WEOpE) | Riley Brown | 2026-10-31 | 16:59 | 144,754 | 来自精选博主 Riley Brown（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-10-31（7 天前）<br>时长 16:59<br>订阅数 310000（入池时） | 相关：ChatGPT 更新汇总 |
+| 5 | [How to Use Remotion with ChatGPT](https://www.youtube.com/watch?v=9PwpJpJJ3IY) | Kevin Stratvert | 2026-10-30 | 8:01 | 43,948 | 来自精选博主 Kevin Stratvert（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-10-30（9 天前）<br>时长 8:01<br>订阅数 4490000（入池时） | 部分相关：Remotion + ChatGPT 做视频，偏编程教程 |
+| 6 | [Ultimate Guide to ChatGPT Work (Updated for ChatGPT 6 Astra)](https://www.youtube.com/watch?v=nJut4s0DTx8) | Skill Leap AI | 2026-10-10 | 17:05 | 45,774 | 来自精选博主 Skill Leap AI（入池依据：公开线索 + YouTube 核验；本主题博主）<br>标题含关键词「ChatGPT」<br>发布于 2026-10-09（29 天前）<br>时长 17:05<br>订阅数 344000（入池时） | 相关：ChatGPT 工作场景使用指南 |
 
 ## AI 产业动态
 
@@ -137,8 +141,8 @@
 
 | 指标 | 值 |
 | --- | --- |
-| creators_in_topic | 29 |
-| candidates_from_creators | 1453 |
+| creators_in_topic | 28 |
+| candidates_from_creators | 1443 |
 | matched_tier1 | 16 |
 | matched_tier2 | 137 |
 | matched_tier3 | 0 |
@@ -149,6 +153,7 @@
 | excluded_creators_by_rule | {'not_focused': 8} |
 | channel_distribution_shown | {'All-In Podcast': 1, 'Matt Wolfe': 1, 'TheAIGRID': 1, 'Latent Space': 1, 'NVIDIA': 1, 'Dwarkesh Patel': 1} |
 | relaxed_channel_cap | False |
+| same_event_skipped | [] |
 
 ### Top 6
 

@@ -1,0 +1,122 @@
+{
+ "2K_Rm8cho1I": {
+  "verdict": "相关",
+  "note": "DeepSeek 推理引擎；标题偏夸张"
+ },
+ "jrApblKyLSQ": {
+  "verdict": "相关",
+  "note": "可解释性研究演讲（Cohere）；播放量很低"
+ },
+ "msp69FR5NZs": {
+  "verdict": "相关",
+  "note": "从零构建推理模型系列，研究/教学向"
+ },
+ "WMD90rttSaw": {
+  "verdict": "部分相关",
+  "note": "机器意识的哲学讨论，研究边缘"
+ },
+ "615-yWyS1n0": {
+  "verdict": "相关",
+  "note": "LLM 推理原理讲解"
+ },
+ "R-OeFlyzveI": {
+  "verdict": "部分相关",
+  "note": "模型传闻/猜测，标题悬念式"
+ },
+ "kIlVNGZZr8o": {
+  "verdict": "相关",
+  "note": "AI Engineer 实践演讲"
+ },
+ "ibdmyMFd_z8": {
+  "verdict": "相关",
+  "note": "Agent 联网实验"
+ },
+ "vhPCo-8K78U": {
+  "verdict": "相关",
+  "note": "科研 Agent 实践（Latent Space）"
+ },
+ "KZiF2J83zaY": {
+  "verdict": "相关",
+  "note": "多人 Agent 构建教程"
+ },
+ "EuN8WCWQf7g": {
+  "verdict": "相关",
+  "note": "Hugging Face Agent 教程"
+ },
+ "TVhhmhvCovg": {
+  "verdict": "相关",
+  "note": "Agent harness 工程；标题有全大写"
+ },
+ "BT1Mo-fD-g0": {
+  "verdict": "相关",
+  "note": "编码 Agent 实践演讲"
+ },
+ "oFtTodDCbkE": {
+  "verdict": "相关",
+  "note": "编码 Agent 常见错误"
+ },
+ "VJBTPepfWUI": {
+  "verdict": "相关",
+  "note": "GitHub Copilot 协作功能（官方）"
+ },
+ "Mb9H43ia0kE": {
+  "verdict": "相关",
+  "note": "Claude Code + Android CLI（官方）"
+ },
+ "lLp58sDAixQ": {
+  "verdict": "相关",
+  "note": "VS Code Copilot 写 SQL（官方，6 分钟）"
+ },
+ "fDE5R4fSq2w": {
+  "verdict": "相关",
+  "note": "Claude Code 日常使用教程（Riley Brown）；标题略带诱导"
+ },
+ "fQnrdr2DcqQ": {
+  "verdict": "相关",
+  "note": "ChatGPT Images 2.6 实测；与另 2 条同题"
+ },
+ "CvmZtAPmAW4": {
+  "verdict": "相关",
+  "note": "Bumble AI 功能采用数据"
+ },
+ "MNiurW07nLs": {
+  "verdict": "相关",
+  "note": "ChatGPT/Grok 产品更新盘点，面向普通用户"
+ },
+ "vMvkR8WEOpE": {
+  "verdict": "相关",
+  "note": "ChatGPT 更新汇总"
+ },
+ "9PwpJpJJ3IY": {
+  "verdict": "部分相关",
+  "note": "Remotion + ChatGPT 做视频，偏编程教程"
+ },
+ "nJut4s0DTx8": {
+  "verdict": "相关",
+  "note": "ChatGPT 工作场景使用指南"
+ },
+ "2v8b062QzTI": {
+  "verdict": "部分相关",
+  "note": "政治与 AI 市场混合话题"
+ },
+ "IrAHINf0M6E": {
+  "verdict": "相关",
+  "note": "每周 AI 新闻汇总"
+ },
+ "_fEqQa5hBmI": {
+  "verdict": "部分相关",
+  "note": "观点视频，标题 clickbait"
+ },
+ "EAtLq9_vrE0": {
+  "verdict": "相关",
+  "note": "算力/数据中心产业访谈"
+ },
+ "rySnll4sgu4": {
+  "verdict": "部分相关",
+  "note": "GTC 柏林主题演讲前的预热直播回放，近 2 小时"
+ },
+ "frYSOKvNiiE": {
+  "verdict": "相关",
+  "note": "芯片产业未来（Dwarkesh）"
+ }
+}

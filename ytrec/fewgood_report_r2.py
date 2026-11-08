@@ -25,20 +25,28 @@ def metrics(rows, judgments, refreshed):
     verdict=[judgments.get(x.get('video_id'),{}).get('verdict','待评') for x in rows]
     days=[days_old(x.get('published_at'),refreshed) for x in rows]; days=[x for x in days if x is not None]
     return [sum(x=='相关' for x in verdict),sum(x=='部分相关' for x in verdict),sum(x=='不相关' for x in verdict),len({x.get('channel_id') or x.get('channel_title') for x in rows}),statistics.median(days) if days else '未知',sum(len(clickbait_signals(x.get('title',''))) for x in rows)]
-def compare(r1,r2,j1,j2):
-    out=['# Fewgood 两轮对比','','第 1 轮 B 与第 2 轮 B 均为 Top6；A 为第 1 轮原始 baseline。','']
-    rows=[]; refresh=r2.get('data_refreshed_at')
-    old={x['id']:x for x in r1.get('topics',[])}
-    for t in r2.get('topics',[]):
-      tid=t['id']; b1=old.get(tid,{}).get('videos',[])[:6]; b2=t.get('videos',[])[:6]; a=r2.get('baseline',{}).get(tid,[])[:6]
-      # Baseline/A entries may be reviewed in either round; round 2 wins on overlap.
-      a_judgments=dict(j1); a_judgments.update(j2)
-      rows.append([t['name_zh'],*metrics(b1,j1,r1.get('data_refreshed_at')), *metrics(b2,j2,refresh),*metrics(a,a_judgments,refresh),len({x.get('video_id') for x in b1}&{x.get('video_id') for x in b2})])
-      out += ['## '+t['name_zh'],'',table(['#','第 2 轮 Top6 标题'],[[i,link_title(v)] for i,v in enumerate(b2,1)]),'']
-    out += ['## 汇总','',table(['主题','R1相关','R1部分','R1不相关','R1频道','R1中位天数','R1营销信号','R2相关','R2部分','R2不相关','R2频道','R2中位天数','R2营销信号','A相关','A部分','A不相关','A频道','A中位天数','A营销信号','两轮重叠'],rows),'']
+def compare(r1,r2a,r2b,j1,j2a,j2b):
+    out=['# Fewgood 轮次对比','','R1 = 第 1 轮 B；R2 = 第 2 轮 B（初版）；R2b = 第 2 轮修订（个人博主 ≥1000 订阅 + 同一事件只取 1 条，零 API 重放）；A = 第 1 轮普通搜索 baseline。均为 Top6。','','相关性均为 Grok Bot 根据标题和频道做的**初判**，未观看视频，待 Jason 复核。','']
+    rows=[]; changes=[]; refresh=r2b.get('data_refreshed_at')
+    o1={x['id']:x for x in r1.get('topics',[])}; o2={x['id']:x for x in r2a.get('topics',[])}
+    aj=dict(j1); aj.update(j2a); aj.update(j2b)
+    for t in r2b.get('topics',[]):
+      tid=t['id']; b1=o1.get(tid,{}).get('videos',[])[:6]; b2=o2.get(tid,{}).get('videos',[])[:6]; b3=t.get('videos',[])[:6]; a=r2b.get('baseline',{}).get(tid,[])[:6]
+      m1,m2,m3,ma=metrics(b1,j1,r1.get('data_refreshed_at')),metrics(b2,j2a,r2a.get('data_refreshed_at')),metrics(b3,j2b,refresh),metrics(a,aj,refresh)
+      rows.append([t['name_zh'],f'{m1[0]}/{m1[1]}/{m1[2]}',f'{m2[0]}/{m2[1]}/{m2[2]}',f'{m3[0]}/{m3[1]}/{m3[2]}',f'{ma[0]}/{ma[1]}/{ma[2]}',m3[3],m3[4],m3[5],len({x.get('video_id') for x in b2}&{x.get('video_id') for x in b3})])
+      i2={x.get('video_id') for x in b2}; i3={x.get('video_id') for x in b3}
+      for v in b2:
+        if v.get('video_id') not in i3: changes.append([t['name_zh'],'移出',v.get('channel_title',''),link_title(v)])
+      for v in b3:
+        if v.get('video_id') not in i2: changes.append([t['name_zh'],'补入',v.get('channel_title',''),link_title(v)])
+      out += ['## '+t['name_zh'],'',table(['#','R2b Top6 标题','频道'],[[i,link_title(v),v.get('channel_title','')] for i,v in enumerate(b3,1)]),'']
+    out += ['## 汇总（相关/部分相关/不相关，初判）','',table(['主题','R1','R2','R2b','A','R2b频道数','R2b中位天数','R2b营销信号','R2∩R2b'],rows),'']
+    out += ['## R2 → R2b 变动','',table(['主题','变动','频道','视频'],changes) if changes else '无变动。','']
     return '\n'.join(out)
 def main(argv=None):
  p=argparse.ArgumentParser();p.add_argument('--out-dir',type=Path,default=ROOT/'docs/mvp');p.add_argument('--result',type=Path,default=ROOT/'data/experiments/fewgood-r2-result.json');a=p.parse_args(argv)
- result=load(a.result); usage=load(ROOT/'data/experiments/fewgood-r2-usage.json'); j2=load(ROOT/'docs/mvp/preliminary-judgments-r2.json'); r1=load(ROOT/'data/experiments/fewgood-mvp-result.json');j1=load(ROOT/'docs/mvp/preliminary-judgments.json');a.out_dir.mkdir(parents=True,exist_ok=True)
- (a.out_dir/'creator-pool-table.md').write_text(pool_report(result));(a.out_dir/'round2-quality.md').write_text(quality(result,usage,j2));(a.out_dir/'round-compare.md').write_text(compare(r1,result,j1,j2))
+ result=load(a.result); usage=load(ROOT/'data/experiments/fewgood-r2-usage.json'); j2=load(ROOT/'docs/mvp/preliminary-judgments-r2b.json')
+ if not j2: j2=load(ROOT/'docs/mvp/preliminary-judgments-r2.json')
+ r2a=load(ROOT/'data/experiments/fewgood-r2a-result.json'); j2a=load(ROOT/'docs/mvp/preliminary-judgments-r2.json');a.out_dir.mkdir(parents=True,exist_ok=True)
+ (a.out_dir/'creator-pool-table.md').write_text(pool_report(result));(a.out_dir/'round2-quality.md').write_text(quality(result,usage,j2));r1=load(ROOT/'data/experiments/fewgood-mvp-result.json');j1=load(ROOT/'docs/mvp/preliminary-judgments.json');(a.out_dir/'round-compare.md').write_text(compare(r1,r2a,result,j1,j2a,j2))
 if __name__=='__main__':main()
