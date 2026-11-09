@@ -449,6 +449,36 @@ def metadata_gates(raw, c, at):
         age = -1
     return {'metadata_unavailable': False, 'publish_age': age < c['min_publish_age_days'] * 86400, 'duration': duration(raw.get('contentDetails', {}).get('duration')) < c['min_duration_seconds']}
 
+def _contains_phrase(value, phrase):
+    """Case-insensitive phrase matching with word-ish edges for names."""
+    return bool(re.search(r'(?<![\w])' + re.escape(phrase) + r'(?![\w])', value or '', re.IGNORECASE))
+
+def classic_speech_exemption(raw, classic_cfg):
+    """Return exemption eligibility and the rule codes that make it eligible."""
+    if not classic_cfg or not classic_cfg.get('enabled'):
+        return False, []
+    snippet = raw.get('snippet', {})
+    title, channel = snippet.get('title', ''), snippet.get('channelTitle', '')
+    title_lower, channel_lower = title.lower(), channel.lower()
+    speakers = classic_cfg.get('famous_speakers', [])
+    channels = classic_cfg.get('univ_museum_channels', [])
+    keywords = classic_cfg.get('speech_title_keywords', [])
+    famous = any(_contains_phrase(f'{title} {channel}', speaker) for speaker in speakers)
+    univ_museum = any(str(name).lower() in channel_lower for name in channels)
+    speech_title = any(str(keyword).lower() in title_lower for keyword in keywords)
+    long_enough = duration(raw.get('contentDetails', {}).get('duration')) >= classic_cfg.get('min_duration_seconds', 1200)
+    classic_demo = ('mother of all demos' in title_lower or 'engelbart' in title_lower) and famous
+    reasons = []
+    if speech_title and (famous or univ_museum):
+        reasons.append('A_speech')
+    if univ_museum and long_enough:
+        reasons.append('B_channel_duration')
+    if famous and long_enough:
+        reasons.append('C_speaker_duration')
+    if classic_demo:
+        reasons.append('D_classic_demo')
+    return bool(reasons), reasons
+
 def enrich(db, config, videos, refresh=False, client=None):
     pending = []
     for v in videos:
@@ -494,9 +524,19 @@ def report(db, config, videos, output='reports'):
         if any(gates.values()):
             continue
         raw = cached[v['id']]
+        max_upload_age_years = config['metadata'].get('max_upload_age_years', 0)
+        try:
+            upload_age = at - stamp(raw['snippet']['publishedAt'])
+        except (KeyError, ValueError):
+            upload_age = 0
+        over_upload_age = max_upload_age_years and upload_age >= max_upload_age_years * 365.25 * 86400
+        exempt, classic_reasons = classic_speech_exemption(raw, config['metadata'].get('classic_speech', {}))
+        if over_upload_age and not exempt:
+            drops['max_upload_age'] += 1
+            continue
         db.execute('INSERT OR IGNORE INTO selections VALUES (?,?)', (v['id'], at))
         selected_at = db.execute('SELECT selected_at FROM selections WHERE video_id=?', (v['id'],)).fetchone()[0]
-        selected.append(dict(v, title=raw['snippet']['title'], channel=raw['snippet']['channelTitle'], channel_id=raw['snippet'].get('channelId', ''), duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at))
+        selected.append(dict(v, title=raw['snippet']['title'], channel=raw['snippet']['channelTitle'], channel_id=raw['snippet'].get('channelId', ''), published_at=raw['snippet'].get('publishedAt', ''), duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at, classic_speech=bool(over_upload_age and exempt), **({'classic_speech_reasons': classic_reasons} if over_upload_age and exempt else {})))
     db.commit()
     what_if = []
     for people in (5,10,20,30,50):
@@ -505,7 +545,7 @@ def report(db, config, videos, output='reports'):
                 eligible = [v for v in videos if v['recommenders'] >= people and v['months'] >= months and v['span_days'] >= span and not (config['recommendation']['sources']['enabled'] and config['recommendation']['sources']['min_sources'] > 1)]
                 known = [v for v in eligible if v['id'] in cached]
                 what_if.append(dict(recommenders=people, months=months, span_days=span, candidates=len(eligible), cached=len(known), selected_with_cached_metadata=sum(not any(metadata_gates(cached[v['id']], config['metadata'], at).values()) for v in known), unknown_metadata=len(eligible)-len(known)))
-    summary = dict(generated_at=at, hn_items=dict(db.execute('SELECT kind,count(*) FROM items GROUP BY kind').fetchall()), distinct_video_ids=len(videos), mentions=db.execute('SELECT count(*) FROM mentions').fetchone()[0], distinct_video_recommender_pairs=db.execute('SELECT count(*) FROM (SELECT DISTINCT video_id,author FROM mentions)').fetchone()[0], recommender_histogram=dict(Counter(v['recommenders'] for v in videos)), recommendation_candidates=candidates, dropped_by_gate={k:drops[k] for k in ('recommenders','months','span','sources','metadata_unavailable','publish_age','duration')}, final_selected=len(selected), quota_units=db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0], what_if=what_if, criteria=config)
+    summary = dict(generated_at=at, hn_items=dict(db.execute('SELECT kind,count(*) FROM items GROUP BY kind').fetchall()), distinct_video_ids=len(videos), mentions=db.execute('SELECT count(*) FROM mentions').fetchone()[0], distinct_video_recommender_pairs=db.execute('SELECT count(*) FROM (SELECT DISTINCT video_id,author FROM mentions)').fetchone()[0], recommender_histogram=dict(Counter(v['recommenders'] for v in videos)), recommendation_candidates=candidates, dropped_by_gate={k:drops[k] for k in ('recommenders','months','span','sources','metadata_unavailable','publish_age','duration','max_upload_age')}, final_selected=len(selected), quota_units=db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0], what_if=what_if, criteria=config)
     Path(output).mkdir(parents=True, exist_ok=True)
     Path(output, 'report.json').write_text(json.dumps(summary, indent=2, ensure_ascii=False))
     lines = ['# Pipeline report', '', f'Final selected: {len(selected)} (all configured gates applied).', f'Recommendation candidates: {candidates}', f'HN items: {summary["hn_items"]}', f'Distinct videos: {len(videos)}; mentions: {summary["mentions"]}', f'Recommender histogram: {summary["recommender_histogram"]}', f'Dropped by gate (independent, overlapping): {summary["dropped_by_gate"]}', f'Approximate cumulative quota units: {summary["quota_units"]}', '', 'What-if uses cached metadata only; unknowns are not counted as selected.', '', '| People | Months | Span days | Candidates | Cached selected | Unknown |', '|---|---|---|---|---|---|']

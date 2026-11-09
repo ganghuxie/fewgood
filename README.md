@@ -61,7 +61,7 @@ python -m ytrec build-site
 
 ## Criteria
 
-Edit `config.yaml`: defaults require 30 distinct HN authors, 36 distinct UTC calendar months and a 365-day earliest/latest gap. Metadata must show public, processed, published at least 365 days ago and at least 300 seconds long. The source rule retains `min_sources: 2` but is disabled; enabling it excludes all Phase 1 HN-only candidates. Sentiment is explicitly disabled; attempting to enable it raises an error rather than silently claiming to analyze sentiment.
+Edit `config.yaml`: defaults require 30 distinct HN authors, 36 distinct UTC calendar months and a 365-day earliest/latest gap. Metadata must show public, processed, published at least 365 days ago and at least 300 seconds long. Community videos must also have been uploaded within 12 years, except classic speeches/lectures that match the configured famous-speaker or university/museum-channel rules. The source rule retains `min_sources: 2` but is disabled; enabling it excludes all Phase 1 HN-only candidates. Sentiment is explicitly disabled; attempting to enable it raises an error rather than silently claiming to analyze sentiment.
 
 A link is only a proxy for a recommendation: criticism and incidental links can qualify until phase 2. One author counts once toward the people threshold, while all of that author's dated mentions contribute to temporal coverage. Thus months measure repeated linking, not necessarily 36 different endorsers. Authors without an identity are excluded. HN usernames are the independence proxy; account coordination cannot be ruled out.
 

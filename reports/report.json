@@ -1,5 +1,5 @@
 {
-  "generated_at": 1793859527,
+  "generated_at": 1794238253,
   "hn_items": {
     "comment": 279777,
     "story": 124215
@@ -114,10 +114,11 @@
     "sources": 0,
     "metadata_unavailable": 5,
     "publish_age": 0,
-    "duration": 17
+    "duration": 17,
+    "max_upload_age": 29
   },
-  "final_selected": 70,
-  "quota_units": 80,
+  "final_selected": 41,
+  "quota_units": 199,
   "what_if": [
     {
       "recommenders": 5,
@@ -361,14 +362,81 @@
     },
     "metadata": {
       "min_publish_age_days": 365,
+      "max_upload_age_years": 12,
+      "classic_speech": {
+        "enabled": true,
+        "min_duration_seconds": 1200,
+        "famous_speakers": [
+          "Steve Jobs",
+          "Abraham Lincoln",
+          "Lincoln",
+          "Richard Feynman",
+          "Feynman",
+          "Randy Pausch",
+          "Pausch",
+          "Richard Hamming",
+          "Hamming",
+          "Alan Kay",
+          "Douglas Engelbart",
+          "Engelbart",
+          "Bret Victor",
+          "Rich Hickey",
+          "Robert Sapolsky",
+          "Sapolsky",
+          "Guy Steele",
+          "Joe Armstrong",
+          "Linus Torvalds",
+          "John Cleese",
+          "David Heinemeier Hansson",
+          "Heinemeier Hansson",
+          "Jonathan Blow",
+          "Philip Wadler",
+          "Mike Acton",
+          "Patrick Winston",
+          "Robert Lustig"
+        ],
+        "univ_museum_channels": [
+          "Stanford",
+          "MIT OpenCourseWare",
+          "MIT Club of Northern California",
+          "Carnegie Mellon University",
+          "Computer History Museum",
+          "Royal Society of Arts",
+          "University of California Television",
+          "UChicago Social Sciences"
+        ],
+        "speech_title_keywords": [
+          "lecture",
+          "keynote",
+          "commencement",
+          "address",
+          "speech",
+          "seminar",
+          "presentation",
+          "last lecture",
+          "inventing on principle",
+          "you and your research",
+          "structure and interpretation",
+          "mother of all demos",
+          "how to speak",
+          "full lecture"
+        ]
+      },
       "min_duration_seconds": 300,
       "cache_days": 30,
-      "max_units_per_run": 1000
+      "max_units_per_run": 1000,
+      "daily_quota_limit": 8000
     },
     "crawl": {
       "start": "2007-01-01",
       "window_days": 30,
       "request_interval_seconds": 1.05
+    },
+    "zh": {
+      "provider": "gemini",
+      "gemini_model": "gemini-3.5-flash",
+      "gemini_fallback_model": "gemini-3.5-flash-lite",
+      "deepseek_model": "deepseek-chat"
     }
   }
 }

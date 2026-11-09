@@ -42,7 +42,7 @@ def test_extract_repeated_author_months(db, config):
     assert recommendation_gates(v,config['recommendation'])['recommenders']
 
 def raw():
-    return {'id':'dQw4w9WgXcQ','snippet':{'publishedAt':'2010-01-01T00:00:00Z','title':'Example','channelTitle':'Channel'},'contentDetails':{'duration':'PT5M'},'status':{'privacyStatus':'public','uploadStatus':'processed'}}
+    return {'id':'dQw4w9WgXcQ','snippet':{'publishedAt':'2020-01-01T00:00:00Z','title':'Example','channelTitle':'Channel'},'contentDetails':{'duration':'PT5M'},'status':{'privacyStatus':'public','uploadStatus':'processed'}}
 
 def test_metadata_gates(config):
     c = config['metadata']; at = stamp('2025-01-01')
@@ -81,6 +81,30 @@ def test_report_gates_and_what_if(db,config,tmp_path,monkeypatch):
     first=db.execute('SELECT selected_at FROM selections').fetchone()[0]
     report(db,config,[good],str(tmp_path/'reports'))
     assert db.execute('SELECT selected_at FROM selections').fetchone()[0]==first
+
+def test_report_upload_age_cutoff_and_classic_speech_exemptions(db, config, tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    recent = raw()
+    old_plain = dict(raw(), id='old-plain'); old_plain['snippet'] = dict(old_plain['snippet'], publishedAt='2000-01-01T00:00:00Z')
+    exempt_a = dict(raw(), id='exempt-a'); exempt_a['snippet'] = dict(exempt_a['snippet'], publishedAt='2000-01-01T00:00:00Z', title='Steve Jobs Commencement Address', channelTitle='Archive')
+    exempt_b = dict(raw(), id='exempt-b'); exempt_b['snippet'] = dict(exempt_b['snippet'], publishedAt='2000-01-01T00:00:00Z', title='Course recording', channelTitle='Stanford'); exempt_b['contentDetails'] = {'duration':'PT20M'}
+    exempt_c = dict(raw(), id='exempt-c'); exempt_c['snippet'] = dict(exempt_c['snippet'], publishedAt='2000-01-01T00:00:00Z', title='Talk', channelTitle='Richard Feynman Archive'); exempt_c['contentDetails'] = {'duration':'PT20M'}
+    raws = [recent, old_plain, exempt_a, exempt_b, exempt_c]
+    for item in raws:
+        db.execute('INSERT INTO metadata VALUES (?,?,?)', (item['id'], 1, json.dumps(item)))
+    videos = [dict(id=item['id'], recommenders=30, months=36, span_days=365, first=1, last=31536001, quotes=[]) for item in raws]
+    result = report(db, config, videos, str(tmp_path / 'reports'))
+    selected = json.loads((tmp_path / 'site/src/data/videos.json').read_text())['videos']
+    by_id = {video['id']: video for video in selected}
+    assert result['final_selected'] == 4
+    assert result['dropped_by_gate']['max_upload_age'] == 1
+    assert 'old-plain' not in by_id
+    assert by_id[recent['id']]['classic_speech'] is False
+    assert by_id[recent['id']]['published_at'] == '2020-01-01T00:00:00Z'
+    assert all(by_id[item['id']]['classic_speech'] is True for item in (exempt_a, exempt_b, exempt_c))
+    assert 'A_speech' in by_id['exempt-a']['classic_speech_reasons']
+    assert 'B_channel_duration' in by_id['exempt-b']['classic_speech_reasons']
+    assert 'C_speaker_duration' in by_id['exempt-c']['classic_speech_reasons']
 
 def test_truncation_not_completed(db,config):
     class Truncated:
@@ -127,6 +151,9 @@ def test_youtube_costs():
 
 def test_config_daily_quota_limit(config):
     assert config['metadata']['daily_quota_limit'] == 8000
+    assert config['metadata']['max_upload_age_years'] == 12
+    assert config['metadata']['classic_speech']['min_duration_seconds'] == 1200
+    assert 'Ray Dalio' not in config['metadata']['classic_speech']['famous_speakers']
 
 def test_quota_charge_persists_and_refuses(tmp_path):
     path = tmp_path / 'quota.json'

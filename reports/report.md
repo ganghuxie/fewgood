@@ -1,12 +1,12 @@
 # Pipeline report
 
-Final selected: 70 (all configured gates applied).
+Final selected: 41 (all configured gates applied).
 Recommendation candidates: 92
 HN items: {'comment': 279777, 'story': 124215}
 Distinct videos: 261714; mentions: 414480
 Recommender histogram: {1: 216564, 7: 964, 6: 1388, 3: 8504, 31: 22, 4: 3915, 9: 455, 2: 24946, 12: 229, 17: 87, 10: 336, 105: 1, 5: 2219, 30: 16, 21: 45, 19: 64, 11: 270, 34: 9, 39: 8, 16: 112, 18: 83, 15: 122, 63: 2, 8: 647, 13: 146, 67: 1, 14: 127, 45: 4, 82: 2, 35: 10, 32: 13, 29: 19, 25: 26, 94: 1, 84: 1, 125: 1, 41: 6, 56: 2, 46: 6, 198: 1, 26: 17, 24: 32, 23: 43, 37: 11, 95: 1, 28: 13, 48: 8, 22: 33, 104: 1, 27: 21, 33: 16, 73: 3, 184: 1, 53: 3, 36: 11, 38: 14, 52: 3, 180: 1, 64: 2, 20: 37, 77: 1, 47: 3, 81: 1, 59: 2, 57: 1, 79: 2, 62: 3, 43: 5, 108: 1, 66: 1, 51: 1, 109: 1, 72: 1, 54: 2, 87: 1, 110: 1, 83: 1, 42: 9, 216: 1, 75: 1, 98: 2, 128: 1, 69: 1, 40: 5, 58: 4, 107: 1, 138: 1, 49: 2, 61: 3, 50: 2, 71: 2, 88: 1, 149: 1, 80: 1, 74: 1, 85: 1, 44: 1}
-Dropped by gate (independent, overlapping): {'recommenders': 261464, 'months': 261619, 'span': 235035, 'sources': 0, 'metadata_unavailable': 5, 'publish_age': 0, 'duration': 17}
-Approximate cumulative quota units: 80
+Dropped by gate (independent, overlapping): {'recommenders': 261464, 'months': 261619, 'span': 235035, 'sources': 0, 'metadata_unavailable': 5, 'publish_age': 0, 'duration': 17, 'max_upload_age': 29}
+Approximate cumulative quota units: 199
 
 What-if uses cached metadata only; unknowns are not counted as selected.
 
