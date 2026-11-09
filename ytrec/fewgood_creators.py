@@ -122,8 +122,16 @@ def boundary(title, topics):
     t=(title or '').lower()
     cursor_ok=bool(re.search(r'\bcursor\b',t)) and (bool(re.search(r'\b(ai|editor|ide|agent|coding|code)\b',t)))
     if any(x in t for x in ('coding agent','claude code','codex','vibe coding','build an app','build a full')) or cursor_ok: return 'ai-coding','含编程 Agent 信号 → AI 编程'
-    if any(x in t for x in ('agent','agents','agentic','智能体','mcp')): return 'ai-agents','含 Agent 信号 → AI Agent'
-    if any(x in t for x in ('news','funding','ipo','earnings','bubble','data center','policy','regulation','新闻','融资')) and not any(x in t for x in ('stock to buy','price target','market update','美股','股票')): return 'ai-industry','含产业动态信号 → AI 产业动态'
+    # Product names that denote an autonomous assistant belong to Agent even
+    # when a title also lists Claude/Gemini/etc. as comparisons.  This keeps
+    # the main object of a Grok Bot/OpenClaw/Manus tutorial ahead of incidental
+    # competitor-name matches in the product topic.
+    if any(x in t for x in ('agent','agents','agentic','智能体','mcp','grok bot','openclaw','manus')): return 'ai-agents','含 Agent/自主助手信号 → AI Agent'
+    # Interviews about controllability, safety, or company/model dynamics are
+    # not product demos merely because they name Gemini, Claude, or ChatGPT.
+    if any(x in t for x in ('news','funding','ipo','earnings','bubble','data center','policy','regulation','新闻','融资',
+                            'model safety','model risk','models we can’t control','models we can\'t control',
+                            '模型安全','模型失控','失控模型','amodei','altman')) and not any(x in t for x in ('stock to buy','price target','market update','美股','股票')): return 'ai-industry','含产业/模型安全信号 → AI 产业动态'
     matches=[(topic_match(title,x),x['id']) for x in topics if topic_match(title,x)]
     return (min(matches,key=lambda x:x[0][0])[1],None) if matches else (None,None)
 

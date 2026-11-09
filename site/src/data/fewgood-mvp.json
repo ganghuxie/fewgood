@@ -48203,8 +48203,7 @@
         },
         "excluded_by_rule": {
           "duration": 23,
-          "creator_not_topic_tier2": 24,
-          "type_window:talk": 1
+          "creator_not_topic_tier2": 24
         },
         "same_event_skipped": [],
         "creators_in_topic": 28
@@ -48398,33 +48397,11 @@
           "reasons": [
             "内容类型：tutorial（命中：教學、新手）",
             "标题含关键词「Grok Bot」",
-            "来自精选博主 Gary Chen（入池依据：group_c_reference）"
+            "来自精选博主 Gary Chen（入池依据：group_c_reference）",
+            "边界规则：含 Agent/自主助手信号 → AI Agent"
           ],
           "url": "https://www.youtube.com/watch?v=nnTqbMhKr3E",
           "thumbnail": "https://i.ytimg.com/vi/nnTqbMhKr3E/mqdefault.jpg"
-        },
-        {
-          "video_id": "SJywU4UQryQ",
-          "title": "How to Build an AI Agent for Every Part of Your Life",
-          "channel_title": "Dan Martell",
-          "channel_id": "UCA-mWX9CvCTVFWRMb9bKc9w",
-          "published_at": "2026-10-28T13:00:28Z",
-          "duration_seconds": 1671,
-          "view_count": 429702,
-          "topic": "ai-agents",
-          "content_type": "tutorial",
-          "content_type_signals": [
-            "how to"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：tutorial（命中：how to）",
-            "标题含关键词「AI agent」",
-            "来自精选博主 Dan Martell（入池依据：YouTube 高播放发现「best AI tools」）",
-            "边界规则：含 Agent 信号 → AI Agent"
-          ],
-          "url": "https://www.youtube.com/watch?v=SJywU4UQryQ",
-          "thumbnail": "https://i.ytimg.com/vi/SJywU4UQryQ/mqdefault.jpg"
         },
         {
           "video_id": "rCkYVxOX-dI",
@@ -48446,36 +48423,36 @@
             "内容类型：tutorial（命中：build your first）",
             "标题含关键词「AI agent」",
             "来自精选博主 Metics Media（入池依据：YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」）",
-            "边界规则：含 Agent 信号 → AI Agent"
+            "边界规则：含 Agent/自主助手信号 → AI Agent"
           ],
           "url": "https://www.youtube.com/watch?v=rCkYVxOX-dI",
           "thumbnail": "https://i.ytimg.com/vi/rCkYVxOX-dI/mqdefault.jpg"
         },
         {
-          "video_id": "rXFV1ivDe6c",
-          "title": "Are Vector Databases Still Needed? RAG, AI Agents & Search",
-          "channel_title": "IBM Technology",
-          "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ",
-          "published_at": "2026-11-05T12:00:09Z",
-          "duration_seconds": 601,
-          "view_count": 265671,
+          "video_id": "7c1S6DGsL_k",
+          "title": "Grok Bot 新手完整教學：我用它組了一支 24 小時上班的 AI 團隊",
+          "channel_title": "傑少 JAY",
+          "channel_id": "UCz-Sx71_C4d3AYFBj6e3ENw",
+          "published_at": "2026-10-29T09:00:32Z",
+          "duration_seconds": 2591,
+          "view_count": 113979,
           "topic": "ai-agents",
-          "content_type": "explainer",
+          "content_type": "tutorial",
           "content_type_signals": [
-            "architecture",
-            "频道倾向:IBM Technology"
+            "教學",
+            "新手"
           ],
           "sources": [
-            "r3_uploads:IBM Technology"
+            "r3_uploads:傑少 JAY"
           ],
           "reasons": [
-            "内容类型：explainer（命中：architecture、频道倾向:IBM Technology）",
-            "标题含关键词「AI agents」",
-            "来自精选博主 IBM Technology（入池依据：公开线索 + YouTube 核验）",
-            "边界规则：含 Agent 信号 → AI Agent"
+            "内容类型：tutorial（命中：教學、新手）",
+            "标题含关键词「Grok Bot」",
+            "来自精选博主 傑少 JAY（入池依据：group_c_reference）",
+            "边界规则：含 Agent/自主助手信号 → AI Agent"
           ],
-          "url": "https://www.youtube.com/watch?v=rXFV1ivDe6c",
-          "thumbnail": "https://i.ytimg.com/vi/rXFV1ivDe6c/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=7c1S6DGsL_k",
+          "thumbnail": "https://i.ytimg.com/vi/7c1S6DGsL_k/mqdefault.jpg"
         },
         {
           "video_id": "yWW7ZqnRWpo",
@@ -48495,19 +48472,43 @@
             "内容类型：explainer（命中：explained）",
             "标题含关键词「AI agent」",
             "来自精选博主 Apna College（入池依据：YouTube 高播放发现「AI coding agent」 / YouTube 高播放发现「AI 编程」）",
-            "边界规则：含 Agent 信号 → AI Agent"
+            "边界规则：含 Agent/自主助手信号 → AI Agent"
           ],
           "url": "https://www.youtube.com/watch?v=yWW7ZqnRWpo",
           "thumbnail": "https://i.ytimg.com/vi/yWW7ZqnRWpo/mqdefault.jpg"
         },
         {
-          "video_id": "g_NgCLTibiM",
-          "title": "Make Your AI Agents Predictable With Graph Engineering - Zachary Blumenfeld, Neo4j",
+          "video_id": "HdI_aYzgJIg",
+          "title": "Personal Agents, Clearly Explained",
+          "channel_title": "Jeff Su",
+          "channel_id": "UCwAnu01qlnVg1Ai2AbtTMaA",
+          "published_at": "2026-10-13T13:00:11Z",
+          "duration_seconds": 921,
+          "view_count": 322071,
+          "topic": "ai-agents",
+          "content_type": "explainer",
+          "content_type_signals": [
+            "explained",
+            "how .* works"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：explainer（命中：explained、how .* works）",
+            "标题含关键词「agents」",
+            "来自精选博主 Jeff Su（入池依据：公开线索 + YouTube 核验）",
+            "边界规则：含 Agent/自主助手信号 → AI Agent"
+          ],
+          "url": "https://www.youtube.com/watch?v=HdI_aYzgJIg",
+          "thumbnail": "https://i.ytimg.com/vi/HdI_aYzgJIg/mqdefault.jpg"
+        },
+        {
+          "video_id": "EaOit1mmR9g",
+          "title": "How Financial Planners With Zero Coding Experience Built Their Own Agents - Matt Ragone, Range",
           "channel_title": "AI Engineer",
           "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-          "published_at": "2026-11-03T10:00:09Z",
-          "duration_seconds": 1236,
-          "view_count": 144092,
+          "published_at": "2026-11-08T08:00:14Z",
+          "duration_seconds": 969,
+          "view_count": 2129,
           "topic": "ai-agents",
           "content_type": "talk",
           "content_type_signals": [
@@ -48519,12 +48520,12 @@
           ],
           "reasons": [
             "内容类型：talk（命中：频道倾向:AI Engineer、标题“主题 - 嘉宾, 公司”格式）",
-            "标题含关键词「AI agents」",
+            "标题含关键词「agents」",
             "来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单）",
-            "边界规则：含 Agent 信号 → AI Agent"
+            "边界规则：含 Agent/自主助手信号 → AI Agent"
           ],
-          "url": "https://www.youtube.com/watch?v=g_NgCLTibiM",
-          "thumbnail": "https://i.ytimg.com/vi/g_NgCLTibiM/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=EaOit1mmR9g",
+          "thumbnail": "https://i.ytimg.com/vi/EaOit1mmR9g/mqdefault.jpg"
         }
       ]
     },
@@ -48604,6 +48605,28 @@
           "thumbnail": "https://i.ytimg.com/vi/nzAdaWt6oxM/mqdefault.jpg"
         },
         {
+          "video_id": "hfQ82hdI9Oo",
+          "title": "不会 Git，就别说你会 AI 编程！零基础入门，放心让 AI 干活！",
+          "channel_title": "AI学长小林",
+          "channel_id": "UCXYvWkR9LAOsOZjYhghDiXw",
+          "published_at": "2026-10-16T09:00:29Z",
+          "duration_seconds": 990,
+          "view_count": 42117,
+          "topic": "ai-coding",
+          "content_type": "explainer",
+          "content_type_signals": [
+            "架构"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：explainer（命中：架构）",
+            "标题含关键词「AI 编程」",
+            "来自精选博主 AI学长小林（入池依据：YouTube 高播放发现「人工智能 AI」）"
+          ],
+          "url": "https://www.youtube.com/watch?v=hfQ82hdI9Oo",
+          "thumbnail": "https://i.ytimg.com/vi/hfQ82hdI9Oo/mqdefault.jpg"
+        },
+        {
           "video_id": "29F96QJEf6o",
           "title": "借我 40 分鐘，讓我告訴你關於 Claude Code 你需要知道的所有觀念",
           "channel_title": "Gary Chen",
@@ -48629,6 +48652,30 @@
           "thumbnail": "https://i.ytimg.com/vi/29F96QJEf6o/mqdefault.jpg"
         },
         {
+          "video_id": "M2SO-du5PVc",
+          "title": "Build a Fully Automated Trading Algo with AI | Part 2 | No Coding Required",
+          "channel_title": "Zerodha Varsity",
+          "channel_id": "UCQXwgooTlP6tk2a-u6vgyUA",
+          "published_at": "2026-10-09T13:30:06Z",
+          "duration_seconds": 2958,
+          "view_count": 95308,
+          "topic": "ai-coding",
+          "content_type": "talk",
+          "content_type_signals": [
+            "podcast",
+            "时长超过45分钟"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：talk（命中：podcast、时长超过45分钟）",
+            "标题含关键词「coding」",
+            "来自精选博主 Zerodha Varsity（入池依据：YouTube 高播放发现「AI coding agent」 / YouTube 高播放发现「AI 编程」）",
+            "边界规则：含编程 Agent 信号 → AI 编程"
+          ],
+          "url": "https://www.youtube.com/watch?v=M2SO-du5PVc",
+          "thumbnail": "https://i.ytimg.com/vi/M2SO-du5PVc/mqdefault.jpg"
+        },
+        {
           "video_id": "oFtTodDCbkE",
           "title": "7 Things AI Coding Agents Get Wrong (Because You Let Them)",
           "channel_title": "ArjanCodes",
@@ -48650,55 +48697,6 @@
           ],
           "url": "https://www.youtube.com/watch?v=oFtTodDCbkE",
           "thumbnail": "https://i.ytimg.com/vi/oFtTodDCbkE/mqdefault.jpg"
-        },
-        {
-          "video_id": "Ok6QdZHCcI8",
-          "title": "How Revolut Cut AI Coding Costs 90% With Self-Hosted Open Models - David Abitbol, Revolut",
-          "channel_title": "AI Engineer",
-          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-          "published_at": "2026-10-29T09:00:21Z",
-          "duration_seconds": 707,
-          "view_count": 115877,
-          "topic": "ai-coding",
-          "content_type": "talk",
-          "content_type_signals": [
-            "频道倾向:AI Engineer",
-            "标题“主题 - 嘉宾, 公司”格式"
-          ],
-          "sources": [
-            "r3_uploads:AI Engineer"
-          ],
-          "reasons": [
-            "内容类型：talk（命中：频道倾向:AI Engineer、标题“主题 - 嘉宾, 公司”格式）",
-            "标题含关键词「AI coding」",
-            "来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单）"
-          ],
-          "url": "https://www.youtube.com/watch?v=Ok6QdZHCcI8",
-          "thumbnail": "https://i.ytimg.com/vi/Ok6QdZHCcI8/mqdefault.jpg"
-        },
-        {
-          "video_id": "gN6wl-OX8-Q",
-          "title": "This Free Repo Lets Claude Code Build Any Mac App",
-          "channel_title": "Dave Ebbelaar",
-          "channel_id": "UCn8ujwUInbJkBhffxqAPBVQ",
-          "published_at": "2026-10-26T20:34:35Z",
-          "duration_seconds": 492,
-          "view_count": 127715,
-          "topic": "ai-coding",
-          "content_type": "explainer",
-          "content_type_signals": [
-            "how .* works",
-            "architecture"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：explainer（命中：how .* works、architecture）",
-            "标题含关键词「Claude Code」",
-            "来自精选博主 Dave Ebbelaar（入池依据：公开线索 + YouTube 核验）",
-            "边界规则：含编程 Agent 信号 → AI 编程"
-          ],
-          "url": "https://www.youtube.com/watch?v=gN6wl-OX8-Q",
-          "thumbnail": "https://i.ytimg.com/vi/gN6wl-OX8-Q/mqdefault.jpg"
         }
       ]
     },
@@ -48707,7 +48705,7 @@
       "name_zh": "AI 产品与应用",
       "definition": "关注面向真实用户的 AI 产品、功能与使用案例。",
       "stats": {
-        "eligible": 110,
+        "eligible": 107,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48716,11 +48714,10 @@
         },
         "mix_shown": {
           "tutorial": 4,
-          "explainer": 1,
-          "talk": 1
+          "explainer": 2
         },
         "excluded_by_rule": {
-          "duration": 186,
+          "duration": 185,
           "creator_not_topic_tier2": 8,
           "live_or_upcoming": 1,
           "exclude:get rich": 2,
@@ -48731,6 +48728,50 @@
         "creators_in_topic": 38
       },
       "videos": [
+        {
+          "video_id": "7HQ4FWVwAsk",
+          "title": "Full Claude Tutorial for Beginners - Become A Pro In Just 30 Minutes!",
+          "channel_title": "Ayushman Pandita",
+          "channel_id": "UCyWN-BnWSKeHEnNOYvvpNnA",
+          "published_at": "2026-10-24T11:19:13Z",
+          "duration_seconds": 1915,
+          "view_count": 79639,
+          "topic": "ai-products",
+          "content_type": "tutorial",
+          "content_type_signals": [
+            "tutorial"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：tutorial（命中：tutorial）",
+            "标题含关键词「Claude」",
+            "来自精选博主 Ayushman Pandita（入池依据：YouTube 高播放发现「best AI tools」）"
+          ],
+          "url": "https://www.youtube.com/watch?v=7HQ4FWVwAsk",
+          "thumbnail": "https://i.ytimg.com/vi/7HQ4FWVwAsk/mqdefault.jpg"
+        },
+        {
+          "video_id": "-I9Csc3khis",
+          "title": "ChatGPT Dots Tutorial for Beginners",
+          "channel_title": "Kevin Stratvert",
+          "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig",
+          "published_at": "2026-10-20T07:00:17Z",
+          "duration_seconds": 528,
+          "view_count": 78859,
+          "topic": "ai-products",
+          "content_type": "tutorial",
+          "content_type_signals": [
+            "tutorial"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：tutorial（命中：tutorial）",
+            "标题含关键词「ChatGPT」",
+            "来自精选博主 Kevin Stratvert（入池依据：公开线索 + YouTube 核验）"
+          ],
+          "url": "https://www.youtube.com/watch?v=-I9Csc3khis",
+          "thumbnail": "https://i.ytimg.com/vi/-I9Csc3khis/mqdefault.jpg"
+        },
         {
           "video_id": "Ge1B-Ok1Pfk",
           "title": "Claude Makes a New Kind of Video - Full Tutorial",
@@ -48754,57 +48795,37 @@
           "thumbnail": "https://i.ytimg.com/vi/Ge1B-Ok1Pfk/mqdefault.jpg"
         },
         {
-          "video_id": "NBCM_ZoWZo8",
-          "title": "How To Give Claude Unlimited Usage",
+          "video_id": "wj7mHCviMvs",
+          "title": "15 分鐘學完 CLAUDE.md：從入門到精通",
+          "channel_title": "Gary Chen",
+          "channel_id": "UC9C3t-3ocL0LiwGRD0gBJ8A",
+          "published_at": "2026-07-30T11:30:37Z",
+          "duration_seconds": 986,
+          "view_count": 65182,
+          "topic": "ai-products",
+          "content_type": "explainer",
+          "content_type_signals": [
+            "默认：非使用导向的更新/新闻按新技术解读"
+          ],
+          "sources": [
+            "r3_uploads:Gary Chen"
+          ],
+          "reasons": [
+            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
+            "标题含关键词「Claude」",
+            "来自精选博主 Gary Chen（入池依据：group_c_reference）"
+          ],
+          "url": "https://www.youtube.com/watch?v=wj7mHCviMvs",
+          "thumbnail": "https://i.ytimg.com/vi/wj7mHCviMvs/mqdefault.jpg"
+        },
+        {
+          "video_id": "TFCDWrEBaFM",
+          "title": "How Claude Fixes It's Own Code",
           "channel_title": "Theo - t3․gg",
           "channel_id": "UCbRP3c757lWg9M-U7TyEkXA",
-          "published_at": "2026-10-28T19:05:28Z",
-          "duration_seconds": 2328,
-          "view_count": 224366,
-          "topic": "ai-products",
-          "content_type": "tutorial",
-          "content_type_signals": [
-            "how to"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：tutorial（命中：how to）",
-            "标题含关键词「Claude」",
-            "来自精选博主 Theo - t3.gg（入池依据：X 认证资料 + YouTube 核验）"
-          ],
-          "url": "https://www.youtube.com/watch?v=NBCM_ZoWZo8",
-          "thumbnail": "https://i.ytimg.com/vi/NBCM_ZoWZo8/mqdefault.jpg"
-        },
-        {
-          "video_id": "aRY7YrXOmKo",
-          "title": "🚀Grok Bot进阶玩法保姆级教程！超越Meta Muse/OpenAI Dots/Claude Duet！定制专属邮箱、自动沉淀skill、Pages制作、视频生成！让Grok Bot越用越聪明",
-          "channel_title": "AI超元域",
-          "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A",
-          "published_at": "2026-11-07T12:25:48Z",
-          "duration_seconds": 486,
-          "view_count": 19394,
-          "topic": "ai-products",
-          "content_type": "tutorial",
-          "content_type_signals": [
-            "教程"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：tutorial（命中：教程）",
-            "标题含关键词「Claude」",
-            "来自精选博主 AI超元域（入池依据：X 资料直接链接 YouTube）"
-          ],
-          "url": "https://www.youtube.com/watch?v=aRY7YrXOmKo",
-          "thumbnail": "https://i.ytimg.com/vi/aRY7YrXOmKo/mqdefault.jpg"
-        },
-        {
-          "video_id": "DByAR5Su1Yw",
-          "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
-          "channel_title": "Nate Herk | AI Automation",
-          "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
-          "published_at": "2026-10-30T00:45:46Z",
-          "duration_seconds": 831,
-          "view_count": 658071,
+          "published_at": "2026-11-06T23:00:39Z",
+          "duration_seconds": 2535,
+          "view_count": 116916,
           "topic": "ai-products",
           "content_type": "explainer",
           "content_type_signals": [
@@ -48814,55 +48835,34 @@
           "reasons": [
             "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
             "标题含关键词「Claude」",
-            "来自精选博主 Nate Herk（入池依据：X 资料直接链接 YouTube）"
+            "来自精选博主 Theo - t3.gg（入池依据：X 认证资料 + YouTube 核验）"
           ],
-          "url": "https://www.youtube.com/watch?v=DByAR5Su1Yw",
-          "thumbnail": "https://i.ytimg.com/vi/DByAR5Su1Yw/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=TFCDWrEBaFM",
+          "thumbnail": "https://i.ytimg.com/vi/TFCDWrEBaFM/mqdefault.jpg"
         },
         {
-          "video_id": "0Kw6_DTZPrY",
-          "title": "‘We may release models we can’t control’: Amodei, Altman … and Gemini Carbon",
-          "channel_title": "AI Explained",
-          "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
-          "published_at": "2026-11-02T17:02:16Z",
-          "duration_seconds": 1675,
-          "view_count": 137771,
-          "topic": "ai-products",
-          "content_type": "talk",
-          "content_type_signals": [
-            "interview",
-            "podcast"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：talk（命中：interview、podcast）",
-            "标题含关键词「Gemini」",
-            "来自精选博主 AI Explained（入池依据：原有 X→YouTube 名单）"
-          ],
-          "url": "https://www.youtube.com/watch?v=0Kw6_DTZPrY",
-          "thumbnail": "https://i.ytimg.com/vi/0Kw6_DTZPrY/mqdefault.jpg"
-        },
-        {
-          "video_id": "7HQ4FWVwAsk",
-          "title": "Full Claude Tutorial for Beginners - Become A Pro In Just 30 Minutes!",
-          "channel_title": "Ayushman Pandita",
-          "channel_id": "UCyWN-BnWSKeHEnNOYvvpNnA",
-          "published_at": "2026-10-24T11:19:13Z",
-          "duration_seconds": 1915,
-          "view_count": 79639,
+          "video_id": "-7jk1Y7AU7w",
+          "title": "Build $10,000 Websites using ChatGPT (Ultimate Guide)",
+          "channel_title": "Metics Media",
+          "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ",
+          "published_at": "2026-10-25T11:07:55Z",
+          "duration_seconds": 1510,
+          "view_count": 53067,
           "topic": "ai-products",
           "content_type": "tutorial",
           "content_type_signals": [
-            "tutorial"
+            "guide"
           ],
-          "sources": [],
+          "sources": [
+            "r3_uploads:Metics Media"
+          ],
           "reasons": [
-            "内容类型：tutorial（命中：tutorial）",
-            "标题含关键词「Claude」",
-            "来自精选博主 Ayushman Pandita（入池依据：YouTube 高播放发现「best AI tools」）"
+            "内容类型：tutorial（命中：guide）",
+            "标题含关键词「ChatGPT」",
+            "来自精选博主 Metics Media（入池依据：YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」）"
           ],
-          "url": "https://www.youtube.com/watch?v=7HQ4FWVwAsk",
-          "thumbnail": "https://i.ytimg.com/vi/7HQ4FWVwAsk/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=-7jk1Y7AU7w",
+          "thumbnail": "https://i.ytimg.com/vi/-7jk1Y7AU7w/mqdefault.jpg"
         }
       ]
     },
@@ -48871,7 +48871,7 @@
       "name_zh": "AI 产业动态",
       "definition": "关注 AI 公司、政策、融资、合作与行业变化。",
       "stats": {
-        "eligible": 71,
+        "eligible": 72,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48884,9 +48884,10 @@
         },
         "excluded_by_rule": {
           "creator_not_topic_tier2": 28,
-          "duration": 91,
+          "duration": 92,
           "type_window:explainer": 6,
-          "type_window:tutorial": 1
+          "type_window:tutorial": 1,
+          "type_window:talk": 1
         },
         "same_event_skipped": [
           {
@@ -48920,7 +48921,7 @@
             "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
             "标题含关键词「AI bubble」",
             "来自精选博主 The Deshbhakt（入池依据：YouTube 高播放发现「AI news」）",
-            "边界规则：含产业动态信号 → AI 产业动态"
+            "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
           "url": "https://www.youtube.com/watch?v=P_0B2iyXUIo",
           "thumbnail": "https://i.ytimg.com/vi/P_0B2iyXUIo/mqdefault.jpg"
@@ -48943,33 +48944,35 @@
             "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
             "标题含关键词「AI bubble」",
             "来自精选博主 The Infographics Show（入池依据：YouTube 高播放发现「AI 编程」）",
-            "边界规则：含产业动态信号 → AI 产业动态"
+            "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
           "url": "https://www.youtube.com/watch?v=MgngwkPAuqQ",
           "thumbnail": "https://i.ytimg.com/vi/MgngwkPAuqQ/mqdefault.jpg"
         },
         {
-          "video_id": "2v8b062QzTI",
-          "title": "Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze, What’s Next for Trump",
-          "channel_title": "All-In Podcast",
-          "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
-          "published_at": "2026-11-07T18:32:58Z",
-          "duration_seconds": 5584,
-          "view_count": 465638,
+          "video_id": "u15N3l4RT80",
+          "title": "The OpenAI/Hugging Face attack, clearly explained",
+          "channel_title": "Dwarkesh Patel",
+          "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+          "published_at": "2026-08-31T20:49:34Z",
+          "duration_seconds": 1481,
+          "view_count": 1199716,
           "topic": "ai-industry",
           "content_type": "talk",
           "content_type_signals": [
-            "时长超过45分钟"
+            "podcast",
+            "频道倾向:Dwarkesh"
           ],
-          "sources": [],
+          "sources": [
+            "r3_uploads:Dwarkesh Patel"
+          ],
           "reasons": [
-            "内容类型：talk（命中：时长超过45分钟）",
-            "标题含关键词「data center」",
-            "来自精选博主 All-In Podcast（入池依据：X 资料直接链接 YouTube）",
-            "边界规则：含产业动态信号 → AI 产业动态"
+            "内容类型：talk（命中：podcast、频道倾向:Dwarkesh）",
+            "标题含关键词「OpenAI」",
+            "来自精选博主 Dwarkesh Patel（入池依据：X 资料直接链接 YouTube）"
           ],
-          "url": "https://www.youtube.com/watch?v=2v8b062QzTI",
-          "thumbnail": "https://i.ytimg.com/vi/2v8b062QzTI/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=u15N3l4RT80",
+          "thumbnail": "https://i.ytimg.com/vi/u15N3l4RT80/mqdefault.jpg"
         },
         {
           "video_id": "nEaJMdM1djM",
@@ -48989,7 +48992,7 @@
             "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
             "标题含关键词「AI bubble」",
             "来自精选博主 Fireship（入池依据：X 资料直接链接 YouTube）",
-            "边界规则：含产业动态信号 → AI 产业动态"
+            "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
           "url": "https://www.youtube.com/watch?v=nEaJMdM1djM",
           "thumbnail": "https://i.ytimg.com/vi/nEaJMdM1djM/mqdefault.jpg"
@@ -49012,7 +49015,7 @@
             "内容类型：explainer（命中：新闻/更新优先:AI news）",
             "标题含关键词「AI news」",
             "来自精选博主 Matt Wolfe（入池依据：X 资料直接链接 YouTube）",
-            "边界规则：含产业动态信号 → AI 产业动态"
+            "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
           "url": "https://www.youtube.com/watch?v=IrAHINf0M6E",
           "thumbnail": "https://i.ytimg.com/vi/IrAHINf0M6E/mqdefault.jpg"
@@ -49035,7 +49038,7 @@
             "内容类型：explainer（命中：新闻/更新优先:news）",
             "标题含关键词「data center」",
             "来自精选博主 DW News（入池依据：YouTube 高播放发现「AI 新闻」）",
-            "边界规则：含产业动态信号 → AI 产业动态"
+            "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
           "url": "https://www.youtube.com/watch?v=vYxljf_Y17g",
           "thumbnail": "https://i.ytimg.com/vi/vYxljf_Y17g/mqdefault.jpg"

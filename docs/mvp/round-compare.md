@@ -175,3 +175,41 @@ R3 在 R2b 的保存候选上离线重选；新增 Gary Chen、傑少 JAY、Meti
 | AI 产业动态 | 0 | 5 | 1 | 该主题的保存候选主要是新闻/产业解读 |
 
 R3 的新闻或更新标题一律归为“底层逻辑讲解”，即使说明文字带有 tutorial；显式的 `How to`、`教程`、`新手教學` 等标题仍归“教程上手”。`Claude Code` 仍优先归 AI 编程；独立的 Claude、Meta Muse、ChatGPT 则按产品规则处理。
+
+## R3b（R3 边界与受众偏好修订，2026-11-08 离线重放）
+
+R3b 仍只重放 `fewgood-r3-raw.json`，没有新增抓取或 API 调用，且保持 30 人 / 36 个月 / 70 条的原有门槛。目标组合仍是教程 / 解读 / 讲座 = 3 / 2 / 1；候选不合适时不硬补。
+
+规则修订如下：Grok Bot、OpenClaw、Manus 等自主助手是 Agent 边界，优先于标题中仅作比较的 Claude、Gemini、Meta Muse 等产品名；模型失控、安全、Amodei/Altman 访谈等优先归产业动态而不是产品。排序在营销信号、主题命中之后增加不对外展示的受众适配层：新手、零代码、第一支 Agent、清晰讲解优先；Graph/Harness Engineering、框架/生产工程会议内容和“every part of your life”式生活教练/营销表述降级，然后才以播放/日的对数排序。同一规则适用于所有候选，不按 C 组视频 ID 强制入选或排除。
+
+### AI Agent Top6（R3b）
+
+| # | video id | 频道 | 类型 |
+| --- | --- | --- | --- |
+| 1 | `nnTqbMhKr3E` | Gary Chen | 教程 |
+| 2 | `rCkYVxOX-dI` | Metics Media | 教程 |
+| 3 | `7c1S6DGsL_k` | 傑少 JAY | 教程 |
+| 4 | `yWW7ZqnRWpo` | Apna College | 解读 |
+| 5 | `HdI_aYzgJIg` | Jeff Su | 解读 |
+| 6 | `EaOit1mmR9g` | AI Engineer | 讲座 |
+
+实际 mix 为 **3 / 2 / 1**。相对旧 R3，保留 `nnTqbMhKr3E`、`rCkYVxOX-dI`、`yWW7ZqnRWpo`（3/6）；移出 Dan Martell 的生活场景教程、IBM Vector DB 解读和 Graph Engineering 讲座，补入傑少、Jeff Su 和“零代码经验也能搭建”的讲座。与 C 组重合从 2/6 提升至 **4/6**（`nnTqbMhKr3E`、`rCkYVxOX-dI`、`7c1S6DGsL_k`、`HdI_aYzgJIg`）；这是规则排序的结果，不是 C 组硬配额。
+
+### AI 产品与应用 Top6（R3b）
+
+| # | video id | 频道 | 类型 |
+| --- | --- | --- | --- |
+| 1 | `7HQ4FWVwAsk` | Ayushman Pandita | 教程 |
+| 2 | `-I9Csc3khis` | Kevin Stratvert | 教程 |
+| 3 | `Ge1B-Ok1Pfk` | Futurepedia | 教程 |
+| 4 | `wj7mHCviMvs` | Gary Chen | 解读 |
+| 5 | `TFCDWrEBaFM` | Theo - t3․gg | 解读 |
+| 6 | `-7jk1Y7AU7w` | Metics Media | 教程 |
+
+实际 mix 为 **4 / 2 / 0**：没有足够适配普通用户的讲座时不填讲座位。相对旧 R3，保留 `7HQ4FWVwAsk`、`Ge1B-Ok1Pfk`（2/6）；`aRY7YrXOmKo` 的 Grok Bot 教程已按主体移至 Agent 边界，`0Kw6_DTZPrY` 的模型可控性访谈已移至产业动态，均不再占产品位。与 C 产品参考组重合仍为 **2/6**（`7HQ4FWVwAsk`、`Ge1B-Ok1Pfk`），说明当前缓存中仍有产品教程排序/候选覆盖限制，不能将未进 C 的视频一概视为负例。
+
+### 仍未解决项
+
+- `Lg-meK5IU8Q`（IBM Agent Skills）不在本轮 `candidate_videos` 缓存，离线重选不能伪造其出现。
+- 本轮只根据标题、频道和保存的统计做可审计规则判断，未观看视频；“普通人可上手”的判断仍须 Jason 复核。
+- 产品候选没有合适讲座，故未达成 3 / 2 / 1 的目标配额；这是有意保留的候选不足，而不是降低门槛补位。

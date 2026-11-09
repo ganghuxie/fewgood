@@ -98,9 +98,39 @@ def _candidate_score(item, reference):
     age_days=max(1, (reference-published).total_seconds()/86400)
     views=int(row.get('statistics',{}).get('viewCount',0) or 0)
     # Log keeps an outlier from dominating while still making demonstrated
-    # viewer interest the primary ordering signal inside a keyword tier.
+    # viewer interest the ordering signal inside an equally suitable tier.
     quality=math.log1p(views/age_days)
-    return (bool(clickbait_signals(row.get('snippet',{}).get('title',''))), match[0], -quality, -published.timestamp(), row['id'])
+    return (bool(clickbait_signals(row.get('snippet',{}).get('title',''))),
+            _audience_preference_rank(row, kind), match[0], -quality,
+            -published.timestamp(), row['id'])
+
+def _audience_preference_rank(row, kind):
+    """Return a title-only, topic-agnostic learner-fit tier (lower is better).
+
+    This is deliberately a coarse ordering tier, not a displayed quality score:
+    practical beginner instruction and plain-language explanation outrank a
+    lifestyle pitch or highly specialised engineering talk before views/day is
+    used.  It neither excludes the latter nor relies on manual C-group IDs.
+    """
+    title=(row.get('snippet',{}).get('title','') or '').casefold()
+    beginner=(
+        'beginner', 'newbie', 'new user', '新手', '入門', '入门', '不用寫程式',
+        '不用写程序', 'no coding', 'zero coding', 'build your first', '第一個',
+        '第一个', 'clearly explained', 'simply explained', 'plain english',
+        '給爸媽', '给爸妈', "anyone's mom",
+    )
+    specialised=(
+        'graph engineering', 'harness engineering', 'agent harness', 'langgraph',
+        'framework', 'production infrastructure', 'evals', 'mission critical',
+        'interrupt london', 'conference', 'keynote',
+    )
+    lifestyle=('every part of your life', 'life coach', 'personal brand', 'make money')
+    if any(term in title for term in specialised): return 3
+    if any(term in title for term in lifestyle): return 2
+    if any(term in title for term in beginner): return 0
+    # A tutorial's explicit instructional classification still makes it more
+    # useful than an otherwise neutral clip, but is weaker than beginner cues.
+    return 1
 
 def select(raw, mode='select'):
     reference=parse_time(raw.get('data_refreshed_at',iso())); topics=cfg()['topics']; types=types_config()

@@ -1,6 +1,8 @@
 import inspect
 from datetime import datetime, timezone
+from pathlib import Path
 
+import yaml
 from ytrec.fewgood_creators import boundary
 from ytrec.fewgood_r3 import _candidate_score, classify_content, creator_records, estimate, select, types_config, window_failure
 from ytrec.fewgood_creators import cfg
@@ -33,6 +35,8 @@ def test_classifier_requires_explicit_instruction_and_exposes_signals():
 def test_configured_product_boundaries_and_quality_ranking():
     topics=cfg()['topics']
     assert boundary('Grok Bot 新手教學，30 分鐘學會！', topics)[0] == 'ai-agents'
+    assert boundary('Grok Bot进阶玩法教程：超越 Meta Muse / Claude Duet', topics)[0] == 'ai-agents'
+    assert boundary('We may release models we can’t control: Amodei, Altman and Gemini', topics)[0] != 'ai-products'
     assert boundary('How to Use Meta Muse', topics)[0] == 'ai-products'
     assert boundary('Full Claude Tutorial for Beginners', topics)[0] == 'ai-products'
     ref=datetime(2026,11,8,tzinfo=timezone.utc)
@@ -42,6 +46,30 @@ def test_configured_product_boundaries_and_quality_ranking():
     strong['statistics']['viewCount']='671665'
     item=lambda row: (row, creator(row['snippet']['channelId']), (1, 'AI agent'), 'tutorial', ['tutorial'], None)
     assert _candidate_score(item(strong), ref) < _candidate_score(item(weak), ref)
+
+def test_beginner_agent_tutorial_outranks_lifestyle_pitch_at_equal_interest():
+    ref=datetime(2026,11,8,tzinfo=timezone.utc)
+    beginner=video('beginner', 'jay', 'Grok Bot 新手完整教學：組一支 AI 團隊')
+    lifestyle=video('lifestyle', 'dan', 'How to Build an AI Agent for Every Part of Your Life')
+    beginner['statistics']['viewCount']=lifestyle['statistics']['viewCount']='10000'
+    item=lambda row: (row, creator(row['snippet']['channelId']), (1, 'AI agent'), 'tutorial', ['tutorial'], None)
+    assert _candidate_score(item(beginner), ref) < _candidate_score(item(lifestyle), ref)
+
+def test_hardcore_talk_does_not_take_agent_talk_slot_over_plain_language_talk():
+    rows=[]; creators=[]
+    for index in range(3):
+        channel=f't{index}'; creators.append(creator(channel)); rows.append(video(f't{index}',channel,'AI agent tutorial guide'))
+    for index in range(2):
+        channel=f'e{index}'; creators.append(creator(channel)); rows.append(video(f'e{index}',channel,'AI agent explained: how it works'))
+    graph=video('graph', 'AI Engineer', 'Make Your AI Agents Predictable With Graph Engineering - Zachary, Neo4j', minutes=60)
+    plain=video('plain', 'AI Engineer 2', 'How Financial Planners With Zero Coding Experience Built Their Own Agents - Matt, Range', minutes=60)
+    graph['statistics']['viewCount']='900000'; plain['statistics']['viewCount']='1000'
+    creators.extend([creator('AI Engineer',600000),creator('AI Engineer 2',600000)])
+    rows.extend([graph,plain])
+    raw={'data_refreshed_at':NOW,'creators':creators,'candidate_videos':rows,'usage_summary':{},'baseline':{}}
+    agents=next(t for t in select(raw)['topics'] if t['id']=='ai-agents')
+    assert 'plain' in [v['video_id'] for v in agents['videos']]
+    assert 'graph' not in [v['video_id'] for v in agents['videos']]
 
 def test_group_c_replay_restores_included_but_keeps_subscriber_floor():
     raw={'creators':[{'name':'Gary Chen','channel_id':'UC9C3t-3ocL0LiwGRD0gBJ8A','subscriber_count':103000,
@@ -88,3 +116,10 @@ def test_fetch_plan_is_uploads_only_and_budgeted():
     assert "f.call('search'" not in source
     plan=estimate()
     assert plan['units_upper_bound'] > 0
+
+def test_global_recommendation_thresholds_are_not_relaxed():
+    config=yaml.safe_load((Path(__file__).parents[1] / 'config.yaml').read_text())
+    recommendation=config['recommendation']
+    assert recommendation['min_recommenders'] == 30
+    assert recommendation['min_months'] == 36
+    assert config['metadata']['min_duration_seconds'] >= 300
