@@ -2,7 +2,8 @@ name: Daily data refresh
 
 on:
   schedule:
-    - cron: '0 23 * * *'
+    # Avoid top-of-hour GitHub schedule delays; target ~07:17 Asia/Shanghai.
+    - cron: '17 23 * * *'
   workflow_dispatch:
     inputs:
       mode:
