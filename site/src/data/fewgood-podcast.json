@@ -1,0 +1,1519 @@
+{
+  "theme": {
+    "id": "podcast",
+    "name_zh": "播客",
+    "creator_pool_gate": "订阅数至少 1000（官方/节目品牌可豁免）、180 天内有上传、且须有来源依据；不满足则不入池。",
+    "search_call_cap": 0,
+    "other_unit_cap": 300,
+    "top_n": 6,
+    "max_per_channel_in_top": 2,
+    "fallback": "宁缺毋滥：候选不足 6 条时展示实际数量，不放宽规则。"
+  },
+  "generated_at": "2026-11-09T13:48:43Z",
+  "data_refreshed_at": "2026-11-09T13:48:43Z",
+  "round": "podcast-1",
+  "mode": "fetch",
+  "usage_summary": {
+    "calls": [
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:26Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:26Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:26Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:26Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:27Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:27Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:27Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:28Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:28Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:28Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:29Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:29Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:30Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:31Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:31Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:31Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:31Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:32Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:32Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:32Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:32Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:33Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:33Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:33Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:33Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:33Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:34Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:34Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:35Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:35Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:35Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "channels",
+        "purpose": "podcast_channel",
+        "timestamp": "2026-11-09T13:48:35Z",
+        "http_status": 200,
+        "returned": 1
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "podcast_uploads",
+        "timestamp": "2026-11-09T13:48:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:37Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:38Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:39Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:40Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:41Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:42Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:43Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "videos",
+        "purpose": "podcast_details",
+        "timestamp": "2026-11-09T13:48:43Z",
+        "http_status": 200,
+        "returned": 50
+      }
+    ],
+    "search_calls": 0,
+    "other_units": 75,
+    "old_model_units": 75,
+    "aborted_reason": null
+  },
+  "creators": [
+    {
+      "name": "Lex Fridman",
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+      "lang": "en",
+      "subtopics": [
+        "pod-tech-ai",
+        "pod-society"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 5070000,
+      "handle": "@lexfridman",
+      "uploads_playlist": "UUSHZKyawb77ixDdsGog4iWA",
+      "last_upload_at": "2026-10-26T22:51:51Z",
+      "status": "included"
+    },
+    {
+      "name": "Latent Space",
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "lang": "en",
+      "subtopics": [
+        "pod-tech-ai"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 460000,
+      "handle": "@latentspacepod",
+      "uploads_playlist": "UUxBcwypKK-W3GHd_RZ9FZrQ",
+      "last_upload_at": "2026-11-08T21:23:23Z",
+      "status": "included"
+    },
+    {
+      "name": "Dwarkesh Patel",
+      "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+      "lang": "en",
+      "subtopics": [
+        "pod-tech-ai"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 1460000,
+      "handle": "@dwarkeshpatel",
+      "uploads_playlist": "UUXl4i9dYBrFOabk0xGmbkRA",
+      "last_upload_at": "2026-11-07T21:53:54Z",
+      "status": "included"
+    },
+    {
+      "name": "All-In Podcast",
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+      "lang": "en",
+      "subtopics": [
+        "pod-business"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 1170000,
+      "handle": "@allin",
+      "uploads_playlist": "UUESLZhusAkFfsNsApnjF_Cg",
+      "last_upload_at": "2026-11-08T15:30:28Z",
+      "status": "included"
+    },
+    {
+      "name": "a16z",
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+      "lang": "en",
+      "subtopics": [
+        "pod-business",
+        "pod-tech-ai"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 308000,
+      "handle": "@a16z",
+      "uploads_playlist": "UU9cn0TuPq4dnbTY-CBsm8XA",
+      "last_upload_at": "2026-11-06T15:30:09Z",
+      "status": "included"
+    },
+    {
+      "name": "Lenny's Podcast",
+      "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
+      "lang": "en",
+      "subtopics": [
+        "pod-business"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 651000,
+      "handle": "@lennyspodcast",
+      "uploads_playlist": "UU6t1O76G0jYXOAoYCm153dA",
+      "last_upload_at": "2026-11-08T13:30:30Z",
+      "status": "included"
+    },
+    {
+      "name": "No Priors",
+      "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
+      "lang": "en",
+      "subtopics": [
+        "pod-tech-ai"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 100000,
+      "handle": "@nopriorspodcast",
+      "uploads_playlist": "UUSI7h9hydQ40K5MJHnCrQvw",
+      "last_upload_at": "2026-11-09T01:07:45Z",
+      "status": "included"
+    },
+    {
+      "name": "Big Technology Podcast",
+      "channel_id": "UCaKiCexVhZ459j9sZ2e7XdQ",
+      "lang": "en",
+      "subtopics": [
+        "pod-tech-ai"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 11700,
+      "handle": "@bigtechnologypodcast",
+      "uploads_playlist": "UUaKiCexVhZ459j9sZ2e7XdQ",
+      "last_upload_at": "2026-11-08T03:53:29Z",
+      "status": "included"
+    },
+    {
+      "name": "Acquired",
+      "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
+      "lang": "en",
+      "subtopics": [
+        "pod-business"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 340000,
+      "handle": "@acquiredfm",
+      "uploads_playlist": "UUyFqFYfTW2VoIQKylJ04Rtw",
+      "last_upload_at": "2026-10-19T04:22:04Z",
+      "status": "included"
+    },
+    {
+      "name": "Y Combinator",
+      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
+      "lang": "en",
+      "subtopics": [
+        "pod-business"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 2430000,
+      "handle": "@ycombinator",
+      "uploads_playlist": "UUcefcZRL2oaA_uBNeo5UOWg",
+      "last_upload_at": "2026-11-08T15:00:39Z",
+      "status": "included"
+    },
+    {
+      "name": "Sequoia Capital",
+      "channel_id": "UCWrF0oN6unbXrWsTN7RctTw",
+      "lang": "en",
+      "subtopics": [
+        "pod-business"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 257000,
+      "handle": "@sequoiacapital",
+      "uploads_playlist": "UUWrF0oN6unbXrWsTN7RctTw",
+      "last_upload_at": "2026-11-05T19:15:27Z",
+      "status": "included"
+    },
+    {
+      "name": "HubermanLab",
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg",
+      "lang": "en",
+      "subtopics": [
+        "pod-science-health"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 8010000,
+      "handle": "@hubermanlab",
+      "uploads_playlist": "UU2D2CMWXMOVWx7giW1n3LIg",
+      "last_upload_at": "2026-11-09T13:00:23Z",
+      "status": "included"
+    },
+    {
+      "name": "TED",
+      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
+      "lang": "en",
+      "subtopics": [
+        "pod-society",
+        "pod-science-health"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "subscriber_count": 28000000,
+      "handle": "@ted",
+      "uploads_playlist": "UUAuUUnT6oDeKwE6v1NGQxug",
+      "last_upload_at": "2026-11-08T16:00:32Z",
+      "status": "included"
+    },
+    {
+      "name": "硅谷101视频专栏",
+      "channel_id": "UCKV2yWPB3wn0RTZh3cTD8YA",
+      "lang": "zh",
+      "subtopics": [
+        "pod-zh"
+      ],
+      "evidence": [
+        "jason_curated"
+      ],
+      "status": "included",
+      "handle": "@thevalley101",
+      "subscriber_count": 475000,
+      "uploads_playlist": "UUKV2yWPB3wn0RTZh3cTD8YA",
+      "last_upload_at": "2026-11-05T15:05:26Z"
+    },
+    {
+      "name": "硅谷101播客",
+      "channel_id": "UChnNjLyx_5rk_iDPQ2BQDQA",
+      "lang": "zh",
+      "subtopics": [
+        "pod-zh"
+      ],
+      "evidence": [
+        "existing_registry"
+      ],
+      "status": "included",
+      "handle": "@valley101podcast",
+      "subscriber_count": 79800,
+      "uploads_playlist": "UUhnNjLyx_5rk_iDPQ2BQDQA",
+      "last_upload_at": "2026-11-04T08:04:49Z"
+    }
+  ],
+  "topics": [
+    {
+      "id": "pod-tech-ai",
+      "name_zh": "科技与 AI",
+      "definition": "AI、软件与科技产业的深度访谈和行业播客。",
+      "stats": {
+        "eligible": 172,
+        "shown": 6,
+        "mix_target": {
+          "interview": 3,
+          "deep_dive": 2,
+          "talk": 1
+        },
+        "mix_shown": {
+          "interview": 6
+        },
+        "excluded_by_rule": {
+          "too_long": 16,
+          "excluded_term": 22,
+          "type_window:interview": 48,
+          "too_short": 286,
+          "type_window:talk": 1
+        },
+        "creators_in_topic": 6
+      },
+      "videos": [
+        {
+          "video_id": "dpY7YzZo4kE",
+          "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+          "channel_title": "Latent Space",
+          "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+          "published_at": "2026-11-08T21:23:23Z",
+          "duration_seconds": 7245,
+          "view_count": 6531,
+          "topic": "pod-tech-ai",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "interview",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:Latent Space"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：interview、with）",
+            "主题依据：ai",
+            "来自精选创作者 Latent Space（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=dpY7YzZo4kE",
+          "thumbnail": "https://i.ytimg.com/vi/dpY7YzZo4kE/mqdefault.jpg"
+        },
+        {
+          "video_id": "rSWiNE92xqM",
+          "title": "GitHub’s Growth: 225M Developers, 34.3B Commits — Jay Parikh, EVP of CoreAI, Microsoft",
+          "channel_title": "Latent Space",
+          "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+          "published_at": "2026-11-08T01:22:17Z",
+          "duration_seconds": 1395,
+          "view_count": 3350,
+          "topic": "pod-tech-ai",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "interview",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:Latent Space"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：interview、with）",
+            "主题依据：ai",
+            "来自精选创作者 Latent Space（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=rSWiNE92xqM",
+          "thumbnail": "https://i.ytimg.com/vi/rSWiNE92xqM/mqdefault.jpg"
+        },
+        {
+          "video_id": "y4BdOtm40SA",
+          "title": "Inside Salesforce’s Acquisition Strategy for the AI Era",
+          "channel_title": "a16z",
+          "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+          "published_at": "2026-11-06T15:30:09Z",
+          "duration_seconds": 2919,
+          "view_count": 10527,
+          "topic": "pod-tech-ai",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:a16z"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast、with）",
+            "主题依据：ai",
+            "来自精选创作者 a16z（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=y4BdOtm40SA",
+          "thumbnail": "https://i.ytimg.com/vi/y4BdOtm40SA/mqdefault.jpg"
+        },
+        {
+          "video_id": "9iAQdKxyiQc",
+          "title": "How AI Is Turning Figma’s Finance Team Into Builders",
+          "channel_title": "a16z",
+          "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+          "published_at": "2026-11-05T15:30:39Z",
+          "duration_seconds": 3012,
+          "view_count": 9538,
+          "topic": "pod-tech-ai",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:a16z"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast、with）",
+            "主题依据：ai",
+            "来自精选创作者 a16z（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=9iAQdKxyiQc",
+          "thumbnail": "https://i.ytimg.com/vi/9iAQdKxyiQc/mqdefault.jpg"
+        },
+        {
+          "video_id": "yULk8eNa2mg",
+          "title": "Tokenization, Agentic Trading, Harmonic: Robinhood's Mission to Expand Ownership with CEO Vlad Tenev",
+          "channel_title": "No Priors: AI, Machine Learning, Tech, & Startups",
+          "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
+          "published_at": "2026-11-05T11:00:22Z",
+          "duration_seconds": 3249,
+          "view_count": 5178,
+          "topic": "pod-tech-ai",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "conversation",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:No Priors"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：conversation、with）",
+            "主题依据：ai",
+            "来自精选创作者 No Priors（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=yULk8eNa2mg",
+          "thumbnail": "https://i.ytimg.com/vi/yULk8eNa2mg/mqdefault.jpg"
+        },
+        {
+          "video_id": "f0J_EeW42Lo",
+          "title": "What Robert Caro learned about power after studying it for 50 years",
+          "channel_title": "Dwarkesh Patel",
+          "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+          "published_at": "2026-10-30T17:18:35Z",
+          "duration_seconds": 3670,
+          "view_count": 292881,
+          "topic": "pod-tech-ai",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast"
+          ],
+          "sources": [
+            "podcast_uploads:Dwarkesh Patel"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast）",
+            "主题依据：software",
+            "来自精选创作者 Dwarkesh Patel（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=f0J_EeW42Lo",
+          "thumbnail": "https://i.ytimg.com/vi/f0J_EeW42Lo/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pod-business",
+      "name_zh": "商业创业",
+      "definition": "创业、投资、产品与公司故事的长谈。",
+      "stats": {
+        "eligible": 211,
+        "shown": 6,
+        "mix_target": {
+          "interview": 3,
+          "deep_dive": 2,
+          "talk": 1
+        },
+        "mix_shown": {
+          "interview": 6
+        },
+        "excluded_by_rule": {
+          "too_short": 321,
+          "excluded_term": 3,
+          "too_long": 13,
+          "type_window:interview": 40
+        },
+        "creators_in_topic": 6
+      },
+      "videos": [
+        {
+          "video_id": "-XL2gClQ2gg",
+          "title": "Is AI Now Good Enough To Cure Cancer? | YC Paper Club",
+          "channel_title": "Y Combinator",
+          "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
+          "published_at": "2026-11-08T15:00:39Z",
+          "duration_seconds": 4903,
+          "view_count": 31829,
+          "topic": "pod-business",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "节目长内容默认归为深度访谈"
+          ],
+          "sources": [
+            "podcast_uploads:Y Combinator"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：节目长内容默认归为深度访谈）",
+            "主题依据：startup",
+            "来自精选创作者 Y Combinator（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=-XL2gClQ2gg",
+          "thumbnail": "https://i.ytimg.com/vi/-XL2gClQ2gg/mqdefault.jpg"
+        },
+        {
+          "video_id": "2v8b062QzTI",
+          "title": "Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze, What’s Next for Trump",
+          "channel_title": "All-In Podcast",
+          "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+          "published_at": "2026-11-07T18:32:58Z",
+          "duration_seconds": 5584,
+          "view_count": 725455,
+          "topic": "pod-business",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:All-In Podcast"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：with）",
+            "主题依据：company",
+            "来自精选创作者 All-In Podcast（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=2v8b062QzTI",
+          "thumbnail": "https://i.ytimg.com/vi/2v8b062QzTI/mqdefault.jpg"
+        },
+        {
+          "video_id": "Q78dJ0vkWe8",
+          "title": "How To Build The Future: Paul Graham & Amjad Masad",
+          "channel_title": "Y Combinator",
+          "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
+          "published_at": "2026-11-07T15:00:14Z",
+          "duration_seconds": 2655,
+          "view_count": 64073,
+          "topic": "pod-business",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:Y Combinator"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：with）",
+            "主题依据：startup",
+            "来自精选创作者 Y Combinator（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=Q78dJ0vkWe8",
+          "thumbnail": "https://i.ytimg.com/vi/Q78dJ0vkWe8/mqdefault.jpg"
+        },
+        {
+          "video_id": "y4BdOtm40SA",
+          "title": "Inside Salesforce’s Acquisition Strategy for the AI Era",
+          "channel_title": "a16z",
+          "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+          "published_at": "2026-11-06T15:30:09Z",
+          "duration_seconds": 2919,
+          "view_count": 10527,
+          "topic": "pod-business",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:a16z"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast、with）",
+            "主题依据：startup",
+            "来自精选创作者 a16z（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=y4BdOtm40SA",
+          "thumbnail": "https://i.ytimg.com/vi/y4BdOtm40SA/mqdefault.jpg"
+        },
+        {
+          "video_id": "9iAQdKxyiQc",
+          "title": "How AI Is Turning Figma’s Finance Team Into Builders",
+          "channel_title": "a16z",
+          "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+          "published_at": "2026-11-05T15:30:39Z",
+          "duration_seconds": 3012,
+          "view_count": 9538,
+          "topic": "pod-business",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:a16z"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast、with）",
+            "主题依据：business",
+            "来自精选创作者 a16z（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=9iAQdKxyiQc",
+          "thumbnail": "https://i.ytimg.com/vi/9iAQdKxyiQc/mqdefault.jpg"
+        },
+        {
+          "video_id": "32vxW6GMeLY",
+          "title": "A Model For Everyone: How Ronak From Trajectory Is Building Products For Continual Learning",
+          "channel_title": "Sequoia Capital",
+          "channel_id": "UCWrF0oN6unbXrWsTN7RctTw",
+          "published_at": "2026-11-05T13:00:07Z",
+          "duration_seconds": 1921,
+          "view_count": 16010,
+          "topic": "pod-business",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:Sequoia Capital"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：with）",
+            "主题依据：founder",
+            "来自精选创作者 Sequoia Capital（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=32vxW6GMeLY",
+          "thumbnail": "https://i.ytimg.com/vi/32vxW6GMeLY/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pod-science-health",
+      "name_zh": "科学与健康",
+      "definition": "科学、医学、健康与学习的可靠长内容。",
+      "stats": {
+        "eligible": 61,
+        "shown": 3,
+        "mix_target": {
+          "interview": 3,
+          "deep_dive": 2,
+          "talk": 1
+        },
+        "mix_shown": {
+          "interview": 3
+        },
+        "excluded_by_rule": {
+          "too_short": 28,
+          "excluded_term": 6,
+          "type_window:talk": 7,
+          "type_window:interview": 10
+        },
+        "creators_in_topic": 2
+      },
+      "videos": [
+        {
+          "video_id": "y-fRFiTrrg4",
+          "title": "Access the Sublime & Live Your Best Life | Robert Greene",
+          "channel_title": "Andrew Huberman",
+          "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg",
+          "published_at": "2026-11-02T13:00:28Z",
+          "duration_seconds": 8305,
+          "view_count": 357742,
+          "topic": "pod-science-health",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "conversation",
+            "podcast"
+          ],
+          "sources": [
+            "podcast_uploads:HubermanLab"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：conversation、podcast）",
+            "主题依据：sleep",
+            "来自精选创作者 HubermanLab（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=y-fRFiTrrg4",
+          "thumbnail": "https://i.ytimg.com/vi/y-fRFiTrrg4/mqdefault.jpg"
+        },
+        {
+          "video_id": "nk15CT41MFc",
+          "title": "What Humans, Animals and Plants Tell Us About Consciousness | Michael Pollan",
+          "channel_title": "Andrew Huberman",
+          "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg",
+          "published_at": "2026-09-28T12:00:07Z",
+          "duration_seconds": 7339,
+          "view_count": 401611,
+          "topic": "pod-science-health",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:HubermanLab"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：with）",
+            "主题依据：medicine",
+            "来自精选创作者 HubermanLab（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=nk15CT41MFc",
+          "thumbnail": "https://i.ytimg.com/vi/nk15CT41MFc/mqdefault.jpg"
+        },
+        {
+          "video_id": "4qtsOh2FwIs",
+          "title": "How Tech Will (and Won’t) Replace Your Doctor | TED Intersections",
+          "channel_title": "TED",
+          "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
+          "published_at": "2026-09-15T15:00:24Z",
+          "duration_seconds": 1555,
+          "view_count": 107627,
+          "topic": "pod-science-health",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "conversation",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:TED"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：conversation、with）",
+            "主题依据：medicine",
+            "来自精选创作者 TED（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=4qtsOh2FwIs",
+          "thumbnail": "https://i.ytimg.com/vi/4qtsOh2FwIs/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pod-society",
+      "name_zh": "人文社会",
+      "definition": "有实质内容的文化、社会与人物长谈。",
+      "stats": {
+        "eligible": 10,
+        "shown": 4,
+        "mix_target": {
+          "interview": 3,
+          "deep_dive": 2,
+          "talk": 1
+        },
+        "mix_shown": {
+          "interview": 4
+        },
+        "excluded_by_rule": {
+          "excluded_term": 8,
+          "too_long": 8,
+          "type_window:interview": 20,
+          "too_short": 18
+        },
+        "creators_in_topic": 2
+      },
+      "videos": [
+        {
+          "video_id": "8bk1Llgvs4o",
+          "title": "The Joy of Foraging Your Own Food | Alexis Nikole Nelson | TED",
+          "channel_title": "TED",
+          "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
+          "published_at": "2026-10-30T15:00:28Z",
+          "duration_seconds": 2984,
+          "view_count": 65545,
+          "topic": "pod-society",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "conversation",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:TED"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：conversation、with）",
+            "主题依据：conversation",
+            "来自精选创作者 TED（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=8bk1Llgvs4o",
+          "thumbnail": "https://i.ytimg.com/vi/8bk1Llgvs4o/mqdefault.jpg"
+        },
+        {
+          "video_id": "ZAzWPE9CItg",
+          "title": "AI Crisis in Math: Navier-Stokes, Riemann Hypothesis & Complexity Theory | Lex Fridman Podcast #503",
+          "channel_title": "Lex Fridman",
+          "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+          "published_at": "2026-10-26T22:51:51Z",
+          "duration_seconds": 12867,
+          "view_count": 1482135,
+          "topic": "pod-society",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast"
+          ],
+          "sources": [
+            "podcast_uploads:Lex Fridman"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast）",
+            "主题依据：history",
+            "来自精选创作者 Lex Fridman（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=ZAzWPE9CItg",
+          "thumbnail": "https://i.ytimg.com/vi/ZAzWPE9CItg/mqdefault.jpg"
+        },
+        {
+          "video_id": "FGCP2F_7rQk",
+          "title": "Taiwan: The Most Epic Night Market Experience w/ Jensen Huang | Lex Fridman",
+          "channel_title": "Lex Fridman",
+          "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+          "published_at": "2026-10-13T21:26:16Z",
+          "duration_seconds": 5418,
+          "view_count": 1615551,
+          "topic": "pod-society",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "podcast",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:Lex Fridman"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：podcast、with）",
+            "主题依据：history",
+            "来自精选创作者 Lex Fridman（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=FGCP2F_7rQk",
+          "thumbnail": "https://i.ytimg.com/vi/FGCP2F_7rQk/mqdefault.jpg"
+        },
+        {
+          "video_id": "oyRxhiAC9u8",
+          "title": "Why the Future is Human … Plus AI | Esther Perel and Sal Khan",
+          "channel_title": "TED",
+          "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
+          "published_at": "2026-10-06T15:00:08Z",
+          "duration_seconds": 1248,
+          "view_count": 110039,
+          "topic": "pod-society",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "conversation",
+            "with"
+          ],
+          "sources": [
+            "podcast_uploads:TED"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：conversation、with）",
+            "主题依据：conversation",
+            "来自精选创作者 TED（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=oyRxhiAC9u8",
+          "thumbnail": "https://i.ytimg.com/vi/oyRxhiAC9u8/mqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pod-zh",
+      "name_zh": "中文播客",
+      "definition": "讨论科技、商业与社会的中文长谈节目。",
+      "stats": {
+        "eligible": 58,
+        "shown": 4,
+        "mix_target": {
+          "interview": 3,
+          "deep_dive": 2,
+          "talk": 1
+        },
+        "mix_shown": {
+          "interview": 4
+        },
+        "excluded_by_rule": {
+          "too_short": 106,
+          "excluded_term": 3,
+          "type_window:interview": 32,
+          "type_window:talk": 1
+        },
+        "creators_in_topic": 2
+      },
+      "videos": [
+        {
+          "video_id": "xzc99JOBMlY",
+          "title": "“只要敢借，就有人敢贷”：聊数据中心融资、电力、算力与泡沫｜硅谷101年度线下大会",
+          "channel_title": "硅谷101",
+          "channel_id": "UCKV2yWPB3wn0RTZh3cTD8YA",
+          "published_at": "2026-11-05T15:05:26Z",
+          "duration_seconds": 2526,
+          "view_count": 43296,
+          "topic": "pod-zh",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "节目长内容默认归为深度访谈"
+          ],
+          "sources": [
+            "podcast_uploads:硅谷101视频专栏"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：节目长内容默认归为深度访谈）",
+            "主题依据：科技",
+            "来自精选创作者 硅谷101视频专栏（入池依据：jason_curated）"
+          ],
+          "url": "https://www.youtube.com/watch?v=xzc99JOBMlY",
+          "thumbnail": "https://i.ytimg.com/vi/xzc99JOBMlY/mqdefault.jpg"
+        },
+        {
+          "video_id": "1b6qVM0fKbk",
+          "title": "对话Maxinsights：具身“卖铲人”的250倍增长、机器人Ego数据狂潮、Doordash与丰田模式，与“自由的鸟”【101视频播客】",
+          "channel_title": "硅谷101",
+          "channel_id": "UCKV2yWPB3wn0RTZh3cTD8YA",
+          "published_at": "2026-11-02T00:30:26Z",
+          "duration_seconds": 5537,
+          "view_count": 96281,
+          "topic": "pod-zh",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "对话",
+            "播客"
+          ],
+          "sources": [
+            "podcast_uploads:硅谷101视频专栏"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：对话、播客）",
+            "主题依据：创业",
+            "来自精选创作者 硅谷101视频专栏（入池依据：jason_curated）"
+          ],
+          "url": "https://www.youtube.com/watch?v=1b6qVM0fKbk",
+          "thumbnail": "https://i.ytimg.com/vi/1b6qVM0fKbk/mqdefault.jpg"
+        },
+        {
+          "video_id": "XcastAK9pDM",
+          "title": "E257｜对话Vitalik：AI安全背后的哲学思想，有效利他主义如何影响硅谷？",
+          "channel_title": "硅谷101播客",
+          "channel_id": "UChnNjLyx_5rk_iDPQ2BQDQA",
+          "published_at": "2026-10-29T00:45:29Z",
+          "duration_seconds": 6754,
+          "view_count": 13885,
+          "topic": "pod-zh",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "对话",
+            "播客"
+          ],
+          "sources": [
+            "podcast_uploads:硅谷101播客"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：对话、播客）",
+            "主题依据：科技",
+            "来自精选创作者 硅谷101播客（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=XcastAK9pDM",
+          "thumbnail": "https://i.ytimg.com/vi/XcastAK9pDM/mqdefault.jpg"
+        },
+        {
+          "video_id": "lsANSvYQks0",
+          "title": "E256｜Agent、机器人与制药，谁先被GPT-6 Astra改写？",
+          "channel_title": "硅谷101播客",
+          "channel_id": "UChnNjLyx_5rk_iDPQ2BQDQA",
+          "published_at": "2026-10-20T00:00:38Z",
+          "duration_seconds": 4781,
+          "view_count": 51497,
+          "topic": "pod-zh",
+          "content_type": "interview",
+          "content_type_label": "深度访谈",
+          "content_type_signals": [
+            "播客"
+          ],
+          "sources": [
+            "podcast_uploads:硅谷101播客"
+          ],
+          "reasons": [
+            "内容类型：深度访谈（命中：播客）",
+            "主题依据：商业",
+            "来自精选创作者 硅谷101播客（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=lsANSvYQks0",
+          "thumbnail": "https://i.ytimg.com/vi/lsANSvYQks0/mqdefault.jpg"
+        }
+      ]
+    }
+  ],
+  "rules_notes": [
+    "创作者优先；无公开质量分；候选不足时宁缺毋滥。"
+  ]
+}

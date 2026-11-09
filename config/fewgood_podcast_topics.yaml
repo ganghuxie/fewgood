@@ -1,0 +1,62 @@
+theme:
+  id: podcast
+  name_zh: 播客
+  creator_pool_gate: "订阅数至少 1000（官方/节目品牌可豁免）、180 天内有上传、且须有来源依据；不满足则不入池。"
+  search_call_cap: 0
+  other_unit_cap: 300
+  top_n: 6
+  max_per_channel_in_top: 2
+  fallback: "宁缺毋滥：候选不足 6 条时展示实际数量，不放宽规则。"
+topics:
+  - id: pod-tech-ai
+    name_zh: 科技与 AI
+    definition: AI、软件与科技产业的深度访谈和行业播客。
+    include_terms: [ai, artificial intelligence, technology, tech, software, model, chip, startup, founder, "人工智能", "科技", "大模型"]
+    exclude_terms: [crypto pump, get rich, passive income, trailer, teaser, roast]
+    trusted_channels: [Lex Fridman, Latent Space, Dwarkesh Patel, No Priors, Big Technology Podcast, a16z]
+    min_duration_seconds: 1200
+    max_duration_seconds: 14400
+    windows_days: {interview: 180, talk: 180, deep_dive: 365, evergreen: 730}
+    fallback: "宁缺毋滥"
+  - id: pod-business
+    name_zh: 商业创业
+    definition: 创业、投资、产品与公司故事的长谈。
+    include_terms: [startup, founder, business, investing, investment, product, company, strategy, venture, "创业", "投资", "产品", "公司"]
+    exclude_terms: [crypto pump, get rich quick, passive income, trailer, teaser, roast]
+    trusted_channels: [All-In Podcast, Acquired, Lenny's Podcast, Y Combinator, Sequoia Capital, a16z]
+    min_duration_seconds: 1200
+    max_duration_seconds: 14400
+    windows_days: {interview: 180, talk: 180, deep_dive: 365, evergreen: 730}
+    fallback: "宁缺毋滥"
+  - id: pod-science-health
+    name_zh: 科学与健康
+    definition: 科学、医学、健康与学习的可靠长内容。
+    include_terms: [medicine, health, biology, neuroscience, psychology, sleep, metabolic, "mental health", "human performance", "科学", "医学", "健康", "神经", "生物", "睡眠", "代谢"]
+    title_only_include_terms: [medicine, health, biology, neuroscience, psychology, sleep, metabolic, "mental health", "human performance"]
+    exclude_terms: [crypto pump, miracle cure, get rich, trailer, teaser, roast]
+    trusted_channels: [HubermanLab, TED]
+    min_duration_seconds: 1200
+    max_duration_seconds: 14400
+    windows_days: {interview: 180, talk: 180, deep_dive: 365, evergreen: 730}
+    fallback: "宁缺毋滥"
+  - id: pod-society
+    name_zh: 人文社会
+    definition: 有实质内容的文化、社会与人物长谈。
+    include_terms: [society, culture, history, philosophy, psychology, conversation, "with a philosopher", "with a historian", "人文", "社会", "文化", "历史", "对话"]
+    title_only_include_terms: [society, culture, history, philosophy, psychology, "with a philosopher", "with a historian"]
+    exclude_terms: [crypto pump, get rich, trailer, teaser, roast]
+    trusted_channels: [Lex Fridman, TED]
+    min_duration_seconds: 1200
+    max_duration_seconds: 14400
+    windows_days: {interview: 180, talk: 180, deep_dive: 365, evergreen: 730}
+    fallback: "宁缺毋滥"
+  - id: pod-zh
+    name_zh: 中文播客
+    definition: 讨论科技、商业与社会的中文长谈节目。
+    include_terms: ["科技", "创业", "商业", "投资", "社会", "人工智能", "产品", "公司", "对谈", "播客"]
+    exclude_terms: [币圈暴富, 带货, trailer, teaser, roast]
+    trusted_channels: [硅谷101视频专栏, 硅谷101播客]
+    min_duration_seconds: 1200
+    max_duration_seconds: 14400
+    windows_days: {interview: 180, talk: 180, deep_dive: 365, evergreen: 730}
+    fallback: "宁缺毋滥"

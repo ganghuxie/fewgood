@@ -1,0 +1,9 @@
+windows_days: {interview: 180, talk: 180, deep_dive: 365, evergreen: 730}
+mix: {interview: 3, deep_dive: 2, talk: 1}
+keywords:
+  interview: [interview, conversation, podcast, "with", "访谈", "对谈", "对话", "播客"]
+  deep_dive: [deep dive, deep-dive, essentials, explained, "how it works", analysis, "full episode: deep", "full episode - deep", "专题", "解读", "详解", "深度"]
+  talk: [talk, "ted talk", lecture, keynote, fireside, panel, "full lecture", "full keynote", "演讲", "讲座", "长谈"]
+exclude_terms: [trailer, teaser, clip, shorts, highlight, promo, "预告", "花絮", "切片", "短片"]
+clickbait_terms: ["change your life", "改变你的人生", "secret to", "get rich", "passive income", "暴富", "稳赚", "pump"]
+labels: {interview: 深度访谈, deep_dive: 专题解读, talk: 名家长谈}

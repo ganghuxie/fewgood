@@ -1,0 +1,17 @@
+# Handles are deliberately unresolved here. `resolve` uses channels.list(forHandle), never search.list.
+creators:
+  - {name: Lex Fridman, channel_id: UCSHZKyawb77ixDdsGog4iWA, lang: en, subtopics: [pod-tech-ai, pod-society], evidence: [existing_registry]}
+  - {name: Latent Space, channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
+  - {name: Dwarkesh Patel, channel_id: UCXl4i9dYBrFOabk0xGmbkRA, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
+  - {name: All-In Podcast, channel_id: UCESLZhusAkFfsNsApnjF_Cg, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
+  - {name: a16z, channel_id: UC9cn0TuPq4dnbTY-CBsm8XA, lang: en, subtopics: [pod-business, pod-tech-ai], evidence: [existing_registry]}
+  - {name: Lenny's Podcast, channel_id: UC6t1O76G0jYXOAoYCm153dA, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
+  - {name: No Priors, channel_id: UCSI7h9hydQ40K5MJHnCrQvw, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
+  - {name: Big Technology Podcast, channel_id: UCaKiCexVhZ459j9sZ2e7XdQ, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
+  - {name: Acquired, channel_id: UCyFqFYfTW2VoIQKylJ04Rtw, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
+  - {name: Y Combinator, channel_id: UCcefcZRL2oaA_uBNeo5UOWg, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
+  - {name: Sequoia Capital, channel_id: UCWrF0oN6unbXrWsTN7RctTw, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
+  - {name: HubermanLab, channel_id: UC2D2CMWXMOVWx7giW1n3LIg, lang: en, subtopics: [pod-science-health], evidence: [existing_registry]}
+  - {name: TED, channel_id: UCAuUUnT6oDeKwE6v1NGQxug, lang: en, subtopics: [pod-society, pod-science-health], evidence: [existing_registry]}
+  - {name: 硅谷101视频专栏, channel_id: UCKV2yWPB3wn0RTZh3cTD8YA, lang: zh, subtopics: [pod-zh], evidence: [jason_curated]}
+  - {name: 硅谷101播客, channel_id: UChnNjLyx_5rk_iDPQ2BQDQA, lang: zh, subtopics: [pod-zh], evidence: [existing_registry]}

@@ -36,7 +36,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -61,6 +61,12 @@ def main():
         forwarded=['fetch' if args.command.endswith('fetch') else 'select']
         if args.estimate: forwarded.append('--estimate')
         return fewgood_zh.main(forwarded)
+    if args.command.startswith('fewgood-podcast-'):
+        from . import fewgood_podcast
+        cmd=args.command.removeprefix('fewgood-podcast-')
+        forwarded=[cmd]
+        if args.unit_cap != 250: forwarded += ['--unit-cap', str(args.unit_cap)]
+        return fewgood_podcast.main(forwarded)
     config = yaml.safe_load(Path(args.config).read_text())
     limit = daily_limit(config)
     if args.command == 'trending':
