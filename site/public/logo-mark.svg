@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">fewgood Orbit mark</title>
+  <desc id="desc">Two green cartoon eyes and a green orbit dot on a transparent canvas.</desc>
+  <g fill="#49C987">
+    <ellipse cx="91" cy="121" rx="45" ry="57"/>
+    <ellipse cx="165" cy="121" rx="45" ry="57"/>
+  </g>
+  <g fill="#F5FAF7">
+    <ellipse cx="91" cy="121" rx="27" ry="38"/>
+    <ellipse cx="165" cy="121" rx="27" ry="38"/>
+  </g>
+  <g fill="#17221F">
+    <circle cx="103" cy="110" r="14"/>
+    <circle cx="177" cy="110" r="14"/>
+  </g>
+  <circle cx="218" cy="192" r="13" fill="#49C987"/>
+</svg>

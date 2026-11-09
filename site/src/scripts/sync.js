@@ -11,7 +11,7 @@ const synced = new Map(kinds.map(kind => [kind, new Set()]));
 const remoteUpdated = new Map(kinds.map(kind => [kind, new Map()]));
 
 const warn = error => {
-  if (!warned) console.warn('YouTuber cloud sync is unavailable; using local storage only.', error);
+  if (!warned) console.warn('fewgood. cloud sync is unavailable; using local storage only.', error);
   warned = true;
   syncDisabled = true;
 };

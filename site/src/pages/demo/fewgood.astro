@@ -7,7 +7,7 @@ const beijing = data?.data_refreshed_at ? new Intl.DateTimeFormat('zh-CN',{dateS
 const sourceLabel = (s:string) => s.startsWith('channel_uploads:') ? '频道上传' : s.startsWith('search:') ? `搜索「${s.slice(7)}」` : s.startsWith('existing:') ? `已有数据 ${s.slice(9)}` : s;
 const evidenceLabel = (s:string) => s === 'existing_registry' ? '原有 X→YouTube 名单' : s === 'x_bio_youtube_link' ? 'X 资料直接链接 YouTube' : s === 'x_profile_plus_known_channel' ? 'X 认证资料 + YouTube 核验' : s === 'x_post_lead' ? 'X 帖子线索 + YouTube 核验' : s === 'knowledge_lead' ? '公开线索 + YouTube 核验' : s.startsWith('youtube_discovery:') ? `YouTube 高播放发现「${s.slice('youtube_discovery:'.length)}」` : '其他公开线索';
 ---
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="robots" content="noindex,nofollow"/><title>fewgood. · AI 前沿</title></head><body>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="robots" content="noindex,nofollow"/><link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml"/><link rel="apple-touch-icon" sizes="180x180" href={`${import.meta.env.BASE_URL}apple-touch-icon-180.png`}/><title>fewgood. · AI 前沿</title></head><body>
   <section class="fewgood">
     <p class="brand">fewgood.</p><p class="tagline">a few good videos</p><h1>AI 前沿 <small>第 {data?.round || 1} 轮 · 博主优先</small></h1>
     {!data || !data.topics?.length ? <p class="empty">暂无实验数据</p> : <>

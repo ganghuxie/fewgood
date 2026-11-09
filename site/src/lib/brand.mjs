@@ -1,5 +1,5 @@
-export const SITE_NAME = 'YouTuber';
-export const TAGLINE = '无广告 · 只看好视频';
+export const SITE_NAME = 'fewgood.';
+export const TAGLINE = 'a few good videos · 无广告 · 只看好视频';
 export const DIALOG_BRAND = SITE_NAME;
 export const MODE_LABELS = { explore: '探索世界', myspace: '我的空间' };
 export const SECTION_LABELS = { trending: '全部', ai: 'AI前沿', podcast: '播客', music: '音乐', community: '社区推荐' };

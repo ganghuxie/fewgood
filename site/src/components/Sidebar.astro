@@ -7,7 +7,7 @@ const isHome = Astro.url.pathname === `${base}/` || Astro.url.pathname === '/';
 <aside id="site-sidebar" class="site-sidebar" aria-label="侧边栏">
   <div class="side-top">
     <button class="menu-toggle" type="button" data-sidebar-close aria-label="关闭导览" aria-controls="site-sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`}><span class="logo-mark"><i></i></span><span>{SITE_NAME}</span></a>
+    <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`} title="fewgood. 首页"><img class="logo-mark" src={`${base}/logo-mark.svg`} alt=""/><span>{SITE_NAME}</span></a>
   </div>
   <nav class="side-nav">
     <a class:list={{ 'side-home': true, active: isHome }} href={link('/')}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg><span>首页</span></a>

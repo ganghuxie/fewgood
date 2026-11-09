@@ -1,6 +1,6 @@
-# YouTuber · HN × YouTube
+# fewgood. · HN × YouTube
 
-YouTuber（无广告 · 只看好视频）有六个 YouTube 风格的视频区：**全部** (`/`) 是近 30 天观看量最高的长视频；**AI前沿** (`/ai/`) 是来自精选 AI 频道的近期长视频；**播客** (`/podcast/`) 与 **音乐** (`/music/`) 使用同样的热门长视频窗口；**社区好评** (`/community/`) 保留原有 Hacker News 长期推荐列表；**关注** (`/following/`) 保存在浏览器本地。社区筛选标准与 people/newest 排序均未改变。
+fewgood.（a few good videos · 无广告 · 只看好视频）有六个 YouTube 风格的视频区：**全部** (`/`) 是近 30 天观看量最高的长视频；**AI前沿** (`/ai/`) 是来自精选 AI 频道的近期长视频；**播客** (`/podcast/`) 与 **音乐** (`/music/`) 使用同样的热门长视频窗口；**社区好评** (`/community/`) 保留原有 Hacker News 长期推荐列表；**关注** (`/following/`) 保存在浏览器本地。社区筛选标准与 people/newest 排序均未改变。
 
 ## Setup and full run
 
