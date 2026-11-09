@@ -80,3 +80,19 @@ zh:
   gemini_model: gemini-3.5-flash
   gemini_fallback_model: gemini-3.5-flash-lite
   deepseek_model: deepseek-chat
+topics:
+  # Local-only Phase 2 defaults; no API key or service role is configured here.
+  max_active_topics_per_user: 5
+  daily_new_topics_per_user: 3
+  batch_size: 5
+  metadata_ttl_days: 30
+  max_retries: 2
+  lock_path: data/topic-refresh.lock
+  queue_path: data/topic-queue.json
+  fixture_mode: true
+  legacy_daily_limit: 8000
+  reserve_legacy_units: 3500
+  search_call_cap: 100
+  reserve_search_calls: 35
+  other_unit_cap: 10000
+  reserve_other_units: 2000

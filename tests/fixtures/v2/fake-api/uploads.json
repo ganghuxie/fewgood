@@ -1,0 +1,9 @@
+{
+  "topics": {
+    "Café": [{"video_id": "fixture-cafe-01", "title": "Café uploads", "channel_title": "Fixture Channel", "published_at": "2026-11-01T00:00:00Z"}, {"video_id": "fixture-cafe-01", "title": "duplicate", "channel_title": "Fixture Channel", "published_at": "2026-11-01T00:00:00Z"}],
+    "C++": [{"video_id": "fixture-cpp-01", "title": "C++ uploads", "channel_title": "Fixture Channel", "published_at": "2026-11-02T00:00:00Z"}],
+    "C#": [{"video_id": "fixture-csharp-01", "title": "C# uploads", "channel_title": "Fixture Channel", "published_at": "2026-11-03T00:00:00Z"}],
+    "Retry Topic": {"retryable": true, "videos": [{"video_id": "fixture-retry-01", "title": "Recovered uploads", "channel_title": "Fixture Channel", "published_at": "2026-11-04T00:00:00Z"}]},
+    "No Results": []
+  }
+}

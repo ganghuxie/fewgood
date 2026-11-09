@@ -36,7 +36,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','topic-refresh','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -47,7 +47,19 @@ def main():
     parser.add_argument('--provider', choices=['gemini','deepseek'])
     parser.add_argument('--estimate', action='store_true', help='R3 fetch plan only')
     parser.add_argument('--unit-cap', type=int, default=250, help='R3 non-search unit cap')
+    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--fixtures')
+    parser.add_argument('--queue')
+    parser.add_argument('--lock')
+    parser.add_argument('--out-dir')
     args = parser.parse_args()
+    if args.command == 'topic-refresh':
+        from . import topics
+        forwarded = []
+        for flag, value in (('--fixtures', args.fixtures), ('--queue', args.queue), ('--lock', args.lock), ('--out-dir', args.out_dir)):
+            if value: forwarded += [flag, value]
+        if args.dry_run: forwarded.append('--dry-run')
+        return topics.main(forwarded)
     if args.command in ('fewgood-r3-fetch','fewgood-r3-select'):
         from . import fewgood_r3
         forwarded=['fetch' if args.command.endswith('fetch') else 'select']
