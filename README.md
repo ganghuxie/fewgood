@@ -86,3 +86,7 @@ Gate drop counts are independent and can overlap. Metadata-unavailable includes 
 Tests cover URL forms and negatives, adaptive splitting/resume, author/month dedupe, gate boundaries, metadata candidate filtering/cache, and report output. Live smoke verification is recorded in `reports/smoke.md`; its database and built output are ignored by git.
 
 API references: [HN search API](https://hn.algolia.com/api), [YouTube videos.list](https://developers.google.com/youtube/v3/docs/videos/list) (one unit per request). This is a discovery aid, not an endorsement guarantee.
+
+
+## Fewgood 中文博主发现（R4，一次性）
+`python -m ytrec fewgood-zh-fetch --estimate` 查看计划（10 次 search.list，其他 ≤ 300 单位）；`fewgood-zh-fetch` 需要 `YOUTUBE_API_KEY`，遇到 403/429 立即停止；`fewgood-zh-select` 零 API 重放并更新 `config/fewgood_creators.yaml` 与 Demo 数据。结果见 `docs/mvp/creator-pool.md` 第 6 节。

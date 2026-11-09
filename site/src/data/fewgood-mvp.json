@@ -1,609 +1,238 @@
 {
-  "generated_at": "2026-11-08T15:24:37Z",
-  "data_refreshed_at": "2026-11-08T15:24:37Z",
-  "round": 3,
-  "mode": "select",
+  "generated_at": "2026-11-09T09:36:37Z",
+  "data_refreshed_at": "2026-11-09T09:36:37Z",
+  "round": 4,
+  "mode": "zh_select",
   "usage_summary": {
     "calls": [
       {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:28Z",
+        "http_status": 200,
+        "returned": 6
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:28Z",
+        "http_status": 200,
+        "returned": 10
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:29Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:30Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:31Z",
+        "http_status": 200,
+        "returned": 3
+      },
+      {
+        "endpoint": "search",
+        "purpose": "zh_search",
+        "timestamp": "2026-11-09T09:36:31Z",
+        "http_status": 200,
+        "returned": 5
+      },
+      {
         "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:17Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:17Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:18Z",
-        "http_status": 200,
-        "returned": 24
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:18Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:18Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:19Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:19Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:19Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:19Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:19Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:20Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:20Z",
+        "purpose": "zh_verify_channel",
+        "timestamp": "2026-11-09T09:36:31Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:20Z",
+        "purpose": "zh_verify_channel",
+        "timestamp": "2026-11-09T09:36:31Z",
         "http_status": 200,
-        "returned": 1
+        "returned": 29
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:20Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:20Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:20Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:21Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:32Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:21Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:21Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:21Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:32Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:21Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:22Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:22Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:32Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:22Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:22Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:22Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:33Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:23Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:23Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:23Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:33Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:24Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:24Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:24Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:33Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:24Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:24Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:25Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:33Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:25Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:25Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:25Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:34Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:26Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:26Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:26Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:34Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:26Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:26Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:26Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:34Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:27Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:27Z",
-        "http_status": 200,
-        "returned": 1
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:27Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:35Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:27Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:35Z",
         "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "r3_channel",
-        "timestamp": "2026-11-08T15:24:27Z",
-        "http_status": 200,
-        "returned": 1
+        "returned": 22
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:28Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:35Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "playlistItems",
-        "purpose": "r3_uploads",
-        "timestamp": "2026-11-08T15:24:28Z",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:36Z",
+        "http_status": 200,
+        "returned": 50
+      },
+      {
+        "endpoint": "playlistItems",
+        "purpose": "zh_uploads",
+        "timestamp": "2026-11-09T09:36:36Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:28Z",
+        "purpose": "zh_candidate_details",
+        "timestamp": "2026-11-09T09:36:36Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:28Z",
+        "purpose": "zh_candidate_details",
+        "timestamp": "2026-11-09T09:36:36Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:28Z",
+        "purpose": "zh_candidate_details",
+        "timestamp": "2026-11-09T09:36:37Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:29Z",
+        "purpose": "zh_candidate_details",
+        "timestamp": "2026-11-09T09:36:37Z",
         "http_status": 200,
         "returned": 50
       },
       {
         "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:29Z",
+        "purpose": "zh_candidate_details",
+        "timestamp": "2026-11-09T09:36:37Z",
         "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:35Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:35Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "r3_details",
-        "timestamp": "2026-11-08T15:24:37Z",
-        "http_status": 200,
-        "returned": 24
+        "returned": 41
       }
     ],
-    "search_calls": 0,
-    "other_units": 85,
-    "old_model_units": 85,
+    "search_calls": 10,
+    "other_units": 22,
+    "old_model_units": 1022,
     "aborted_reason": null
   },
   "creators": [
@@ -4011,8 +3640,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 4/38（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T06:16:02Z",
       "checked_at": "2026-11-08T13:10:42Z"
     },
@@ -5740,8 +5369,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 2/14（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-06T22:08:22Z",
       "checked_at": "2026-11-08T13:10:42Z"
     },
@@ -7210,8 +6839,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 2/8（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T19:00:44Z",
       "checked_at": "2026-11-08T13:10:43Z"
     },
@@ -8232,8 +7861,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 3/13（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-04T07:48:07Z",
       "checked_at": "2026-11-08T13:10:43Z"
     },
@@ -10744,8 +10373,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-06T19:47:22Z",
       "checked_at": "2026-11-08T13:10:43Z"
     },
@@ -11289,8 +10918,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T12:04:48Z",
       "checked_at": "2026-11-08T13:10:44Z"
     },
@@ -13300,8 +12929,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T12:00:38Z",
       "checked_at": "2026-11-08T13:10:44Z"
     },
@@ -16365,8 +15994,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 3/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T17:28:09Z",
       "checked_at": "2026-11-08T13:10:44Z"
     },
@@ -18358,8 +17987,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 0/34（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T00:23:40Z",
       "checked_at": "2026-11-08T13:10:45Z"
     },
@@ -20992,8 +20621,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 3/21（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T15:23:16Z",
       "checked_at": "2026-11-08T13:10:45Z"
     },
@@ -21384,8 +21013,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/9（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-04T13:30:21Z",
       "checked_at": "2026-11-08T13:10:45Z"
     },
@@ -22385,8 +22014,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T12:38:42Z",
       "checked_at": "2026-11-08T13:10:45Z"
     },
@@ -22971,8 +22600,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/1（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-10-23T11:33:08Z",
       "checked_at": "2026-11-08T13:10:46Z"
     },
@@ -26570,8 +26199,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 2/26（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T16:40:45Z",
       "checked_at": "2026-11-08T13:10:47Z"
     },
@@ -26830,8 +26459,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 4/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T21:11:08Z",
       "checked_at": "2026-11-08T13:10:47Z"
     },
@@ -27015,8 +26644,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "unsupported_language",
+      "reason": "不支持文字标题 18/30",
       "last_upload_at": "2026-11-08T07:28:38Z",
       "checked_at": "2026-11-08T13:10:48Z"
     },
@@ -27219,8 +26848,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 2/12（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T04:11:20Z",
       "checked_at": "2026-11-08T13:10:48Z"
     },
@@ -27862,8 +27491,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "unsupported_language",
+      "reason": "不支持文字标题 14/21",
       "last_upload_at": "2026-11-08T03:30:14Z",
       "checked_at": "2026-11-08T13:10:48Z"
     },
@@ -29660,8 +29289,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "unsupported_language",
+      "reason": "不支持文字标题 14/22",
       "last_upload_at": "2026-11-08T11:45:08Z",
       "checked_at": "2026-11-08T13:10:49Z"
     },
@@ -29945,8 +29574,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 3/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T21:02:25Z",
       "checked_at": "2026-11-08T13:10:49Z"
     },
@@ -31125,8 +30754,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 0/3（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-04T12:37:14Z",
       "checked_at": "2026-11-08T13:10:50Z"
     },
@@ -36191,8 +35820,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T07:34:19Z",
       "checked_at": "2026-11-08T13:10:50Z"
     },
@@ -37519,8 +37148,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/25（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T13:55:05Z",
       "checked_at": "2026-11-08T13:10:50Z"
     },
@@ -38670,8 +38299,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 2/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T03:00:31Z",
       "checked_at": "2026-11-08T13:10:50Z"
     },
@@ -38815,8 +38444,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 1/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T04:06:51Z",
       "checked_at": "2026-11-08T13:10:51Z"
     },
@@ -40197,8 +39826,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T02:00:19Z",
       "checked_at": "2026-11-08T13:10:51Z"
     },
@@ -40684,8 +40313,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T12:30:25Z",
       "checked_at": "2026-11-08T13:10:51Z"
     },
@@ -41912,8 +41541,8 @@
           ]
         }
       ],
-      "status": "included",
-      "reason": "included",
+      "status": "not_focused",
+      "reason": "主题标题命中 3/50（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-08T12:41:51Z",
       "checked_at": "2026-11-08T13:10:52Z"
     },
@@ -48166,6 +47795,381 @@
       "checked_at": null
     },
     {
+      "name": "大有牧森 Austin Chou",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UC3hsgc8SHJs1RDMEZBCAccA",
+      "handle": "@austinchou888",
+      "title": "大有牧森 Austin Chou",
+      "description": "嗨，我是大有，歡迎來到大有的森林🌲。\n\n我喜歡分享 AI 工具、3C 好物和旅遊生活。\n會親自實測每一個工具，把學到的內容整理成白話的影片，\n變成看完就能直接運用的技巧和工作流程，孜孜不卷的你也一起學習吧。\n\n常接觸的領域：\n📍AI 影音生成製作\n📍AI效率工具實測：生產力、工作流程自動化\n📍3C 與生活好物開箱\n📍旅遊紀錄與出國實用技巧\n📍自媒體製作設備分享\n\n商務合作\n業配、課程講座、影音製作合作歡迎來信：\ndayomoosun.studio@gmail.com\n（來信請附上合作形式、預算範圍、預計上片時間）\n\nInstagram：@austinchou_eyes\n",
+      "subscriber_count": 180000,
+      "hidden_subscribers": false,
+      "video_count": "55",
+      "uploads_playlist": "UU3hsgc8SHJs1RDMEZBCAccA",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 1/5（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-10-29T14:00:04Z",
+      "checked_at": "2026-11-09T09:36:32Z"
+    },
+    {
+      "name": "Brayden Chen",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCFX6lKn8w8bIbZCdLc2PBpQ",
+      "handle": "@braydenchen",
+      "title": "Brayden Chen",
+      "description": "📧 合作郵箱 info@BraydenChen.me\n👋 我是Brayden布萊登，電商人，影片詩人。 \n不喜歡工作，喜歡創作。\n這裡是我用影像寫詩的地方， \n紀錄關於創業、孤獨、自由與夢想的故事。\n👇 如果你想看更多 AI、電商與個人品牌的內容👇\n",
+      "subscriber_count": 95100,
+      "hidden_subscribers": false,
+      "video_count": "141",
+      "uploads_playlist": "UUFX6lKn8w8bIbZCdLc2PBpQ",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 1/5（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-05T02:04:53Z",
+      "checked_at": "2026-11-09T09:36:32Z"
+    },
+    {
+      "name": "工匠先森",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCKvqDhXsOI5nAWSBN3zEutw",
+      "handle": "@gxs",
+      "title": "工匠先森",
+      "description": "欢迎订阅这个频道 https://www.youtube.com/@gxs 以便获得更多的视频更新😄油管专属，谢绝搬运！\n\n分享手机App应用程序教学，介绍数码产品评测，开箱，Windows应用程序技巧教程，电脑编程语言，Linux命令入门，Python编程教学，C / C＃手机编程，Excel函数等。\n\n喜欢我的分享，别忘了点赞订阅，这是对我的鼓励和帮助\n在视频下面留下您对该主题的评论，我会阅读每条评论\n\n非常感谢大家的爱戴与支持 😀\n\n分享生活，探讨科技",
+      "subscriber_count": 170000,
+      "hidden_subscribers": false,
+      "video_count": "293",
+      "uploads_playlist": "UUKvqDhXsOI5nAWSBN3zEutw",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/4（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-07T08:59:08Z",
+      "checked_at": "2026-11-09T09:36:32Z"
+    },
+    {
+      "name": "阿石OMP",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q",
+      "handle": "@ompshek",
+      "title": "阿石OMP",
+      "description": "關於我\n\n阿石是營銷書《營銷為王》作者。「網路行銷玩家」培訓中心創辦人。透過線上及線下課程，已經培訓超過數千位來自香港、澳門、台灣和馬來西亞的中小企老闆。\n\n個人興趣是研究新科技產業對未來經濟、生活有什麼影響。\n\n公司宗旨：我們用網路知識讓中小企成長。\n\nFollow OMP 網路行銷玩家：\n網路行銷玩家：https://omp.asia\nFacebook： https://www.facebook.com/omp.asia\nLinkedin：https://www.linkedin.com/in/arshek/\n",
+      "subscriber_count": 68500,
+      "hidden_subscribers": false,
+      "video_count": "709",
+      "uploads_playlist": "UUnixWoic7ATGI0AZ2LrtJ7Q",
+      "discovered": [],
+      "status": "included",
+      "reason": "included",
+      "last_upload_at": "2026-11-09T09:28:59Z",
+      "checked_at": "2026-11-09T09:36:33Z"
+    },
+    {
+      "name": "孔老師AI研習社",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCpnBpREMjMNFvLTLnc2iLPQ",
+      "handle": "@teacher_kong",
+      "title": "孔老師AI研習社",
+      "description": "歡迎來到「孔老師AI研習社」！看到周圍的人都在用AI提升效率、創造收入，但效果卻千差萬別。你是否也想掌握AI的核心技能，用更少的時間和成本，收穫最大化的成果？\n\n在這裏，我將為你分享：\n- AI商業變現\n- AI工具塑造個人IP\n- AI優化工作流程\n\n過去幾年，我從985院校畢業，先進了傳統企業，當了幾年朝九晚五的上班族。後來我選擇到大學任教，也是在這段時間裡，慢慢找到自己真正想走的路。現在，我離開了大學教職，全職投入AI變現與個人品牌的經營。現在，我會將AI變現和個人品牌的應用經驗與心得分享給更多人，希望幫助大家在這場AI變革中找到屬於自己的機會。如果你渴望AI商業變現，並且不願被這次AI革命所淘汰，我的頻道將是你不容錯過的選擇。\n\n特別福利：點擊視頻的Description描述欄，即可獲取我為你精心準備的《AI × 個人品牌變現藍圖》。\n\n🔔訂閱頻道並開啟小鈴鐺，一起探索如何通過AI提升效率、創造價值💰，實現職業突破。每週日更新，帶你走在AI應用的最前沿！\n",
+      "subscriber_count": 81300,
+      "hidden_subscribers": false,
+      "video_count": "74",
+      "uploads_playlist": "UUpnBpREMjMNFvLTLnc2iLPQ",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 1/3（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-06T12:15:20Z",
+      "checked_at": "2026-11-09T09:36:33Z"
+    },
+    {
+      "name": "莊也雜談",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UC2156EYYNhiZXFFbw8uVOQw",
+      "handle": "@zytalkshow",
+      "title": "莊也雜談",
+      "description": "端坐蝸居，神侃萬事，莊也雜談，有情懷、有乾貨的百科全書式脫口秀，期待您的支持！",
+      "subscriber_count": 74300,
+      "hidden_subscribers": false,
+      "video_count": "415",
+      "uploads_playlist": "UU2156EYYNhiZXFFbw8uVOQw",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/4（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-10-31T12:15:02Z",
+      "checked_at": "2026-11-09T09:36:33Z"
+    },
+    {
+      "name": "Porter科技迷",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UC5CbsIVaRbHX2ltyG9sDKlQ",
+      "handle": "@porter-tech",
+      "title": "Porter科技迷",
+      "description": "大家好，我是 Porter。\n在数字世界，信息差就是护城河。我的频道就是为你推开那扇连接全球资源的门。\n\n我专注于研究：\n1.如何足不出户搞定海外银行卡与手机号？\n2.如何利用 Web3 与加密货币实现无国界支付？\n3.如何通过 VPS 与域名搭建真正属于自己的网络中心？\n4.如何高效订阅并深度使用顶尖 AI 工具？\n\nPorter 不生产信息，我只打通你与世界之间的最后一百米。\n",
+      "subscriber_count": 30600,
+      "hidden_subscribers": false,
+      "video_count": "62",
+      "uploads_playlist": "UU5CbsIVaRbHX2ltyG9sDKlQ",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/5（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-03T11:00:02Z",
+      "checked_at": "2026-11-09T09:36:33Z"
+    },
+    {
+      "name": "三師爸Sense Bar",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCI2YklLazU9tB_Kh_9nMpKA",
+      "handle": "@sensebar",
+      "title": "三師爸Sense Bar",
+      "description": "三師指的是經師人師明師,而我是一個導師,身份就好像是學生的爸爸,故取名為三師爸\n這是一個分享教學,班經,課程的頻道,如果你是老師,歡迎訂閱來一起交流喔.如果你是學生,也有一些課程可以學習喔",
+      "subscriber_count": 75300,
+      "hidden_subscribers": false,
+      "video_count": "599",
+      "uploads_playlist": "UUI2YklLazU9tB_Kh_9nMpKA",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 7/50（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-08T22:57:59Z",
+      "checked_at": "2026-11-09T09:36:34Z"
+    },
+    {
+      "name": "硅谷101",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-agents"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCKV2yWPB3wn0RTZh3cTD8YA",
+      "handle": "@thevalley101",
+      "title": "硅谷101",
+      "description": "驶向未来。 \n一档深度科技与商业视频栏目，旗下有同名播客。通过对前沿科技及商业的一手视角和深度挖掘，我们希望带来深度有趣的前沿选题。Solid journalism still matters.\n联系我们：video@sv101.net \n",
+      "subscriber_count": 475000,
+      "hidden_subscribers": false,
+      "video_count": "252",
+      "uploads_playlist": "UUKV2yWPB3wn0RTZh3cTD8YA",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/10（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-05T15:05:26Z",
+      "checked_at": "2026-11-09T09:36:34Z"
+    },
+    {
+      "name": "课代表立正",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UC_5lJHgnMP_lb_VpIiXV0hQ",
+      "handle": "@kedaibiao",
+      "title": "课代表立正",
+      "description": "做点「真东西」\n超线性学院：和2万+同行学懂AI、把AI用起来｜高手答疑·真实项目·腾讯/小红书/美团/Meta/Amazon AI培训免费看\n创始人｜康奈尔经济学博士｜前腾讯总监｜OpenAI收购团队\n免费加入：superlinear.academy｜App：超线性学院\n两年后的你，会感谢今天的自己。",
+      "subscriber_count": 122000,
+      "hidden_subscribers": false,
+      "video_count": "956",
+      "uploads_playlist": "UU_5lJHgnMP_lb_VpIiXV0hQ",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-09T09:28:20Z",
+      "checked_at": "2026-11-09T09:36:34Z"
+    },
+    {
+      "name": "技术爬爬虾  TechShrimp",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCa6D2k5qhpOI9I-WT8fpd6g",
+      "handle": "@tech-shrimp",
+      "title": "技术爬爬虾  TechShrimp",
+      "description": "分享有趣实用的计算机知识，还有软件DIY\n\n",
+      "subscriber_count": 132000,
+      "hidden_subscribers": false,
+      "video_count": "256",
+      "uploads_playlist": "UUa6D2k5qhpOI9I-WT8fpd6g",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 1/2（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-08T09:58:43Z",
+      "checked_at": "2026-11-09T09:36:35Z"
+    },
+    {
+      "name": "GeekHour",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCaHGGhmThVehDUapGxl7RVQ",
+      "handle": "@geekhour_net",
+      "title": "GeekHour",
+      "description": "【GeekHour】高知识密度的精品免费公益教程。\n公众号同名搜索GeekHour\n",
+      "subscriber_count": 38100,
+      "hidden_subscribers": false,
+      "video_count": "22",
+      "uploads_playlist": "UUaHGGhmThVehDUapGxl7RVQ",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/1（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-10-24T06:33:48Z",
+      "checked_at": "2026-11-09T09:36:35Z"
+    },
+    {
+      "name": "Seven科技生活",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCh8G0shh5AxnlobHy6XMbKw",
+      "handle": "@7techlife",
+      "title": "Seven科技生活",
+      "description": "大家好，我是 Seven。这是一个专注 “解决问题” 的实操型科技频道。我的内容致力于打破地域和信息的边界，帮你低成本地获取和使用全球优质的数字资源。\n\n在这个频道，你主要能学到三类技能：\n1. 搞定全球身份与支付： 从境外手机卡的申请、国际银行账户的开通，到解决海外服务的支付难题，让你像当地人一样顺畅地使用互联网。\n2. 搭建个人数字基建： 分享如何玩转 VPS 服务器、配置域名，以及折腾 NAS 私有云，构建属于你自己的独立网络空间和数据中心。\n3. 掌握前沿效率工具： 带你第一时间上手 ChatGPT、Gemini 等 AI 工具，通过各类实用的软件和电脑技巧，让科技真正提升你的工作与生活效率。\n\n我不讲空洞的概念，只分享经过我亲身实测、稳定可行的方案。\n订阅 Seven科技生活，抹平信息差，带你通过技术连接更广阔的世界。\n",
+      "subscriber_count": 129000,
+      "hidden_subscribers": false,
+      "video_count": "150",
+      "uploads_playlist": "UUh8G0shh5AxnlobHy6XMbKw",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/5（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-03T10:00:32Z",
+      "checked_at": "2026-11-09T09:36:35Z"
+    },
+    {
+      "name": "新聞大視野",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-industry"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCnk79D1LrciHiJLPYY_81hw",
+      "handle": "@新聞大視野",
+      "title": "新聞大視野",
+      "description": "#新聞大視野\n立足全球視角，聚焦美中博弈。\n從大視野看世界，在變局中看清方向。\n",
+      "subscriber_count": 23200,
+      "hidden_subscribers": false,
+      "video_count": "1333",
+      "uploads_playlist": "UUnk79D1LrciHiJLPYY_81hw",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 0/50（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-09T08:28:25Z",
+      "checked_at": "2026-11-09T09:36:36Z"
+    },
+    {
+      "name": "P & H",
+      "aliases": [],
+      "lang": "zh",
+      "subtopics": [
+        "ai-products"
+      ],
+      "evidence": [
+        "zh_discovery_r4"
+      ],
+      "x": null,
+      "channel_id": "UCpXOvRzWW0lJhYrUeWBlNmA",
+      "handle": "@ph-workflow",
+      "title": "P & H",
+      "description": "科技的本質，應該是讓人更簡單從容，而不是製造焦慮。\n\n做為現代職場的系統優化與建構者，我們致力於：解決痛點、重塑流程並化繁為簡。\n\n我們的目標很簡單：用科技提升工作，讓專注力回歸生活。 \n\n歡迎加入 P & H，用更聰明的方式，找回生活的節奏。\n",
+      "subscriber_count": 30500,
+      "hidden_subscribers": false,
+      "video_count": "56",
+      "uploads_playlist": "UUpXOvRzWW0lJhYrUeWBlNmA",
+      "discovered": [],
+      "status": "not_focused",
+      "reason": "主题标题命中 2/12（要求至少 3 条且比例 ≥ 0.4）",
+      "last_upload_at": "2026-11-07T16:15:17Z",
+      "checked_at": "2026-11-09T09:36:36Z"
+    },
+    {
       "channel_id": "UCz-Sx71_C4d3AYFBj6e3ENw",
       "status": "included",
       "name": "傑少 JAY",
@@ -48189,7 +48193,7 @@
       "name_zh": "AI 模型与研究",
       "definition": "关注模型能力、训练方法、评测与研究进展。",
       "stats": {
-        "eligible": 34,
+        "eligible": 32,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48202,11 +48206,11 @@
           "talk": 1
         },
         "excluded_by_rule": {
-          "duration": 23,
-          "creator_not_topic_tier2": 24
+          "duration": 22,
+          "creator_not_topic_tier2": 26
         },
         "same_event_skipped": [],
-        "creators_in_topic": 28
+        "creators_in_topic": 24
       },
       "videos": [
         {
@@ -48279,28 +48283,6 @@
           "thumbnail": "https://i.ytimg.com/vi/MRQTlwcW-aQ/mqdefault.jpg"
         },
         {
-          "video_id": "0SVpmARc90o",
-          "title": "Reinforcement Learning is hard..",
-          "channel_title": "Caleb Writes Code",
-          "channel_id": "UCuU9jE4MHHEIyYMbDfUPSew",
-          "published_at": "2026-10-22T03:10:23Z",
-          "duration_seconds": 657,
-          "view_count": 188088,
-          "topic": "ai-models",
-          "content_type": "explainer",
-          "content_type_signals": [
-            "默认：非使用导向的更新/新闻按新技术解读"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
-            "标题含关键词「reinforcement learning」",
-            "来自精选博主 Caleb Writes Code（入池依据：YouTube 高播放发现「LLM explained」）"
-          ],
-          "url": "https://www.youtube.com/watch?v=0SVpmARc90o",
-          "thumbnail": "https://i.ytimg.com/vi/0SVpmARc90o/mqdefault.jpg"
-        },
-        {
           "video_id": "615-yWyS1n0",
           "title": "What Is LLM Inference? How AI Models Generate Responses",
           "channel_title": "IBM Technology",
@@ -48346,6 +48328,28 @@
           ],
           "url": "https://www.youtube.com/watch?v=WMD90rttSaw",
           "thumbnail": "https://i.ytimg.com/vi/WMD90rttSaw/mqdefault.jpg"
+        },
+        {
+          "video_id": "ubDXXZ8iRAo",
+          "title": "Mechanistic Interpretability... solved?",
+          "channel_title": "David Shapiro",
+          "channel_id": "UCvKRFNawVcuz4b9ihUTApCg",
+          "published_at": "2026-10-18T12:00:12Z",
+          "duration_seconds": 800,
+          "view_count": 56811,
+          "topic": "ai-models",
+          "content_type": "explainer",
+          "content_type_signals": [
+            "默认：非使用导向的更新/新闻按新技术解读"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
+            "标题含关键词「interpretability」",
+            "来自精选博主 David Shapiro（入池依据：X 认证资料 + YouTube 核验）"
+          ],
+          "url": "https://www.youtube.com/watch?v=ubDXXZ8iRAo",
+          "thumbnail": "https://i.ytimg.com/vi/ubDXXZ8iRAo/mqdefault.jpg"
         }
       ]
     },
@@ -48354,7 +48358,7 @@
       "name_zh": "AI Agent",
       "definition": "关注能规划、调用工具或执行任务的 AI Agent。",
       "stats": {
-        "eligible": 189,
+        "eligible": 197,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48368,13 +48372,13 @@
         },
         "excluded_by_rule": {
           "duration": 111,
-          "creator_not_topic_tier2": 23,
+          "creator_not_topic_tier2": 22,
           "live_or_upcoming": 1,
           "type_window:explainer": 15,
           "type_window:tutorial": 20
         },
         "same_event_skipped": [],
-        "creators_in_topic": 33
+        "creators_in_topic": 26
       },
       "videos": [
         {
@@ -48534,7 +48538,7 @@
       "name_zh": "AI 编程",
       "definition": "关注 AI 辅助开发、代码生成与工程实践。",
       "stats": {
-        "eligible": 51,
+        "eligible": 49,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48547,14 +48551,14 @@
           "talk": 1
         },
         "excluded_by_rule": {
-          "creator_not_topic_tier2": 10,
-          "duration": 73,
+          "creator_not_topic_tier2": 9,
+          "duration": 70,
           "type_window:tutorial": 13,
           "type_window:talk": 1,
           "type_window:explainer": 11
         },
         "same_event_skipped": [],
-        "creators_in_topic": 32
+        "creators_in_topic": 29
       },
       "videos": [
         {
@@ -48652,51 +48656,53 @@
           "thumbnail": "https://i.ytimg.com/vi/29F96QJEf6o/mqdefault.jpg"
         },
         {
-          "video_id": "M2SO-du5PVc",
-          "title": "Build a Fully Automated Trading Algo with AI | Part 2 | No Coding Required",
-          "channel_title": "Zerodha Varsity",
-          "channel_id": "UCQXwgooTlP6tk2a-u6vgyUA",
-          "published_at": "2026-10-09T13:30:06Z",
-          "duration_seconds": 2958,
-          "view_count": 95308,
+          "video_id": "Ok6QdZHCcI8",
+          "title": "How Revolut Cut AI Coding Costs 90% With Self-Hosted Open Models - David Abitbol, Revolut",
+          "channel_title": "AI Engineer",
+          "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+          "published_at": "2026-10-29T09:00:21Z",
+          "duration_seconds": 707,
+          "view_count": 115877,
           "topic": "ai-coding",
           "content_type": "talk",
           "content_type_signals": [
-            "podcast",
-            "时长超过45分钟"
+            "频道倾向:AI Engineer",
+            "标题“主题 - 嘉宾, 公司”格式"
           ],
-          "sources": [],
+          "sources": [
+            "r3_uploads:AI Engineer"
+          ],
           "reasons": [
-            "内容类型：talk（命中：podcast、时长超过45分钟）",
-            "标题含关键词「coding」",
-            "来自精选博主 Zerodha Varsity（入池依据：YouTube 高播放发现「AI coding agent」 / YouTube 高播放发现「AI 编程」）",
-            "边界规则：含编程 Agent 信号 → AI 编程"
+            "内容类型：talk（命中：频道倾向:AI Engineer、标题“主题 - 嘉宾, 公司”格式）",
+            "标题含关键词「AI coding」",
+            "来自精选博主 AI Engineer（入池依据：原有 X→YouTube 名单）"
           ],
-          "url": "https://www.youtube.com/watch?v=M2SO-du5PVc",
-          "thumbnail": "https://i.ytimg.com/vi/M2SO-du5PVc/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=Ok6QdZHCcI8",
+          "thumbnail": "https://i.ytimg.com/vi/Ok6QdZHCcI8/mqdefault.jpg"
         },
         {
-          "video_id": "oFtTodDCbkE",
-          "title": "7 Things AI Coding Agents Get Wrong (Because You Let Them)",
-          "channel_title": "ArjanCodes",
-          "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA",
-          "published_at": "2026-11-06T16:00:29Z",
-          "duration_seconds": 836,
-          "view_count": 24839,
+          "video_id": "gN6wl-OX8-Q",
+          "title": "This Free Repo Lets Claude Code Build Any Mac App",
+          "channel_title": "Dave Ebbelaar",
+          "channel_id": "UCn8ujwUInbJkBhffxqAPBVQ",
+          "published_at": "2026-10-26T20:34:35Z",
+          "duration_seconds": 492,
+          "view_count": 127715,
           "topic": "ai-coding",
           "content_type": "explainer",
           "content_type_signals": [
-            "默认：非使用导向的更新/新闻按新技术解读"
+            "how .* works",
+            "architecture"
           ],
           "sources": [],
           "reasons": [
-            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
-            "标题含关键词「AI coding」",
-            "来自精选博主 ArjanCodes（入池依据：X 认证资料 + YouTube 核验）",
+            "内容类型：explainer（命中：how .* works、architecture）",
+            "标题含关键词「Claude Code」",
+            "来自精选博主 Dave Ebbelaar（入池依据：公开线索 + YouTube 核验）",
             "边界规则：含编程 Agent 信号 → AI 编程"
           ],
-          "url": "https://www.youtube.com/watch?v=oFtTodDCbkE",
-          "thumbnail": "https://i.ytimg.com/vi/oFtTodDCbkE/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=gN6wl-OX8-Q",
+          "thumbnail": "https://i.ytimg.com/vi/gN6wl-OX8-Q/mqdefault.jpg"
         }
       ]
     },
@@ -48705,7 +48711,7 @@
       "name_zh": "AI 产品与应用",
       "definition": "关注面向真实用户的 AI 产品、功能与使用案例。",
       "stats": {
-        "eligible": 107,
+        "eligible": 100,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48717,7 +48723,7 @@
           "explainer": 2
         },
         "excluded_by_rule": {
-          "duration": 185,
+          "duration": 184,
           "creator_not_topic_tier2": 8,
           "live_or_upcoming": 1,
           "exclude:get rich": 2,
@@ -48725,7 +48731,7 @@
           "type_window:tutorial": 5
         },
         "same_event_skipped": [],
-        "creators_in_topic": 38
+        "creators_in_topic": 32
       },
       "videos": [
         {
@@ -48819,13 +48825,13 @@
           "thumbnail": "https://i.ytimg.com/vi/wj7mHCviMvs/mqdefault.jpg"
         },
         {
-          "video_id": "TFCDWrEBaFM",
-          "title": "How Claude Fixes It's Own Code",
-          "channel_title": "Theo - t3․gg",
-          "channel_id": "UCbRP3c757lWg9M-U7TyEkXA",
-          "published_at": "2026-11-06T23:00:39Z",
-          "duration_seconds": 2535,
-          "view_count": 116916,
+          "video_id": "DByAR5Su1Yw",
+          "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
+          "channel_title": "Nate Herk | AI Automation",
+          "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+          "published_at": "2026-10-30T00:45:46Z",
+          "duration_seconds": 831,
+          "view_count": 658071,
           "topic": "ai-products",
           "content_type": "explainer",
           "content_type_signals": [
@@ -48835,34 +48841,32 @@
           "reasons": [
             "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
             "标题含关键词「Claude」",
-            "来自精选博主 Theo - t3.gg（入池依据：X 认证资料 + YouTube 核验）"
+            "来自精选博主 Nate Herk（入池依据：X 资料直接链接 YouTube）"
           ],
-          "url": "https://www.youtube.com/watch?v=TFCDWrEBaFM",
-          "thumbnail": "https://i.ytimg.com/vi/TFCDWrEBaFM/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=DByAR5Su1Yw",
+          "thumbnail": "https://i.ytimg.com/vi/DByAR5Su1Yw/mqdefault.jpg"
         },
         {
-          "video_id": "-7jk1Y7AU7w",
-          "title": "Build $10,000 Websites using ChatGPT (Ultimate Guide)",
-          "channel_title": "Metics Media",
-          "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ",
-          "published_at": "2026-10-25T11:07:55Z",
-          "duration_seconds": 1510,
-          "view_count": 53067,
+          "video_id": "NBCM_ZoWZo8",
+          "title": "How To Give Claude Unlimited Usage",
+          "channel_title": "Theo - t3․gg",
+          "channel_id": "UCbRP3c757lWg9M-U7TyEkXA",
+          "published_at": "2026-10-28T19:05:28Z",
+          "duration_seconds": 2328,
+          "view_count": 224366,
           "topic": "ai-products",
           "content_type": "tutorial",
           "content_type_signals": [
-            "guide"
+            "how to"
           ],
-          "sources": [
-            "r3_uploads:Metics Media"
-          ],
+          "sources": [],
           "reasons": [
-            "内容类型：tutorial（命中：guide）",
-            "标题含关键词「ChatGPT」",
-            "来自精选博主 Metics Media（入池依据：YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」）"
+            "内容类型：tutorial（命中：how to）",
+            "标题含关键词「Claude」",
+            "来自精选博主 Theo - t3.gg（入池依据：X 认证资料 + YouTube 核验）"
           ],
-          "url": "https://www.youtube.com/watch?v=-7jk1Y7AU7w",
-          "thumbnail": "https://i.ytimg.com/vi/-7jk1Y7AU7w/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=NBCM_ZoWZo8",
+          "thumbnail": "https://i.ytimg.com/vi/NBCM_ZoWZo8/mqdefault.jpg"
         }
       ]
     },
@@ -48871,7 +48875,7 @@
       "name_zh": "AI 产业动态",
       "definition": "关注 AI 公司、政策、融资、合作与行业变化。",
       "stats": {
-        "eligible": 72,
+        "eligible": 67,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48883,97 +48887,16 @@
           "talk": 1
         },
         "excluded_by_rule": {
-          "creator_not_topic_tier2": 28,
-          "duration": 92,
+          "creator_not_topic_tier2": 23,
+          "duration": 85,
           "type_window:explainer": 6,
           "type_window:tutorial": 1,
           "type_window:talk": 1
         },
-        "same_event_skipped": [
-          {
-            "skipped": "of-WwgsQO3U",
-            "kept": "P_0B2iyXUIo",
-            "shared_tokens": [
-              "bubble",
-              "burst",
-              "global"
-            ]
-          }
-        ],
-        "creators_in_topic": 36
+        "same_event_skipped": [],
+        "creators_in_topic": 28
       },
       "videos": [
-        {
-          "video_id": "P_0B2iyXUIo",
-          "title": "Indian Markets Cheer As Global AI Bubble Begins To Burst | $3 Trillion Wiped Out In A Single Day?",
-          "channel_title": "The Deshbhakt",
-          "channel_id": "UCmTM_hPCeckqN3cPWtYZZcg",
-          "published_at": "2026-11-07T13:55:05Z",
-          "duration_seconds": 1176,
-          "view_count": 2167322,
-          "topic": "ai-industry",
-          "content_type": "explainer",
-          "content_type_signals": [
-            "默认：非使用导向的更新/新闻按新技术解读"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
-            "标题含关键词「AI bubble」",
-            "来自精选博主 The Deshbhakt（入池依据：YouTube 高播放发现「AI news」）",
-            "边界规则：含产业/模型安全信号 → AI 产业动态"
-          ],
-          "url": "https://www.youtube.com/watch?v=P_0B2iyXUIo",
-          "thumbnail": "https://i.ytimg.com/vi/P_0B2iyXUIo/mqdefault.jpg"
-        },
-        {
-          "video_id": "MgngwkPAuqQ",
-          "title": "The AI bubble is about to pop...",
-          "channel_title": "The Infographics Show",
-          "channel_id": "UCfdNM3NAhaBOXCafH7krzrA",
-          "published_at": "2026-10-27T20:11:15Z",
-          "duration_seconds": 1202,
-          "view_count": 4519895,
-          "topic": "ai-industry",
-          "content_type": "explainer",
-          "content_type_signals": [
-            "默认：非使用导向的更新/新闻按新技术解读"
-          ],
-          "sources": [],
-          "reasons": [
-            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
-            "标题含关键词「AI bubble」",
-            "来自精选博主 The Infographics Show（入池依据：YouTube 高播放发现「AI 编程」）",
-            "边界规则：含产业/模型安全信号 → AI 产业动态"
-          ],
-          "url": "https://www.youtube.com/watch?v=MgngwkPAuqQ",
-          "thumbnail": "https://i.ytimg.com/vi/MgngwkPAuqQ/mqdefault.jpg"
-        },
-        {
-          "video_id": "u15N3l4RT80",
-          "title": "The OpenAI/Hugging Face attack, clearly explained",
-          "channel_title": "Dwarkesh Patel",
-          "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
-          "published_at": "2026-08-31T20:49:34Z",
-          "duration_seconds": 1481,
-          "view_count": 1199716,
-          "topic": "ai-industry",
-          "content_type": "talk",
-          "content_type_signals": [
-            "podcast",
-            "频道倾向:Dwarkesh"
-          ],
-          "sources": [
-            "r3_uploads:Dwarkesh Patel"
-          ],
-          "reasons": [
-            "内容类型：talk（命中：podcast、频道倾向:Dwarkesh）",
-            "标题含关键词「OpenAI」",
-            "来自精选博主 Dwarkesh Patel（入池依据：X 资料直接链接 YouTube）"
-          ],
-          "url": "https://www.youtube.com/watch?v=u15N3l4RT80",
-          "thumbnail": "https://i.ytimg.com/vi/u15N3l4RT80/mqdefault.jpg"
-        },
         {
           "video_id": "nEaJMdM1djM",
           "title": "Did the AI bubble just pop?",
@@ -49021,27 +48944,96 @@
           "thumbnail": "https://i.ytimg.com/vi/IrAHINf0M6E/mqdefault.jpg"
         },
         {
-          "video_id": "vYxljf_Y17g",
-          "title": "Europe joins data center protests | DW News",
-          "channel_title": "DW News",
-          "channel_id": "UCknLrEdhRCp1aegoMqRaCZg",
-          "published_at": "2026-11-07T15:20:19Z",
-          "duration_seconds": 1062,
-          "view_count": 31046,
+          "video_id": "u15N3l4RT80",
+          "title": "The OpenAI/Hugging Face attack, clearly explained",
+          "channel_title": "Dwarkesh Patel",
+          "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+          "published_at": "2026-08-31T20:49:34Z",
+          "duration_seconds": 1481,
+          "view_count": 1199716,
+          "topic": "ai-industry",
+          "content_type": "talk",
+          "content_type_signals": [
+            "podcast",
+            "频道倾向:Dwarkesh"
+          ],
+          "sources": [
+            "r3_uploads:Dwarkesh Patel"
+          ],
+          "reasons": [
+            "内容类型：talk（命中：podcast、频道倾向:Dwarkesh）",
+            "标题含关键词「OpenAI」",
+            "来自精选博主 Dwarkesh Patel（入池依据：X 资料直接链接 YouTube）"
+          ],
+          "url": "https://www.youtube.com/watch?v=u15N3l4RT80",
+          "thumbnail": "https://i.ytimg.com/vi/u15N3l4RT80/mqdefault.jpg"
+        },
+        {
+          "video_id": "UIYoKcIvSVo",
+          "title": "AI News Is Getting Absolutely RIDICULOUS",
+          "channel_title": "TheAIGRID",
+          "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg",
+          "published_at": "2026-10-31T16:15:15Z",
+          "duration_seconds": 1827,
+          "view_count": 83905,
           "topic": "ai-industry",
           "content_type": "explainer",
           "content_type_signals": [
-            "新闻/更新优先:news"
+            "新闻/更新优先:AI news"
           ],
           "sources": [],
           "reasons": [
-            "内容类型：explainer（命中：新闻/更新优先:news）",
-            "标题含关键词「data center」",
-            "来自精选博主 DW News（入池依据：YouTube 高播放发现「AI 新闻」）",
+            "内容类型：explainer（命中：新闻/更新优先:AI news）",
+            "标题含关键词「AI news」",
+            "来自精选博主 TheAIGRID（入池依据：X 资料直接链接 YouTube）",
             "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
-          "url": "https://www.youtube.com/watch?v=vYxljf_Y17g",
-          "thumbnail": "https://i.ytimg.com/vi/vYxljf_Y17g/mqdefault.jpg"
+          "url": "https://www.youtube.com/watch?v=UIYoKcIvSVo",
+          "thumbnail": "https://i.ytimg.com/vi/UIYoKcIvSVo/mqdefault.jpg"
+        },
+        {
+          "video_id": "2lt4P_xGFL8",
+          "title": "Anthropic just built it...",
+          "channel_title": "Wes Roth",
+          "channel_id": "UCqcbQf6yw5KzRoDDcZ_wBSw",
+          "published_at": "2026-11-06T14:35:24Z",
+          "duration_seconds": 2438,
+          "view_count": 172001,
+          "topic": "ai-industry",
+          "content_type": "explainer",
+          "content_type_signals": [
+            "默认：非使用导向的更新/新闻按新技术解读"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
+            "标题含关键词「Anthropic」",
+            "来自精选博主 Wes Roth（入池依据：公开线索 + YouTube 核验）"
+          ],
+          "url": "https://www.youtube.com/watch?v=2lt4P_xGFL8",
+          "thumbnail": "https://i.ytimg.com/vi/2lt4P_xGFL8/mqdefault.jpg"
+        },
+        {
+          "video_id": "vJvFta7e76E",
+          "title": "The Road to NVIDIA RTX Spark",
+          "channel_title": "NVIDIA",
+          "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+          "published_at": "2026-10-14T19:01:02Z",
+          "duration_seconds": 339,
+          "view_count": 353514,
+          "topic": "ai-industry",
+          "content_type": "explainer",
+          "content_type_signals": [
+            "默认：非使用导向的更新/新闻按新技术解读"
+          ],
+          "sources": [],
+          "reasons": [
+            "内容类型：explainer（命中：默认：非使用导向的更新/新闻按新技术解读）",
+            "标题含关键词「Nvidia」",
+            "来自精选博主 NVIDIA（入池依据：原有 X→YouTube 名单）"
+          ],
+          "url": "https://www.youtube.com/watch?v=vJvFta7e76E",
+          "thumbnail": "https://i.ytimg.com/vi/vJvFta7e76E/mqdefault.jpg"
         }
       ]
     }

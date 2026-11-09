@@ -162,7 +162,7 @@ def evidence_label(evidence):
 
 def discovery_only(creator):
     evidence=creator.get('evidence') or []
-    return bool(evidence) and all(str(item).startswith('youtube_discovery:') for item in evidence)
+    return bool(evidence) and all(str(item).startswith('youtube_discovery:') or item == 'zh_discovery_r4' for item in evidence)
 
 def official_channel(creator, rule):
     official={str(x).casefold() for x in rule.get('official_channels', [])}

@@ -1,0 +1,91 @@
+{
+  "round": "4 zh",
+  "new_included_channels_by_subtopic": {
+    "ai-products": [
+      {
+        "name": "阿石OMP",
+        "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q",
+        "subscriber_count": 68500,
+        "last_upload_at": "2026-11-09T09:28:59Z"
+      }
+    ]
+  },
+  "top6_changes_vs_r3": [
+    {
+      "topic": "ai-models",
+      "before": [
+        "N4QH-RLT1xw",
+        "2K_Rm8cho1I",
+        "MRQTlwcW-aQ",
+        "0SVpmARc90o",
+        "615-yWyS1n0",
+        "WMD90rttSaw"
+      ],
+      "after": [
+        "N4QH-RLT1xw",
+        "2K_Rm8cho1I",
+        "MRQTlwcW-aQ",
+        "615-yWyS1n0",
+        "WMD90rttSaw",
+        "ubDXXZ8iRAo"
+      ]
+    },
+    {
+      "topic": "ai-coding",
+      "before": [
+        "YgcEesCDIkw",
+        "nzAdaWt6oxM",
+        "hfQ82hdI9Oo",
+        "29F96QJEf6o",
+        "M2SO-du5PVc",
+        "oFtTodDCbkE"
+      ],
+      "after": [
+        "YgcEesCDIkw",
+        "nzAdaWt6oxM",
+        "hfQ82hdI9Oo",
+        "29F96QJEf6o",
+        "Ok6QdZHCcI8",
+        "gN6wl-OX8-Q"
+      ]
+    },
+    {
+      "topic": "ai-products",
+      "before": [
+        "7HQ4FWVwAsk",
+        "-I9Csc3khis",
+        "Ge1B-Ok1Pfk",
+        "wj7mHCviMvs",
+        "TFCDWrEBaFM",
+        "-7jk1Y7AU7w"
+      ],
+      "after": [
+        "7HQ4FWVwAsk",
+        "-I9Csc3khis",
+        "Ge1B-Ok1Pfk",
+        "wj7mHCviMvs",
+        "DByAR5Su1Yw",
+        "NBCM_ZoWZo8"
+      ]
+    },
+    {
+      "topic": "ai-industry",
+      "before": [
+        "P_0B2iyXUIo",
+        "MgngwkPAuqQ",
+        "u15N3l4RT80",
+        "nEaJMdM1djM",
+        "IrAHINf0M6E",
+        "vYxljf_Y17g"
+      ],
+      "after": [
+        "nEaJMdM1djM",
+        "IrAHINf0M6E",
+        "u15N3l4RT80",
+        "UIYoKcIvSVo",
+        "2lt4P_xGFL8",
+        "vJvFta7e76E"
+      ]
+    }
+  ]
+}

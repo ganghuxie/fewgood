@@ -1,0 +1,232 @@
+{
+  "calls": [
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:28Z",
+      "http_status": 200,
+      "returned": 6
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:28Z",
+      "http_status": 200,
+      "returned": 10
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:29Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:29Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:29Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:30Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:30Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:30Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:31Z",
+      "http_status": 200,
+      "returned": 3
+    },
+    {
+      "endpoint": "search",
+      "purpose": "zh_search",
+      "timestamp": "2026-11-09T09:36:31Z",
+      "http_status": 200,
+      "returned": 5
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "zh_verify_channel",
+      "timestamp": "2026-11-09T09:36:31Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "channels",
+      "purpose": "zh_verify_channel",
+      "timestamp": "2026-11-09T09:36:31Z",
+      "http_status": 200,
+      "returned": 29
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:32Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:32Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:32Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:33Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:34Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:34Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:34Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:35Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:35Z",
+      "http_status": 200,
+      "returned": 22
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:35Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "playlistItems",
+      "purpose": "zh_uploads",
+      "timestamp": "2026-11-09T09:36:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "zh_candidate_details",
+      "timestamp": "2026-11-09T09:36:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "zh_candidate_details",
+      "timestamp": "2026-11-09T09:36:36Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "zh_candidate_details",
+      "timestamp": "2026-11-09T09:36:37Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "zh_candidate_details",
+      "timestamp": "2026-11-09T09:36:37Z",
+      "http_status": 200,
+      "returned": 50
+    },
+    {
+      "endpoint": "videos",
+      "purpose": "zh_candidate_details",
+      "timestamp": "2026-11-09T09:36:37Z",
+      "http_status": 200,
+      "returned": 41
+    }
+  ],
+  "search_calls": 10,
+  "other_units": 22,
+  "old_model_units": 1022,
+  "aborted_reason": null
+}

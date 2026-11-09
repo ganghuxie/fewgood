@@ -1,25 +1,4 @@
 creators:
-- name: Gary Chen
-  channel_id: UC9C3t-3ocL0LiwGRD0gBJ8A
-  lang: zh
-  subtopics: [ai-agents, ai-products]
-  evidence: [group_c_reference]
-  subscriber_count_at_check: 103000
-  checked_at: '2026-11-08T00:00:00Z'
-- name: 傑少 JAY
-  channel_id: UCz-Sx71_C4d3AYFBj6e3ENw
-  lang: zh
-  subtopics: [ai-agents, ai-products]
-  evidence: [group_c_reference]
-  subscriber_count_at_check: 20700
-  checked_at: '2026-11-08T00:00:00Z'
-- name: Metics Media
-  channel_id: UCuwpzP90g1LuGk6JUNms_AQ
-  lang: en
-  subtopics: [ai-agents, ai-products]
-  evidence: [group_c_reference]
-  subscriber_count_at_check: 759000
-  checked_at: '2026-11-08T00:00:00Z'
 - name: Linus Ekenstam
   channel_id: UCFnSHboIJpG6-hriXMyHvYg
   handle: '@linusekenstam'
@@ -900,6 +879,17 @@ creators:
   - knowledge_lead
   subscriber_count_at_check: 91300
   checked_at: '2026-11-08T13:10:42Z'
+- name: Gary Chen
+  channel_id: UC9C3t-3ocL0LiwGRD0gBJ8A
+  handle: '@garychenai'
+  lang: zh
+  subtopics:
+  - ai-agents
+  - ai-products
+  evidence:
+  - group_c_reference
+  subscriber_count_at_check: 103000
+  checked_at: null
 - name: Apna College
   channel_id: UCBwmMxybNva6P_5VmxjzwqA
   handle: '@apnacollegeofficial'
@@ -934,6 +924,21 @@ creators:
   - youtube_discovery:AI 编程
   subscriber_count_at_check: 1280000
   checked_at: '2026-11-08T13:10:46Z'
+- name: Metics Media
+  channel_id: UCuwpzP90g1LuGk6JUNms_AQ
+  handle: '@meticsmedia'
+  lang: en
+  subtopics:
+  - ai-coding
+  - ai-agents
+  - ai-products
+  evidence:
+  - youtube_discovery:AI Agent 智能体
+  - youtube_discovery:AI coding agent
+  - youtube_discovery:AI 编程
+  - group_c_reference
+  subscriber_count_at_check: 759000
+  checked_at: '2026-11-08T13:10:46Z'
 - name: Ayushman Pandita
   channel_id: UCyWN-BnWSKeHEnNOYvvpNnA
   handle: '@ayushmanpandita'
@@ -964,3 +969,24 @@ creators:
   - youtube_discovery:AI 编程 教程
   subscriber_count_at_check: 1040000
   checked_at: '2026-11-08T13:10:52Z'
+- name: 阿石OMP
+  channel_id: UCnixWoic7ATGI0AZ2LrtJ7Q
+  handle: '@ompshek'
+  lang: zh
+  subtopics:
+  - ai-products
+  evidence:
+  - zh_discovery_r4
+  subscriber_count_at_check: 68500
+  checked_at: '2026-11-09T09:36:33Z'
+- name: 傑少 JAY
+  channel_id: UCz-Sx71_C4d3AYFBj6e3ENw
+  handle: null
+  lang: zh
+  subtopics:
+  - ai-agents
+  - ai-products
+  evidence:
+  - group_c_reference
+  subscriber_count_at_check: 20700
+  checked_at: '2026-11-08T00:00:00Z'

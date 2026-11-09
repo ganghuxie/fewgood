@@ -1,0 +1,16 @@
+# Round 4 is intentionally a one-off, Chinese-only discovery pass.
+search_call_cap: 10
+other_unit_cap: 300
+max_channels: 40
+search_defaults: {type: video, order: viewCount, published_within_days: 90, maxResults: 50}
+queries:
+  - {topic: ai-models, lang: zh-Hans, query: "大模型 论文解读"}
+  - {topic: ai-models, lang: zh-Hant, query: "大模型 論文解讀"}
+  - {topic: ai-agents, lang: zh-Hans, query: "AI Agent 智能体"}
+  - {topic: ai-agents, lang: zh-Hant, query: "AI Agent 智能體"}
+  - {topic: ai-coding, lang: zh-Hans, query: "AI 编程 Cursor Claude Code"}
+  - {topic: ai-coding, lang: zh-Hant, query: "AI 程式設計 Cursor Claude Code"}
+  - {topic: ai-products, lang: zh-Hans, query: "AI 工具 应用 教程"}
+  - {topic: ai-products, lang: zh-Hant, query: "AI 工具 應用 教學"}
+  - {topic: ai-industry, lang: zh-Hans, query: "AI 新闻 行业动态"}
+  - {topic: ai-industry, lang: zh-Hant, query: "AI 新聞 產業動態"}
