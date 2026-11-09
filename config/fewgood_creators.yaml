@@ -399,8 +399,9 @@ creators:
   - ai-industry
   evidence:
   - x_bio_youtube_link
+  - jason_pick
   subscriber_count_at_check: 1030000
-  checked_at: '2026-11-08T13:10:26Z'
+  checked_at: '2026-11-09T10:46:33Z'
 - name: MattVidPro AI
   channel_id: UC5Wz4fFacYuON6IKbhSa7Zw
   handle: '@mattvidpro'
@@ -979,6 +980,18 @@ creators:
   - zh_discovery_r4
   subscriber_count_at_check: 68500
   checked_at: '2026-11-09T09:36:33Z'
+- name: 花叔
+  channel_id: UCzbSuf_A_D8dARJ33HzoDew
+  handle: '@alchain'
+  lang: zh
+  subtopics:
+  - ai-coding
+  - ai-products
+  - ai-agents
+  evidence:
+  - x_discovery
+  subscriber_count_at_check: 72900
+  checked_at: '2026-11-09T10:45:09Z'
 - name: 傑少 JAY
   channel_id: UCz-Sx71_C4d3AYFBj6e3ENw
   handle: null

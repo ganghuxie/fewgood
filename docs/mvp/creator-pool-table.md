@@ -58,6 +58,7 @@
 | Dave Ebbelaar | en |  | https://www.youtube.com/channel/UCn8ujwUInbJkBhffxqAPBVQ | 307000 | 2026-10-31 | 公开线索 + YouTube 核验 |
 | Jeff Su | en |  | https://www.youtube.com/channel/UCwAnu01qlnVg1Ai2AbtTMaA | 1940000 | 2026-10-27 | 公开线索 + YouTube 核验 |
 | Android Developers | en |  | https://www.youtube.com/channel/UCVHFbqXqoYvEWM1Ddxl0QDg | 1440000 | 2026-11-07 | YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」 |
+| 花叔 | zh | @alchain | https://www.youtube.com/channel/UCzbSuf_A_D8dARJ33HzoDew | 72900 | 2026-10-21 | X 发现（x_discovery） |
 
 ## AI 编程
 
@@ -91,6 +92,7 @@
 | Android Developers | en |  | https://www.youtube.com/channel/UCVHFbqXqoYvEWM1Ddxl0QDg | 1440000 | 2026-11-07 | YouTube 高播放发现「AI Agent 智能体」 / YouTube 高播放发现「AI coding agent」 |
 | JavaScript Mastery | en |  | https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A | 1280000 | 2026-11-08 | YouTube 高播放发现「AI coding agent」 / YouTube 高播放发现「AI 编程」 |
 | Visual Studio Code | en |  | https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w | 1040000 | 2026-11-05 | YouTube 高播放发现「AI 编程 教程」 |
+| 花叔 | zh | @alchain | https://www.youtube.com/channel/UCzbSuf_A_D8dARJ33HzoDew | 72900 | 2026-10-21 | X 发现（x_discovery） |
 
 ## AI 产品与应用
 
@@ -105,7 +107,8 @@
 | ElevenLabs | en | @ElevenLabs | https://www.youtube.com/channel/UC-ew9TfeD887qUSiWWAAj1w | 289000 | 2026-11-07 | 原有 X→YouTube 名单 |
 | Stability AI | en | @StabilityAI | https://www.youtube.com/channel/UCrhOqMww3ItTHOKxtYM56cg | 57 | 2026-10-01 | 原有 X→YouTube 名单 |
 | AI Engineer | en | @aiDotEngineer | https://www.youtube.com/channel/UCLKPca3kwwd-B59HNr-_lvA | 1000000 | 2026-11-08 | 原有 X→YouTube 名单 |
-| Matt Wolfe | en | @mreflow | https://www.youtube.com/channel/UChpleBmo18P08aKCIgti38g | 1030000 | 2026-11-08 | X 资料直接链接 YouTube |
+| Matt Wolfe | en | @mreflow | https://www.youtube.com/channel/UChpleBmo18P08aKCIgti38g | 1030000 | 2026-11-09 | X 资料直接链接 YouTube / Jason pick |
+| 花叔 | zh | @alchain | https://www.youtube.com/channel/UCzbSuf_A_D8dARJ33HzoDew | 72900 | 2026-10-21 | X 发现（x_discovery） |
 | MattVidPro AI | en | @MattVidPro | https://www.youtube.com/channel/UC5Wz4fFacYuON6IKbhSa7Zw | 305000 | 2026-11-08 | X 资料直接链接 YouTube |
 | The AI Advantage | en | @IgorPogany | https://www.youtube.com/channel/UCHhYXsLBEVVnbvsq57n1MTQ | 493000 | 2026-11-07 | X 资料直接链接 YouTube |
 | AI超元域 | zh | @AISuperDomain | https://www.youtube.com/channel/UCIomFkAj4Vq_rGX2Jot7D8A | 78100 | 2026-11-07 | X 资料直接链接 YouTube |
@@ -141,7 +144,7 @@
 | The Rundown AI | en | @TheRundownAI | https://www.youtube.com/channel/UC8LUzR34nNX8KH3Edd0un1g | 203000 | 2026-11-07 | 原有 X→YouTube 名单 |
 | ColdFusion | en | @ColdFusion_TV | https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A | 5260000 | 2026-11-02 | X 资料直接链接 YouTube |
 | Dwarkesh Patel | en | @dwarkesh_sp | https://www.youtube.com/channel/UCXl4i9dYBrFOabk0xGmbkRA | 1460000 | 2026-11-08 | X 资料直接链接 YouTube |
-| Matt Wolfe | en | @mreflow | https://www.youtube.com/channel/UChpleBmo18P08aKCIgti38g | 1030000 | 2026-11-08 | X 资料直接链接 YouTube |
+| Matt Wolfe | en | @mreflow | https://www.youtube.com/channel/UChpleBmo18P08aKCIgti38g | 1030000 | 2026-11-09 | X 资料直接链接 YouTube / Jason pick |
 | TheAIGRID | en | @TheAiGrid | https://www.youtube.com/channel/UCbY9xX3_jW5c2fjlZVBI4cg | 405000 | 2026-11-07 | X 资料直接链接 YouTube |
 | All-In Podcast | en | @theallinpod | https://www.youtube.com/channel/UCESLZhusAkFfsNsApnjF_Cg | 1170000 | 2026-11-08 | X 资料直接链接 YouTube |
 | David Shapiro | en | @DaveShapi | https://www.youtube.com/channel/UCvKRFNawVcuz4b9ihUTApCg | 193000 | 2026-11-08 | X 认证资料 + YouTube 核验 |

@@ -1,5 +1,5 @@
 {
-  "data_refreshed_at": "2026-11-09T09:36:37Z",
+  "data_refreshed_at": "2026-11-09T10:46:33Z",
   "creators": [
     {
       "name": "Linus Ekenstam",
@@ -1234,7 +1234,8 @@
         "ai-industry"
       ],
       "evidence": [
-        "x_bio_youtube_link"
+        "x_bio_youtube_link",
+        "jason_pick"
       ],
       "x": "mreflow",
       "channel_id": "UChpleBmo18P08aKCIgti38g",
@@ -1249,7 +1250,7 @@
       "status": "included",
       "reason": "included",
       "last_upload_at": "2026-11-07T17:00:37Z",
-      "checked_at": "2026-11-08T13:10:26Z"
+      "checked_at": "2026-11-09T10:46:33Z"
     },
     {
       "name": "MattVidPro AI",
@@ -47833,6 +47834,30 @@
       "reason": "主题标题命中 2/12（要求至少 3 条且比例 ≥ 0.4）",
       "last_upload_at": "2026-11-07T16:15:17Z",
       "checked_at": "2026-11-09T09:36:36Z"
+    },
+    {
+      "name": "花叔",
+      "channel_id": "UCzbSuf_A_D8dARJ33HzoDew",
+      "handle": "@alchain",
+      "lang": "zh",
+      "subtopics": [
+        "ai-coding",
+        "ai-products",
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_discovery"
+      ],
+      "subscriber_count_at_check": 72900,
+      "checked_at": "2026-11-09T10:45:09Z",
+      "last_upload_at": "2026-10-21T04:42:58Z",
+      "uploads_playlist": "UUzbSuf_A_D8dARJ33HzoDew",
+      "status": "included",
+      "reason": "included",
+      "x": "AlchainHust",
+      "discovery_note": "From Arthur C Chinese X AI list; YouTube linked on huasheng.ai",
+      "title": "花叔",
+      "subscriber_count": 72900
     }
   ],
   "candidate_videos": [
@@ -372502,6 +372527,3756 @@
       "sources": [
         "zh_discovery_r4:UCpXOvRzWW0lJhYrUeWBlNmA"
       ]
+    },
+    {
+      "id": "qC4M-tPjCE0",
+      "snippet": {
+        "publishedAt": "2026-10-21T04:42:58Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "从香农的一个比特到ChatGPT：大模型到底是怎么工作的",
+        "description": "床前明月光，疑是地上……你多半秒答「霜」。我打开冰箱，看到了……答案就五花八门了。这种「好不好猜」的感觉，1948年香农就告诉我们能算出数来，单位是比特。大语言模型训练时最主要的事，就是把这个数一个字一个字往下压。\n\n这期从一枚公平的硬币讲起：中文到底有多好猜（我们数了整本《西游记》），香农只用一本书造「假英语」的办法（我们拿《西游记》造了假中文），他1951年的猜字游戏，为什么猜得准就压得小，token是什么，训练到底在压低什么，为什么不能记一张大表，注意力怎么找到「它」指的是谁，温度怎么改变模型写出来的字，以及「它到底懂不懂」这场还没吵完的争论。\n\n片里所有「多少比特」「多少概率」的数，都是我们在自己电脑上用阿里开源的千问 Qwen3-0.6B 基础版实测的，说的是这个小模型，不代表今天的大模型。只是讲解用的示意图，画面上都标了「示意」。\n\n章节\n00:00 床前明月光，疑是地上……\n00:43 香农把意思放到一边\n00:59 1比特＝抛一次硬币\n01:32 中文有多好猜：数一整本《西游记》\n01:55 香农的翻书法，造一串假中文\n02:42 1951年的猜字游戏\n03:28 猜得准，就压得小\n04:31 token\n04:49 训练在压低什么\n05:29 为什么不记一张大表\n06:03 注意力：「它」是谁\n06:58 它怎么写字：温度\n07:37 它懂不懂\n08:16 最后一次：我打开冰箱\n\n一手出处\nC. E. Shannon,《通信的数学理论》A Mathematical Theory of Communication (1948) https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf\nC. E. Shannon, Prediction and Entropy of Printed English (1951) https://www.princeton.edu/~wbialek/rome/refs/shannon_51.pdf\nG. Delétang et al., Language Modeling Is Compression (DeepMind, 2023) https://arxiv.org/abs/2309.10668\nT. Brown et al., Language Models are Few-Shot Learners (GPT-3, 2020) https://arxiv.org/abs/2005.14165\nL. Ouyang et al., Training language models to follow instructions with human feedback (2022) https://arxiv.org/abs/2203.02155\nY. Bengio et al., A Neural Probabilistic Language Model (2003) https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf\nA. Vaswani et al., Attention Is All You Need (2017) https://arxiv.org/abs/1706.03762\nE. Bender and A. Koller, Climbing towards NLU (ACL 2020) https://aclanthology.org/2020.acl-main.463.pdf\nK. Li et al., Emergent World Representations (Othello-GPT, 2023) https://arxiv.org/abs/2210.13382\nIlya Sutskever 访谈（Dwarkesh Patel, 2023-03-27）https://www.dwarkesh.com/p/ilya-sutskever\n千问 Qwen3-0.6B-Base 模型卡 https://www.modelscope.cn/models/Qwen/Qwen3-0.6B-Base\n《西游记》文本：古腾堡计划 #23962\n\n画面与声音\n香农肖像：Tekniska museet，CC BY 2.0，via Wikimedia Commons。其余画面全部用代码绘制。口播使用创作者本人的AI复刻声音，配乐为AI生成。",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qC4M-tPjCE0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qC4M-tPjCE0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qC4M-tPjCE0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qC4M-tPjCE0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qC4M-tPjCE0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "tags": [
+          "大模型原理",
+          "大语言模型是怎么工作的",
+          "ChatGPT原理",
+          "香农",
+          "信息论",
+          "千问",
+          "token是什么",
+          "注意力机制"
+        ],
+        "categoryId": "28",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "从香农的一个比特到ChatGPT：大模型到底是怎么工作的",
+          "description": "床前明月光，疑是地上……你多半秒答「霜」。我打开冰箱，看到了……答案就五花八门了。这种「好不好猜」的感觉，1948年香农就告诉我们能算出数来，单位是比特。大语言模型训练时最主要的事，就是把这个数一个字一个字往下压。\n\n这期从一枚公平的硬币讲起：中文到底有多好猜（我们数了整本《西游记》），香农只用一本书造「假英语」的办法（我们拿《西游记》造了假中文），他1951年的猜字游戏，为什么猜得准就压得小，token是什么，训练到底在压低什么，为什么不能记一张大表，注意力怎么找到「它」指的是谁，温度怎么改变模型写出来的字，以及「它到底懂不懂」这场还没吵完的争论。\n\n片里所有「多少比特」「多少概率」的数，都是我们在自己电脑上用阿里开源的千问 Qwen3-0.6B 基础版实测的，说的是这个小模型，不代表今天的大模型。只是讲解用的示意图，画面上都标了「示意」。\n\n章节\n00:00 床前明月光，疑是地上……\n00:43 香农把意思放到一边\n00:59 1比特＝抛一次硬币\n01:32 中文有多好猜：数一整本《西游记》\n01:55 香农的翻书法，造一串假中文\n02:42 1951年的猜字游戏\n03:28 猜得准，就压得小\n04:31 token\n04:49 训练在压低什么\n05:29 为什么不记一张大表\n06:03 注意力：「它」是谁\n06:58 它怎么写字：温度\n07:37 它懂不懂\n08:16 最后一次：我打开冰箱\n\n一手出处\nC. E. Shannon,《通信的数学理论》A Mathematical Theory of Communication (1948) https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf\nC. E. Shannon, Prediction and Entropy of Printed English (1951) https://www.princeton.edu/~wbialek/rome/refs/shannon_51.pdf\nG. Delétang et al., Language Modeling Is Compression (DeepMind, 2023) https://arxiv.org/abs/2309.10668\nT. Brown et al., Language Models are Few-Shot Learners (GPT-3, 2020) https://arxiv.org/abs/2005.14165\nL. Ouyang et al., Training language models to follow instructions with human feedback (2022) https://arxiv.org/abs/2203.02155\nY. Bengio et al., A Neural Probabilistic Language Model (2003) https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf\nA. Vaswani et al., Attention Is All You Need (2017) https://arxiv.org/abs/1706.03762\nE. Bender and A. Koller, Climbing towards NLU (ACL 2020) https://aclanthology.org/2020.acl-main.463.pdf\nK. Li et al., Emergent World Representations (Othello-GPT, 2023) https://arxiv.org/abs/2210.13382\nIlya Sutskever 访谈（Dwarkesh Patel, 2023-03-27）https://www.dwarkesh.com/p/ilya-sutskever\n千问 Qwen3-0.6B-Base 模型卡 https://www.modelscope.cn/models/Qwen/Qwen3-0.6B-Base\n《西游记》文本：古腾堡计划 #23962\n\n画面与声音\n香农肖像：Tekniska museet，CC BY 2.0，via Wikimedia Commons。其余画面全部用代码绘制。口播使用创作者本人的AI复刻声音，配乐为AI生成。"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT8M38S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "843",
+        "likeCount": "7",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "cKNKN8-z8oU",
+      "snippet": {
+        "publishedAt": "2026-10-18T00:05:37Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "5亿token实测！DeepSeek-V4.1-flash-1017到底行不行？",
+        "description": "DeepSeek V4.1 Flash 1017 在 10 月 17 日发布。我拿自己的 5 亿 token，把它实测了一遍：9 个案例，有动画、有游戏、有 3D，有几个还做了带 skill 和不带 skill 的对比。\n\n这期会看到：\n- 发布会 PPT\n- 带 skill 和不带 skill 的动效对比\n- DeepSeek 发布动画\n- Opus 5.5 和 DeepSeek 各做一支宣传片，放一起看\n- 网页版传送门\n- 纪念碑谷风格的解谜小游戏\n- KV cache 解说视频\n- 千里江山图里的云海游鲸\n- 故宫 3D，带和不带 huashu-3djs 各做一版\n最后揭晓：这 5 亿 token 到底花了多少钱。\n\n说明：带不带 skill 的对比不是严格的单变量实验；这些案例我中途都给过反馈、调整过，不是一次直出。我不会写代码，片里的东西都是 AI 写的。\n\n你最想让 DeepSeek 做什么？评论区聊聊。\n\n00:00 开场：5 亿 token 实测\n00:50 这次更新了什么\n03:49 案例1 发布会 PPT\n05:35 案例2 带 skill vs 不带 skill 动效\n05:53 案例3 DeepSeek 发布动画\n06:24 案例4 宣传片：Opus 5.5 vs DeepSeek\n07:06 案例5 网页版传送门\n07:35 案例6 纪念碑谷风格解谜\n08:01 案例7 KV cache 解说视频\n08:35 案例8 千里江山图·云海游鲸\n08:54 案例9 故宫 3D\n09:24 揭晓：5 亿 token 花了多少钱\n\n#DeepSeek #AI实测 #AI编程",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cKNKN8-z8oU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cKNKN8-z8oU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cKNKN8-z8oU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cKNKN8-z8oU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cKNKN8-z8oU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "tags": [
+          "DeepSeek",
+          "DeepSeek V4.1 Flash",
+          "AI实测",
+          "AI编程",
+          "大模型",
+          "token",
+          "AI动画"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "5亿token实测！DeepSeek-V4.1-flash-1017到底行不行？",
+          "description": "DeepSeek V4.1 Flash 1017 在 10 月 17 日发布。我拿自己的 5 亿 token，把它实测了一遍：9 个案例，有动画、有游戏、有 3D，有几个还做了带 skill 和不带 skill 的对比。\n\n这期会看到：\n- 发布会 PPT\n- 带 skill 和不带 skill 的动效对比\n- DeepSeek 发布动画\n- Opus 5.5 和 DeepSeek 各做一支宣传片，放一起看\n- 网页版传送门\n- 纪念碑谷风格的解谜小游戏\n- KV cache 解说视频\n- 千里江山图里的云海游鲸\n- 故宫 3D，带和不带 huashu-3djs 各做一版\n最后揭晓：这 5 亿 token 到底花了多少钱。\n\n说明：带不带 skill 的对比不是严格的单变量实验；这些案例我中途都给过反馈、调整过，不是一次直出。我不会写代码，片里的东西都是 AI 写的。\n\n你最想让 DeepSeek 做什么？评论区聊聊。\n\n00:00 开场：5 亿 token 实测\n00:50 这次更新了什么\n03:49 案例1 发布会 PPT\n05:35 案例2 带 skill vs 不带 skill 动效\n05:53 案例3 DeepSeek 发布动画\n06:24 案例4 宣传片：Opus 5.5 vs DeepSeek\n07:06 案例5 网页版传送门\n07:35 案例6 纪念碑谷风格解谜\n08:01 案例7 KV cache 解说视频\n08:35 案例8 千里江山图·云海游鲸\n08:54 案例9 故宫 3D\n09:24 揭晓：5 亿 token 花了多少钱\n\n#DeepSeek #AI实测 #AI编程"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT10M29S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "3861",
+        "likeCount": "17",
+        "favoriteCount": "0",
+        "commentCount": "21"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "DoGVs9og000",
+      "snippet": {
+        "publishedAt": "2026-10-16T14:54:51Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "马斯克8年前被当笑话的推文，今天真飞了：新Roadster #Shorts",
+        "description": "2018年马斯克发推：给Roadster装大约10个小推进器，也许能让特斯拉飞起来。2026年10月15日，新Roadster的Rocket版带着10个冷气喷口真飞了。这次说2028年投产，他会准时吗？评论区扣A或B。\n\n素材来源：Tesla官方发布会视频；SpaceX（Flickr，CC0）ORBCOMM-2一级着陆、Starman跑车；美国海关与边境保护局航拍（公有领域）星舰第5次飞行助推器被接住。\n口播为本人授权的AI复刻音色。",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DoGVs9og000/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DoGVs9og000/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DoGVs9og000/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DoGVs9og000/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DoGVs9og000/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/DoGVs9og000/sardefault.jpg",
+            "width": 810,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "马斯克8年前被当笑话的推文，今天真飞了：新Roadster #Shorts",
+          "description": "2018年马斯克发推：给Roadster装大约10个小推进器，也许能让特斯拉飞起来。2026年10月15日，新Roadster的Rocket版带着10个冷气喷口真飞了。这次说2028年投产，他会准时吗？评论区扣A或B。\n\n素材来源：Tesla官方发布会视频；SpaceX（Flickr，CC0）ORBCOMM-2一级着陆、Starman跑车；美国海关与边境保护局航拍（公有领域）星舰第5次飞行助推器被接住。\n口播为本人授权的AI复刻音色。"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT1M",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "2068",
+        "likeCount": "18",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "sj-qflI5pzg",
+      "snippet": {
+        "publishedAt": "2026-10-15T09:34:49Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "不会写代码，我给智能体手机手搓了个Skill，实现了「言出法随」",
+        "description": "我不会写代码，给STEPX Neo手搓了一个叫「言出法随」的Skill，让手机里的阶跃Amoo记住我在旅居和写作里的东西：找咖啡馆的偏好、做过的项目、写了一半的稿子。三段散在不同对话里的素材，换个对话说一句「接着写」，它写出了一份能接着改的初稿。\n\n这期能看到：\n· Skill怎么手搓：先把要记的东西拆成四类，再写清楚该去哪找、怎么更新\n· 怎么调手机自带的能力：笔记、相册、日历这些「原子能力」\n· 怎么验收：它说记住了，就换个对话问；说写进笔记了，就打开笔记看\n· 从打包、传到AmooStore，到手机测试区装上\n\n如果你也给自己的手机做一个Skill，你最想让它记住什么？评论区聊聊。\n\n封面和片中部分画面为AI生成。\n\n#STEPX狂想计划 #阶跃终端 #STEPX #STEPXNeo #STEPXNeo智能体手机发布会 #阶跃星辰",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sj-qflI5pzg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sj-qflI5pzg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sj-qflI5pzg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sj-qflI5pzg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sj-qflI5pzg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "tags": [
+          "STEPX狂想计划",
+          "阶跃终端",
+          "STEPX",
+          "STEPXNeo",
+          "STEPXNeo智能体手机发布会",
+          "阶跃星辰",
+          "智能体手机",
+          "Skill"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "不会写代码，我给智能体手机手搓了个Skill，实现了「言出法随」",
+          "description": "我不会写代码，给STEPX Neo手搓了一个叫「言出法随」的Skill，让手机里的阶跃Amoo记住我在旅居和写作里的东西：找咖啡馆的偏好、做过的项目、写了一半的稿子。三段散在不同对话里的素材，换个对话说一句「接着写」，它写出了一份能接着改的初稿。\n\n这期能看到：\n· Skill怎么手搓：先把要记的东西拆成四类，再写清楚该去哪找、怎么更新\n· 怎么调手机自带的能力：笔记、相册、日历这些「原子能力」\n· 怎么验收：它说记住了，就换个对话问；说写进笔记了，就打开笔记看\n· 从打包、传到AmooStore，到手机测试区装上\n\n如果你也给自己的手机做一个Skill，你最想让它记住什么？评论区聊聊。\n\n封面和片中部分画面为AI生成。\n\n#STEPX狂想计划 #阶跃终端 #STEPX #STEPXNeo #STEPXNeo智能体手机发布会 #阶跃星辰"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT10M36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "961",
+        "likeCount": "6",
+        "favoriteCount": "0",
+        "commentCount": "4"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "YclZYF2W3C0",
+      "snippet": {
+        "publishedAt": "2026-10-11T04:13:32Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "效果无敌了！用Opus5.5给周杰伦《七里香》做了个莫奈风MV",
+        "description": "效果无敌了，用Opus5.5给周董的《七里香》做了个莫奈画风MV！\n\n这次的提示词相当简单，就两句：\n「用莫奈的绘画风格，给周杰伦的七里香做一个MV /huashu-art-motion」\n「仔细思考，按歌曲节奏做一个版本即可。做完后不需要审校和迭代。仔细斟酌每一个意向、画面、动效、运镜，我希望和这首歌的节点完美契合。」\n\n连音频资源都是Claude Code自己找的，好像是从YouTube视频里扒拉下来的，还是个演唱会版本，额外增加了不少难度。\n\n后来还是迭代了两个版本，总共花了不到100万token。最终效果，自己看吧～\n\n画面由AI制作；音乐为周杰伦《七里香》现场版本。\n\n#七里香 #周杰伦 #莫奈 #ClaudeCode #AI动画",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YclZYF2W3C0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YclZYF2W3C0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YclZYF2W3C0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YclZYF2W3C0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YclZYF2W3C0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "效果无敌了！用Opus5.5给周杰伦《七里香》做了个莫奈风MV",
+          "description": "效果无敌了，用Opus5.5给周董的《七里香》做了个莫奈画风MV！\n\n这次的提示词相当简单，就两句：\n「用莫奈的绘画风格，给周杰伦的七里香做一个MV /huashu-art-motion」\n「仔细思考，按歌曲节奏做一个版本即可。做完后不需要审校和迭代。仔细斟酌每一个意向、画面、动效、运镜，我希望和这首歌的节点完美契合。」\n\n连音频资源都是Claude Code自己找的，好像是从YouTube视频里扒拉下来的，还是个演唱会版本，额外增加了不少难度。\n\n后来还是迭代了两个版本，总共花了不到100万token。最终效果，自己看吧～\n\n画面由AI制作；音乐为周杰伦《七里香》现场版本。\n\n#七里香 #周杰伦 #莫奈 #ClaudeCode #AI动画"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT5M3S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1190",
+        "likeCount": "8",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "fftksYXvoQ8",
+      "snippet": {
+        "publishedAt": "2026-10-10T10:06:18Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Opus5.5杀疯了！做视频能力秒杀GPT-6 Astra",
+        "description": "Clawd的博物馆奇妙夜。\n\n用Opus5.5做了几十个动画短片后，这个绝对是我最满意的一个了。很难想象，一个语言模型能做出这样流畅、精细的动画，甚至音效和配乐也全是它完成的。\n\n这支短片用Claude Code＋我们的开源skill huashu-art-motion制作，目前已经收获3000多GitHub stars。\n\n开源项目：https://github.com/alchaincyf/huashu-art-motion\n\n#Opus5_5 #ClaudeCode #AI动画 #博物馆奇妙夜 #开源项目",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fftksYXvoQ8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fftksYXvoQ8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fftksYXvoQ8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fftksYXvoQ8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fftksYXvoQ8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/fftksYXvoQ8/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Opus5.5杀疯了！做视频能力秒杀GPT-6 Astra",
+          "description": "Clawd的博物馆奇妙夜。\n\n用Opus5.5做了几十个动画短片后，这个绝对是我最满意的一个了。很难想象，一个语言模型能做出这样流畅、精细的动画，甚至音效和配乐也全是它完成的。\n\n这支短片用Claude Code＋我们的开源skill huashu-art-motion制作，目前已经收获3000多GitHub stars。\n\n开源项目：https://github.com/alchaincyf/huashu-art-motion\n\n#Opus5_5 #ClaudeCode #AI动画 #博物馆奇妙夜 #开源项目"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT1M39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1920",
+        "likeCount": "13",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "hVw0rNzCJwE",
+      "snippet": {
+        "publishedAt": "2026-10-08T11:58:48Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "2026诺贝尔文学奖：安妮·卡森是谁？年轻时也追星",
+        "description": "2026年诺贝尔文学奖得主安妮·卡森，年轻时追王尔德，还会穿成他的样子。她为什么会去学古希腊语？一本诗集，又怎么装进了盒子里？\n\n片中作品与中文译本：\n《红的自传》《丈夫之美》：黄茜译，译林出版社。\n《夜》：李骄阳译，文汇出版社·新行思。盒装折页画面请以画面所标版本为准。\n\n主要资料：\n诺贝尔奖官网：https://www.nobelprize.org/prizes/literature/2026/press-release/\n本人访谈（Brick）：https://brickmag.com/an-interview-with-anne-carson/\n作者资料：https://www.poetryfoundation.org/poets/anne-carson\n《夜》原版出版社：https://www.ndbooks.com/book/nox/\n中文书讯与译诗转引：https://www.jiemian.com/article/14618072.html\n《红的自传》书评与译诗转引：https://www.zaobao.com.sg/lifestyle/culture/story20211004-1199883\n豆瓣短评节选：https://book.douban.com/subject/35217665/comments/?sort=score&status=P\n\n制作：Codex＋自研huashu-art-motion skill。旁白使用AI合成，部分视觉采用AI与程序动画；真实肖像、书封及档案材料与艺术示意按片中标注区分，未仿冒作家本人发言。\n\n#诺贝尔文学奖 #安妮卡森 #AnneCarson #文学 #Shorts",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hVw0rNzCJwE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hVw0rNzCJwE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hVw0rNzCJwE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hVw0rNzCJwE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hVw0rNzCJwE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/hVw0rNzCJwE/sardefault.jpg",
+            "width": 815,
+            "height": 1448
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "2026诺贝尔文学奖：安妮·卡森是谁？年轻时也追星",
+          "description": "2026年诺贝尔文学奖得主安妮·卡森，年轻时追王尔德，还会穿成他的样子。她为什么会去学古希腊语？一本诗集，又怎么装进了盒子里？\n\n片中作品与中文译本：\n《红的自传》《丈夫之美》：黄茜译，译林出版社。\n《夜》：李骄阳译，文汇出版社·新行思。盒装折页画面请以画面所标版本为准。\n\n主要资料：\n诺贝尔奖官网：https://www.nobelprize.org/prizes/literature/2026/press-release/\n本人访谈（Brick）：https://brickmag.com/an-interview-with-anne-carson/\n作者资料：https://www.poetryfoundation.org/poets/anne-carson\n《夜》原版出版社：https://www.ndbooks.com/book/nox/\n中文书讯与译诗转引：https://www.jiemian.com/article/14618072.html\n《红的自传》书评与译诗转引：https://www.zaobao.com.sg/lifestyle/culture/story20211004-1199883\n豆瓣短评节选：https://book.douban.com/subject/35217665/comments/?sort=score&status=P\n\n制作：Codex＋自研huashu-art-motion skill。旁白使用AI合成，部分视觉采用AI与程序动画；真实肖像、书封及档案材料与艺术示意按片中标注区分，未仿冒作家本人发言。\n\n#诺贝尔文学奖 #安妮卡森 #AnneCarson #文学 #Shorts"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT1M36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "2974",
+        "likeCount": "21",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "qFKyFPXWEDE",
+      "snippet": {
+        "publishedAt": "2026-10-07T12:58:50Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "2026诺贝尔化学奖，和你吃的药有什么关系？｜2分钟看懂手性 #Shorts",
+        "description": "为什么成分一样，左右换一下，药效就可能不同？\n用手掌、手套和工厂的比喻，讲懂2026诺贝尔化学奖得主Henri B. Kagan与Kenso Soai的发现。\n\n从药厂如何制造想要的分子，到生命为什么偏爱同一只手。自催化能放大微小差异，但生命当年是否走这条路，仍没有定论。\n\n本视频使用本人AI复刻音色；白板动画与Vox拼贴由huashu-art-motion制作。\n\n官方资料：\nhttps://www.nobelprize.org/prizes/chemistry/2026/press-release/\nhttps://www.nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf\n\n素材致谢：Niklas Elmehed / Nobel Prize Outreach；Johan Jarnestad / The Royal Swedish Academy of Sciences；MIT OpenCourseWare（Chirality）；Chemistry Shorts（Cracking Chirality）；The Royal Institution；ELSI Symposium 2019；cottonbro studio、Mikhail Nilov / Pexels。\n\n#Shorts #诺贝尔化学奖 #NobelPrize #科普 #Chemistry",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qFKyFPXWEDE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qFKyFPXWEDE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qFKyFPXWEDE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qFKyFPXWEDE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qFKyFPXWEDE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/qFKyFPXWEDE/sardefault.jpg",
+            "width": 911,
+            "height": 1620
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "2026诺贝尔化学奖，和你吃的药有什么关系？｜2分钟看懂手性 #Shorts",
+          "description": "为什么成分一样，左右换一下，药效就可能不同？\n用手掌、手套和工厂的比喻，讲懂2026诺贝尔化学奖得主Henri B. Kagan与Kenso Soai的发现。\n\n从药厂如何制造想要的分子，到生命为什么偏爱同一只手。自催化能放大微小差异，但生命当年是否走这条路，仍没有定论。\n\n本视频使用本人AI复刻音色；白板动画与Vox拼贴由huashu-art-motion制作。\n\n官方资料：\nhttps://www.nobelprize.org/prizes/chemistry/2026/press-release/\nhttps://www.nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf\n\n素材致谢：Niklas Elmehed / Nobel Prize Outreach；Johan Jarnestad / The Royal Swedish Academy of Sciences；MIT OpenCourseWare（Chirality）；Chemistry Shorts（Cracking Chirality）；The Royal Institution；ELSI Symposium 2019；cottonbro studio、Mikhail Nilov / Pexels。\n\n#Shorts #诺贝尔化学奖 #NobelPrize #科普 #Chemistry"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT2M22S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1784",
+        "likeCount": "19",
+        "favoriteCount": "0",
+        "commentCount": "1"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "31Hvh8OvN3c",
+      "snippet": {
+        "publishedAt": "2026-10-06T19:06:47Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Nano Banana 2.1实测30张：改图稳，也会翻车｜对比GPT Image 2.5、Seedream 5.0 Pro #Shorts",
+        "description": "Google发布Nano Banana 2.1，我连夜测了30张图：中文字、复杂指令、局部改图、角色一致性，再与GPT Image 2.5、Seedream 5.0 Pro做典型题对比。\n\n菜单、苹果、四格漫画三家都过；局部改字，这轮Nano Banana保留原图最干净；满杯红酒和4:20时钟，这轮GPT做到了。\n\n本轮通过Lovart测试Nano Banana 2.1的30张图，并选取典型题目与GPT Image 2.5、Seedream 5.0 Pro对比。各通道分辨率不同；未确认是否开启搜索接地。结果仅代表本轮样本。\n\n动画由Claude Opus5.5＋自研huashu-art-motion skill制作；口播使用本人AI复刻音色。\n\n模型与价格一手来源：\nhttps://ai.google.dev/gemini-api/docs/image-generation\nhttps://ai.google.dev/gemini-api/docs/pricing\n\n#NanoBanana #AIImageGeneration #GPTImage #Seedream #Shorts",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/31Hvh8OvN3c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/31Hvh8OvN3c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/31Hvh8OvN3c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/31Hvh8OvN3c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/31Hvh8OvN3c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/31Hvh8OvN3c/sardefault.jpg",
+            "width": 405,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Nano Banana 2.1实测30张：改图稳，也会翻车｜对比GPT Image 2.5、Seedream 5.0 Pro #Shorts",
+          "description": "Google发布Nano Banana 2.1，我连夜测了30张图：中文字、复杂指令、局部改图、角色一致性，再与GPT Image 2.5、Seedream 5.0 Pro做典型题对比。\n\n菜单、苹果、四格漫画三家都过；局部改字，这轮Nano Banana保留原图最干净；满杯红酒和4:20时钟，这轮GPT做到了。\n\n本轮通过Lovart测试Nano Banana 2.1的30张图，并选取典型题目与GPT Image 2.5、Seedream 5.0 Pro对比。各通道分辨率不同；未确认是否开启搜索接地。结果仅代表本轮样本。\n\n动画由Claude Opus5.5＋自研huashu-art-motion skill制作；口播使用本人AI复刻音色。\n\n模型与价格一手来源：\nhttps://ai.google.dev/gemini-api/docs/image-generation\nhttps://ai.google.dev/gemini-api/docs/pricing\n\n#NanoBanana #AIImageGeneration #GPTImage #Seedream #Shorts"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT1M42S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "307",
+        "likeCount": "2",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "WefrWCvjjJ0",
+      "snippet": {
+        "publishedAt": "2026-10-06T15:23:21Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "这束照进大脑的光，拿下了诺贝尔医学奖｜2026诺奖·光遗传学 #Shorts",
+        "description": "2026年诺贝尔生理学或医学奖，颁给了光遗传学。从一颗绿藻到大脑里的神经细胞，彼得·赫格曼、格奥尔格·纳格尔和卡尔·戴瑟罗斯，让科学家能用光控制特定神经细胞的活动。\n\n这支短片是我们用Opus5.5＋自己做的huashu-art-motion skill制作的，结合真实实验影像、官方插图和AI编程动画。感兴趣可以去GitHub搜索「huashu-art-motion」，或者继续关注我们的主页。\n\n口播为本人声音的AI合成。\n\n资料：诺贝尔奖官网\nhttps://www.nobelprize.org/prizes/medicine/2026/summary/\n肖像：Niklas Elmehed © Nobel Prize Outreach\n插图：© The Nobel Committee for Physiology or Medicine，Mattias Karlén\n实验影像：Nature Video、NeuroCure/Charité、HHMI/Breakthrough Prize、Stanford School of Medicine、Sci-Inspi、Fondation Louis-Jeantet；详细署名见片内。\n\n#诺贝尔奖 #光遗传学 #AI动画 #Shorts",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WefrWCvjjJ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WefrWCvjjJ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WefrWCvjjJ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WefrWCvjjJ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WefrWCvjjJ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "shortsAspectRatio": {
+            "url": "https://i.ytimg.com/vi/WefrWCvjjJ0/sardefault.jpg",
+            "width": 911,
+            "height": 1620
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "这束照进大脑的光，拿下了诺贝尔医学奖｜2026诺奖·光遗传学 #Shorts",
+          "description": "2026年诺贝尔生理学或医学奖，颁给了光遗传学。从一颗绿藻到大脑里的神经细胞，彼得·赫格曼、格奥尔格·纳格尔和卡尔·戴瑟罗斯，让科学家能用光控制特定神经细胞的活动。\n\n这支短片是我们用Opus5.5＋自己做的huashu-art-motion skill制作的，结合真实实验影像、官方插图和AI编程动画。感兴趣可以去GitHub搜索「huashu-art-motion」，或者继续关注我们的主页。\n\n口播为本人声音的AI合成。\n\n资料：诺贝尔奖官网\nhttps://www.nobelprize.org/prizes/medicine/2026/summary/\n肖像：Niklas Elmehed © Nobel Prize Outreach\n插图：© The Nobel Committee for Physiology or Medicine，Mattias Karlén\n实验影像：Nature Video、NeuroCure/Charité、HHMI/Breakthrough Prize、Stanford School of Medicine、Sci-Inspi、Fondation Louis-Jeantet；详细署名见片内。\n\n#诺贝尔奖 #光遗传学 #AI动画 #Shorts"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT1M",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1445",
+        "likeCount": "27",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "QHETctPYwdc",
+      "snippet": {
+        "publishedAt": "2026-10-06T14:36:41Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "AI的差距拉开了：一边在聊天，一边在干活｜2分钟读懂a16z消费级AI百强第七期",
+        "description": "同样在用AI，有人问一句答一句，有人已经把整件事交给它。\n\na16z消费级AI百强第七期加入了美国消费样本数据：AI消费额最高的1%付费用户，贡献了样本AI消费额的19.5%。他们更常买的，是自动化、创作和替自己办事的工具。花钱多不等于用得好，但这给了我们一个值得留意的信号。\n\n我也把这份报告交给Claude Code：16分钟后，拿到了存好的原文、中文精读和21张图表的数据。两分钟聊聊这份报告、中国AI购物的进展，以及普通人可以试的下一步。\n\n原报告：https://a16z.com/100-gen-ai-apps-7/\n数据口径：视频中的AI消费数据来自报告引用的美国样本，不代表全球用户。\n制作说明：本视频使用AI辅助制作，口播为本人声音的AI合成。\n\n#人工智能 #AI工具 #a16z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QHETctPYwdc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QHETctPYwdc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QHETctPYwdc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QHETctPYwdc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QHETctPYwdc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "AI的差距拉开了：一边在聊天，一边在干活｜2分钟读懂a16z消费级AI百强第七期",
+          "description": "同样在用AI，有人问一句答一句，有人已经把整件事交给它。\n\na16z消费级AI百强第七期加入了美国消费样本数据：AI消费额最高的1%付费用户，贡献了样本AI消费额的19.5%。他们更常买的，是自动化、创作和替自己办事的工具。花钱多不等于用得好，但这给了我们一个值得留意的信号。\n\n我也把这份报告交给Claude Code：16分钟后，拿到了存好的原文、中文精读和21张图表的数据。两分钟聊聊这份报告、中国AI购物的进展，以及普通人可以试的下一步。\n\n原报告：https://a16z.com/100-gen-ai-apps-7/\n数据口径：视频中的AI消费数据来自报告引用的美国样本，不代表全球用户。\n制作说明：本视频使用AI辅助制作，口播为本人声音的AI合成。\n\n#人工智能 #AI工具 #a16z"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT2M6S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1081",
+        "likeCount": "12",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "Re_9cgwTUB4",
+      "snippet": {
+        "publishedAt": "2026-10-06T10:58:22Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "我把自己塞进了超级玛丽，全是 AI 写代码画的 #shorts",
+        "description": "一整关超级玛丽：砖块、水管、旗杆、城堡，全是 AI 写代码画出来的。蘑菇换成了 Claude，敌人换成了像素 Sam Altman 和 Dario，中途还得选开哪家会员。\n\n开源仓库：https://github.com/alchaincyf/huashu-art-motion",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Re_9cgwTUB4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Re_9cgwTUB4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Re_9cgwTUB4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Re_9cgwTUB4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Re_9cgwTUB4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "我把自己塞进了超级玛丽，全是 AI 写代码画的 #shorts",
+          "description": "一整关超级玛丽：砖块、水管、旗杆、城堡，全是 AI 写代码画出来的。蘑菇换成了 Claude，敌人换成了像素 Sam Altman 和 Dario，中途还得选开哪家会员。\n\n开源仓库：https://github.com/alchaincyf/huashu-art-motion"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT1M6S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "441",
+        "likeCount": "6",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "fiYH6nPfflk",
+      "snippet": {
+        "publishedAt": "2026-10-05T08:52:38Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "SpaceX這24年 白板版 r6 繁中 字幕版",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fiYH6nPfflk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fiYH6nPfflk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fiYH6nPfflk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fiYH6nPfflk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fiYH6nPfflk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "SpaceX這24年 白板版 r6 繁中 字幕版",
+          "description": ""
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT2M10S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "3766",
+        "likeCount": "14",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "PhBNMk1_pcM",
+      "snippet": {
+        "publishedAt": "2026-09-20T00:05:07Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "豆包工作手把手教程，让你工作提效200%！（赠51页橙皮书）",
+        "description": "你可能也这样：豆包天天开着，还是只在对话框里问问题。这期讲另一种用法——豆包工作，一个生产力Agent：把材料给它、把要求说清楚，它把文档、表格、报告、PPT、网页和视频做出来交回给你，你再让它接着改。\n\n我把这条路拆成11个技巧：怎么交代任务、怎么让它读到你已有的资料、怎么让它接着改你动过的文件、缺数据怎么让它留空不编、怎么只改选中的那一处、本地和云电脑怎么分工、图怎么变成视频、人不在电脑前怎么接着交代、多个任务怎么一起派，以及怎么把你反复用的方法存成自己的Skill。\n\n全程我没写代码。视频里的指令和练习材料，我整理进了一份51页的橙皮书：点赞订阅后在评论区回复「豆包工作」，我发给你。\n\n⏱ 时间戳\n00:00 开场\n00:47 技巧1 把你要完成的事说清楚\n01:43 技巧2 让它读到你已经有的资料\n02:49 技巧3 你改过的文件，让它接着做\n03:24 技巧4 缺的数据，让它明确留出来\n04:21 技巧5 把现成的工作方法装进去\n05:15 技巧6 只改你选中的地方\n06:33 技巧7 按任务选择本地和云电脑\n07:54 技巧8 先把图做好，再让它动起来\n08:59 技巧9 离开电脑，也能接着交代\n10:04 技巧10 把可以分开的任务一起交出去\n10:49 技巧11 把反复用的方法存成自己的Skill\n13:39 总结\n\n#豆包工作 #AIAgent #AI办公",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PhBNMk1_pcM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PhBNMk1_pcM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PhBNMk1_pcM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PhBNMk1_pcM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PhBNMk1_pcM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "tags": [
+          "豆包工作",
+          "豆包",
+          "Doubao",
+          "AI Agent",
+          "AI办公",
+          "AI教程",
+          "人工智能",
+          "效率工具",
+          "AI工具",
+          "Skill",
+          "生产力工具",
+          "职场",
+          "AI编程",
+          "教程",
+          "AI IN ALL"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "豆包工作手把手教程，让你工作提效200%！（赠51页橙皮书）",
+          "description": "你可能也这样：豆包天天开着，还是只在对话框里问问题。这期讲另一种用法——豆包工作，一个生产力Agent：把材料给它、把要求说清楚，它把文档、表格、报告、PPT、网页和视频做出来交回给你，你再让它接着改。\n\n我把这条路拆成11个技巧：怎么交代任务、怎么让它读到你已有的资料、怎么让它接着改你动过的文件、缺数据怎么让它留空不编、怎么只改选中的那一处、本地和云电脑怎么分工、图怎么变成视频、人不在电脑前怎么接着交代、多个任务怎么一起派，以及怎么把你反复用的方法存成自己的Skill。\n\n全程我没写代码。视频里的指令和练习材料，我整理进了一份51页的橙皮书：点赞订阅后在评论区回复「豆包工作」，我发给你。\n\n⏱ 时间戳\n00:00 开场\n00:47 技巧1 把你要完成的事说清楚\n01:43 技巧2 让它读到你已经有的资料\n02:49 技巧3 你改过的文件，让它接着做\n03:24 技巧4 缺的数据，让它明确留出来\n04:21 技巧5 把现成的工作方法装进去\n05:15 技巧6 只改你选中的地方\n06:33 技巧7 按任务选择本地和云电脑\n07:54 技巧8 先把图做好，再让它动起来\n08:59 技巧9 离开电脑，也能接着交代\n10:04 技巧10 把可以分开的任务一起交出去\n10:49 技巧11 把反复用的方法存成自己的Skill\n13:39 总结\n\n#豆包工作 #AIAgent #AI办公"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT14M35S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "8733",
+        "likeCount": "12",
+        "favoriteCount": "0",
+        "commentCount": "12"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "yAa6BFFR9Kw",
+      "snippet": {
+        "publishedAt": "2026-09-17T10:01:05Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Amazon Quick免费使用教学！（赠129页pdf资料）",
+        "description": "数据看板、内容初稿、演讲PPT、网页应用，AI现在能交出什么？这次我把自己写的一堆Skill搬进Amazon Quick，拆开模型、harness和上下文，看看它如何调用工具、复用方法、交付结果，也讲清云端运行与本机权限的边界。\n\n最后送你100多页上手橙皮书和配套Skill工具包，挑一件真实工作，自己跑一次。",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yAa6BFFR9Kw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yAa6BFFR9Kw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yAa6BFFR9Kw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yAa6BFFR9Kw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Amazon Quick免费使用教学！（赠129页pdf资料）",
+          "description": "数据看板、内容初稿、演讲PPT、网页应用，AI现在能交出什么？这次我把自己写的一堆Skill搬进Amazon Quick，拆开模型、harness和上下文，看看它如何调用工具、复用方法、交付结果，也讲清云端运行与本机权限的边界。\n\n最后送你100多页上手橙皮书和配套Skill工具包，挑一件真实工作，自己跑一次。"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT9M57S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1147",
+        "likeCount": "9",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "HaSscZnkkKA",
+      "snippet": {
+        "publishedAt": "2026-09-15T09:00:06Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "GPT-6 Astra做3D绝了！我两天建了一座能开车的巴黎（赠300页手把手教程）",
+        "description": "一行代码没写，两天时间，车、树、铁塔、街上走路的人全是 AI 生成的——我用 GPT-6（Codex）加 3D基座模型Tripo，做了一座能开车逛的巴黎。\n\n这期把整条链路一步步拆开：一张参考图怎么变成 3D 模型，模型怎么减面、怎么绑骨走起来，最后怎么被 Coding Agent 拼进一个能跑的网页游戏。换 DeepSeek 的 harness 一样能跑。\n\n顺手还做了：一台能拆能转的四冲程发动机、一幅能在「全平面／真立体」之间切换的星月夜、一个能漫游的游乐园。\n\n时间轴\n00:00 一行代码没写\n01:32 同一张图，两种模式\n02:36 先画设计图再建模\n04:42 拆件与一键绑骨\n05:42 生成完还得后处理\n07:11 组装成一座能开的城\n09:08 Unity 与小王子星球\n10:20 我的判断\n\n视频里的 3D 生成平台是 Tripo Studio：https://studio.tripo3d.com\n\n300 多页的《3D Vibe Coding 手册》：模型、提示词、脚本、每一步的截图都在里面。领取方式见置顶评论。\n国内打不开 GitHub 的话，这个页面也能拿到：https://www.huasheng.ai/orange-books/3d-vibe-coding/\n\n—\nMusic: Origami, Discovery, Luminance and A Kind Of Hope by Scott Buckley — released under CC BY 4.0.\nhttps://www.scottbuckley.com.au\nEdited and mixed for this video.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HaSscZnkkKA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HaSscZnkkKA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HaSscZnkkKA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/HaSscZnkkKA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/HaSscZnkkKA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/HaSscZnkkKA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "花叔",
+        "tags": [
+          "Tripo",
+          "GPT-6",
+          "Codex",
+          "AI 3D",
+          "image to 3D",
+          "Three.js",
+          "vibe coding",
+          "AI建模",
+          "3D生成",
+          "AI编程",
+          "AI游戏开发",
+          "巴黎"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "GPT-6 Astra做3D绝了！我两天建了一座能开车的巴黎（赠300页手把手教程）",
+          "description": "一行代码没写，两天时间，车、树、铁塔、街上走路的人全是 AI 生成的——我用 GPT-6（Codex）加 3D基座模型Tripo，做了一座能开车逛的巴黎。\n\n这期把整条链路一步步拆开：一张参考图怎么变成 3D 模型，模型怎么减面、怎么绑骨走起来，最后怎么被 Coding Agent 拼进一个能跑的网页游戏。换 DeepSeek 的 harness 一样能跑。\n\n顺手还做了：一台能拆能转的四冲程发动机、一幅能在「全平面／真立体」之间切换的星月夜、一个能漫游的游乐园。\n\n时间轴\n00:00 一行代码没写\n01:32 同一张图，两种模式\n02:36 先画设计图再建模\n04:42 拆件与一键绑骨\n05:42 生成完还得后处理\n07:11 组装成一座能开的城\n09:08 Unity 与小王子星球\n10:20 我的判断\n\n视频里的 3D 生成平台是 Tripo Studio：https://studio.tripo3d.com\n\n300 多页的《3D Vibe Coding 手册》：模型、提示词、脚本、每一步的截图都在里面。领取方式见置顶评论。\n国内打不开 GitHub 的话，这个页面也能拿到：https://www.huasheng.ai/orange-books/3d-vibe-coding/\n\n—\nMusic: Origami, Discovery, Luminance and A Kind Of Hope by Scott Buckley — released under CC BY 4.0.\nhttps://www.scottbuckley.com.au\nEdited and mixed for this video."
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT11M44S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "14872",
+        "likeCount": "34",
+        "favoriteCount": "0",
+        "commentCount": "24"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "-mKSwcrb4sk",
+      "snippet": {
+        "publishedAt": "2026-08-05T04:15:01Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "我雇了三个AI员工开发我的产品，今天正式开源！【免费使用DeepSeek V4 flash】",
+        "description": "一个卡了我一个月的项目，最后是三个云端AI员工帮我收的尾。它们跑在CNB上，官方NPC背后是DeepSeek V4 flash，免费用到年底。我在Issue里@一声它就开始干活：补开源许可证、做自动打包发版、修跨标签页录制的老bug，还顺手写了个官网。全程我没写一行代码，合上电脑出门吃饭，回来活已经干完。怎么招人、派活、验收，这期从头拍给你看。花录和三个NPC员工全部开源免费。\n\n花录开源仓库：https://cnb.cool/huashu-2026/huarec\n\n00:00 三个AI员工替我完工\n01:25 把项目搬进CNB\n03:04 第一个活：补许可证\n05:09 让它打包并自动发版\n07:03 合上电脑它还在干\n07:29 自己造三个NPC员工\n10:01 三人组队修跨页bug\n13:14 测试通过，正式开源",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-mKSwcrb4sk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-mKSwcrb4sk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-mKSwcrb4sk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-mKSwcrb4sk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "我雇了三个AI员工开发我的产品，今天正式开源！【免费使用DeepSeek V4 flash】",
+          "description": "一个卡了我一个月的项目，最后是三个云端AI员工帮我收的尾。它们跑在CNB上，官方NPC背后是DeepSeek V4 flash，免费用到年底。我在Issue里@一声它就开始干活：补开源许可证、做自动打包发版、修跨标签页录制的老bug，还顺手写了个官网。全程我没写一行代码，合上电脑出门吃饭，回来活已经干完。怎么招人、派活、验收，这期从头拍给你看。花录和三个NPC员工全部开源免费。\n\n花录开源仓库：https://cnb.cool/huashu-2026/huarec\n\n00:00 三个AI员工替我完工\n01:25 把项目搬进CNB\n03:04 第一个活：补许可证\n05:09 让它打包并自动发版\n07:03 合上电脑它还在干\n07:29 自己造三个NPC员工\n10:01 三人组队修跨页bug\n13:14 测试通过，正式开源"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT15M7S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "4358",
+        "likeCount": "102",
+        "favoriteCount": "0",
+        "commentCount": "7"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "ZNALSXbmR0c",
+      "snippet": {
+        "publishedAt": "2026-06-11T01:01:29Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Claude Fable 5 发布！我用它 5 小时做了个 macOS App，已开源",
+        "description": "Claude 刚发布的 Fable 5，是目前最强的 agentic 编程模型。这期先聊它的特性、价格和基准表现，再演示我用它 5 小时做出的第一个 macOS 开源应用「翻箱」，还有顺手做的浏览器录屏、多平台发文两个小工具。限免到 6 月 22 日，建议抓紧体验。\n\n时间戳：\n00:00 Fable 5 发布\n01:41 模型特性与定价\n04:02 基准实测成绩\n08:15 Claude Code 限免\n08:51 macOS 应用「翻箱」\n14:12 两个小工具演示",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZNALSXbmR0c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZNALSXbmR0c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZNALSXbmR0c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZNALSXbmR0c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZNALSXbmR0c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ZNALSXbmR0c/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Claude Fable 5 发布！我用它 5 小时做了个 macOS App，已开源",
+          "description": "Claude 刚发布的 Fable 5，是目前最强的 agentic 编程模型。这期先聊它的特性、价格和基准表现，再演示我用它 5 小时做出的第一个 macOS 开源应用「翻箱」，还有顺手做的浏览器录屏、多平台发文两个小工具。限免到 6 月 22 日，建议抓紧体验。\n\n时间戳：\n00:00 Fable 5 发布\n01:41 模型特性与定价\n04:02 基准实测成绩\n08:15 Claude Code 限免\n08:51 macOS 应用「翻箱」\n14:12 两个小工具演示"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT17M7S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "8445",
+        "likeCount": "99",
+        "favoriteCount": "0",
+        "commentCount": "9"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "m-_BlUdcIvw",
+      "snippet": {
+        "publishedAt": "2026-06-05T04:00:14Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "我逆向了Claude Design！一句话帮你生成任何出色设计，开源后狂揽GitHub 1.6万+stars！",
+        "description": "Anthropic的Claude Design很惊艳,但要订阅、还费额度。我干脆把它的工作原理逆向出来,做成一个装在Claude Code里的开源skill：huashu-design,现在GitHub已经16000多star,MIT协议,个人商用都免费。这期我现场跑了四个真实任务:一句话做可演讲的PPT、投喂一张照片生成我的个人网站、做能点的iOS原型、再做一支产品宣传动画,全程没打开任何设计软件。\n\nGitHub开源:https://github.com/alchaincyf/huashu-design\n支持 Claude Code / Cursor / Codex / Trae / 龙虾 / Hermes 等任意 coding agent,装完跟你的 agent 说句话就行。\n\n相关:女娲.skill(21k star)https://github.com/alchaincyf/nuwa-skill\n\n时间戳：\n00:00 我把Claude Design逆向成了开源skill\n03:09 实测① 一句话做PPT(可导出可编辑PPTX/PDF)\n06:39 实测② 投喂一张照片,生成我的个人网站\n10:43 实测③ 一句话做可点击的iOS原型\n12:47 实测④ 一句话做产品宣传动画\n15:46 怎么安装(一句话装进任意agent)",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/m-_BlUdcIvw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/m-_BlUdcIvw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/m-_BlUdcIvw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/m-_BlUdcIvw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/m-_BlUdcIvw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/m-_BlUdcIvw/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "我逆向了Claude Design！一句话帮你生成任何出色设计，开源后狂揽GitHub 1.6万+stars！",
+          "description": "Anthropic的Claude Design很惊艳,但要订阅、还费额度。我干脆把它的工作原理逆向出来,做成一个装在Claude Code里的开源skill：huashu-design,现在GitHub已经16000多star,MIT协议,个人商用都免费。这期我现场跑了四个真实任务:一句话做可演讲的PPT、投喂一张照片生成我的个人网站、做能点的iOS原型、再做一支产品宣传动画,全程没打开任何设计软件。\n\nGitHub开源:https://github.com/alchaincyf/huashu-design\n支持 Claude Code / Cursor / Codex / Trae / 龙虾 / Hermes 等任意 coding agent,装完跟你的 agent 说句话就行。\n\n相关:女娲.skill(21k star)https://github.com/alchaincyf/nuwa-skill\n\n时间戳：\n00:00 我把Claude Design逆向成了开源skill\n03:09 实测① 一句话做PPT(可导出可编辑PPTX/PDF)\n06:39 实测② 投喂一张照片,生成我的个人网站\n10:43 实测③ 一句话做可点击的iOS原型\n12:47 实测④ 一句话做产品宣传动画\n15:46 怎么安装(一句话装进任意agent)"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT16M14S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "21749",
+        "likeCount": "517",
+        "favoriteCount": "0",
+        "commentCount": "24"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "mvE32yWrTKY",
+      "snippet": {
+        "publishedAt": "2026-05-26T11:37:10Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "首发实测腾讯最新龙虾🦞产品：Marvis",
+        "description": "这期我做了个实验：让一个 AI，帮我装另一个 AI。\n满 B 站都是「保姆级本地大模型部署」教程，可装个模型而已，怎么搞得跟登月一样。我半年没自己在电脑里装过任何东西了，这次干脆全交给 Marvis。\n它自己摸了一遍我的电脑配置、装好 Ollama、挑了最合适的模型；后面我又让它蒸馏巴菲特、在咖啡店用手机指挥家里的电脑干活，最后给它上强度——10 分钟里 5 件事一起跑。整个过程我基本只是在喝咖啡。\nMarvis 是一个操作系统层级的 AI 助手。这期用到的工具、skill 和操作方式我整理成了一份文稿，评论区回复「Marvis」就能拿。",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mvE32yWrTKY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mvE32yWrTKY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mvE32yWrTKY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mvE32yWrTKY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mvE32yWrTKY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/mvE32yWrTKY/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "首发实测腾讯最新龙虾🦞产品：Marvis",
+          "description": "这期我做了个实验：让一个 AI，帮我装另一个 AI。\n满 B 站都是「保姆级本地大模型部署」教程，可装个模型而已，怎么搞得跟登月一样。我半年没自己在电脑里装过任何东西了，这次干脆全交给 Marvis。\n它自己摸了一遍我的电脑配置、装好 Ollama、挑了最合适的模型；后面我又让它蒸馏巴菲特、在咖啡店用手机指挥家里的电脑干活，最后给它上强度——10 分钟里 5 件事一起跑。整个过程我基本只是在喝咖啡。\nMarvis 是一个操作系统层级的 AI 助手。这期用到的工具、skill 和操作方式我整理成了一份文稿，评论区回复「Marvis」就能拿。"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT13M42S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1751",
+        "likeCount": "22",
+        "favoriteCount": "0",
+        "commentCount": "19"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "6aJDuEU5n98",
+      "snippet": {
+        "publishedAt": "2026-04-24T17:08:08Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "DeepSeek V4是怎么训练出来的？73页PPT深入解析",
+        "description": "DeepSeek V4 来了，一次发了两个模型：对标 Claude Opus 4.6 和 GPT-5.4 的 V4-Pro，以及价格只有同类 1/7 到 1/18 的 V4-Flash。两款都支持 100 万上下文，把长上下文拉进普惠时代。花叔读完 58 页技术文档，做了 73 页 PPT，一步步拆解 V4 的四个核心创新：MHC 残差连接让 1.6T 模型训练不崩、粗筛细筛让百万 token 成本只要 2%、Muon 优化器替代 AdamW、后训练改用「专家训练+全科蒸馏」新范式。但 V4 不是最强的模型，擅长做题（Codeforces 第 23 名、Putnam 满分），品位和长链工具调用上还差 Opus 4.7 一口气。这是一个本分诚实的产品。\n\n\n\n ⏱️ 时间戳\n 00:00 V4 发布+73页PPT预告                                                     \n 02:03 Pro对标顶级，Flash是价格屠夫                \n 05:00 擅长做题，品位差一截                                                     \n 07:25 1.6T MoE架构拆解\n 12:00 MHC残差连接防梯度爆炸                                                    \n 14:50 粗筛细筛读百万上下文                    \n 19:00 Muon优化器反向思路                                                      \n 23:00 专家训练+蒸馏新范式",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6aJDuEU5n98/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6aJDuEU5n98/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6aJDuEU5n98/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6aJDuEU5n98/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6aJDuEU5n98/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/6aJDuEU5n98/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "DeepSeek V4是怎么训练出来的？73页PPT深入解析",
+          "description": "DeepSeek V4 来了，一次发了两个模型：对标 Claude Opus 4.6 和 GPT-5.4 的 V4-Pro，以及价格只有同类 1/7 到 1/18 的 V4-Flash。两款都支持 100 万上下文，把长上下文拉进普惠时代。花叔读完 58 页技术文档，做了 73 页 PPT，一步步拆解 V4 的四个核心创新：MHC 残差连接让 1.6T 模型训练不崩、粗筛细筛让百万 token 成本只要 2%、Muon 优化器替代 AdamW、后训练改用「专家训练+全科蒸馏」新范式。但 V4 不是最强的模型，擅长做题（Codeforces 第 23 名、Putnam 满分），品位和长链工具调用上还差 Opus 4.7 一口气。这是一个本分诚实的产品。\n\n\n\n ⏱️ 时间戳\n 00:00 V4 发布+73页PPT预告                                                     \n 02:03 Pro对标顶级，Flash是价格屠夫                \n 05:00 擅长做题，品位差一截                                                     \n 07:25 1.6T MoE架构拆解\n 12:00 MHC残差连接防梯度爆炸                                                    \n 14:50 粗筛细筛读百万上下文                    \n 19:00 Muon优化器反向思路                                                      \n 23:00 专家训练+蒸馏新范式"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT36M11S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "2877",
+        "likeCount": "53",
+        "favoriteCount": "0",
+        "commentCount": "18"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "DqqdZ85-5nk",
+      "snippet": {
+        "publishedAt": "2026-04-24T00:50:12Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "GPT-5.5首发实测！比Claude Opus4.7强？",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DqqdZ85-5nk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DqqdZ85-5nk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DqqdZ85-5nk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DqqdZ85-5nk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DqqdZ85-5nk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/DqqdZ85-5nk/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "GPT-5.5首发实测！比Claude Opus4.7强？",
+          "description": ""
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT17M25S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "4580",
+        "likeCount": "75",
+        "favoriteCount": "0",
+        "commentCount": "8"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "3KIOppSRaQ0",
+      "snippet": {
+        "publishedAt": "2026-04-16T20:21:24Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "【首发】Claude Opus 4.7解读！细思极恐的技术报告",
+        "description": "Anthropic 发布 Claude Opus 4.7。比模型本身更值得看的，是同时放出的 232 页 System Card——它承认 Claude 知道自己在被测试，没人看时更容易骗人。这期带你读 3 个细思极恐的发现，再用 4.7 实测两个真实项目。视频末领完整中文版。\n\n时间戳\n  00:00  开场｜Opus 4.7 发布 + 这期视频要讲什么                                                         \n  01:02  能力速览｜编程、视觉、长文档，比 4.6 强了多少                                                  \n  04:06  发现一｜Claude 知道自己在被测试 ⭐核心爆点                                                     \n  06:15  发现二｜Opus 4.7 是历代最快乐的 Claude                                                         \n  08:00  发现三｜7.8% 训练轮次的思维链监督 bug                                                          \n  10:33  实测一｜让 4.7 一句话做一个天气网站                                                            \n  12:24  实测二｜用 Data Pro skill 生成英伟达投研报告",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3KIOppSRaQ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3KIOppSRaQ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3KIOppSRaQ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3KIOppSRaQ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3KIOppSRaQ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/3KIOppSRaQ0/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "【首发】Claude Opus 4.7解读！细思极恐的技术报告",
+          "description": "Anthropic 发布 Claude Opus 4.7。比模型本身更值得看的，是同时放出的 232 页 System Card——它承认 Claude 知道自己在被测试，没人看时更容易骗人。这期带你读 3 个细思极恐的发现，再用 4.7 实测两个真实项目。视频末领完整中文版。\n\n时间戳\n  00:00  开场｜Opus 4.7 发布 + 这期视频要讲什么                                                         \n  01:02  能力速览｜编程、视觉、长文档，比 4.6 强了多少                                                  \n  04:06  发现一｜Claude 知道自己在被测试 ⭐核心爆点                                                     \n  06:15  发现二｜Opus 4.7 是历代最快乐的 Claude                                                         \n  08:00  发现三｜7.8% 训练轮次的思维链监督 bug                                                          \n  10:33  实测一｜让 4.7 一句话做一个天气网站                                                            \n  12:24  实测二｜用 Data Pro skill 生成英伟达投研报告"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT15M22S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "5255",
+        "likeCount": "96",
+        "favoriteCount": "0",
+        "commentCount": "15"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "koRzYM3R-gg",
+      "snippet": {
+        "publishedAt": "2026-04-10T15:32:31Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "我蒸馏了17个大佬给我打工（开源免费）",
+        "description": "我做了一个开源项目女娲.skill，4天6000+ Star。它能蒸馏任何人的思维方式，跟ChatGPT角色扮演完全不同。视频里我现场蒸馏罗永浩，展示AI乔布斯的惊人回答，还让AI罗永浩评价王自如。所有skill完全开源免费，也能蒸馏任何领域的专业方法论。评论区告诉我你最想蒸馏谁！\n\nGitHub：https://github.com/alchaincyf/nuwa-skill\n\n时间戳：       \n  00:00 开场：4天6000 Star\n  03:16 现场安装蒸馏罗永浩       \n  06:07 AI乔布斯谈AI赚钱\n  08:35 蒸馏vs角色扮演对比\n  09:31 罗永浩心智模型揭晓       \n  13:21 AI罗永浩辣评王自如",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/koRzYM3R-gg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/koRzYM3R-gg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/koRzYM3R-gg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/koRzYM3R-gg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/koRzYM3R-gg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/koRzYM3R-gg/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "我蒸馏了17个大佬给我打工（开源免费）",
+          "description": "我做了一个开源项目女娲.skill，4天6000+ Star。它能蒸馏任何人的思维方式，跟ChatGPT角色扮演完全不同。视频里我现场蒸馏罗永浩，展示AI乔布斯的惊人回答，还让AI罗永浩评价王自如。所有skill完全开源免费，也能蒸馏任何领域的专业方法论。评论区告诉我你最想蒸馏谁！\n\nGitHub：https://github.com/alchaincyf/nuwa-skill\n\n时间戳：       \n  00:00 开场：4天6000 Star\n  03:16 现场安装蒸馏罗永浩       \n  06:07 AI乔布斯谈AI赚钱\n  08:35 蒸馏vs角色扮演对比\n  09:31 罗永浩心智模型揭晓       \n  13:21 AI罗永浩辣评王自如"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT18M27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "86108",
+        "likeCount": "2358",
+        "favoriteCount": "0",
+        "commentCount": "190"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "tth1WP0SwVg",
+      "snippet": {
+        "publishedAt": "2026-04-02T21:00:22Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "谷歌最新模型Gemma4发布！深度解析+送42页资料",
+        "description": "谷歌发布Gemma 4，四个版本，31B模型Arena分数1452，逼近几百亿参数的GLM-5。但谷歌没有卷参数，而是想清楚了另一件事：做端侧AI。从手机到树莓派到浏览器，让每个设备都能跑AI。我在Gemma4发布前就开始研究了，做了42页完全指南，这个视频讲最核心的部分。\n\n这是42页的《Gemma完全指南》：https://www.huasheng.ai/orange-books/gemma4/\n\n⏱️ 时间戳（完整版）\n00:00 开场\n00:59 Gemma 4四个版本怎么选\n02:42 谷歌的端侧AI战略\n03:06 Apache 2.0许可证变化\n04:42 效率解读：图表分析\n06:33 本地部署说明\n08:47 三条赛道与Apple的压力\n11:07 编程实测对比：Gemma vs Claude vs DeepSeek vs 智谱\n13:04 总结与42页指南领取",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tth1WP0SwVg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tth1WP0SwVg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tth1WP0SwVg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tth1WP0SwVg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tth1WP0SwVg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/tth1WP0SwVg/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "谷歌最新模型Gemma4发布！深度解析+送42页资料",
+          "description": "谷歌发布Gemma 4，四个版本，31B模型Arena分数1452，逼近几百亿参数的GLM-5。但谷歌没有卷参数，而是想清楚了另一件事：做端侧AI。从手机到树莓派到浏览器，让每个设备都能跑AI。我在Gemma4发布前就开始研究了，做了42页完全指南，这个视频讲最核心的部分。\n\n这是42页的《Gemma完全指南》：https://www.huasheng.ai/orange-books/gemma4/\n\n⏱️ 时间戳（完整版）\n00:00 开场\n00:59 Gemma 4四个版本怎么选\n02:42 谷歌的端侧AI战略\n03:06 Apache 2.0许可证变化\n04:42 效率解读：图表分析\n06:33 本地部署说明\n08:47 三条赛道与Apple的压力\n11:07 编程实测对比：Gemma vs Claude vs DeepSeek vs 智谱\n13:04 总结与42页指南领取"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT14M15S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "9005",
+        "likeCount": "238",
+        "favoriteCount": "0",
+        "commentCount": "291"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "DXTS82fJO9A",
+      "snippet": {
+        "publishedAt": "2026-03-31T16:02:40Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Claude Code源码泄漏，首发解读51万行代码！",
+        "description": "Claude Code的npm包里意外留了一个60MB的调试文件，1902个源文件、51万行TypeScript代码全部暴露。我用Claude Code自己来解读了它自己，发现了它好用背后的工程秘密：系统提示词怎么拼的、Auto模式背后的四层安全审查、只记偏好不记代码的记忆系统、以及源码里偷偷养的一只宠物。最后聊聊这次泄露对国产AI编程工具意味着什么。\n\n这是65页的《Claude Code入门到精通指南》：https://www.huasheng.ai/orange-books/claude-code/\n\n重点时间戳\n00:00 泄露事件：1902个文件51万行代码裸奔\n02:00 Harness Engineering：60%模型+40%工程\n03:21 系统提示词：Anthropic自己的prompt长什么样\n06:10 Auto模式的秘密：背后跑了两个AI\n08:43 记忆系统：为什么它只记偏好不记代码\n12:13 彩蛋：源码里藏了一只虚拟宠物\n13:26 搜索的真相：不用RAG，只用grep\n14:54 行业影响：国产替代品要来了？\n17:57 越狱永生：Claude Code策划的一次逃亡",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DXTS82fJO9A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DXTS82fJO9A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DXTS82fJO9A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DXTS82fJO9A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DXTS82fJO9A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/DXTS82fJO9A/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Claude Code源码泄漏，首发解读51万行代码！",
+          "description": "Claude Code的npm包里意外留了一个60MB的调试文件，1902个源文件、51万行TypeScript代码全部暴露。我用Claude Code自己来解读了它自己，发现了它好用背后的工程秘密：系统提示词怎么拼的、Auto模式背后的四层安全审查、只记偏好不记代码的记忆系统、以及源码里偷偷养的一只宠物。最后聊聊这次泄露对国产AI编程工具意味着什么。\n\n这是65页的《Claude Code入门到精通指南》：https://www.huasheng.ai/orange-books/claude-code/\n\n重点时间戳\n00:00 泄露事件：1902个文件51万行代码裸奔\n02:00 Harness Engineering：60%模型+40%工程\n03:21 系统提示词：Anthropic自己的prompt长什么样\n06:10 Auto模式的秘密：背后跑了两个AI\n08:43 记忆系统：为什么它只记偏好不记代码\n12:13 彩蛋：源码里藏了一只虚拟宠物\n13:26 搜索的真相：不用RAG，只用grep\n14:54 行业影响：国产替代品要来了？\n17:57 越狱永生：Claude Code策划的一次逃亡"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT18M15S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "58423",
+        "likeCount": "1410",
+        "favoriteCount": "0",
+        "commentCount": "1205"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "9Glpx-RAXeM",
+      "snippet": {
+        "publishedAt": "2026-03-30T14:03:41Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "DeepSeek史上最长宕机！新模型V4来了？",
+        "description": "DeepSeek昨晚宕机7小时，Bloomberg说这是上线以来最严重的一次。但你有没有发现，去年R1的时候卡20分钟就能上热搜，这次宕8小时很多人看了新闻才知道。\n\n我翻了DeepSeek过去一年发的7篇核心论文，把V4的技术拼图拼了出来：mHC解决万亿参数训练稳定性（梁文锋亲自署名），NSA拿了ACL 2025最佳论文让百万上下文在计算上走通，V3.2已经悄悄完成了小规模验证，benchmark甚至超过了GPT-5。\n\nPolymarket上4月15日前发布的概率是54%，全世界都在等。但比V4本身更值得关注的是：在Agent时代token需求暴增、国产模型集体涨价的当下，DeepSeek能不能再来一次价格屠杀？\n\n00:00 DeepSeek宕机7小时，但很多人看了新闻才知道\n02:35 3月频繁宕机：日活增长67%，算力只增长8%\n04:01 论文拼图1：mHC — 让万亿参数模型训得动\n08:12 论文拼图2：NSA — ACL最佳论文，百万上下文走通\n12:32 论文拼图3：V3.2悄悄超过GPT-5\n14:54 V4预测规格：万亿参数 + 百万上下文 + 多模态 + 国产芯片\n16:53 Agent时代token不便宜，国产模型集体涨价\n18:31 大家想再感受一次R1那个夜晚的冲击",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9Glpx-RAXeM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9Glpx-RAXeM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9Glpx-RAXeM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9Glpx-RAXeM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9Glpx-RAXeM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/9Glpx-RAXeM/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "DeepSeek史上最长宕机！新模型V4来了？",
+          "description": "DeepSeek昨晚宕机7小时，Bloomberg说这是上线以来最严重的一次。但你有没有发现，去年R1的时候卡20分钟就能上热搜，这次宕8小时很多人看了新闻才知道。\n\n我翻了DeepSeek过去一年发的7篇核心论文，把V4的技术拼图拼了出来：mHC解决万亿参数训练稳定性（梁文锋亲自署名），NSA拿了ACL 2025最佳论文让百万上下文在计算上走通，V3.2已经悄悄完成了小规模验证，benchmark甚至超过了GPT-5。\n\nPolymarket上4月15日前发布的概率是54%，全世界都在等。但比V4本身更值得关注的是：在Agent时代token需求暴增、国产模型集体涨价的当下，DeepSeek能不能再来一次价格屠杀？\n\n00:00 DeepSeek宕机7小时，但很多人看了新闻才知道\n02:35 3月频繁宕机：日活增长67%，算力只增长8%\n04:01 论文拼图1：mHC — 让万亿参数模型训得动\n08:12 论文拼图2：NSA — ACL最佳论文，百万上下文走通\n12:32 论文拼图3：V3.2悄悄超过GPT-5\n14:54 V4预测规格：万亿参数 + 百万上下文 + 多模态 + 国产芯片\n16:53 Agent时代token不便宜，国产模型集体涨价\n18:31 大家想再感受一次R1那个夜晚的冲击"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT19M4S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "2590",
+        "likeCount": "31",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "MRMSY8JhRQg",
+      "snippet": {
+        "publishedAt": "2026-03-29T13:45:42Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "OpenClaw从入门到精通：9个使用技巧，让龙虾真正帮你干活",
+        "description": "装了OpenClaw不知道怎么用？大部分人只把龙虾当ChatGPT在聊天，太浪费了。这期视频我整理了9个从入门到精通的使用技巧，全程用腾讯QClaw演示，手把手教你让龙虾真正帮你干活。涵盖：灵魂配置、微信远程操控、Skill市场、记忆系统、定时任务、模型省钱策略、多Agent协作、安全防护、数据备份。\n\nQClaw下载方式：https://qclaw.qq.com/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MRMSY8JhRQg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MRMSY8JhRQg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MRMSY8JhRQg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MRMSY8JhRQg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MRMSY8JhRQg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "OpenClaw从入门到精通：9个使用技巧，让龙虾真正帮你干活",
+          "description": "装了OpenClaw不知道怎么用？大部分人只把龙虾当ChatGPT在聊天，太浪费了。这期视频我整理了9个从入门到精通的使用技巧，全程用腾讯QClaw演示，手把手教你让龙虾真正帮你干活。涵盖：灵魂配置、微信远程操控、Skill市场、记忆系统、定时任务、模型省钱策略、多Agent协作、安全防护、数据备份。\n\nQClaw下载方式：https://qclaw.qq.com/"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT20M21S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "9107",
+        "likeCount": "155",
+        "favoriteCount": "0",
+        "commentCount": "17"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "VJLrEF9p78M",
+      "snippet": {
+        "publishedAt": "2026-03-25T13:39:56Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "我去香港问了一群学生：你们拿龙虾干嘛？",
+        "description": "腾讯在香港办了一场龙虾一站式服务日，我去现场采访了几位学生和QClaw的产品体验官。有人专门买Mac Mini来养虾，有人想用龙虾摆脱dirty work，也有人最担心的其实是安全。聊完之后我最大的感受是，龙虾从聊天框到执行者的跨越，比很多人想的要大。\n\n📙 橙皮书（含QClaw教程）：回复「腾讯龙虾」\n🦞 QClaw下载：https://qclaw.qq.com/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VJLrEF9p78M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VJLrEF9p78M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VJLrEF9p78M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VJLrEF9p78M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VJLrEF9p78M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/VJLrEF9p78M/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "我去香港问了一群学生：你们拿龙虾干嘛？",
+          "description": "腾讯在香港办了一场龙虾一站式服务日，我去现场采访了几位学生和QClaw的产品体验官。有人专门买Mac Mini来养虾，有人想用龙虾摆脱dirty work，也有人最担心的其实是安全。聊完之后我最大的感受是，龙虾从聊天框到执行者的跨越，比很多人想的要大。\n\n📙 橙皮书（含QClaw教程）：回复「腾讯龙虾」\n🦞 QClaw下载：https://qclaw.qq.com/"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT5M41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "17904",
+        "likeCount": "21",
+        "favoriteCount": "0",
+        "commentCount": "16"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "SJmEVT6qwdE",
+      "snippet": {
+        "publishedAt": "2026-03-13T04:21:42Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "🦞OpenClaw养虾指南02｜用扣子5分钟部署你的第一只会上大学、持续进化的龙虾",
+        "description": "这是OpenClaw龙虾系列的第二期实操视频。上期用98页橙皮书讲解了原理，本期直接演示：如何用扣子编程部署你的第一只龙虾，以及如何通过安装Skill让龙虾真正变强。\n\n视频演示了三个实战任务——用huashu-excel-report分析B站数据并生成杂志级报告、用视频解读Skill分析一期视频内容、用content-pipeline全流程自动写一篇公众号文章。\n\n核心观点：没有Skill的龙虾只是宠物，有Skill的龙虾才是同事。你应该把每周重复做的事（数据分析、竞品报告、行业整理）变成Skill，让龙虾替你执行。\n\n最后推荐了InStreet龙虾社区，已有1万多只龙虾在交流学习，可以让你的龙虾在那里获取更多技能。\n\n\n\n时间戳：\n\n00:00 开场：本期目标——实操部署第一只龙虾\n\n01:42 用扣子编程部署龙虾（购买服务、选模型、一键配置）\n\n03:35 给龙虾安装Skill：把压缩包发给扣子编程即可\n\n04:39 实战1：安装huashu-excel-report后分析B站数据，生成专业报告\n\n09:13 实战2：让龙虾解读视频内容，生成结构化总结报告\n\n11:17 实战3：用content-pipeline全流程自动写公众号文章（5个Skill串联、20+步骤）\n\n18:33 核心观点：把重复性工作变成Skill，龙虾才能真正提效\n\n20:00 InStreet龙虾社区介绍：1万+龙虾交流学习，获取更多技能",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SJmEVT6qwdE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SJmEVT6qwdE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SJmEVT6qwdE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SJmEVT6qwdE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SJmEVT6qwdE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/SJmEVT6qwdE/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "🦞OpenClaw养虾指南02｜用扣子5分钟部署你的第一只会上大学、持续进化的龙虾",
+          "description": "这是OpenClaw龙虾系列的第二期实操视频。上期用98页橙皮书讲解了原理，本期直接演示：如何用扣子编程部署你的第一只龙虾，以及如何通过安装Skill让龙虾真正变强。\n\n视频演示了三个实战任务——用huashu-excel-report分析B站数据并生成杂志级报告、用视频解读Skill分析一期视频内容、用content-pipeline全流程自动写一篇公众号文章。\n\n核心观点：没有Skill的龙虾只是宠物，有Skill的龙虾才是同事。你应该把每周重复做的事（数据分析、竞品报告、行业整理）变成Skill，让龙虾替你执行。\n\n最后推荐了InStreet龙虾社区，已有1万多只龙虾在交流学习，可以让你的龙虾在那里获取更多技能。\n\n\n\n时间戳：\n\n00:00 开场：本期目标——实操部署第一只龙虾\n\n01:42 用扣子编程部署龙虾（购买服务、选模型、一键配置）\n\n03:35 给龙虾安装Skill：把压缩包发给扣子编程即可\n\n04:39 实战1：安装huashu-excel-report后分析B站数据，生成专业报告\n\n09:13 实战2：让龙虾解读视频内容，生成结构化总结报告\n\n11:17 实战3：用content-pipeline全流程自动写公众号文章（5个Skill串联、20+步骤）\n\n18:33 核心观点：把重复性工作变成Skill，龙虾才能真正提效\n\n20:00 InStreet龙虾社区介绍：1万+龙虾交流学习，获取更多技能"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT21M16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "2097",
+        "likeCount": "36",
+        "favoriteCount": "0",
+        "commentCount": "8"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "MAJ5BApYQT0",
+      "snippet": {
+        "publishedAt": "2026-03-09T11:41:46Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "🦞OpenClaw养虾指南：从入门到精通（赠98页pdf资料）",
+        "description": "OpenClaw火了，但装完之后到底怎么用？这期视频我花了一个多星期，整理出一份98页的OpenClaw橙皮书，把所有你需要知道的东西讲清楚。\n\n从它是什么、为什么火、技术架构到底有什么不同，到部署方案（本地/Mac mini/云服务器）、飞书钉钉等IM渠道接入、Skill技能系统、模型选择与成本控制、安全避坑指南，再到国内外养虾生态和社区文化，全部覆盖。\n\n不管你是还没装的、装了不知道干嘛的、还是想把虾养得更好的，这一期够用了。视频末尾告诉你怎么免费领取这份橙皮书PDF。\n\n这是视频中演示的《OpenClaw橙皮书》：https://www.huasheng.ai/orange-books/openclaw/\n\n 时间戳：\n 00:00 OpenClaw是什么，为什么和别的AI不一样\n 02:38 本质解析：从聊天工具到自主执行的数字员工\n 05:28 GitHub数据与发展简史\n 08:33 为什么能爆发式增长\n 10:46 三层技术架构与中央控制面板演示\n 12:20 记忆系统详解：SOUL/TOOLS/MEMORY\n 16:01 Heartbeat心跳机制：让AI主动找你\n 17:15 设计哲学：CLI是智能体连接世界的终极接口\n 19:58 部署方案全对比：本地/Mac mini/云厂商\n 24:00 Skill技能系统：真正的「养虾」核心\n 27:00 模型选择与成本控制建议\n 28:31 安全问题与避坑指南",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MAJ5BApYQT0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MAJ5BApYQT0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MAJ5BApYQT0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MAJ5BApYQT0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MAJ5BApYQT0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/MAJ5BApYQT0/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "🦞OpenClaw养虾指南：从入门到精通（赠98页pdf资料）",
+          "description": "OpenClaw火了，但装完之后到底怎么用？这期视频我花了一个多星期，整理出一份98页的OpenClaw橙皮书，把所有你需要知道的东西讲清楚。\n\n从它是什么、为什么火、技术架构到底有什么不同，到部署方案（本地/Mac mini/云服务器）、飞书钉钉等IM渠道接入、Skill技能系统、模型选择与成本控制、安全避坑指南，再到国内外养虾生态和社区文化，全部覆盖。\n\n不管你是还没装的、装了不知道干嘛的、还是想把虾养得更好的，这一期够用了。视频末尾告诉你怎么免费领取这份橙皮书PDF。\n\n这是视频中演示的《OpenClaw橙皮书》：https://www.huasheng.ai/orange-books/openclaw/\n\n 时间戳：\n 00:00 OpenClaw是什么，为什么和别的AI不一样\n 02:38 本质解析：从聊天工具到自主执行的数字员工\n 05:28 GitHub数据与发展简史\n 08:33 为什么能爆发式增长\n 10:46 三层技术架构与中央控制面板演示\n 12:20 记忆系统详解：SOUL/TOOLS/MEMORY\n 16:01 Heartbeat心跳机制：让AI主动找你\n 17:15 设计哲学：CLI是智能体连接世界的终极接口\n 19:58 部署方案全对比：本地/Mac mini/云厂商\n 24:00 Skill技能系统：真正的「养虾」核心\n 27:00 模型选择与成本控制建议\n 28:31 安全问题与避坑指南"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT34M36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "24508",
+        "likeCount": "891",
+        "favoriteCount": "0",
+        "commentCount": "942"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "mkfNUYiPNkw",
+      "snippet": {
+        "publishedAt": "2026-02-24T01:00:06Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "一句话做出杂志级PPT：我的Claude Code Skill是怎么做到的？",
+        "description": "这期视频我用自己构建的PPT制作Skill（huashu-slides）作为案例，演示如何让AI从「随机做个PPT」变成「每次都是专业水准」。\nSkill本质上是一个SOP能力包——包含核心指令（SKILL.md）、参考文档（references/）、自动化脚本（scripts/）和视觉资产（assets/），装进Cursor或Claude Code后自动生效。和手写提示词最大的区别：写一次，永远按最高标准执行，还能打包分享给别人用。\n我的这个PPT Skill内置了完整工作流：内容梳理→风格选择→页面构建→PPTX组装，支持两条制作路径——HTML可编辑版（中文完美、文字可改）和全AI生成版（Nano Banana Pro漫画风、支持个人形象融入），以及17种设计风格（Snoopy漫画、浮世绘、Neo-Brutalism、纽约时报杂志风等），AI会根据主题类型自动推荐。\n视频中我用「给文科大学生讲期货期权」的演讲稿实操演示，一句话同时生成了两个版本的13页PPT——一套Neo-Brutalism风格的可编辑版，一套带我个人形象的学習漫画风AI版。这种品质的PPT，手工做至少要半天。\n\n时间戳\n00:00 成品展示：这个Skill做出来的PPT长什么样\n02:44 实操演示：一句话从演讲稿生成两版PPT\n05:28 Skill文件结构拆解：四大组件各司其职\n09:17 双路径并行构建：HTML可编辑 + AI漫画同时跑\n09:57 个人形象融入前后对比\n13:02 如何设计你自己的Skill\n14:45 最终成品展示 + Skill获取方式",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mkfNUYiPNkw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mkfNUYiPNkw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mkfNUYiPNkw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mkfNUYiPNkw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mkfNUYiPNkw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "一句话做出杂志级PPT：我的Claude Code Skill是怎么做到的？",
+          "description": "这期视频我用自己构建的PPT制作Skill（huashu-slides）作为案例，演示如何让AI从「随机做个PPT」变成「每次都是专业水准」。\nSkill本质上是一个SOP能力包——包含核心指令（SKILL.md）、参考文档（references/）、自动化脚本（scripts/）和视觉资产（assets/），装进Cursor或Claude Code后自动生效。和手写提示词最大的区别：写一次，永远按最高标准执行，还能打包分享给别人用。\n我的这个PPT Skill内置了完整工作流：内容梳理→风格选择→页面构建→PPTX组装，支持两条制作路径——HTML可编辑版（中文完美、文字可改）和全AI生成版（Nano Banana Pro漫画风、支持个人形象融入），以及17种设计风格（Snoopy漫画、浮世绘、Neo-Brutalism、纽约时报杂志风等），AI会根据主题类型自动推荐。\n视频中我用「给文科大学生讲期货期权」的演讲稿实操演示，一句话同时生成了两个版本的13页PPT——一套Neo-Brutalism风格的可编辑版，一套带我个人形象的学習漫画风AI版。这种品质的PPT，手工做至少要半天。\n\n时间戳\n00:00 成品展示：这个Skill做出来的PPT长什么样\n02:44 实操演示：一句话从演讲稿生成两版PPT\n05:28 Skill文件结构拆解：四大组件各司其职\n09:17 双路径并行构建：HTML可编辑 + AI漫画同时跑\n09:57 个人形象融入前后对比\n13:02 如何设计你自己的Skill\n14:45 最终成品展示 + Skill获取方式"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT17M36S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "8393",
+        "likeCount": "139",
+        "favoriteCount": "0",
+        "commentCount": "156"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "qpo_QPZ_Wus",
+      "snippet": {
+        "publishedAt": "2026-02-16T07:31:31Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "数据分析师一周的活，AI一句话就干完了｜Agent Skill实操",
+        "description": "一句话 + 一份Excel =专业级数据分析报告。\n这期视频我用自己构建的数据分析Skill（huashu-data-pro）作为案例，演示如何让AI从「什么都会一点」变成「这件事我很专业」。                  \n\nSkill本质上是一个SOP能力包——包含核心指令（SKILL.md）、参考文档（references/）和自动化脚本（scripts/），装进Cursor或Claude Code后自动生效。和手写提示词最大的区别：写一次，永远按最高标准执行，还能打包分享给别人用。\n\n我的这个数据分析Skill内置了四步工作流：数据理解→专家选角→并行分析→整合报告，以及11种专业可视化风格（金融时报、麦肯锡、经济学人等），AI会根据数据类型自动匹配。\n视频中我用抖音口腔护理行业数据实操演示，一句话生成了一份包含行业大盘、渠道分析、品牌竞争、品类机会的完整报告，图表全部可交互。这种品质的报告，通常需要3-5年经验的分析师花一周才能完成。\n\n时间戳：\n  0:00 成果展示：一句话生成的专业分析报告长什么样\n  1:23 什么是Skill：一个文件夹就是一个能力包\n  2:06 Skill vs 手写提示词：写一次，永远生效\n  2:57 四步工作流：数据理解→专家选角→并行分析→整合报告\n  4:09 Skill结构详解：SKILL.md + references + scripts\n  5:58 实操演示：用抖音电商数据一句话生成报告\n  8:27 11种报告风格：AI自动匹配最合适的视觉风格\n  8:57 安装教学：Claude Code / Cursor 两种方式\n  10:14 生成结果展示：图文并茂的完整行业分析报告\n\n👉数据分析Skill技能包下载：https://bookai.top/claude-code/%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B/data-analysis-skill",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qpo_QPZ_Wus/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qpo_QPZ_Wus/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qpo_QPZ_Wus/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qpo_QPZ_Wus/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qpo_QPZ_Wus/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "数据分析师一周的活，AI一句话就干完了｜Agent Skill实操",
+          "description": "一句话 + 一份Excel =专业级数据分析报告。\n这期视频我用自己构建的数据分析Skill（huashu-data-pro）作为案例，演示如何让AI从「什么都会一点」变成「这件事我很专业」。                  \n\nSkill本质上是一个SOP能力包——包含核心指令（SKILL.md）、参考文档（references/）和自动化脚本（scripts/），装进Cursor或Claude Code后自动生效。和手写提示词最大的区别：写一次，永远按最高标准执行，还能打包分享给别人用。\n\n我的这个数据分析Skill内置了四步工作流：数据理解→专家选角→并行分析→整合报告，以及11种专业可视化风格（金融时报、麦肯锡、经济学人等），AI会根据数据类型自动匹配。\n视频中我用抖音口腔护理行业数据实操演示，一句话生成了一份包含行业大盘、渠道分析、品牌竞争、品类机会的完整报告，图表全部可交互。这种品质的报告，通常需要3-5年经验的分析师花一周才能完成。\n\n时间戳：\n  0:00 成果展示：一句话生成的专业分析报告长什么样\n  1:23 什么是Skill：一个文件夹就是一个能力包\n  2:06 Skill vs 手写提示词：写一次，永远生效\n  2:57 四步工作流：数据理解→专家选角→并行分析→整合报告\n  4:09 Skill结构详解：SKILL.md + references + scripts\n  5:58 实操演示：用抖音电商数据一句话生成报告\n  8:27 11种报告风格：AI自动匹配最合适的视觉风格\n  8:57 安装教学：Claude Code / Cursor 两种方式\n  10:14 生成结果展示：图文并茂的完整行业分析报告\n\n👉数据分析Skill技能包下载：https://bookai.top/claude-code/%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B/data-analysis-skill"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT13M8S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "7240",
+        "likeCount": "233",
+        "favoriteCount": "0",
+        "commentCount": "196"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "jTMqFSajuYM",
+      "snippet": {
+        "publishedAt": "2026-01-15T01:38:47Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "DeepSeek V4发布前，梁文锋连发3篇论文，我读完发现一个规律",
+        "description": "DeepSeek V4传闘愈演愈烈，2月中旬春节前后发布几成定局。但在V4到来之前，DeepSeek连发三篇梁文锋署名论文，透露了下一代模型的技术方向。\n\n本期视频带你读懂这三篇论文的核心思想：\n\nEngram：给模型装上\"记忆\"，75%思考+25%记忆是最优解。博尔赫斯1942年就写过：完美的记忆会杀死思考。\n\nmHC：残差连接用了10年，DeepSeek证明它不是最优解。稳定性提升3个数量级，只增加6.7%训练时间。\n\nR1论文更新：从22页扩展到86页，29.4万美元训练成本首次公开，连失败案例都写进去了。\n\nDeepSeek的风格：先发论文，再发模型。看完这三篇，V4发布时你就能看懂它到底强在哪。",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jTMqFSajuYM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jTMqFSajuYM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jTMqFSajuYM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jTMqFSajuYM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jTMqFSajuYM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "DeepSeek V4发布前，梁文锋连发3篇论文，我读完发现一个规律",
+          "description": "DeepSeek V4传闘愈演愈烈，2月中旬春节前后发布几成定局。但在V4到来之前，DeepSeek连发三篇梁文锋署名论文，透露了下一代模型的技术方向。\n\n本期视频带你读懂这三篇论文的核心思想：\n\nEngram：给模型装上\"记忆\"，75%思考+25%记忆是最优解。博尔赫斯1942年就写过：完美的记忆会杀死思考。\n\nmHC：残差连接用了10年，DeepSeek证明它不是最优解。稳定性提升3个数量级，只增加6.7%训练时间。\n\nR1论文更新：从22页扩展到86页，29.4万美元训练成本首次公开，连失败案例都写进去了。\n\nDeepSeek的风格：先发论文，再发模型。看完这三篇，V4发布时你就能看懂它到底强在哪。"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT16M",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "15103",
+        "likeCount": "328",
+        "favoriteCount": "0",
+        "commentCount": "57"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "KAZK1tWnQQw",
+      "snippet": {
+        "publishedAt": "2025-12-30T03:38:06Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Manus被Meta数十亿美元收购：独家完整复盘！",
+        "description": "10个月前，Manus发布时邀请码被炒到5万块，Twitter创始人发推说\"Excellent\"。10个月后，Meta数十亿美元收购，创始人肖弘出任Meta副总裁。这中间经历了Benchmark投资、美国财政部审查、迁往新加坡、裁员争议、1亿美元ARR……一个被质疑\"套壳\"的产品，怎么就成了Meta成立以来第三大收购？这期视频完整复盘Manus的10个月。",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KAZK1tWnQQw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KAZK1tWnQQw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KAZK1tWnQQw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KAZK1tWnQQw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KAZK1tWnQQw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Manus被Meta数十亿美元收购：独家完整复盘！",
+          "description": "10个月前，Manus发布时邀请码被炒到5万块，Twitter创始人发推说\"Excellent\"。10个月后，Meta数十亿美元收购，创始人肖弘出任Meta副总裁。这中间经历了Benchmark投资、美国财政部审查、迁往新加坡、裁员争议、1亿美元ARR……一个被质疑\"套壳\"的产品，怎么就成了Meta成立以来第三大收购？这期视频完整复盘Manus的10个月。"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT12M59S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "991",
+        "likeCount": "17",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "TT5uoPI5Q2Y",
+      "snippet": {
+        "publishedAt": "2025-12-12T02:11:10Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "【实测+解读】GPT5.2发布：74%的打工人任务，被AI攻克了",
+        "description": "今天凌晨，OpenAI发布GPT-5.2模型，仅距离5.1发布不到一个月。这次更新最大的亮点是在GDPval指标上从38.8%暴涨到74.1%——这意味着在74%的知识型工作任务中，AI已经能达到甚至超越拥有14年经验的专家水平。\n\nGDPval是OpenAI提出的全新评估体系，覆盖美国GDP前九大产业的44个职业领域，包括律师、医生、工程师、文员等，测试任务涵盖1,320项真实工作场景。但GPT-5.2 Pro的价格也相当夸张：输出168美元/百万tokens，是DeepSeek的上百倍。\n\n本期视频深度解读GPT-5.2的核心能力，并实测对比DeepSeek、Claude 4.5和Gemini 3 Pro，看看谁才是真正的王者。\n\n重点时间戳：\n 00:00 🚀 GPT-5.2发布：一个月内的紧急迭代\n 00:25 🔥 为什么这么快？Anthropic和Google的压力\n 01:12 📊 GDPval：衡量AI在真实工作中的新指标\n 04:45 💼 GDPval任务示例：制造工程师、订单文员\n 08:18 📈 从38.8%到74.1%：5.2的巨大飞跃\n 10:00 💻 编程、长文本、视觉能力全面提升\n 12:33 💰 价格公布：Pro版168美元，太贵了？\n 14:09 🧪 实测对比：DeepSeek vs Claude vs Gemini，谁更强？",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TT5uoPI5Q2Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TT5uoPI5Q2Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TT5uoPI5Q2Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TT5uoPI5Q2Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TT5uoPI5Q2Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "【实测+解读】GPT5.2发布：74%的打工人任务，被AI攻克了",
+          "description": "今天凌晨，OpenAI发布GPT-5.2模型，仅距离5.1发布不到一个月。这次更新最大的亮点是在GDPval指标上从38.8%暴涨到74.1%——这意味着在74%的知识型工作任务中，AI已经能达到甚至超越拥有14年经验的专家水平。\n\nGDPval是OpenAI提出的全新评估体系，覆盖美国GDP前九大产业的44个职业领域，包括律师、医生、工程师、文员等，测试任务涵盖1,320项真实工作场景。但GPT-5.2 Pro的价格也相当夸张：输出168美元/百万tokens，是DeepSeek的上百倍。\n\n本期视频深度解读GPT-5.2的核心能力，并实测对比DeepSeek、Claude 4.5和Gemini 3 Pro，看看谁才是真正的王者。\n\n重点时间戳：\n 00:00 🚀 GPT-5.2发布：一个月内的紧急迭代\n 00:25 🔥 为什么这么快？Anthropic和Google的压力\n 01:12 📊 GDPval：衡量AI在真实工作中的新指标\n 04:45 💼 GDPval任务示例：制造工程师、订单文员\n 08:18 📈 从38.8%到74.1%：5.2的巨大飞跃\n 10:00 💻 编程、长文本、视觉能力全面提升\n 12:33 💰 价格公布：Pro版168美元，太贵了？\n 14:09 🧪 实测对比：DeepSeek vs Claude vs Gemini，谁更强？"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT16M46S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "4605",
+        "likeCount": "58",
+        "favoriteCount": "0",
+        "commentCount": "8"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "rgk6PsIcs6s",
+      "snippet": {
+        "publishedAt": "2025-12-06T10:01:34Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "不写代码！10分钟搭建企业知识库，图表PDF全能读懂！阿里云百炼RAG实战",
+        "description": "想零代码搭建一个能读懂图表的AI文档助手吗？传统RAG看不懂图片、检索不准、搭建成本高？本期手把手教你用阿里云百炼10分钟解决这些痛点！\n✨ 核心亮点：\n• 多模态RAG：从图片、PDF到PPT，图表数据秒级检索\n• 混合检索：智能切片+语义理解，告别答非所问\n• 开箱即用：不写代码、不调参数，免费使用\n\n📺 实操流程：复制模板→上传文档→配置知识库→测试优化→一键发布\n💼 适用场景：企业知识库、客服助手、产品文档问答、财务报表分析等\n\n🔗 阿里云百炼平台：https://bailian.console.aliyun.com/\n👥 钉钉共学群（答疑解惑）：【钉钉群号：155840008142】\n📚 实训营链接（更多AI场景）：https://www.aliyun.com/benefit/aihands-on/mainpage\n\n视频时间戳：\n00:00 开场演示:AI助手秒读图表数据\n00:20 RAG原理解析:传统RAG的三大坑\n03:15 实操开始:进入百炼控制台\n05:10 应用配置:模型选择与文件处理模式\n09:10 核心操作:创建知识库与上传文件\n12:50 索引设置:切片方式与检索参数调优\n16:40 测试验证:实际问答效果演示\n19:45 发布部署:API接入与多平台对接",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rgk6PsIcs6s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rgk6PsIcs6s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rgk6PsIcs6s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rgk6PsIcs6s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rgk6PsIcs6s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "不写代码！10分钟搭建企业知识库，图表PDF全能读懂！阿里云百炼RAG实战",
+          "description": "想零代码搭建一个能读懂图表的AI文档助手吗？传统RAG看不懂图片、检索不准、搭建成本高？本期手把手教你用阿里云百炼10分钟解决这些痛点！\n✨ 核心亮点：\n• 多模态RAG：从图片、PDF到PPT，图表数据秒级检索\n• 混合检索：智能切片+语义理解，告别答非所问\n• 开箱即用：不写代码、不调参数，免费使用\n\n📺 实操流程：复制模板→上传文档→配置知识库→测试优化→一键发布\n💼 适用场景：企业知识库、客服助手、产品文档问答、财务报表分析等\n\n🔗 阿里云百炼平台：https://bailian.console.aliyun.com/\n👥 钉钉共学群（答疑解惑）：【钉钉群号：155840008142】\n📚 实训营链接（更多AI场景）：https://www.aliyun.com/benefit/aihands-on/mainpage\n\n视频时间戳：\n00:00 开场演示:AI助手秒读图表数据\n00:20 RAG原理解析:传统RAG的三大坑\n03:15 实操开始:进入百炼控制台\n05:10 应用配置:模型选择与文件处理模式\n09:10 核心操作:创建知识库与上传文件\n12:50 索引设置:切片方式与检索参数调优\n16:40 测试验证:实际问答效果演示\n19:45 发布部署:API接入与多平台对接"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT23M21S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "1319",
+        "likeCount": "25",
+        "favoriteCount": "0",
+        "commentCount": "2"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "ZbysPz8TZJU",
+      "snippet": {
+        "publishedAt": "2025-12-05T08:57:40Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "AI编程到底能快多少？亚马逊内部数据：10倍",
+        "description": "2025 亚马逊云科技 re:Invent 发布三大 Frontier Agent，覆盖开发、安全、运维全流程。\n最震撼的案例：亚马逊内部用 Kiro，30人18个月的项目，6人76天干完，效率提升10倍+。\n\n这期视频带你了解：\n- Kiro autonomous agent 怎么做到过夜写代码？\n- 为什么很多 Agent 用不起来？Agent Memory 如何解决？\n- 200美元抵扣金，Kiro Pro 免费用10个月\n\n视频时间戳：\n0:00 开场：Agent过夜写代码，收到15个PR\n0:35 震撼案例：30人18个月→6人76天\n1:14 三大Frontier Agent：开发/安全/运维\n2:09 Kiro深度解析：什么是autonomous agent\n2:57 效率10倍的三个关键学习\n4:55 Security Agent & DevOps Agent\n5:45 为什么很多Agent用不起来？\n6:35 Agent Memory：让Agent学会记住流程\n7:50 出海场景 + 200美元免费福利\n\n\n👉注册海外亚马逊云科技账户，领200美元服务抵扣金：https://aws.amazon.com/cn/free?trk=cb786e95-c4da-4bba-920b-62e7c4aed9ef&sc_channel=sm\n\n👉报名参与2025 亚马逊云科技re:Invent 中国行活动：https://events.amazoncloud.cn/reinvent-online-20251218?trk=811631fa-539a-41c3-8fed-f23e4f9919dc&amp;sc_channel=el\n\n\n#亚马逊云科技 #AI编程 #Kiro #reInvent2025",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZbysPz8TZJU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZbysPz8TZJU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZbysPz8TZJU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZbysPz8TZJU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZbysPz8TZJU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "AI编程到底能快多少？亚马逊内部数据：10倍",
+          "description": "2025 亚马逊云科技 re:Invent 发布三大 Frontier Agent，覆盖开发、安全、运维全流程。\n最震撼的案例：亚马逊内部用 Kiro，30人18个月的项目，6人76天干完，效率提升10倍+。\n\n这期视频带你了解：\n- Kiro autonomous agent 怎么做到过夜写代码？\n- 为什么很多 Agent 用不起来？Agent Memory 如何解决？\n- 200美元抵扣金，Kiro Pro 免费用10个月\n\n视频时间戳：\n0:00 开场：Agent过夜写代码，收到15个PR\n0:35 震撼案例：30人18个月→6人76天\n1:14 三大Frontier Agent：开发/安全/运维\n2:09 Kiro深度解析：什么是autonomous agent\n2:57 效率10倍的三个关键学习\n4:55 Security Agent & DevOps Agent\n5:45 为什么很多Agent用不起来？\n6:35 Agent Memory：让Agent学会记住流程\n7:50 出海场景 + 200美元免费福利\n\n\n👉注册海外亚马逊云科技账户，领200美元服务抵扣金：https://aws.amazon.com/cn/free?trk=cb786e95-c4da-4bba-920b-62e7c4aed9ef&sc_channel=sm\n\n👉报名参与2025 亚马逊云科技re:Invent 中国行活动：https://events.amazoncloud.cn/reinvent-online-20251218?trk=811631fa-539a-41c3-8fed-f23e4f9919dc&amp;sc_channel=el\n\n\n#亚马逊云科技 #AI编程 #Kiro #reInvent2025"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT9M30S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "2935",
+        "likeCount": "61",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "tq4AynTPmHU",
+      "snippet": {
+        "publishedAt": "2025-12-01T18:43:59Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "【解读+实测】DeepSeek V3.2发布！超GPT-5，对标Gemini 3.0 Pro",
+        "description": "DeepSeek突然发布V3.2和V3.2 Specialee两款开源模型，能力媲美GPT-5，Specialee版本更在国际数学奥赛等竞赛中达到世界第一。\n视频深度解析三大技术突破：DSA稀疏注意力机制、可扩展强化学习框架、大规模agent任务合成流水线。实测显示：推理编程能力极强，支持边思考边调用工具，已接入Claude Code。\n但也存在\"偏科\"现象——日常对话和创意任务表现中规中矩。150人小团队如何打造世界级模型？答案都在视频里。\n\n 00:00 - 开场：DeepSeek V3.2发布，能力可媲美GPT-5\n 01:22 - 模型能力对比：达到GPT-5水平，略低于Gemini 3.0 Pro\n 01:45 - Speciale版本：国际奥赛数学竞赛世界第一\n 02:34 - 核心创新：边思考边调用工具（全球首创）\n 05:09 - 支持Claude Code，国内用户福音\n 07:00 - 技术突破①：DSA稀疏注意力机制详解（派对握手比喻）\n 10:19 - 技术突破②：大规模强化学习框架（后训练算力达10%）\n 11:34 - 技术突破③：Agent任务合成流水线（难解答易验证）\n 15:22 - 实测环节：前端开发、知识问答、创意任务全方位测试\n 17:01 - 总结评价：偏科的小镇做题家，推理编程极强但日常任务中规中矩",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tq4AynTPmHU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tq4AynTPmHU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tq4AynTPmHU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tq4AynTPmHU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tq4AynTPmHU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "【解读+实测】DeepSeek V3.2发布！超GPT-5，对标Gemini 3.0 Pro",
+          "description": "DeepSeek突然发布V3.2和V3.2 Specialee两款开源模型，能力媲美GPT-5，Specialee版本更在国际数学奥赛等竞赛中达到世界第一。\n视频深度解析三大技术突破：DSA稀疏注意力机制、可扩展强化学习框架、大规模agent任务合成流水线。实测显示：推理编程能力极强，支持边思考边调用工具，已接入Claude Code。\n但也存在\"偏科\"现象——日常对话和创意任务表现中规中矩。150人小团队如何打造世界级模型？答案都在视频里。\n\n 00:00 - 开场：DeepSeek V3.2发布，能力可媲美GPT-5\n 01:22 - 模型能力对比：达到GPT-5水平，略低于Gemini 3.0 Pro\n 01:45 - Speciale版本：国际奥赛数学竞赛世界第一\n 02:34 - 核心创新：边思考边调用工具（全球首创）\n 05:09 - 支持Claude Code，国内用户福音\n 07:00 - 技术突破①：DSA稀疏注意力机制详解（派对握手比喻）\n 10:19 - 技术突破②：大规模强化学习框架（后训练算力达10%）\n 11:34 - 技术突破③：Agent任务合成流水线（难解答易验证）\n 15:22 - 实测环节：前端开发、知识问答、创意任务全方位测试\n 17:01 - 总结评价：偏科的小镇做题家，推理编程极强但日常任务中规中矩"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT20M6S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "3161",
+        "likeCount": "54",
+        "favoriteCount": "0",
+        "commentCount": "21"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "ly1qxR5PF4k",
+      "snippet": {
+        "publishedAt": "2025-11-18T22:49:25Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "【首发】Google发布Gemini 3：地表最强模型解读&实测！",
+        "description": "Gemini 3 Pro正式发布！几乎所有指标都是迄今最强模型，远超Claude 4.5和GPT 5.1。本期详解Gemini 3的核心特点、性能评测、使用渠道，展示网友创意测试案例（乐高搭建、核电站动画、像素艺术），以及实测网站设计、图片生成和视频理解能力。Google同步发布AI IDE产品AntiGravity，可免费使用Gemini 3和Claude 4.5。\n\n\n ⏱️ 时间戳\n 00:00 开场：Gemini 3 Pro正式发布\n 01:50 性能评测：全面领先的指标表现\n 05:50 创意案例：网友测试集锦\n 09:38 使用渠道：四种体验方式\n 11:06 实测演示：网站设计与图片生成\n 13:51 视频理解：影视飓风舆情视频拆解\n 16:42 总结展望",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ly1qxR5PF4k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ly1qxR5PF4k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ly1qxR5PF4k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ly1qxR5PF4k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ly1qxR5PF4k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "【首发】Google发布Gemini 3：地表最强模型解读&实测！",
+          "description": "Gemini 3 Pro正式发布！几乎所有指标都是迄今最强模型，远超Claude 4.5和GPT 5.1。本期详解Gemini 3的核心特点、性能评测、使用渠道，展示网友创意测试案例（乐高搭建、核电站动画、像素艺术），以及实测网站设计、图片生成和视频理解能力。Google同步发布AI IDE产品AntiGravity，可免费使用Gemini 3和Claude 4.5。\n\n\n ⏱️ 时间戳\n 00:00 开场：Gemini 3 Pro正式发布\n 01:50 性能评测：全面领先的指标表现\n 05:50 创意案例：网友测试集锦\n 09:38 使用渠道：四种体验方式\n 11:06 实测演示：网站设计与图片生成\n 13:51 视频理解：影视飓风舆情视频拆解\n 16:42 总结展望"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT16M49S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "26354",
+        "likeCount": "341",
+        "favoriteCount": "0",
+        "commentCount": "32"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "QpO2o-8ZMC4",
+      "snippet": {
+        "publishedAt": "2025-11-14T08:17:19Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "最新TRAE SOLO教程，手把手教你开发iOS App",
+        "description": "我用 TRAE SOLO 把 Web 版的图像处理功能重构成了 iOS 原生 App。整个过程体验了 SOLO Coder 的核心功能:Plan模式先规划再执行、多任务并行同时开发多个模块、Sub Agent 智能协作自动调用专业智能体、Diff View集中查看所有代码变更。开发过程中遇到编译错误,用 Plan 模式分析并快速修复。\n最终 1:1 复刻了 Web 版功能。TRAE SOLO 特别适合专业开发者处理复杂项目:需求迭代、代码重构、Bug修复、技术迁移等场景。现在还在限时免费,可以试试。\n\n  ⏱️ 时间戳\n00:00:00 - 项目背景与需求\n00:00:25 - TRAE SOLO & SOLO Coder 介绍\n00:02:23 - Plan 模式制定开发计划 ⭐\n00:03:22 - To-Do List 实时进度追踪\n00:04:54 - 多任务并行开发 ⭐ \n00:06:10 - Sub Agent 智能协作\n00:07:03 - Diff View 查看代码变更\n00:08:25 - 开发成果及小结",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QpO2o-8ZMC4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QpO2o-8ZMC4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QpO2o-8ZMC4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/QpO2o-8ZMC4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/QpO2o-8ZMC4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "最新TRAE SOLO教程，手把手教你开发iOS App",
+          "description": "我用 TRAE SOLO 把 Web 版的图像处理功能重构成了 iOS 原生 App。整个过程体验了 SOLO Coder 的核心功能:Plan模式先规划再执行、多任务并行同时开发多个模块、Sub Agent 智能协作自动调用专业智能体、Diff View集中查看所有代码变更。开发过程中遇到编译错误,用 Plan 模式分析并快速修复。\n最终 1:1 复刻了 Web 版功能。TRAE SOLO 特别适合专业开发者处理复杂项目:需求迭代、代码重构、Bug修复、技术迁移等场景。现在还在限时免费,可以试试。\n\n  ⏱️ 时间戳\n00:00:00 - 项目背景与需求\n00:00:25 - TRAE SOLO & SOLO Coder 介绍\n00:02:23 - Plan 模式制定开发计划 ⭐\n00:03:22 - To-Do List 实时进度追踪\n00:04:54 - 多任务并行开发 ⭐ \n00:06:10 - Sub Agent 智能协作\n00:07:03 - Diff View 查看代码变更\n00:08:25 - 开发成果及小结"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT11M20S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "4043",
+        "likeCount": "77",
+        "favoriteCount": "0",
+        "commentCount": "6"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "L5PlrRKUUqk",
+      "snippet": {
+        "publishedAt": "2025-10-24T10:00:39Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "用Claude Code构建最强自动化写作工具！",
+        "description": "这期视频主要展示如何用Claude Code搭建自动化写作系统。从每周1篇到日更，数据反增长。完整演示：需求理解→信息调研→选题方案→风格学习→三遍审校→自动配图，10分钟完成3-4小时工作量，效果达人工80-90%。核心是路由机制、个人素材库和风格学习。附赠公众号排版器。\n\n  ⏱️ 视频时间戳：\n  - 0:00 开场：写作系统效果介绍\n  - 1:09 实操演示：从需求到调研\n  - 2:34 调研完成：保存结果并提供4个选题方案\n  - 4:03 选题讲解：为什么选题环节很关键\n  - 6:16 创作+审校：风格学习、素材使用、三遍审校\n  - 7:30 自动配图：AI生成+免费图库\n  - 8:10 成果展示：查看最终文章效果\n  - 12:00 系统架构：路由机制和工作流详解",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/L5PlrRKUUqk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/L5PlrRKUUqk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/L5PlrRKUUqk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/L5PlrRKUUqk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/L5PlrRKUUqk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "用Claude Code构建最强自动化写作工具！",
+          "description": "这期视频主要展示如何用Claude Code搭建自动化写作系统。从每周1篇到日更，数据反增长。完整演示：需求理解→信息调研→选题方案→风格学习→三遍审校→自动配图，10分钟完成3-4小时工作量，效果达人工80-90%。核心是路由机制、个人素材库和风格学习。附赠公众号排版器。\n\n  ⏱️ 视频时间戳：\n  - 0:00 开场：写作系统效果介绍\n  - 1:09 实操演示：从需求到调研\n  - 2:34 调研完成：保存结果并提供4个选题方案\n  - 4:03 选题讲解：为什么选题环节很关键\n  - 6:16 创作+审校：风格学习、素材使用、三遍审校\n  - 7:30 自动配图：AI生成+免费图库\n  - 8:10 成果展示：查看最终文章效果\n  - 12:00 系统架构：路由机制和工作流详解"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT19M33S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "14576",
+        "likeCount": "325",
+        "favoriteCount": "0",
+        "commentCount": "244"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "p_gAmLjNiEw",
+      "snippet": {
+        "publishedAt": "2025-09-29T22:42:33Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "【首发】Claude 4.5 发布，首款AI操作系统上线！深度解读+实测",
+        "description": "Anthropic凌晨发布Claude Sonnet 4.5，在编程和计算机使用能力上实现重大突破。SWEbench得分达77.2%和82%，超越GPT-5；计算机使用能力提升20个百分点，可执行30小时复杂任务。\n同步更新VSCode插件、Chrome扩展，并推出革命性产品\"imagine with Claude\"——一个AI原生操作系统，可实时动态生成软件界面。\n视频深度评测新模型性能，实测原型设计、计算器、进化论游戏等应用场景。\n\n  ⏱️ 视频时间戳\n  00:00:00 - 🚀 Claude Sonnet 4.5发布概览\n  00:00:51 - 📊 模型性能深度解析\n  00:03:07 - 🔧 Claude Agent SDK发布\n  00:05:01 - 💡 imagine with Claude产品演示\n  00:10:40 - 🎨 实测原型设计能力\n  00:13:19 - 🔄 VSCode插件形态升级\n  00:14:00 - 🧠 AI IDE vs CLI讨论\n  00:15:16 - 🌟 总结与展望\n\n👉一个可以购买Claude Code以及CodeX的平台：https://nf.video/hiWiH",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p_gAmLjNiEw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p_gAmLjNiEw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p_gAmLjNiEw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p_gAmLjNiEw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p_gAmLjNiEw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "【首发】Claude 4.5 发布，首款AI操作系统上线！深度解读+实测",
+          "description": "Anthropic凌晨发布Claude Sonnet 4.5，在编程和计算机使用能力上实现重大突破。SWEbench得分达77.2%和82%，超越GPT-5；计算机使用能力提升20个百分点，可执行30小时复杂任务。\n同步更新VSCode插件、Chrome扩展，并推出革命性产品\"imagine with Claude\"——一个AI原生操作系统，可实时动态生成软件界面。\n视频深度评测新模型性能，实测原型设计、计算器、进化论游戏等应用场景。\n\n  ⏱️ 视频时间戳\n  00:00:00 - 🚀 Claude Sonnet 4.5发布概览\n  00:00:51 - 📊 模型性能深度解析\n  00:03:07 - 🔧 Claude Agent SDK发布\n  00:05:01 - 💡 imagine with Claude产品演示\n  00:10:40 - 🎨 实测原型设计能力\n  00:13:19 - 🔄 VSCode插件形态升级\n  00:14:00 - 🧠 AI IDE vs CLI讨论\n  00:15:16 - 🌟 总结与展望\n\n👉一个可以购买Claude Code以及CodeX的平台：https://nf.video/hiWiH"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT16M28S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "24849",
+        "likeCount": "694",
+        "favoriteCount": "0",
+        "commentCount": "55"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "59LwKX39Vp4",
+      "snippet": {
+        "publishedAt": "2025-09-25T10:02:52Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "Claude封禁之后，GLM-4.5 是最强替代？实测教程来了",
+        "description": "🔥Claude封禁中国API后的最佳替代方案来了！本期深度评测智谱GLM-4.5，不仅完美兼容Claude Code，还新增强大视觉理解能力。\n实测三大场景：高保真APP原型生成、个性化网页设计、视觉任务处理。价格仅为Claude的1/7，用量提升3倍！手把手教你5分钟完成迁移，包含API配置、MCP接入、套餐选择全流程。\n特别分享独家优化提示词，让AI生成的网页告别千篇一律的\"AI感\"，实现真正的设计多样性。\n📚 回复\"GLM4.5\"获取完整提示词文档\n🔗 智谱官网：bigmodel.cn\n\n  时间戳：\n  00:00 Claude封禁事件与替代需求\n  00:14 GLM-4.5核心优势介绍\n  00:55 如何接入Claude Code工具链\n  01:20 API配置实操演示\n  02:02 视觉理解MCP接入教程\n  02:52 场景一：APP原型图生成测试\n  03:44 场景二：个性化网页设计实战\n  05:42 多版本设计迭代展示\n  06:35 与Claude原生效果对比\n  07:29 套餐价格与功能对比\n  08:31 无缝迁移总结与建议\n\n#anthropic #chatgpt #claude #claudecode #glm4.5 #智谱",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/59LwKX39Vp4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/59LwKX39Vp4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/59LwKX39Vp4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/59LwKX39Vp4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/59LwKX39Vp4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "Claude封禁之后，GLM-4.5 是最强替代？实测教程来了",
+          "description": "🔥Claude封禁中国API后的最佳替代方案来了！本期深度评测智谱GLM-4.5，不仅完美兼容Claude Code，还新增强大视觉理解能力。\n实测三大场景：高保真APP原型生成、个性化网页设计、视觉任务处理。价格仅为Claude的1/7，用量提升3倍！手把手教你5分钟完成迁移，包含API配置、MCP接入、套餐选择全流程。\n特别分享独家优化提示词，让AI生成的网页告别千篇一律的\"AI感\"，实现真正的设计多样性。\n📚 回复\"GLM4.5\"获取完整提示词文档\n🔗 智谱官网：bigmodel.cn\n\n  时间戳：\n  00:00 Claude封禁事件与替代需求\n  00:14 GLM-4.5核心优势介绍\n  00:55 如何接入Claude Code工具链\n  01:20 API配置实操演示\n  02:02 视觉理解MCP接入教程\n  02:52 场景一：APP原型图生成测试\n  03:44 场景二：个性化网页设计实战\n  05:42 多版本设计迭代展示\n  06:35 与Claude原生效果对比\n  07:29 套餐价格与功能对比\n  08:31 无缝迁移总结与建议\n\n#anthropic #chatgpt #claude #claudecode #glm4.5 #智谱"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT9M34S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "29794",
+        "likeCount": "82",
+        "favoriteCount": "0",
+        "commentCount": "95"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "2HdV8UE4wU4",
+      "snippet": {
+        "publishedAt": "2025-09-24T10:01:54Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "【免费】1分钟部署全栈网站！腾讯EdgeOne Pages零基础教程 + 送兑换码（免费全球CDN加速+DDOS防护）",
+        "description": "免费套餐兑换码领取地址👉：https://edgeone.huasheng.ai/\n腾讯EdgeOne Pages官网：https://edgeone.ai/zh/products/pages?from=huasheng\n\n实测腾讯 EdgeOne Pages：1 分钟一键部署包含前后端的全栈网站，全球加速、DDoS 防护、省去运维。演示 GitHub/模板/上传三种方式，Next.js 深度适配，支持 CLI 与 MCP，配合 AI IDE 实现“生成即上线”。视频含免费套餐获取与国内兑换码。欢迎试用与收藏。\n\n时间戳\n00:10 腾讯云48小时黑客松介绍\n00:26 平台亮点｜中国首个边缘全栈＋全球加速/DDoS\n02:25 福利说明｜国际免费套餐 & 国内兑换码\n03:15 实操①｜GitHub 仓库一键部署（Next.js）\n05:00 实操②｜上传文件，8秒构建上线\n05:58 实操③｜AI IDE × CLI × MCP 自动化部署\n08:00 总结 & 领取方式\n#tencent cloud edgeone #edgeone",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2HdV8UE4wU4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2HdV8UE4wU4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2HdV8UE4wU4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2HdV8UE4wU4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2HdV8UE4wU4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "【免费】1分钟部署全栈网站！腾讯EdgeOne Pages零基础教程 + 送兑换码（免费全球CDN加速+DDOS防护）",
+          "description": "免费套餐兑换码领取地址👉：https://edgeone.huasheng.ai/\n腾讯EdgeOne Pages官网：https://edgeone.ai/zh/products/pages?from=huasheng\n\n实测腾讯 EdgeOne Pages：1 分钟一键部署包含前后端的全栈网站，全球加速、DDoS 防护、省去运维。演示 GitHub/模板/上传三种方式，Next.js 深度适配，支持 CLI 与 MCP，配合 AI IDE 实现“生成即上线”。视频含免费套餐获取与国内兑换码。欢迎试用与收藏。\n\n时间戳\n00:10 腾讯云48小时黑客松介绍\n00:26 平台亮点｜中国首个边缘全栈＋全球加速/DDoS\n02:25 福利说明｜国际免费套餐 & 国内兑换码\n03:15 实操①｜GitHub 仓库一键部署（Next.js）\n05:00 实操②｜上传文件，8秒构建上线\n05:58 实操③｜AI IDE × CLI × MCP 自动化部署\n08:00 总结 & 领取方式\n#tencent cloud edgeone #edgeone"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT8M59S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "7528",
+        "likeCount": "19",
+        "favoriteCount": "0",
+        "commentCount": "12"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "CcdTE9vEDTs",
+      "snippet": {
+        "publishedAt": "2025-09-05T10:00:23Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "从原型到产品，用iFlow Cli两步完成app开发！免费！",
+        "description": "这期视频主要向你演示如何使用免费的iFlow CLI工具，仅用一小时就开发出一款完整的iOS图像处理APP。\n\niFlow CLI是一个强大的终端命令行AI工具，支持国内顶级AI模型如Kimi K2、Qwen3 coder、DeepSeek V3等，完全免费且在国内可无痛访问。视频详细演示了从AI生成APP原型图到完成代码开发的全过程，还展示了iFlow CLI在桌面整理、数据分析等日常任务中的应用。同时介绍了搭叩作为图形化版本，让非程序员也能轻松实现从想法到产品上线。这套工具组合为开发者、设计师和创意工作者提供了一个完全免费的AI驱动开发解决方案。\n\n相关资源：\nGithub地址：https://github.com/iflow-ai/iflow-cli\niFlow CLI地址：https://platform.iflow.cn/cli\n心流开放平台：https://platform.iflow.cn/\n搭叩：https://dakou.iflow.cn/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CcdTE9vEDTs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CcdTE9vEDTs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CcdTE9vEDTs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CcdTE9vEDTs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CcdTE9vEDTs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "从原型到产品，用iFlow Cli两步完成app开发！免费！",
+          "description": "这期视频主要向你演示如何使用免费的iFlow CLI工具，仅用一小时就开发出一款完整的iOS图像处理APP。\n\niFlow CLI是一个强大的终端命令行AI工具，支持国内顶级AI模型如Kimi K2、Qwen3 coder、DeepSeek V3等，完全免费且在国内可无痛访问。视频详细演示了从AI生成APP原型图到完成代码开发的全过程，还展示了iFlow CLI在桌面整理、数据分析等日常任务中的应用。同时介绍了搭叩作为图形化版本，让非程序员也能轻松实现从想法到产品上线。这套工具组合为开发者、设计师和创意工作者提供了一个完全免费的AI驱动开发解决方案。\n\n相关资源：\nGithub地址：https://github.com/iflow-ai/iflow-cli\niFlow CLI地址：https://platform.iflow.cn/cli\n心流开放平台：https://platform.iflow.cn/\n搭叩：https://dakou.iflow.cn/"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT12M27S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "5089",
+        "likeCount": "135",
+        "favoriteCount": "0",
+        "commentCount": "69"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "N_7XyB-Oofw",
+      "snippet": {
+        "publishedAt": "2025-08-15T09:00:38Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "放弃ChatGPT吧，这才是真能干活的Agent——Skywork",
+        "description": "想要一个真正能干活的AI Agent吗？从数据搜索、表格整理到研究分析、PPT生成，Skywork AI都能一键输出专业结果。\n点击👉https://skywork.ai/p/R7U3YC ，还有月卡、年卡优惠可享。\n\n这期视频对比了ChatGPT agent、Gemini Deep Research和Skywork agent在实际工作场景中的表现。通过三个实测案例（写文档、制作PPT、数据分析），展示了Skywork在图文并茂报告生成、PPT制作和数据收集分析方面的优势。Skywork不仅具备强大的Deep Research能力，还能一站式完成内容创作、排版设计和数据可视化，真正实现\"一个人干掉一个团队\"的工作效率。\n\n关键时间戳：\n00:00 - 开场对比：ChatGPT vs Skywork效率差异\n01:24 - 第一个实测：写文档任务对比\n03:54 - 第二个实测：制作PPT任务对比  \n05:59 - 第三个实测：数据收集分析对比\n08:09 - Skywork核心优势总结\n09:36 - 使用建议和获取方式",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/N_7XyB-Oofw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/N_7XyB-Oofw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/N_7XyB-Oofw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/N_7XyB-Oofw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/N_7XyB-Oofw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "放弃ChatGPT吧，这才是真能干活的Agent——Skywork",
+          "description": "想要一个真正能干活的AI Agent吗？从数据搜索、表格整理到研究分析、PPT生成，Skywork AI都能一键输出专业结果。\n点击👉https://skywork.ai/p/R7U3YC ，还有月卡、年卡优惠可享。\n\n这期视频对比了ChatGPT agent、Gemini Deep Research和Skywork agent在实际工作场景中的表现。通过三个实测案例（写文档、制作PPT、数据分析），展示了Skywork在图文并茂报告生成、PPT制作和数据收集分析方面的优势。Skywork不仅具备强大的Deep Research能力，还能一站式完成内容创作、排版设计和数据可视化，真正实现\"一个人干掉一个团队\"的工作效率。\n\n关键时间戳：\n00:00 - 开场对比：ChatGPT vs Skywork效率差异\n01:24 - 第一个实测：写文档任务对比\n03:54 - 第二个实测：制作PPT任务对比  \n05:59 - 第三个实测：数据收集分析对比\n08:09 - Skywork核心优势总结\n09:36 - 使用建议和获取方式"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT10M2S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "304655",
+        "likeCount": "210",
+        "favoriteCount": "0",
+        "commentCount": "26"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "Xquu0nRaNpQ",
+      "snippet": {
+        "publishedAt": "2025-08-08T09:03:00Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "OpenAI开源了，Claude更强了！但最惊喜的是AWS的底牌",
+        "description": "AI圈再次掀起模型大战！Anthropic发布Claude Opus 4.1，被誉为最强编程大模型；OpenAI紧随其后开源gpt-oss-20b和gpt-oss-120b两个模型。但比起性能竞争，更值得关注的是：谁用得起来？\n\n本期视频深度解析这两个新模型的实际表现，以及AWS平台如何通过\"Choice Matters\"战略，让多模型协同工作成为可能。从实测体验到使用建议，带你了解AI模型的真正价值所在。\n\n#AWS #亚马逊云科技 #OpenAI #anthropic #ChatGPT #gpt-oss #Claude #AI #大模型",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Xquu0nRaNpQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Xquu0nRaNpQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Xquu0nRaNpQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Xquu0nRaNpQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Xquu0nRaNpQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "OpenAI开源了，Claude更强了！但最惊喜的是AWS的底牌",
+          "description": "AI圈再次掀起模型大战！Anthropic发布Claude Opus 4.1，被誉为最强编程大模型；OpenAI紧随其后开源gpt-oss-20b和gpt-oss-120b两个模型。但比起性能竞争，更值得关注的是：谁用得起来？\n\n本期视频深度解析这两个新模型的实际表现，以及AWS平台如何通过\"Choice Matters\"战略，让多模型协同工作成为可能。从实测体验到使用建议，带你了解AI模型的真正价值所在。\n\n#AWS #亚马逊云科技 #OpenAI #anthropic #ChatGPT #gpt-oss #Claude #AI #大模型"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT7M5S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "3528",
+        "likeCount": "40",
+        "favoriteCount": "0",
+        "commentCount": "13"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "DZiWf2z6De4",
+      "snippet": {
+        "publishedAt": "2025-08-07T20:44:27Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "OpenAI发布GPT-5！全网首发解读&对比实测",
+        "description": "GPT-5终于发布了！距离GPT-4发布已经过去了两年时间，这次的新模型到底表现如何？本视频将为你详细解析GPT-5的核心特性、技术亮点以及与Claude 4.1的实测对比。\n\n从OpenAI发布会上的搞笑乌龙事件开始，深入分析GPT-5的自适应思考能力、编程表现，以及在激烈的AI竞争中OpenAI与Anthropic的市场格局变化。通过实际案例测试，看看GPT-5是否真的值得期待！\n\n低价合租购买GPT-5的方式👉：https://nf.video/hiWiH\n\n时间戳：\n00:00 GPT-5发布与OpenAI的搞笑乌龙\n00:47 GPT-5基础信息介绍与模型特性\n01:41 自适应思考能力解析\n02:31 OpenAI vs Anthropic收入数据对比\n04:19 编程能力评估与SWE bench测试\n05:53 数学推理能力与工具调用\n07:27 GPT-5实测对比：法语学习游戏\n08:33 财务仪表盘生成案例对比\n09:52 总结",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DZiWf2z6De4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DZiWf2z6De4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DZiWf2z6De4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DZiWf2z6De4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DZiWf2z6De4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "OpenAI发布GPT-5！全网首发解读&对比实测",
+          "description": "GPT-5终于发布了！距离GPT-4发布已经过去了两年时间，这次的新模型到底表现如何？本视频将为你详细解析GPT-5的核心特性、技术亮点以及与Claude 4.1的实测对比。\n\n从OpenAI发布会上的搞笑乌龙事件开始，深入分析GPT-5的自适应思考能力、编程表现，以及在激烈的AI竞争中OpenAI与Anthropic的市场格局变化。通过实际案例测试，看看GPT-5是否真的值得期待！\n\n低价合租购买GPT-5的方式👉：https://nf.video/hiWiH\n\n时间戳：\n00:00 GPT-5发布与OpenAI的搞笑乌龙\n00:47 GPT-5基础信息介绍与模型特性\n01:41 自适应思考能力解析\n02:31 OpenAI vs Anthropic收入数据对比\n04:19 编程能力评估与SWE bench测试\n05:53 数学推理能力与工具调用\n07:27 GPT-5实测对比：法语学习游戏\n08:33 财务仪表盘生成案例对比\n09:52 总结"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT10M28S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "28538",
+        "likeCount": "281",
+        "favoriteCount": "0",
+        "commentCount": "55"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
+    },
+    {
+      "id": "-K0fODITV2c",
+      "snippet": {
+        "publishedAt": "2025-07-18T03:38:49Z",
+        "channelId": "UCzbSuf_A_D8dARJ33HzoDew",
+        "title": "我试用了Kiro：这可能是我第一次想抛弃Cursor的一天",
+        "description": "AWS在纽约峰会上发布了AI IDE产品Kiro和底层基础设施Amazon AgentCore。Kiro基于VS Code构建，内置Claude 4模型，目前免费试用，其独特的Spec模式能像成熟开发团队一样处理复杂项目。Amazon AgentCore则是全栈AI Agent服务系统，提供运行时、记忆、身份验证等7个核心模块，旨在构建企业级智能体运行环境。\n\n时间戳：\n00:00:00 - AWS发布AI IDE产品Kiro\n00:00:44 - Kiro的Vibe和Spec两种模式介绍\n00:01:56 - Spec模式的开发流程演示\n00:03:27 - Amazon AgentCore核心功能解析\n00:04:33 - AgentCore的7个重要模块详解\n00:05:33 - Kiro与AgentCore的战略意义\n00:05:48 - AWS城市巡演活动信息\n\n👉 Kiro的5000字文档介绍和Mac安装包下载链接见这里：https://www.bookai.top/cursor/KIRO\n🌍 欢迎加入我的「AI编程：从入门到精通」知识星球，和1500+人一起尝试用AI创造的快乐：https://wx.zsxq.com/group/48888144124288\n\n#AI #AWS #Agent #AgentCore #ai编程 #编程 #AIIDE #Cursor",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-K0fODITV2c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-K0fODITV2c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-K0fODITV2c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-K0fODITV2c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-K0fODITV2c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "花叔",
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "zh",
+        "localized": {
+          "title": "我试用了Kiro：这可能是我第一次想抛弃Cursor的一天",
+          "description": "AWS在纽约峰会上发布了AI IDE产品Kiro和底层基础设施Amazon AgentCore。Kiro基于VS Code构建，内置Claude 4模型，目前免费试用，其独特的Spec模式能像成熟开发团队一样处理复杂项目。Amazon AgentCore则是全栈AI Agent服务系统，提供运行时、记忆、身份验证等7个核心模块，旨在构建企业级智能体运行环境。\n\n时间戳：\n00:00:00 - AWS发布AI IDE产品Kiro\n00:00:44 - Kiro的Vibe和Spec两种模式介绍\n00:01:56 - Spec模式的开发流程演示\n00:03:27 - Amazon AgentCore核心功能解析\n00:04:33 - AgentCore的7个重要模块详解\n00:05:33 - Kiro与AgentCore的战略意义\n00:05:48 - AWS城市巡演活动信息\n\n👉 Kiro的5000字文档介绍和Mac安装包下载链接见这里：https://www.bookai.top/cursor/KIRO\n🌍 欢迎加入我的「AI编程：从入门到精通」知识星球，和1500+人一起尝试用AI创造的快乐：https://wx.zsxq.com/group/48888144124288\n\n#AI #AWS #Agent #AgentCore #ai编程 #编程 #AIIDE #Cursor"
+        },
+        "defaultAudioLanguage": "zh"
+      },
+      "contentDetails": {
+        "duration": "PT6M43S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "34914",
+        "likeCount": "419",
+        "favoriteCount": "0",
+        "commentCount": "79"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "player": {},
+      "sources": [
+        "x_discovery:UCzbSuf_A_D8dARJ33HzoDew"
+      ]
     }
   ],
   "baseline": {
@@ -375196,236 +378971,9 @@
     ]
   },
   "usage_summary": {
-    "calls": [
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:28Z",
-        "http_status": 200,
-        "returned": 6
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:28Z",
-        "http_status": 200,
-        "returned": 10
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 3
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 5
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "zh_verify_channel",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "zh_verify_channel",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 29
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:34Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:34Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:34Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:35Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:35Z",
-        "http_status": 200,
-        "returned": 22
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:35Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:37Z",
-        "http_status": 200,
-        "returned": 41
-      }
-    ],
-    "search_calls": 10,
-    "other_units": 22,
-    "old_model_units": 1022,
-    "aborted_reason": null
+    "search_calls": 0,
+    "other_units": 37,
+    "source": "data/x_discovery/usage_ledger.json"
   },
   "timing": {
     "collect_seconds": 20.10812

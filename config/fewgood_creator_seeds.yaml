@@ -848,3 +848,16 @@ seeds:
   evidence: x_profile_plus_known_channel
   youtube_handle: mli65
   note: 李沐主要在 B 站，YouTube 是否存在待验证
+- name: 花叔
+  channel_id: UCzbSuf_A_D8dARJ33HzoDew
+  handle: '@alchain'
+  lang: zh
+  subtopics:
+  - ai-coding
+  - ai-products
+  - ai-agents
+  x: AlchainHust
+  evidence:
+  - x_discovery
+  youtube_handle: alchain
+  youtube_link: https://www.youtube.com/@alchain

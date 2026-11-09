@@ -97,3 +97,33 @@
 | P & H | 30,500 | ai-products | ❌ 未入池 | 主题标题命中 2/12（要求至少 3 条且比例 ≥ 0.4） |
 
 - 代码：`ytrec/fewgood_zh.py`（命令 `fewgood-zh-fetch` / `fewgood-zh-select`，后者零 API），由 Codex（gpt-5.6-terra）编写。
+
+## 7. 第 5 轮：X 中文 AI 博主发现（2026-11-09）
+
+- 来源：Arthur C《中文 X 最值得关注的博主》AI 工具与解读分区；[来源帖](https://x.com/0xarthurzs/status/2107030532332675379)，[AI 名单回复](https://x.com/0xarthurzs/status/2107031242717676001)。本轮 `search.list` 为 0。
+- Jason pick：视频 [IrAHINf0M6E](https://www.youtube.com/watch?v=IrAHINf0M6E) 的 Matt Wolfe（`UChpleBmo18P08aKCIgti38g` / `@mreflow`）已在池中；保留 `x_bio_youtube_link`，追加 `jason_pick`，订阅数刷新为 1,030,000。
+
+### 纳入
+
+| 博主 | 频道 | 订阅数 | 语言 | 子主题 | 依据 |
+| --- | --- | ---: | --- | --- | --- |
+| 花叔 | [@alchain](https://www.youtube.com/@alchain) | 72,900 | zh | ai-coding、ai-products、ai-agents | x_discovery；YouTube 链接来自 huasheng.ai |
+
+花叔的本地候选上传已合并到 R4 离线输入；按现有时长、时间窗、主题和 Top6 规则重选后，本轮未进入任一 Top6。
+
+### 已核验但拒绝
+
+| 账号 | 频道 | 订阅数 | 原因 |
+| --- | --- | ---: | --- |
+| FQ / 福强私学 | [@afoo](https://www.youtube.com/@afoo) | 1,250 | 近 30 天 AI 标题命中 2/6（0.33），低于至少 3 条且比例 ≥ 0.4 |
+| WaytoAGI | [@waytoagi](https://www.youtube.com/@waytoagi) | 282 | 低于个人博主 1,000 订阅门槛 |
+| JimmyWong | [@thinkingjimmy](https://www.youtube.com/@thinkingjimmy) | 15 | 低于 1,000 订阅门槛 |
+| GuiZang（handle collision） | [@guizang](https://www.youtube.com/@guizang) | 1 | 空壳频道，不是歸藏实号 |
+
+### X 名单中没有自有 YouTube 的例子
+
+Kai-Fu Lee、宝玉、Orange AI（仅分享他人视频）、歸藏（站点仅外链他人视频）、向阳乔木、小互、倪爽、响马、Gorden Sun、李继刚、Berryxia.AI（频道 0 订阅）、早见Hayami、meng shao、Luyu Zhang / Dify、DN-Samuel、土猛的员外、Geek、yetone、haibun、elliotchen100。
+
+### 用量
+
+本轮 `search.list = 0`；其他 YouTube API units = 37，详见 [`data/x_discovery/usage_ledger.json`](../../data/x_discovery/usage_ledger.json)。全部结果来自本地 payload/缓存，未调用 YouTube API。

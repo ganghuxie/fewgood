@@ -1,239 +1,12 @@
 {
-  "generated_at": "2026-11-09T09:36:37Z",
-  "data_refreshed_at": "2026-11-09T09:36:37Z",
+  "generated_at": "2026-11-09T10:46:33Z",
+  "data_refreshed_at": "2026-11-09T10:46:33Z",
   "round": 4,
   "mode": "zh_select",
   "usage_summary": {
-    "calls": [
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:28Z",
-        "http_status": 200,
-        "returned": 6
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:28Z",
-        "http_status": 200,
-        "returned": 10
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:29Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:30Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 3
-      },
-      {
-        "endpoint": "search",
-        "purpose": "zh_search",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 5
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "zh_verify_channel",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "channels",
-        "purpose": "zh_verify_channel",
-        "timestamp": "2026-11-09T09:36:31Z",
-        "http_status": 200,
-        "returned": 29
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:32Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:33Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:34Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:34Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:34Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:35Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:35Z",
-        "http_status": 200,
-        "returned": 22
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:35Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "playlistItems",
-        "purpose": "zh_uploads",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:36Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:37Z",
-        "http_status": 200,
-        "returned": 50
-      },
-      {
-        "endpoint": "videos",
-        "purpose": "zh_candidate_details",
-        "timestamp": "2026-11-09T09:36:37Z",
-        "http_status": 200,
-        "returned": 41
-      }
-    ],
-    "search_calls": 10,
-    "other_units": 22,
-    "old_model_units": 1022,
-    "aborted_reason": null
+    "search_calls": 0,
+    "other_units": 37,
+    "source": "data/x_discovery/usage_ledger.json"
   },
   "creators": [
     {
@@ -1506,7 +1279,8 @@
         "ai-industry"
       ],
       "evidence": [
-        "x_bio_youtube_link"
+        "x_bio_youtube_link",
+        "jason_pick"
       ],
       "x": "mreflow",
       "channel_id": "UChpleBmo18P08aKCIgti38g",
@@ -1521,7 +1295,7 @@
       "status": "included",
       "reason": "included",
       "last_upload_at": "2026-11-07T17:00:37Z",
-      "checked_at": "2026-11-08T13:10:26Z",
+      "checked_at": "2026-11-09T10:46:33Z",
       "subscriber_count_at_check": 1030000
     },
     {
@@ -47892,7 +47666,8 @@
       "status": "included",
       "reason": "included",
       "last_upload_at": "2026-11-09T09:28:59Z",
-      "checked_at": "2026-11-09T09:36:33Z"
+      "checked_at": "2026-11-09T09:36:33Z",
+      "subscriber_count_at_check": 68500
     },
     {
       "name": "孔老師AI研習社",
@@ -48170,9 +47945,34 @@
       "checked_at": "2026-11-09T09:36:36Z"
     },
     {
+      "name": "花叔",
+      "channel_id": "UCzbSuf_A_D8dARJ33HzoDew",
+      "handle": "@alchain",
+      "lang": "zh",
+      "subtopics": [
+        "ai-coding",
+        "ai-products",
+        "ai-agents"
+      ],
+      "evidence": [
+        "x_discovery"
+      ],
+      "subscriber_count_at_check": 72900,
+      "checked_at": "2026-11-09T10:45:09Z",
+      "last_upload_at": "2026-10-21T04:42:58Z",
+      "uploads_playlist": "UUzbSuf_A_D8dARJ33HzoDew",
+      "status": "included",
+      "reason": "included",
+      "x": "AlchainHust",
+      "discovery_note": "From Arthur C Chinese X AI list; YouTube linked on huasheng.ai",
+      "title": "花叔",
+      "subscriber_count": 72900
+    },
+    {
       "channel_id": "UCz-Sx71_C4d3AYFBj6e3ENw",
       "status": "included",
       "name": "傑少 JAY",
+      "handle": null,
       "lang": "zh",
       "subtopics": [
         "ai-agents",
@@ -48207,7 +48007,9 @@
         },
         "excluded_by_rule": {
           "duration": 22,
-          "creator_not_topic_tier2": 26
+          "creator_not_topic_tier2": 27,
+          "type_window:tutorial": 1,
+          "type_window:explainer": 4
         },
         "same_event_skipped": [],
         "creators_in_topic": 24
@@ -48375,10 +48177,10 @@
           "creator_not_topic_tier2": 22,
           "live_or_upcoming": 1,
           "type_window:explainer": 15,
-          "type_window:tutorial": 20
+          "type_window:tutorial": 21
         },
         "same_event_skipped": [],
-        "creators_in_topic": 26
+        "creators_in_topic": 27
       },
       "videos": [
         {
@@ -48558,7 +48360,7 @@
           "type_window:explainer": 11
         },
         "same_event_skipped": [],
-        "creators_in_topic": 29
+        "creators_in_topic": 30
       },
       "videos": [
         {
@@ -48711,7 +48513,7 @@
       "name_zh": "AI 产品与应用",
       "definition": "关注面向真实用户的 AI 产品、功能与使用案例。",
       "stats": {
-        "eligible": 100,
+        "eligible": 101,
         "shown": 6,
         "mix_target": {
           "tutorial": 3,
@@ -48727,11 +48529,11 @@
           "creator_not_topic_tier2": 8,
           "live_or_upcoming": 1,
           "exclude:get rich": 2,
-          "type_window:explainer": 8,
-          "type_window:tutorial": 5
+          "type_window:explainer": 10,
+          "type_window:tutorial": 6
         },
         "same_event_skipped": [],
-        "creators_in_topic": 32
+        "creators_in_topic": 33
       },
       "videos": [
         {
@@ -48937,7 +48739,7 @@
           "reasons": [
             "内容类型：explainer（命中：新闻/更新优先:AI news）",
             "标题含关键词「AI news」",
-            "来自精选博主 Matt Wolfe（入池依据：X 资料直接链接 YouTube）",
+            "来自精选博主 Matt Wolfe（入池依据：X 资料直接链接 YouTube / jason_pick）",
             "边界规则：含产业/模型安全信号 → AI 产业动态"
           ],
           "url": "https://www.youtube.com/watch?v=IrAHINf0M6E",
