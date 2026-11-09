@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-07T23:10:32Z",
+  "generated_at": "2026-11-09T02:20:35Z",
   "window_days": 7,
   "exclude_shorts_under_seconds": 60,
-  "quota_units_approx": 80,
+  "quota_units_approx": 81,
   "channels_used": 42,
   "videos": [
     {
@@ -12,8 +12,8 @@
       "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
       "published_at": "2026-11-03T18:30:30Z",
       "duration_seconds": 82,
-      "view_count": 603734,
-      "like_count": 8302
+      "view_count": 645080,
+      "like_count": 8737
     },
     {
       "id": "9ZxCOHkfn_8",
@@ -22,28 +22,8 @@
       "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
       "published_at": "2026-11-04T23:42:40Z",
       "duration_seconds": 88,
-      "view_count": 343285,
-      "like_count": 4521
-    },
-    {
-      "id": "g_NgCLTibiM",
-      "title": "Make Your AI Agents Predictable With Graph Engineering - Zachary Blumenfeld, Neo4j",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-03T10:00:09Z",
-      "duration_seconds": 1236,
-      "view_count": 141081,
-      "like_count": 1002
-    },
-    {
-      "id": "0Kw6_DTZPrY",
-      "title": "‘We may release models we can’t control’: Amodei, Altman … and Gemini Carbon",
-      "channel": "AI Explained",
-      "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
-      "published_at": "2026-11-02T17:02:16Z",
-      "duration_seconds": 1675,
-      "view_count": 136205,
-      "like_count": 2286
+      "view_count": 362424,
+      "like_count": 4632
     },
     {
       "id": "GJ6PMUm5oTA",
@@ -52,8 +32,28 @@
       "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
       "published_at": "2026-11-07T16:24:47Z",
       "duration_seconds": 349,
-      "view_count": 89418,
-      "like_count": 1983
+      "view_count": 196016,
+      "like_count": 3284
+    },
+    {
+      "id": "g_NgCLTibiM",
+      "title": "Make Your AI Agents Predictable With Graph Engineering - Zachary Blumenfeld, Neo4j",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-03T10:00:09Z",
+      "duration_seconds": 1236,
+      "view_count": 146887,
+      "like_count": 1037
+    },
+    {
+      "id": "0Kw6_DTZPrY",
+      "title": "‘We may release models we can’t control’: Amodei, Altman … and Gemini Carbon",
+      "channel": "AI Explained",
+      "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
+      "published_at": "2026-11-02T17:02:16Z",
+      "duration_seconds": 1675,
+      "view_count": 139663,
+      "like_count": 2331
     },
     {
       "id": "JGtkTjn4120",
@@ -62,108 +62,8 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-04T00:00:29Z",
       "duration_seconds": 1153,
-      "view_count": 88829,
-      "like_count": 648
-    },
-    {
-      "id": "8oB9sf1SKhs",
-      "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
-      "channel": "ElevenLabs",
-      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
-      "published_at": "2026-11-03T13:00:15Z",
-      "duration_seconds": 579,
-      "view_count": 47680,
-      "like_count": 1022
-    },
-    {
-      "id": "hJOwOkLHRN0",
-      "title": "LifeVal: Measuring AI progress on the tasks that matter in everyday life.",
-      "channel": "OpenAI",
-      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-06T21:11:34Z",
-      "duration_seconds": 65,
-      "view_count": 37960,
-      "like_count": 455
-    },
-    {
-      "id": "XgC1QTs6A2U",
-      "title": "The Future of AI Is Absolutely Incredible (Spencer Huang)",
-      "channel": "Two Minute Papers",
-      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
-      "published_at": "2026-11-06T07:27:02Z",
-      "duration_seconds": 2779,
-      "view_count": 37307,
-      "like_count": 467
-    },
-    {
-      "id": "v0UkV5qS9E4",
-      "title": "Why We Rebuilt Microsoft Office From Scratch for AI Agents - Yijia Liang, Compound AI",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-01T10:00:14Z",
-      "duration_seconds": 945,
-      "view_count": 35317,
-      "like_count": 174
-    },
-    {
-      "id": "ys6YQ2yfBpM",
-      "title": "Your Old Prompts Are Making Claude Worse - Lance Martin, Anthropic",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-06T21:00:18Z",
-      "duration_seconds": 3843,
-      "view_count": 33032,
-      "like_count": 384
-    },
-    {
-      "id": "q4ITwvlFplQ",
-      "title": "You Can't Tell What's Real Anymore. Here's What Comes Next - Cristóbal Valenzuela, Runway",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-03T00:00:29Z",
-      "duration_seconds": 1011,
-      "view_count": 27222,
-      "like_count": 114
-    },
-    {
-      "id": "5SRjPT2Eo7A",
-      "title": "Your Company Should Train Its Own AI Models - Will Brown, Prime Intellect",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-02T20:00:09Z",
-      "duration_seconds": 1197,
-      "view_count": 26702,
-      "like_count": 208
-    },
-    {
-      "id": "AYFcmnQrZCg",
-      "title": "AI Agents Will Upend Investing Even More Than Coding - Frank Long, Coatue",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-06T00:00:09Z",
-      "duration_seconds": 845,
-      "view_count": 19158,
-      "like_count": 76
-    },
-    {
-      "id": "Amm9ySSET4c",
-      "title": "Coinbase on OpenAI Private Intelligence",
-      "channel": "OpenAI",
-      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-02T16:59:21Z",
-      "duration_seconds": 65,
-      "view_count": 19136,
-      "like_count": 163
-    },
-    {
-      "id": "T-42NrYjwxM",
-      "title": "Our Smaller Model Beat Opus on Finance Tasks - Alexander Shevchenko, Ramp",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-04T22:00:34Z",
-      "duration_seconds": 855,
-      "view_count": 18566,
-      "like_count": 66
+      "view_count": 93013,
+      "like_count": 669
     },
     {
       "id": "pz74r-4dGfQ",
@@ -172,68 +72,98 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-06T22:00:01Z",
       "duration_seconds": 1160,
-      "view_count": 17787,
-      "like_count": 118
+      "view_count": 56967,
+      "like_count": 432
     },
     {
-      "id": "44GBqQGc-v0",
-      "title": "How Figma Is Building Self-Serve Analytics with OpenAI",
-      "channel": "OpenAI",
-      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-04T17:27:07Z",
-      "duration_seconds": 66,
-      "view_count": 15008,
-      "like_count": 110
+      "id": "8oB9sf1SKhs",
+      "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
+      "channel": "ElevenLabs",
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
+      "published_at": "2026-11-03T13:00:15Z",
+      "duration_seconds": 579,
+      "view_count": 51085,
+      "like_count": 1068
     },
     {
-      "id": "yLMjEpMio2w",
-      "title": "From AI Infrastructure to the 6G Future",
-      "channel": "NVIDIA",
-      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
-      "published_at": "2026-11-03T13:00:13Z",
-      "duration_seconds": 2280,
-      "view_count": 14440,
-      "like_count": 185
-    },
-    {
-      "id": "Sg6vtKOAOQ0",
-      "title": "AI Labs Will Trap You or Replace You - Dillon Rolnick, Nous Research",
+      "id": "ys6YQ2yfBpM",
+      "title": "Your Old Prompts Are Making Claude Worse - Lance Martin, Anthropic",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-04T21:00:12Z",
-      "duration_seconds": 913,
-      "view_count": 13319,
-      "like_count": 112
+      "published_at": "2026-11-06T21:00:18Z",
+      "duration_seconds": 3843,
+      "view_count": 49121,
+      "like_count": 599
     },
     {
-      "id": "sooiYbnctEw",
-      "title": "Your Spark, Your Story: Yannik Marek | NVIDIA RTX Spark",
-      "channel": "NVIDIA",
-      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
-      "published_at": "2026-11-02T20:51:00Z",
-      "duration_seconds": 84,
-      "view_count": 13181,
-      "like_count": 108
-    },
-    {
-      "id": "zLc8zeGeNaY",
-      "title": "How Netflix Evaluates AI When There's No Right Answer - Cameron Wolfe, Netflix",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-05T20:00:25Z",
-      "duration_seconds": 1073,
-      "view_count": 13150,
-      "like_count": 127
-    },
-    {
-      "id": "yC72iQx6rM0",
-      "title": "Qodo brings company context into Codex code review",
+      "id": "hJOwOkLHRN0",
+      "title": "LifeVal: Measuring AI progress on the tasks that matter in everyday life.",
       "channel": "OpenAI",
       "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-03T18:11:23Z",
-      "duration_seconds": 85,
-      "view_count": 12987,
-      "like_count": 77
+      "published_at": "2026-11-06T21:11:34Z",
+      "duration_seconds": 65,
+      "view_count": 42860,
+      "like_count": 491
+    },
+    {
+      "id": "XgC1QTs6A2U",
+      "title": "The Future of AI Is Absolutely Incredible (Spencer Huang)",
+      "channel": "Two Minute Papers",
+      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
+      "published_at": "2026-11-06T07:27:02Z",
+      "duration_seconds": 2779,
+      "view_count": 42094,
+      "like_count": 528
+    },
+    {
+      "id": "5SRjPT2Eo7A",
+      "title": "Your Company Should Train Its Own AI Models - Will Brown, Prime Intellect",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-02T20:00:09Z",
+      "duration_seconds": 1197,
+      "view_count": 28028,
+      "like_count": 219
+    },
+    {
+      "id": "q4ITwvlFplQ",
+      "title": "You Can't Tell What's Real Anymore. Here's What Comes Next - Cristóbal Valenzuela, Runway",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-03T00:00:29Z",
+      "duration_seconds": 1011,
+      "view_count": 27574,
+      "like_count": 117
+    },
+    {
+      "id": "AYFcmnQrZCg",
+      "title": "AI Agents Will Upend Investing Even More Than Coding - Frank Long, Coatue",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-06T00:00:09Z",
+      "duration_seconds": 845,
+      "view_count": 20599,
+      "like_count": 82
+    },
+    {
+      "id": "Amm9ySSET4c",
+      "title": "Coinbase on OpenAI Private Intelligence",
+      "channel": "OpenAI",
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "published_at": "2026-11-02T16:59:21Z",
+      "duration_seconds": 65,
+      "view_count": 19337,
+      "like_count": 167
+    },
+    {
+      "id": "T-42NrYjwxM",
+      "title": "Our Smaller Model Beat Opus on Finance Tasks - Alexander Shevchenko, Ramp",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-04T22:00:34Z",
+      "duration_seconds": 855,
+      "view_count": 19278,
+      "like_count": 69
     },
     {
       "id": "784YQBiZArk",
@@ -242,28 +172,38 @@
       "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
       "published_at": "2026-11-06T23:10:49Z",
       "duration_seconds": 93,
-      "view_count": 12595,
-      "like_count": 197
+      "view_count": 17003,
+      "like_count": 218
     },
     {
-      "id": "bymDXo7FVE8",
-      "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-11-03T20:31:56Z",
+      "id": "44GBqQGc-v0",
+      "title": "How Figma Is Building Self-Serve Analytics with OpenAI",
+      "channel": "OpenAI",
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "published_at": "2026-11-04T17:27:07Z",
       "duration_seconds": 66,
-      "view_count": 12233,
-      "like_count": 679
+      "view_count": 15692,
+      "like_count": 120
     },
     {
-      "id": "prGP0huECPo",
-      "title": "Without Caching, Your AI Agent Costs 10x More - George Cameron, Artificial Analysis",
+      "id": "yLMjEpMio2w",
+      "title": "From AI Infrastructure to the 6G Future",
+      "channel": "NVIDIA",
+      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+      "published_at": "2026-11-03T13:00:13Z",
+      "duration_seconds": 2280,
+      "view_count": 15415,
+      "like_count": 192
+    },
+    {
+      "id": "zLc8zeGeNaY",
+      "title": "How Netflix Evaluates AI When There's No Right Answer - Cameron Wolfe, Netflix",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-03T20:00:08Z",
-      "duration_seconds": 1183,
-      "view_count": 11312,
-      "like_count": 67
+      "published_at": "2026-11-05T20:00:25Z",
+      "duration_seconds": 1073,
+      "view_count": 14896,
+      "like_count": 144
     },
     {
       "id": "LL0YmIyBKSU",
@@ -272,38 +212,18 @@
       "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
       "published_at": "2026-11-03T20:16:25Z",
       "duration_seconds": 2088,
-      "view_count": 10160,
-      "like_count": 116
+      "view_count": 14088,
+      "like_count": 129
     },
     {
-      "id": "1et3Lb_KLQo",
-      "title": "I Don't Fear AI Slop. I Fear Untold Stories - Zack Proser, WorkOS",
+      "id": "Sg6vtKOAOQ0",
+      "title": "AI Labs Will Trap You or Replace You - Dillon Rolnick, Nous Research",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-02T00:00:21Z",
-      "duration_seconds": 1114,
-      "view_count": 9810,
-      "like_count": 49
-    },
-    {
-      "id": "geMAe-PLJF4",
-      "title": "I Made a Fruit Fly Review My Code - Nick Nisi, WorkOS",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-01T20:00:08Z",
-      "duration_seconds": 997,
-      "view_count": 9499,
-      "like_count": 55
-    },
-    {
-      "id": "eKSVnRvBTXc",
-      "title": "Direct AI Voices with Audio Tags and Voice Changer (Full Tutorial)",
-      "channel": "ElevenLabs",
-      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
-      "published_at": "2026-11-04T13:00:33Z",
-      "duration_seconds": 279,
-      "view_count": 9444,
-      "like_count": 191
+      "published_at": "2026-11-04T21:00:12Z",
+      "duration_seconds": 913,
+      "view_count": 13925,
+      "like_count": 117
     },
     {
       "id": "maitMe9HCvw",
@@ -312,8 +232,88 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-07T08:00:33Z",
       "duration_seconds": 1882,
-      "view_count": 9291,
+      "view_count": 13657,
+      "like_count": 101
+    },
+    {
+      "id": "sooiYbnctEw",
+      "title": "Your Spark, Your Story: Yannik Marek | NVIDIA RTX Spark",
+      "channel": "NVIDIA",
+      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+      "published_at": "2026-11-02T20:51:00Z",
+      "duration_seconds": 84,
+      "view_count": 13381,
+      "like_count": 112
+    },
+    {
+      "id": "yC72iQx6rM0",
+      "title": "Qodo brings company context into Codex code review",
+      "channel": "OpenAI",
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "published_at": "2026-11-03T18:11:23Z",
+      "duration_seconds": 85,
+      "view_count": 13249,
+      "like_count": 83
+    },
+    {
+      "id": "ZJjRgvjhq3M",
+      "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-07T19:00:33Z",
+      "duration_seconds": 6632,
+      "view_count": 12838,
       "like_count": 79
+    },
+    {
+      "id": "bymDXo7FVE8",
+      "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
+      "channel": "The Rundown AI",
+      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
+      "published_at": "2026-11-03T20:31:56Z",
+      "duration_seconds": 66,
+      "view_count": 12388,
+      "like_count": 682
+    },
+    {
+      "id": "P735f1xlpL0",
+      "title": "Why Would Anthropic Go Public Now? — Jamin Ball, Altimeter",
+      "channel": "Latent Space",
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "published_at": "2026-11-07T02:49:28Z",
+      "duration_seconds": 6148,
+      "view_count": 11938,
+      "like_count": 75
+    },
+    {
+      "id": "prGP0huECPo",
+      "title": "Without Caching, Your AI Agent Costs 10x More - George Cameron, Artificial Analysis",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-03T20:00:08Z",
+      "duration_seconds": 1183,
+      "view_count": 11535,
+      "like_count": 68
+    },
+    {
+      "id": "_0SQh8a1Osk",
+      "title": "Don't Vibe Code Your Agent Infrastructure - Akshat Bubna, Modal",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-07T20:00:13Z",
+      "duration_seconds": 1055,
+      "view_count": 11197,
+      "like_count": 52
+    },
+    {
+      "id": "eKSVnRvBTXc",
+      "title": "Direct AI Voices with Audio Tags and Voice Changer (Full Tutorial)",
+      "channel": "ElevenLabs",
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
+      "published_at": "2026-11-04T13:00:33Z",
+      "duration_seconds": 279,
+      "view_count": 10002,
+      "like_count": 196
     },
     {
       "id": "GH16vW9TyaI",
@@ -322,8 +322,8 @@
       "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
       "published_at": "2026-11-04T17:45:00Z",
       "duration_seconds": 81,
-      "view_count": 9039,
-      "like_count": 364
+      "view_count": 9489,
+      "like_count": 382
     },
     {
       "id": "EtZwTYahfek",
@@ -332,38 +332,8 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-06T10:00:00Z",
       "duration_seconds": 1047,
-      "view_count": 8069,
-      "like_count": 72
-    },
-    {
-      "id": "vUJDyDnqT4c",
-      "title": "Your AI Pilots Won't Move the P&L. Here's What Will - Adam Nahari, Apollo",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-02T08:00:03Z",
-      "duration_seconds": 952,
-      "view_count": 8069,
-      "like_count": 51
-    },
-    {
-      "id": "bJBEFzlKPoQ",
-      "title": "Building Legal Agents When You Can't See the Data — Jacob Lauritzen, CTO of Legora",
-      "channel": "Latent Space",
-      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-      "published_at": "2026-11-02T20:50:24Z",
-      "duration_seconds": 4042,
-      "view_count": 8039,
-      "like_count": 59
-    },
-    {
-      "id": "-X3yXTwGs9A",
-      "title": "AI Writes Code Faster Than Your Team Can Review It - Andrew Norrish, Sourcegraph",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-02T09:00:13Z",
-      "duration_seconds": 1137,
-      "view_count": 7837,
-      "like_count": 26
+      "view_count": 8849,
+      "like_count": 76
     },
     {
       "id": "QmDLDy3ZSNE",
@@ -372,78 +342,28 @@
       "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
       "published_at": "2026-11-04T10:32:51Z",
       "duration_seconds": 4344,
-      "view_count": 7418,
-      "like_count": 73
+      "view_count": 8563,
+      "like_count": 75
     },
     {
-      "id": "r1iJzoxFBtg",
-      "title": "Browser Use with Managed Deep Agents",
-      "channel": "LangChain",
-      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
-      "published_at": "2026-11-04T17:45:24Z",
-      "duration_seconds": 334,
-      "view_count": 7162,
-      "like_count": 54
-    },
-    {
-      "id": "ra8X7_bnujw",
-      "title": "Why Waiting for the Next AI Model Can Pay Off - John Stecher, Blackstone & Scott Worland, Norm AI",
+      "id": "y9Sg--RDtks",
+      "title": "When we can do anything, do we still know what we want? — Ryo Lu",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-05T10:00:37Z",
-      "duration_seconds": 1245,
-      "view_count": 7028,
-      "like_count": 34
+      "published_at": "2026-11-06T14:44:57Z",
+      "duration_seconds": 1385,
+      "view_count": 8410,
+      "like_count": 62
     },
     {
-      "id": "7WUzHIF32vA",
-      "title": "If Your AI Scores 100%, Your Eval Is Wrong - Ramakrishnan Lokanathan, eslams.com",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-01T07:00:02Z",
-      "duration_seconds": 1125,
-      "view_count": 7014,
-      "like_count": 22
-    },
-    {
-      "id": "3Ad73Onx3Aw",
-      "title": "Better Search Took This AI Agent From 36% to 98% Accuracy - Aamir Shakir, Mixedbread",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-03T08:00:24Z",
-      "duration_seconds": 990,
-      "view_count": 6837,
-      "like_count": 56
-    },
-    {
-      "id": "P735f1xlpL0",
-      "title": "Deep Dive: Anthropic S-1 Myths and Mythos — Jamin Ball, Altimeter",
+      "id": "bJBEFzlKPoQ",
+      "title": "Building Legal Agents When You Can't See the Data — Jacob Lauritzen, CTO of Legora",
       "channel": "Latent Space",
       "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-      "published_at": "2026-11-07T02:49:28Z",
-      "duration_seconds": 6148,
-      "view_count": 6779,
-      "like_count": 53
-    },
-    {
-      "id": "SPOGTliV48s",
-      "title": "What does LangChain even do these days?",
-      "channel": "LangChain",
-      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
-      "published_at": "2026-11-03T19:18:17Z",
-      "duration_seconds": 195,
-      "view_count": 6639,
-      "like_count": 63
-    },
-    {
-      "id": "-uBABM2AuFg",
-      "title": "Don't Approve the AI Model. Approve the App - Doneyli De Jesus, Langfuse",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-04T10:00:35Z",
-      "duration_seconds": 1160,
-      "view_count": 6399,
-      "like_count": 28
+      "published_at": "2026-11-02T20:50:24Z",
+      "duration_seconds": 4042,
+      "view_count": 8367,
+      "like_count": 61
     },
     {
       "id": "ty8i2zl9q2c",
@@ -452,8 +372,68 @@
       "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
       "published_at": "2026-11-05T17:33:36Z",
       "duration_seconds": 184,
-      "view_count": 6262,
-      "like_count": 93
+      "view_count": 8153,
+      "like_count": 103
+    },
+    {
+      "id": "vUJDyDnqT4c",
+      "title": "Your AI Pilots Won't Move the P&L. Here's What Will - Adam Nahari, Apollo",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-02T08:00:03Z",
+      "duration_seconds": 952,
+      "view_count": 8115,
+      "like_count": 51
+    },
+    {
+      "id": "jDwc0aXTAFg",
+      "title": "Your Company Has No Model of Itself. Agents Can Build One - Joao Wenzel, Citadel Securities",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-08T07:00:36Z",
+      "duration_seconds": 1136,
+      "view_count": 8030,
+      "like_count": 45
+    },
+    {
+      "id": "-X3yXTwGs9A",
+      "title": "AI Writes Code Faster Than Your Team Can Review It - Andrew Norrish, Sourcegraph",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-02T09:00:13Z",
+      "duration_seconds": 1137,
+      "view_count": 7883,
+      "like_count": 26
+    },
+    {
+      "id": "21tuT-e4NVo",
+      "title": "What the Top Companies Do Differently With AI Coding - Martin Harrysson & Prakhar Dixit, McKinsey",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-08T20:00:21Z",
+      "duration_seconds": 1228,
+      "view_count": 7625,
+      "like_count": 58
+    },
+    {
+      "id": "r1iJzoxFBtg",
+      "title": "Browser Use with Managed Deep Agents",
+      "channel": "LangChain",
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
+      "published_at": "2026-11-04T17:45:24Z",
+      "duration_seconds": 334,
+      "view_count": 7394,
+      "like_count": 55
+    },
+    {
+      "id": "ra8X7_bnujw",
+      "title": "Why Waiting for the Next AI Model Can Pay Off - John Stecher, Blackstone & Scott Worland, Norm AI",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-05T10:00:37Z",
+      "duration_seconds": 1245,
+      "view_count": 7308,
+      "like_count": 34
     },
     {
       "id": "N8niNi4bse4",
@@ -462,28 +442,48 @@
       "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
       "published_at": "2026-11-05T18:30:04Z",
       "duration_seconds": 65,
-      "view_count": 6214,
-      "like_count": 285
+      "view_count": 7011,
+      "like_count": 323
     },
     {
-      "id": "YX4Z4XqZ9Vo",
-      "title": "Most of Your Docs Readers Are Now AI Agents - Hahnbee Lee, Mintlify & Lincoln Murr, Coinbase",
+      "id": "3Ad73Onx3Aw",
+      "title": "Better Search Took This AI Agent From 36% to 98% Accuracy - Aamir Shakir, Mixedbread",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-01T08:00:01Z",
-      "duration_seconds": 1132,
-      "view_count": 6097,
-      "like_count": 23
+      "published_at": "2026-11-03T08:00:24Z",
+      "duration_seconds": 990,
+      "view_count": 6938,
+      "like_count": 58
     },
     {
-      "id": "MpkARD5pq-M",
-      "title": "Robots Will Be Trained on Video Games - Pim de Witte, General Intuition",
+      "id": "SPOGTliV48s",
+      "title": "What does LangChain even do these days?",
+      "channel": "LangChain",
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
+      "published_at": "2026-11-03T19:18:17Z",
+      "duration_seconds": 195,
+      "view_count": 6787,
+      "like_count": 64
+    },
+    {
+      "id": "-uBABM2AuFg",
+      "title": "Don't Approve the AI Model. Approve the App - Doneyli De Jesus, Langfuse",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-04T20:00:37Z",
-      "duration_seconds": 1131,
-      "view_count": 6007,
-      "like_count": 31
+      "published_at": "2026-11-04T10:00:35Z",
+      "duration_seconds": 1160,
+      "view_count": 6486,
+      "like_count": 28
+    },
+    {
+      "id": "0K3sIlkKosA",
+      "title": "The internet still runs on around 1 million miles of undersea cables 🌎👀 #technology #internet",
+      "channel": "The Rundown AI",
+      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
+      "published_at": "2026-11-07T15:00:23Z",
+      "duration_seconds": 70,
+      "view_count": 6326,
+      "like_count": 316
     },
     {
       "id": "4VmugsE-iP0",
@@ -492,8 +492,28 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-05T09:00:12Z",
       "duration_seconds": 803,
-      "view_count": 5945,
-      "like_count": 41
+      "view_count": 6325,
+      "like_count": 50
+    },
+    {
+      "id": "RdQCY_-SXbA",
+      "title": "AI Can't Make Up a Number It Can't Look Up - Vinoo Ganesh, Kepler",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-07T08:00:25Z",
+      "duration_seconds": 1108,
+      "view_count": 6291,
+      "like_count": 39
+    },
+    {
+      "id": "MpkARD5pq-M",
+      "title": "Robots Will Be Trained on Video Games - Pim de Witte, General Intuition",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-04T20:00:37Z",
+      "duration_seconds": 1131,
+      "view_count": 6236,
+      "like_count": 32
     },
     {
       "id": "JxNCuXkSWyQ",
@@ -502,18 +522,38 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-02T10:00:35Z",
       "duration_seconds": 1240,
-      "view_count": 5865,
+      "view_count": 5908,
       "like_count": 25
     },
     {
-      "id": "y9Sg--RDtks",
-      "title": "当我们什么都能做，还知道自己想做什么吗？When We Can Do Anything, Do We Still Know What We Want? — Ryo Lu, ex-Cursor",
+      "id": "oWqsBuhRRZ4",
+      "title": "How We Mapped a 35-Million-Line Mainframe in 4 Days - Stephen Chin, Neo4j & Neeraj Deshmukh, Blitzy",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-06T14:44:57Z",
-      "duration_seconds": 1385,
-      "view_count": 5802,
-      "like_count": 37
+      "published_at": "2026-11-06T20:00:10Z",
+      "duration_seconds": 1184,
+      "view_count": 5832,
+      "like_count": 41
+    },
+    {
+      "id": "kIlVNGZZr8o",
+      "title": "How Agents Cut Hour-Long Data Checks to 5 Minutes - Amol Kapoor & Clifford Ressel, Nori Agentic",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-07T07:00:18Z",
+      "duration_seconds": 1174,
+      "view_count": 5709,
+      "like_count": 14
+    },
+    {
+      "id": "EaOit1mmR9g",
+      "title": "How Financial Planners With Zero Coding Experience Built Their Own Agents - Matt Ragone, Range",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-08T08:00:14Z",
+      "duration_seconds": 969,
+      "view_count": 5682,
+      "like_count": 25
     },
     {
       "id": "5UgnatzpZ9E",
@@ -522,8 +562,8 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-04T08:00:39Z",
       "duration_seconds": 1081,
-      "view_count": 5310,
-      "like_count": 39
+      "view_count": 5396,
+      "like_count": 41
     },
     {
       "id": "XIHZpZtYCzo",
@@ -532,7 +572,7 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-03T09:00:22Z",
       "duration_seconds": 1033,
-      "view_count": 5286,
+      "view_count": 5357,
       "like_count": 17
     },
     {
@@ -542,18 +582,18 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-05T21:00:16Z",
       "duration_seconds": 3156,
-      "view_count": 5030,
-      "like_count": 18
+      "view_count": 5312,
+      "like_count": 20
     },
     {
-      "id": "oWqsBuhRRZ4",
-      "title": "How We Mapped a 35-Million-Line Mainframe in 4 Days - Stephen Chin, Neo4j & Neeraj Deshmukh, Blitzy",
+      "id": "gdzsJZJ6DDs",
+      "title": "Your Financial Agent Needs to Show Its Work - Anirudh Veeraragavan, Fieldguide",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-06T20:00:10Z",
-      "duration_seconds": 1184,
-      "view_count": 5000,
-      "like_count": 28
+      "published_at": "2026-11-07T18:00:02Z",
+      "duration_seconds": 808,
+      "view_count": 5231,
+      "like_count": 26
     },
     {
       "id": "V2UqEUA8NjM",
@@ -562,18 +602,8 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-05T08:00:07Z",
       "duration_seconds": 933,
-      "view_count": 4997,
+      "view_count": 5158,
       "like_count": 29
-    },
-    {
-      "id": "RdQCY_-SXbA",
-      "title": "AI Can't Make Up a Number It Can't Look Up - Vinoo Ganesh, Kepler",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-07T08:00:25Z",
-      "duration_seconds": 1108,
-      "view_count": 4829,
-      "like_count": 31
     },
     {
       "id": "SUqQlvyI3N8",
@@ -582,18 +612,18 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-06T08:00:37Z",
       "duration_seconds": 898,
-      "view_count": 4646,
-      "like_count": 52
+      "view_count": 5064,
+      "like_count": 58
     },
     {
-      "id": "kIlVNGZZr8o",
-      "title": "How Agents Cut Hour-Long Data Checks to 5 Minutes - Amol Kapoor & Clifford Ressel, Nori Agentic",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-07T07:00:18Z",
-      "duration_seconds": 1174,
-      "view_count": 4600,
-      "like_count": 10
+      "id": "KgqWyVVH4Oc",
+      "title": "Cooking with Reducto’s CEO: Why PDFs Still Break AI — Adit Abraham",
+      "channel": "Latent Space",
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "published_at": "2026-11-06T16:30:28Z",
+      "duration_seconds": 3038,
+      "view_count": 4907,
+      "like_count": 22
     },
     {
       "id": "5__Fm2TnPcU",
@@ -602,8 +632,18 @@
       "channel_id": "UCcIXc5mJsHVYTZR1maL5l9w",
       "published_at": "2026-11-04T11:00:19Z",
       "duration_seconds": 66,
-      "view_count": 4454,
-      "like_count": 17
+      "view_count": 4772,
+      "like_count": 19
+    },
+    {
+      "id": "u7fsyrXsPBE",
+      "title": "Claude Code Looked Right but Missed $800K - Natalia Connolly & Kevin Madura, AlixPartners",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-08T18:00:08Z",
+      "duration_seconds": 1112,
+      "view_count": 4589,
+      "like_count": 26
     },
     {
       "id": "0PqGT2L6cZM",
@@ -612,7 +652,7 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-04T09:00:20Z",
       "duration_seconds": 1189,
-      "view_count": 4220,
+      "view_count": 4285,
       "like_count": 10
     },
     {
@@ -622,38 +662,38 @@
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
       "published_at": "2026-11-06T09:00:15Z",
       "duration_seconds": 1093,
-      "view_count": 3968,
-      "like_count": 15
+      "view_count": 4269,
+      "like_count": 17
     },
     {
-      "id": "0K3sIlkKosA",
-      "title": "The internet still runs on around 1 million miles of undersea cables 🌎👀 #technology #internet",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-11-07T15:00:23Z",
-      "duration_seconds": 70,
-      "view_count": 2997,
-      "like_count": 156
-    },
-    {
-      "id": "ZJjRgvjhq3M",
-      "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
+      "id": "BT1Mo-fD-g0",
+      "title": "Your Coding Agent Can't Undo Its Own Mistakes - Tanmay Sah & Dolly Sah",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-07T19:00:33Z",
-      "duration_seconds": 6632,
-      "view_count": 2776,
-      "like_count": 19
+      "published_at": "2026-11-08T08:00:03Z",
+      "duration_seconds": 998,
+      "view_count": 4245,
+      "like_count": 26
     },
     {
-      "id": "_0SQh8a1Osk",
-      "title": "Don't Vibe Code Your Agent Infrastructure - Akshat Bubna, Modal",
+      "id": "rSWiNE92xqM",
+      "title": "GitHub’s Growth: 225M Developers, 34.3B Commits — Jay Parikh, EVP of CoreAI, Microsoft",
+      "channel": "Latent Space",
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "published_at": "2026-11-08T01:22:17Z",
+      "duration_seconds": 1395,
+      "view_count": 2992,
+      "like_count": 12
+    },
+    {
+      "id": "WJTQBENv0KI",
+      "title": "How Ramp Tests Its AI Bookkeeping Agent Before Customers Do - Ryan Stevens, Ramp",
       "channel": "AI Engineer",
       "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-07T20:00:13Z",
-      "duration_seconds": 1055,
-      "view_count": 2435,
-      "like_count": 21
+      "published_at": "2026-11-08T19:00:27Z",
+      "duration_seconds": 1119,
+      "view_count": 2839,
+      "like_count": 5
     },
     {
       "id": "3nAV2s4GYbs",
@@ -662,28 +702,8 @@
       "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
       "published_at": "2026-11-06T15:06:02Z",
       "duration_seconds": 3051,
-      "view_count": 2148,
-      "like_count": 11
-    },
-    {
-      "id": "gdzsJZJ6DDs",
-      "title": "Your Financial Agent Needs to Show Its Work - Anirudh Veeraragavan, Fieldguide",
-      "channel": "AI Engineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-      "published_at": "2026-11-07T18:00:02Z",
-      "duration_seconds": 808,
-      "view_count": 2146,
-      "like_count": 11
-    },
-    {
-      "id": "w9Gbhhv6rzU",
-      "title": "Sound design is one of the most powerful tools for keeping viewers' attention",
-      "channel": "ElevenLabs",
-      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
-      "published_at": "2026-11-02T22:09:17Z",
-      "duration_seconds": 74,
-      "view_count": 2124,
-      "like_count": 61
+      "view_count": 2508,
+      "like_count": 16
     },
     {
       "id": "ibdmyMFd_z8",
@@ -692,8 +712,18 @@
       "channel_id": "UCWN3xxRkmTPmbKwht9FuE5A",
       "published_at": "2026-11-06T14:51:09Z",
       "duration_seconds": 1154,
-      "view_count": 2105,
+      "view_count": 2491,
       "like_count": 15
+    },
+    {
+      "id": "w9Gbhhv6rzU",
+      "title": "Sound design is one of the most powerful tools for keeping viewers' attention",
+      "channel": "ElevenLabs",
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
+      "published_at": "2026-11-02T22:09:17Z",
+      "duration_seconds": 74,
+      "view_count": 2259,
+      "like_count": 62
     },
     {
       "id": "hb8WqJqM4SE",
@@ -702,7 +732,7 @@
       "channel_id": "UCUBqu_z5uP0AZhYtuyFZB3g",
       "published_at": "2026-11-03T14:35:19Z",
       "duration_seconds": 153,
-      "view_count": 2062,
+      "view_count": 2200,
       "like_count": 19
     },
     {
@@ -712,18 +742,28 @@
       "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w",
       "published_at": "2026-11-06T10:30:19Z",
       "duration_seconds": 153,
-      "view_count": 1815,
+      "view_count": 2013,
       "like_count": 20
     },
     {
-      "id": "KgqWyVVH4Oc",
-      "title": "Cooking with Reducto’s CEO: Why PDFs Still Break AI — Adit Abraham",
+      "id": "dpY7YzZo4kE",
+      "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
       "channel": "Latent Space",
       "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-      "published_at": "2026-11-06T16:30:28Z",
-      "duration_seconds": 3038,
-      "view_count": 1772,
-      "like_count": 10
+      "published_at": "2026-11-08T21:23:23Z",
+      "duration_seconds": 7245,
+      "view_count": 1789,
+      "like_count": 42
+    },
+    {
+      "id": "7YvX1_xKUyE",
+      "title": "One million AI Engineers!  #aiengineer",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-08T19:12:03Z",
+      "duration_seconds": 107,
+      "view_count": 522,
+      "like_count": 4
     },
     {
       "id": "7yJ3U57vyaA",
@@ -732,7 +772,7 @@
       "channel_id": "UCAHS4cP-uIXdrpCsSfGq_OA",
       "published_at": "2026-11-05T19:47:52Z",
       "duration_seconds": 164,
-      "view_count": 335,
+      "view_count": 384,
       "like_count": 6
     },
     {
@@ -742,7 +782,7 @@
       "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
       "published_at": "2026-11-05T06:25:20Z",
       "duration_seconds": 3281,
-      "view_count": 306,
+      "view_count": 315,
       "like_count": 8
     },
     {
@@ -752,7 +792,7 @@
       "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
       "published_at": "2026-11-02T20:00:04Z",
       "duration_seconds": 91,
-      "view_count": 283,
+      "view_count": 285,
       "like_count": null
     },
     {
@@ -772,7 +812,7 @@
       "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
       "published_at": "2026-11-03T02:00:38Z",
       "duration_seconds": 1957,
-      "view_count": 129,
+      "view_count": 130,
       "like_count": null
     },
     {
@@ -782,7 +822,7 @@
       "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
       "published_at": "2026-11-04T19:02:05Z",
       "duration_seconds": 1576,
-      "view_count": 108,
+      "view_count": 117,
       "like_count": null
     },
     {
@@ -792,7 +832,7 @@
       "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
       "published_at": "2026-11-02T16:54:07Z",
       "duration_seconds": 468,
-      "view_count": 59,
+      "view_count": 65,
       "like_count": null
     },
     {
@@ -802,7 +842,7 @@
       "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
       "published_at": "2026-11-06T20:10:16Z",
       "duration_seconds": 792,
-      "view_count": 41,
+      "view_count": 58,
       "like_count": null
     }
   ]
