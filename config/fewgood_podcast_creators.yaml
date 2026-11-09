@@ -263,13 +263,6 @@ creators:
   - pod-zh
   evidence:
   - jason_curated
-- name: 回到Axton
-  channel_id: UCBj9S8TBRlCU4QnhTEOdWZQ
-  lang: zh
-  subtopics:
-  - pod-zh
-  evidence:
-  - existing_registry
 - name: 最佳拍档
   channel_id: UCGWYKICLOE8Wxy7q3eYXmPA
   lang: zh
@@ -279,13 +272,6 @@ creators:
   - existing_registry
 - name: howie.serious
   channel_id: UCh1TRnUd33z_CWWDKyPTwtw
-  lang: zh
-  subtopics:
-  - pod-zh
-  evidence:
-  - existing_registry
-- name: 花叔
-  channel_id: UCzbSuf_A_D8dARJ33HzoDew
   lang: zh
   subtopics:
   - pod-zh

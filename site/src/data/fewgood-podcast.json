@@ -1990,22 +1990,6 @@
       "last_upload_at": "2026-10-21T00:00:25Z"
     },
     {
-      "name": "回到Axton",
-      "channel_id": "UCBj9S8TBRlCU4QnhTEOdWZQ",
-      "lang": "zh",
-      "subtopics": [
-        "pod-zh"
-      ],
-      "evidence": [
-        "existing_registry"
-      ],
-      "handle": "@axtonliu",
-      "subscriber_count": 154000,
-      "uploads_playlist": "UUBj9S8TBRlCU4QnhTEOdWZQ",
-      "status": "included",
-      "last_upload_at": "2026-11-08T12:00:21Z"
-    },
-    {
       "name": "最佳拍档",
       "channel_id": "UCGWYKICLOE8Wxy7q3eYXmPA",
       "lang": "zh",
@@ -2036,22 +2020,6 @@
       "uploads_playlist": "UUh1TRnUd33z_CWWDKyPTwtw",
       "status": "included",
       "last_upload_at": "2026-10-03T05:47:42Z"
-    },
-    {
-      "name": "花叔",
-      "channel_id": "UCzbSuf_A_D8dARJ33HzoDew",
-      "lang": "zh",
-      "subtopics": [
-        "pod-zh"
-      ],
-      "evidence": [
-        "existing_registry"
-      ],
-      "handle": "@alchain",
-      "subscriber_count": 72900,
-      "uploads_playlist": "UUzbSuf_A_D8dARJ33HzoDew",
-      "status": "included",
-      "last_upload_at": "2026-10-21T04:42:58Z"
     }
   ],
   "topics": [
@@ -2780,7 +2748,7 @@
       "name_zh": "中文播客",
       "definition": "讨论科技、商业与社会的中文长谈节目。",
       "stats": {
-        "eligible": 115,
+        "eligible": 114,
         "shown": 6,
         "mix_target": {
           "interview": 3,
@@ -2793,14 +2761,14 @@
           "talk": 1
         },
         "excluded_by_rule": {
-          "too_short": 349,
-          "excluded_term": 9,
-          "type_window:interview": 32,
-          "type_window:deep_dive": 93,
+          "too_short": 190,
+          "excluded_term": 6,
+          "type_window:interview": 30,
+          "type_window:deep_dive": 59,
           "too_long": 6,
-          "type_window:talk": 29
+          "type_window:talk": 28
         },
-        "creators_in_topic": 7
+        "creators_in_topic": 5
       },
       "videos": [
         {
