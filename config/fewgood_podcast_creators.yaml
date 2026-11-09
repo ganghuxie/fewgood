@@ -1,17 +1,293 @@
-# Handles are deliberately unresolved here. `resolve` uses channels.list(forHandle), never search.list.
 creators:
-  - {name: Lex Fridman, channel_id: UCSHZKyawb77ixDdsGog4iWA, lang: en, subtopics: [pod-tech-ai, pod-society], evidence: [existing_registry]}
-  - {name: Latent Space, channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
-  - {name: Dwarkesh Patel, channel_id: UCXl4i9dYBrFOabk0xGmbkRA, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
-  - {name: All-In Podcast, channel_id: UCESLZhusAkFfsNsApnjF_Cg, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
-  - {name: a16z, channel_id: UC9cn0TuPq4dnbTY-CBsm8XA, lang: en, subtopics: [pod-business, pod-tech-ai], evidence: [existing_registry]}
-  - {name: Lenny's Podcast, channel_id: UC6t1O76G0jYXOAoYCm153dA, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
-  - {name: No Priors, channel_id: UCSI7h9hydQ40K5MJHnCrQvw, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
-  - {name: Big Technology Podcast, channel_id: UCaKiCexVhZ459j9sZ2e7XdQ, lang: en, subtopics: [pod-tech-ai], evidence: [existing_registry]}
-  - {name: Acquired, channel_id: UCyFqFYfTW2VoIQKylJ04Rtw, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
-  - {name: Y Combinator, channel_id: UCcefcZRL2oaA_uBNeo5UOWg, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
-  - {name: Sequoia Capital, channel_id: UCWrF0oN6unbXrWsTN7RctTw, lang: en, subtopics: [pod-business], evidence: [existing_registry]}
-  - {name: HubermanLab, channel_id: UC2D2CMWXMOVWx7giW1n3LIg, lang: en, subtopics: [pod-science-health], evidence: [existing_registry]}
-  - {name: TED, channel_id: UCAuUUnT6oDeKwE6v1NGQxug, lang: en, subtopics: [pod-society, pod-science-health], evidence: [existing_registry]}
-  - {name: 硅谷101视频专栏, channel_id: UCKV2yWPB3wn0RTZh3cTD8YA, lang: zh, subtopics: [pod-zh], evidence: [jason_curated]}
-  - {name: 硅谷101播客, channel_id: UChnNjLyx_5rk_iDPQ2BQDQA, lang: zh, subtopics: [pod-zh], evidence: [existing_registry]}
+- name: Lex Fridman
+  channel_id: UCSHZKyawb77ixDdsGog4iWA
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Latent Space
+  channel_id: UCxBcwypKK-W3GHd_RZ9FZrQ
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  evidence:
+  - existing_registry
+- name: Dwarkesh Patel
+  channel_id: UCXl4i9dYBrFOabk0xGmbkRA
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  evidence:
+  - existing_registry
+- name: All-In Podcast
+  channel_id: UCESLZhusAkFfsNsApnjF_Cg
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: a16z
+  channel_id: UC9cn0TuPq4dnbTY-CBsm8XA
+  lang: en
+  subtopics:
+  - pod-business
+  - pod-tech-ai
+  evidence:
+  - existing_registry
+- name: Lenny's Podcast
+  channel_id: UC6t1O76G0jYXOAoYCm153dA
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: No Priors
+  channel_id: UCSI7h9hydQ40K5MJHnCrQvw
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  evidence:
+  - existing_registry
+- name: Big Technology Podcast
+  channel_id: UCaKiCexVhZ459j9sZ2e7XdQ
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  evidence:
+  - existing_registry
+- name: Acquired
+  channel_id: UCyFqFYfTW2VoIQKylJ04Rtw
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: Y Combinator
+  channel_id: UCcefcZRL2oaA_uBNeo5UOWg
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: Sequoia Capital
+  channel_id: UCWrF0oN6unbXrWsTN7RctTw
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: HubermanLab
+  channel_id: UC2D2CMWXMOVWx7giW1n3LIg
+  lang: en
+  subtopics:
+  - pod-science-health
+  evidence:
+  - existing_registry
+- name: TED
+  channel_id: UCAuUUnT6oDeKwE6v1NGQxug
+  lang: en
+  subtopics:
+  - pod-society
+  - pod-science-health
+  evidence:
+  - existing_registry
+- name: 硅谷101视频专栏
+  channel_id: UCKV2yWPB3wn0RTZh3cTD8YA
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - jason_curated
+- name: 硅谷101播客
+  channel_id: UChnNjLyx_5rk_iDPQ2BQDQA
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - existing_registry
+- name: Peter Attia MD
+  channel_id: UC8kGsMa0LygSX9nkBcBH1Sg
+  lang: en
+  subtopics:
+  - pod-science-health
+  evidence:
+  - existing_registry
+- name: FoundMyFitness
+  channel_id: UCWF8SqJVNlx-ctXbLswcTcA
+  lang: en
+  subtopics:
+  - pod-science-health
+  evidence:
+  - existing_registry
+- name: StarTalk
+  channel_id: UCqoAEDirJPjEUFcF2FklnBA
+  lang: en
+  subtopics:
+  - pod-science-health
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Sean Carroll
+  channel_id: UCRhV1rWIpm_pU19bBm_2RXw
+  lang: en
+  subtopics:
+  - pod-science-health
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Sam Harris
+  channel_id: UCNAxrHudMfdzNi6NxruKPLw
+  lang: en
+  subtopics:
+  - pod-science-health
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Conversations with Tyler
+  channel_id: UC_AnpBvnhXTcipgGEHLWoOg
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Hidden Brain
+  channel_id: UCgjZeiV0Ks3Shx8xPgvm7pQ
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Freakonomics Radio Network
+  channel_id: UCXjf7anLJA4NqUv8kPFIJWA
+  lang: en
+  subtopics:
+  - pod-society
+  - pod-business
+  evidence:
+  - existing_registry
+- name: The Ezra Klein Show
+  channel_id: UCnxuOd8obvLLtf5_-YKFbiQ
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: The On Being Project
+  channel_id: UCDZcnmxyaiunvPdaBwL264A
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Intelligence Squared
+  channel_id: UCaqcvH8EvUtePORpN03jLMg
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Chris Williamson
+  channel_id: UCIaH-gZIVC432YRjNVvnyCA
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Coleman Hughes
+  channel_id: UCUk0AvSMU5CJ0wUqJf9TX8g
+  lang: en
+  subtopics:
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Hard Fork
+  channel_id: UCZcR2SVWaGWNlMqPxvQS3vw
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  - pod-business
+  evidence:
+  - existing_registry
+- name: Bg2 Pod
+  channel_id: UC-yRDvpR99LUc5l7i7jLzew
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  - pod-business
+  evidence:
+  - existing_registry
+- name: 20VC
+  channel_id: UCf0PBRjhf0rF8fWBIxTuoWA
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: Invest Like The Best
+  channel_id: UCpQBb0fToph3jrDulwz1iUQ
+  lang: en
+  subtopics:
+  - pod-business
+  evidence:
+  - existing_registry
+- name: Stratechery
+  channel_id: UC9AHywQeW9BOcOl7dg-YMqA
+  lang: en
+  subtopics:
+  - pod-tech-ai
+  - pod-business
+  evidence:
+  - existing_registry
+- name: The Diary Of A CEO
+  channel_id: UCGq-a57w-aPwyi3pW7XLiHw
+  lang: en
+  subtopics:
+  - pod-business
+  - pod-society
+  evidence:
+  - existing_registry
+- name: NPR Planet Money
+  channel_id: UCwlvY6_2iza-QkE5CIWpIFA
+  lang: en
+  subtopics:
+  - pod-business
+  - pod-society
+  evidence:
+  - existing_registry
+- name: Zhang Xiaojun Podcast
+  channel_id: UC3Sv1JuKpbOx3csUO8FAo5g
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - jason_curated
+- name: 回到Axton
+  channel_id: UCBj9S8TBRlCU4QnhTEOdWZQ
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - existing_registry
+- name: 最佳拍档
+  channel_id: UCGWYKICLOE8Wxy7q3eYXmPA
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - existing_registry
+- name: howie.serious
+  channel_id: UCh1TRnUd33z_CWWDKyPTwtw
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - existing_registry
+- name: 花叔
+  channel_id: UCzbSuf_A_D8dARJ33HzoDew
+  lang: zh
+  subtopics:
+  - pod-zh
+  evidence:
+  - existing_registry

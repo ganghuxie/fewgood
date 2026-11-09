@@ -35,15 +35,43 @@ def _match(text, term):
 def _duration(row): return duration(row.get('contentDetails',{}).get('duration','')) or int(row.get('contentDetails',{}).get('duration_seconds') or 0)
 
 def classify_content(row, config=None):
-    config=config or types_config(); text=_text(row); title=row.get('snippet',{}).get('title','').casefold()
-    signals={kind:[term for term in terms if _match(text,term)] for kind,terms in config['keywords'].items()}
-    if _duration(row)>=90*60: signals['talk'].append('时长超过90分钟')
-    # A title explicitly framed as an interview should not be displaced by a
-    # generic word such as "deep" in the description.
-    for kind in ('interview','deep_dive','talk'):
-        if any(_match(title,x) for x in config['keywords'][kind]): return kind, list(dict.fromkeys(signals[kind]))
-    kind=max(('interview','deep_dive','talk'),key=lambda x:len(signals[x]))
-    return kind, list(dict.fromkeys(signals[kind] or ['节目长内容默认归为深度访谈']))
+    config=config or types_config()
+    title=row.get('snippet',{}).get('title','')
+    title_folded=title.casefold()
+    seconds=_duration(row)
+    title_signals={kind:[term for term in terms if _match(title_folded,term)] for kind,terms in config['keywords'].items()}
+    # "with" and "podcast" frequently occur as branding. A guest cue needs a
+    # following name-like phrase (or an explicit Chinese guest/conversation cue).
+    guest_patterns=(
+        r'\bwith\s+(?!a\b|an\b|the\b)[\w][\w .’\'-]{1,}',
+        r'\b(?:ft\.?|feat\.?|featuring|guest)\s*[:\-]?\s*[\w]',
+        r'(?:访谈|对谈|对话)\s*[:：｜\-]?[\u4e00-\u9fffA-Za-z0-9]',
+    )
+    guest_like=any(re.search(pattern,title,flags=re.IGNORECASE) for pattern in guest_patterns)
+    flagship_names=('lex fridman','dwarkesh','acquired','huberman','peter attia','the drive')
+    channel=(row.get('snippet',{}).get('channelTitle','')+' '+row.get('snippet',{}).get('channelId','')).casefold()
+    flagship=any(name in channel for name in flagship_names)
+    solo_educational=bool(re.search(r'\b(solo|analysis|explainer|q&a|ama|monologue)\b',title_folded))
+
+    # Title signals have the requested priority; they are more reliable than a
+    # word embedded in a long description.
+    if title_signals['talk']:
+        return 'talk', title_signals['talk']
+    if title_signals['deep_dive']:
+        return 'deep_dive', title_signals['deep_dive']
+    if title_signals['interview'] and guest_like:
+        return 'interview', title_signals['interview'] + ['标题含嘉宾线索']
+
+    if seconds >= 90*60 and (guest_like or flagship):
+        signal='时长至少90分钟；'+('标题含嘉宾线索' if guest_like else '旗舰长谈频道')
+        return 'talk', [signal]
+    if 20*60 <= seconds < 90*60 and solo_educational and not guest_like:
+        return 'deep_dive', ['20–90分钟单人/教育型节目']
+    if guest_like:
+        return 'interview', ['标题含嘉宾线索']
+    if seconds >= 90*60:
+        return 'talk', ['时长至少90分钟']
+    return 'deep_dive', ['无嘉宾线索的长内容默认归为专题解读']
 
 def _creator_ok(creator, reference):
     if creator.get('status') not in (None,'included'): return False
@@ -101,23 +129,27 @@ def select(raw, mode='select'):
             eligible.append((row,creator,kind,signals,term))
         eligible.sort(key=lambda x:_score(x,reference)); chosen=[]; counts=Counter()
         def take(rows, cap):
+            taken=0
             for item in rows:
+                if taken >= cap: break
                 cid=item[1]['channel_id']
                 if len(chosen) >= config['theme']['top_n'] or counts[cid] >= config['theme']['max_per_channel_in_top']: continue
-                if item[0]['id'] not in {x[0]['id'] for x in chosen}: chosen.append(item); counts[cid]+=1
+                if item[0]['id'] not in {x[0]['id'] for x in chosen}:
+                    chosen.append(item); counts[cid]+=1; taken+=1
         for kind,quota in types['mix'].items(): take([x for x in eligible if x[2]==kind],quota)
         for kind in ('interview','deep_dive','talk'): take([x for x in eligible if x[2]==kind],config['theme']['top_n'])
         videos=[]
         for row,creator,kind,signals,term in chosen:
             sn=row['snippet']; videos.append({'video_id':row['id'],'title':sn.get('title',''),'channel_title':sn.get('channelTitle',''),'channel_id':creator['channel_id'],'published_at':sn.get('publishedAt'),'duration_seconds':_duration(row),'view_count':int(row.get('statistics',{}).get('viewCount',0) or 0),'topic':topic['id'],'content_type':kind,'content_type_label':types['labels'][kind],'content_type_signals':signals,'sources':row.get('sources',[]),'reasons':[f'内容类型：{types["labels"][kind]}（命中：'+ '、'.join(signals)+'）',f'主题依据：{term}',f'来自精选创作者 {creator.get("name",sn.get("channelTitle",""))}（入池依据：{evidence_label(creator.get("evidence",[]))}）'],'url':'https://www.youtube.com/watch?v='+row['id'],'thumbnail':(sn.get('thumbnails',{}).get('medium') or sn.get('thumbnails',{}).get('default') or {}).get('url')})
         output.append({'id':topic['id'],'name_zh':topic['name_zh'],'definition':topic['definition'],'stats':{'eligible':len(eligible),'shown':len(videos),'mix_target':types['mix'],'mix_shown':dict(Counter(v['content_type'] for v in videos)),'excluded_by_rule':dict(excluded),'creators_in_topic':sum(topic['id'] in c.get('subtopics',[]) for c in cmap.values())},'videos':videos})
-    return {'theme':config['theme'],'generated_at':raw.get('data_refreshed_at'),'data_refreshed_at':raw.get('data_refreshed_at'),'round':'podcast-1','mode':mode,'usage_summary':raw.get('usage_summary',usage_empty()),'creators':creators,'topics':output,'rules_notes':['创作者优先；无公开质量分；候选不足时宁缺毋滥。']}
+    return {'theme':config['theme'],'generated_at':raw.get('data_refreshed_at'),'data_refreshed_at':raw.get('data_refreshed_at'),'round':'podcast-2','mode':mode,'usage_summary':raw.get('usage_summary',usage_empty()),'creators':creators,'topics':output,'rules_notes':['创作者优先；先按 3/2/1 填充内容类型，再在同频道上限内补足；无公开质量分；候选不足时宁缺毋滥。']}
 
 def estimate():
     creators=seed_creators(); known=sum(bool(c.get('channel_id')) for c in creators); handles=len(creators)-known
     # two upload pages/channel, and at most one details batch per page
     all_channels=known+handles
-    return {'endpoints':['channels(forHandle)','channels','playlistItems','videos'],'search_calls':0,'resolve_other_units_max':handles,'fetch_other_units_upper_bound':all_channels*5,'combined_other_units_upper_bound':handles+all_channels*5,'channels_known':known,'handles_to_resolve':handles,'hard_caps':{'search_calls':0,'other_units':300}}
+    cap=topics_config()['theme']['other_unit_cap']
+    return {'endpoints':['channels(forHandle)','channels','playlistItems','videos'],'search_calls':0,'resolve_other_units_max':handles,'fetch_other_units_upper_bound':all_channels*5,'combined_other_units_upper_bound':handles+all_channels*5,'channels_known':known,'handles_to_resolve':handles,'hard_caps':{'search_calls':0,'other_units':cap}}
 
 def _save_raw(raw): write_json(RAW,raw)
 def resolve(args):
@@ -167,7 +199,7 @@ def fetch(args):
     result=select(raw,'fetch'); write_json(RESULT,result); write_json(DEMO,result)
 
 def main(argv=None):
-    p=argparse.ArgumentParser(); p.add_argument('cmd',choices=['estimate','resolve','fetch','select']); p.add_argument('--unit-cap',type=int,default=300); a=p.parse_args(argv)
+    p=argparse.ArgumentParser(); p.add_argument('cmd',choices=['estimate','resolve','fetch','select']); p.add_argument('--unit-cap',type=int,default=topics_config()['theme']['other_unit_cap']); a=p.parse_args(argv)
     if a.cmd=='estimate': print(json.dumps(estimate(),ensure_ascii=False)); return
     if a.cmd=='resolve': return resolve(a)
     if a.cmd=='fetch': return fetch(a)

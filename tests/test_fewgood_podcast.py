@@ -10,7 +10,7 @@ def creator(channel, topics):
     return {'name':channel,'channel_id':channel,'subtopics':topics,'evidence':['existing_registry'],'subscriber_count':1000,'last_upload_at':NOW,'status':'included'}
 
 def test_classify_duration_exclusion_and_windows():
-    assert podcast.classify_content(row('a','c','Interview with a founder'))[0] == 'interview'
+    assert podcast.classify_content(row('a','c','Interview with Ada Lovelace'))[0] == 'interview'
     assert podcast._failure(row('short','c','Interview',minutes=10), podcast.topics_config()['topics'][0], datetime(2026,11,8,tzinfo=timezone.utc), 'interview', podcast.types_config()) == 'too_short'
     old=row('old','c','Deep dive analysis',published='2025-01-01T00:00:00Z')
     assert podcast._failure(old,podcast.topics_config()['topics'][0],datetime(2026,11,8,tzinfo=timezone.utc),'deep_dive',podcast.types_config()) == 'type_window:deep_dive'
@@ -29,7 +29,8 @@ def test_select_mix_channel_cap_and_schema():
 
 def test_estimate_and_fetch_are_search_free_and_capped():
     plan=podcast.estimate()
-    assert plan['search_calls'] == 0 and plan['combined_other_units_upper_bound'] <= 300
+    assert plan['search_calls'] == 0 and plan['combined_other_units_upper_bound'] <= 400
+    assert plan['hard_caps']['other_units'] == 400
     assert "f.call('search'" not in inspect.getsource(podcast.fetch)
     assert "'forHandle'" in inspect.getsource(podcast.resolve)
 
@@ -46,3 +47,28 @@ def test_topic_match_requires_creator_subtopic_and_multi_topic_term():
 def test_title_signals_classify_huberman_and_ted_formats():
     assert podcast.classify_content(row('x','c','Essentials: Sleep and Health'))[0] == 'deep_dive'
     assert podcast.classify_content(row('x','c','TED Talk: The science of sleep'))[0] == 'talk'
+
+def test_classification_requires_a_real_guest_cue_for_interviews():
+    assert podcast.classify_content(row('x','c','Explained: Sleep and Health podcast'))[0] == 'deep_dive'
+    assert podcast.classify_content(row('x','c','Interview with Grace Hopper'))[0] == 'interview'
+    assert podcast.classify_content(row('x','Lex Fridman','A flagship conversation',minutes=91))[0] == 'talk'
+
+def test_select_fills_three_two_one_mix_before_backfill():
+    creators=[]; rows=[]
+    fixtures=[
+        ('Interview with Ada Lovelace', 60), ('Conversation with Grace Hopper', 60), ('Interview with Linus Torvalds', 60),
+        ('Essentials: AI safety', 60), ('Explained: semiconductor supply chains', 60),
+        ('TED Talk: The future of computing', 60),
+    ]
+    for n,(title,minutes) in enumerate(fixtures):
+        cid=f'c{n}'; creators.append(creator(cid,['pod-tech-ai']))
+        rows.append(row(str(n),cid,title,minutes=minutes))
+    result=podcast.select({'data_refreshed_at':NOW,'creators':creators,'candidate_videos':rows,'usage_summary':{}})
+    topic=next(x for x in result['topics'] if x['id']=='pod-tech-ai')
+    assert topic['stats']['mix_shown'] == {'interview':3,'deep_dive':2,'talk':1}
+    assert result['round'] == 'podcast-2'
+
+def test_creator_pool_is_expanded():
+    creators=podcast.seed_creators()
+    assert len(creators) >= 35
+    assert len({creator['channel_id'] for creator in creators}) == len(creators)
