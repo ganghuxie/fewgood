@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-09T02:21:01Z",
+  "generated_at": "2026-11-10T04:39:14Z",
   "window_days": 30,
   "exclude_shorts_under_seconds": 60,
   "window_size_days": 6,
   "windows": 5,
   "candidates_fetched": 500,
   "dropped_short": 0,
-  "dropped_vertical": 18,
+  "dropped_vertical": 17,
   "landscape_only": true,
   "video_duration_buckets": [
     "medium",
@@ -22,8 +22,8 @@
       "channel_id": "UC9ftt2QxQewlpWaJ3HvemaQ",
       "published_at": "2026-10-30T07:00:20Z",
       "duration_seconds": 282,
-      "view_count": 69268861,
-      "like_count": 205815
+      "view_count": 71594999,
+      "like_count": 207068
     },
     {
       "id": "XO1h5G6xytU",
@@ -32,8 +32,8 @@
       "channel_id": "UC9TO_oo4c_LrOiKNaY6aysA",
       "published_at": "2026-10-30T04:00:11Z",
       "duration_seconds": 248,
-      "view_count": 39860534,
-      "like_count": 461467
+      "view_count": 41005511,
+      "like_count": 475250
     },
     {
       "id": "gsZauX8gwxo",
@@ -42,8 +42,8 @@
       "channel_id": "UCxE5jEls-T0QtlTHT8lI1lw",
       "published_at": "2026-10-16T00:00:10Z",
       "duration_seconds": 293,
-      "view_count": 26223780,
-      "like_count": 854834
+      "view_count": 26451205,
+      "like_count": 856736
     },
     {
       "id": "rsNhWkC4neE",
@@ -52,18 +52,8 @@
       "channel_id": "UCYDmx2Sfpnaxg488yBpZIGg",
       "published_at": "2026-10-19T09:00:05Z",
       "duration_seconds": 243,
-      "view_count": 25764421,
-      "like_count": 367909
-    },
-    {
-      "id": "93j1fDGi_-8",
-      "title": "[최초공개] A2O LITE - NEON (4K) | WELCOME TO SOULITE From A2O SOUL A2O LITE",
-      "channel": "M2",
-      "channel_id": "UCTQVIXvcHrR9jYoJ6qaBAow",
-      "published_at": "2026-10-13T09:55:16Z",
-      "duration_seconds": 243,
-      "view_count": 17843378,
-      "like_count": 185423
+      "view_count": 26048385,
+      "like_count": 370962
     },
     {
       "id": "nJlbqQEFYaE",
@@ -72,8 +62,28 @@
       "channel_id": "UCo07fumrTn1w4AxcU4j_uDw",
       "published_at": "2026-10-22T12:30:36Z",
       "duration_seconds": 281,
-      "view_count": 17687662,
-      "like_count": 65522
+      "view_count": 19083586,
+      "like_count": 70828
+    },
+    {
+      "id": "hX7wWxT3k_Q",
+      "title": "Bewafa Se | Official Music Video | Neil Nitin Mukesh & Kashika K | Abhishek T | Altamash F",
+      "channel": "Kashish Music",
+      "channel_id": "UCbyYc68cUpMQd3HYLnq2naA",
+      "published_at": "2026-10-22T06:00:15Z",
+      "duration_seconds": 289,
+      "view_count": 18992774,
+      "like_count": 103393
+    },
+    {
+      "id": "93j1fDGi_-8",
+      "title": "[최초공개] A2O LITE - NEON (4K) | WELCOME TO SOULITE From A2O SOUL A2O LITE",
+      "channel": "M2",
+      "channel_id": "UCTQVIXvcHrR9jYoJ6qaBAow",
+      "published_at": "2026-10-13T09:55:16Z",
+      "duration_seconds": 243,
+      "view_count": 18119014,
+      "like_count": 186972
     },
     {
       "id": "7TaRIreSQ6M",
@@ -82,18 +92,8 @@
       "channel_id": "UCnJjcn5FrgrOEp5_N45ZLEQ",
       "published_at": "2026-10-26T05:29:08Z",
       "duration_seconds": 378,
-      "view_count": 17526556,
-      "like_count": 53356
-    },
-    {
-      "id": "SWzfm9PED6s",
-      "title": "Mrs. GREEN APPLE「シンデレラ」Official Music Video",
-      "channel": "Mrs. GREEN APPLE",
-      "channel_id": "UCpFgmZm65yOU5X-hmWkWjuw",
-      "published_at": "2026-10-23T14:53:07Z",
-      "duration_seconds": 291,
-      "view_count": 17306549,
-      "like_count": 119378
+      "view_count": 18074857,
+      "like_count": 54674
     },
     {
       "id": "FholFzpRB4E",
@@ -102,8 +102,8 @@
       "channel_id": "UCp8AuGiHJeHpfzwXAh9rFMA",
       "published_at": "2026-10-19T03:30:25Z",
       "duration_seconds": 363,
-      "view_count": 17248200,
-      "like_count": 180518
+      "view_count": 17763251,
+      "like_count": 182015
     },
     {
       "id": "5j8fIDh1V0A",
@@ -112,8 +112,18 @@
       "channel_id": "UCLk8IJ1TwI7Xl7UUfAD8xPQ",
       "published_at": "2026-10-22T00:00:09Z",
       "duration_seconds": 252,
-      "view_count": 16888491,
-      "like_count": 133920
+      "view_count": 17541028,
+      "like_count": 137560
+    },
+    {
+      "id": "SWzfm9PED6s",
+      "title": "Mrs. GREEN APPLE「シンデレラ」Official Music Video",
+      "channel": "Mrs. GREEN APPLE",
+      "channel_id": "UCpFgmZm65yOU5X-hmWkWjuw",
+      "published_at": "2026-10-23T14:53:07Z",
+      "duration_seconds": 291,
+      "view_count": 17493327,
+      "like_count": 120201
     },
     {
       "id": "xbY3Twa1cBU",
@@ -122,8 +132,8 @@
       "channel_id": "UC7FE8E7nCP-sJO8o4FTo93Q",
       "published_at": "2026-10-20T09:00:11Z",
       "duration_seconds": 590,
-      "view_count": 14865731,
-      "like_count": 190173
+      "view_count": 15314917,
+      "like_count": 191084
     },
     {
       "id": "bRrjcdad2Zg",
@@ -132,8 +142,8 @@
       "channel_id": "UC3IZKseVpdzPSBaWxBxundA",
       "published_at": "2026-10-13T23:59:10Z",
       "duration_seconds": 245,
-      "view_count": 12971270,
-      "like_count": 468400
+      "view_count": 13158474,
+      "like_count": 469795
     },
     {
       "id": "M4qX5wzx-wY",
@@ -142,8 +152,8 @@
       "channel_id": "UCbOCbp5gXL8jigIBZLqMPrw",
       "published_at": "2026-10-26T16:00:07Z",
       "duration_seconds": 257,
-      "view_count": 12350449,
-      "like_count": 297152
+      "view_count": 12831685,
+      "like_count": 300558
     },
     {
       "id": "pLGRaZpNO5Y",
@@ -152,28 +162,8 @@
       "channel_id": "UC5XMNzImFGrHqyBosGm6ZaQ",
       "published_at": "2026-10-11T04:45:09Z",
       "duration_seconds": 260,
-      "view_count": 11624035,
-      "like_count": 94118
-    },
-    {
-      "id": "AJVRnupOwmg",
-      "title": "Stones Throw 30 Festival (Day 2)",
-      "channel": "Stones Throw",
-      "channel_id": "UC0L0PDO9kUS46JC1wEjLEbg",
-      "published_at": "2026-10-18T05:33:28Z",
-      "duration_seconds": 22822,
-      "view_count": 11512355,
-      "like_count": 53975
-    },
-    {
-      "id": "yYuXFriRFz0",
-      "title": "JuL - Ragnar 2 [ Clip Officiel ] 2026",
-      "channel": "DORETDEPLATINE",
-      "channel_id": "UC-GI5LST5T3Gw93yZxjdFaw",
-      "published_at": "2026-10-23T09:58:02Z",
-      "duration_seconds": 515,
-      "view_count": 11313915,
-      "like_count": 30725
+      "view_count": 11956747,
+      "like_count": 95315
     },
     {
       "id": "A5vdK_kbjCU",
@@ -182,18 +172,28 @@
       "channel_id": "UCL64gn1KZ1C-u87BGQv3b6w",
       "published_at": "2026-10-23T14:57:18Z",
       "duration_seconds": 240,
-      "view_count": 11073706,
-      "like_count": 12583
+      "view_count": 11552246,
+      "like_count": 12806
     },
     {
-      "id": "HYA9e0XOUGk",
-      "title": "Cardi B: Tiny Desk Concert",
-      "channel": "NPR Music",
-      "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-      "published_at": "2026-10-19T16:00:08Z",
-      "duration_seconds": 1127,
-      "view_count": 10621068,
-      "like_count": 374728
+      "id": "AJVRnupOwmg",
+      "title": "Stones Throw 30 Festival (Day 2)",
+      "channel": "Stones Throw",
+      "channel_id": "UC0L0PDO9kUS46JC1wEjLEbg",
+      "published_at": "2026-10-18T05:33:28Z",
+      "duration_seconds": 22822,
+      "view_count": 11512480,
+      "like_count": 53950
+    },
+    {
+      "id": "yYuXFriRFz0",
+      "title": "JuL - Ragnar 2 [ Clip Officiel ] 2026",
+      "channel": "DORETDEPLATINE",
+      "channel_id": "UC-GI5LST5T3Gw93yZxjdFaw",
+      "published_at": "2026-10-23T09:58:02Z",
+      "duration_seconds": 515,
+      "view_count": 11378882,
+      "like_count": 31017
     },
     {
       "id": "INJuqE_34eQ",
@@ -202,38 +202,8 @@
       "channel_id": "UCXKnIgvBwPV6G-uT7gBXhcA",
       "published_at": "2026-10-27T13:00:09Z",
       "duration_seconds": 261,
-      "view_count": 10602055,
-      "like_count": 132353
-    },
-    {
-      "id": "BWIpOB9Ju-M",
-      "title": "Stones Throw 30 Festival (Day 3)",
-      "channel": "Stones Throw",
-      "channel_id": "UC0L0PDO9kUS46JC1wEjLEbg",
-      "published_at": "2026-10-19T05:25:18Z",
-      "duration_seconds": 18884,
-      "view_count": 10468826,
-      "like_count": 47394
-    },
-    {
-      "id": "v9gW81_8z1A",
-      "title": "Naik Kereta Api 🚂 Tut Tut Tut! Oh Senangnya | Lagu Anak Indonesia",
-      "channel": "K3 Kids",
-      "channel_id": "UCAPgnH-OoVLebEqs51FWLVw",
-      "published_at": "2026-10-19T23:00:07Z",
-      "duration_seconds": 258,
-      "view_count": 9968237,
-      "like_count": 9274
-    },
-    {
-      "id": "fLnMzPk_p_M",
-      "title": "Magale Video Song | Baththa | Vijay Sethupathi | @SaiAbhyankkar | Balaji Tharaneetharan",
-      "channel": "Think Music India",
-      "channel_id": "UCLbdVvreihwZRL6kwuEUYsA",
-      "published_at": "2026-10-28T06:30:05Z",
-      "duration_seconds": 283,
-      "view_count": 9964150,
-      "like_count": 64405
+      "view_count": 11093430,
+      "like_count": 133063
     },
     {
       "id": "NWzesjl3NUg",
@@ -242,8 +212,48 @@
       "channel_id": "UCLziHl5a6cz8WzdyBahw0zw",
       "published_at": "2026-10-22T04:00:09Z",
       "duration_seconds": 363,
-      "view_count": 9840319,
-      "like_count": 31096
+      "view_count": 10936635,
+      "like_count": 33421
+    },
+    {
+      "id": "HYA9e0XOUGk",
+      "title": "Cardi B: Tiny Desk Concert",
+      "channel": "NPR Music",
+      "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
+      "published_at": "2026-10-19T16:00:08Z",
+      "duration_seconds": 1127,
+      "view_count": 10773118,
+      "like_count": 377272
+    },
+    {
+      "id": "fLnMzPk_p_M",
+      "title": "Magale Video Song | Baththa | Vijay Sethupathi | @SaiAbhyankkar | Balaji Tharaneetharan",
+      "channel": "Think Music India",
+      "channel_id": "UCLbdVvreihwZRL6kwuEUYsA",
+      "published_at": "2026-10-28T06:30:05Z",
+      "duration_seconds": 283,
+      "view_count": 10608786,
+      "like_count": 66822
+    },
+    {
+      "id": "BWIpOB9Ju-M",
+      "title": "Stones Throw 30 Festival (Day 3)",
+      "channel": "Stones Throw",
+      "channel_id": "UC0L0PDO9kUS46JC1wEjLEbg",
+      "published_at": "2026-10-19T05:25:18Z",
+      "duration_seconds": 18884,
+      "view_count": 10468942,
+      "like_count": 47371
+    },
+    {
+      "id": "79TCJh0whww",
+      "title": "#JAILSTAR | जेलस्टार | NEW BHOJPURI FULL MOVIE 2026 | RAUSHAN ROHI | SHILPI RAGHWANI | NEHA PATHAK",
+      "channel": "Bhumi Original",
+      "channel_id": "UCmZ9jTyKVBgto5rsxopsdlQ",
+      "published_at": "2026-10-25T04:30:09Z",
+      "duration_seconds": 7979,
+      "view_count": 10179304,
+      "like_count": 220676
     },
     {
       "id": "0pow_UtMhcM",
@@ -252,168 +262,8 @@
       "channel_id": "UCnJjcn5FrgrOEp5_N45ZLEQ",
       "published_at": "2026-11-02T12:48:11Z",
       "duration_seconds": 297,
-      "view_count": 9789078,
-      "like_count": 56450
-    },
-    {
-      "id": "gMITloKqNTQ",
-      "title": "RAP KILLA  (Music Video) KARAN AUJLA FT AZAAD | MXRCI",
-      "channel": "Karan Aujla",
-      "channel_id": "UC3XBkDeCVXCoCofFgfUZXGw",
-      "published_at": "2026-10-26T12:30:11Z",
-      "duration_seconds": 257,
-      "view_count": 9355894,
-      "like_count": 114896
-    },
-    {
-      "id": "1M1GTDqaHlc",
-      "title": "Vaaste Song: Dhvani Bhanushali, Tanishk Bagchi | Nikhil D'Souza | Bhushan Kumar | Radhika R, Vinay S",
-      "channel": "Zadey",
-      "channel_id": "UC_fI5zBk2hLqQJlOciDSpSw",
-      "published_at": "2026-10-17T02:47:00Z",
-      "duration_seconds": 261,
-      "view_count": 9192223,
-      "like_count": 38508
-    },
-    {
-      "id": "J3jyzFP9vog",
-      "title": "Tito El Bambino ❌ Ñengo Flow ❌ Ozuna ❌ Eladio Carrion - La Gerencia Remix (Video Oficial)",
-      "channel": "Tito \"El Bambino\"",
-      "channel_id": "UCxn6ts-dyAMahcpYBi95X1Q",
-      "published_at": "2026-10-28T00:00:03Z",
-      "duration_seconds": 393,
-      "view_count": 8714008,
-      "like_count": 72857
-    },
-    {
-      "id": "B-zaXo-skGo",
-      "title": "ดีใจที่ตรงนั้นไม่ใช่เรา - Only Monday [Official MV]",
-      "channel": "Only Monday Official",
-      "channel_id": "UCd07dm8l6TpykHI_TEwzCxg",
-      "published_at": "2026-10-20T11:00:14Z",
-      "duration_seconds": 334,
-      "view_count": 8513785,
-      "like_count": 51009
-    },
-    {
-      "id": "P3yQ5aa5YxY",
-      "title": "PIYA KA GHAR | FULL MOVIE | पिया का घर | Rittesh, Kajal Raghwani, Parul Thakur | Bhojpuri |SRK Music",
-      "channel": "SRK MUSIC",
-      "channel_id": "UCAH1Aw-mXgcB3t8uaqW4yTA",
-      "published_at": "2026-10-31T01:00:05Z",
-      "duration_seconds": 8406,
-      "view_count": 8433986,
-      "like_count": 52711
-    },
-    {
-      "id": "urvuh4xMAk8",
-      "title": "มาเฟียบ้านนอก - บุ๊ค ศุภกาญจน์ : บังเอิญ|Music【OFFICIAL MV】",
-      "channel": "บังเอิญ มิวสิค",
-      "channel_id": "UCzPgA-SPK2sAmIgarqnA7yw",
-      "published_at": "2026-10-16T02:00:23Z",
-      "duration_seconds": 401,
-      "view_count": 8320616,
-      "like_count": 59732
-    },
-    {
-      "id": "OWbhwq9fecg",
-      "title": "Ozuna x Jory Boy x Ñengo Flow - Vulnerable (Video Oficial)",
-      "channel": "Ozuna",
-      "channel_id": "UCjIA3wwhi0QjSOXAZwOXbPA",
-      "published_at": "2026-10-21T16:00:10Z",
-      "duration_seconds": 249,
-      "view_count": 8171221,
-      "like_count": 72614
-    },
-    {
-      "id": "DGeiGGyWDRA",
-      "title": "PHƯƠNG MỸ CHI x DTAP | GẠO CỦA TA | OFFICIAL MUSIC VIDEO",
-      "channel": "Phương Mỹ Chi",
-      "channel_id": "UCGRIV5jOtKyAibhjBdIndZQ",
-      "published_at": "2026-10-14T13:01:40Z",
-      "duration_seconds": 254,
-      "view_count": 7929606,
-      "like_count": 15875
-    },
-    {
-      "id": "L_cLzd0Hsww",
-      "title": "Alo! Biệt Đội Cứu Hộ 🚓🚒🚑 113 – 114 – 115 | Bé Học Cách Gọi Trợ Giúp | Nhạc Thiếu Nhi | Vo Ve TV",
-      "channel": "Vo Ve TV - Kênh Nhạc Thiếu Nhi",
-      "channel_id": "UC1yUMaDYayOQi0q2iwlFaAw",
-      "published_at": "2026-10-19T08:24:51Z",
-      "duration_seconds": 241,
-      "view_count": 7772137,
-      "like_count": 4302
-    },
-    {
-      "id": "NqenRYRQ-20",
-      "title": "MAHABHOJ | Official Full Movie | Dayahang Rai, Aryan Sigdel, Khagendra Lamichhane, Anjana Baraili",
-      "channel": "Kendra Motion Pictures",
-      "channel_id": "UCJNR5MAFL1Kd4HZrukx0UbA",
-      "published_at": "2026-10-17T01:15:07Z",
-      "duration_seconds": 7913,
-      "view_count": 7623273,
-      "like_count": 64291
-    },
-    {
-      "id": "QFkL82O38Xk",
-      "title": "Sundara Ravanan - Lyric Video | Athimanoharam | Mohanlal | Tharun Moorthy | Ashiq Usman |Jakes bejoy",
-      "channel": "Sony Music Malayalam",
-      "channel_id": "UCpJmCkjsJbqIBdvTRx2zt-w",
-      "published_at": "2026-11-01T04:28:08Z",
-      "duration_seconds": 282,
-      "view_count": 7138270,
-      "like_count": 72710
-    },
-    {
-      "id": "R7njZ8aGtBE",
-      "title": "La Canción de las Frutas 2 🍐🍒🥥  Frutas Talent ✨ Adivinanzas para Niños",
-      "channel": "El Jardín de la Fantasía",
-      "channel_id": "UCkW8YEM4PSvcXvUEdOxN5FQ",
-      "published_at": "2026-10-24T17:00:09Z",
-      "duration_seconds": 242,
-      "view_count": 7008045,
-      "like_count": 2109
-    },
-    {
-      "id": "TeMXZyD_LPo",
-      "title": "Didine Canon 16 - Skatii [Official Music Video] (2026) / ديدين كانون - سكاتي",
-      "channel": "Space X Music",
-      "channel_id": "UCwJqYItX82d5Rkjbnrds3vA",
-      "published_at": "2026-10-26T14:00:09Z",
-      "duration_seconds": 268,
-      "view_count": 7006209,
-      "like_count": 80222
-    },
-    {
-      "id": "1qOJvWakMz0",
-      "title": "3 DAYS IN LA l V’s VLOG",
-      "channel": "BANGTANTV",
-      "channel_id": "UCLkAepWjdylmXSltofFvsYQ",
-      "published_at": "2026-10-15T10:00:07Z",
-      "duration_seconds": 1307,
-      "view_count": 6900902,
-      "like_count": 496864
-    },
-    {
-      "id": "ZTcqu224vHw",
-      "title": "Los Tigres del Norte: Tiny Desk Concert",
-      "channel": "NPR Music",
-      "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-      "published_at": "2026-10-15T16:00:08Z",
-      "duration_seconds": 1302,
-      "view_count": 6718471,
-      "like_count": 280312
-    },
-    {
-      "id": "_4ZvDPzeodE",
-      "title": "เขาแค่..บ่เปิดโต - ลำเพลิน วงศกร feat. ธีร์ ทีเร็กซ์【OFFICIAL MV】",
-      "channel": "ThaiToneGen.Official",
-      "channel_id": "UC0l4aUvRziU8wKPJja6J9FQ",
-      "published_at": "2026-10-16T11:00:11Z",
-      "duration_seconds": 321,
-      "view_count": 6671014,
-      "like_count": 21720
+      "view_count": 9918886,
+      "like_count": 56833
     },
     {
       "id": "xBqPHF_PU3E",
@@ -422,28 +272,98 @@
       "channel_id": "UCq-Fj5jknLsUf-MWSy4_brA",
       "published_at": "2026-11-08T05:28:42Z",
       "duration_seconds": 306,
-      "view_count": 6544499,
-      "like_count": 18609
+      "view_count": 9777957,
+      "like_count": 27367
     },
     {
-      "id": "mx0KW0sDhHE",
-      "title": "Fadel Chaker - Nam El Layl | فضل شاكر - نام الليل (حصريا من ألبوم حلم جديد) | 2026",
-      "channel": "Fadel Chaker",
-      "channel_id": "UCzKaBQDTjmqL1GLwJfxtqXg",
-      "published_at": "2026-11-03T06:04:09Z",
-      "duration_seconds": 264,
-      "view_count": 6543085,
-      "like_count": 62407
+      "id": "1M1GTDqaHlc",
+      "title": "Vaaste Song: Dhvani Bhanushali, Tanishk Bagchi | Nikhil D'Souza | Bhushan Kumar | Radhika R, Vinay S",
+      "channel": "Zadey",
+      "channel_id": "UC_fI5zBk2hLqQJlOciDSpSw",
+      "published_at": "2026-10-17T02:47:00Z",
+      "duration_seconds": 261,
+      "view_count": 9600596,
+      "like_count": 39788
     },
     {
-      "id": "cWlBXqplRRY",
-      "title": "BANDOLEIRA - Nino Abravanel - Ryan SP, Nego Trufa, Jvila, Meno K, Lele JP (Glenner e Daltin no Beat)",
-      "channel": "MC Ryan SP",
-      "channel_id": "UCPcYWxn0m3-A74e3yE7VrVw",
-      "published_at": "2026-10-14T22:30:07Z",
-      "duration_seconds": 351,
-      "view_count": 6414573,
-      "like_count": 65373
+      "id": "gMITloKqNTQ",
+      "title": "RAP KILLA  (Music Video) KARAN AUJLA FT AZAAD | MXRCI",
+      "channel": "Karan Aujla",
+      "channel_id": "UC3XBkDeCVXCoCofFgfUZXGw",
+      "published_at": "2026-10-26T12:30:11Z",
+      "duration_seconds": 257,
+      "view_count": 9474809,
+      "like_count": 116005
+    },
+    {
+      "id": "J3jyzFP9vog",
+      "title": "Tito El Bambino ❌ Ñengo Flow ❌ Ozuna ❌ Eladio Carrion - La Gerencia Remix (Video Oficial)",
+      "channel": "Tito \"El Bambino\"",
+      "channel_id": "UCxn6ts-dyAMahcpYBi95X1Q",
+      "published_at": "2026-10-28T00:00:03Z",
+      "duration_seconds": 393,
+      "view_count": 9169562,
+      "like_count": 73937
+    },
+    {
+      "id": "B-zaXo-skGo",
+      "title": "ดีใจที่ตรงนั้นไม่ใช่เรา - Only Monday [Official MV]",
+      "channel": "Only Monday Official",
+      "channel_id": "UCd07dm8l6TpykHI_TEwzCxg",
+      "published_at": "2026-10-20T11:00:14Z",
+      "duration_seconds": 334,
+      "view_count": 8951271,
+      "like_count": 51917
+    },
+    {
+      "id": "P3yQ5aa5YxY",
+      "title": "PIYA KA GHAR | FULL MOVIE | पिया का घर | Rittesh, Kajal Raghwani, Parul Thakur | Bhojpuri |SRK Music",
+      "channel": "SRK MUSIC",
+      "channel_id": "UCAH1Aw-mXgcB3t8uaqW4yTA",
+      "published_at": "2026-10-31T01:00:05Z",
+      "duration_seconds": 8406,
+      "view_count": 8863548,
+      "like_count": 54571
+    },
+    {
+      "id": "urvuh4xMAk8",
+      "title": "มาเฟียบ้านนอก - บุ๊ค ศุภกาญจน์ : บังเอิญ|Music【OFFICIAL MV】",
+      "channel": "บังเอิญ มิวสิค",
+      "channel_id": "UCzPgA-SPK2sAmIgarqnA7yw",
+      "published_at": "2026-10-16T02:00:23Z",
+      "duration_seconds": 401,
+      "view_count": 8653294,
+      "like_count": 60962
+    },
+    {
+      "id": "L_cLzd0Hsww",
+      "title": "Alo! Biệt Đội Cứu Hộ 🚓🚒🚑 113 – 114 – 115 | Bé Học Cách Gọi Trợ Giúp | Nhạc Thiếu Nhi | Vo Ve TV",
+      "channel": "Vo Ve TV - Kênh Nhạc Thiếu Nhi",
+      "channel_id": "UC1yUMaDYayOQi0q2iwlFaAw",
+      "published_at": "2026-10-19T08:24:51Z",
+      "duration_seconds": 241,
+      "view_count": 8596891,
+      "like_count": 4773
+    },
+    {
+      "id": "DGeiGGyWDRA",
+      "title": "PHƯƠNG MỸ CHI x DTAP | GẠO CỦA TA | OFFICIAL MUSIC VIDEO",
+      "channel": "Phương Mỹ Chi",
+      "channel_id": "UCGRIV5jOtKyAibhjBdIndZQ",
+      "published_at": "2026-10-14T13:01:40Z",
+      "duration_seconds": 254,
+      "view_count": 8524949,
+      "like_count": 15950
+    },
+    {
+      "id": "OWbhwq9fecg",
+      "title": "Ozuna x Jory Boy x Ñengo Flow - Vulnerable (Video Oficial)",
+      "channel": "Ozuna",
+      "channel_id": "UCjIA3wwhi0QjSOXAZwOXbPA",
+      "published_at": "2026-10-21T16:00:10Z",
+      "duration_seconds": 249,
+      "view_count": 8316841,
+      "like_count": 73397
     },
     {
       "id": "1KaWzM_PIlg",
@@ -452,138 +372,48 @@
       "channel_id": "UC5WwPdvAHvdS1ZK_v6AE90A",
       "published_at": "2026-10-22T14:30:35Z",
       "duration_seconds": 482,
-      "view_count": 6323778,
-      "like_count": 1619
+      "view_count": 8121796,
+      "like_count": 1993
     },
     {
-      "id": "rwcoXr5-xqk",
-      "title": "KYA KYA KARTE HO(OFFICIAL VIDEO) ||SHIVA CHODHARY || SANDEEP JOHAL  ||ANJAL I| ARORA || KRISHAN M.",
-      "channel": "Positive Studios",
-      "channel_id": "UCpuFwzM5jDNiqdXLGDSyWCQ",
-      "published_at": "2026-11-03T07:36:31Z",
-      "duration_seconds": 262,
-      "view_count": 6225089,
-      "like_count": 19676
+      "id": "NqenRYRQ-20",
+      "title": "MAHABHOJ | Official Full Movie | Dayahang Rai, Aryan Sigdel, Khagendra Lamichhane, Anjana Baraili",
+      "channel": "Kendra Motion Pictures",
+      "channel_id": "UCJNR5MAFL1Kd4HZrukx0UbA",
+      "published_at": "2026-10-17T01:15:07Z",
+      "duration_seconds": 7913,
+      "view_count": 7747460,
+      "like_count": 64722
     },
     {
-      "id": "pfUnfbaNarg",
-      "title": "저희 진지합니다. 제1회 피클볼 대회 l BTS in Toronto EP.2",
-      "channel": "BANGTANTV",
-      "channel_id": "UCLkAepWjdylmXSltofFvsYQ",
-      "published_at": "2026-10-11T11:00:00Z",
-      "duration_seconds": 1797,
-      "view_count": 6079141,
-      "like_count": 336345
+      "id": "TeMXZyD_LPo",
+      "title": "Didine Canon 16 - Skatii [Official Music Video] (2026) / ديدين كانون - سكاتي",
+      "channel": "Space X Music",
+      "channel_id": "UCwJqYItX82d5Rkjbnrds3vA",
+      "published_at": "2026-10-26T14:00:09Z",
+      "duration_seconds": 268,
+      "view_count": 7671963,
+      "like_count": 84025
     },
     {
-      "id": "bX9WYaIzVa4",
-      "title": "ଦମନ | DAMaN | Full Movie | Odia Film | Babushaan Mohanty | Dipanwit | National Award-Winning Film",
-      "channel": "Amara Muzik Odia",
-      "channel_id": "UC1EuA9aHCO81CRoJiAW5L2A",
-      "published_at": "2026-10-16T10:30:08Z",
-      "duration_seconds": 7112,
-      "view_count": 5983534,
-      "like_count": 108479
+      "id": "R7njZ8aGtBE",
+      "title": "La Canción de las Frutas 2 🍐🍒🥥  Frutas Talent ✨ Adivinanzas para Niños",
+      "channel": "El Jardín de la Fantasía",
+      "channel_id": "UCkW8YEM4PSvcXvUEdOxN5FQ",
+      "published_at": "2026-10-24T17:00:09Z",
+      "duration_seconds": 242,
+      "view_count": 7660562,
+      "like_count": 2305
     },
     {
-      "id": "RC_FqhJa-kI",
-      "title": "มาตามสัญญา - TaitosmitH |Official MV|",
-      "channel": "9 Arkkhan",
-      "channel_id": "UCWmRsH4IWvX0emrOZRkplqQ",
-      "published_at": "2026-10-14T11:00:29Z",
-      "duration_seconds": 319,
-      "view_count": 5970003,
-      "like_count": 47211
-    },
-    {
-      "id": "TOaHE92acDE",
-      "title": "One Sided Love - Mashup | Lo-fi 2307 | Arijit Singh | Latest 4K Trending Mashup",
-      "channel": "Lo-fi 2307",
-      "channel_id": "UCh7aocZezr9gnY0uh0uONVA",
-      "published_at": "2026-10-21T14:00:18Z",
-      "duration_seconds": 359,
-      "view_count": 5896471,
-      "like_count": 20007
-    },
-    {
-      "id": "e1ZMmRlsaaU",
-      "title": "スネ夫 - SUNEO-ISM (スネオイズム) / THE FIRST TAKE【完全フルver】",
-      "channel": "B子",
-      "channel_id": "UCHp8vi-fHbBbYSMZCyOjEiA",
-      "published_at": "2026-10-10T09:00:07Z",
-      "duration_seconds": 300,
-      "view_count": 5890618,
-      "like_count": 51641
-    },
-    {
-      "id": "pySJJbS-1oo",
-      "title": "Наша Свадьба! Мы Муж и Жена! Потратил *0.000.000 ₽",
-      "channel": "ExileLive",
-      "channel_id": "UC0ohVyiCEKT5i4iDd6RYKng",
-      "published_at": "2026-10-31T18:51:53Z",
-      "duration_seconds": 6581,
-      "view_count": 5879586,
-      "like_count": 185369
-    },
-    {
-      "id": "_YMYy7eTio8",
-      "title": "Sirf Tum (Music Video) - Darshan Raval | Barkha Singh | Youngveer | Mir Desai | The Everafter",
-      "channel": "DarshanRavalDZ",
-      "channel_id": "UCzAn-hBNSTjX-QMnHASZFfA",
-      "published_at": "2026-10-24T06:25:16Z",
-      "duration_seconds": 418,
-      "view_count": 5868460,
-      "like_count": 57680
-    },
-    {
-      "id": "M9Ji8gqV7s0",
-      "title": "MUTIARA - Jeyma Monica X Dini Kurnia (Official Live Music Video) Adakah kenyamanan di hatimu",
-      "channel": "Jeyma Monica Official",
-      "channel_id": "UCLziHl5a6cz8WzdyBahw0zw",
-      "published_at": "2026-10-15T04:00:09Z",
-      "duration_seconds": 501,
-      "view_count": 5837085,
-      "like_count": 19938
-    },
-    {
-      "id": "TBfN-xe2p0A",
-      "title": "磁石(Magnet) - SHIROSE [Music Video]",
-      "channel": "WHITE JAM Official",
-      "channel_id": "UClM-RxoeCKN6ArtFfBp05Yw",
-      "published_at": "2026-10-17T12:00:04Z",
-      "duration_seconds": 256,
-      "view_count": 5817566,
-      "like_count": 35371
-    },
-    {
-      "id": "XuOicpNoUM4",
-      "title": "SiM - The Rumbling / THE FIRST TAKE",
-      "channel": "THE FIRST TAKE",
-      "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-      "published_at": "2026-10-23T13:00:06Z",
-      "duration_seconds": 265,
-      "view_count": 5809495,
-      "like_count": 76744
-    },
-    {
-      "id": "d7s-2eLvT8Q",
-      "title": "[뮤뱅 원테이크 4K HDR] 아이브 (IVE) 'Looks Can Kill' 4k Bonus Ver. @뮤직뱅크 (Music Bank) 261023",
-      "channel": "KBS Kpop",
-      "channel_id": "UCeLPm9yH_a_QH8n6445G-Ow",
-      "published_at": "2026-10-23T10:50:13Z",
-      "duration_seconds": 240,
-      "view_count": 5780584,
-      "like_count": 42950
-    },
-    {
-      "id": "I5vSfvxOolI",
-      "title": "Shirmai Phool Maya | Suga Chari | - Prakash Dutraj | Melina Rai | Shanti Shree Pariyar | New Song",
-      "channel": "Prakash Dutraj",
-      "channel_id": "UCewXbsw3E7sTeU8daA84sYA",
-      "published_at": "2026-10-15T11:15:08Z",
-      "duration_seconds": 1425,
-      "view_count": 5770028,
-      "like_count": 81005
+      "id": "QFkL82O38Xk",
+      "title": "Sundara Ravanan - Lyric Video | Athimanoharam | Mohanlal | Tharun Moorthy | Ashiq Usman |Jakes bejoy",
+      "channel": "Sony Music Malayalam",
+      "channel_id": "UCpJmCkjsJbqIBdvTRx2zt-w",
+      "published_at": "2026-11-01T04:28:08Z",
+      "duration_seconds": 282,
+      "view_count": 7414771,
+      "like_count": 73788
     },
     {
       "id": "JpB0UtlKG2Y",
@@ -592,8 +422,168 @@
       "channel_id": "UCs2t9DlvAuyTBkvk2djGZKw",
       "published_at": "2026-11-04T11:00:13Z",
       "duration_seconds": 308,
-      "view_count": 5434324,
-      "like_count": 69414
+      "view_count": 7094527,
+      "like_count": 77459
+    },
+    {
+      "id": "1qOJvWakMz0",
+      "title": "3 DAYS IN LA l V’s VLOG",
+      "channel": "BANGTANTV",
+      "channel_id": "UCLkAepWjdylmXSltofFvsYQ",
+      "published_at": "2026-10-15T10:00:07Z",
+      "duration_seconds": 1307,
+      "view_count": 6935635,
+      "like_count": 497873
+    },
+    {
+      "id": "_4ZvDPzeodE",
+      "title": "เขาแค่..บ่เปิดโต - ลำเพลิน วงศกร feat. ธีร์ ทีเร็กซ์【OFFICIAL MV】",
+      "channel": "ThaiToneGen.Official",
+      "channel_id": "UC0l4aUvRziU8wKPJja6J9FQ",
+      "published_at": "2026-10-16T11:00:11Z",
+      "duration_seconds": 321,
+      "view_count": 6931833,
+      "like_count": 22110
+    },
+    {
+      "id": "mx0KW0sDhHE",
+      "title": "Fadel Chaker - Nam El Layl | فضل شاكر - نام الليل (حصريا من ألبوم حلم جديد) | 2026",
+      "channel": "Fadel Chaker",
+      "channel_id": "UCzKaBQDTjmqL1GLwJfxtqXg",
+      "published_at": "2026-11-03T06:04:09Z",
+      "duration_seconds": 264,
+      "view_count": 6920378,
+      "like_count": 64097
+    },
+    {
+      "id": "ZTcqu224vHw",
+      "title": "Los Tigres del Norte: Tiny Desk Concert",
+      "channel": "NPR Music",
+      "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
+      "published_at": "2026-10-15T16:00:08Z",
+      "duration_seconds": 1302,
+      "view_count": 6748610,
+      "like_count": 280737
+    },
+    {
+      "id": "cWlBXqplRRY",
+      "title": "BANDOLEIRA - Nino Abravanel - Ryan SP, Nego Trufa, Jvila, Meno K, Lele JP (Glenner e Daltin no Beat)",
+      "channel": "MC Ryan SP",
+      "channel_id": "UCPcYWxn0m3-A74e3yE7VrVw",
+      "published_at": "2026-10-14T22:30:07Z",
+      "duration_seconds": 351,
+      "view_count": 6538209,
+      "like_count": 65768
+    },
+    {
+      "id": "TOaHE92acDE",
+      "title": "One Sided Love - Mashup | Lo-fi 2307 | Arijit Singh | Latest 4K Trending Mashup",
+      "channel": "Lo-fi 2307",
+      "channel_id": "UCh7aocZezr9gnY0uh0uONVA",
+      "published_at": "2026-10-21T14:00:18Z",
+      "duration_seconds": 359,
+      "view_count": 6176047,
+      "like_count": 20937
+    },
+    {
+      "id": "RC_FqhJa-kI",
+      "title": "มาตามสัญญา - TaitosmitH |Official MV|",
+      "channel": "9 Arkkhan",
+      "channel_id": "UCWmRsH4IWvX0emrOZRkplqQ",
+      "published_at": "2026-10-14T11:00:29Z",
+      "duration_seconds": 319,
+      "view_count": 6105640,
+      "like_count": 47452
+    },
+    {
+      "id": "pfUnfbaNarg",
+      "title": "저희 진지합니다. 제1회 피클볼 대회 l BTS in Toronto EP.2",
+      "channel": "BANGTANTV",
+      "channel_id": "UCLkAepWjdylmXSltofFvsYQ",
+      "published_at": "2026-10-11T11:00:00Z",
+      "duration_seconds": 1797,
+      "view_count": 6101156,
+      "like_count": 336859
+    },
+    {
+      "id": "M9Ji8gqV7s0",
+      "title": "MUTIARA - Jeyma Monica X Dini Kurnia (Official Live Music Video) Adakah kenyamanan di hatimu",
+      "channel": "Jeyma Monica Official",
+      "channel_id": "UCLziHl5a6cz8WzdyBahw0zw",
+      "published_at": "2026-10-15T04:00:09Z",
+      "duration_seconds": 501,
+      "view_count": 6094632,
+      "like_count": 20471
+    },
+    {
+      "id": "bX9WYaIzVa4",
+      "title": "ଦମନ | DAMaN | Full Movie | Odia Film | Babushaan Mohanty | Dipanwit | National Award-Winning Film",
+      "channel": "Amara Muzik Odia",
+      "channel_id": "UC1EuA9aHCO81CRoJiAW5L2A",
+      "published_at": "2026-10-16T10:30:08Z",
+      "duration_seconds": 7112,
+      "view_count": 6013999,
+      "like_count": 108758
+    },
+    {
+      "id": "pySJJbS-1oo",
+      "title": "Наша Свадьба! Мы Муж и Жена! Потратил *0.000.000 ₽",
+      "channel": "ExileLive",
+      "channel_id": "UC0ohVyiCEKT5i4iDd6RYKng",
+      "published_at": "2026-10-31T18:51:53Z",
+      "duration_seconds": 6581,
+      "view_count": 6012950,
+      "like_count": 187653
+    },
+    {
+      "id": "_YMYy7eTio8",
+      "title": "Sirf Tum (Music Video) - Darshan Raval | Barkha Singh | Youngveer | Mir Desai | The Everafter",
+      "channel": "DarshanRavalDZ",
+      "channel_id": "UCzAn-hBNSTjX-QMnHASZFfA",
+      "published_at": "2026-10-24T06:25:16Z",
+      "duration_seconds": 418,
+      "view_count": 5941604,
+      "like_count": 58345
+    },
+    {
+      "id": "d7s-2eLvT8Q",
+      "title": "[뮤뱅 원테이크 4K HDR] 아이브 (IVE) 'Looks Can Kill' 4k Bonus Ver. @뮤직뱅크 (Music Bank) 261023",
+      "channel": "KBS Kpop",
+      "channel_id": "UCeLPm9yH_a_QH8n6445G-Ow",
+      "published_at": "2026-10-23T10:50:13Z",
+      "duration_seconds": 240,
+      "view_count": 5909746,
+      "like_count": 43601
+    },
+    {
+      "id": "I5vSfvxOolI",
+      "title": "Shirmai Phool Maya | Suga Chari | - Prakash Dutraj | Melina Rai | Shanti Shree Pariyar | New Song",
+      "channel": "Prakash Dutraj",
+      "channel_id": "UCewXbsw3E7sTeU8daA84sYA",
+      "published_at": "2026-10-15T11:15:08Z",
+      "duration_seconds": 1425,
+      "view_count": 5876435,
+      "like_count": 81359
+    },
+    {
+      "id": "TBfN-xe2p0A",
+      "title": "磁石(Magnet) - SHIROSE [Music Video]",
+      "channel": "WHITE JAM Official",
+      "channel_id": "UClM-RxoeCKN6ArtFfBp05Yw",
+      "published_at": "2026-10-17T12:00:04Z",
+      "duration_seconds": 256,
+      "view_count": 5869301,
+      "like_count": 35622
+    },
+    {
+      "id": "XuOicpNoUM4",
+      "title": "SiM - The Rumbling / THE FIRST TAKE",
+      "channel": "THE FIRST TAKE",
+      "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+      "published_at": "2026-10-23T13:00:06Z",
+      "duration_seconds": 265,
+      "view_count": 5841212,
+      "like_count": 77151
     },
     {
       "id": "-eQEFtrOpNw",
@@ -602,48 +592,8 @@
       "channel_id": "UCjT3WfzAkYhKqbOBC0A-OHg",
       "published_at": "2026-11-03T10:50:34Z",
       "duration_seconds": 396,
-      "view_count": 5275499,
-      "like_count": 70576
-    },
-    {
-      "id": "OPPKIjccXJo",
-      "title": "Ca Sĩ Mặt Nạ-The Masked Singer Vietnam 2026 Tập 2:HIT “ngân hà” đổ bộ,pha ẩn mình thách mọi suy đoán",
-      "channel": "Vie Channel ",
-      "channel_id": "UCkna2OcuN1E6u5I8GVtdkOw",
-      "published_at": "2026-10-10T13:00:11Z",
-      "duration_seconds": 8824,
-      "view_count": 5256731,
-      "like_count": 23779
-    },
-    {
-      "id": "l9tIQ54YRUU",
-      "title": "Jaane Kis Mod Pe (Video) | Pehla Pyaar Doosri Baar | Darshan Raval | Shreya J | Rochak K |Gurpreet S",
-      "channel": "T-Series",
-      "channel_id": "UCq-Fj5jknLsUf-MWSy4_brA",
-      "published_at": "2026-10-10T04:30:08Z",
-      "duration_seconds": 248,
-      "view_count": 5209983,
-      "like_count": 34707
-    },
-    {
-      "id": "4QskmxtudzQ",
-      "title": "NCT 운동회 한다는데? “어느 엔시티.” | 《 2026 NCT 육상 선수권 대회 》",
-      "channel": "NCT",
-      "channel_id": "UCwgtORdDtUKhpjE1VBv6XfA",
-      "published_at": "2026-10-21T11:00:04Z",
-      "duration_seconds": 5324,
-      "view_count": 4969620,
-      "like_count": 217263
-    },
-    {
-      "id": "q8rVueRuloo",
-      "title": "Ca Sĩ Mặt Nạ-The Masked Singer Vietnam 2026 Tập 3: 5ẩn số cuối cùng lộ diện,đánh lạc hướng ngoạn mục",
-      "channel": "Vie Channel ",
-      "channel_id": "UCkna2OcuN1E6u5I8GVtdkOw",
-      "published_at": "2026-10-17T13:00:09Z",
-      "duration_seconds": 8182,
-      "view_count": 4933748,
-      "like_count": 20357
+      "view_count": 5787196,
+      "like_count": 75298
     },
     {
       "id": "bk8RwaUDhwk",
@@ -652,8 +602,8 @@
       "channel_id": "UCSFWkjQRmSJoz9QQ4lkwlDA",
       "published_at": "2026-10-29T11:00:09Z",
       "duration_seconds": 259,
-      "view_count": 4813511,
-      "like_count": 57868
+      "view_count": 5357737,
+      "like_count": 59215
     },
     {
       "id": "B-naUXB1S00",
@@ -662,38 +612,8 @@
       "channel_id": "UCQvKvB7fBV1wZtWsD0prkwg",
       "published_at": "2026-11-05T06:04:01Z",
       "duration_seconds": 274,
-      "view_count": 4773639,
-      "like_count": 34250
-    },
-    {
-      "id": "e_XdJ77i2Sg",
-      "title": "Ca Sĩ Mặt Nạ-The Masked Singer Vietnam 2026 Tập 4:Lột xác bất ngờ,lộ diện ấn tượng với bài hát “mới”",
-      "channel": "Vie Channel ",
-      "channel_id": "UCkna2OcuN1E6u5I8GVtdkOw",
-      "published_at": "2026-10-24T13:00:07Z",
-      "duration_seconds": 10765,
-      "view_count": 4764662,
-      "like_count": 19590
-    },
-    {
-      "id": "Ix1xnh4y3wA",
-      "title": "Emre Fel - Avare (Official Video)",
-      "channel": "Emre Fel",
-      "channel_id": "UC68zjaRBbA5PWOtQyy6Msmw",
-      "published_at": "2026-10-15T21:00:07Z",
-      "duration_seconds": 265,
-      "view_count": 4753460,
-      "like_count": 33501
-    },
-    {
-      "id": "bAimnHlm29s",
-      "title": "HALLELUJAH FESTIVAL || OCT 2026 || GRAND FINALE",
-      "channel": "Nathaniel Bassey Main",
-      "channel_id": "UCRe2Ir9wtPk_YQjElam7n2w",
-      "published_at": "2026-10-31T04:46:08Z",
-      "duration_seconds": 37695,
-      "view_count": 4709783,
-      "like_count": 141200
+      "view_count": 5276980,
+      "like_count": 49702
     },
     {
       "id": "-xJY_BDNyNA",
@@ -702,8 +622,38 @@
       "channel_id": "UCmVIR9Z50yfzzN4ncsPloBg",
       "published_at": "2026-10-30T00:59:51Z",
       "duration_seconds": 285,
-      "view_count": 4672522,
-      "like_count": 115645
+      "view_count": 5055507,
+      "like_count": 118185
+    },
+    {
+      "id": "4QskmxtudzQ",
+      "title": "NCT 운동회 한다는데? “어느 엔시티.” | 《 2026 NCT 육상 선수권 대회 》",
+      "channel": "NCT",
+      "channel_id": "UCwgtORdDtUKhpjE1VBv6XfA",
+      "published_at": "2026-10-21T11:00:04Z",
+      "duration_seconds": 5324,
+      "view_count": 4999640,
+      "like_count": 217872
+    },
+    {
+      "id": "q8rVueRuloo",
+      "title": "Ca Sĩ Mặt Nạ-The Masked Singer Vietnam 2026 Tập 3: 5ẩn số cuối cùng lộ diện,đánh lạc hướng ngoạn mục",
+      "channel": "Vie Channel ",
+      "channel_id": "UCkna2OcuN1E6u5I8GVtdkOw",
+      "published_at": "2026-10-17T13:00:09Z",
+      "duration_seconds": 8182,
+      "view_count": 4952329,
+      "like_count": 20449
+    },
+    {
+      "id": "Ix1xnh4y3wA",
+      "title": "Emre Fel - Avare (Official Video)",
+      "channel": "Emre Fel",
+      "channel_id": "UC68zjaRBbA5PWOtQyy6Msmw",
+      "published_at": "2026-10-15T21:00:07Z",
+      "duration_seconds": 265,
+      "view_count": 4903854,
+      "like_count": 33864
     },
     {
       "id": "Iy5nOfzOejI",
@@ -712,28 +662,8 @@
       "channel_id": "UCYp3rk70ACGXQ4gFAiMr1SQ",
       "published_at": "2026-10-23T15:00:11Z",
       "duration_seconds": 314,
-      "view_count": 4656288,
-      "like_count": 82154
-    },
-    {
-      "id": "TUuVOW7XogA",
-      "title": "U2 - The Greatest Show On Earth",
-      "channel": "U2VEVO",
-      "channel_id": "UCpd21W3qWyzIl8-PXvyDA2g",
-      "published_at": "2026-10-15T16:00:11Z",
-      "duration_seconds": 342,
-      "view_count": 4610857,
-      "like_count": 71527
-    },
-    {
-      "id": "k259hkI6eto",
-      "title": "[뮤뱅 스테디캠 4K] A2O LITE 'NEON' 4k Bonus Ver. @뮤직뱅크(Music Bank) 261023",
-      "channel": "KBS Kpop",
-      "channel_id": "UCeLPm9yH_a_QH8n6445G-Ow",
-      "published_at": "2026-10-23T11:00:11Z",
-      "duration_seconds": 244,
-      "view_count": 4576211,
-      "like_count": 33235
+      "view_count": 4868603,
+      "like_count": 84065
     },
     {
       "id": "L2iJMqvXvBY",
@@ -742,8 +672,68 @@
       "channel_id": "UCh6r40fbLs62rieVnODZkSw",
       "published_at": "2026-10-30T01:15:20Z",
       "duration_seconds": 279,
-      "view_count": 4559455,
-      "like_count": 91270
+      "view_count": 4820126,
+      "like_count": 93238
+    },
+    {
+      "id": "7aIOY0UZXTA",
+      "title": "Mark Lee (마크리) - Happiest (Official Music Video)",
+      "channel": "Mark Lee",
+      "channel_id": "UCcgdQVCkGHvp_4g9fXsSt3w",
+      "published_at": "2026-11-06T05:00:06Z",
+      "duration_seconds": 254,
+      "view_count": 4807466,
+      "like_count": 44282
+    },
+    {
+      "id": "e_XdJ77i2Sg",
+      "title": "Ca Sĩ Mặt Nạ-The Masked Singer Vietnam 2026 Tập 4:Lột xác bất ngờ,lộ diện ấn tượng với bài hát “mới”",
+      "channel": "Vie Channel ",
+      "channel_id": "UCkna2OcuN1E6u5I8GVtdkOw",
+      "published_at": "2026-10-24T13:00:07Z",
+      "duration_seconds": 10765,
+      "view_count": 4786148,
+      "like_count": 19666
+    },
+    {
+      "id": "k259hkI6eto",
+      "title": "[뮤뱅 스테디캠 4K] A2O LITE 'NEON' 4k Bonus Ver. @뮤직뱅크(Music Bank) 261023",
+      "channel": "KBS Kpop",
+      "channel_id": "UCeLPm9yH_a_QH8n6445G-Ow",
+      "published_at": "2026-10-23T11:00:11Z",
+      "duration_seconds": 244,
+      "view_count": 4757470,
+      "like_count": 33763
+    },
+    {
+      "id": "bAimnHlm29s",
+      "title": "HALLELUJAH FESTIVAL || OCT 2026 || GRAND FINALE",
+      "channel": "Nathaniel Bassey Main",
+      "channel_id": "UCRe2Ir9wtPk_YQjElam7n2w",
+      "published_at": "2026-10-31T04:46:08Z",
+      "duration_seconds": 37695,
+      "view_count": 4722980,
+      "like_count": 141318
+    },
+    {
+      "id": "TUuVOW7XogA",
+      "title": "U2 - The Greatest Show On Earth",
+      "channel": "U2VEVO",
+      "channel_id": "UCpd21W3qWyzIl8-PXvyDA2g",
+      "published_at": "2026-10-15T16:00:11Z",
+      "duration_seconds": 342,
+      "view_count": 4688498,
+      "like_count": 72039
+    },
+    {
+      "id": "FmM1PzOSeg8",
+      "title": "Swag of Arjun (Lyrical) | Vrushakarma | Naga Chaitanya, Meenakshi | Kartik Dandu | Ajaneesh Loknath",
+      "channel": "T-Series Telugu",
+      "channel_id": "UCnJjcn5FrgrOEp5_N45ZLEQ",
+      "published_at": "2026-11-07T11:29:09Z",
+      "duration_seconds": 255,
+      "view_count": 4649128,
+      "like_count": 26584
     },
     {
       "id": "-66zSkBhZko",
@@ -752,8 +742,8 @@
       "channel_id": "UCkna2OcuN1E6u5I8GVtdkOw",
       "published_at": "2026-10-31T13:00:10Z",
       "duration_seconds": 10221,
-      "view_count": 4555893,
-      "like_count": 18146
+      "view_count": 4597728,
+      "like_count": 18302
     },
     {
       "id": "J5-NUv2fNtk",
@@ -762,168 +752,18 @@
       "channel_id": "UCRIgIJQWuBJ0Cv_VlU3USNA",
       "published_at": "2026-10-14T09:00:18Z",
       "duration_seconds": 262,
-      "view_count": 4515566,
-      "like_count": 66209
+      "view_count": 4579168,
+      "like_count": 66656
     },
     {
-      "id": "0Fbsm70I96E",
-      "title": "Sri Hari Charane Mana Lagare | Full Video | Odia Kirtan Bhajan | Viral Odia Bhajan",
-      "channel": "Bhajan Dunia TV",
-      "channel_id": "UCNkB4-PDRpWkKkN5VQ8BPeQ",
-      "published_at": "2026-10-17T00:00:19Z",
-      "duration_seconds": 975,
-      "view_count": 4374958,
-      "like_count": 39899
-    },
-    {
-      "id": "XoFALjTUXhw",
-      "title": "TRONG ĐÔI MẮT THIẾU NỮ - RHYDER | OFFICIAL MUSIC VIDEO",
-      "channel": "RHYDER OFFICIAL",
-      "channel_id": "UCPjbFSSZXI7ERLRt3O0CGBQ",
-      "published_at": "2026-10-12T13:00:07Z",
-      "duration_seconds": 285,
-      "view_count": 4263665,
-      "like_count": 51927
-    },
-    {
-      "id": "aY_Z4yXBg3Y",
-      "title": "Bath Song - Johny Johny Takes a Bath + Wheels on the Bus | Kids Songs and Nursery Rhymes",
-      "channel": "LooLoo Kids - Nursery Rhymes and Children's Songs",
-      "channel_id": "UC4NALVCmcmL5ntpV0thoH6w",
-      "published_at": "2026-10-19T09:30:05Z",
-      "duration_seconds": 276,
-      "view_count": 4172198,
-      "like_count": 1106
-    },
-    {
-      "id": "Z4pwuMQkKFU",
-      "title": "Ladobai Rusali | लाडोबाई रुसली |Marathi Kids Song | Tiny Smiles Balgeet | Baby Rhymes | Jayesh Kadam",
-      "channel": "Pom Pom KIDS",
-      "channel_id": "UCs1ljFOLd7QwF9WqUuxpIBg",
-      "published_at": "2026-10-22T07:00:30Z",
-      "duration_seconds": 278,
-      "view_count": 4126797,
-      "like_count": 1745
-    },
-    {
-      "id": "CuZm-TPNmic",
-      "title": "Vọng Gác Đêm Sương | Nhạc Lính Thời Chiến",
-      "channel": "PXV Music",
-      "channel_id": "UCzHtmoMQc2tu2AaEUxVPZOg",
-      "published_at": "2026-10-17T04:07:10Z",
-      "duration_seconds": 360,
-      "view_count": 4047318,
-      "like_count": 3369
-    },
-    {
-      "id": "VgSWAOb7JTQ",
-      "title": "DENNY CAKNAN - PULUNG (OFFICIAL LIVE MUSIC VIDEO) | DC MUSIK",
-      "channel": "DC. PRODUCTION",
-      "channel_id": "UC7FE8E7nCP-sJO8o4FTo93Q",
-      "published_at": "2026-10-27T09:00:09Z",
-      "duration_seconds": 352,
-      "view_count": 4041826,
-      "like_count": 45404
-    },
-    {
-      "id": "VGAUHd36Bc4",
-      "title": "Amma KanakaDurga Lyrical Video | KanakaDurga | Allari Naresh | Thaman S | Pradeep Maddali",
-      "channel": "Zee Music South",
-      "channel_id": "UCLsSLka8jODBozvi5VTQeaQ",
-      "published_at": "2026-10-17T10:30:36Z",
-      "duration_seconds": 286,
-      "view_count": 4008124,
-      "like_count": 24006
-    },
-    {
-      "id": "gqVNaKiGIJY",
-      "title": "Original Love - 接吻 / THE FIRST TAKE",
-      "channel": "THE FIRST TAKE",
-      "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-      "published_at": "2026-10-30T13:00:09Z",
-      "duration_seconds": 367,
-      "view_count": 3969907,
-      "like_count": 60733
-    },
-    {
-      "id": "y3pV7IVfQVw",
-      "title": "Demi Waktu - UNGU | Studio Session",
-      "channel": "UNGU Band",
-      "channel_id": "UC0LFiYO66xZElLsQCgkUbGg",
-      "published_at": "2026-10-16T12:00:06Z",
-      "duration_seconds": 313,
-      "view_count": 3966661,
-      "like_count": 13812
-    },
-    {
-      "id": "AStEe82Se1Y",
-      "title": "DIRANTAI DIGELANGI RINDU - Jeyma Monica X Dini Kurnia (Official Live Music Video)",
-      "channel": "Jeyma Monica Official",
-      "channel_id": "UCLziHl5a6cz8WzdyBahw0zw",
-      "published_at": "2026-10-29T04:00:07Z",
-      "duration_seconds": 413,
-      "view_count": 3958743,
-      "like_count": 10167
-    },
-    {
-      "id": "oxKbklKytRw",
-      "title": "💝 Barsaat Ke Mausam Mein | Naajayaz | Naseeruddin Shah | Kumar Sanu | Roop Kumar Rathod 90'S 🔥",
-      "channel": "Bollywood_Music_Lounge",
-      "channel_id": "UCxqLB9eJWuYuayDOxswd29Q",
-      "published_at": "2026-10-14T13:30:11Z",
-      "duration_seconds": 364,
-      "view_count": 3918600,
-      "like_count": 10627
-    },
-    {
-      "id": "KEINt_2nIWE",
-      "title": "DRAW♡ME「勝ち確♡ラヴ」 (Official Music Video)",
-      "channel": "DRAW♡ME",
-      "channel_id": "UC3iDxQeJXdNgQSPQfDGXiGQ",
-      "published_at": "2026-10-14T12:00:07Z",
-      "duration_seconds": 257,
-      "view_count": 3880343,
-      "like_count": 38869
-    },
-    {
-      "id": "C0DXctGPWxw",
-      "title": "DICEBLUE 'รอ SIS (TER)' OFFICIAL MV",
-      "channel": "TADA LABELS",
-      "channel_id": "UChvk1ez0-qeKEn12-CYxrzQ",
-      "published_at": "2026-10-21T11:00:08Z",
-      "duration_seconds": 257,
-      "view_count": 3827382,
-      "like_count": 34454
-    },
-    {
-      "id": "BmMQFku-ylA",
-      "title": "Jason Mraz - I'm Yours (Lyrics)",
-      "channel": "moon! sounds",
-      "channel_id": "UCAdK3FpESmrXNZ-Fh5W--cA",
-      "published_at": "2026-10-13T21:42:22Z",
-      "duration_seconds": 243,
-      "view_count": 3807970,
-      "like_count": 3180
-    },
-    {
-      "id": "Q5Om3k90dMs",
-      "title": "忘れらんねえよ - なんもねえ / THE FIRST TAKE",
-      "channel": "THE FIRST TAKE",
-      "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-      "published_at": "2026-10-21T13:00:09Z",
-      "duration_seconds": 242,
-      "view_count": 3807071,
-      "like_count": 80573
-    },
-    {
-      "id": "OX3hdNoVt1E",
-      "title": "Claveles de la cumbia | Mix haciendo el amor (en vivo)",
-      "channel": "Claveles de la Cumbia",
-      "channel_id": "UCp_DSqQNEF2Xftv8tH0vpKQ",
-      "published_at": "2026-10-25T22:00:10Z",
-      "duration_seconds": 442,
-      "view_count": 3805714,
-      "like_count": 24555
+      "id": "WBsjIY5MzLg",
+      "title": "Meow Meow Billi Karti | Hindi Rhyme For Kids | म्याऊ म्याऊ | Balgeet In Hindi |",
+      "channel": "Rudra Bhakti Geet",
+      "channel_id": "UC4bGyLsMrNhNWydOcN7hS_g",
+      "published_at": "2026-11-06T11:25:38Z",
+      "duration_seconds": 361,
+      "view_count": 4542157,
+      "like_count": 15214
     },
     {
       "id": "XWAeTGff5jE",
@@ -932,8 +772,68 @@
       "channel_id": "UCq-Fj5jknLsUf-MWSy4_brA",
       "published_at": "2026-11-06T14:36:34Z",
       "duration_seconds": 417,
-      "view_count": 3790791,
-      "like_count": 62918
+      "view_count": 4524903,
+      "like_count": 71346
+    },
+    {
+      "id": "Z4pwuMQkKFU",
+      "title": "Ladobai Rusali | लाडोबाई रुसली |Marathi Kids Song | Tiny Smiles Balgeet | Baby Rhymes | Jayesh Kadam",
+      "channel": "Pom Pom KIDS",
+      "channel_id": "UCs1ljFOLd7QwF9WqUuxpIBg",
+      "published_at": "2026-10-22T07:00:30Z",
+      "duration_seconds": 278,
+      "view_count": 4482725,
+      "like_count": 1985
+    },
+    {
+      "id": "aY_Z4yXBg3Y",
+      "title": "Bath Song - Johny Johny Takes a Bath + Wheels on the Bus | Kids Songs and Nursery Rhymes",
+      "channel": "LooLoo Kids - Nursery Rhymes and Children's Songs",
+      "channel_id": "UC4NALVCmcmL5ntpV0thoH6w",
+      "published_at": "2026-10-19T09:30:05Z",
+      "duration_seconds": 276,
+      "view_count": 4472154,
+      "like_count": 1145
+    },
+    {
+      "id": "AStEe82Se1Y",
+      "title": "DIRANTAI DIGELANGI RINDU - Jeyma Monica X Dini Kurnia (Official Live Music Video)",
+      "channel": "Jeyma Monica Official",
+      "channel_id": "UCLziHl5a6cz8WzdyBahw0zw",
+      "published_at": "2026-10-29T04:00:07Z",
+      "duration_seconds": 413,
+      "view_count": 4444962,
+      "like_count": 10847
+    },
+    {
+      "id": "VgSWAOb7JTQ",
+      "title": "DENNY CAKNAN - PULUNG (OFFICIAL LIVE MUSIC VIDEO) | DC MUSIK",
+      "channel": "DC. PRODUCTION",
+      "channel_id": "UC7FE8E7nCP-sJO8o4FTo93Q",
+      "published_at": "2026-10-27T09:00:09Z",
+      "duration_seconds": 352,
+      "view_count": 4421391,
+      "like_count": 46491
+    },
+    {
+      "id": "XoFALjTUXhw",
+      "title": "TRONG ĐÔI MẮT THIẾU NỮ - RHYDER | OFFICIAL MUSIC VIDEO",
+      "channel": "RHYDER OFFICIAL",
+      "channel_id": "UCPjbFSSZXI7ERLRt3O0CGBQ",
+      "published_at": "2026-10-12T13:00:07Z",
+      "duration_seconds": 285,
+      "view_count": 4331618,
+      "like_count": 52063
+    },
+    {
+      "id": "BmMQFku-ylA",
+      "title": "Jason Mraz - I'm Yours (Lyrics)",
+      "channel": "moon! sounds",
+      "channel_id": "UCAdK3FpESmrXNZ-Fh5W--cA",
+      "published_at": "2026-10-13T21:42:22Z",
+      "duration_seconds": 243,
+      "view_count": 4261110,
+      "like_count": 3621
     },
     {
       "id": "aj67pzvwHIA",
@@ -942,18 +842,38 @@
       "channel_id": "UCggtKw0t8CHywQxdH9iiJTA",
       "published_at": "2026-10-21T23:00:21Z",
       "duration_seconds": 250,
-      "view_count": 3764044,
-      "like_count": 3535
+      "view_count": 4238843,
+      "like_count": 3796
     },
     {
-      "id": "hHBnlKxEAxo",
-      "title": "Spotted: ikura(YOASOBI) - 夜に駆ける / 咲き誇れ",
-      "channel": "Spotted: Official YouTube Channel",
-      "channel_id": "UC2c9uUxBnNHPIqYhCV5rOZA",
-      "published_at": "2026-10-28T12:00:07Z",
-      "duration_seconds": 1030,
-      "view_count": 3752414,
-      "like_count": 52632
+      "id": "y3pV7IVfQVw",
+      "title": "Demi Waktu - UNGU | Studio Session",
+      "channel": "UNGU Band",
+      "channel_id": "UC0LFiYO66xZElLsQCgkUbGg",
+      "published_at": "2026-10-16T12:00:06Z",
+      "duration_seconds": 313,
+      "view_count": 4177911,
+      "like_count": 14161
+    },
+    {
+      "id": "gqVNaKiGIJY",
+      "title": "Original Love - 接吻 / THE FIRST TAKE",
+      "channel": "THE FIRST TAKE",
+      "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+      "published_at": "2026-10-30T13:00:09Z",
+      "duration_seconds": 367,
+      "view_count": 4098883,
+      "like_count": 61753
+    },
+    {
+      "id": "OX3hdNoVt1E",
+      "title": "Claveles de la cumbia | Mix haciendo el amor (en vivo)",
+      "channel": "Claveles de la Cumbia",
+      "channel_id": "UCp_DSqQNEF2Xftv8tH0vpKQ",
+      "published_at": "2026-10-25T22:00:10Z",
+      "duration_seconds": 442,
+      "view_count": 4073671,
+      "like_count": 25416
     },
     {
       "id": "OzKMtW1P0QE",
@@ -962,18 +882,88 @@
       "channel_id": "UCmjt0emjiLj1WoVc7yJOggQ",
       "published_at": "2026-10-23T10:00:33Z",
       "duration_seconds": 278,
-      "view_count": 3676627,
-      "like_count": 37037
+      "view_count": 4050821,
+      "like_count": 39506
     },
     {
-      "id": "ZnvP0DWBgWY",
-      "title": "Da-iCE /「うららか」Dance Performance Video（フジテレビ系木曜劇場「波うららかに、めおと日和」主題歌）",
-      "channel": "Da-iCE",
-      "channel_id": "UC7JQKVJMCIuVMcrFXSozMCw",
-      "published_at": "2026-10-16T12:00:06Z",
-      "duration_seconds": 266,
-      "view_count": 3672368,
-      "like_count": 26434
+      "id": "C0DXctGPWxw",
+      "title": "DICEBLUE 'รอ SIS (TER)' OFFICIAL MV",
+      "channel": "TADA LABELS",
+      "channel_id": "UChvk1ez0-qeKEn12-CYxrzQ",
+      "published_at": "2026-10-21T11:00:08Z",
+      "duration_seconds": 257,
+      "view_count": 4041473,
+      "like_count": 35672
+    },
+    {
+      "id": "VGAUHd36Bc4",
+      "title": "Amma KanakaDurga Lyrical Video | KanakaDurga | Allari Naresh | Thaman S | Pradeep Maddali",
+      "channel": "Zee Music South",
+      "channel_id": "UCLsSLka8jODBozvi5VTQeaQ",
+      "published_at": "2026-10-17T10:30:36Z",
+      "duration_seconds": 286,
+      "view_count": 4020440,
+      "like_count": 24032
+    },
+    {
+      "id": "1q6fA3nHTzE",
+      "title": "धूल माथे लगाई तिलक हो गया (Lyrics) | Dhool Mathe Lagai Tilak Ho Gaya | Bhasm Shiv Bhajan",
+      "channel": "Shiv Raga",
+      "channel_id": "UCJvHe6L3D9p-lMiieaafgKQ",
+      "published_at": "2026-11-02T11:22:00Z",
+      "duration_seconds": 270,
+      "view_count": 4017668,
+      "like_count": 54298
+    },
+    {
+      "id": "33JQdLY7N3k",
+      "title": "इतना मीठा भजन इतिहास में नहीं सुना होगा | लक्ष्मी की भक्ति में शक्ति | Lakshmi Ki Bhakti Mein Shakti",
+      "channel": "Traditional Tune",
+      "channel_id": "UC-Fr9Y2uhsEeuZIGJa_kWNA",
+      "published_at": "2026-10-27T23:46:05Z",
+      "duration_seconds": 358,
+      "view_count": 3979635,
+      "like_count": 6605
+    },
+    {
+      "id": "KEINt_2nIWE",
+      "title": "DRAW♡ME「勝ち確♡ラヴ」 (Official Music Video)",
+      "channel": "DRAW♡ME",
+      "channel_id": "UC3iDxQeJXdNgQSPQfDGXiGQ",
+      "published_at": "2026-10-14T12:00:07Z",
+      "duration_seconds": 257,
+      "view_count": 3939339,
+      "like_count": 39098
+    },
+    {
+      "id": "hHBnlKxEAxo",
+      "title": "Spotted: ikura(YOASOBI) - 夜に駆ける / 咲き誇れ",
+      "channel": "Spotted: Official YouTube Channel",
+      "channel_id": "UC2c9uUxBnNHPIqYhCV5rOZA",
+      "published_at": "2026-10-28T12:00:07Z",
+      "duration_seconds": 1030,
+      "view_count": 3883130,
+      "like_count": 53832
+    },
+    {
+      "id": "Q5Om3k90dMs",
+      "title": "忘れらんねえよ - なんもねえ / THE FIRST TAKE",
+      "channel": "THE FIRST TAKE",
+      "channel_id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+      "published_at": "2026-10-21T13:00:09Z",
+      "duration_seconds": 242,
+      "view_count": 3854656,
+      "like_count": 81008
+    },
+    {
+      "id": "WCZj2lo818E",
+      "title": "Naino Mein Sapna Sapne Me Sajna | 8K Video Song | Sridevi और Jeetendra का सुपरहिट गाना",
+      "channel": "8K Superhit Gaane",
+      "channel_id": "UCIVmU-WUKzcUagCmu9-WxnQ",
+      "published_at": "2026-10-26T13:00:15Z",
+      "duration_seconds": 346,
+      "view_count": 3828758,
+      "like_count": 5356
     },
     {
       "id": "kMlcXrUET8I",
@@ -982,42 +972,52 @@
       "channel_id": "UCRWrdiC0N2AFnDfbfgy2-7w",
       "published_at": "2026-10-19T12:00:08Z",
       "duration_seconds": 292,
-      "view_count": 3592730,
-      "like_count": 16072
+      "view_count": 3777258,
+      "like_count": 16486
     },
     {
-      "id": "fOzct5-zDvM",
-      "title": "Love of my Life ❤️",
-      "channel": "Rimi Tomy Official",
-      "channel_id": "UCsyvd7I7FvO8wv7KY7NUpTQ",
-      "published_at": "2026-11-02T08:06:55Z",
-      "duration_seconds": 660,
-      "view_count": 3591807,
-      "like_count": 41257
+      "id": "ZnvP0DWBgWY",
+      "title": "Da-iCE /「うららか」Dance Performance Video（フジテレビ系木曜劇場「波うららかに、めおと日和」主題歌）",
+      "channel": "Da-iCE",
+      "channel_id": "UC7JQKVJMCIuVMcrFXSozMCw",
+      "published_at": "2026-10-16T12:00:06Z",
+      "duration_seconds": 266,
+      "view_count": 3769107,
+      "like_count": 26654
     },
     {
-      "id": "ILTUpB6piZA",
-      "title": "สร้างบ้านอยู่บนต้นไม้ ครั้งแรกในชีวิต",
-      "channel": "สวัสดีครับผม แจ็กแปปโฮ",
-      "channel_id": "UCUfnk5CgUjykoc-BezLMMIA",
-      "published_at": "2026-10-20T10:00:36Z",
-      "duration_seconds": 2870,
-      "view_count": 3584463,
-      "like_count": 34798
+      "id": "iq6WqZ_FMOM",
+      "title": "เผื่อเราไม่ต้องลาจากกัน (Crossroads) - SERIOUS BACON feat. PURPEECH [Official MV]",
+      "channel": "BOXX MUSIC",
+      "channel_id": "UCk-hrmSLwSsp4OE_s5f1_Sg",
+      "published_at": "2026-10-29T11:00:23Z",
+      "duration_seconds": 378,
+      "view_count": 3745405,
+      "like_count": 21123
     },
     {
-      "id": "LSqWddL4edk",
-      "title": "DOIS TRISTES / DESAPEGUEI - Netto Brito | Ilha do Arrocha (Ao Vivo em São Luís/MA) - OFICIAL",
-      "channel": "Netto Brito",
-      "channel_id": "UCWTL-TU_Dkq6Rpsmwxe2RSQ",
-      "published_at": "2026-10-16T13:30:09Z",
-      "duration_seconds": 257,
-      "view_count": 3559895,
-      "like_count": 6751
+      "id": "bLzRhwzifYw",
+      "title": "Canción del Pañal Cuidado del Bebé Mono | Canciones Infantiles | RooRoo Monito y Canciones",
+      "channel": "Monito y Canciones",
+      "channel_id": "UC1--Plllda5-e8GjVgLG_0w",
+      "published_at": "2026-10-27T14:00:10Z",
+      "duration_seconds": 1828,
+      "view_count": 3678149,
+      "like_count": 5021
+    },
+    {
+      "id": "pqBDvACytX8",
+      "title": "Diwali Special Song - आई है दिवाली | Aai Hai Diwali | Aamrapali Dubey | Full Song | #diwalisong",
+      "channel": "SRK Music Bhojpuri",
+      "channel_id": "UCzVWvj9ZZTDPMKJR4NB7V_Q",
+      "published_at": "2026-11-05T10:56:57Z",
+      "duration_seconds": 241,
+      "view_count": 3669509,
+      "like_count": 14943
     }
   ],
   "publish_date_span": {
-    "min": "2026-10-10T04:30:08Z",
+    "min": "2026-10-11T04:45:09Z",
     "max": "2026-11-08T05:28:42Z"
   },
   "video_category_id": "10"
