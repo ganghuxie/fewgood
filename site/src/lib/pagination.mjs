@@ -13,6 +13,7 @@ export function pageUrl(section, page, base = '', sort = 'people') {
   else if (section === 'podcast') path = '/podcast/';
   else if (section === 'music') path = '/music/';
   else if (section === 'community') path = sort === 'newest' ? '/community/newest/' : '/community/';
+  else if (section === 'trending') path = '/trending/';
   else path = '/';
   const relative = page === 1 ? path : `${path}page/${page}/`;
   return !base || base === '/' ? relative : `${base.replace(/\/$/, '')}${relative}`;
@@ -26,6 +27,7 @@ export function pageNumbers(page, pages) {
 
 export function sortVideos(videos, section, sort = 'people') {
   return [...videos].sort((a, b) => {
+    if (section === 'picks') return 0;
     if (section === 'community') return (sort === 'newest'
       ? b.selected_at - a.selected_at || b.last - a.last
       : b.recommenders - a.recommenders || b.months - a.months) || a.id.localeCompare(b.id);

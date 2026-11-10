@@ -1,7 +1,7 @@
 export const MYSPACE_KEY = 'youtuber:myspace:v1';
 export const MYSPACE_VERSION = 1;
 export const MAX_ACTIVE_COLUMNS = 5;
-export const DEFAULT_COLUMNS = ['trending', 'ai', 'podcast', 'music', 'community:people'];
+export const DEFAULT_COLUMNS = ['picks', 'trending', 'ai', 'podcast', 'music'];
 
 export function defaultState() {
   return { version: MYSPACE_VERSION, columns: DEFAULT_COLUMNS.map(id => ({ id, source: id, enabled: true })) };

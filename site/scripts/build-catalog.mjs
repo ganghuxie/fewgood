@@ -2,11 +2,11 @@ import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 
 const dataDir = new URL('../src/data/', import.meta.url);
 const read = async (name, fallback = { videos: [] }) => { try { return JSON.parse(await readFile(new URL(name, dataDir), 'utf8')); } catch (error) { if (error.code === 'ENOENT') return fallback; throw error; } };
-const [trending, ai, podcast, music, community, channels, zh] = await Promise.all([read('trending.json'), read('ai.json'), read('podcast.json'), read('music.json'), read('videos.json'), read('channels.json', { channels: [] }), read('zh.json', { videos: {} })]);
+const [picks, trending, ai, podcast, music, community, channels, zh] = await Promise.all([read('picks.json'), read('trending.json'), read('ai.json'), read('podcast.json'), read('music.json'), read('videos.json'), read('channels.json', { channels: [] }), read('zh.json', { videos: {} })]);
 const index = new Map();
 const channelLabels = new Map();
-const sectionLabels = { trending: '全部', ai: 'AI前沿', podcast: '播客', music: '音乐', community: '社区推荐' };
-const sectionCodes = { trending: 0, ai: 1, podcast: 2, music: 3, community: 4 };
+const sectionLabels = { picks: '今日精选', trending: '趋势', ai: 'AI前沿', podcast: '播客', music: '音乐', community: '社区推荐' };
+const sectionCodes = { trending: 0, ai: 1, podcast: 2, music: 3, community: 4, picks: 5 };
 const addLabel = (map, id, section) => { if (!id) return; const labels = map.get(id) || new Set(); labels.add(sectionLabels[section]); map.set(id, labels); };
 const addVideo = (video, section, channelId = video.channel_id, external = false) => {
   if (!video?.id) return;
@@ -18,7 +18,7 @@ const addVideo = (video, section, channelId = video.channel_id, external = false
   index.set(video.id, merged);
   addLabel(channelLabels, channelId || video.channel_id, section);
 };
-for (const [section, feed] of [['trending', trending], ['ai', ai], ['podcast', podcast], ['music', music], ['community', community]]) {
+for (const [section, feed] of [['trending', trending], ['ai', ai], ['podcast', podcast], ['music', music], ['community', community], ['picks', picks]]) {
   for (const video of feed.videos || []) addVideo(video, section);
 }
 const compact = value => Array.isArray(value) ? compact(value.join(' ')) : typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, 500) : '';

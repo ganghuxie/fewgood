@@ -1,4 +1,5 @@
 ---
+import picks from '../data/picks.json';
 import trending from '../data/trending.json';
 import ai from '../data/ai.json';
 import podcast from '../data/podcast.json';
@@ -7,8 +8,8 @@ import community from '../data/videos.json';
 import VideoPage from '../components/VideoPage.astro';
 import { paginate, pageUrl, sortVideos } from '../lib/pagination.mjs';
 export function getStaticPaths() {
-  const feeds = { trending, ai, podcast, music, community };
-  const definitions = [['trending', 'people'], ['ai', 'people'], ['podcast', 'people'], ['music', 'people'], ['community', 'people'], ['community', 'newest']];
+  const feeds = { picks, trending, ai, podcast, music, community };
+  const definitions = [['picks', 'people'], ['trending', 'people'], ['ai', 'people'], ['podcast', 'people'], ['music', 'people'], ['community', 'people'], ['community', 'newest']];
   return definitions.flatMap(([section, sort]) => paginate(feeds[section].videos, section, sort).map(props => {
     const path = pageUrl(section, props.page, '', sort).replace(/^\/|\/$/g, '') || undefined;
     if (props.page === 1) {

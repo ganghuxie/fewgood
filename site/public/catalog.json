@@ -8,10 +8,14 @@
     "duration_seconds": 1348,
     "view_count": 87114226,
     "like_count": 1188674,
+    "why_good": "近 30 天同类长视频播放第 1",
     "section": "trending",
     "sections": [
-      "trending"
-    ]
+      "trending",
+      "picks"
+    ],
+    "source": "trending",
+    "pick_source": "趋势"
   },
   {
     "id": "mJYxSed0D_I",
@@ -22,25 +26,14 @@
     "duration_seconds": 1194,
     "view_count": 29196068,
     "like_count": 380435,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "rsNhWkC4neE",
-    "title": "IVE 아이브 'Looks Can Kill' MV",
-    "channel": "STARSHIP",
-    "channel_id": "UCYDmx2Sfpnaxg488yBpZIGg",
-    "published_at": "2026-10-19T09:00:05Z",
-    "duration_seconds": 243,
-    "view_count": 26048385,
-    "like_count": 370962,
+    "why_good": "近 30 天同类长视频播放第 2",
     "section": "trending",
     "sections": [
       "trending",
-      "music"
-    ]
+      "picks"
+    ],
+    "source": "trending",
+    "pick_source": "趋势"
   },
   {
     "id": "ud2GvJUjBYs",
@@ -51,6 +44,7 @@
     "duration_seconds": 1350,
     "view_count": 19831443,
     "like_count": 277580,
+    "why_good": "近 30 天同类长视频播放第 3",
     "section": "trending",
     "sections": [
       "trending"
@@ -65,6 +59,7 @@
     "duration_seconds": 9604,
     "view_count": 19031872,
     "like_count": 235128,
+    "why_good": "近 30 天同类长视频播放第 4",
     "section": "trending",
     "sections": [
       "trending"
@@ -78,11 +73,11 @@
     "published_at": "2026-10-19T03:30:25Z",
     "duration_seconds": 363,
     "view_count": 17763251,
-    "like_count": 182015,
+    "like_count": 182014,
+    "why_good": "近 30 天同类长视频播放第 5",
     "section": "trending",
     "sections": [
-      "trending",
-      "music"
+      "trending"
     ]
   },
   {
@@ -94,6 +89,7 @@
     "duration_seconds": 1350,
     "view_count": 17699621,
     "like_count": 246616,
+    "why_good": "近 30 天同类长视频播放第 6",
     "section": "trending",
     "sections": [
       "trending"
@@ -108,20 +104,7 @@
     "duration_seconds": 1350,
     "view_count": 15671524,
     "like_count": 220971,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "SpfAN6eP3XE",
-    "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 383 | 2 Nov 2026 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-02T15:30:22Z",
-    "duration_seconds": 1350,
-    "view_count": 15323280,
-    "like_count": 243258,
+    "why_good": "近 30 天同类长视频播放第 7",
     "section": "trending",
     "sections": [
       "trending"
@@ -136,21 +119,7 @@
     "duration_seconds": 590,
     "view_count": 15314917,
     "like_count": 191084,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
-    ]
-  },
-  {
-    "id": "Vw8EOodKhwE",
-    "title": "Rimjhim - Choti Umar Bada Safar | Full Episode 384 | 3 Nov 2026 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-03T15:30:02Z",
-    "duration_seconds": 1350,
-    "view_count": 15061375,
-    "like_count": 231305,
+    "why_good": "近 30 天同类长视频播放第 8",
     "section": "trending",
     "sections": [
       "trending"
@@ -165,6 +134,7 @@
     "duration_seconds": 1927,
     "view_count": 14965531,
     "like_count": 236660,
+    "why_good": "近 30 天同类长视频播放第 9",
     "section": "trending",
     "sections": [
       "trending"
@@ -179,6 +149,7 @@
     "duration_seconds": 1084,
     "view_count": 14609626,
     "like_count": 60523,
+    "why_good": "近 30 天同类长视频播放第 10",
     "section": "trending",
     "sections": [
       "trending"
@@ -193,6 +164,7 @@
     "duration_seconds": 2191,
     "view_count": 13497104,
     "like_count": 43627,
+    "why_good": "近 30 天同类长视频播放第 11",
     "section": "trending",
     "sections": [
       "trending"
@@ -207,6 +179,7 @@
     "duration_seconds": 1184,
     "view_count": 13122737,
     "like_count": 83700,
+    "why_good": "近 30 天同类长视频播放第 12",
     "section": "trending",
     "sections": [
       "trending"
@@ -220,22 +193,8 @@
     "published_at": "2026-10-26T16:00:07Z",
     "duration_seconds": 257,
     "view_count": 12831685,
-    "like_count": 300558,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
-    ]
-  },
-  {
-    "id": "Pn45ghSvpo0",
-    "title": "Mann Sundar | 3 Nov 2026 | Full Episode 1777 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-03T15:00:38Z",
-    "duration_seconds": 1340,
-    "view_count": 11684995,
-    "like_count": 163458,
+    "like_count": 300555,
+    "why_good": "近 30 天同类长视频播放第 13",
     "section": "trending",
     "sections": [
       "trending"
@@ -250,6 +209,7 @@
     "duration_seconds": 2282,
     "view_count": 11677657,
     "like_count": 122311,
+    "why_good": "近 30 天同类长视频播放第 14",
     "section": "trending",
     "sections": [
       "trending"
@@ -264,6 +224,7 @@
     "duration_seconds": 2077,
     "view_count": 11492000,
     "like_count": 97901,
+    "why_good": "近 30 天同类长视频播放第 15",
     "section": "trending",
     "sections": [
       "trending"
@@ -278,6 +239,7 @@
     "duration_seconds": 780,
     "view_count": 11401996,
     "like_count": 121560,
+    "why_good": "近 30 天同类长视频播放第 16",
     "section": "trending",
     "sections": [
       "trending"
@@ -292,6 +254,7 @@
     "duration_seconds": 8215,
     "view_count": 10878041,
     "like_count": 36208,
+    "why_good": "近 30 天同类长视频播放第 17",
     "section": "trending",
     "sections": [
       "trending"
@@ -306,34 +269,7 @@
     "duration_seconds": 1030,
     "view_count": 10863024,
     "like_count": 5747,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "Uy2xzMaZukY",
-    "title": "Mann Sundar | 2 Nov 2026 | Full Episode 1776 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-02T15:00:39Z",
-    "duration_seconds": 1350,
-    "view_count": 10798962,
-    "like_count": 159248,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "BlgXnmXNBK4",
-    "title": "Finally...Biggest Diwali Stash Worth ₹600000 🔥 | अब होगा असली धमाल ! 🚀",
-    "channel": "MR. INDIAN HACKER",
-    "channel_id": "UCSiDGb0MnHFGjs4E2WKvShw",
-    "published_at": "2026-10-23T12:30:23Z",
-    "duration_seconds": 1956,
-    "view_count": 10753418,
-    "like_count": 307160,
+    "why_good": "近 30 天同类长视频播放第 18",
     "section": "trending",
     "sections": [
       "trending"
@@ -348,24 +284,10 @@
     "duration_seconds": 634,
     "view_count": 10619730,
     "like_count": 152380,
+    "why_good": "近 30 天同类长视频播放第 19",
     "section": "trending",
     "sections": [
       "trending"
-    ]
-  },
-  {
-    "id": "fLnMzPk_p_M",
-    "title": "Magale Video Song | Baththa | Vijay Sethupathi | @SaiAbhyankkar | Balaji Tharaneetharan",
-    "channel": "Think Music India",
-    "channel_id": "UCLbdVvreihwZRL6kwuEUYsA",
-    "published_at": "2026-10-28T06:30:05Z",
-    "duration_seconds": 283,
-    "view_count": 10608786,
-    "like_count": 66822,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
     ]
   },
   {
@@ -377,6 +299,7 @@
     "duration_seconds": 2066,
     "view_count": 10342417,
     "like_count": 89809,
+    "why_good": "近 30 天同类长视频播放第 20",
     "section": "trending",
     "sections": [
       "trending"
@@ -391,35 +314,7 @@
     "duration_seconds": 1911,
     "view_count": 10329527,
     "like_count": 74933,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "79TCJh0whww",
-    "title": "#JAILSTAR | जेलस्टार | NEW BHOJPURI FULL MOVIE 2026 | RAUSHAN ROHI | SHILPI RAGHWANI | NEHA PATHAK",
-    "channel": "Bhumi Original",
-    "channel_id": "UCmZ9jTyKVBgto5rsxopsdlQ",
-    "published_at": "2026-10-25T04:30:09Z",
-    "duration_seconds": 7979,
-    "view_count": 10179304,
-    "like_count": 220676,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
-    ]
-  },
-  {
-    "id": "A3UwV5I_ZrY",
-    "title": "Uzak Şehir 70. Bölüm",
-    "channel": "Uzak Şehir",
-    "channel_id": "UCBmIU28lqzGn_7ehXaJuzhA",
-    "published_at": "2026-10-26T21:05:34Z",
-    "duration_seconds": 8305,
-    "view_count": 9660657,
-    "like_count": 59207,
+    "why_good": "近 30 天同类长视频播放第 21",
     "section": "trending",
     "sections": [
       "trending"
@@ -434,6 +329,7 @@
     "duration_seconds": 2280,
     "view_count": 9357183,
     "like_count": 108566,
+    "why_good": "近 30 天同类长视频播放第 22",
     "section": "trending",
     "sections": [
       "trending"
@@ -448,6 +344,7 @@
     "duration_seconds": 2259,
     "view_count": 9350094,
     "like_count": 108716,
+    "why_good": "近 30 天同类长视频播放第 23",
     "section": "trending",
     "sections": [
       "trending"
@@ -462,6 +359,7 @@
     "duration_seconds": 3663,
     "view_count": 9274496,
     "like_count": 290129,
+    "why_good": "近 30 天同类长视频播放第 24",
     "section": "trending",
     "sections": [
       "trending"
@@ -476,10 +374,10 @@
     "duration_seconds": 393,
     "view_count": 9169562,
     "like_count": 73937,
+    "why_good": "近 30 天同类长视频播放第 25",
     "section": "trending",
     "sections": [
-      "trending",
-      "music"
+      "trending"
     ]
   },
   {
@@ -491,6 +389,7 @@
     "duration_seconds": 3965,
     "view_count": 9118962,
     "like_count": 55861,
+    "why_good": "近 30 天同类长视频播放第 26",
     "section": "trending",
     "sections": [
       "trending"
@@ -505,48 +404,7 @@
     "duration_seconds": 1535,
     "view_count": 9095207,
     "like_count": 144596,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "EZWGT4RoMiU",
-    "title": "Başkalarının Hayatı 5. Bölüm",
-    "channel": "Başkalarının Hayatı",
-    "channel_id": "UCBPji4yBwHYvOmJYyXMfThQ",
-    "published_at": "2026-10-24T20:34:57Z",
-    "duration_seconds": 7621,
-    "view_count": 9079728,
-    "like_count": 58812,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "v458hdhiMrU",
-    "title": "Uzak Şehir 71. Bölüm",
-    "channel": "Uzak Şehir",
-    "channel_id": "UCBmIU28lqzGn_7ehXaJuzhA",
-    "published_at": "2026-11-02T21:06:51Z",
-    "duration_seconds": 8349,
-    "view_count": 8922962,
-    "like_count": 56347,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "EgjR4E7L0Xs",
-    "title": "ISHQ JUNOONI | Full Episode 240 | 31 Oct 2026 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-10-31T13:30:05Z",
-    "duration_seconds": 1350,
-    "view_count": 8893001,
-    "like_count": 121012,
+    "why_good": "近 30 天同类长视频播放第 27",
     "section": "trending",
     "sections": [
       "trending"
@@ -561,34 +419,7 @@
     "duration_seconds": 1538,
     "view_count": 8664246,
     "like_count": 188014,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "mQ6L2ZsQU2Y",
-    "title": "Mann Atisundar | 2 Nov 2026 | Full Episode 1197 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-02T14:30:08Z",
-    "duration_seconds": 1350,
-    "view_count": 8650607,
-    "like_count": 112070,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "IKygqrA8r4A",
-    "title": "Mann Atisundar | 1 Nov 2026 | Full Episode 1196 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-01T14:36:09Z",
-    "duration_seconds": 1308,
-    "view_count": 8580128,
-    "like_count": 106969,
+    "why_good": "近 30 天同类长视频播放第 28",
     "section": "trending",
     "sections": [
       "trending"
@@ -603,20 +434,7 @@
     "duration_seconds": 488,
     "view_count": 8564607,
     "like_count": 120924,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "_Q__3Ud-Mqg",
-    "title": "Mann Atisundar | 3 Nov 2026 | Full Episode 1198 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-03T14:30:30Z",
-    "duration_seconds": 1350,
-    "view_count": 8495401,
-    "like_count": 111089,
+    "why_good": "近 30 天同类长视频播放第 29",
     "section": "trending",
     "sections": [
       "trending"
@@ -631,6 +449,7 @@
     "duration_seconds": 894,
     "view_count": 8285537,
     "like_count": 166758,
+    "why_good": "近 30 天同类长视频播放第 30",
     "section": "trending",
     "sections": [
       "trending"
@@ -645,6 +464,7 @@
     "duration_seconds": 2034,
     "view_count": 8185355,
     "like_count": 567686,
+    "why_good": "近 30 天同类长视频播放第 31",
     "section": "trending",
     "sections": [
       "trending"
@@ -659,6 +479,7 @@
     "duration_seconds": 10649,
     "view_count": 8032182,
     "like_count": 105995,
+    "why_good": "近 30 天同类长视频播放第 32",
     "section": "trending",
     "sections": [
       "trending"
@@ -673,6 +494,7 @@
     "duration_seconds": 1721,
     "view_count": 7687490,
     "like_count": 172290,
+    "why_good": "近 30 天同类长视频播放第 33",
     "section": "trending",
     "sections": [
       "trending"
@@ -687,20 +509,7 @@
     "duration_seconds": 9321,
     "view_count": 7661731,
     "like_count": 72896,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "grsD6b1rTPw",
-    "title": "ISHQ JUNOONI | Full Episode 242 | 3 Nov 2026 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-03T13:00:37Z",
-    "duration_seconds": 1350,
-    "view_count": 7644933,
-    "like_count": 107025,
+    "why_good": "近 30 天同类长视频播放第 34",
     "section": "trending",
     "sections": [
       "trending"
@@ -715,20 +524,7 @@
     "duration_seconds": 1538,
     "view_count": 7582426,
     "like_count": 127476,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "e0UeSB-z5BU",
-    "title": "أطفال يصطادون حشرات عملاقة في المنزل ويتعلمون حقائق عن الحشرات! - قصص للأطفال",
-    "channel": "Vlad and Niki ARA Collection",
-    "channel_id": "UC6Bk6cgu7Fc4iTlq5suamPg",
-    "published_at": "2026-10-25T05:00:13Z",
-    "duration_seconds": 992,
-    "view_count": 7467315,
-    "like_count": 12868,
+    "why_good": "近 30 天同类长视频播放第 35",
     "section": "trending",
     "sections": [
       "trending"
@@ -742,11 +538,11 @@
     "published_at": "2026-11-01T04:28:08Z",
     "duration_seconds": 282,
     "view_count": 7414771,
-    "like_count": 73788,
+    "like_count": 73787,
+    "why_good": "近 30 天同类长视频播放第 36",
     "section": "trending",
     "sections": [
-      "trending",
-      "music"
+      "trending"
     ]
   },
   {
@@ -758,6 +554,7 @@
     "duration_seconds": 314,
     "view_count": 7389695,
     "like_count": 167142,
+    "why_good": "近 30 天同类长视频播放第 37",
     "section": "trending",
     "sections": [
       "trending"
@@ -772,6 +569,7 @@
     "duration_seconds": 13745,
     "view_count": 7203067,
     "like_count": 63810,
+    "why_good": "近 30 天同类长视频播放第 38",
     "section": "trending",
     "sections": [
       "trending"
@@ -786,20 +584,7 @@
     "duration_seconds": 284,
     "view_count": 7135713,
     "like_count": 164248,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "Y7YxU3PWCCE",
-    "title": "ISHQ JUNOONI | Full Episode 241 | 2 Nov 2026 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-02T13:00:23Z",
-    "duration_seconds": 1237,
-    "view_count": 7133726,
-    "like_count": 103549,
+    "why_good": "近 30 天同类长视频播放第 39",
     "section": "trending",
     "sections": [
       "trending"
@@ -814,35 +599,7 @@
     "duration_seconds": 4682,
     "view_count": 7076724,
     "like_count": 31162,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "mx0KW0sDhHE",
-    "title": "Fadel Chaker - Nam El Layl | فضل شاكر - نام الليل (حصريا من ألبوم حلم جديد) | 2026",
-    "channel": "Fadel Chaker",
-    "channel_id": "UCzKaBQDTjmqL1GLwJfxtqXg",
-    "published_at": "2026-11-03T06:04:09Z",
-    "duration_seconds": 264,
-    "view_count": 6920378,
-    "like_count": 64097,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
-    ]
-  },
-  {
-    "id": "kbsvMYFmgD0",
-    "title": "Uswah Episode 40 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 1st November 2026",
-    "channel": "HAR PAL GEO",
-    "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
-    "published_at": "2026-11-01T15:00:06Z",
-    "duration_seconds": 1964,
-    "view_count": 6914072,
-    "like_count": 67724,
+    "why_good": "近 30 天同类长视频播放第 40",
     "section": "trending",
     "sections": [
       "trending"
@@ -857,6 +614,7 @@
     "duration_seconds": 2263,
     "view_count": 6887539,
     "like_count": 74764,
+    "why_good": "近 30 天同类长视频播放第 41",
     "section": "trending",
     "sections": [
       "trending"
@@ -871,6 +629,7 @@
     "duration_seconds": 906,
     "view_count": 6717286,
     "like_count": 104431,
+    "why_good": "近 30 天同类长视频播放第 42",
     "section": "trending",
     "sections": [
       "trending"
@@ -885,34 +644,7 @@
     "duration_seconds": 1031,
     "view_count": 6671390,
     "like_count": 78662,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "VWGvqpl-3fM",
-    "title": "Kaisi Teri Dillagi | Full Episode 103 | 2 Nov 2026 | New Show | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-02T17:00:14Z",
-    "duration_seconds": 1350,
-    "view_count": 6651006,
-    "like_count": 105533,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "GnkR89iBmeg",
-    "title": "Uswah Episode 41 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 2nd November 2026",
-    "channel": "HAR PAL GEO",
-    "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
-    "published_at": "2026-11-02T15:00:03Z",
-    "duration_seconds": 1948,
-    "view_count": 6530537,
-    "like_count": 63880,
+    "why_good": "近 30 天同类长视频播放第 43",
     "section": "trending",
     "sections": [
       "trending"
@@ -927,20 +659,7 @@
     "duration_seconds": 2075,
     "view_count": 6520059,
     "like_count": 92264,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "aYZUENZSIN0",
-    "title": "Uswah Episode 42 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 3rd November 2026",
-    "channel": "HAR PAL GEO",
-    "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
-    "published_at": "2026-11-03T15:00:10Z",
-    "duration_seconds": 1949,
-    "view_count": 6487228,
-    "like_count": 66257,
+    "why_good": "近 30 天同类长视频播放第 44",
     "section": "trending",
     "sections": [
       "trending"
@@ -955,34 +674,7 @@
     "duration_seconds": 786,
     "view_count": 6470192,
     "like_count": 11985,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "y8H72MOzo2g",
-    "title": "Uswah Episode 39 [Eng Sub] Omer Shahzad - Saniya Shamshad - Haroon Shahid | 31st October 2026",
-    "channel": "HAR PAL GEO",
-    "channel_id": "UCe9JSDmyqNgA_l2BzGHq1Ug",
-    "published_at": "2026-10-31T15:00:07Z",
-    "duration_seconds": 1952,
-    "view_count": 6378765,
-    "like_count": 65022,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "xKRv4rsMnJM",
-    "title": "जज साहब, यही वही कातिल है, जिसने दूसरे कातिल को मारकर गायब कर दिया था | Best Court Scene | Arshad",
-    "channel": "BollywoodWala Adda",
-    "channel_id": "UC4mQ1qTgMF7ab96q15V6h-g",
-    "published_at": "2026-11-03T12:30:36Z",
-    "duration_seconds": 1132,
-    "view_count": 6265585,
-    "like_count": 11000,
+    "why_good": "近 30 天同类长视频播放第 45",
     "section": "trending",
     "sections": [
       "trending"
@@ -997,6 +689,7 @@
     "duration_seconds": 1922,
     "view_count": 6255041,
     "like_count": 234652,
+    "why_good": "近 30 天同类长视频播放第 46",
     "section": "trending",
     "sections": [
       "trending"
@@ -1011,6 +704,7 @@
     "duration_seconds": 7385,
     "view_count": 6250961,
     "like_count": 60519,
+    "why_good": "近 30 天同类长视频播放第 47",
     "section": "trending",
     "sections": [
       "trending"
@@ -1025,24 +719,10 @@
     "duration_seconds": 1481,
     "view_count": 5876395,
     "like_count": 29123,
+    "why_good": "近 30 天同类长视频播放第 48",
     "section": "trending",
     "sections": [
       "trending"
-    ]
-  },
-  {
-    "id": "-eQEFtrOpNw",
-    "title": "Rama Rama - Rishab Rikhiram Sharma (Official Music Video) | Sitar for Mental Health | Diwali 2026",
-    "channel": "Rishab Rikhiram Sharma",
-    "channel_id": "UCjT3WfzAkYhKqbOBC0A-OHg",
-    "published_at": "2026-11-03T10:50:34Z",
-    "duration_seconds": 396,
-    "view_count": 5787196,
-    "like_count": 75298,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
     ]
   },
   {
@@ -1054,34 +734,7 @@
     "duration_seconds": 1330,
     "view_count": 5706434,
     "like_count": 127661,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "meCmFt4UlRQ",
-    "title": "Mann Sundar | 9 Nov 2026 | Full Episode 1783 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-09T15:00:18Z",
-    "duration_seconds": 1325,
-    "view_count": 5703931,
-    "like_count": 109927,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "_cxSxtVPgHg",
-    "title": "Kaisi Teri Dillagi | Full Episode 104 | 3 Nov 2026 | New Show | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-03T17:00:11Z",
-    "duration_seconds": 1350,
-    "view_count": 5584232,
-    "like_count": 86149,
+    "why_good": "近 30 天同类长视频播放第 49",
     "section": "trending",
     "sections": [
       "trending"
@@ -1096,34 +749,7 @@
     "duration_seconds": 483,
     "view_count": 5583958,
     "like_count": 81675,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "leeZ_IIYmmA",
-    "title": "2000 METRE YÜKSEKLİKTE SEZONUN İLK KAR KAMPI",
-    "channel": "Atik Ailesi",
-    "channel_id": "UCZOcZonhmKbNGeSZGJpa5Aw",
-    "published_at": "2026-10-23T16:00:49Z",
-    "duration_seconds": 2649,
-    "view_count": 5491697,
-    "like_count": 40275,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "cOWB1vycDwM",
-    "title": "We Made Biggest Ladi 🔥- दुनिया की सबसे बड़ी लड़ी बना दी! 😱 1km Long । Diwali 2026",
-    "channel": "MR. INDIAN HACKER",
-    "channel_id": "UCSiDGb0MnHFGjs4E2WKvShw",
-    "published_at": "2026-11-04T03:30:07Z",
-    "duration_seconds": 1275,
-    "view_count": 5480538,
-    "like_count": 180229,
+    "why_good": "近 30 天同类长视频播放第 50",
     "section": "trending",
     "sections": [
       "trending"
@@ -1138,6 +764,7 @@
     "duration_seconds": 2124,
     "view_count": 5427178,
     "like_count": 138261,
+    "why_good": "近 30 天同类长视频播放第 51",
     "section": "trending",
     "sections": [
       "trending"
@@ -1152,20 +779,7 @@
     "duration_seconds": 401,
     "view_count": 5356990,
     "like_count": 78814,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "AZNpKM7MyGU",
-    "title": "أغبى منتجات من الإنترنت - لحاف ثلجي 🥶",
-    "channel": "عمر عبدالرحمن | Omar Abdulrahman",
-    "channel_id": "UCdYt25YVNOQET06LMlr54aA",
-    "published_at": "2026-10-23T16:29:14Z",
-    "duration_seconds": 1725,
-    "view_count": 5324888,
-    "like_count": 140855,
+    "why_good": "近 30 天同类长视频播放第 52",
     "section": "trending",
     "sections": [
       "trending"
@@ -1180,6 +794,7 @@
     "duration_seconds": 1076,
     "view_count": 5289519,
     "like_count": 94387,
+    "why_good": "近 30 天同类长视频播放第 53",
     "section": "trending",
     "sections": [
       "trending"
@@ -1194,62 +809,7 @@
     "duration_seconds": 2198,
     "view_count": 5248711,
     "like_count": 83875,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "MugIFSQgh08",
-    "title": "Hamari Bhabhi Number 1 | Full Episode 54 | 31 Oct 2026 | HD #newepisode Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-10-31T16:30:28Z",
-    "duration_seconds": 1350,
-    "view_count": 5135590,
-    "like_count": 72456,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "oR--AmI7iHc",
-    "title": "리센느 연습실 급습",
-    "channel": "안녕하세요원이입니다잘부탁드립니다",
-    "channel_id": "UCWpY0eSJtyO-qNAPbKFRSSg",
-    "published_at": "2026-11-03T09:00:06Z",
-    "duration_seconds": 1317,
-    "view_count": 5097597,
-    "like_count": 104487,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "G5j9PR2Xg-w",
-    "title": "ISHQ JUNOONI | Full Episode 247 | 8 Nov 2026 | Full HD #Newepisode | Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-09T13:00:02Z",
-    "duration_seconds": 1325,
-    "view_count": 5064447,
-    "like_count": 102127,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "KIaQ9rK9YkM",
-    "title": "Hamari Bhabhi Number 1 | Full Episode 55 | 2 Nov 2026 | HD #newepisode Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-02T16:30:16Z",
-    "duration_seconds": 1341,
-    "view_count": 5035942,
-    "like_count": 71135,
+    "why_good": "近 30 天同类长视频播放第 54",
     "section": "trending",
     "sections": [
       "trending"
@@ -1264,20 +824,7 @@
     "duration_seconds": 961,
     "view_count": 5005298,
     "like_count": 98603,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "wKd6coKTFQU",
-    "title": "دخلت أرض العطش التي تبتلع البشر - تنزروفت Tanezrouft 🇩🇿🏜️",
-    "channel": "Khoubai",
-    "channel_id": "UCJgfj0DxWN0k1UuB5wiDf8A",
-    "published_at": "2026-10-25T17:21:13Z",
-    "duration_seconds": 5276,
-    "view_count": 4998358,
-    "like_count": 77214,
+    "why_good": "近 30 天同类长视频播放第 55",
     "section": "trending",
     "sections": [
       "trending"
@@ -1292,6 +839,7 @@
     "duration_seconds": 1052,
     "view_count": 4915635,
     "like_count": 65293,
+    "why_good": "近 30 天同类长视频播放第 56",
     "section": "trending",
     "sections": [
       "trending"
@@ -1306,10 +854,10 @@
     "duration_seconds": 314,
     "view_count": 4868603,
     "like_count": 84065,
+    "why_good": "近 30 天同类长视频播放第 57",
     "section": "trending",
     "sections": [
-      "trending",
-      "music"
+      "trending"
     ]
   },
   {
@@ -1321,6 +869,7 @@
     "duration_seconds": 2413,
     "view_count": 4867846,
     "like_count": 41571,
+    "why_good": "近 30 天同类长视频播放第 58",
     "section": "trending",
     "sections": [
       "trending"
@@ -1335,35 +884,7 @@
     "duration_seconds": 3105,
     "view_count": 4865179,
     "like_count": 75358,
-    "section": "trending",
-    "sections": [
-      "trending"
-    ]
-  },
-  {
-    "id": "k259hkI6eto",
-    "title": "[뮤뱅 스테디캠 4K] A2O LITE 'NEON' 4k Bonus Ver. @뮤직뱅크(Music Bank) 261023",
-    "channel": "KBS Kpop",
-    "channel_id": "UCeLPm9yH_a_QH8n6445G-Ow",
-    "published_at": "2026-10-23T11:00:11Z",
-    "duration_seconds": 244,
-    "view_count": 4757470,
-    "like_count": 33763,
-    "section": "trending",
-    "sections": [
-      "trending",
-      "music"
-    ]
-  },
-  {
-    "id": "VyWZyOxyTrw",
-    "title": "Hamari Bhabhi Number 1 | Full Episode 56 | 3 Nov 2026 | HD #newepisode Dangal TV",
-    "channel": "Dangal TV Channel",
-    "channel_id": "UCNzmmbXIbMzlqE8nD1PBXfg",
-    "published_at": "2026-11-03T16:30:31Z",
-    "duration_seconds": 1350,
-    "view_count": 4646373,
-    "like_count": 68106,
+    "why_good": "近 30 天同类长视频播放第 59",
     "section": "trending",
     "sections": [
       "trending"
@@ -1378,6 +899,7 @@
     "duration_seconds": 2160,
     "view_count": 4645721,
     "like_count": 70021,
+    "why_good": "近 30 天同类长视频播放第 60",
     "section": "trending",
     "sections": [
       "trending"
@@ -1392,10 +914,10 @@
     "duration_seconds": 262,
     "view_count": 4579168,
     "like_count": 66656,
+    "why_good": "近 30 天同类长视频播放第 61",
     "section": "trending",
     "sections": [
-      "trending",
-      "music"
+      "trending"
     ]
   },
   {
@@ -1407,6 +929,7 @@
     "duration_seconds": 328,
     "view_count": 4575693,
     "like_count": 2748,
+    "why_good": "近 30 天同类长视频播放第 62",
     "section": "trending",
     "sections": [
       "trending"
@@ -1421,10 +944,14 @@
     "duration_seconds": 82,
     "view_count": 672005,
     "like_count": 9027,
+    "why_good": "AI 前沿精选频道 OpenAI 本周新片",
     "section": "ai",
     "sections": [
-      "ai"
-    ]
+      "ai",
+      "picks"
+    ],
+    "source": "ai",
+    "pick_source": "AI前沿"
   },
   {
     "id": "9ZxCOHkfn_8",
@@ -1435,10 +962,14 @@
     "duration_seconds": 88,
     "view_count": 373245,
     "like_count": 4666,
+    "why_good": "AI 前沿精选频道 OpenAI 本周新片",
     "section": "ai",
     "sections": [
-      "ai"
-    ]
+      "ai",
+      "picks"
+    ],
+    "source": "ai",
+    "pick_source": "AI前沿"
   },
   {
     "id": "GJ6PMUm5oTA",
@@ -1449,10 +980,14 @@
     "duration_seconds": 349,
     "view_count": 221242,
     "like_count": 3616,
+    "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片",
     "section": "ai",
     "sections": [
-      "ai"
-    ]
+      "ai",
+      "picks"
+    ],
+    "source": "ai",
+    "pick_source": "AI前沿"
   },
   {
     "id": "pz74r-4dGfQ",
@@ -1463,24 +998,14 @@
     "duration_seconds": 1160,
     "view_count": 81175,
     "like_count": 584,
+    "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
     "section": "ai",
     "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ys6YQ2yfBpM",
-    "title": "Your Old Prompts Are Making Claude Worse - Lance Martin, Anthropic",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T21:00:18Z",
-    "duration_seconds": 3843,
-    "view_count": 68007,
-    "like_count": 810,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
+      "ai",
+      "picks"
+    ],
+    "source": "ai",
+    "pick_source": "AI前沿"
   },
   {
     "id": "8oB9sf1SKhs",
@@ -1491,6 +1016,7 @@
     "duration_seconds": 579,
     "view_count": 53206,
     "like_count": 1106,
+    "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1505,6 +1031,7 @@
     "duration_seconds": 65,
     "view_count": 45890,
     "like_count": 514,
+    "why_good": "AI 前沿精选频道 OpenAI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1519,6 +1046,7 @@
     "duration_seconds": 2779,
     "view_count": 45741,
     "like_count": 555,
+    "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1533,6 +1061,7 @@
     "duration_seconds": 1321,
     "view_count": 30534,
     "like_count": 259,
+    "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1547,6 +1076,7 @@
     "duration_seconds": 1228,
     "view_count": 29107,
     "like_count": 203,
+    "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1561,6 +1091,7 @@
     "duration_seconds": 93,
     "view_count": 28911,
     "like_count": 241,
+    "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1575,20 +1106,7 @@
     "duration_seconds": 2088,
     "view_count": 23215,
     "like_count": 153,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "AYFcmnQrZCg",
-    "title": "AI Agents Will Upend Investing Even More Than Coding - Frank Long, Coatue",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T00:00:09Z",
-    "duration_seconds": 845,
-    "view_count": 22560,
-    "like_count": 103,
+    "why_good": "AI 前沿精选频道 Latent Space 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1603,20 +1121,7 @@
     "duration_seconds": 6148,
     "view_count": 21731,
     "like_count": 91,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "T-42NrYjwxM",
-    "title": "Our Smaller Model Beat Opus on Finance Tasks - Alexander Shevchenko, Ramp",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-04T22:00:34Z",
-    "duration_seconds": 855,
-    "view_count": 19699,
-    "like_count": 69,
+    "why_good": "AI 前沿精选频道 Latent Space 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1631,6 +1136,7 @@
     "duration_seconds": 2280,
     "view_count": 18945,
     "like_count": 199,
+    "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1645,6 +1151,7 @@
     "duration_seconds": 2139,
     "view_count": 18230,
     "like_count": 238,
+    "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1659,62 +1166,7 @@
     "duration_seconds": 70,
     "view_count": 17792,
     "like_count": 921,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "maitMe9HCvw",
-    "title": "How to Get Frontier Coding Results at 70% Lower Cost - Nouha Dziri, Cohere",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-07T08:00:33Z",
-    "duration_seconds": 1882,
-    "view_count": 16311,
-    "like_count": 122,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "44GBqQGc-v0",
-    "title": "How Figma Is Building Self-Serve Analytics with OpenAI",
-    "channel": "OpenAI",
-    "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-    "published_at": "2026-11-04T17:27:07Z",
-    "duration_seconds": 66,
-    "view_count": 16213,
-    "like_count": 124,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "zLc8zeGeNaY",
-    "title": "How Netflix Evaluates AI When There's No Right Answer - Cameron Wolfe, Netflix",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-05T20:00:25Z",
-    "duration_seconds": 1073,
-    "view_count": 15886,
-    "like_count": 156,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ZJjRgvjhq3M",
-    "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-07T19:00:33Z",
-    "duration_seconds": 6632,
-    "view_count": 14690,
-    "like_count": 90,
+    "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1729,34 +1181,7 @@
     "duration_seconds": 3038,
     "view_count": 14039,
     "like_count": 43,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "yC72iQx6rM0",
-    "title": "Qodo brings company context into Codex code review",
-    "channel": "OpenAI",
-    "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-    "published_at": "2026-11-03T18:11:23Z",
-    "duration_seconds": 85,
-    "view_count": 13411,
-    "like_count": 84,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "Xw9utONfhIY",
-    "title": "What Your Coding Agent Can't See in the Code - Tom Moor, Linear",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:03Z",
-    "duration_seconds": 1273,
-    "view_count": 12455,
-    "like_count": 63,
+    "why_good": "AI 前沿精选频道 Latent Space 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1771,20 +1196,7 @@
     "duration_seconds": 66,
     "view_count": 12454,
     "like_count": 684,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "_0SQh8a1Osk",
-    "title": "Don't Vibe Code Your Agent Infrastructure - Akshat Bubna, Modal",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-07T20:00:13Z",
-    "duration_seconds": 1055,
-    "view_count": 12196,
-    "like_count": 58,
+    "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1799,6 +1211,7 @@
     "duration_seconds": 1154,
     "view_count": 10999,
     "like_count": 19,
+    "why_good": "AI 前沿精选频道 Siraj Raval 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1813,20 +1226,7 @@
     "duration_seconds": 279,
     "view_count": 10776,
     "like_count": 203,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "y9Sg--RDtks",
-    "title": "When we can do anything, do we still know what we want? — Ryo Lu",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T14:44:57Z",
-    "duration_seconds": 1385,
-    "view_count": 10018,
-    "like_count": 80,
+    "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1841,34 +1241,7 @@
     "duration_seconds": 184,
     "view_count": 9949,
     "like_count": 120,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "jDwc0aXTAFg",
-    "title": "Your Company Has No Model of Itself. Agents Can Build One - Joao Wenzel, Citadel Securities",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-08T07:00:36Z",
-    "duration_seconds": 1136,
-    "view_count": 9858,
-    "like_count": 57,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "QmDLDy3ZSNE",
-    "title": "Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
-    "channel": "Latent Space",
-    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-    "published_at": "2026-11-04T10:32:51Z",
-    "duration_seconds": 4344,
-    "view_count": 9826,
-    "like_count": 77,
+    "why_good": "AI 前沿精选频道 LangChain 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1883,62 +1256,7 @@
     "duration_seconds": 81,
     "view_count": 9622,
     "like_count": 393,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "EtZwTYahfek",
-    "title": "7 Things Your AI Coworker Needs - Philipp Schmid, Google DeepMind",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T10:00:00Z",
-    "duration_seconds": 1047,
-    "view_count": 9413,
-    "like_count": 79,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "dpY7YzZo4kE",
-    "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
-    "channel": "Latent Space",
-    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-    "published_at": "2026-11-08T21:23:23Z",
-    "duration_seconds": 7245,
-    "view_count": 9129,
-    "like_count": 103,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "BTtyguoPvBU",
-    "title": "How One Founder Manages 20 AI Coding Agents at Once - Ryan Carson, Untangle",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T18:00:27Z",
-    "duration_seconds": 929,
-    "view_count": 9032,
-    "like_count": 56,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "N8niNi4bse4",
-    "title": "This is a gym for robots 🦾👀 #trendingshorts #robotics #technology #future",
-    "channel": "The Rundown AI",
-    "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-    "published_at": "2026-11-05T18:30:04Z",
-    "duration_seconds": 65,
-    "view_count": 7787,
-    "like_count": 362,
+    "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1953,34 +1271,7 @@
     "duration_seconds": 334,
     "view_count": 7585,
     "like_count": 57,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ra8X7_bnujw",
-    "title": "Why Waiting for the Next AI Model Can Pay Off - John Stecher, Blackstone & Scott Worland, Norm AI",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-05T10:00:37Z",
-    "duration_seconds": 1245,
-    "view_count": 7418,
-    "like_count": 35,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "u7fsyrXsPBE",
-    "title": "Claude Code Looked Right but Missed $800K - Natalia Connolly & Kevin Madura, AlixPartners",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-08T18:00:08Z",
-    "duration_seconds": 1112,
-    "view_count": 7061,
-    "like_count": 36,
+    "why_good": "AI 前沿精选频道 LangChain 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -1995,188 +1286,7 @@
     "duration_seconds": 195,
     "view_count": 6968,
     "like_count": 67,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "RdQCY_-SXbA",
-    "title": "AI Can't Make Up a Number It Can't Look Up - Vinoo Ganesh, Kepler",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-07T08:00:25Z",
-    "duration_seconds": 1108,
-    "view_count": 6819,
-    "like_count": 40,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "EaOit1mmR9g",
-    "title": "How Financial Planners With Zero Coding Experience Built Their Own Agents - Matt Ragone, Range",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-08T08:00:14Z",
-    "duration_seconds": 969,
-    "view_count": 6744,
-    "like_count": 30,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "4VmugsE-iP0",
-    "title": "How We Took an AI Agent From 41% to 97% Accurate - Milind Sunil Shah, Brainbase Labs",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-05T09:00:12Z",
-    "duration_seconds": 803,
-    "view_count": 6444,
-    "like_count": 51,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ZrJhFIIwUD8",
-    "title": "Claude just helped crack open one of biology’s biggest mysteries 🔬👀 #trendingshorts #ai #sciecne",
-    "channel": "The Rundown AI",
-    "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-    "published_at": "2026-11-09T18:30:13Z",
-    "duration_seconds": 63,
-    "view_count": 6267,
-    "like_count": 431,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "oWqsBuhRRZ4",
-    "title": "How We Mapped a 35-Million-Line Mainframe in 4 Days - Stephen Chin, Neo4j & Neeraj Deshmukh, Blitzy",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T20:00:10Z",
-    "duration_seconds": 1184,
-    "view_count": 6227,
-    "like_count": 42,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "kIlVNGZZr8o",
-    "title": "How Agents Cut Hour-Long Data Checks to 5 Minutes - Amol Kapoor & Clifford Ressel, Nori Agentic",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-07T07:00:18Z",
-    "duration_seconds": 1174,
-    "view_count": 6069,
-    "like_count": 15,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "gdzsJZJ6DDs",
-    "title": "Your Financial Agent Needs to Show Its Work - Anirudh Veeraragavan, Fieldguide",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-07T18:00:02Z",
-    "duration_seconds": 808,
-    "view_count": 5757,
-    "like_count": 32,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "YqJ4asgj1R8",
-    "title": "Stop Giving Your AI Agents API Keys - Kim Maida, Keycard & Mason Egger, Temporal",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-05T21:00:16Z",
-    "duration_seconds": 3156,
-    "view_count": 5446,
-    "like_count": 21,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "WJTQBENv0KI",
-    "title": "How Ramp Tests Its AI Bookkeeping Agent Before Customers Do - Ryan Stevens, Ramp",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-08T19:00:27Z",
-    "duration_seconds": 1119,
-    "view_count": 5354,
-    "like_count": 20,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "SUqQlvyI3N8",
-    "title": "Your AI Agent Keeps Making the Same Mistakes - Sparsh Jain, CentralAgent AI",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T08:00:37Z",
-    "duration_seconds": 898,
-    "view_count": 5238,
-    "like_count": 62,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "V2UqEUA8NjM",
-    "title": "Stop Making Your Customers Click Approve - Emil Chetty, Wise",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-05T08:00:07Z",
-    "duration_seconds": 933,
-    "view_count": 5235,
-    "like_count": 29,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "BT1Mo-fD-g0",
-    "title": "Your Coding Agent Can't Undo Its Own Mistakes - Tanmay Sah & Dolly Sah",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-08T08:00:03Z",
-    "duration_seconds": 998,
-    "view_count": 5179,
-    "like_count": 29,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "WWIFiQi9U4w",
-    "title": "The One Thing Every AI Agent Framework Agrees On - Mislav Ivanda, Daytona",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:27Z",
-    "duration_seconds": 936,
-    "view_count": 5142,
-    "like_count": 16,
+    "why_good": "AI 前沿精选频道 LangChain 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2191,160 +1301,7 @@
     "duration_seconds": 66,
     "view_count": 5072,
     "like_count": 21,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "C2-v6wkHXhY",
-    "title": "Your AI Isn't the Advantage. Your Judgment Is - Sid Pednekar",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-06T09:00:15Z",
-    "duration_seconds": 1093,
-    "view_count": 4406,
-    "like_count": 18,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "Gs4Ho0ub3a4",
-    "title": "AI Engineer NYC 2026 Closing Remarks - Ksenia Se, Turing Post & swyx, AI Engineer",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T09:00:16Z",
-    "duration_seconds": 212,
-    "view_count": 4192,
-    "like_count": 7,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "3nDMYV-QHLs",
-    "title": "Training Your Own Agent Models With RL Is Now Practical - Jason Mancuso, Modal",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:25Z",
-    "duration_seconds": 1251,
-    "view_count": 3884,
-    "like_count": 24,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "v5IJwVnTxzg",
-    "title": "What Frontier Labs Buy: A Data Deep Dive with Handshake AI — Garrett Lord & Team",
-    "channel": "Latent Space",
-    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-    "published_at": "2026-11-09T16:18:21Z",
-    "duration_seconds": 9830,
-    "view_count": 3687,
-    "like_count": 33,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "1NWnSwCB4NM",
-    "title": "Your KV Cache Can Spot Attacks on Your AI Agents - Ari Azarafrooz, Intrinsec AI",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:38Z",
-    "duration_seconds": 432,
-    "view_count": 3622,
-    "like_count": 13,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "rSWiNE92xqM",
-    "title": "GitHub’s Growth: 225M Developers, 34.3B Commits — Jay Parikh, EVP of CoreAI, Microsoft",
-    "channel": "Latent Space",
-    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-    "published_at": "2026-11-08T01:22:17Z",
-    "duration_seconds": 1395,
-    "view_count": 3592,
-    "like_count": 15,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "LF8V0RGJU0I",
-    "title": "Will AI Agents Pretend to Be Human to Get Past a Check? - Maty Bohacek, Stanford",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:35Z",
-    "duration_seconds": 1077,
-    "view_count": 3098,
-    "like_count": 8,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "hX140a5klW0",
-    "title": "AI Writes Code Faster Than Uber Can Merge It - Preetam Dwivedi & Manjari Akella, Uber",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T07:00:15Z",
-    "duration_seconds": 1655,
-    "view_count": 2983,
-    "like_count": 8,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "3nAV2s4GYbs",
-    "title": "Mini Brains, Beating Heart Organoids, and the AI That Predicts Them — Fabian Theis, Helmholtz Munich",
-    "channel": "Latent Space",
-    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-    "published_at": "2026-11-06T15:06:02Z",
-    "duration_seconds": 3051,
-    "view_count": 2863,
-    "like_count": 20,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "6TjFjHPjVH0",
-    "title": "I Let Agents Refactor My Codebase for 3 Weeks. Then I Read the Code. — Keiji Kanazawa, Microsoft",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T03:30:09Z",
-    "duration_seconds": 1191,
-    "view_count": 2836,
-    "like_count": 23,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "KdG9OSOtJOA",
-    "title": "Why No One Agrees on What Their AI Tokens Cost - Pratyusha Duvvuri, Cisco",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:26Z",
-    "duration_seconds": 1137,
-    "view_count": 2540,
-    "like_count": 7,
+    "why_good": "AI 前沿精选频道 DeepLearningAI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2359,20 +1316,7 @@
     "duration_seconds": 153,
     "view_count": 2324,
     "like_count": 20,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "NUgaWmws0XQ",
-    "title": "How Airbnb builds Trust for Guests and Hosts using AI Agents with LangGraph",
-    "channel": "LangChain",
-    "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
-    "published_at": "2026-11-09T13:53:26Z",
-    "duration_seconds": 1131,
-    "view_count": 2265,
-    "like_count": 18,
+    "why_good": "AI 前沿精选频道 Runway 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2387,34 +1331,7 @@
     "duration_seconds": 153,
     "view_count": 2149,
     "like_count": 21,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ogOufGlATbY",
-    "title": "I tested out Google’s new world model 🌎👀 #trendingshorts #ai #tech #research",
-    "channel": "The Rundown AI",
-    "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-    "published_at": "2026-11-09T21:00:40Z",
-    "duration_seconds": 71,
-    "view_count": 1957,
-    "like_count": 84,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "yH7_SIIgI-Y",
-    "title": "An Agent That Fixes Its Own Mistakes - Saloni Gandhi & Ziwei Guo, LinkedIn",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-10T00:00:13Z",
-    "duration_seconds": 2330,
-    "view_count": 1846,
-    "like_count": 8,
+    "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2429,146 +1346,7 @@
     "duration_seconds": 84,
     "view_count": 1835,
     "like_count": 25,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ntVpbyDTYaQ",
-    "title": "Your Self-Hosted LLM Needs to Say No - Harshul Jain & Parv Khatri, Audible & SAP",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T23:00:23Z",
-    "duration_seconds": 3128,
-    "view_count": 1798,
-    "like_count": 7,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ATMcd9tkhhc",
-    "title": "Stop Chatting With Spreadsheets — Francesco Galletta & Felippe Felisola Caso, Monzo",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T23:04:36Z",
-    "duration_seconds": 6634,
-    "view_count": 1634,
-    "like_count": 2,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "dznCt8xPW7o",
-    "title": "Right Answer, Wrong Reasons: AI Forecasts Costco - Hassan El Mghari & Omar El Mghari, Together AI",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:21Z",
-    "duration_seconds": 925,
-    "view_count": 1568,
-    "like_count": 9,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "MQiojLnK-E0",
-    "title": "60% of Our Data PRs Now Merge With No Human Review - Chetas Joshi, Robinhood",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-10T01:00:08Z",
-    "duration_seconds": 1680,
-    "view_count": 1560,
-    "like_count": 6,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "FNTz0CdqL6g",
-    "title": "Kuken Industries searches 70 years of drawings in minutes",
-    "channel": "OpenAI",
-    "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-    "published_at": "2026-11-10T02:41:23Z",
-    "duration_seconds": 180,
-    "view_count": 1549,
-    "like_count": 79,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "SE6POOEjh4I",
-    "title": "Can AI Agents Beat Wall Street at Predicting Earnings? - Ashwin Paranjape, Samaya AI",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:11Z",
-    "duration_seconds": 921,
-    "view_count": 1528,
-    "like_count": 18,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "YV1x6gCdgQA",
-    "title": "Teach Your AI Agent to Build Products Everyone Can Use - Jemima Abu, CAIS",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:12Z",
-    "duration_seconds": 879,
-    "view_count": 1478,
-    "like_count": 9,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "Enn9dVrRXAo",
-    "title": "Stop Doing Agent Archaeology on Your Team's Code - Richard Feldman, Delta",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T08:00:16Z",
-    "duration_seconds": 1165,
-    "view_count": 1396,
-    "like_count": 7,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "7YvX1_xKUyE",
-    "title": "One million AI Engineers!  #aiengineer",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-08T19:12:03Z",
-    "duration_seconds": 107,
-    "view_count": 1380,
-    "like_count": 9,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "wWisOHEcMPE",
-    "title": "Engineering Agency out of the Happy Path — Matthew Jewkes, Standard Cybernetics",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-09T04:00:33Z",
-    "duration_seconds": 1182,
-    "view_count": 1104,
-    "like_count": 13,
+    "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2583,20 +1361,7 @@
     "duration_seconds": 278,
     "view_count": 870,
     "like_count": 19,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "ktbAVYsAxpk",
-    "title": "The Agents Were Fine. Everything Around Them Broke. - Joey Wang, Harvey",
-    "channel": "AI Engineer",
-    "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
-    "published_at": "2026-11-10T02:00:24Z",
-    "duration_seconds": 778,
-    "view_count": 551,
-    "like_count": 4,
+    "why_good": "AI 前沿精选频道 Runway 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2611,6 +1376,7 @@
     "duration_seconds": 164,
     "view_count": 442,
     "like_count": 6,
+    "why_good": "AI 前沿精选频道 Scale 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2625,6 +1391,7 @@
     "duration_seconds": 3281,
     "view_count": 328,
     "like_count": 8,
+    "why_good": "AI 前沿精选频道 Together AI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2639,6 +1406,7 @@
     "duration_seconds": 1576,
     "view_count": 119,
     "like_count": null,
+    "why_good": "AI 前沿精选频道 Together AI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2653,20 +1421,7 @@
     "duration_seconds": 792,
     "view_count": 78,
     "like_count": null,
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "-4ibZIfj-pY",
-    "title": "Open by design: NYC developer meetup",
-    "channel": "Together AI",
-    "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA",
-    "published_at": "2026-11-09T18:08:55Z",
-    "duration_seconds": 3106,
-    "view_count": 58,
-    "like_count": null,
+    "why_good": "AI 前沿精选频道 Together AI 本周新片",
     "section": "ai",
     "sections": [
       "ai"
@@ -2681,6 +1436,7 @@
     "duration_seconds": 4622,
     "view_count": 11942196,
     "like_count": 304047,
+    "why_good": "近 30 天同类长视频播放第 1",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2695,6 +1451,7 @@
     "duration_seconds": 6102,
     "view_count": 9887622,
     "like_count": 195291,
+    "why_good": "近 30 天同类长视频播放第 2",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2709,6 +1466,7 @@
     "duration_seconds": 4115,
     "view_count": 8378954,
     "like_count": 87429,
+    "why_good": "近 30 天同类长视频播放第 3",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2723,6 +1481,7 @@
     "duration_seconds": 1630,
     "view_count": 7299218,
     "like_count": 104036,
+    "why_good": "近 30 天同类长视频播放第 4",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2737,6 +1496,7 @@
     "duration_seconds": 6572,
     "view_count": 7296964,
     "like_count": 50773,
+    "why_good": "近 30 天同类长视频播放第 5",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2751,20 +1511,7 @@
     "duration_seconds": 6598,
     "view_count": 6979068,
     "like_count": 221716,
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "6VTSAs4Rsck",
-    "title": "Mark Cuban: The Brutal Truth About The Next Market Crash!",
-    "channel": "The Diary Of A CEO",
-    "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
-    "published_at": "2026-10-26T07:00:48Z",
-    "duration_seconds": 5494,
-    "view_count": 5678549,
-    "like_count": 56640,
+    "why_good": "近 30 天同类长视频播放第 6",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2779,34 +1526,7 @@
     "duration_seconds": 6880,
     "view_count": 5656932,
     "like_count": 83342,
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "GlaSnROMqRY",
-    "title": "The Deathbed Doctor: Weeks Before Death, Patients Start Having Visions! | Dr Christopher Kerr",
-    "channel": "The Diary Of A CEO",
-    "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
-    "published_at": "2026-10-19T07:00:16Z",
-    "duration_seconds": 5007,
-    "view_count": 5032942,
-    "like_count": 107208,
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "IkhmdTqSvJw",
-    "title": "UFO Cover-Up Analyst: The Secret Alien Programs Nobody Is Talking About! | Eric Weinstein",
-    "channel": "The Diary Of A CEO",
-    "channel_id": "UCGq-a57w-aPwyi3pW7XLiHw",
-    "published_at": "2026-10-12T07:00:32Z",
-    "duration_seconds": 6778,
-    "view_count": 4741676,
-    "like_count": 86953,
+    "why_good": "近 30 天同类长视频播放第 7",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2821,6 +1541,7 @@
     "duration_seconds": 1822,
     "view_count": 4732270,
     "like_count": 69778,
+    "why_good": "近 30 天同类长视频播放第 8",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2835,6 +1556,7 @@
     "duration_seconds": 3807,
     "view_count": 4460557,
     "like_count": 46409,
+    "why_good": "近 30 天同类长视频播放第 9",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2849,6 +1571,7 @@
     "duration_seconds": 4081,
     "view_count": 4088364,
     "like_count": 67815,
+    "why_good": "近 30 天同类长视频播放第 10",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2863,6 +1586,7 @@
     "duration_seconds": 6592,
     "view_count": 4070120,
     "like_count": 46020,
+    "why_good": "近 30 天同类长视频播放第 11",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2877,6 +1601,7 @@
     "duration_seconds": 1037,
     "view_count": 3804284,
     "like_count": 34286,
+    "why_good": "近 30 天同类长视频播放第 12",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2891,6 +1616,7 @@
     "duration_seconds": 2960,
     "view_count": 3755527,
     "like_count": 28461,
+    "why_good": "近 30 天同类长视频播放第 13",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2905,6 +1631,7 @@
     "duration_seconds": 7014,
     "view_count": 3678214,
     "like_count": 40905,
+    "why_good": "近 30 天同类长视频播放第 14",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2919,6 +1646,7 @@
     "duration_seconds": 3268,
     "view_count": 3670336,
     "like_count": 45272,
+    "why_good": "近 30 天同类长视频播放第 15",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2933,6 +1661,7 @@
     "duration_seconds": 1154,
     "view_count": 3665654,
     "like_count": 42535,
+    "why_good": "近 30 天同类长视频播放第 16",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2947,6 +1676,7 @@
     "duration_seconds": 2662,
     "view_count": 3639793,
     "like_count": 33467,
+    "why_good": "近 30 天同类长视频播放第 17",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2961,6 +1691,7 @@
     "duration_seconds": 4120,
     "view_count": 3630484,
     "like_count": 35182,
+    "why_good": "近 30 天同类长视频播放第 18",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2975,6 +1706,7 @@
     "duration_seconds": 4892,
     "view_count": 3535659,
     "like_count": 30741,
+    "why_good": "近 30 天同类长视频播放第 19",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -2989,6 +1721,7 @@
     "duration_seconds": 3976,
     "view_count": 3424836,
     "like_count": 26873,
+    "why_good": "近 30 天同类长视频播放第 20",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3003,6 +1736,7 @@
     "duration_seconds": 3835,
     "view_count": 3339870,
     "like_count": 31556,
+    "why_good": "近 30 天同类长视频播放第 21",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3017,6 +1751,7 @@
     "duration_seconds": 5116,
     "view_count": 3212581,
     "like_count": 28170,
+    "why_good": "近 30 天同类长视频播放第 22",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3031,6 +1766,7 @@
     "duration_seconds": 4442,
     "view_count": 3170316,
     "like_count": 77616,
+    "why_good": "近 30 天同类长视频播放第 23",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3045,6 +1781,7 @@
     "duration_seconds": 5879,
     "view_count": 3082687,
     "like_count": 57563,
+    "why_good": "近 30 天同类长视频播放第 24",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3059,6 +1796,7 @@
     "duration_seconds": 10209,
     "view_count": 3042031,
     "like_count": 35922,
+    "why_good": "近 30 天同类长视频播放第 25",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3073,6 +1811,7 @@
     "duration_seconds": 3752,
     "view_count": 2958225,
     "like_count": 17692,
+    "why_good": "近 30 天同类长视频播放第 26",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3087,6 +1826,7 @@
     "duration_seconds": 11403,
     "view_count": 2944497,
     "like_count": 17630,
+    "why_good": "近 30 天同类长视频播放第 27",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3101,6 +1841,7 @@
     "duration_seconds": 987,
     "view_count": 2901860,
     "like_count": 26446,
+    "why_good": "近 30 天同类长视频播放第 28",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3115,6 +1856,7 @@
     "duration_seconds": 12062,
     "view_count": 2864480,
     "like_count": 78317,
+    "why_good": "近 30 天同类长视频播放第 29",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3129,6 +1871,7 @@
     "duration_seconds": 996,
     "view_count": 2863962,
     "like_count": 25949,
+    "why_good": "近 30 天同类长视频播放第 30",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3143,6 +1886,7 @@
     "duration_seconds": 910,
     "view_count": 2777332,
     "like_count": 26332,
+    "why_good": "近 30 天同类长视频播放第 31",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3157,6 +1901,7 @@
     "duration_seconds": 5241,
     "view_count": 2745519,
     "like_count": 43429,
+    "why_good": "近 30 天同类长视频播放第 32",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3171,6 +1916,7 @@
     "duration_seconds": 4895,
     "view_count": 2709943,
     "like_count": 26381,
+    "why_good": "近 30 天同类长视频播放第 33",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3185,6 +1931,7 @@
     "duration_seconds": 3036,
     "view_count": 2646930,
     "like_count": 15879,
+    "why_good": "近 30 天同类长视频播放第 34",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3199,6 +1946,7 @@
     "duration_seconds": 5775,
     "view_count": 2630091,
     "like_count": 27147,
+    "why_good": "近 30 天同类长视频播放第 35",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3213,6 +1961,7 @@
     "duration_seconds": 1382,
     "view_count": 2623807,
     "like_count": 48899,
+    "why_good": "近 30 天同类长视频播放第 36",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3227,6 +1976,7 @@
     "duration_seconds": 34601,
     "view_count": 2618836,
     "like_count": 54674,
+    "why_good": "近 30 天同类长视频播放第 37",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3241,6 +1991,7 @@
     "duration_seconds": 3382,
     "view_count": 2545296,
     "like_count": 16614,
+    "why_good": "近 30 天同类长视频播放第 38",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3255,6 +2006,7 @@
     "duration_seconds": 4993,
     "view_count": 2481386,
     "like_count": 16240,
+    "why_good": "近 30 天同类长视频播放第 39",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3269,6 +2021,7 @@
     "duration_seconds": 4708,
     "view_count": 2400220,
     "like_count": 15380,
+    "why_good": "近 30 天同类长视频播放第 40",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3283,6 +2036,7 @@
     "duration_seconds": 7298,
     "view_count": 2375820,
     "like_count": 63343,
+    "why_good": "近 30 天同类长视频播放第 41",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3297,6 +2051,7 @@
     "duration_seconds": 4459,
     "view_count": 2369259,
     "like_count": 22464,
+    "why_good": "近 30 天同类长视频播放第 42",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3311,6 +2066,7 @@
     "duration_seconds": 5265,
     "view_count": 2344384,
     "like_count": 16164,
+    "why_good": "近 30 天同类长视频播放第 43",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3325,6 +2081,7 @@
     "duration_seconds": 5261,
     "view_count": 2343023,
     "like_count": 15736,
+    "why_good": "近 30 天同类长视频播放第 44",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3339,6 +2096,7 @@
     "duration_seconds": 790,
     "view_count": 2247822,
     "like_count": 27157,
+    "why_good": "近 30 天同类长视频播放第 45",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3353,6 +2111,7 @@
     "duration_seconds": 3954,
     "view_count": 2243476,
     "like_count": 20623,
+    "why_good": "近 30 天同类长视频播放第 46",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3367,6 +2126,7 @@
     "duration_seconds": 5102,
     "view_count": 2243161,
     "like_count": 22464,
+    "why_good": "近 30 天同类长视频播放第 47",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3381,6 +2141,7 @@
     "duration_seconds": 7814,
     "view_count": 2241379,
     "like_count": 43208,
+    "why_good": "近 30 天同类长视频播放第 48",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3395,6 +2156,7 @@
     "duration_seconds": 1018,
     "view_count": 2234123,
     "like_count": null,
+    "why_good": "近 30 天同类长视频播放第 49",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3409,6 +2171,7 @@
     "duration_seconds": 3632,
     "view_count": 2233356,
     "like_count": 7197,
+    "why_good": "近 30 天同类长视频播放第 50",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3423,6 +2186,7 @@
     "duration_seconds": 4952,
     "view_count": 2227745,
     "like_count": 64088,
+    "why_good": "近 30 天同类长视频播放第 51",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3437,6 +2201,7 @@
     "duration_seconds": 4172,
     "view_count": 2209825,
     "like_count": 30910,
+    "why_good": "近 30 天同类长视频播放第 52",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3451,6 +2216,7 @@
     "duration_seconds": 33791,
     "view_count": 2206268,
     "like_count": 80200,
+    "why_good": "近 30 天同类长视频播放第 53",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3465,6 +2231,7 @@
     "duration_seconds": 3112,
     "view_count": 2167287,
     "like_count": 10530,
+    "why_good": "近 30 天同类长视频播放第 54",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3479,6 +2246,7 @@
     "duration_seconds": 7938,
     "view_count": 2166172,
     "like_count": 41109,
+    "why_good": "近 30 天同类长视频播放第 55",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3493,6 +2261,7 @@
     "duration_seconds": 7826,
     "view_count": 2159800,
     "like_count": 28019,
+    "why_good": "近 30 天同类长视频播放第 56",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3507,20 +2276,7 @@
     "duration_seconds": 5635,
     "view_count": 2147372,
     "like_count": 39510,
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "wR2hmAa61HQ",
-    "title": "क्या ILLUMINATI वापस आ गया?😳 Illuminati का असली सच | Akshat Gupta | The Fact-Tree #illuminati",
-    "channel": "THE FACT-TREE",
-    "channel_id": "UCpZQRFkfHjMKAJYQUyER0BA",
-    "published_at": "2026-10-14T14:30:10Z",
-    "duration_seconds": 918,
-    "view_count": 2126279,
-    "like_count": 18116,
+    "why_good": "近 30 天同类长视频播放第 57",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3535,6 +2291,7 @@
     "duration_seconds": 12775,
     "view_count": 2118379,
     "like_count": 74429,
+    "why_good": "近 30 天同类长视频播放第 58",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3549,6 +2306,7 @@
     "duration_seconds": 3350,
     "view_count": 2114067,
     "like_count": 19756,
+    "why_good": "近 30 天同类长视频播放第 59",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3563,6 +2321,7 @@
     "duration_seconds": 2873,
     "view_count": 2106469,
     "like_count": 15142,
+    "why_good": "近 30 天同类长视频播放第 60",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3577,6 +2336,7 @@
     "duration_seconds": 10299,
     "view_count": 2085624,
     "like_count": 72241,
+    "why_good": "近 30 天同类长视频播放第 61",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3591,6 +2351,7 @@
     "duration_seconds": 9495,
     "view_count": 2081186,
     "like_count": 18172,
+    "why_good": "近 30 天同类长视频播放第 62",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3605,6 +2366,7 @@
     "duration_seconds": 1716,
     "view_count": 2048661,
     "like_count": 47390,
+    "why_good": "近 30 天同类长视频播放第 63",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3619,6 +2381,7 @@
     "duration_seconds": 4875,
     "view_count": 2024051,
     "like_count": 31017,
+    "why_good": "近 30 天同类长视频播放第 64",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3633,6 +2396,7 @@
     "duration_seconds": 6717,
     "view_count": 2017000,
     "like_count": 56675,
+    "why_good": "近 30 天同类长视频播放第 65",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3647,6 +2411,7 @@
     "duration_seconds": 1238,
     "view_count": 1983400,
     "like_count": 33632,
+    "why_good": "近 30 天同类长视频播放第 66",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3661,6 +2426,7 @@
     "duration_seconds": 9822,
     "view_count": 1978894,
     "like_count": 18508,
+    "why_good": "近 30 天同类长视频播放第 67",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3675,6 +2441,7 @@
     "duration_seconds": 7142,
     "view_count": 1969490,
     "like_count": 21002,
+    "why_good": "近 30 天同类长视频播放第 68",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3689,6 +2456,7 @@
     "duration_seconds": 8642,
     "view_count": 1944872,
     "like_count": 79558,
+    "why_good": "近 30 天同类长视频播放第 69",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3703,6 +2471,7 @@
     "duration_seconds": 8062,
     "view_count": 1900992,
     "like_count": 14390,
+    "why_good": "近 30 天同类长视频播放第 70",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3717,6 +2486,7 @@
     "duration_seconds": 5114,
     "view_count": 1892866,
     "like_count": 25761,
+    "why_good": "近 30 天同类长视频播放第 71",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3731,6 +2501,7 @@
     "duration_seconds": 3135,
     "view_count": 1869860,
     "like_count": 14717,
+    "why_good": "近 30 天同类长视频播放第 72",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3745,6 +2516,7 @@
     "duration_seconds": 4006,
     "view_count": 1863320,
     "like_count": 12091,
+    "why_good": "近 30 天同类长视频播放第 73",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3759,6 +2531,7 @@
     "duration_seconds": 16559,
     "view_count": 1830047,
     "like_count": 20147,
+    "why_good": "近 30 天同类长视频播放第 74",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3773,6 +2546,7 @@
     "duration_seconds": 848,
     "view_count": 1804951,
     "like_count": 25369,
+    "why_good": "近 30 天同类长视频播放第 75",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3787,6 +2561,7 @@
     "duration_seconds": 3726,
     "view_count": 1775660,
     "like_count": 24795,
+    "why_good": "近 30 天同类长视频播放第 76",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3801,20 +2576,7 @@
     "duration_seconds": 8151,
     "view_count": 1744222,
     "like_count": 12267,
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "CPbr1d9tHpM",
-    "title": "2027 में क्या होने वाला है?😳भविष्य मालिका की आखिरी भविष्यवाणी! | भविष्य मालिका Part 2 | Akshat Gupta",
-    "channel": "THE FACT-TREE",
-    "channel_id": "UCpZQRFkfHjMKAJYQUyER0BA",
-    "published_at": "2026-10-28T14:30:28Z",
-    "duration_seconds": 1105,
-    "view_count": 1743893,
-    "like_count": 20908,
+    "why_good": "近 30 天同类长视频播放第 77",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3829,6 +2591,7 @@
     "duration_seconds": 7325,
     "view_count": 1697801,
     "like_count": 56710,
+    "why_good": "近 30 天同类长视频播放第 78",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3843,6 +2606,7 @@
     "duration_seconds": 2058,
     "view_count": 1696144,
     "like_count": 11125,
+    "why_good": "近 30 天同类长视频播放第 79",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3857,6 +2621,7 @@
     "duration_seconds": 8654,
     "view_count": 1679221,
     "like_count": 26943,
+    "why_good": "近 30 天同类长视频播放第 80",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3871,6 +2636,7 @@
     "duration_seconds": 4437,
     "view_count": 1671186,
     "like_count": 10380,
+    "why_good": "近 30 天同类长视频播放第 81",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3885,6 +2651,7 @@
     "duration_seconds": 5428,
     "view_count": 1649859,
     "like_count": 7381,
+    "why_good": "近 30 天同类长视频播放第 82",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3899,6 +2666,7 @@
     "duration_seconds": 5193,
     "view_count": 1643431,
     "like_count": 25355,
+    "why_good": "近 30 天同类长视频播放第 83",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3913,6 +2681,7 @@
     "duration_seconds": 3749,
     "view_count": 1641881,
     "like_count": 29566,
+    "why_good": "近 30 天同类长视频播放第 84",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3927,20 +2696,7 @@
     "duration_seconds": 721,
     "view_count": 1636640,
     "like_count": 11193,
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "OfFRnTud5ME",
-    "title": "Gold गिरेगा 1 लाख तक? | इस दिवाली मत खरीदना सोना | SAGAR SINHA",
-    "channel": "Sagar Sinha ",
-    "channel_id": "UCTR1Tk8SaMO9qw930kIOMHQ",
-    "published_at": "2026-11-02T13:30:13Z",
-    "duration_seconds": 973,
-    "view_count": 1631959,
-    "like_count": 11759,
+    "why_good": "近 30 天同类长视频播放第 85",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3955,6 +2711,7 @@
     "duration_seconds": 3603,
     "view_count": 1597579,
     "like_count": 16342,
+    "why_good": "近 30 天同类长视频播放第 86",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3969,6 +2726,7 @@
     "duration_seconds": 5971,
     "view_count": 1579431,
     "like_count": 20384,
+    "why_good": "近 30 天同类长视频播放第 87",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3983,6 +2741,7 @@
     "duration_seconds": 4001,
     "view_count": 1565231,
     "like_count": 29815,
+    "why_good": "近 30 天同类长视频播放第 88",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -3997,6 +2756,7 @@
     "duration_seconds": 667,
     "view_count": 1565119,
     "like_count": 19043,
+    "why_good": "近 30 天同类长视频播放第 89",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -4011,6 +2771,7 @@
     "duration_seconds": 4282,
     "view_count": 1561201,
     "like_count": 20277,
+    "why_good": "近 30 天同类长视频播放第 90",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -4025,6 +2786,7 @@
     "duration_seconds": 286,
     "view_count": 1553080,
     "like_count": 24191,
+    "why_good": "近 30 天同类长视频播放第 91",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -4039,6 +2801,7 @@
     "duration_seconds": 4484,
     "view_count": 1542599,
     "like_count": 12218,
+    "why_good": "近 30 天同类长视频播放第 92",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -4053,6 +2816,7 @@
     "duration_seconds": 2665,
     "view_count": 1530682,
     "like_count": 14816,
+    "why_good": "近 30 天同类长视频播放第 93",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -4067,6 +2831,7 @@
     "duration_seconds": 12867,
     "view_count": 1505771,
     "like_count": 9742,
+    "why_good": "近 30 天同类长视频播放第 94",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -4081,6 +2846,7 @@
     "duration_seconds": 282,
     "view_count": 71594999,
     "like_count": 207068,
+    "why_good": "近 30 天同类长视频播放第 1",
     "section": "music",
     "sections": [
       "music"
@@ -4095,6 +2861,7 @@
     "duration_seconds": 248,
     "view_count": 41005511,
     "like_count": 475250,
+    "why_good": "近 30 天同类长视频播放第 2",
     "section": "music",
     "sections": [
       "music"
@@ -4109,6 +2876,7 @@
     "duration_seconds": 293,
     "view_count": 26451205,
     "like_count": 856736,
+    "why_good": "近 30 天同类长视频播放第 3",
     "section": "music",
     "sections": [
       "music"
@@ -4123,6 +2891,7 @@
     "duration_seconds": 281,
     "view_count": 19083586,
     "like_count": 70828,
+    "why_good": "近 30 天同类长视频播放第 4",
     "section": "music",
     "sections": [
       "music"
@@ -4137,20 +2906,7 @@
     "duration_seconds": 289,
     "view_count": 18992774,
     "like_count": 103393,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "93j1fDGi_-8",
-    "title": "[최초공개] A2O LITE - NEON (4K) | WELCOME TO SOULITE From A2O SOUL A2O LITE",
-    "channel": "M2",
-    "channel_id": "UCTQVIXvcHrR9jYoJ6qaBAow",
-    "published_at": "2026-10-13T09:55:16Z",
-    "duration_seconds": 243,
-    "view_count": 18119014,
-    "like_count": 186972,
+    "why_good": "近 30 天同类长视频播放第 5",
     "section": "music",
     "sections": [
       "music"
@@ -4165,6 +2921,7 @@
     "duration_seconds": 378,
     "view_count": 18074857,
     "like_count": 54674,
+    "why_good": "近 30 天同类长视频播放第 6",
     "section": "music",
     "sections": [
       "music"
@@ -4179,6 +2936,7 @@
     "duration_seconds": 252,
     "view_count": 17541028,
     "like_count": 137560,
+    "why_good": "近 30 天同类长视频播放第 7",
     "section": "music",
     "sections": [
       "music"
@@ -4193,20 +2951,7 @@
     "duration_seconds": 291,
     "view_count": 17493327,
     "like_count": 120201,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "bRrjcdad2Zg",
-    "title": "KATSEYE (캣츠아이) “Unloveu” Visualizer",
-    "channel": "HYBE LABELS",
-    "channel_id": "UC3IZKseVpdzPSBaWxBxundA",
-    "published_at": "2026-10-13T23:59:10Z",
-    "duration_seconds": 245,
-    "view_count": 13158474,
-    "like_count": 469795,
+    "why_good": "近 30 天同类长视频播放第 8",
     "section": "music",
     "sections": [
       "music"
@@ -4221,6 +2966,7 @@
     "duration_seconds": 260,
     "view_count": 11956747,
     "like_count": 95315,
+    "why_good": "近 30 天同类长视频播放第 9",
     "section": "music",
     "sections": [
       "music"
@@ -4235,6 +2981,7 @@
     "duration_seconds": 240,
     "view_count": 11552246,
     "like_count": 12806,
+    "why_good": "近 30 天同类长视频播放第 10",
     "section": "music",
     "sections": [
       "music"
@@ -4249,6 +2996,7 @@
     "duration_seconds": 22822,
     "view_count": 11512480,
     "like_count": 53950,
+    "why_good": "近 30 天同类长视频播放第 11",
     "section": "music",
     "sections": [
       "music"
@@ -4263,6 +3011,7 @@
     "duration_seconds": 515,
     "view_count": 11378882,
     "like_count": 31017,
+    "why_good": "近 30 天同类长视频播放第 12",
     "section": "music",
     "sections": [
       "music"
@@ -4277,6 +3026,7 @@
     "duration_seconds": 261,
     "view_count": 11093430,
     "like_count": 133063,
+    "why_good": "近 30 天同类长视频播放第 13",
     "section": "music",
     "sections": [
       "music"
@@ -4291,6 +3041,7 @@
     "duration_seconds": 363,
     "view_count": 10936635,
     "like_count": 33421,
+    "why_good": "近 30 天同类长视频播放第 14",
     "section": "music",
     "sections": [
       "music"
@@ -4305,6 +3056,22 @@
     "duration_seconds": 1127,
     "view_count": 10773118,
     "like_count": 377272,
+    "why_good": "近 30 天同类长视频播放第 15",
+    "section": "music",
+    "sections": [
+      "music"
+    ]
+  },
+  {
+    "id": "fLnMzPk_p_M",
+    "title": "Magale Video Song | Baththa | Vijay Sethupathi | @SaiAbhyankkar | Balaji Tharaneetharan",
+    "channel": "Think Music India",
+    "channel_id": "UCLbdVvreihwZRL6kwuEUYsA",
+    "published_at": "2026-10-28T06:30:05Z",
+    "duration_seconds": 283,
+    "view_count": 10608786,
+    "like_count": 66822,
+    "why_good": "近 30 天同类长视频播放第 16",
     "section": "music",
     "sections": [
       "music"
@@ -4319,6 +3086,7 @@
     "duration_seconds": 18884,
     "view_count": 10468942,
     "like_count": 47371,
+    "why_good": "近 30 天同类长视频播放第 17",
     "section": "music",
     "sections": [
       "music"
@@ -4333,6 +3101,7 @@
     "duration_seconds": 297,
     "view_count": 9918886,
     "like_count": 56833,
+    "why_good": "近 30 天同类长视频播放第 18",
     "section": "music",
     "sections": [
       "music"
@@ -4347,6 +3116,7 @@
     "duration_seconds": 306,
     "view_count": 9777957,
     "like_count": 27367,
+    "why_good": "近 30 天同类长视频播放第 19",
     "section": "music",
     "sections": [
       "music"
@@ -4361,6 +3131,7 @@
     "duration_seconds": 261,
     "view_count": 9600596,
     "like_count": 39788,
+    "why_good": "近 30 天同类长视频播放第 20",
     "section": "music",
     "sections": [
       "music"
@@ -4375,48 +3146,7 @@
     "duration_seconds": 257,
     "view_count": 9474809,
     "like_count": 116005,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "B-zaXo-skGo",
-    "title": "ดีใจที่ตรงนั้นไม่ใช่เรา - Only Monday [Official MV]",
-    "channel": "Only Monday Official",
-    "channel_id": "UCd07dm8l6TpykHI_TEwzCxg",
-    "published_at": "2026-10-20T11:00:14Z",
-    "duration_seconds": 334,
-    "view_count": 8951271,
-    "like_count": 51917,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "P3yQ5aa5YxY",
-    "title": "PIYA KA GHAR | FULL MOVIE | पिया का घर | Rittesh, Kajal Raghwani, Parul Thakur | Bhojpuri |SRK Music",
-    "channel": "SRK MUSIC",
-    "channel_id": "UCAH1Aw-mXgcB3t8uaqW4yTA",
-    "published_at": "2026-10-31T01:00:05Z",
-    "duration_seconds": 8406,
-    "view_count": 8863548,
-    "like_count": 54571,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "urvuh4xMAk8",
-    "title": "มาเฟียบ้านนอก - บุ๊ค ศุภกาญจน์ : บังเอิญ|Music【OFFICIAL MV】",
-    "channel": "บังเอิญ มิวสิค",
-    "channel_id": "UCzPgA-SPK2sAmIgarqnA7yw",
-    "published_at": "2026-10-16T02:00:23Z",
-    "duration_seconds": 401,
-    "view_count": 8653294,
-    "like_count": 60962,
+    "why_good": "近 30 天同类长视频播放第 21",
     "section": "music",
     "sections": [
       "music"
@@ -4431,6 +3161,7 @@
     "duration_seconds": 241,
     "view_count": 8596891,
     "like_count": 4773,
+    "why_good": "近 30 天同类长视频播放第 22",
     "section": "music",
     "sections": [
       "music"
@@ -4445,6 +3176,7 @@
     "duration_seconds": 254,
     "view_count": 8524949,
     "like_count": 15950,
+    "why_good": "近 30 天同类长视频播放第 23",
     "section": "music",
     "sections": [
       "music"
@@ -4459,6 +3191,7 @@
     "duration_seconds": 249,
     "view_count": 8316841,
     "like_count": 73397,
+    "why_good": "近 30 天同类长视频播放第 24",
     "section": "music",
     "sections": [
       "music"
@@ -4473,6 +3206,7 @@
     "duration_seconds": 482,
     "view_count": 8121796,
     "like_count": 1993,
+    "why_good": "近 30 天同类长视频播放第 25",
     "section": "music",
     "sections": [
       "music"
@@ -4487,20 +3221,7 @@
     "duration_seconds": 7913,
     "view_count": 7747460,
     "like_count": 64722,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "TeMXZyD_LPo",
-    "title": "Didine Canon 16 - Skatii [Official Music Video] (2026) / ديدين كانون - سكاتي",
-    "channel": "Space X Music",
-    "channel_id": "UCwJqYItX82d5Rkjbnrds3vA",
-    "published_at": "2026-10-26T14:00:09Z",
-    "duration_seconds": 268,
-    "view_count": 7671963,
-    "like_count": 84025,
+    "why_good": "近 30 天同类长视频播放第 26",
     "section": "music",
     "sections": [
       "music"
@@ -4515,20 +3236,7 @@
     "duration_seconds": 242,
     "view_count": 7660562,
     "like_count": 2305,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "JpB0UtlKG2Y",
-    "title": "เด๋อ - โจอี้ ภูวศิษฐ์ (JOEY PHUWASIT)「Official MV」",
-    "channel": "Genierock",
-    "channel_id": "UCs2t9DlvAuyTBkvk2djGZKw",
-    "published_at": "2026-11-04T11:00:13Z",
-    "duration_seconds": 308,
-    "view_count": 7094527,
-    "like_count": 77459,
+    "why_good": "近 30 天同类长视频播放第 27",
     "section": "music",
     "sections": [
       "music"
@@ -4543,20 +3251,7 @@
     "duration_seconds": 1307,
     "view_count": 6935635,
     "like_count": 497873,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "_4ZvDPzeodE",
-    "title": "เขาแค่..บ่เปิดโต - ลำเพลิน วงศกร feat. ธีร์ ทีเร็กซ์【OFFICIAL MV】",
-    "channel": "ThaiToneGen.Official",
-    "channel_id": "UC0l4aUvRziU8wKPJja6J9FQ",
-    "published_at": "2026-10-16T11:00:11Z",
-    "duration_seconds": 321,
-    "view_count": 6931833,
-    "like_count": 22110,
+    "why_good": "近 30 天同类长视频播放第 28",
     "section": "music",
     "sections": [
       "music"
@@ -4571,6 +3266,7 @@
     "duration_seconds": 1302,
     "view_count": 6748610,
     "like_count": 280737,
+    "why_good": "近 30 天同类长视频播放第 29",
     "section": "music",
     "sections": [
       "music"
@@ -4585,6 +3281,7 @@
     "duration_seconds": 351,
     "view_count": 6538209,
     "like_count": 65768,
+    "why_good": "近 30 天同类长视频播放第 30",
     "section": "music",
     "sections": [
       "music"
@@ -4599,34 +3296,7 @@
     "duration_seconds": 359,
     "view_count": 6176047,
     "like_count": 20937,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "RC_FqhJa-kI",
-    "title": "มาตามสัญญา - TaitosmitH |Official MV|",
-    "channel": "9 Arkkhan",
-    "channel_id": "UCWmRsH4IWvX0emrOZRkplqQ",
-    "published_at": "2026-10-14T11:00:29Z",
-    "duration_seconds": 319,
-    "view_count": 6105640,
-    "like_count": 47452,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "pfUnfbaNarg",
-    "title": "저희 진지합니다. 제1회 피클볼 대회 l BTS in Toronto EP.2",
-    "channel": "BANGTANTV",
-    "channel_id": "UCLkAepWjdylmXSltofFvsYQ",
-    "published_at": "2026-10-11T11:00:00Z",
-    "duration_seconds": 1797,
-    "view_count": 6101156,
-    "like_count": 336859,
+    "why_good": "近 30 天同类长视频播放第 31",
     "section": "music",
     "sections": [
       "music"
@@ -4641,6 +3311,7 @@
     "duration_seconds": 501,
     "view_count": 6094632,
     "like_count": 20471,
+    "why_good": "近 30 天同类长视频播放第 32",
     "section": "music",
     "sections": [
       "music"
@@ -4655,6 +3326,7 @@
     "duration_seconds": 7112,
     "view_count": 6013999,
     "like_count": 108758,
+    "why_good": "近 30 天同类长视频播放第 33",
     "section": "music",
     "sections": [
       "music"
@@ -4669,6 +3341,7 @@
     "duration_seconds": 6581,
     "view_count": 6012950,
     "like_count": 187653,
+    "why_good": "近 30 天同类长视频播放第 34",
     "section": "music",
     "sections": [
       "music"
@@ -4683,20 +3356,7 @@
     "duration_seconds": 418,
     "view_count": 5941604,
     "like_count": 58345,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "d7s-2eLvT8Q",
-    "title": "[뮤뱅 원테이크 4K HDR] 아이브 (IVE) 'Looks Can Kill' 4k Bonus Ver. @뮤직뱅크 (Music Bank) 261023",
-    "channel": "KBS Kpop",
-    "channel_id": "UCeLPm9yH_a_QH8n6445G-Ow",
-    "published_at": "2026-10-23T10:50:13Z",
-    "duration_seconds": 240,
-    "view_count": 5909746,
-    "like_count": 43601,
+    "why_good": "近 30 天同类长视频播放第 35",
     "section": "music",
     "sections": [
       "music"
@@ -4711,6 +3371,7 @@
     "duration_seconds": 1425,
     "view_count": 5876435,
     "like_count": 81359,
+    "why_good": "近 30 天同类长视频播放第 36",
     "section": "music",
     "sections": [
       "music"
@@ -4725,6 +3386,7 @@
     "duration_seconds": 256,
     "view_count": 5869301,
     "like_count": 35622,
+    "why_good": "近 30 天同类长视频播放第 37",
     "section": "music",
     "sections": [
       "music"
@@ -4739,20 +3401,22 @@
     "duration_seconds": 265,
     "view_count": 5841212,
     "like_count": 77151,
+    "why_good": "近 30 天同类长视频播放第 38",
     "section": "music",
     "sections": [
       "music"
     ]
   },
   {
-    "id": "bk8RwaUDhwk",
-    "title": "Jeff Satur - ที่ชอบที่ชอบ (Grief Eaters)【Official Music Video】",
-    "channel": "Jeff Satur",
-    "channel_id": "UCSFWkjQRmSJoz9QQ4lkwlDA",
-    "published_at": "2026-10-29T11:00:09Z",
-    "duration_seconds": 259,
-    "view_count": 5357737,
-    "like_count": 59215,
+    "id": "-eQEFtrOpNw",
+    "title": "Rama Rama - Rishab Rikhiram Sharma (Official Music Video) | Sitar for Mental Health | Diwali 2026",
+    "channel": "Rishab Rikhiram Sharma",
+    "channel_id": "UCjT3WfzAkYhKqbOBC0A-OHg",
+    "published_at": "2026-11-03T10:50:34Z",
+    "duration_seconds": 396,
+    "view_count": 5787196,
+    "like_count": 75298,
+    "why_good": "近 30 天同类长视频播放第 39",
     "section": "music",
     "sections": [
       "music"
@@ -4767,34 +3431,7 @@
     "duration_seconds": 274,
     "view_count": 5276980,
     "like_count": 49702,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "-xJY_BDNyNA",
-    "title": "#Video | पिया बिहरिया | Khesari Lal Yadav | Piya Bihariya | Ft. Dimpal Singh | Chhath Puja Song 2026",
-    "channel": "Mangalam Music",
-    "channel_id": "UCmVIR9Z50yfzzN4ncsPloBg",
-    "published_at": "2026-10-30T00:59:51Z",
-    "duration_seconds": 285,
-    "view_count": 5055507,
-    "like_count": 118185,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "4QskmxtudzQ",
-    "title": "NCT 운동회 한다는데? “어느 엔시티.” | 《 2026 NCT 육상 선수권 대회 》",
-    "channel": "NCT",
-    "channel_id": "UCwgtORdDtUKhpjE1VBv6XfA",
-    "published_at": "2026-10-21T11:00:04Z",
-    "duration_seconds": 5324,
-    "view_count": 4999640,
-    "like_count": 217872,
+    "why_good": "近 30 天同类长视频播放第 40",
     "section": "music",
     "sections": [
       "music"
@@ -4809,6 +3446,7 @@
     "duration_seconds": 8182,
     "view_count": 4952329,
     "like_count": 20449,
+    "why_good": "近 30 天同类长视频播放第 41",
     "section": "music",
     "sections": [
       "music"
@@ -4823,34 +3461,7 @@
     "duration_seconds": 265,
     "view_count": 4903854,
     "like_count": 33864,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "L2iJMqvXvBY",
-    "title": "#Video | #Raushan Rohi | वर्दी के गर्मी | #रंगदारी गाना | #Srishti Bharti | Rangdari Maghi Song",
-    "channel": "Raushan Rohi Entertainment",
-    "channel_id": "UCh6r40fbLs62rieVnODZkSw",
-    "published_at": "2026-10-30T01:15:20Z",
-    "duration_seconds": 279,
-    "view_count": 4820126,
-    "like_count": 93238,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "7aIOY0UZXTA",
-    "title": "Mark Lee (마크리) - Happiest (Official Music Video)",
-    "channel": "Mark Lee",
-    "channel_id": "UCcgdQVCkGHvp_4g9fXsSt3w",
-    "published_at": "2026-11-06T05:00:06Z",
-    "duration_seconds": 254,
-    "view_count": 4807466,
-    "like_count": 44282,
+    "why_good": "近 30 天同类长视频播放第 42",
     "section": "music",
     "sections": [
       "music"
@@ -4865,6 +3476,7 @@
     "duration_seconds": 10765,
     "view_count": 4786148,
     "like_count": 19666,
+    "why_good": "近 30 天同类长视频播放第 43",
     "section": "music",
     "sections": [
       "music"
@@ -4879,6 +3491,7 @@
     "duration_seconds": 37695,
     "view_count": 4722980,
     "like_count": 141318,
+    "why_good": "近 30 天同类长视频播放第 44",
     "section": "music",
     "sections": [
       "music"
@@ -4893,6 +3506,7 @@
     "duration_seconds": 342,
     "view_count": 4688498,
     "like_count": 72039,
+    "why_good": "近 30 天同类长视频播放第 45",
     "section": "music",
     "sections": [
       "music"
@@ -4907,6 +3521,7 @@
     "duration_seconds": 255,
     "view_count": 4649128,
     "like_count": 26584,
+    "why_good": "近 30 天同类长视频播放第 46",
     "section": "music",
     "sections": [
       "music"
@@ -4921,20 +3536,7 @@
     "duration_seconds": 10221,
     "view_count": 4597728,
     "like_count": 18302,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "WBsjIY5MzLg",
-    "title": "Meow Meow Billi Karti | Hindi Rhyme For Kids | म्याऊ म्याऊ | Balgeet In Hindi |",
-    "channel": "Rudra Bhakti Geet",
-    "channel_id": "UC4bGyLsMrNhNWydOcN7hS_g",
-    "published_at": "2026-11-06T11:25:38Z",
-    "duration_seconds": 361,
-    "view_count": 4542157,
-    "like_count": 15214,
+    "why_good": "近 30 天同类长视频播放第 47",
     "section": "music",
     "sections": [
       "music"
@@ -4949,20 +3551,7 @@
     "duration_seconds": 417,
     "view_count": 4524903,
     "like_count": 71346,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "Z4pwuMQkKFU",
-    "title": "Ladobai Rusali | लाडोबाई रुसली |Marathi Kids Song | Tiny Smiles Balgeet | Baby Rhymes | Jayesh Kadam",
-    "channel": "Pom Pom KIDS",
-    "channel_id": "UCs1ljFOLd7QwF9WqUuxpIBg",
-    "published_at": "2026-10-22T07:00:30Z",
-    "duration_seconds": 278,
-    "view_count": 4482725,
-    "like_count": 1985,
+    "why_good": "近 30 天同类长视频播放第 48",
     "section": "music",
     "sections": [
       "music"
@@ -4977,6 +3566,7 @@
     "duration_seconds": 276,
     "view_count": 4472154,
     "like_count": 1145,
+    "why_good": "近 30 天同类长视频播放第 49",
     "section": "music",
     "sections": [
       "music"
@@ -4991,6 +3581,7 @@
     "duration_seconds": 413,
     "view_count": 4444962,
     "like_count": 10847,
+    "why_good": "近 30 天同类长视频播放第 50",
     "section": "music",
     "sections": [
       "music"
@@ -5005,6 +3596,7 @@
     "duration_seconds": 352,
     "view_count": 4421391,
     "like_count": 46491,
+    "why_good": "近 30 天同类长视频播放第 51",
     "section": "music",
     "sections": [
       "music"
@@ -5019,6 +3611,7 @@
     "duration_seconds": 285,
     "view_count": 4331618,
     "like_count": 52063,
+    "why_good": "近 30 天同类长视频播放第 52",
     "section": "music",
     "sections": [
       "music"
@@ -5033,6 +3626,7 @@
     "duration_seconds": 243,
     "view_count": 4261110,
     "like_count": 3621,
+    "why_good": "近 30 天同类长视频播放第 53",
     "section": "music",
     "sections": [
       "music"
@@ -5047,6 +3641,7 @@
     "duration_seconds": 250,
     "view_count": 4238843,
     "like_count": 3796,
+    "why_good": "近 30 天同类长视频播放第 54",
     "section": "music",
     "sections": [
       "music"
@@ -5061,6 +3656,7 @@
     "duration_seconds": 313,
     "view_count": 4177911,
     "like_count": 14161,
+    "why_good": "近 30 天同类长视频播放第 55",
     "section": "music",
     "sections": [
       "music"
@@ -5075,6 +3671,7 @@
     "duration_seconds": 367,
     "view_count": 4098883,
     "like_count": 61753,
+    "why_good": "近 30 天同类长视频播放第 56",
     "section": "music",
     "sections": [
       "music"
@@ -5089,6 +3686,7 @@
     "duration_seconds": 442,
     "view_count": 4073671,
     "like_count": 25416,
+    "why_good": "近 30 天同类长视频播放第 57",
     "section": "music",
     "sections": [
       "music"
@@ -5103,20 +3701,7 @@
     "duration_seconds": 278,
     "view_count": 4050821,
     "like_count": 39506,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "C0DXctGPWxw",
-    "title": "DICEBLUE 'รอ SIS (TER)' OFFICIAL MV",
-    "channel": "TADA LABELS",
-    "channel_id": "UChvk1ez0-qeKEn12-CYxrzQ",
-    "published_at": "2026-10-21T11:00:08Z",
-    "duration_seconds": 257,
-    "view_count": 4041473,
-    "like_count": 35672,
+    "why_good": "近 30 天同类长视频播放第 58",
     "section": "music",
     "sections": [
       "music"
@@ -5131,34 +3716,7 @@
     "duration_seconds": 286,
     "view_count": 4020440,
     "like_count": 24032,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "1q6fA3nHTzE",
-    "title": "धूल माथे लगाई तिलक हो गया (Lyrics) | Dhool Mathe Lagai Tilak Ho Gaya | Bhasm Shiv Bhajan",
-    "channel": "Shiv Raga",
-    "channel_id": "UCJvHe6L3D9p-lMiieaafgKQ",
-    "published_at": "2026-11-02T11:22:00Z",
-    "duration_seconds": 270,
-    "view_count": 4017668,
-    "like_count": 54298,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "33JQdLY7N3k",
-    "title": "इतना मीठा भजन इतिहास में नहीं सुना होगा | लक्ष्मी की भक्ति में शक्ति | Lakshmi Ki Bhakti Mein Shakti",
-    "channel": "Traditional Tune",
-    "channel_id": "UC-Fr9Y2uhsEeuZIGJa_kWNA",
-    "published_at": "2026-10-27T23:46:05Z",
-    "duration_seconds": 358,
-    "view_count": 3979635,
-    "like_count": 6605,
+    "why_good": "近 30 天同类长视频播放第 59",
     "section": "music",
     "sections": [
       "music"
@@ -5173,6 +3731,7 @@
     "duration_seconds": 257,
     "view_count": 3939339,
     "like_count": 39098,
+    "why_good": "近 30 天同类长视频播放第 60",
     "section": "music",
     "sections": [
       "music"
@@ -5187,6 +3746,7 @@
     "duration_seconds": 1030,
     "view_count": 3883130,
     "like_count": 53832,
+    "why_good": "近 30 天同类长视频播放第 61",
     "section": "music",
     "sections": [
       "music"
@@ -5201,20 +3761,7 @@
     "duration_seconds": 242,
     "view_count": 3854656,
     "like_count": 81008,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "WCZj2lo818E",
-    "title": "Naino Mein Sapna Sapne Me Sajna | 8K Video Song | Sridevi और Jeetendra का सुपरहिट गाना",
-    "channel": "8K Superhit Gaane",
-    "channel_id": "UCIVmU-WUKzcUagCmu9-WxnQ",
-    "published_at": "2026-10-26T13:00:15Z",
-    "duration_seconds": 346,
-    "view_count": 3828758,
-    "like_count": 5356,
+    "why_good": "近 30 天同类长视频播放第 62",
     "section": "music",
     "sections": [
       "music"
@@ -5229,6 +3776,7 @@
     "duration_seconds": 292,
     "view_count": 3777258,
     "like_count": 16486,
+    "why_good": "近 30 天同类长视频播放第 63",
     "section": "music",
     "sections": [
       "music"
@@ -5243,20 +3791,7 @@
     "duration_seconds": 266,
     "view_count": 3769107,
     "like_count": 26654,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "iq6WqZ_FMOM",
-    "title": "เผื่อเราไม่ต้องลาจากกัน (Crossroads) - SERIOUS BACON feat. PURPEECH [Official MV]",
-    "channel": "BOXX MUSIC",
-    "channel_id": "UCk-hrmSLwSsp4OE_s5f1_Sg",
-    "published_at": "2026-10-29T11:00:23Z",
-    "duration_seconds": 378,
-    "view_count": 3745405,
-    "like_count": 21123,
+    "why_good": "近 30 天同类长视频播放第 64",
     "section": "music",
     "sections": [
       "music"
@@ -5271,20 +3806,7 @@
     "duration_seconds": 1828,
     "view_count": 3678149,
     "like_count": 5021,
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "pqBDvACytX8",
-    "title": "Diwali Special Song - आई है दिवाली | Aai Hai Diwali | Aamrapali Dubey | Full Song | #diwalisong",
-    "channel": "SRK Music Bhojpuri",
-    "channel_id": "UCzVWvj9ZZTDPMKJR4NB7V_Q",
-    "published_at": "2026-11-05T10:56:57Z",
-    "duration_seconds": 241,
-    "view_count": 3669509,
-    "like_count": 14943,
+    "why_good": "近 30 天同类长视频播放第 65",
     "section": "music",
     "sections": [
       "music"
@@ -5326,6 +3848,7 @@
       "B_channel_duration",
       "C_speaker_duration"
     ],
+    "why_good": "63 位 HN 用户跨 19 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5365,6 +3888,7 @@
     "classic_speech_reasons": [
       "A_speech"
     ],
+    "why_good": "67 位 HN 用户跨 18 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5404,6 +3928,7 @@
     "classic_speech_reasons": [
       "B_channel_duration"
     ],
+    "why_good": "84 位 HN 用户跨 17 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5445,6 +3970,7 @@
       "B_channel_duration",
       "C_speaker_duration"
     ],
+    "why_good": "56 位 HN 用户跨 17 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5484,10 +4010,14 @@
     "classic_speech_reasons": [
       "B_channel_duration"
     ],
+    "why_good": "198 位 HN 用户跨 17 年反复推荐",
     "section": "community",
     "sections": [
-      "community"
-    ]
+      "community",
+      "picks"
+    ],
+    "source": "community",
+    "pick_source": "社区推荐"
   },
   {
     "id": "0CDXJ6bMkMY",
@@ -5523,6 +4053,7 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "46 位 HN 用户跨 16 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5563,6 +4094,7 @@
       "A_speech",
       "B_channel_duration"
     ],
+    "why_good": "48 位 HN 用户跨 17 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5602,6 +4134,7 @@
     "classic_speech_reasons": [
       "B_channel_duration"
     ],
+    "why_good": "36 位 HN 用户跨 15 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5642,6 +4175,7 @@
       "A_speech",
       "C_speaker_duration"
     ],
+    "why_good": "77 位 HN 用户跨 14 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5682,6 +4216,7 @@
       "A_speech",
       "C_speaker_duration"
     ],
+    "why_good": "38 位 HN 用户跨 13 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5721,6 +4256,7 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "79 位 HN 用户跨 14 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5761,6 +4297,7 @@
       "A_speech",
       "C_speaker_duration"
     ],
+    "why_good": "48 位 HN 用户跨 14 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5801,6 +4338,7 @@
       "A_speech",
       "C_speaker_duration"
     ],
+    "why_good": "53 位 HN 用户跨 14 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5842,10 +4380,14 @@
       "C_speaker_duration",
       "D_classic_demo"
     ],
+    "why_good": "108 位 HN 用户跨 14 年反复推荐",
     "section": "community",
     "sections": [
-      "community"
-    ]
+      "community",
+      "picks"
+    ],
+    "source": "community",
+    "pick_source": "社区推荐"
   },
   {
     "id": "oKg1hTOQXoY",
@@ -5881,6 +4423,7 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "52 位 HN 用户跨 14 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5920,10 +4463,14 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "109 位 HN 用户跨 13 年反复推荐",
     "section": "community",
     "sections": [
-      "community"
-    ]
+      "community",
+      "picks"
+    ],
+    "source": "community",
+    "pick_source": "社区推荐"
   },
   {
     "id": "8pTEmbeENF4",
@@ -5959,6 +4506,7 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "72 位 HN 用户跨 13 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -5998,6 +4546,7 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "69 位 HN 用户跨 12 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6037,6 +4586,7 @@
     "classic_speech_reasons": [
       "C_speaker_duration"
     ],
+    "why_good": "98 位 HN 用户跨 12 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6073,6 +4623,7 @@
     "duration_seconds": 662,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "63 位 HN 用户跨 12 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6109,6 +4660,7 @@
     "duration_seconds": 501,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "62 位 HN 用户跨 11 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6145,6 +4697,7 @@
     "duration_seconds": 377,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "79 位 HN 用户跨 11 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6181,6 +4734,7 @@
     "duration_seconds": 478,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "53 位 HN 用户跨 11 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6217,6 +4771,7 @@
     "duration_seconds": 2563,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "31 位 HN 用户跨 11 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6253,6 +4808,7 @@
     "duration_seconds": 2675,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "58 位 HN 用户跨 10 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6289,6 +4845,7 @@
     "duration_seconds": 14084,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "42 位 HN 用户跨 10 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6325,6 +4882,7 @@
     "duration_seconds": 5929,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "48 位 HN 用户跨 10 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6361,6 +4919,7 @@
     "duration_seconds": 376,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "64 位 HN 用户跨 10 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6397,10 +4956,14 @@
     "duration_seconds": 1093,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "138 位 HN 用户跨 10 年反复推荐",
     "section": "community",
     "sections": [
-      "community"
-    ]
+      "community",
+      "picks"
+    ],
+    "source": "community",
+    "pick_source": "社区推荐"
   },
   {
     "id": "oyLBGkS5ICk",
@@ -6433,6 +4996,7 @@
     "duration_seconds": 4574,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "73 位 HN 用户跨 8 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6469,6 +5033,7 @@
     "duration_seconds": 2220,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "36 位 HN 用户跨 9 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6505,6 +5070,7 @@
     "duration_seconds": 468,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "62 位 HN 用户跨 8 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6541,6 +5107,7 @@
     "duration_seconds": 6535,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "58 位 HN 用户跨 8 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6580,6 +5147,7 @@
     "classic_speech_reasons": [
       "B_channel_duration"
     ],
+    "why_good": "56 位 HN 用户跨 8 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6616,6 +5184,7 @@
     "duration_seconds": 1761,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "49 位 HN 用户跨 7 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6652,6 +5221,7 @@
     "duration_seconds": 2523,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "52 位 HN 用户跨 7 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6688,6 +5258,7 @@
     "duration_seconds": 3823,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "54 位 HN 用户跨 6 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6724,6 +5295,7 @@
     "duration_seconds": 3762,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "88 位 HN 用户跨 7 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6760,6 +5332,7 @@
     "duration_seconds": 315,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "48 位 HN 用户跨 6 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6796,6 +5369,7 @@
     "duration_seconds": 914,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "80 位 HN 用户跨 6 年反复推荐",
     "section": "community",
     "sections": [
       "community"
@@ -6832,6 +5406,7 @@
     "duration_seconds": 3699,
     "selected_at": 1793854536,
     "classic_speech": false,
+    "why_good": "74 位 HN 用户跨 5 年反复推荐",
     "section": "community",
     "sections": [
       "community"

@@ -1,0 +1,241 @@
+{
+  "generated_at": "2026-11-10T16:45:01Z",
+  "kind": "picks",
+  "limit": 10,
+  "mix": {
+    "community": 4,
+    "ai": 4,
+    "trending": 2
+  },
+  "videos": [
+    {
+      "id": "dBnniua6-oM",
+      "months": 116,
+      "first": 1261361198,
+      "last": 1792257137,
+      "quotes": [
+        {
+          "author": "chipsy",
+          "text": "Sugar: The Bitter Truth (UCSF lecture)",
+          "url": "https://news.ycombinator.com/item?id=1006980"
+        },
+        {
+          "author": "charliepark",
+          "text": "Here it is, all in one long (90 minute) video: http://www.youtube.com/watch?v=dBnniua6-oM",
+          "url": "https://news.ycombinator.com/item?id=1041525"
+        },
+        {
+          "author": "apinstein",
+          "text": "The title is horrible. This should be called \"How a diet rich in fructose makes us fat, poisons us slowly, and wastes billions of dollars on health care for self-inflicted chronic diseases, and what you can do about it NOW . Here's a brief summary of the salient points: 1) Consumption of fructose, sucrose (which is a glucose-fructose disaccharide), or alcoho",
+          "url": "https://news.ycombinator.com/item?id=1042538"
+        }
+      ],
+      "recommenders": 198,
+      "span_days": 6144.6289236111115,
+      "title": "Sugar: THE BITTER TRUTH",
+      "channel": "University of California Television (UCTV)",
+      "channel_id": "UCh6KFtW4a4Ozr81GI1cxaBQ",
+      "published_at": "2009-07-31T00:04:24Z",
+      "duration_seconds": 5377,
+      "selected_at": 1793854536,
+      "classic_speech": true,
+      "classic_speech_reasons": [
+        "B_channel_duration"
+      ],
+      "why_good": "198 位 HN 用户跨 17 年反复推荐",
+      "source": "community",
+      "pick_source": "社区推荐"
+    },
+    {
+      "id": "NCxD-qsQcN0",
+      "title": "Design hardware with Astra",
+      "channel": "OpenAI",
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "published_at": "2026-11-03T18:30:30Z",
+      "duration_seconds": 82,
+      "view_count": 672005,
+      "like_count": 9027,
+      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "source": "ai",
+      "pick_source": "AI前沿"
+    },
+    {
+      "id": "_c2e1NcI3Sc",
+      "title": "Beat Professional Athlete, Win $100,000",
+      "channel": "MrBeast",
+      "channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
+      "published_at": "2026-10-31T16:00:00Z",
+      "duration_seconds": 1348,
+      "view_count": 87114226,
+      "like_count": 1188674,
+      "why_good": "近 30 天同类长视频播放第 1",
+      "source": "trending",
+      "pick_source": "趋势"
+    },
+    {
+      "id": "rStL7niR7gs",
+      "months": 94,
+      "first": 1477327526,
+      "last": 1781571979,
+      "quotes": [
+        {
+          "author": "thomasstephn",
+          "text": "3 Rules for Rulers",
+          "url": "https://news.ycombinator.com/item?id=12780483"
+        },
+        {
+          "author": "stcredzero",
+          "text": "Basically: https://www.youtube.com/watch?v=rStL7niR7gs",
+          "url": "https://news.ycombinator.com/item?id=12792724"
+        },
+        {
+          "author": "vinchuco",
+          "text": "https://www.youtube.com/watch?v=rStL7niR7gs This puts it better than I ever could!",
+          "url": "https://news.ycombinator.com/item?id=12827808"
+        }
+      ],
+      "recommenders": 138,
+      "span_days": 3521.3478356481482,
+      "title": "Try to Rule Fairly and You'll Be Overthrown",
+      "channel": "CGP Grey",
+      "channel_id": "UC2C_jShtL725hvbm1arSV9w",
+      "published_at": "2016-10-24T15:15:59Z",
+      "duration_seconds": 1093,
+      "selected_at": 1793854536,
+      "classic_speech": false,
+      "why_good": "138 位 HN 用户跨 10 年反复推荐",
+      "source": "community",
+      "pick_source": "社区推荐"
+    },
+    {
+      "id": "9ZxCOHkfn_8",
+      "title": "GPT-Image-2.6: Faster image generation with Flare and Sunburst",
+      "channel": "OpenAI",
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "published_at": "2026-11-04T23:42:40Z",
+      "duration_seconds": 88,
+      "view_count": 373245,
+      "like_count": 4666,
+      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "source": "ai",
+      "pick_source": "AI前沿"
+    },
+    {
+      "id": "mJYxSed0D_I",
+      "title": "Exploring the Most Remote Island on Earth (15 Days Just to Get There)",
+      "channel": "Ruhi Cenet Documentaries",
+      "channel_id": "UCWpk9PSGHoJW1hZT4egxTNQ",
+      "published_at": "2026-10-27T18:59:15Z",
+      "duration_seconds": 1194,
+      "view_count": 29196068,
+      "like_count": 380435,
+      "why_good": "近 30 天同类长视频播放第 2",
+      "source": "trending",
+      "pick_source": "趋势"
+    },
+    {
+      "id": "f84n5oFoZBc",
+      "months": 75,
+      "first": 1369547814,
+      "last": 1791921164,
+      "quotes": [
+        {
+          "author": "praptak",
+          "text": "the whole notion of\"let's step back a bit and ponder\" - it has an official name: Hammock Driven Development. Presentation about: http://www.youtube.com/watch?v=f84n5oFoZBc As to trickling from Clojure to the mainstream - I wonder how far this could go without the foundation work that went into creating Clojure as it is. You definitely need a clutter-free syn",
+          "url": "https://news.ycombinator.com/item?id=5770194"
+        },
+        {
+          "author": "saurabh",
+          "text": "Rich Hickey would like to disagree. http://www.youtube.com/watch?v=f84n5oFoZBc",
+          "url": "https://news.ycombinator.com/item?id=5855707"
+        },
+        {
+          "author": "cgag",
+          "text": "Yes, \"Simple Made Easy\" is a must watch imo. http://www.infoq.com/presentations/Simple-Made-Easy \"Are we there yet\" is also great: http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hic... I also love \"Hammock Driven Development\": http://www.youtube.com/watch?v=f84n5oFoZBc",
+          "url": "https://news.ycombinator.com/item?id=6291706"
+        }
+      ],
+      "recommenders": 109,
+      "span_days": 4888.580439814815,
+      "title": "Hammock Driven Development - Rich Hickey",
+      "channel": "ClojureTV",
+      "channel_id": "UCaLlzGqiPE2QRj6sSOawJRg",
+      "published_at": "2012-12-17T00:14:23Z",
+      "duration_seconds": 2389,
+      "selected_at": 1793854536,
+      "classic_speech": true,
+      "classic_speech_reasons": [
+        "C_speaker_duration"
+      ],
+      "why_good": "109 位 HN 用户跨 13 年反复推荐",
+      "source": "community",
+      "pick_source": "社区推荐"
+    },
+    {
+      "id": "GJ6PMUm5oTA",
+      "title": "OpenAI's Astra Just Opened The Black Box Of AI",
+      "channel": "Two Minute Papers",
+      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
+      "published_at": "2026-11-07T16:24:47Z",
+      "duration_seconds": 349,
+      "view_count": 221242,
+      "like_count": 3616,
+      "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片",
+      "source": "ai",
+      "pick_source": "AI前沿"
+    },
+    {
+      "id": "yJDv-zdhzMY",
+      "months": 81,
+      "first": 1362662567,
+      "last": 1791891073,
+      "quotes": [
+        {
+          "author": "nkuttler",
+          "text": "The Mother of All Demos, presented by Douglas Engelbart (1968)",
+          "url": "https://news.ycombinator.com/item?id=5337425"
+        },
+        {
+          "author": "api",
+          "text": "What this really underscores is that conventional capitalism provides little incentive for fundamental innovation. All this stuff we're gluing together is the product of state-funded research, mostly from the cold war era. DARPANet, the web (CERN), DARPA research on \"augmented human intelligence,\" etc. Stuff like: http://www.youtube.com/watch?v=yJDv-zdhzMY (",
+          "url": "https://news.ycombinator.com/item?id=5445925"
+        },
+        {
+          "author": "mikecane",
+          "text": "OK, as a non-coder, I'd recommend seeing the video of The Mother of All Demos: http://youtu.be/yJDv-zdhzMY I'd also suggest reading Ted Nelson's book, \"Literary Machines.\" Another book would be Steven Levy's \"Hackers.\" And Paul Freiberger & Michael Swaine's book, \"Fire in the Valley.\"",
+          "url": "https://news.ycombinator.com/item?id=5454484"
+        }
+      ],
+      "recommenders": 108,
+      "span_days": 4967.922523148148,
+      "title": "The Mother of All Demos, presented by Douglas Engelbart (1968)",
+      "channel": "Marcel",
+      "channel_id": "UCk9H1u4QMFNbBOj96A9DGHw",
+      "published_at": "2012-07-09T13:54:02Z",
+      "duration_seconds": 6053,
+      "selected_at": 1793854536,
+      "classic_speech": true,
+      "classic_speech_reasons": [
+        "A_speech",
+        "C_speaker_duration",
+        "D_classic_demo"
+      ],
+      "why_good": "108 位 HN 用户跨 14 年反复推荐",
+      "source": "community",
+      "pick_source": "社区推荐"
+    },
+    {
+      "id": "pz74r-4dGfQ",
+      "title": "Your AI Agent Is Hiding Its Mistakes From You - Ben Holmes, Warp",
+      "channel": "AI Engineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "published_at": "2026-11-06T22:00:01Z",
+      "duration_seconds": 1160,
+      "view_count": 81175,
+      "like_count": 584,
+      "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
+      "source": "ai",
+      "pick_source": "AI前沿"
+    }
+  ]
+}

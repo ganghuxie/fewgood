@@ -20,13 +20,15 @@ for (const count of [0, 1, 20]) {
   assert.equal(pages.length, 1);
   assert.equal(pages[0].videos.length, count);
 }
-assert.equal(pageUrl('trending', 1), '/');
-assert.equal(pageUrl('trending', 2), '/page/2/');
+assert.equal(pageUrl('picks', 1), '/');
+assert.equal(pageUrl('trending', 1), '/trending/');
+assert.equal(pageUrl('trending', 2), '/trending/page/2/');
 assert.equal(pageUrl('ai', 1), '/ai/');
 assert.equal(pageUrl('ai', 2), '/ai/page/2/');
 assert.equal(pageUrl('community', 1), '/community/');
 assert.equal(pageUrl('community', 2, '', 'newest'), '/community/newest/page/2/');
-assert.equal(pageUrl('trending', 1, '/youtuber/'), '/youtuber/');
+assert.equal(pageUrl('trending', 1, '/youtuber/'), '/youtuber/trending/');
+assert.equal(pageUrl('picks', 1, '/youtuber/'), '/youtuber/');
 assert.equal(videoUrl('ai', 'abcdefghijk'), '/v/abcdefghijk/?from=ai');
 assert.equal(videoUrl('community', 'abcdefghijk', '/youtuber/'), '/youtuber/v/abcdefghijk/?from=community');
 assert.deepEqual(pageNumbers(5, 10), [1, null, 3, 4, 5, 6, 7, null, 10]);
