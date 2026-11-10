@@ -1,5 +1,6 @@
 -- Staging-only seed of curated V2 sub-topics.
--- Idempotent. Does not touch production. Follows can reuse these rows
+-- Idempotent. Does not touch production.
+-- Alias rows resolve topic_id by normalized_key so preexisting staging topics keep their ids. Follows can reuse these rows
 -- so request_topic does not consume daily_new caps or fail as invalid_input.
 begin;
 insert into public.topics(id,canonical_name,normalized_key,search_query)
@@ -148,220 +149,292 @@ on conflict (normalized_key) do update set
   canonical_name = excluded.canonical_name,
   search_query = excluded.search_query;
 
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('AI Agent','4660cad4-3482-5245-b2ba-2ef89efc3027')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('AI 产业动态','23226029-d190-59b1-8395-075803112a5f')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('AI 产品与应用','03fed865-3d5e-5f9b-9439-cddaec2acdb3')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('AI 模型与研究','64b00469-42cf-5904-821f-f217454a8db9')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('AI 编程','b799219f-0e80-5e17-bff2-ff6909d46fb2')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Agent 学习','51238008-d1dc-5982-955f-f54a69751924')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('EDM','607c4718-d49a-5f92-9a64-ed74740807ed')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('First Take','f9b17219-20c7-566e-a8d9-47eecab3a9f6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Hip-hop','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Hip-hop / 说唱','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('K-pop','c0ed68dd-bac3-5b7b-a286-176caed7f840')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Kpop','c0ed68dd-bac3-5b7b-a286-176caed7f840')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('R&B','f09b9f6b-2d93-5388-905d-65338c9f812a')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('R&B / Soul','f09b9f6b-2d93-5388-905d-65338c9f812a')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Soul','f09b9f6b-2d93-5388-905d-65338c9f812a')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('TED','6ab347a3-9c16-5895-8279-4b268856e4cf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('THE FIRST TAKE','f9b17219-20c7-566e-a8d9-47eecab3a9f6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Tiny Desk','945a53bb-2609-5526-8caa-ea1999bd719f')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('Tiny Desk 现场','945a53bb-2609-5526-8caa-ea1999bd719f')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('hiphop','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('k-pop','c0ed68dd-bac3-5b7b-a286-176caed7f840')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('ted talk','6ab347a3-9c16-5895-8279-4b268856e4cf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('tiny desk','945a53bb-2609-5526-8caa-ea1999bd719f')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('中文 AI','3e0475dd-78ac-5fa0-bbf9-55a28e65fb6d')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('中文播客','04d07c7c-55d8-5bb8-a1c2-8c893dd93482')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('中文说唱','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('人文社会','4db82635-6f0e-5556-ae53-f2f1a9ed1772')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('华语','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('华语流行','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('古典','5909d410-0fd4-52ea-9830-7a9d092cf7fe')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('周杰伦','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('周杰倫','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('商业创业','df6cb6ea-1a5b-5789-94c3-63ed6c176a19')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('商业访谈','96d9ade4-d7a6-58df-9e37-af0cbe2cdc1f')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('嘻哈','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('国语歌','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('國語歌','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('大学公开课','77c320ae-8cbc-5179-ad0e-fb8236da4ae1')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('广东歌','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('廣東歌','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('开源模型与本地部署','54f7c610-20dd-53b5-acbe-91cde1bbc136')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('日系','f9b17219-20c7-566e-a8d9-47eecab3a9f6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('日系现场','f9b17219-20c7-566e-a8d9-47eecab3a9f6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('林俊傑','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('林俊杰','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('欧美','5a75ee37-cc90-592a-8a63-74cac4c72920')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('欧美流行','5a75ee37-cc90-592a-8a63-74cac4c72920')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('民謠','1d66449c-9237-50af-9c2e-1cdd28b33565')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('民谣','1d66449c-9237-50af-9c2e-1cdd28b33565')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('爵士','5909d410-0fd4-52ea-9830-7a9d092cf7fe')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('爵士 / 古典','5909d410-0fd4-52ea-9830-7a9d092cf7fe')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('独立 / 民谣','1d66449c-9237-50af-9c2e-1cdd28b33565')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('独立音乐','1d66449c-9237-50af-9c2e-1cdd28b33565')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('獨立音樂','1d66449c-9237-50af-9c2e-1cdd28b33565')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('电子','607c4718-d49a-5f92-9a64-ed74740807ed')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('电子音乐','607c4718-d49a-5f92-9a64-ed74740807ed')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('科学与健康','0e4ac8a6-f93c-5327-b5d6-77b73548acc1')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('科学科普','cc6a4e24-5c16-577b-b71d-cb650f13c480')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('科技与 AI','b4482a20-82ad-59bd-807a-b27ae9016af5')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('粤语','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('粤语歌','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('粵語','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('经典演讲','cd298155-41d9-5097-a04a-245e445da58a')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('華語','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('華語流行','7722c78b-b74d-5cec-a4d8-c5de64bf1877')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('西方流行','5a75ee37-cc90-592a-8a63-74cac4c72920')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('說唱','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('说唱','e7ed0a05-8ef6-56b5-af95-709075f8dcdf')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('陈奕迅','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('陳奕迅','1e7c6415-ee70-5649-944b-a90ac2721fe6')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('電子音樂','607c4718-d49a-5f92-9a64-ed74740807ed')
-on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
-insert into public.topic_aliases(alias_nfc,topic_id) values
- ('韩流','c0ed68dd-bac3-5b7b-a286-176caed7f840')
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'AI Agent', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('AI Agent', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'AI 产业动态', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('AI 产业动态', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'AI 产品与应用', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('AI 产品与应用', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'AI 模型与研究', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('AI 模型与研究', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'AI 编程', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('AI 编程', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Agent 学习', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Agent 学习', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'EDM', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('电子', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'First Take', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('日系现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Hip-hop', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Hip-hop / 说唱', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'K-pop', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('K-pop', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Kpop', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('K-pop', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'R&B', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('R&B / Soul', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'R&B / Soul', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('R&B / Soul', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Soul', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('R&B / Soul', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'TED', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('TED', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'THE FIRST TAKE', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('日系现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Tiny Desk', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Tiny Desk 现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'Tiny Desk 现场', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Tiny Desk 现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'hiphop', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'k-pop', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('K-pop', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'ted talk', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('TED', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select 'tiny desk', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Tiny Desk 现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '中文 AI', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('中文 AI', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '中文播客', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('中文播客', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '中文说唱', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '人文社会', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('人文社会', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '华语', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '华语流行', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '古典', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('爵士 / 古典', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '周杰伦', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '周杰倫', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '商业创业', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('商业创业', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '商业访谈', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('商业访谈', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '嘻哈', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '国语歌', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '國語歌', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '大学公开课', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('大学公开课', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '广东歌', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '廣東歌', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '开源模型与本地部署', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('开源模型与本地部署', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '日系', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('日系现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '日系现场', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('日系现场', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '林俊傑', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '林俊杰', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '欧美', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('欧美流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '欧美流行', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('欧美流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '民謠', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('独立 / 民谣', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '民谣', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('独立 / 民谣', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '爵士', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('爵士 / 古典', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '爵士 / 古典', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('爵士 / 古典', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '独立 / 民谣', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('独立 / 民谣', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '独立音乐', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('独立 / 民谣', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '獨立音樂', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('独立 / 民谣', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '电子', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('电子', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '电子音乐', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('电子', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '科学与健康', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('科学与健康', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '科学科普', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('科学科普', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '科技与 AI', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('科技与 AI', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '粤语', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '粤语歌', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '粵語', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '经典演讲', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('经典演讲', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '華語', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '華語流行', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('华语流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '西方流行', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('欧美流行', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '說唱', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '说唱', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('Hip-hop / 说唱', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '陈奕迅', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '陳奕迅', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('粤语', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '電子音樂', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('电子', 'UTF8')), 'hex')
+on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
+insert into public.topic_aliases(alias_nfc,topic_id)
+select '韩流', id from public.topics
+where normalized_key = 'v1:' || encode(sha256(convert_to('K-pop', 'UTF8')), 'hex')
 on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
 commit;
