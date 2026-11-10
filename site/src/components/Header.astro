@@ -9,7 +9,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   <div class="header-row">
     <button class="menu-toggle" type="button" aria-label="导览" aria-controls="site-sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`} title="a few good videos · 无广告 · 只看好视频"><img class="logo-mark" src={`${base}logo-mark.svg`} alt=""/><span>{SITE_NAME}</span></a>
-    <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索视频和频道" aria-label="搜索视频和频道"/><button aria-label="搜索">⌕</button></form>
+    <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="只搜索 fewgood 精选池" aria-label="只搜索 fewgood 精选池"/><button aria-label="搜索">⌕</button></form>
     <AuthMenu />
     <nav class="libraries" aria-label="个人视频库">
       <div class="lib-item" data-lib-kind="history"><a class="lib-trigger" href={link('/history/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span></a></div>
