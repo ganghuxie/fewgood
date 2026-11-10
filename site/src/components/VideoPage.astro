@@ -21,7 +21,7 @@ const subtitle = picks ? '每天从社区与 AI 前沿里挑几条值得看的�
 const feedData = allVideos.map(v => ({ ...v, channel_thumbnail: channels[v.channel_id]?.thumbnail || null, zh: zhFor(v) || null }));
 ---
 <Layout title={`${label} · ${SITE_NAME}`} active={section}>
-  <section class="mode-switch" data-alpha-myspace hidden aria-label="内容模式"><button type="button" data-mode="explore" aria-pressed="true">{MODE_LABELS.explore}</button><button type="button" data-mode="myspace" aria-pressed="false">{MODE_LABELS.myspace}</button></section>
+  <section class="mode-switch" data-alpha-myspace hidden aria-label="内容模式"><button type="button" data-mode="myspace" aria-pressed="false">{MODE_LABELS.myspace}</button><button type="button" data-mode="explore" aria-pressed="true">{MODE_LABELS.explore}</button></section>
   <div data-explore-view>
   <section class="page-heading"><div><h1>{label}{feed?.generated_at && <span class="last-updated">{lastUpdated(feed.generated_at)}</span>}</h1><p>{subtitle}</p></div><span>{total} 个视频</span></section>
   {community && <section class="sort-row"><span>{feed.summary.criteria.recommendation.min_recommenders}+ 人 · {feed.summary.criteria.recommendation.min_months}+ 个月 · 上传 12 年内（经典演讲豁免）</span><nav><a href={pageUrl('community', 1, base, 'people')} aria-current={sort === 'people' ? 'page' : undefined}>{COMMUNITY_SUBSOURCES.people}</a><a href={pageUrl('community', 1, base, 'newest')} aria-current={sort === 'newest' ? 'page' : undefined}>{COMMUNITY_SUBSOURCES.newest}</a></nav></section>}
