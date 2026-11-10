@@ -2,6 +2,7 @@ import { track } from './analytics.js';
 import { MYSPACE_KEY, MAX_ACTIVE_COLUMNS, defaultState, validateState } from '../lib/myspace-schema.mjs';
 import { MYSPACE_SOURCES } from '../lib/brand.mjs';
 import { TOPIC_PRIVACY_NOTICE, topicStatus, topicStatusCopy, topicUrl, fetchPublicTopics } from '../lib/topics.mjs';
+import { getSupabase } from './supabase.js';
 import { mockTopicsEnabled, topicSession, requestTopic, renameUserTopic, moveUserTopic, removeUserTopic, listMyTopics } from './topics.js';
 
 const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
@@ -73,17 +74,17 @@ if (enabled && shell && explore && space) {
     };
   });
   const topicCard = topic => { const position = customTopicIds.indexOf(topic.topic_id); return `<article class="topic-card" data-topic-card="${esc(topic.topic_id)}"><div><a href="${topicUrl(topic.topic_id, base)}"><h2>${esc(topic.canonical_name)}</h2></a><p><b>${esc(topicStatus(topic.status))}</b> · ${esc(topicStatusCopy(topic.status))}</p></div><div class="topic-actions">${topic.status === 'ready' ? `<a href="${topicUrl(topic.topic_id, base)}">浏览视频</a>` : ''}${loggedIn && position >= 0 ? `<button type="button" data-topic-up="${esc(topic.topic_id)}" ${position === 0 ? 'disabled' : ''} aria-label="上移">↑</button><button type="button" data-topic-down="${esc(topic.topic_id)}" ${position === customTopicIds.length - 1 ? 'disabled' : ''} aria-label="下移">↓</button><button type="button" data-topic-rename="${esc(topic.topic_id)}" aria-label="重命名 ${esc(topic.canonical_name)}">重命名</button><button type="button" data-topic-delete="${esc(topic.topic_id)}" aria-label="删除 ${esc(topic.canonical_name)}">删除</button>` : ''}</div></article>`; };
-  const renderTopics = () => {
+  const renderTopics = (notice = "") => {
     const host = space.querySelector('[data-topic-columns]'); if (!host) return;
     const custom = mockTopicsEnabled() ? customTopicIds.map(topicById).filter(Boolean) : customTopicView();
     const browse = publicTopics.filter(topic => !customTopicIds.includes(topic.topic_id));
     const create = loggedIn ? `<form class="topic-create" data-topic-create><input name="topic" maxlength="80" placeholder="新建公开主题" aria-label="主题名称"><button type="submit" ${custom.length >= 5 ? 'disabled' : ''}>新建</button><span>还可新建 ${Math.max(0, 5 - custom.length)} 个</span></form>` : `<button class="topic-login" type="button" data-topic-login>登录后新建主题</button>`;
-    host.innerHTML = `<section class="topic-area"><div class="topic-heading"><div><h2>自定义主题</h2><p>${esc(TOPIC_PRIVACY_NOTICE)}</p></div></div>${create}<p class="topic-message" aria-live="polite"></p>${custom.length ? `<div class="topic-list">${custom.map(topicCard).join('')}</div>` : `<p class="myspace-loading">还没有自定义主题。${loggedIn ? '新建一个主题后，它会在公开页面中展示。' : ''}</p>`}<h2 class="public-topics-title">公开主题</h2><div class="topic-list">${browse.map(topicCard).join('') || '<p class="myspace-loading">公开主题加载中…</p>'}</div></section>`;
+    host.innerHTML = `<section class="topic-area"><div class="topic-heading"><div><h2>自定义主题</h2><p>${esc(TOPIC_PRIVACY_NOTICE)}</p></div></div>${create}<p class="topic-message" aria-live="polite">${notice ? esc(notice) : ""}</p>${custom.length ? `<div class="topic-list">${custom.map(topicCard).join('')}</div>` : `<p class="myspace-loading">还没有自定义主题。${loggedIn ? '新建一个主题后，它会在公开页面中展示。' : ''}</p>`}<h2 class="public-topics-title">公开主题</h2><div class="topic-list">${browse.map(topicCard).join('') || '<p class="myspace-loading">公开主题加载中…</p>'}</div></section>`;
     host.querySelector('[data-topic-login]')?.addEventListener('click', () => document.querySelector('[data-auth-open]')?.click());
-    host.querySelector('[data-topic-create]')?.addEventListener('submit', async event => { event.preventDefault(); const input = event.currentTarget.elements.topic; const message = host.querySelector('.topic-message'); const name = input.value.trim(); if (!name) { message.textContent = '请输入主题名称。'; return; } if (customTopicIds.length >= 5) { message.textContent = '最多可保留 5 个主题。'; return; } try { if (mockTopicsEnabled()) { const match = publicTopics.find(topic => topic.canonical_name === name || topic.topic_id === name) || publicTopics.find(topic => !customTopicIds.includes(topic.topic_id)); if (!match) throw new Error('没有可用的公开 fixture。'); customTopicIds.push(match.topic_id); } else { const result = await requestTopic(name); if (result && result.status && result.status !== 'ok') { const copy = { invalid_input: '名称无效。', limit_reached: '最多可保留 5 个主题。', daily_cap: '今天的新建额度已用完。', alias_conflict: '这个名称和已有主题冲突。' }; throw new Error(copy[result.error || result.status] || result.status); } await refreshMyTopics(); } input.value = ''; message.textContent = '已提交；主题公开后会显示处理状态。'; renderTopics(); } catch (error) { message.textContent = error.message || '创建失败，可稍后再试。'; } });
+    host.querySelector('[data-topic-create]')?.addEventListener('submit', async event => { event.preventDefault(); const input = event.currentTarget.elements.topic; const message = host.querySelector('.topic-message'); const name = input.value.trim(); if (!name) { message.textContent = '请输入主题名称。'; return; } if (customTopicIds.length >= 5) { message.textContent = '最多可保留 5 个主题。'; return; } try { if (mockTopicsEnabled()) { const match = publicTopics.find(topic => topic.canonical_name === name || topic.topic_id === name) || publicTopics.find(topic => !customTopicIds.includes(topic.topic_id)); if (!match) throw new Error('没有可用的公开 fixture。'); customTopicIds.push(match.topic_id); } else { const result = await requestTopic(name); if (result && result.status && result.status !== 'ok') { const copy = { invalid_input: '名称无效。', limit_reached: '最多可保留 5 个主题。', daily_cap: '今天的新建额度已用完。', alias_conflict: '这个名称和已有主题冲突。' }; throw new Error(copy[result.error || result.status] || result.status); } await refreshMyTopics(); } input.value = ''; renderTopics('已提交；主题公开后会显示处理状态。'); } catch (error) { renderTopics(error.message || '创建失败，可稍后再试。'); } });
     host.querySelectorAll('[data-topic-delete]').forEach(button => button.addEventListener('click', async () => { const id = button.dataset.topicDelete; try { if (mockTopicsEnabled()) customTopicIds = customTopicIds.filter(item => item !== id); else { await removeUserTopic(rpcId(id)); await refreshMyTopics(); } renderTopics(); } catch { host.querySelector('.topic-message').textContent = '删除失败，可稍后再试。'; } }));
     host.querySelectorAll('[data-topic-rename]').forEach(button => button.addEventListener('click', async () => { const slug = button.dataset.topicRename; const topic = customTopicView().find(item => item.topic_id === slug) || topicById(slug); const name = prompt('主题名称', topic?.canonical_name || ''); if (!name?.trim()) return; try { if (!mockTopicsEnabled()) { await renameUserTopic(rpcId(slug), name.trim()); await refreshMyTopics(); } else topic.canonical_name = name.trim(); renderTopics(); } catch { host.querySelector('.topic-message').textContent = '重命名失败，可稍后再试。'; } }));
-    host.querySelectorAll('[data-topic-up],[data-topic-down]').forEach(button => button.addEventListener('click', async () => { const id = button.dataset.topicUp || button.dataset.topicDown; const old = customTopicIds.indexOf(id), next = button.dataset.topicUp ? old - 1 : old + 1; if (old < 0 || !customTopicIds[next]) return; try { [customTopicIds[old], customTopicIds[next]] = [customTopicIds[next], customTopicIds[old]]; if (!mockTopicsEnabled()) { await moveUserTopic(rpcId(id), next); await refreshMyTopics(); } renderTopics(); } catch { host.querySelector('.topic-message').textContent = '排序失败，可稍后再试。'; } }));
+    host.querySelectorAll('[data-topic-up],[data-topic-down]').forEach(button => button.addEventListener('click', async () => { const id = button.dataset.topicUp || button.dataset.topicDown; const old = customTopicIds.indexOf(id), next = button.dataset.topicUp ? old - 1 : old + 1; if (old < 0 || !customTopicIds[next]) return; try { [customTopicIds[old], customTopicIds[next]] = [customTopicIds[next], customTopicIds[old]]; if (!mockTopicsEnabled()) { for (let index = 0; index < customTopicIds.length; index++) await moveUserTopic(rpcId(customTopicIds[index]), index); await refreshMyTopics(); } renderTopics(); } catch { host.querySelector('.topic-message').textContent = '排序失败，可稍后再试。'; } }));
   };
 
   if (chipbar) {
@@ -170,6 +171,23 @@ if (enabled && shell && explore && space) {
     if (next === mode) return;
     setMode(next); track('mode_switch', { mode: next });
   }));
+  const syncAuth = async session => {
+    loggedIn = Boolean(session);
+    if (!mockTopicsEnabled()) {
+      if (loggedIn) {
+        try { await refreshMyTopics(); }
+        catch { myTopics = []; customTopicIds = []; }
+      } else {
+        myTopics = [];
+        customTopicIds = [];
+      }
+    }
+    if (space.querySelector('[data-topic-columns]')) renderTopics();
+  };
+  getSupabase()?.auth.onAuthStateChange((event, session) => {
+    if (event === 'INITIAL_SESSION' || event === 'TOKEN_REFRESHED') return;
+    syncAuth(session);
+  });
   Promise.all([
     fetchPublicTopics(base).then(data => { publicTopics = data.topics || []; }),
     topicSession().then(session => { loggedIn = Boolean(session); })
