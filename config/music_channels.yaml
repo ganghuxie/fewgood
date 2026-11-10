@@ -1,0 +1,14 @@
+# Draft only — not wired into the music feed. Jason still chooses keep-curated vs remove.
+channels:
+  - name: NPR Music
+    handle: nprmusic
+  - name: KEXP
+    handle: kexp
+  - name: COLORS
+    handle: COLORSxSTUDIOS
+  - name: Cercle
+    handle: Cercle
+  - name: Boiler Room
+    handle: boilerroom
+  - name: BBC Radio 1
+    handle: BBCRadio1

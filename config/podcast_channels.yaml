@@ -1,0 +1,56 @@
+min_duration_seconds: 1500
+channels:
+- name: Dwarkesh
+  handle: dwarkeshpatel
+  youtube_channel_id: UCXl4i9dYBrFOabk0xGmbkRA
+  youtube_title: Dwarkesh Patel
+  resolved_via: forHandle
+- name: Lex Fridman
+  handle: lexfridman
+  youtube_channel_id: UCSHZKyawb77ixDdsGog4iWA
+  youtube_title: Lex Fridman
+  resolved_via: forHandle
+- name: Acquired
+  handle: acquiredfm
+  youtube_channel_id: UCyFqFYfTW2VoIQKylJ04Rtw
+  youtube_title: Acquired
+  resolved_via: forHandle
+- name: Lenny's Podcast
+  handle: LennysPodcast
+  youtube_channel_id: UC6t1O76G0jYXOAoYCm153dA
+  youtube_title: Lenny's Podcast
+  resolved_via: forHandle
+- name: 20VC
+  handle: 20vc
+  youtube_channel_id: UCf0PBRjhf0rF8fWBIxTuoWA
+  youtube_title: 20VC with Harry Stebbings
+  resolved_via: forHandle
+- name: Latent Space
+  handle: latentspace
+  youtube_channel_id: UC_gbloeO227-3D_otwJUrGQ
+  youtube_title: LatentSpace
+  resolved_via: forHandle
+- name: No Priors
+  handle: NoPriorsPodcast
+  youtube_channel_id: UCSI7h9hydQ40K5MJHnCrQvw
+  youtube_title: 'No Priors: AI, Machine Learning, Tech, & Startups'
+  resolved_via: forHandle
+- name: 硅谷101
+  handle: SiliconValley101
+  youtube_channel_id: UCd5AYYgeVHSO8eafpnkix6A
+  youtube_title: siliconvalley101
+  resolved_via: forHandle
+- name: 张小珺
+  handle: null
+- name: 张小玺
+  handle: null
+- name: 晚点 LatePost
+  handle: latepost
+  youtube_channel_id: UCy5_zPTtj0aW8Tg8v3UpNNw
+  youtube_title: latepost channel
+  resolved_via: forHandle
+- name: 乱翻书
+  handle: luanfanshu
+  youtube_channel_id: UCQjFF8rhcydwOV7I4U9_YMQ
+  youtube_title: 乱翻书
+  resolved_via: forHandle
