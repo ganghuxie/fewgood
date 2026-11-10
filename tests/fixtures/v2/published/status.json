@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-11-10T00:00:00Z",
+  "topics": [
+    {
+      "topic_id": "c-plus-plus",
+      "status": "ready",
+      "video_count": 1,
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "c-sharp",
+      "status": "ready",
+      "video_count": 1,
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "cafe",
+      "status": "ready",
+      "video_count": 2,
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "no-results",
+      "status": "empty",
+      "video_count": 0,
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "quota-deferred",
+      "status": "quota_deferred",
+      "video_count": 0,
+      "generated_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "topic_id": "waiting-demo",
+      "status": "refreshing",
+      "video_count": 0,
+      "generated_at": "2026-11-10T00:00:00Z"
+    }
+  ],
+  "summary": {
+    "ready": 3,
+    "empty": 1,
+    "quota_deferred": 1,
+    "refreshing": 1
+  }
+}

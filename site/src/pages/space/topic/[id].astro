@@ -1,0 +1,29 @@
+---
+import index from '../../../data/topics/index.json';
+import catalog from '../../../data/topic-video-catalog.json';
+import Layout from '../../../components/Layout.astro';
+import { SITE_NAME } from '../../../lib/brand.mjs';
+import { topicStatus, topicStatusCopy, topicVideoUrl } from '../../../lib/topics.mjs';
+export function getStaticPaths() {
+  return (index.topics || []).map(topic => ({ params: { id: topic.topic_id }, props: { topic } }));
+}
+const { topic } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const videos = catalog.filter(video => (video.topic_ids || []).includes(topic.topic_id));
+const duration = seconds => `${Math.floor((seconds || 0) / 60)}:${String((seconds || 0) % 60).padStart(2, '0')}`;
+---
+<Layout title={`${topic.canonical_name} · ${SITE_NAME}`} description="fewgood. 公开主题">
+  <section class="topic-page" data-topic-id={topic.topic_id}>
+    <a class="back" href={`${base.replace(/\/$/, '')}/`}>← 返回发现</a>
+    <h1>{topic.canonical_name}</h1>
+    <p><strong>{topicStatus(topic.status)}</strong> · {topicStatusCopy(topic.status)}</p>
+    {topic.status === 'ready' && videos.length ? <div class="video-grid">{videos.map(video => <a class="video-card" href={topicVideoUrl(topic.topic_id, video.id, base)}><div class="thumbnail"><img src={video.thumb} alt=""/><span class="duration">{duration(video.duration_seconds)}</span></div><div class="video-info"><span></span><div><h2 class="video-title">{video.title}</h2><p class="video-meta">{video.channel}</p></div></div></a>)}</div> : <p class="empty">这个公开主题目前没有可播放的视频。</p>}
+  </section>
+  <script>
+    // Public JSON remains the runtime source of truth after static export.
+    const id = document.querySelector('[data-topic-id]')?.dataset.topicId;
+    const base = document.querySelector('main')?.dataset.base || '';
+    if (id) fetch(`${base}/topics/${encodeURIComponent(id)}.json`).catch(() => {});
+  </script>
+</Layout>
+<style>.topic-page{max-width:1100px;margin:auto}.back{color:#606060;text-decoration:none;font-size:14px}.topic-page h1{margin:16px 0 7px;font-size:30px}.topic-page>p{color:#606060}.empty{padding:24px 0}</style>

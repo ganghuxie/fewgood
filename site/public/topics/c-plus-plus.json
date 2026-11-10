@@ -1,0 +1,16 @@
+{
+  "canonical_name": "C++",
+  "generated_at": "2026-11-10T00:44:31Z",
+  "source": "curated_uploads_fixture",
+  "status": "ready",
+  "topic_id": "c-plus-plus",
+  "videos": [
+    {
+      "channel_title": "Fixture Channel",
+      "published_at": "2026-11-02T00:00:00Z",
+      "title": "C++ uploads",
+      "url": "https://www.youtube.com/watch?v=fixture-cpp-01",
+      "video_id": "fixture-cpp-01"
+    }
+  ]
+}

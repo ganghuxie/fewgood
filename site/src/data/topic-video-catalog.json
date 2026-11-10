@@ -1,0 +1,54 @@
+[
+  {
+    "id": "fixture-cafe-01",
+    "title": "How to brew café espresso at home",
+    "channel": "Coffee Lab",
+    "channel_title": "Coffee Lab",
+    "published_at": "2024-06-01T00:00:00Z",
+    "duration_seconds": 0,
+    "thumb": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
+    "topic_ids": [
+      "cafe"
+    ],
+    "topic_only": true
+  },
+  {
+    "id": "fixture-cafe-02",
+    "title": "Latte art basics",
+    "channel": "Coffee Lab",
+    "channel_title": "Coffee Lab",
+    "published_at": "2024-07-01T00:00:00Z",
+    "duration_seconds": 0,
+    "thumb": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
+    "topic_ids": [
+      "cafe"
+    ],
+    "topic_only": true
+  },
+  {
+    "id": "fixture-cpp-01",
+    "title": "C++ uploads",
+    "channel": "Fixture Channel",
+    "channel_title": "Fixture Channel",
+    "published_at": "2026-11-02T00:00:00Z",
+    "duration_seconds": 0,
+    "thumb": "https://i.ytimg.com/vi/fixture-cpp-01/mqdefault.jpg",
+    "topic_ids": [
+      "c-plus-plus"
+    ],
+    "topic_only": true
+  },
+  {
+    "id": "fixture-csharp-01",
+    "title": "C# uploads",
+    "channel": "Fixture Channel",
+    "channel_title": "Fixture Channel",
+    "published_at": "2026-11-03T00:00:00Z",
+    "duration_seconds": 0,
+    "thumb": "https://i.ytimg.com/vi/fixture-csharp-01/mqdefault.jpg",
+    "topic_ids": [
+      "c-sharp"
+    ],
+    "topic_only": true
+  }
+]

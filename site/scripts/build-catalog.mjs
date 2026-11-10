@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 
 const dataDir = new URL('../src/data/', import.meta.url);
 const read = async (name, fallback = { videos: [] }) => { try { return JSON.parse(await readFile(new URL(name, dataDir), 'utf8')); } catch (error) { if (error.code === 'ENOENT') return fallback; throw error; } };
-const [trending, ai, podcast, music, community, channels, zh] = await Promise.all([read('trending.json'), read('ai.json'), read('podcast.json'), read('music.json'), read('videos.json'), read('channels.json', { channels: [] }), read('zh.json', { videos: {} })]);
+const [trending, ai, podcast, music, community, channels, zh, topicCatalog] = await Promise.all([read('trending.json'), read('ai.json'), read('podcast.json'), read('music.json'), read('videos.json'), read('channels.json', { channels: [] }), read('zh.json', { videos: {} }), read('topic-video-catalog.json', [])]);
 const index = new Map();
 const channelLabels = new Map();
 const sectionLabels = { trending: '全部', ai: 'AI前沿', podcast: '播客', music: '音乐', community: '社区推荐' };
@@ -20,6 +20,12 @@ const addVideo = (video, section, channelId = video.channel_id, external = false
 };
 for (const [section, feed] of [['trending', trending], ['ai', ai], ['podcast', podcast], ['music', music], ['community', community]]) {
   for (const video of feed.videos || []) addVideo(video, section);
+}
+// Topic fixtures belong in the global catalog/search, never in an editorial feed.
+for (const video of Array.isArray(topicCatalog) ? topicCatalog : []) {
+  const prior = index.get(video.id);
+  const merged = { ...prior, ...video, section: prior?.section || 'topic', sections: [...new Set([...(prior?.sections || []), 'topic'])], topic_only: true, topic_ids: [...new Set([...(prior?.topic_ids || []), ...(video.topic_ids || [])])] };
+  index.set(video.id, merged);
 }
 const compact = value => Array.isArray(value) ? compact(value.join(' ')) : typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, 500) : '';
 const description = value => { const text = typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, 120) : ''; return text === '在 YouTube 上发现更多精彩内容。' ? '' : text; };

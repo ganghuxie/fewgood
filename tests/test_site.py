@@ -1,4 +1,5 @@
 import subprocess
+import json
 from pathlib import Path
 
 
@@ -32,3 +33,28 @@ assert.equal(videoUrl('community', 'abcdefghijk', '/youtuber/'), '/youtuber/v/ab
 assert.deepEqual(pageNumbers(5, 10), [1, null, 3, 4, 5, 6, 7, null, 10]);
 assert.deepEqual(pageNumbers(1, 1), [1]);
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+def test_topic_catalog_is_searchable_but_not_an_editorial_feed():
+    root = Path(__file__).resolve().parents[1]
+    subprocess.run(['node', 'site/scripts/build-topic-catalog.mjs'], cwd=root, check=True)
+    subprocess.run(['node', 'site/scripts/build-catalog.mjs'], cwd=root, check=True)
+    topics = json.loads((root / 'site/src/data/topic-video-catalog.json').read_text())
+    catalog = json.loads((root / 'site/public/catalog.json').read_text())
+    topic_ids = {row['id'] for row in topics}
+    assert topic_ids and all(row.get('topic_only') for row in topics)
+    assert topic_ids <= {row['id'] for row in catalog}
+    for feed in ['trending.json', 'ai.json', 'podcast.json', 'music.json', 'videos.json']:
+        assert not (topic_ids & {row['id'] for row in json.loads((root / 'site/src/data' / feed).read_text())['videos']})
+
+
+def test_topic_helpers_cover_public_statuses():
+    root = Path(__file__).resolve().parents[1]
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import {topicStatus, topicStatusCopy, TOPIC_PRIVACY_NOTICE, parseTopicSource} from './site/src/lib/topics.mjs';
+for (const [raw, label] of Object.entries({ready:'就绪', empty:'空', refreshing:'等待中', pending:'等待中', retryable_failed:'失败', failed:'失败', quota_deferred:'额度延后'})) assert.equal(topicStatus(raw), label);
+assert.match(topicStatusCopy('refreshing'), /不保证即时/);
+assert.match(TOPIC_PRIVACY_NOTICE, /公开可浏览/);
+assert.equal(parseTopicSource('topic:cafe'), 'cafe');
+'''], cwd=root, check=True)

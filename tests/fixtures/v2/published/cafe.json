@@ -1,0 +1,25 @@
+{
+  "canonical_name": "Café",
+  "generated_at": "2026-11-10T00:44:31Z",
+  "source": "curated_uploads_fixture",
+  "status": "ready",
+  "topic_id": "cafe",
+  "videos": [
+    {
+      "video_id": "fixture-cafe-01",
+      "title": "How to brew café espresso at home",
+      "channel_title": "Coffee Lab",
+      "published_at": "2024-06-01T00:00:00Z",
+      "url": "https://www.youtube.com/watch?v=fixture-cafe-01",
+      "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+    },
+    {
+      "video_id": "fixture-cafe-02",
+      "title": "Latte art basics",
+      "channel_title": "Coffee Lab",
+      "published_at": "2024-07-01T00:00:00Z",
+      "url": "https://www.youtube.com/watch?v=fixture-cafe-02",
+      "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+    }
+  ]
+}

@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-catalog.mjs && astro build",
-    "dev": "node scripts/build-catalog.mjs && astro dev"
+    "build": "node scripts/build-topic-catalog.mjs && node scripts/build-catalog.mjs && astro build",
+    "dev": "node scripts/build-topic-catalog.mjs && node scripts/build-catalog.mjs && astro dev"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",

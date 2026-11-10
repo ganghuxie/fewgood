@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-11-10T00:45:00Z",
+  "topics": [
+    {
+      "topic_id": "c-plus-plus",
+      "canonical_name": "C++",
+      "status": "ready",
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "c-sharp",
+      "canonical_name": "C#",
+      "status": "ready",
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "cafe",
+      "canonical_name": "Café",
+      "status": "ready",
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "no-results",
+      "canonical_name": "No Results",
+      "status": "empty",
+      "generated_at": "2026-11-10T00:44:31Z"
+    },
+    {
+      "topic_id": "quota-deferred",
+      "canonical_name": "Quota Deferred",
+      "status": "quota_deferred",
+      "generated_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "topic_id": "waiting-demo",
+      "canonical_name": "Waiting Demo",
+      "status": "refreshing",
+      "generated_at": "2026-11-10T00:00:00Z"
+    }
+  ]
+}
