@@ -1,7 +1,18 @@
+-- Apply this file only on real Supabase; do NOT apply supabase/staging/00_auth_shim.sql.
 -- V2 Space topics, scheme A: clients only call RPCs; no service_role is needed.
 create extension if not exists pgcrypto;
 
-create table public.topic_policy (
+do $$
+begin
+  if not exists (select 1 from pg_roles where rolname = 'topic_view_owner') then
+    create role topic_view_owner nologin nobypassrls;
+  end if;
+end $$;
+alter role topic_view_owner nologin nobypassrls;
+
+grant usage on schema public to anon, authenticated;
+
+create table if not exists public.topic_policy (
   singleton boolean primary key default true check (singleton),
   max_active integer not null default 5 check (max_active > 0),
   daily_new_per_user integer not null default 3 check (daily_new_per_user > 0),
@@ -9,7 +20,7 @@ create table public.topic_policy (
 );
 insert into public.topic_policy(singleton) values (true) on conflict (singleton) do nothing;
 
-create table public.topics (
+create table if not exists public.topics (
   id uuid primary key default gen_random_uuid(),
   canonical_name text not null check (char_length(canonical_name) between 2 and 80),
   normalized_key text not null unique check (normalized_key ~ '^[a-z0-9:_-]{32,128}$'),
@@ -18,7 +29,7 @@ create table public.topics (
   created_at timestamptz not null default now()
 );
 
-create table public.user_topics (
+create table if not exists public.user_topics (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users(id),
   topic_id uuid not null references public.topics(id),
@@ -30,22 +41,22 @@ create table public.user_topics (
   removed_at timestamptz,
   unique (user_id, topic_id)
 );
-create index user_topics_active_user_idx on public.user_topics(user_id) where active;
+create index if not exists user_topics_active_user_idx on public.user_topics(user_id) where active;
 
-create table public.topic_creation_user_counters (
+create table if not exists public.topic_creation_user_counters (
   user_id uuid not null references auth.users(id),
   pacific_day date not null,
   new_topics integer not null default 0 check (new_topics >= 0),
   primary key (user_id, pacific_day)
 );
-create table public.topic_creation_global_counters (
+create table if not exists public.topic_creation_global_counters (
   pacific_day date primary key,
   new_topics integer not null default 0 check (new_topics >= 0)
 );
 
 -- Repo-synced seed data maps normalized NFC aliases to a canonical topic.
 -- Production deployment imports config/topic-aliases.json before opening the queue.
-create table public.topic_aliases (
+create table if not exists public.topic_aliases (
   alias_nfc text primary key,
   topic_id uuid not null references public.topics(id)
 );
@@ -63,7 +74,9 @@ alter table public.topic_aliases force row level security;
 alter table public.topic_policy enable row level security;
 alter table public.topic_policy force row level security;
 
+drop policy if exists worker_reads_active_topics on public.topics;
 create policy worker_reads_active_topics on public.topics for select to topic_view_owner using (active);
+drop policy if exists users_read_their_topics on public.user_topics;
 create policy users_read_their_topics on public.user_topics for select to authenticated using (user_id = auth.uid());
 -- Counters, aliases, policy, and base topics deliberately have no client policies.
 
@@ -71,6 +84,7 @@ revoke all on public.topics, public.user_topics, public.topic_creation_user_coun
   public.topic_creation_global_counters, public.topic_aliases, public.topic_policy from anon, authenticated;
 grant select on public.user_topics to authenticated;
 
+drop view if exists public.public_topic_worker_queue;
 create view public.public_topic_worker_queue
   with (security_barrier = true, security_invoker = false) as
   select id as topic_id, canonical_name, search_query, created_at
@@ -153,6 +167,6 @@ begin
 end $$;
 
 revoke all on function public.request_topic(text,text), public.rename_user_topic(uuid,text),
-  public.move_user_topic(uuid,integer), public.remove_user_topic(uuid) from public;
+  public.move_user_topic(uuid,integer), public.remove_user_topic(uuid) from public, anon, authenticated, topic_view_owner;
 grant execute on function public.request_topic(text,text), public.rename_user_topic(uuid,text),
   public.move_user_topic(uuid,integer), public.remove_user_topic(uuid) to authenticated;
