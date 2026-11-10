@@ -63,12 +63,11 @@ jobs:
             return "$status"
           }
           VERSION=20261110083000
-          APPLIED="$(psql_run -tAc "select exists (
-            select 1 from information_schema.tables
-            where table_schema = 'public' and table_name = 'schema_migrations'
-          ) and exists (
-            select 1 from public.schema_migrations where version = '${VERSION}'
-          );")"
+          APPLIED=f
+          HAS_TABLE="$(psql_run -tAc "select to_regclass('public.schema_migrations') is not null;")"
+          if [[ "${HAS_TABLE//[[:space:]]/}" == t ]]; then
+            APPLIED="$(psql_run -tAc "select exists (select 1 from public.schema_migrations where version = '${VERSION}');")"
+          fi
           if [[ "${APPLIED//[[:space:]]/}" == t ]]; then
             echo 'Migration already applied; skipping.'
           else
