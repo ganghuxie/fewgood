@@ -1,0 +1,37 @@
+---
+import Layout from '../components/Layout.astro';
+import { SITE_NAME, TAGLINE } from '../lib/brand.mjs';
+---
+<Layout title={`关于 · ${SITE_NAME}`} active="about" description="fewgood. 关于本站">
+  <article class="about">
+    <h1>关于 {SITE_NAME}</h1>
+    <p class="tagline">{TAGLINE}</p>
+    <section>
+      <h2>产品是什么</h2>
+      <p>fewgood. 是一个个人内容工具，每天只挑几条值得看的长视频。无广告，不看海量推荐流，只看好视频。</p>
+    </section>
+    <section>
+      <h2>数据来源</h2>
+      <p>数据来自 YouTube Data API / YouTube。</p>
+    </section>
+    <section>
+      <h2>内容版权</h2>
+      <p>内容版权归原作者所有。</p>
+    </section>
+    <section>
+      <h2>更新频率</h2>
+      <p>每日更新（计划每日自动更新；页面上展示最后更新时间）。</p>
+    </section>
+    <section>
+      <h2>收藏和历史存在哪</h2>
+      <p>收藏、稍后再看和历史记录保存在你当前浏览器的 localStorage 中；如果你登录了账号，<code>sync.js</code> 可能也会把历史、收藏、稍后再看和关注同步到你的账号。未登录时仅保存在本地浏览器。</p>
+    </section>
+    <section>
+      <h2>联系方式</h2>
+      <p>请在 GitHub 反馈问题：<a href="https://github.com/ganghuxie/youtuber/issues" target="_blank" rel="noopener noreferrer">github.com/ganghuxie/youtuber/issues</a></p>
+    </section>
+  </article>
+</Layout>
+<style>
+.about{max-width:760px;margin:auto}.about h1{font-size:28px;margin:0 0 6px}.tagline{color:#606060;margin:0 0 28px}.about section{margin:0 0 24px}.about h2{font-size:18px;margin:0 0 8px}.about p{margin:0;line-height:1.7}.about a{color:#065fd4}.about code{background:#f2f2f2;border-radius:4px;padding:1px 5px;font-size:13px}
+</style>
