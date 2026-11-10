@@ -242,6 +242,8 @@ def video_record(raw):
     stats = raw.get('statistics', {})
     return dict(id=raw['id'], title=snippet.get('title', ''), channel=snippet.get('channelTitle', ''),
                 channel_id=snippet.get('channelId', ''), published_at=snippet.get('publishedAt', ''),
+                default_audio_language=snippet.get('defaultAudioLanguage') or None,
+                default_language=snippet.get('defaultLanguage') or None,
                 duration_seconds=duration(raw.get('contentDetails', {}).get('duration')),
                 view_count=int(stats.get('viewCount', 0)),
                 like_count=int(stats['likeCount']) if stats.get('likeCount') is not None else None)
@@ -260,6 +262,285 @@ def write_feed(name, payload, root='site/src/data'):
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
     return target
+
+
+# Language gate -------------------------------------------------------------
+# Keep only zh + en. A missing/empty/`und`/`zxx` language field falls through
+# to the next signal; any other primary subtag excludes the video. When both
+# fields are unavailable, a title written in Hangul (incl. jamo), Devanagari,
+# Arabic, Thai, or with Turkish-specific letters is excluded. German umlauts
+# and ç alone are intentionally allowed.
+
+_LANGUAGE_SCRIPT_BLOCKS = [
+    (0x1100, 0x11FF),  # Hangul Jamo
+    (0x3130, 0x318F),  # Hangul Compatibility Jamo
+    (0xA960, 0xA97F),  # Hangul Jamo Extended-A
+    (0xD7B0, 0xD7FF),  # Hangul Jamo Extended-B
+    (0xAC00, 0xD7A3),  # Hangul Syllables
+    (0x0900, 0x097F),  # Devanagari
+    (0x0600, 0x06FF),  # Arabic
+    (0x0750, 0x077F),  # Arabic Supplement
+    (0x08A0, 0x08FF),  # Arabic Extended-A
+    (0xFB50, 0xFDFF),  # Arabic Presentation Forms-A
+    (0xFE70, 0xFEFF),  # Arabic Presentation Forms-B
+    (0x0E00, 0x0E7F),  # Thai
+]
+_LANGUAGE_SCRIPT_RE = re.compile('|'.join(f'[{chr(lo)}-{chr(hi)}]' for lo, hi in _LANGUAGE_SCRIPT_BLOCKS))
+_TURKISH_LETTERS = frozenset('ĞğİıŞş')
+
+
+def _title_uses_foreign_script(title):
+    if not title:
+        return False
+    if _LANGUAGE_SCRIPT_RE.search(title):
+        return True
+    return any(char in _TURKISH_LETTERS for char in title)
+
+
+def language_ok(default_audio_language=None, default_language=None, title=''):
+    """Return True when a video passes the zh/en language gate."""
+    for field in (default_audio_language, default_language):
+        if not field:
+            continue
+        value = str(field).strip()
+        if value.lower() in ('und', 'zxx'):
+            continue
+        primary = value.split('-', 1)[0].lower()
+        if primary in ('zh', 'en'):
+            return True
+        return False
+    return not _title_uses_foreign_script(title)
+
+
+def language_gate(video):
+    return language_ok(
+        video.get('default_audio_language'),
+        video.get('default_language'),
+        video.get('title', ''),
+    )
+
+
+# Per-channel dedupe --------------------------------------------------------
+# A channel may contribute at most one video per UTC calendar day and at most
+# three videos in any rolling 7-day window across the whole site pool.
+
+def _channel_priority(feed_name):
+    if feed_name in ('community', 'videos'):
+        return 0
+    if feed_name == 'ai':
+        return 1
+    return 2
+
+
+def _video_view(video):
+    try:
+        return int(video.get('view_count') or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _published_utc(video):
+    value = video.get('published_at')
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
+    except (TypeError, ValueError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=UTC)
+    return parsed.astimezone(UTC)
+
+
+class _ChannelBudget:
+    def __init__(self):
+        self.dates = {}
+        self.times = {}
+
+    def _exceeds_window(self, times, timestamp):
+        combined = sorted(times + [timestamp])
+        left = 0
+        for right in range(len(combined)):
+            while combined[right] - combined[left] >= 7 * 86400:
+                left += 1
+            if right - left + 1 > 3:
+                return True
+        return False
+
+    def admit(self, channel_id, published_at):
+        if not channel_id or published_at is None:
+            return True
+        if published_at.date() in self.dates.get(channel_id, set()):
+            return False
+        timestamp = published_at.timestamp()
+        if self._exceeds_window(self.times.get(channel_id, []), timestamp):
+            return False
+        self.dates.setdefault(channel_id, set()).add(published_at.date())
+        self.times.setdefault(channel_id, []).append(timestamp)
+        return True
+
+
+def dedupe_channel_caps(videos, existing=(), feed_name='trending'):
+    """Drop candidate videos that exceed per-channel day/7-day budgets.
+
+    `existing` is an iterable of ``(video, feed_name)`` pairs already kept by
+    other feeds; those videos are counted toward the budget but never dropped.
+    Returns ``(kept, dropped)`` with `kept` in the original `videos` order.
+    """
+    budget = _ChannelBudget()
+    existing_sorted = sorted(existing, key=lambda pair: (_channel_priority(pair[1]), -_video_view(pair[0]), str(pair[0].get('id', ''))))
+    for video, _feed in existing_sorted:
+        budget.admit(video.get('channel_id'), _published_utc(video))
+    order = sorted(range(len(videos)), key=lambda index: (-_video_view(videos[index]), str(videos[index].get('id', ''))))
+    keep = set()
+    dropped = 0
+    for index in order:
+        video = videos[index]
+        if budget.admit(video.get('channel_id'), _published_utc(video)):
+            keep.add(index)
+        else:
+            dropped += 1
+    return [videos[index] for index in range(len(videos)) if index in keep], dropped
+
+
+def apply_channel_caps_pool(feed_videos):
+    """Apply channel caps across every feed at once (whole-site rebuild)."""
+    budget = _ChannelBudget()
+    entries = []
+    for name, videos in feed_videos.items():
+        for index, video in enumerate(videos):
+            entries.append((name, index, video))
+    entries.sort(key=lambda entry: (_channel_priority(entry[0]), -_video_view(entry[2]), str(entry[2].get('id', ''))))
+    kept = {name: set() for name in feed_videos}
+    dropped = {name: 0 for name in feed_videos}
+    for name, index, video in entries:
+        if budget.admit(video.get('channel_id'), _published_utc(video)):
+            kept[name].add(index)
+        else:
+            dropped[name] += 1
+    return (
+        {name: [video for index, video in enumerate(feed_videos[name]) if index in kept[name]] for name in feed_videos},
+        dropped,
+    )
+
+
+def podcast_display_cap(videos, top_n=20, per_channel=2):
+    """Keep the visible top-20 podcast list at most `per_channel` per channel."""
+    ordered = sorted(videos, key=lambda video: (-_video_view(video), str(video.get('id', ''))))
+    kept = []
+    dropped = 0
+    counts = {}
+    for video in ordered:
+        channel = video.get('channel_id') or ''
+        if len(kept) < top_n and counts.get(channel, 0) >= per_channel:
+            dropped += 1
+            continue
+        kept.append(video)
+        counts[channel] = counts.get(channel, 0) + 1
+    return kept, dropped
+
+
+def _load_existing_feeds(exclude, root='site/src/data'):
+    existing = []
+    for name in ('trending', 'ai', 'podcast', 'music', 'videos'):
+        if name == exclude:
+            continue
+        path = Path(root) / f'{name}.json'
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        for video in payload.get('videos', []):
+            existing.append((video, name))
+    return existing
+
+
+# why_good + picks ----------------------------------------------------------
+
+def why_good_for(video, section='trending', rank=None):
+    """Build an honest Chinese reason string (≤40 chars) from real fields."""
+    section = section or 'trending'
+    if section in ('community', 'videos'):
+        recommenders = video.get('recommenders')
+        if recommenders is None:
+            return None
+        recommenders = int(recommenders)
+        span = video.get('span_days')
+        if isinstance(span, (int, float)) and span >= 365:
+            years = max(1, int(round(span / 365.25)))
+            return f'{recommenders} 位 HN 用户跨 {years} 年反复推荐'
+        months = video.get('months')
+        if months:
+            return f'{recommenders} 位 HN 用户跨 {int(months)} 个月反复推荐'
+        return f'{recommenders} 位 HN 用户反复推荐'
+    if section == 'ai':
+        channel = str(video.get('channel') or '').strip()
+        if not channel:
+            return 'AI 前沿精选频道本周新片'
+        budget = 40 - len('AI 前沿精选频道 ') - len(' 本周新片')
+        if len(channel) > budget:
+            channel = channel[:budget].rstrip()
+        return f'AI 前沿精选频道 {channel} 本周新片'
+    if rank is None:
+        return None
+    return f'近 30 天同类长视频播放第 {int(rank)}'
+
+
+def build_picks(feeds, generated_at=None, limit=10):
+    """Generate the 今日精选 feed (≤10) from community, AI and trending feeds."""
+    groups = {}
+    for key, source_label in (('community', '社区推荐'), ('ai', 'AI前沿'), ('trending', '趋势')):
+        feed = feeds.get(key) or {}
+        videos = []
+        for video in feed.get('videos', []):
+            why = video.get('why_good') or why_good_for(video, key)
+            if not why:
+                continue
+            videos.append(dict(video, why_good=why, source=key))
+        if key == 'community':
+            videos.sort(key=lambda item: (-int(item.get('recommenders') or 0), -int(item.get('months') or 0)))
+        else:
+            videos.sort(key=lambda item: (-_video_view(item), str(item.get('id', ''))))
+        groups[key] = (videos, source_label)
+    quotas = {'community': 4, 'ai': 4, 'trending': 2}
+    picked = []
+    seen = set()
+    used = {key: 0 for key in groups}
+    cursor = {key: 0 for key in groups}
+    order = ('community', 'ai', 'trending')
+    while len(picked) < limit:
+        progressed = False
+        for key in order:
+            if used[key] >= quotas[key]:
+                continue
+            videos, _label = groups[key]
+            while cursor[key] < len(videos):
+                candidate = videos[cursor[key]]
+                cursor[key] += 1
+                if candidate['id'] in seen:
+                    continue
+                seen.add(candidate['id'])
+                picked.append(dict(candidate, pick_source=groups[key][1]))
+                used[key] += 1
+                progressed = True
+                break
+        if not progressed:
+            break
+    for key in order:
+        if len(picked) >= limit:
+            break
+        videos, _label = groups[key]
+        while cursor[key] < len(videos) and len(picked) < limit:
+            candidate = videos[cursor[key]]
+            cursor[key] += 1
+            if candidate['id'] in seen:
+                continue
+            seen.add(candidate['id'])
+            picked.append(dict(candidate, pick_source=groups[key][1]))
+    return dict(generated_at=generated_at or iso_now(), kind='picks', limit=limit,
+                mix=quotas, videos=picked)
 
 def youtube_videos(client, key, ids):
     found = []
@@ -297,28 +578,42 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
 
     def accepted():
         videos = []
-        dropped_short = dropped_vertical = 0
+        dropped_short = dropped_vertical = dropped_language = 0
         for item in records:
             if duration(item.get('contentDetails', {}).get('duration')) < 60:
                 dropped_short += 1
             elif landscape_only and not landscape_video(item):
                 dropped_vertical += 1
             else:
-                videos.append(video_record(item))
+                record = video_record(item)
+                if language_gate(record):
+                    videos.append(record)
+                else:
+                    dropped_language += 1
+        videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds(name, output), feed_name=name)
         videos.sort(key=lambda v: (-v['view_count'], v['id']))
-        return videos, dropped_short, dropped_vertical
+        return videos, dropped_short, dropped_vertical, dropped_language, dropped_channel
 
-    videos, dropped_short, dropped_vertical = accepted()
+    videos, dropped_short, dropped_vertical, dropped_language, dropped_channel = accepted()
+    dropped_podcast = 0
+    if name == 'podcast':
+        videos, dropped_podcast = podcast_display_cap(videos)
     final_videos = videos[:100]
+    if name in ('trending', 'podcast', 'music'):
+        for rank, video in enumerate(final_videos, 1):
+            video['why_good'] = why_good_for(video, name, rank=rank)
     published = [video['published_at'] for video in final_videos if video['published_at']]
 
     payload = dict(generated_at=iso_now(), window_days=30, exclude_shorts_under_seconds=60,
                    window_size_days=6, windows=5,
                    candidates_fetched=len(candidate_ids), dropped_short=dropped_short,
-                   dropped_vertical=dropped_vertical, landscape_only=landscape_only,
-                   video_duration_buckets=['medium', 'long'], final_count=len(videos[:100]),
+                   dropped_vertical=dropped_vertical, dropped_language=dropped_language,
+                   dropped_channel=dropped_channel, landscape_only=landscape_only,
+                   video_duration_buckets=['medium', 'long'], final_count=len(final_videos),
                    quota_units_approx=searches * 100 + quota_video_batches,
                    videos=final_videos)
+    if dropped_podcast:
+        payload['dropped_podcast_display_cap'] = dropped_podcast
     if published:
         payload['publish_date_span'] = {'min': min(published), 'max': max(published)}
     if query:
@@ -432,9 +727,15 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
             print(f"AI channel skipped: {channel['name']} ({error})")
     raws = youtube_videos(client, key, list(dict.fromkeys(ids))); units += (len(set(ids)) + 49) // 50
     videos = [v for v in map(video_record, raws) if v['duration_seconds'] >= 60]
+    dropped_language = sum(1 for v in videos if not language_gate(v))
+    videos = [v for v in videos if language_gate(v)]
+    videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds('ai', output), feed_name='ai')
     videos.sort(key=lambda v: (-v['view_count'], v['id']))
+    for video in videos:
+        video['why_good'] = why_good_for(video, 'ai')
     payload = dict(generated_at=iso_now(), window_days=7, exclude_shorts_under_seconds=60,
-                   quota_units_approx=units, channels_used=len(channels), videos=videos)
+                   quota_units_approx=units, channels_used=len(channels), dropped_language=dropped_language,
+                   dropped_channel=dropped_channel, videos=videos)
     write_feed('ai', payload, output)
     print(f"AI: {len(videos)} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))
@@ -524,6 +825,10 @@ def report(db, config, videos, output='reports'):
         if any(gates.values()):
             continue
         raw = cached[v['id']]
+        snippet = raw.get('snippet', {})
+        if not language_ok(snippet.get('defaultAudioLanguage'), snippet.get('defaultLanguage'), snippet.get('title', '')):
+            drops['language'] += 1
+            continue
         max_upload_age_years = config['metadata'].get('max_upload_age_years', 0)
         try:
             upload_age = at - stamp(raw['snippet']['publishedAt'])
@@ -536,7 +841,9 @@ def report(db, config, videos, output='reports'):
             continue
         db.execute('INSERT OR IGNORE INTO selections VALUES (?,?)', (v['id'], at))
         selected_at = db.execute('SELECT selected_at FROM selections WHERE video_id=?', (v['id'],)).fetchone()[0]
-        selected.append(dict(v, title=raw['snippet']['title'], channel=raw['snippet']['channelTitle'], channel_id=raw['snippet'].get('channelId', ''), published_at=raw['snippet'].get('publishedAt', ''), duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at, classic_speech=bool(over_upload_age and exempt), **({'classic_speech_reasons': classic_reasons} if over_upload_age and exempt else {})))
+        selected.append(dict(v, title=snippet.get('title', ''), channel=snippet.get('channelTitle', ''), channel_id=snippet.get('channelId', ''), published_at=snippet.get('publishedAt', ''), default_audio_language=snippet.get('defaultAudioLanguage') or None, default_language=snippet.get('defaultLanguage') or None, duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at, classic_speech=bool(over_upload_age and exempt), **({'classic_speech_reasons': classic_reasons} if over_upload_age and exempt else {})))
+    for record in selected:
+        record['why_good'] = why_good_for(record, 'community')
     db.commit()
     what_if = []
     for people in (5,10,20,30,50):
@@ -545,7 +852,7 @@ def report(db, config, videos, output='reports'):
                 eligible = [v for v in videos if v['recommenders'] >= people and v['months'] >= months and v['span_days'] >= span and not (config['recommendation']['sources']['enabled'] and config['recommendation']['sources']['min_sources'] > 1)]
                 known = [v for v in eligible if v['id'] in cached]
                 what_if.append(dict(recommenders=people, months=months, span_days=span, candidates=len(eligible), cached=len(known), selected_with_cached_metadata=sum(not any(metadata_gates(cached[v['id']], config['metadata'], at).values()) for v in known), unknown_metadata=len(eligible)-len(known)))
-    summary = dict(generated_at=at, hn_items=dict(db.execute('SELECT kind,count(*) FROM items GROUP BY kind').fetchall()), distinct_video_ids=len(videos), mentions=db.execute('SELECT count(*) FROM mentions').fetchone()[0], distinct_video_recommender_pairs=db.execute('SELECT count(*) FROM (SELECT DISTINCT video_id,author FROM mentions)').fetchone()[0], recommender_histogram=dict(Counter(v['recommenders'] for v in videos)), recommendation_candidates=candidates, dropped_by_gate={k:drops[k] for k in ('recommenders','months','span','sources','metadata_unavailable','publish_age','duration','max_upload_age')}, final_selected=len(selected), quota_units=db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0], what_if=what_if, criteria=config)
+    summary = dict(generated_at=at, hn_items=dict(db.execute('SELECT kind,count(*) FROM items GROUP BY kind').fetchall()), distinct_video_ids=len(videos), mentions=db.execute('SELECT count(*) FROM mentions').fetchone()[0], distinct_video_recommender_pairs=db.execute('SELECT count(*) FROM (SELECT DISTINCT video_id,author FROM mentions)').fetchone()[0], recommender_histogram=dict(Counter(v['recommenders'] for v in videos)), recommendation_candidates=candidates, dropped_by_gate={k:drops[k] for k in ('recommenders','months','span','sources','metadata_unavailable','publish_age','duration','max_upload_age','language')}, final_selected=len(selected), quota_units=db.execute('SELECT coalesce(sum(units),0) FROM quota').fetchone()[0], what_if=what_if, criteria=config)
     Path(output).mkdir(parents=True, exist_ok=True)
     Path(output, 'report.json').write_text(json.dumps(summary, indent=2, ensure_ascii=False))
     lines = ['# Pipeline report', '', f'Final selected: {len(selected)} (all configured gates applied).', f'Recommendation candidates: {candidates}', f'HN items: {summary["hn_items"]}', f'Distinct videos: {len(videos)}; mentions: {summary["mentions"]}', f'Recommender histogram: {summary["recommender_histogram"]}', f'Dropped by gate (independent, overlapping): {summary["dropped_by_gate"]}', f'Approximate cumulative quota units: {summary["quota_units"]}', '', 'What-if uses cached metadata only; unknowns are not counted as selected.', '', '| People | Months | Span days | Candidates | Cached selected | Unknown |', '|---|---|---|---|---|---|']
