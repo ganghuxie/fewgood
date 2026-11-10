@@ -9,6 +9,13 @@ begin
   end if;
 end $$;
 alter role topic_view_owner nologin nobypassrls;
+-- Supabase PG16: the migrating role needs SET on topic_view_owner to make it a view owner.
+do $$
+begin
+  execute format('grant topic_view_owner to %I with set true', current_user);
+exception when others then
+  execute format('grant topic_view_owner to %I', current_user);
+end $$;
 
 grant usage on schema public to anon, authenticated;
 
