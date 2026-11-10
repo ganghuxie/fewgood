@@ -1,276 +1,74 @@
 import { track } from './analytics.js';
-import { MYSPACE_KEY, MAX_ACTIVE_COLUMNS, defaultState, validateState } from '../lib/myspace-schema.mjs';
-import { MYSPACE_SOURCES } from '../lib/brand.mjs';
-import { TOPIC_PRIVACY_NOTICE, topicStatus, topicStatusCopy, topicUrl, fetchPublicTopics, fetchPublicTopic } from '../lib/topics.mjs';
+import { fetchPublicTopic } from '../lib/topics.mjs';
 import { getSupabase } from './supabase.js';
-import { mockTopicsEnabled, topicSession, requestTopic, renameUserTopic, moveUserTopic, removeUserTopic, listMyTopics, resolveFeaturedTopic } from './topics.js';
+import { mockTopicsEnabled, topicSession, requestTopic, removeUserTopic, listMyTopics, resolveFeaturedTopic } from './topics.js';
 import subtopicData from '../data/subtopics.json';
 
-const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
-const sourceById = new Map(MYSPACE_SOURCES.map(source => [source.id, source]));
-const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+const FEATURED_KEY = 'fewgood:featured-subtopics';
+const MAX_TOPICS = 5;
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const duration = seconds => `${Math.floor((Number(seconds) || 0) / 60)}:${String((Number(seconds) || 0) % 60).padStart(2, '0')}`;
-
-function load() {
-  try { return validateState(JSON.parse(localStorage.getItem(MYSPACE_KEY) || 'null'), MYSPACE_SOURCES) || defaultState(); }
-  catch { return defaultState(); }
-}
-function save(state) {
-  const checked = validateState(state, MYSPACE_SOURCES);
-  if (!checked) return false;
-  try { localStorage.setItem(MYSPACE_KEY, JSON.stringify(checked)); } catch { return false; }
-  track('myspace_save', { active_columns: checked.columns.filter(column => column.enabled).length });
-  return true;
-}
-function avatar(video) {
-  const name = video.channel || '频道';
-  const letter = [...name.trim()][0] || '频';
-  let hash = 0; for (const char of name) hash = (hash * 31 + char.codePointAt(0)) >>> 0;
-  const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7];
-  return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`;
-}
-function card(video, source, base) {
-  return `<a class="video-card" href="${base}/v/${encodeURIComponent(video.id)}/?from=${encodeURIComponent(source.section)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/hqdefault.jpg" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(video.channel)}</p><p class="video-meta">${esc(source.label)}</p></div></div></a>`;
-}
-function matching(videos, source) {
-  const results = videos.filter(video => Array.isArray(video.sections) && video.sections.includes(source.section));
-  if (source.id === 'community:newest') return results.sort((a, b) => Date.parse(b.selected_at || 0) - Date.parse(a.selected_at || 0));
-  if (source.section === 'community') return results.sort((a, b) => (b.recommenders || 0) - (a.recommenders || 0) || (b.months || 0) - (a.months || 0));
-  return results.sort((a, b) => (b.view_count || 0) - (a.view_count || 0));
-}
-const fixtureTopicIds = ['cafe', 'no-results', 'quota-deferred', 'waiting-demo'];
-const featuredCategories = (subtopicData.categories || []).filter(category => category.id !== 'trending');
-const featuredTopics = featuredCategories.flatMap(category => category.subtopics || []);
-const featuredById = new Map(featuredTopics.map(topic => [topic.id, topic]));
-const visibleFeaturedCategories = () => {
-  const current = location.pathname.split('/').find(part => featuredCategories.some(category => category.id === part));
-  return current ? featuredCategories.filter(category => category.id === current) : featuredCategories;
-};
+const categories = (subtopicData.categories || []).filter(category => category.id !== 'trending');
+const featured = categories.flatMap(category => category.subtopics || []);
+const byId = new Map(featured.map(topic => [topic.id, topic]));
+const localSelected = () => { try { return [...new Set(JSON.parse(localStorage.getItem(FEATURED_KEY) || '[]').filter(id => byId.has(id)))].slice(0, MAX_TOPICS); } catch { return []; } };
+const saveSelected = ids => { try { localStorage.setItem(FEATURED_KEY, JSON.stringify(ids.filter(id => byId.has(id)))); } catch {} };
+function card(video, source, base) { const id = video.video_id || video.id; const channel = video.channel_title || video.channel || '频道'; return `<a class="video-card" href="${base}/v/${encodeURIComponent(id)}/?from=${encodeURIComponent(source)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info"><div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(channel)}</p></div></div></a>`; }
 
 const shell = document.querySelector('[data-alpha-myspace]');
 const explore = document.querySelector('[data-explore-view]');
 const space = document.querySelector('[data-myspace-view]');
-if (enabled && shell && explore && space) {
-  const header = document.querySelector('.site-header');
-  const chipbar = header?.querySelector('.chipbar');
+if (shell && explore && space) {
+  const header = document.querySelector('.site-header'), chipbar = header?.querySelector('.chipbar');
   if (header && chipbar) { header.classList.add('alpha-video-header'); header.insertBefore(shell, chipbar); }
   shell.hidden = false;
-  let state = load();
-  let publicTopics = [];
-  let customTopicIds = [];
-  let myTopics = [];
-  const topicVideos = new Map();
-  let dailyCapHit = false;
-  let loggedIn = false;
-  let catalog;
-  let mode = 'myspace';
   const base = (document.querySelector('main')?.dataset.base || '').replace(/\/$/, '');
-  const catalogPromise = fetch(`${base}/catalog.json`).then(response => response.ok ? response.json() : Promise.reject(new Error('catalog')));
-  const activeColumns = () => state.columns.filter(column => column.enabled);
-  const topicById = id => publicTopics.find(topic => topic.topic_id === id);
-  const membershipBySlug = slug => myTopics.find(item => item.topic_id === slug);
-  const rpcId = slug => membershipBySlug(slug)?.user_topic_id || slug;
-  const refreshMyTopics = async () => {
+  const cache = new Map(); let selected = localSelected(), serverTopics = [], loggedIn = false, mode = 'myspace', activeTab = 'all', notice = '';
+  const selectedTopics = () => selected.filter(id => byId.has(id)).map(id => byId.get(id));
+  const membership = id => serverTopics.find(topic => topic.topic_id === id);
+  const say = text => { notice = text; const node = space.querySelector('[data-topic-message]'); if (node) node.textContent = text; };
+  const loadVideos = async id => { if (cache.has(id)) return cache.get(id); const job = fetchPublicTopic(id, base).then(data => Array.isArray(data.videos) ? data.videos : []).catch(() => []); cache.set(id, job); const data = await job; cache.set(id, data); return data; };
+  const prefetch = () => featured.forEach(topic => { loadVideos(topic.id); });
+  const refreshMemberships = async () => { if (!loggedIn || mockTopicsEnabled()) return; serverTopics = await listMyTopics(); };
+  const hydrateFromServer = async () => {
     if (!loggedIn || mockTopicsEnabled()) return;
-    myTopics = await listMyTopics();
-    customTopicIds = myTopics.map(item => item.topic_id);
+    await refreshMemberships();
+    selected = [...new Set([...selected, ...serverTopics.map(t => t.topic_id).filter(id => byId.has(id))])].slice(0, MAX_TOPICS);
+    saveSelected(selected);
   };
-  const customTopicView = () => myTopics.map(item => {
-    const published = topicById(item.topic_id) || {};
-    return {
-      topic_id: item.topic_id,
-      canonical_name: item.display_name || item.canonical_name || published.canonical_name || '主题',
-      status: published.status || 'pending',
-    };
-  });
-  const topicCard = topic => { const position = customTopicIds.indexOf(topic.topic_id); return `<article class="topic-card" data-topic-card="${esc(topic.topic_id)}"><div><a href="${topicUrl(topic.topic_id, base)}"><h2>${esc(topic.canonical_name)}</h2></a><p><b>${esc(topicStatus(topic.status))}</b> · ${esc(topicStatusCopy(topic.status))}</p></div><div class="topic-actions">${topic.status === 'ready' ? `<a href="${topicUrl(topic.topic_id, base)}">浏览视频</a>` : ''}${loggedIn && position >= 0 ? `<button type="button" data-topic-up="${esc(topic.topic_id)}" ${position === 0 ? 'disabled' : ''} aria-label="上移">↑</button><button type="button" data-topic-down="${esc(topic.topic_id)}" ${position === customTopicIds.length - 1 ? 'disabled' : ''} aria-label="下移">↓</button><button type="button" data-topic-rename="${esc(topic.topic_id)}" aria-label="重命名 ${esc(topic.canonical_name)}">重命名</button><button type="button" data-topic-delete="${esc(topic.topic_id)}" aria-label="删除 ${esc(topic.canonical_name)}">删除</button>` : ''}</div></article>`; };
-  const loadTopicVideos = async id => {
-    if (topicVideos.has(id)) return topicVideos.get(id);
-    const pending = fetchPublicTopic(id, base).then(data => Array.isArray(data.videos) ? data.videos.map(video => ({
-      ...video, id: video.video_id || video.id, channel: video.channel_title || video.channel || '频道',
-    })) : []).catch(() => []);
-    topicVideos.set(id, pending);
-    const videos = await pending; topicVideos.set(id, videos);
-    return videos;
+  const renderVideos = async () => {
+    const host = space.querySelector('[data-room-videos]'); if (!host) return;
+    const topics = selectedTopics(); if (!topics.length) { host.innerHTML = ''; return; }
+    const ids = activeTab === 'all' ? topics.map(t => t.id) : [activeTab];
+    const ready = ids.every(id => Array.isArray(cache.get(id)));
+    if (!ready) host.innerHTML = '<p class="myspace-loading">正在读取你的小房间…</p>';
+    const groups = await Promise.all(ids.map(async id => [id, await loadVideos(id)])); if (!host.isConnected) return;
+    if (activeTab === 'all') { const unique = new Map(); groups.flatMap(([, list]) => list).forEach(video => { const id = video.video_id || video.id; if (!unique.has(id)) unique.set(id, video); }); const all = [...unique.values()].sort((a,b) => Date.parse(b.published_at || 0) - Date.parse(a.published_at || 0)); host.innerHTML = all.length ? `<div class="video-grid">${all.map(video => card(video, 'topic:all', base)).join('')}</div>` : '<p class="myspace-loading">已选主题暂时还没有视频。</p>'; }
+    else { const topic = byId.get(activeTab), list = groups[0]?.[1] || []; host.innerHTML = `<section class="myspace-column"><h2>${esc(topic?.name_zh || '小主题')}</h2>${list.length ? `<div class="video-grid">${list.map(video => card(video, `topic:${activeTab}`, base)).join('')}</div>` : '<p class="myspace-loading">该主题暂时还没有视频。</p>'}</section>`; }
   };
-  const renderFeaturedVideos = async () => {
-    const host = space.querySelector('[data-featured-videos]'); if (!host) return;
-    const selected = customTopicIds.filter(id => featuredById.has(id));
-    if (!selected.length) { host.innerHTML = ''; return; }
-    host.innerHTML = selected.map(id => `<section class="myspace-column" data-featured-topic="${esc(id)}"><h2>${esc(featuredById.get(id).name_zh)}</h2><p class="myspace-loading">正在读取本地视频…</p></section>`).join('');
-    await Promise.all(selected.map(async id => {
-      const column = host.querySelector(`[data-featured-topic="${CSS.escape(id)}"]`);
-      if (!column) return;
-      const videos = await loadTopicVideos(id);
-      if (!column.isConnected) return;
-      const source = { label: featuredById.get(id).name_zh, section: `topic:${id}` };
-      column.innerHTML = `<h2>${esc(source.label)}</h2>${videos.length ? `<div class="video-grid">${videos.slice(0, 12).map(video => card(video, source, base)).join('')}</div>` : '<p class="myspace-loading">该主题暂时没有视频。</p>'}`;
-    }));
-  };
-  const renderTopics = (notice = "") => {
-    const host = space.querySelector('[data-topic-columns]'); if (!host) return;
-    const custom = mockTopicsEnabled() ? customTopicIds.map(topicById).filter(Boolean) : customTopicView();
-    const remainingActive = Math.max(0, 5 - customTopicIds.length);
-    const createHint = remainingActive === 0 ? '最多可保留 5 个主题。' : (dailyCapHit ? `还可选择 ${remainingActive} 个精选主题；今天的新建额度已用完` : `还可新建/选择 ${remainingActive} 个`);
-    const createDisabled = remainingActive === 0 || dailyCapHit;
-    const groupedChips = visibleFeaturedCategories().map(category => `<section class="topic-chip-group"><h3>${esc(category.name_zh)}</h3><div class="topic-chips">${(category.subtopics || []).map(topic => {
-      const selected = customTopicIds.includes(topic.id);
-      const disabled = !selected && remainingActive === 0;
-      return `<button type="button" class="topic-chip ${selected ? 'selected' : ''}" data-featured-topic-toggle="${esc(topic.id)}" aria-pressed="${selected}" ${disabled ? 'disabled' : ''}>${selected ? '✓ ' : ''}${esc(topic.name_zh)}</button>`;
-    }).join('')}</div></section>`).join('');
-    const create = !loggedIn && !mockTopicsEnabled()
-      ? `<button class="topic-login" type="button" data-topic-login>登录后选择或新建主题</button>`
-      : `<button class="topic-create-link" type="button" data-topic-create-open>找不到？自己添加</button><form class="topic-create" data-topic-create hidden><input name="topic" maxlength="80" placeholder="新建公开主题" aria-label="主题名称"><button type="submit" ${createDisabled ? 'disabled' : ''}>新建</button></form>`;
-    host.innerHTML = `<section class="topic-area"><div class="topic-heading"><div><h2>选择你感兴趣的主题</h2><p>${esc(TOPIC_PRIVACY_NOTICE)}</p></div><span>${createHint}</span></div><div class="topic-chip-groups">${groupedChips}</div>${create}<p class="topic-message" aria-live="polite">${notice ? esc(notice) : ''}</p>${custom.length ? `<div class="topic-list">${custom.map(topicCard).join('')}</div>` : ''}</section><div data-featured-videos></div>`;
-    const login = () => document.querySelector('[data-auth-open]')?.click();
-    host.querySelector('[data-topic-login]')?.addEventListener('click', login);
-    host.querySelector('[data-topic-create-open]')?.addEventListener('click', event => { event.currentTarget.hidden = true; host.querySelector('[data-topic-create]').hidden = false; host.querySelector('[name="topic"]')?.focus(); });
-    host.querySelectorAll('[data-featured-topic-toggle]').forEach(button => button.addEventListener('click', async () => {
-      const id = button.dataset.featuredTopicToggle; const topic = featuredById.get(id); if (!topic) return;
-      if (!loggedIn && !mockTopicsEnabled()) { login(); return; }
-      if (!customTopicIds.includes(id) && customTopicIds.length >= 5) { host.querySelector('.topic-message').textContent = '最多可保留 5 个主题。'; return; }
-      try {
-        if (customTopicIds.includes(id)) {
-          if (mockTopicsEnabled()) customTopicIds = customTopicIds.filter(item => item !== id);
-          else { await removeUserTopic(rpcId(id)); await refreshMyTopics(); }
-        } else if (mockTopicsEnabled()) customTopicIds.push(id);
-        else {
-          const result = await requestTopic(topic.name_zh);
-          if (result && result.status && result.status !== 'ok') throw new Error(result.error || result.status);
-          await refreshMyTopics();
-        }
-        renderTopics();
-      } catch { host.querySelector('.topic-message').textContent = '操作失败，可稍后再试。'; }
-    }));
-    host.querySelector('[data-topic-create]')?.addEventListener('submit', async event => { event.preventDefault(); const input = event.currentTarget.elements.topic; const name = input.value.trim(); const message = host.querySelector('.topic-message'); if (!name) { message.textContent = '请输入主题名称。'; return; }
-      const featured = resolveFeaturedTopic(name);
-      if (featured) {
-        if (customTopicIds.includes(featured.id)) { message.textContent = `已为你选中「${featured.name_zh}」。`; return; }
-        if (customTopicIds.length >= 5) { message.textContent = '最多可保留 5 个主题。'; return; }
-        try {
-          if (mockTopicsEnabled()) customTopicIds.push(featured.id);
-          else { const result = await requestTopic(featured.name_zh); if (result && result.status && result.status !== 'ok') throw new Error(result.error || result.status); await refreshMyTopics(); }
-          input.value = ''; renderTopics(`已为你选中「${featured.name_zh}」。`);
-        } catch { message.textContent = '操作失败，可稍后再试。'; }
-        return;
+  const updateTabs = () => { if (!chipbar) return; const nav = chipbar.querySelector('nav'); if (!nav) return; if (mode === 'explore') { nav.innerHTML = chipbar.dataset.exploreTabs || ''; return; } const topics = selectedTopics(); if (!topics.some(t => t.id === activeTab)) activeTab = 'all'; nav.innerHTML = `<button type="button" data-room-tab="all" class="${activeTab === 'all' ? 'active' : ''}">全部</button>${topics.map(t => `<button type="button" data-room-tab="${esc(t.id)}" class="${activeTab === t.id ? 'active' : ''}">${esc(t.name_zh)}</button>`).join('')}`; nav.querySelectorAll('[data-room-tab]').forEach(button => button.addEventListener('click', () => { activeTab = button.dataset.roomTab; updateTabs(); renderVideos(); })); };
+  const chips = () => categories.map(category => `<section class="topic-chip-group"><h3>${esc(category.name_zh)}</h3><div class="topic-chips">${category.subtopics.map(topic => { const on = selected.includes(topic.id), disabled = !on && selected.length >= MAX_TOPICS; return `<button type="button" class="topic-chip ${on ? 'selected' : ''}" data-featured-toggle="${esc(topic.id)}" aria-pressed="${on}" ${disabled ? 'disabled' : ''}>${on ? '✓ ' : ''}${esc(topic.name_zh)}</button>`; }).join('')}</div></section>`).join('');
+  const login = () => document.querySelector('[data-auth-open]')?.click();
+  const backgroundSync = (id, adding) => {
+    if (mockTopicsEnabled() || !loggedIn) return;
+    const job = adding ? requestTopic(byId.get(id).name_zh) : (membership(id) ? removeUserTopic(membership(id).user_topic_id) : Promise.resolve());
+    Promise.resolve(job).then(async result => {
+      if (result?.status && result.status !== 'ok') throw new Error(result.error || result.status);
+      await refreshMemberships();
+      if (adding && !selected.includes(id) && membership(id)) {
+        await removeUserTopic(membership(id).user_topic_id);
+        await refreshMemberships();
       }
-      if (customTopicIds.length >= 5) { message.textContent = '最多可保留 5 个主题。'; return; }
-      try { if (mockTopicsEnabled()) { const match = publicTopics.find(topic => !customTopicIds.includes(topic.topic_id)); if (!match) throw new Error('没有可用的公开 fixture。'); customTopicIds.push(match.topic_id); } else { const result = await requestTopic(name); if (result && result.status && result.status !== 'ok') { if ((result.error || result.status) === 'daily_cap') dailyCapHit = true; const copy = { invalid_input: '名称无效。', limit_reached: '最多可保留 5 个主题。', daily_cap: '今天的新建额度已用完。', alias_conflict: '这个名称和已有主题冲突。' }; throw new Error(copy[result.error || result.status] || result.status); } await refreshMyTopics(); } input.value = ''; renderTopics('已提交；主题公开后会显示处理状态。'); } catch (error) { renderTopics(error.message || '创建失败，可稍后再试。'); } });
-    host.querySelectorAll('[data-topic-delete]').forEach(button => button.addEventListener('click', async () => { const id = button.dataset.topicDelete; try { if (mockTopicsEnabled()) customTopicIds = customTopicIds.filter(item => item !== id); else { await removeUserTopic(rpcId(id)); await refreshMyTopics(); } renderTopics(); } catch { host.querySelector('.topic-message').textContent = '删除失败，可稍后再试。'; } }));
-    host.querySelectorAll('[data-topic-rename]').forEach(button => button.addEventListener('click', async () => { const slug = button.dataset.topicRename; const topic = customTopicView().find(item => item.topic_id === slug) || topicById(slug); const name = prompt('主题名称', topic?.canonical_name || ''); if (!name?.trim()) return; try { if (!mockTopicsEnabled()) { await renameUserTopic(rpcId(slug), name.trim()); await refreshMyTopics(); } else topic.canonical_name = name.trim(); renderTopics(); } catch { host.querySelector('.topic-message').textContent = '重命名失败，可稍后再试。'; } }));
-    host.querySelectorAll('[data-topic-up],[data-topic-down]').forEach(button => button.addEventListener('click', async () => { const id = button.dataset.topicUp || button.dataset.topicDown; const old = customTopicIds.indexOf(id), next = button.dataset.topicUp ? old - 1 : old + 1; if (old < 0 || !customTopicIds[next]) return; try { [customTopicIds[old], customTopicIds[next]] = [customTopicIds[next], customTopicIds[old]]; if (!mockTopicsEnabled()) { for (let index = 0; index < customTopicIds.length; index++) await moveUserTopic(rpcId(customTopicIds[index]), index); await refreshMyTopics(); } renderTopics(); } catch { host.querySelector('.topic-message').textContent = '排序失败，可稍后再试。'; } }));
-    renderFeaturedVideos();
+    }).catch(() => say('已保存在此设备，稍后再同步。'));
   };
-
-  if (chipbar) {
-    chipbar.querySelectorAll('a').forEach(link => link.setAttribute('data-explore-tab', ''));
-    chipbar.dataset.exploreTabs = chipbar.querySelector('nav')?.innerHTML || '';
-  }
-  const updateTabs = () => {
-    if (!chipbar) return;
-    const nav = chipbar.querySelector('nav');
-    if (!nav) return;
-    if (mode === 'explore') nav.innerHTML = chipbar.dataset.exploreTabs;
-    else nav.innerHTML = activeColumns().map((column, index) => `<button type="button" data-myspace-tab="${esc(column.id)}" class="${index === 0 ? 'active' : ''}">${esc(sourceById.get(column.source)?.label || column.source)}</button>`).join('');
-    nav.querySelectorAll('[data-myspace-tab]').forEach(tab => tab.addEventListener('click', () => {
-      const target = space.querySelector(`[data-myspace-column="${CSS.escape(tab.dataset.myspaceTab)}"]`);
-      if (target) {
-        const headerGap = 12;
-        const headerHeight = header?.getBoundingClientRect().height || 0;
-        target.style.scrollMarginTop = `${headerHeight + headerGap}px`;
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      nav.querySelectorAll('[data-myspace-tab]').forEach(item => item.classList.toggle('active', item === tab));
-    }));
-  };
-  const persist = keepEditor => { if (save(state)) render(keepEditor); };
-  const renderEditor = () => {
-    const dialog = space.querySelector('[data-myspace-editor]');
-    if (!dialog) return;
-    const available = MYSPACE_SOURCES.filter(source => !state.columns.some(column => column.source === source.id));
-    dialog.innerHTML = `<div class="myspace-editor-inner"><div class="myspace-editor-title"><h2>管理栏目</h2><button class="myspace-editor-close" type="button" data-editor-close aria-label="关闭">×</button></div><p class="myspace-editor-note">显示至多 ${MAX_ACTIVE_COLUMNS} 个栏目；顺序会同步到上方标签。</p>${state.columns.map((column, index) => `<div class="myspace-row"><label><input type="checkbox" data-enable="${esc(column.id)}" ${column.enabled ? 'checked' : ''} aria-label="显示 ${esc(sourceById.get(column.source)?.label || column.source)}"></label><span class="myspace-row-name">${esc(sourceById.get(column.source)?.label || column.source)}</span><button type="button" data-up="${esc(column.id)}" ${index === 0 ? 'disabled' : ''} aria-label="上移">↑</button><button type="button" data-down="${esc(column.id)}" ${index === state.columns.length - 1 ? 'disabled' : ''} aria-label="下移">↓</button><button type="button" data-remove="${esc(column.id)}" aria-label="移除">×</button></div>`).join('')}<div class="myspace-add"><select data-add aria-label="添加栏目"><option value="">添加现有栏目…</option>${available.map(source => `<option value="${source.id}">${esc(source.label)}</option>`).join('')}</select></div></div>`;
-    dialog.querySelector('[data-editor-close]')?.addEventListener('click', () => dialog.close());
-    dialog.querySelectorAll('[data-enable]').forEach(input => input.addEventListener('change', () => {
-      const column = state.columns.find(item => item.id === input.dataset.enable);
-      if (!column) return;
-      if (input.checked && activeColumns().length >= MAX_ACTIVE_COLUMNS) { input.checked = false; return; }
-      column.enabled = input.checked; persist(true);
-    }));
-    dialog.querySelectorAll('[data-up],[data-down]').forEach(button => button.addEventListener('click', () => {
-      const id = button.dataset.up || button.dataset.down;
-      const index = state.columns.findIndex(item => item.id === id);
-      const target = button.dataset.up ? index - 1 : index + 1;
-      if (index >= 0 && state.columns[target]) [state.columns[index], state.columns[target]] = [state.columns[target], state.columns[index]];
-      persist(true);
-    }));
-    dialog.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
-      state.columns = state.columns.filter(column => column.id !== button.dataset.remove);
-      if (!state.columns.length) state = defaultState();
-      persist(true);
-    }));
-    dialog.querySelector('[data-add]')?.addEventListener('change', event => {
-      const source = event.target.value;
-      if (!source || state.columns.length >= MYSPACE_SOURCES.length) return;
-      state.columns.push({ id: source, source, enabled: activeColumns().length < MAX_ACTIVE_COLUMNS });
-      persist(true);
-    });
-  };
-  const renderColumns = async () => {
-    const host = space.querySelector('[data-myspace-columns]');
-    if (!host) return;
-    host.innerHTML = '<p class="myspace-loading">正在读取现有内容池…</p>';
-    try { catalog ||= await catalogPromise; if (!Array.isArray(catalog)) throw new Error('catalog'); }
-    catch { host.innerHTML = '<p class="myspace-loading">内容目录暂时无法加载，请稍后再试。</p>'; return; }
-    host.innerHTML = activeColumns().map(column => {
-      const source = sourceById.get(column.source);
-      const videos = matching(catalog, source).slice(0, 8);
-      return `<section class="myspace-column" data-myspace-column="${esc(column.id)}"><h2>${esc(source.label)}</h2>${videos.length ? `<div class="video-grid">${videos.map(video => card(video, source, base)).join('')}</div>` : '<p class="myspace-loading">该栏目暂时没有匹配视频。</p>'}</section>`;
-    }).join('') || '<p class="myspace-loading">请在管理栏目中添加一个栏目。</p>';
-  };
-  const render = (keepEditor = false) => {
-    space.innerHTML = '<div class="myspace-heading"><div><h1>我的空间</h1><p>你的栏目、你的顺序。公开主题与私密订阅分开处理。</p></div><button class="myspace-manage" type="button" data-myspace-manage aria-label="管理栏目" title="管理栏目">⚙</button></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理我的空间"></dialog><div data-topic-columns></div><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>';
-    space.querySelector('[data-myspace-manage]')?.addEventListener('click', () => { renderEditor(); space.querySelector('[data-myspace-editor]')?.showModal(); });
-    renderTopics(); renderColumns(); updateTabs();
-    if (keepEditor) { renderEditor(); space.querySelector('[data-myspace-editor]')?.showModal(); }
-  };
-  const setMode = next => {
-    mode = next;
-    const mine = mode === 'myspace';
-    explore.hidden = mine; space.hidden = !mine;
-    shell.querySelectorAll('[data-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === mode)));
-    updateTabs();
-    if (mine) render();
-  };
-  shell.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => {
-    const next = button.dataset.mode;
-    if (next === mode) return;
-    setMode(next); track('mode_switch', { mode: next });
-  }));
-  const syncAuth = async session => {
-    loggedIn = Boolean(session);
-    if (!mockTopicsEnabled()) {
-      if (loggedIn) {
-        try { await refreshMyTopics(); }
-        catch { myTopics = []; customTopicIds = []; }
-      } else {
-        myTopics = [];
-        customTopicIds = [];
-      }
-    }
-    if (space.querySelector('[data-topic-columns]')) renderTopics();
-  };
-  getSupabase()?.auth.onAuthStateChange((event, session) => {
-    if (event === 'INITIAL_SESSION' || event === 'TOKEN_REFRESHED') return;
-    syncAuth(session);
-  });
-  Promise.all([
-    fetchPublicTopics(base).then(data => { publicTopics = data.topics || []; }),
-    topicSession().then(session => { loggedIn = Boolean(session); })
-  ]).then(async () => {
-    if (mockTopicsEnabled() && new URLSearchParams(location.search).get('emptyTopics') !== '1') {
-      customTopicIds = fixtureTopicIds.filter(id => publicTopics.some(topic => topic.topic_id === id));
-    } else if (loggedIn) {
-      await refreshMyTopics();
-    }
-  }).catch(() => {}).finally(() => setMode(mockTopicsEnabled() ? 'myspace' : 'explore'));
+  const toggle = id => { if (!loggedIn && !mockTopicsEnabled()) { login(); return; } const on = selected.includes(id); if (!on && selected.length >= MAX_TOPICS) { say('最多可保留 5 个主题。'); return; } selected = on ? selected.filter(item => item !== id) : [...selected, id]; saveSelected(selected); notice = ''; render(); backgroundSync(id, !on); };
+  const bindCreate = host => { host.querySelector('[data-topic-login]')?.addEventListener('click', login); host.querySelector('[data-topic-create-open]')?.addEventListener('click', event => { event.currentTarget.hidden = true; host.querySelector('[data-topic-create]').hidden = false; host.querySelector('[name="topic"]')?.focus(); }); host.querySelector('[data-topic-create]')?.addEventListener('submit', async event => { event.preventDefault(); const input = event.currentTarget.elements.topic, name = input.value.trim(); if (!name) return say('请输入主题名称。'); const match = resolveFeaturedTopic(name); if (match) { toggle(match.id); input.value = ''; return; } if (selected.length >= MAX_TOPICS) return say('最多可保留 5 个主题。'); try { if (mockTopicsEnabled()) return say('本地演示只支持精选小主题。'); const result = await requestTopic(name); if (result?.status && result.status !== 'ok') { const copy = { daily_cap:'今天的新建额度已用完。', invalid_input:'名称无效。', limit_reached:'最多可保留 5 个主题。', alias_conflict:'这个名称和已有主题冲突。' }; throw new Error(copy[result.error || result.status] || '创建失败，可稍后再试。'); } input.value = ''; await hydrateFromServer(); render(); say('已提交；主题公开后会显示处理状态。'); } catch (error) { say(error.message || '创建失败，可稍后再试。'); } }); };
+  const renderEditor = () => { const dialog = space.querySelector('[data-myspace-editor]'); if (!dialog) return; const create = !loggedIn && !mockTopicsEnabled() ? '<button class="topic-login" type="button" data-topic-login>登录后选择小主题</button>' : '<button class="topic-create-link" type="button" data-topic-create-open>找不到？自己添加</button><form class="topic-create" data-topic-create hidden><input name="topic" maxlength="80" placeholder="新建公开主题" aria-label="主题名称"><button type="submit">新建</button></form>'; dialog.innerHTML = `<div class="myspace-editor-inner"><div class="myspace-editor-title"><h2>管理我的小主题</h2><button class="myspace-editor-close" type="button" aria-label="关闭">×</button></div><p class="myspace-editor-note">最多选择 ${MAX_TOPICS} 个。勾选后会立即保存到此设备并同步到账号。</p><div class="topic-chip-groups">${chips()}</div>${create}<p class="topic-message" data-topic-message aria-live="polite">${esc(notice)}</p></div>`; dialog.querySelector('.myspace-editor-close')?.addEventListener('click', () => dialog.close()); dialog.querySelectorAll('[data-featured-toggle]').forEach(button => button.addEventListener('click', () => toggle(button.dataset.featuredToggle))); bindCreate(dialog); prefetch(); };
+  const render = () => { const empty = !selectedTopics().length, create = !loggedIn && !mockTopicsEnabled() ? '<button class="topic-login" type="button" data-topic-login>登录后选择小主题</button>' : '<button class="topic-create-link" type="button" data-topic-create-open>找不到？自己添加</button><form class="topic-create" data-topic-create hidden><input name="topic" maxlength="80" placeholder="新建公开主题" aria-label="主题名称"><button type="submit">新建</button></form>'; space.innerHTML = `<div class="myspace-heading"><div><h1>我的空间</h1><p>只看你勾选的小主题。</p></div><button class="myspace-manage" type="button" data-myspace-manage>管理我的小主题</button></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理我的小主题"></dialog>${empty ? `<section class="myspace-empty"><h2>这里会成为你的小房间</h2><p>勾选小主题后，这里只会显示它们的视频。</p><div class="topic-chip-groups">${chips()}</div>${create}<p class="topic-message" data-topic-message aria-live="polite">${esc(notice)}</p></section>` : '<section class="myspace-columns" data-room-videos></section>'}`; space.querySelector('[data-myspace-manage]')?.addEventListener('click', () => { renderEditor(); space.querySelector('[data-myspace-editor]')?.showModal(); }); space.querySelectorAll('[data-featured-toggle]').forEach(button => button.addEventListener('click', () => toggle(button.dataset.featuredToggle))); bindCreate(space); updateTabs(); if (!empty) renderVideos(); prefetch(); };
+  if (chipbar) { chipbar.querySelectorAll('a').forEach(link => link.setAttribute('data-explore-tab', '')); chipbar.dataset.exploreTabs = chipbar.querySelector('nav')?.innerHTML || ''; }
+  const setMode = next => { mode = next; const mine = mode === 'myspace'; explore.hidden = mine; space.hidden = !mine; shell.querySelectorAll('[data-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === mode))); updateTabs(); if (mine) render(); };
+  shell.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => { if (button.dataset.mode !== mode) { setMode(button.dataset.mode); track('mode_switch', { mode }); } }));
+  const syncAuth = async session => { loggedIn = Boolean(session); if (loggedIn && !mockTopicsEnabled()) try { await hydrateFromServer(); } catch {} render(); };
+  getSupabase()?.auth.onAuthStateChange((event, session) => { if (event !== 'INITIAL_SESSION' && event !== 'TOKEN_REFRESHED') syncAuth(session); });
+  topicSession().then(async session => { loggedIn = Boolean(session); if (mockTopicsEnabled() && new URLSearchParams(location.search).get('emptyTopics') !== '1' && !selected.length) selected = featured.slice(0, 2).map(topic => topic.id); if (loggedIn && !mockTopicsEnabled()) try { await hydrateFromServer(); } catch {} setMode(mockTopicsEnabled() ? 'myspace' : 'explore'); }).catch(() => setMode(mockTopicsEnabled() ? 'myspace' : 'explore'));
 }

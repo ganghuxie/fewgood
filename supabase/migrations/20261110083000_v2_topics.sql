@@ -113,7 +113,7 @@ begin
   if v_user is null then return jsonb_build_object('status','invalid_input','error','invalid_input'); end if;
   v_name := regexp_replace(btrim(normalize(coalesce(p_name, ''), NFC)), '[[:space:]]+', ' ', 'g');
   if char_length(v_name) not between 2 and 80 or v_name ~ '[[:cntrl:]]' or
-     v_name ~* '(https?://|www\\.)' or v_name ~ '[<>]' or v_name !~ '[[:alnum:]]' then
+     v_name ~* '(https?://|www\\.)' or v_name ~ '[<>]' or v_name !~ '[[:alnum:]一-鿿]' then
     return jsonb_build_object('status','invalid_input','error','invalid_input');
   end if;
   if coalesce(p_sort, 'relevance') not in ('relevance','newest') then

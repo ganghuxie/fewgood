@@ -80,6 +80,9 @@ jobs:
           echo 'Seeding curated aliases.'
           psql_run -f supabase/staging/seed_aliases.sql
 
+          echo 'Seeding curated V2 sub-topics (idempotent).'
+          psql_run -f supabase/staging/seed_curated_subtopics.sql
+
           set +e
           psql_run -f supabase/staging/tests_remote.sql | tee /tmp/staging-sql-tests.log
           test_status=${PIPESTATUS[0]}
