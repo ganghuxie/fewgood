@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .core import (
     iso_now,
+    duration,
     language_gate,
     apply_channel_caps_pool,
     podcast_display_cap,
@@ -19,6 +20,40 @@ from .core import (
 )
 
 FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'videos')
+
+
+def enrich_records(records, raws):
+    """Update feed records with raw ``videos.list`` items (offline, no API calls).
+
+    `raws` are already-fetched YouTube ``videos.list`` responses, so a reviewer
+    can run one cheap metadata refresh and then re-check the language gate
+    without refetching anything here. Missing fields are left untouched.
+    """
+    by_id = {}
+    for raw in raws:
+        if not raw or not raw.get('id'):
+            continue
+        snippet = raw.get('snippet', {})
+        update = dict(
+            title=snippet.get('title', ''),
+            channel=snippet.get('channelTitle', ''),
+            channel_id=snippet.get('channelId', ''),
+            published_at=snippet.get('publishedAt', ''),
+            default_audio_language=snippet.get('defaultAudioLanguage') or None,
+            default_language=snippet.get('defaultLanguage') or None,
+        )
+        if raw.get('contentDetails'):
+            update['duration_seconds'] = duration(raw.get('contentDetails', {}).get('duration'))
+        by_id[raw['id']] = update
+    for record in records:
+        update = by_id.get(record.get('id'))
+        if update:
+            record['default_audio_language'] = update.get('default_audio_language')
+            record['default_language'] = update.get('default_language')
+            for key in ('title', 'channel', 'channel_id', 'published_at', 'duration_seconds'):
+                if update.get(key):
+                    record[key] = update[key]
+    return records
 
 
 def load_feeds(root='site/src/data'):

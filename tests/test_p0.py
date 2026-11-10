@@ -131,3 +131,17 @@ def test_picks_require_why_good_and_never_exceed_ten():
     assert 't1' not in ids
     assert all(v.get('why_good') for v in picks['videos'])
     assert all(v.get('pick_source') for v in picks['videos'])
+
+
+def test_enrich_records_merges_videos_list_fields():
+    from ytrec.offline import enrich_records
+    records = [dict(id='a', title='old', channel='old channel', channel_id='ch1')]
+    raws = [{'id': 'a', 'snippet': {'title': 'New', 'channelTitle': 'New Channel', 'channelId': 'ch1',
+                                    'publishedAt': '2026-11-01T00:00:00Z',
+                                    'defaultAudioLanguage': 'en', 'defaultLanguage': 'en'},
+             'contentDetails': {'duration': 'PT10M'}}]
+    enrich_records(records, raws)
+    assert records[0]['default_audio_language'] == 'en'
+    assert records[0]['default_language'] == 'en'
+    assert records[0]['title'] == 'New'
+    assert records[0]['duration_seconds'] == 600
