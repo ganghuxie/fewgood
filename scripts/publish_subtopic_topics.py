@@ -118,18 +118,36 @@ def ids_for(group, by_request):
     return ids, missing
 
 
+def load_stats():
+    path = ROOT / 'site/src/data/topic-video-stats.json'
+    if not path.exists():
+        return {}
+    return (json.loads(path.read_text()) or {}).get('videos') or {}
+
+
+STATS = load_stats()
+
+
 def to_topic_video(video):
     video_id = video.get('id') or video.get('video_id')
-    return {
+    extra = STATS.get(video_id) or {}
+    row = {
         'video_id': video_id,
-        'title': video.get('title') or video_id,
-        'channel_title': video.get('channel') or video.get('channel_title') or 'YouTube',
-        'published_at': video.get('published_at') or '',
+        'title': video.get('title') or extra.get('title') or video_id,
+        'channel_title': video.get('channel') or video.get('channel_title') or extra.get('channel_title') or 'YouTube',
+        'published_at': video.get('published_at') or extra.get('published_at') or '',
         'url': f'https://www.youtube.com/watch?v={video_id}',
-        'thumbnail': video.get('thumb') or f'https://i.ytimg.com/vi/{video_id}/mqdefault.jpg',
-        'duration_seconds': video.get('duration') or video.get('duration_seconds') or 0,
-        'channel_id': video.get('channel_id') or '',
+        'thumbnail': video.get('thumb') or video.get('thumbnail') or extra.get('thumbnail') or f'https://i.ytimg.com/vi/{video_id}/mqdefault.jpg',
+        'duration_seconds': video.get('duration') or video.get('duration_seconds') or extra.get('duration_seconds') or 0,
+        'channel_id': video.get('channel_id') or extra.get('channel_id') or '',
     }
+    view = video.get('view_count') if video.get('view_count') not in (None, '') else extra.get('view_count')
+    if view not in (None, ''):
+        row['view_count'] = int(view)
+    thumb = video.get('channel_thumbnail') or extra.get('channel_thumbnail')
+    if thumb:
+        row['channel_thumbnail'] = thumb
+    return row
 
 
 def main():

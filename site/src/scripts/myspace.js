@@ -8,6 +8,9 @@ const FEATURED_KEY = 'fewgood:featured-subtopics';
 const MAX_TOPICS = 5;
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const duration = seconds => `${Math.floor((Number(seconds) || 0) / 60)}:${String((Number(seconds) || 0) % 60).padStart(2, '0')}`;
+const compact = n => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(n);
+const ago = value => { const days = Math.max(0, Math.floor((Date.now() - new Date(value).getTime()) / 86400000)); return days < 1 ? '今天' : days < 30 ? `${days}天前` : days < 365 ? `${Math.floor(days / 30)}个月前` : `${Math.floor(days / 365)}年前`; };
+const hasValidDate = value => value && !Number.isNaN(new Date(value).getTime());
 const categories = (subtopicData.categories || []).filter(category => category.id !== 'trending');
 const featured = categories.flatMap(category => category.subtopics || []);
 const byId = new Map(featured.map(topic => [topic.id, topic]));
@@ -15,8 +18,8 @@ const localSelected = () => { try { return [...new Set(JSON.parse(localStorage.g
 const saveSelected = ids => { try { localStorage.setItem(FEATURED_KEY, JSON.stringify(ids.filter(id => byId.has(id)))); } catch {} };
 const avatar = video => video.channel_thumbnail
   ? `<img class="channel-avatar" src="${esc(video.channel_thumbnail)}" alt="">`
-  : (() => { const name = video.channel_title || video.channel || '频道'; const letter = [...name.trim()][0] || '频'; let hash = 0; for (const ch of name) hash = (hash * 31 + ch.codePointAt(0)) >>> 0; const color = ['#d14b4b','#b06b2f','#8a6d1d','#4f8a3d','#357a8a','#5367a6','#7a5795'][hash % 7]; return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; })();
-function card(video, source, base) { const id = video.video_id || video.id; const channel = video.channel_title || video.channel || '频道'; return `<a class="video-card" href="${base}/v/${encodeURIComponent(id)}/?from=${encodeURIComponent(source)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(channel)}</p></div></div></a>`; }
+  : (() => { const name = video.channel || video.channel_title || '频道'; const letter = [...name.trim()][0] || '频'; let hash = 0; for (const ch of name) hash = (hash * 31 + ch.codePointAt(0)) >>> 0; const color = ['#d14b4b','#b06b2f','#8a6d1d','#4f8a3d','#357a8a','#5367a6','#7a5795'][hash % 7]; return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; })();
+function card(video, source, base) { const id = video.video_id || video.id; const channel = video.channel || video.channel_title || '频道'; const details = [Number.isFinite(video.view_count) && video.view_count > 0 ? `${compact(video.view_count)} 次观看` : '', hasValidDate(video.published_at) ? ago(video.published_at) : ''].filter(Boolean).join(' · '); const durationBadge = Number(video.duration_seconds) > 0 ? `<span class="duration">${duration(video.duration_seconds)}</span>` : ''; return `<a class="video-card" href="${base}/v/${encodeURIComponent(id)}/?from=${encodeURIComponent(source)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg" alt="">${durationBadge}</div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(channel)}</p>${details ? `<p class="video-meta">${esc(details)}</p>` : ''}</div></div></a>`; }
 
 const shell = document.querySelector('[data-alpha-myspace]');
 const explore = document.querySelector('[data-explore-view]');
