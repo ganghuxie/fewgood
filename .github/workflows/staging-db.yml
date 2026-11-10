@@ -1,0 +1,117 @@
+name: Staging DB migration and SQL tests
+
+# Staging only. Never targets production (zdctckubirrlukbbrlwx).
+# Does not deploy Pages or run the daily refresh.
+on:
+  push:
+    branches: [v2-space]
+    paths:
+      - 'supabase/**'
+      - '.github/workflows/staging-db.yml'
+
+jobs:
+  staging-db:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PGSSLMODE: require
+      PGGSSENCMODE: disable
+      PGCONNECT_TIMEOUT: '30'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install postgresql-client
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq postgresql-client
+
+      - name: Guard staging connection secret
+        env:
+          SUPABASE_STAGING_DB_URL: ${{ secrets.SUPABASE_STAGING_DB_URL }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${SUPABASE_STAGING_DB_URL}" ]]; then
+            echo 'SUPABASE_STAGING_DB_URL is missing.'
+            exit 1
+          fi
+          if [[ "${SUPABASE_STAGING_DB_URL}" != postgresql://* ]]; then
+            echo 'SUPABASE_STAGING_DB_URL must start with postgresql://.'
+            exit 1
+          fi
+          if [[ "${SUPABASE_STAGING_DB_URL}" == *zdctckubirrlukbbrlwx* ]]; then
+            echo 'Refusing production project URL.'
+            exit 1
+          fi
+          echo 'Staging connection secret passed format and production-ref guards.'
+
+      - name: Apply migration, seed, test, and check clean state
+        env:
+          SUPABASE_STAGING_DB_URL: ${{ secrets.SUPABASE_STAGING_DB_URL }}
+        run: |
+          set -euo pipefail
+          PSQL=(psql -X -v ON_ERROR_STOP=1 "${SUPABASE_STAGING_DB_URL}")
+          VERSION=20261110083000
+          APPLIED="$("${PSQL[@]}" -tAc "select exists (
+            select 1 from information_schema.tables
+            where table_schema = 'public' and table_name = 'schema_migrations'
+          ) and exists (
+            select 1 from public.schema_migrations where version = '${VERSION}'
+          );")"
+          if [[ "${APPLIED//[[:space:]]/}" == t ]]; then
+            echo 'Migration already applied; skipping.'
+          else
+            echo 'Applying v2 topics migration.'
+            "${PSQL[@]}" -f supabase/migrations/20261110083000_v2_topics.sql
+            echo 'Migration applied.'
+          fi
+
+          echo 'Seeding curated aliases.'
+          "${PSQL[@]}" -f supabase/staging/seed_aliases.sql
+
+          set +e
+          "${PSQL[@]}" -f supabase/staging/tests_remote.sql | tee /tmp/staging-sql-tests.log
+          test_status=${PIPESTATUS[0]}
+          set -e
+          passed=$(grep -c '^PASS ' /tmp/staging-sql-tests.log || true)
+          failed=$(grep -c 'ASSERTION FAILED' /tmp/staging-sql-tests.log || true)
+          echo "SQL remote staging tests: ${passed} passed, ${failed} failed."
+          if [[ "$test_status" -ne 0 ]]; then
+            echo 'SQL tests exited with an error.'
+            exit "$test_status"
+          fi
+          if [[ "$passed" -lt 10 || "$failed" -ne 0 ]]; then
+            echo 'Expected 10 passed and 0 failed.'
+            exit 1
+          fi
+
+          echo 'Clean-state row counts (fixture rows must be 0; seed may remain):'
+          "${PSQL[@]}" -f supabase/staging/clean_state_check.sql
+          counts="$("${PSQL[@]}" -tAc "
+            select 'fixture_users=' || (select count(*) from auth.users where id in (
+              '00000000-0000-0000-0000-0000000000a1','00000000-0000-0000-0000-0000000000b2',
+              '00000000-0000-0000-0000-0000000000c3','00000000-0000-0000-0000-0000000000d4',
+              '00000000-0000-0000-0000-0000000000e5','00000000-0000-0000-0000-0000000000f6'
+            ) or email like 'v2-fixture-%@example.test')
+            || ' fixture_user_topics=' || (select count(*) from public.user_topics where user_id in (
+              '00000000-0000-0000-0000-0000000000a1','00000000-0000-0000-0000-0000000000b2',
+              '00000000-0000-0000-0000-0000000000c3','00000000-0000-0000-0000-0000000000d4',
+              '00000000-0000-0000-0000-0000000000e5','00000000-0000-0000-0000-0000000000f6'
+            ))
+            || ' cap_topics=' || (select count(*) from public.topics where canonical_name like 'Cap topic %')
+            || ' seed_cafe_topic=' || (select count(*) from public.topics where id = '10000000-0000-0000-0000-000000000001')
+            || ' seed_aliases=' || (select count(*) from public.topic_aliases where topic_id = '10000000-0000-0000-0000-000000000001');
+          ")"
+          echo "clean_state ${counts}"
+          python3 -c '
+          import sys
+          raw = sys.argv[1]
+          vals = dict(part.split("=", 1) for part in raw.split())
+          print(vals)
+          bad = [k for k in ("fixture_users", "fixture_user_topics", "cap_topics") if int(vals[k]) != 0]
+          if bad:
+              raise SystemExit("fixture rows remain: " + ",".join(bad))
+          if int(vals["seed_cafe_topic"]) < 1 or int(vals["seed_aliases"]) < 2:
+              raise SystemExit("expected seeded Cafe topic and aliases to remain")
+          print("Clean state confirmed: no fixture rows; seed aliases present.")
+          ' "${counts}"

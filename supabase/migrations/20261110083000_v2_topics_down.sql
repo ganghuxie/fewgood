@@ -10,3 +10,4 @@ drop table if exists public.user_topics;
 drop table if exists public.topics;
 drop table if exists public.topic_policy;
 drop role if exists topic_view_owner;
+drop table if exists public.schema_migrations;

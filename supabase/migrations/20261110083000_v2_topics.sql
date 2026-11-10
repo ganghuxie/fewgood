@@ -170,3 +170,10 @@ revoke all on function public.request_topic(text,text), public.rename_user_topic
   public.move_user_topic(uuid,integer), public.remove_user_topic(uuid) from public, anon, authenticated, topic_view_owner;
 grant execute on function public.request_topic(text,text), public.rename_user_topic(uuid,text),
   public.move_user_topic(uuid,integer), public.remove_user_topic(uuid) to authenticated;
+
+create table if not exists public.schema_migrations (
+  version text primary key,
+  applied_at timestamptz not null default now()
+);
+insert into public.schema_migrations(version) values ('20261110083000')
+  on conflict (version) do nothing;
