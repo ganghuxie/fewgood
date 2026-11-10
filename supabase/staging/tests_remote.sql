@@ -26,14 +26,14 @@ values
 -- Mirror config/topic-aliases.json inside this transaction, so tests do not require
 -- a persistent seed. seed_aliases.sql remains the real staging seed command.
 insert into public.topics(id, canonical_name, normalized_key, search_query) values
- ('10000000-0000-0000-0000-000000000001', 'Café', 'v1:' || encode(digest('Café', 'sha256'), 'hex'), 'Café')
+ ('10000000-0000-0000-0000-000000000001', 'Café', 'v1:' || encode(sha256(convert_to('Café', 'UTF8')), 'hex'), 'Café')
 on conflict (id) do nothing;
 insert into public.topic_aliases(alias_nfc, topic_id) values
  ('Café', '10000000-0000-0000-0000-000000000001'),
  ('espresso', '10000000-0000-0000-0000-000000000001')
 on conflict (alias_nfc) do update set topic_id = excluded.topic_id;
 insert into public.topics(canonical_name, normalized_key, search_query)
-select 'Cap topic ' || n, 'v1:' || encode(digest('Cap topic ' || n, 'sha256'), 'hex'), 'Cap topic ' || n
+select 'Cap topic ' || n, 'v1:' || encode(sha256(convert_to('Cap topic ' || n, 'UTF8')), 'hex'), 'Cap topic ' || n
 from generate_series(1, 6) n;
 
 -- 1/2: user isolation and direct client writes are denied.
@@ -105,7 +105,7 @@ reset role;
 
 -- 8: rejected input and inconsistent curated mapping return explicit enums.
 insert into public.topics(id, canonical_name, normalized_key, search_query) values
- ('20000000-0000-0000-0000-000000000002', 'Conflict', 'v1:' || encode(digest('Conflict', 'sha256'), 'hex'), 'Conflict');
+ ('20000000-0000-0000-0000-000000000002', 'Conflict', 'v1:' || encode(sha256(convert_to('Conflict', 'UTF8')), 'hex'), 'Conflict');
 insert into public.topic_aliases(alias_nfc, topic_id) values ('Conflict', '10000000-0000-0000-0000-000000000001');
 select set_config('request.jwt.claims', '{"sub":"00000000-0000-0000-0000-0000000000e5"}', true);
 set local role authenticated;

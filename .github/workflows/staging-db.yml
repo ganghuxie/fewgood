@@ -68,13 +68,14 @@ jobs:
           if [[ "${HAS_TABLE//[[:space:]]/}" == t ]]; then
             APPLIED="$(psql_run -tAc "select exists (select 1 from public.schema_migrations where version = '${VERSION}');")"
           fi
+          # The migration is idempotent; always re-apply so function/policy fixes land.
           if [[ "${APPLIED//[[:space:]]/}" == t ]]; then
-            echo 'Migration already applied; skipping.'
+            echo 'Migration recorded before; re-applying (idempotent).'
           else
             echo 'Applying v2 topics migration.'
-            psql_run -f supabase/migrations/20261110083000_v2_topics.sql
-            echo 'Migration applied.'
           fi
+          psql_run -f supabase/migrations/20261110083000_v2_topics.sql
+          echo 'Migration applied.'
 
           echo 'Seeding curated aliases.'
           psql_run -f supabase/staging/seed_aliases.sql

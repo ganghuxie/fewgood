@@ -124,7 +124,7 @@ begin
   select count(*) into v_active from public.user_topics where user_id=v_user and active;
   if v_active >= v_policy.max_active then return jsonb_build_object('status','limit_reached','error','limit_reached'); end if;
 
-  v_key := 'v1:' || encode(digest(v_name, 'sha256'), 'hex');
+  v_key := 'v1:' || encode(sha256(convert_to(v_name, 'UTF8')), 'hex');
   select id into v_direct from public.topics where normalized_key=v_key;
   select a.topic_id into v_topic from public.topic_aliases a where a.alias_nfc=v_name;
   if v_topic is not null and v_direct is not null and v_topic <> v_direct then

@@ -14,7 +14,7 @@ insert into auth.users(id) values
  ('00000000-0000-0000-0000-0000000000e5'), ('00000000-0000-0000-0000-0000000000f6');
 
 insert into public.topics(canonical_name,normalized_key,search_query)
-select 'Cap topic ' || n, 'v1:' || encode(digest('Cap topic ' || n,'sha256'),'hex'), 'Cap topic ' || n
+select 'Cap topic ' || n, 'v1:' || encode(sha256(convert_to('Cap topic ' || n, 'UTF8')), 'hex'), 'Cap topic ' || n
 from generate_series(1,6) n;
 
 -- 1/2: user isolation and direct client writes are denied.
@@ -82,7 +82,7 @@ reset role;
 
 -- 8: rejected input and a deliberately inconsistent curated mapping return explicit enums.
 insert into public.topics(id,canonical_name,normalized_key,search_query) values
- ('20000000-0000-0000-0000-000000000002','Conflict','v1:' || encode(digest('Conflict','sha256'),'hex'),'Conflict');
+ ('20000000-0000-0000-0000-000000000002','Conflict','v1:' || encode(sha256(convert_to('Conflict', 'UTF8')), 'hex'),'Conflict');
 insert into public.topic_aliases(alias_nfc,topic_id) values ('Conflict','10000000-0000-0000-0000-000000000001');
 select staging.set_jwt('00000000-0000-0000-0000-0000000000e5'); set role authenticated;
 select staging.assert_true((public.request_topic('https://example.test')->>'status')='invalid_input', 'URL rejected');
