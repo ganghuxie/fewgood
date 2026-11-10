@@ -50,9 +50,19 @@ jobs:
           SUPABASE_STAGING_DB_URL: ${{ secrets.SUPABASE_STAGING_DB_URL }}
         run: |
           set -euo pipefail
-          PSQL=(psql -X -v ON_ERROR_STOP=1 "${SUPABASE_STAGING_DB_URL}")
+          # Direct db hosts often resolve IPv6 first; GitHub-hosted runners may not
+          # have IPv6 egress. Force an A record without printing it.
+          export PGHOSTADDR="$(python3 -c 'import os,socket,urllib.parse; host=urllib.parse.urlsplit(os.environ["SUPABASE_STAGING_DB_URL"]).hostname; print(socket.getaddrinfo(host, None, socket.AF_INET, socket.SOCK_STREAM)[0][4][0])')"
+          redact() { sed -E 's#postgres(ql)?://[^[:space:]]+#[REDACTED_URI]#g; s#db\.[A-Za-z0-9]+\.supabase\.co#[HOST]#g; s#aws-[A-Za-z0-9.-]+\.pooler\.supabase\.com#[HOST]#g; s#\b([0-9]{1,3}\.){3}[0-9]{1,3}\b#[IP]#g'; }
+          psql_run() {
+            local status=0
+            psql -X -v ON_ERROR_STOP=1 "${SUPABASE_STAGING_DB_URL}" "$@" > /tmp/psql-out.log 2> /tmp/psql-err.log || status=$?
+            redact < /tmp/psql-err.log >&2
+            cat /tmp/psql-out.log
+            return "$status"
+          }
           VERSION=20261110083000
-          APPLIED="$("${PSQL[@]}" -tAc "select exists (
+          APPLIED="$(psql_run -tAc "select exists (
             select 1 from information_schema.tables
             where table_schema = 'public' and table_name = 'schema_migrations'
           ) and exists (
@@ -62,15 +72,15 @@ jobs:
             echo 'Migration already applied; skipping.'
           else
             echo 'Applying v2 topics migration.'
-            "${PSQL[@]}" -f supabase/migrations/20261110083000_v2_topics.sql
+            psql_run -f supabase/migrations/20261110083000_v2_topics.sql
             echo 'Migration applied.'
           fi
 
           echo 'Seeding curated aliases.'
-          "${PSQL[@]}" -f supabase/staging/seed_aliases.sql
+          psql_run -f supabase/staging/seed_aliases.sql
 
           set +e
-          "${PSQL[@]}" -f supabase/staging/tests_remote.sql | tee /tmp/staging-sql-tests.log
+          psql_run -f supabase/staging/tests_remote.sql | tee /tmp/staging-sql-tests.log
           test_status=${PIPESTATUS[0]}
           set -e
           passed=$(grep -c '^PASS ' /tmp/staging-sql-tests.log || true)
@@ -86,8 +96,8 @@ jobs:
           fi
 
           echo 'Clean-state row counts (fixture rows must be 0; seed may remain):'
-          "${PSQL[@]}" -f supabase/staging/clean_state_check.sql
-          counts="$("${PSQL[@]}" -tAc "
+          psql_run -f supabase/staging/clean_state_check.sql
+          counts="$(psql_run -tAc "
             select 'fixture_users=' || (select count(*) from auth.users where id in (
               '00000000-0000-0000-0000-0000000000a1','00000000-0000-0000-0000-0000000000b2',
               '00000000-0000-0000-0000-0000000000c3','00000000-0000-0000-0000-0000000000d4',
