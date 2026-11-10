@@ -94,5 +94,9 @@ topics:
   reserve_legacy_units: 3500
   search_call_cap: 100
   reserve_search_calls: 35
+  # Search is exceptional: only after uploads-first returns fewer than six items.
+  # This is the total topic-refresh search.list budget, never the daily-refresh reserve.
+  search_fallback_daily_cap: 15
+  search_fallback_per_topic: 2
   other_unit_cap: 10000
   reserve_other_units: 2000

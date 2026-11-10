@@ -1,0 +1,40 @@
+name: Topic refresh (manual only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Run the local fixture path without queue secrets
+        required: false
+        default: true
+        type: boolean
+  # schedule:
+  #   - cron: '17 * * * *'
+  # Enable only after Jason authorizes and secrets exist; do not merge a schedule
+  # to master until authorized.
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime dependencies
+        run: pip install PyYAML
+      - name: Require queue secrets outside fixture dry-run
+        if: ${{ !inputs.dry_run }}
+        env:
+          TOPIC_QUEUE_URL: ${{ secrets.TOPIC_QUEUE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          test -n "$SUPABASE_ANON_KEY" || { echo 'SUPABASE_ANON_KEY is required'; exit 1; }
+          test -n "$TOPIC_QUEUE_URL$SUPABASE_URL" || { echo 'TOPIC_QUEUE_URL or SUPABASE_URL is required'; exit 1; }
+      - name: Refresh topics
+        env:
+          TOPIC_QUEUE_URL: ${{ secrets.TOPIC_QUEUE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: python3 -m ytrec topic-refresh ${{ inputs.dry_run && '--dry-run' || '' }}

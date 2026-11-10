@@ -1,0 +1,11 @@
+drop view if exists public.public_topic_worker_queue;
+drop function if exists public.remove_user_topic(uuid);
+drop function if exists public.move_user_topic(uuid, integer);
+drop function if exists public.rename_user_topic(uuid, text);
+drop function if exists public.request_topic(text, text);
+drop table if exists public.topic_aliases;
+drop table if exists public.topic_creation_global_counters;
+drop table if exists public.topic_creation_user_counters;
+drop table if exists public.user_topics;
+drop table if exists public.topics;
+drop table if exists public.topic_policy;

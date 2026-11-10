@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 from ytrec import topics
 
@@ -9,6 +10,7 @@ def cfg(tmp_path):
     return {'metadata_ttl_days': 30, 'max_retries': 2, 'batch_size': 5,
             'legacy_daily_limit': 8000, 'reserve_legacy_units': 3500,
             'search_call_cap': 100, 'reserve_search_calls': 35,
+            'search_fallback_daily_cap': 15, 'search_fallback_per_topic': 2, 'search_fallback_used': 0,
             'other_unit_cap': 10000, 'reserve_other_units': 2000,
             'search_calls_used': 0, 'other_units_used': 0, 'quota_path': str(tmp_path/'quota.json')}
 
@@ -62,3 +64,36 @@ def test_fixture_end_to_end_expected_shapes_and_dry_run(tmp_path, capsys):
     assert {'generated_at','topics','summary'} <= summary.keys()
     dry = tmp_path/'dry'; topics.run(FIXTURES/'pending-topics.json', FIXTURES, dry, tmp_path/'i.json', tmp_path/'s.json', cfg(tmp_path), dry_run=True)
     assert not dry.exists() and 'would write' in capsys.readouterr().out
+
+def test_rest_queue_is_used_only_with_anon_credentials(tmp_path, monkeypatch):
+    seen = {}
+    class Response:
+        def read(self): return b'[{"topic_id":"t1","canonical_name":"REST topic","search_query":"REST topic","created_at":"2026-01-01T00:00:00Z"}]'
+        def __enter__(self): return self
+        def __exit__(self, *args): pass
+    def fake_open(request, timeout):
+        seen['url'], seen['headers'], seen['timeout'] = request.full_url, dict(request.header_items()), timeout
+        return Response()
+    monkeypatch.setenv('SUPABASE_URL', 'https://staging.example')
+    monkeypatch.setenv('SUPABASE_ANON_KEY', 'test-anon-key')
+    monkeypatch.setattr(topics, 'urlopen', fake_open)
+    out, index, status = paths(tmp_path)
+    # Fixture has no REST Topic, proving run used the remote queue shape.
+    result, _ = topics.run(FIXTURES/'pending-topics.json', FIXTURES, out, index, status, cfg(tmp_path))
+    assert result['topics'][0]['canonical_name'] == 'REST topic'
+    assert urlparse(seen['url']).path == '/rest/v1/public_topic_worker_queue'
+    assert parse_qs(urlparse(seen['url']).query)['select'] == ['topic_id,canonical_name,search_query,created_at']
+    assert seen['headers']['Apikey'] == 'test-anon-key' and seen['headers']['Authorization'] == 'Bearer test-anon-key'
+
+def test_local_json_queue_without_credentials(tmp_path, monkeypatch):
+    monkeypatch.delenv('SUPABASE_URL', raising=False); monkeypatch.delenv('TOPIC_QUEUE_URL', raising=False); monkeypatch.delenv('SUPABASE_ANON_KEY', raising=False)
+    assert topics.pending_queue(FIXTURES/'pending-topics.json')[0]['topic'] == 'Café'
+
+def test_search_fallback_guard_respects_upload_threshold_daily_cap_and_reserve(tmp_path):
+    c = cfg(tmp_path)
+    assert topics.search_fallback_allowance(c, 6) == 0
+    assert topics.search_fallback_allowance(c, 5) == 2
+    c['search_fallback_used'] = 14
+    assert topics.search_fallback_allowance(c, 1) == 1
+    c['search_calls_used'] = 65  # the next call would consume daily-refresh's reserved 35th call
+    assert topics.search_fallback_allowance(c, 1) == 0

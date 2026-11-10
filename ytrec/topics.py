@@ -5,6 +5,7 @@ import os
 import re
 import tempfile
 import unicodedata
+from urllib.request import Request, urlopen
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -87,6 +88,36 @@ def quota_ok(cfg, quota_path):
     return legacy_ok and int(cfg['search_calls_used']) <= int(cfg['search_call_cap']) - int(cfg['reserve_search_calls']) and int(cfg['other_units_used']) <= int(cfg['other_unit_cap']) - int(cfg['reserve_other_units'])
 
 
+def search_fallback_allowance(cfg, uploads_count, search_calls_used=None):
+    """Return permitted search.list calls without touching the refresh reserve."""
+    if uploads_count >= 6:
+        return 0
+    used = int(cfg.get('search_calls_used', 0) if search_calls_used is None else search_calls_used)
+    safe_remaining = int(cfg['search_call_cap']) - int(cfg['reserve_search_calls']) - used
+    daily_remaining = int(cfg.get('search_fallback_daily_cap', 15)) - int(cfg.get('search_fallback_used', 0))
+    return max(0, min(int(cfg.get('search_fallback_per_topic', 2)), daily_remaining, safe_remaining))
+
+
+def pending_queue(queue, opener=None):
+    """Use the intentionally narrow anon queue view when staging credentials exist."""
+    base = os.environ.get('TOPIC_QUEUE_URL') or os.environ.get('SUPABASE_URL')
+    key = os.environ.get('SUPABASE_ANON_KEY')
+    if not (base and key):
+        return read_json(queue, {'pending_topics': []}).get('pending_topics', [])
+    opener = opener or urlopen
+    base = base.rstrip('/')
+    endpoint = base + ('/public_topic_worker_queue' if base.endswith('/rest/v1') else '/rest/v1/public_topic_worker_queue')
+    request = Request(endpoint + '?select=topic_id,canonical_name,search_query,created_at', headers={
+        'apikey': key, 'Authorization': 'Bearer ' + key, 'Accept': 'application/json'})
+    with opener(request, timeout=15) as response:
+        rows = json.loads(response.read().decode('utf8'))
+    if not isinstance(rows, list):
+        raise ValueError('topic queue response must be a JSON list')
+    return [{'topic': row['canonical_name'], 'topic_id': row.get('topic_id'),
+             'search_query': row.get('search_query'), 'created_at': row.get('created_at')}
+            for row in rows if isinstance(row, dict) and row.get('canonical_name')]
+
+
 def fixture_videos(fixtures, canonical, retries):
     """Simulated uploads playlist + videos.list results; fixture only, no requests."""
     rows = read_json(Path(fixtures) / 'fake-api' / 'uploads.json', {'topics': {}}).get('topics', {}).get(canonical, [])
@@ -107,8 +138,8 @@ def fixture_videos(fixtures, canonical, retries):
 
 
 def run(queue, fixtures, out_dir, index_path, status_path, cfg, dry_run=False):
-    queue_rows = read_json(queue, {'pending_topics': []}).get('pending_topics', [])
-    amap = aliases(Path(fixtures) / 'aliases.json' if fixtures else ROOT / 'data/topic-aliases.json')
+    queue_rows = pending_queue(queue)
+    amap = aliases(Path(fixtures) / 'aliases.json' if fixtures else ROOT / 'config/topic-aliases.json')
     published, statuses, writes = [], [], []
     claimed = set()
     for request in queue_rows[:int(cfg['batch_size'])]:
@@ -150,7 +181,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     all_cfg = yaml.safe_load((ROOT/'config.yaml').read_text()) or {}; cfg = dict(all_cfg.get('topics', {}))
     cfg.setdefault('metadata_ttl_days', 30); cfg.setdefault('max_retries', 2); cfg.setdefault('batch_size', 5)
-    cfg.setdefault('legacy_daily_limit', 8000); cfg.setdefault('reserve_legacy_units', 3500); cfg.setdefault('search_call_cap', 100); cfg.setdefault('reserve_search_calls', 35); cfg.setdefault('other_unit_cap', 10000); cfg.setdefault('reserve_other_units', 2000); cfg['search_calls_used'] = 0; cfg['other_units_used'] = 0
+    cfg.setdefault('legacy_daily_limit', 8000); cfg.setdefault('reserve_legacy_units', 3500); cfg.setdefault('search_call_cap', 100); cfg.setdefault('reserve_search_calls', 35); cfg.setdefault('search_fallback_daily_cap', 15); cfg.setdefault('search_fallback_per_topic', 2); cfg.setdefault('other_unit_cap', 10000); cfg.setdefault('reserve_other_units', 2000); cfg['search_calls_used'] = 0; cfg['other_units_used'] = 0; cfg['search_fallback_used'] = 0
     cfg['quota_path'] = str(ROOT/'data/quota.json')
     queue = args.queue or args.fixtures/'pending-topics.json'; out_dir = args.out_dir or ROOT/'site/public/topics'
     lock = args.lock or ROOT/cfg.get('lock_path', 'data/topic-refresh.lock')
