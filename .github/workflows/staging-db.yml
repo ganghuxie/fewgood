@@ -1,5 +1,6 @@
 name: Staging DB migration and SQL tests
 
+# rerun: session pooler secret updated 2026-11-10
 # Staging only. Never targets production (zdctckubirrlukbbrlwx).
 # Does not deploy Pages or run the daily refresh.
 on:
