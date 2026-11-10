@@ -96,8 +96,10 @@ create view public.public_topic_worker_queue
   with (security_barrier = true, security_invoker = false) as
   select id as topic_id, canonical_name, search_query, created_at
   from public.topics where active;
+-- New owner needs CREATE on the schema only for the ownership change; revoked right after.
+grant usage, create on schema public to topic_view_owner;
 alter view public.public_topic_worker_queue owner to topic_view_owner;
-grant usage on schema public to topic_view_owner;
+revoke create on schema public from topic_view_owner;
 grant select on public.topics to topic_view_owner;
 grant select on public.public_topic_worker_queue to anon;
 
