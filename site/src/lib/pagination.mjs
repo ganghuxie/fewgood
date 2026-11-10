@@ -3,7 +3,7 @@ export const PAGE_SIZE = 20;
 // Detail pages are shared by video ID. `from` keeps a static detail page aware
 // of which feed supplied the click, so related videos stay in that feed.
 export function videoUrl(section, id, base = '') {
-  const path = `/v/${id}/?from=${section}`;
+  const path = `/v/${id}/`;
   return !base || base === '/' ? path : `${base.replace(/\/$/, '')}${path}`;
 }
 

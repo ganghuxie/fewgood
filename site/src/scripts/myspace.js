@@ -26,7 +26,7 @@ function avatar(video) {
   return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`;
 }
 function card(video, source, base) {
-  return `<a class="video-card" href="${base}/v/${encodeURIComponent(video.id)}/?from=${encodeURIComponent(source.section)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/hqdefault.jpg" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(video.channel)}</p><p class="video-meta">${esc(source.label)}</p></div></div></a>`;
+  return `<a class="video-card" href="${base}/v/${encodeURIComponent(video.id)}/"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/mqdefault.jpg'" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(video.channel)}</p><p class="video-meta">${esc(source.label)}</p></div></div></a>`;
 }
 function matching(videos, source) {
   const results = videos.filter(video => Array.isArray(video.sections) && video.sections.includes(source.section));
@@ -113,7 +113,7 @@ if (enabled && shell && explore && space) {
       const source = sourceById.get(column.source);
       const videos = matching(catalog, source).slice(0, 8);
       return `<section class="myspace-column" data-myspace-column="${esc(column.id)}"><h2>${esc(source.label)}</h2>${videos.length ? `<div class="video-grid">${videos.map(video => card(video, source, base)).join('')}</div>` : '<p class="myspace-loading">该栏目暂时没有匹配视频。</p>'}</section>`;
-    }).join('') || '<p class="myspace-loading">请在管理栏目中添加一个栏目。</p>';
+    }).join('') || '<p class="myspace-loading">还没有栏目。<a href="' + (base || '') + '/">从现有主题里挑几个开始</a></p>';
   };
   const render = (keepEditor = false) => {
     space.innerHTML = '<div class="myspace-heading"><div><h1>我的空间</h1><p>你的栏目、你的顺序。只使用现有内容池。</p></div><button class="myspace-manage" type="button" data-myspace-manage aria-label="管理栏目" title="管理栏目">⚙</button></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理我的空间"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>';

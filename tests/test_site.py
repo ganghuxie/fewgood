@@ -29,8 +29,12 @@ assert.equal(pageUrl('community', 1), '/community/');
 assert.equal(pageUrl('community', 2, '', 'newest'), '/community/newest/page/2/');
 assert.equal(pageUrl('trending', 1, '/youtuber/'), '/youtuber/trending/');
 assert.equal(pageUrl('picks', 1, '/youtuber/'), '/youtuber/');
-assert.equal(videoUrl('ai', 'abcdefghijk'), '/v/abcdefghijk/?from=ai');
-assert.equal(videoUrl('community', 'abcdefghijk', '/youtuber/'), '/youtuber/v/abcdefghijk/?from=community');
+assert.equal(videoUrl('ai', 'abcdefghijk'), '/v/abcdefghijk/');
+assert.equal(videoUrl('community', 'abcdefghijk', '/youtuber/'), '/youtuber/v/abcdefghijk/');
 assert.deepEqual(pageNumbers(5, 10), [1, null, 3, 4, 5, 6, 7, null, 10]);
 assert.deepEqual(pageNumbers(1, 1), [1]);
+import {humanizeRecommendSpan} from './site/src/lib/format.mjs';
+assert.equal(humanizeRecommendSpan(116), '9 年前');
+assert.equal(humanizeRecommendSpan(11), '11 个月');
+
 '''], cwd=Path(__file__).resolve().parents[1], check=True)

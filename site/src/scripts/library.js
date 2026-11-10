@@ -26,7 +26,7 @@ const video = (item, catalog = {}, channels = {}) => {
   const result = {
     id,
     title,
-    thumbnail: first(source.thumbnail, source.thumb, catalog.thumbnail, catalog.thumb, id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ''),
+    thumbnail: first(source.thumbnail, source.thumb, catalog.thumbnail, catalog.thumb, id ? `https://i.ytimg.com/vi/${id}/maxresdefault.jpg` : ''),
     channelId,
     channel: channelName,
     avatar: first(source.avatar, source.channelAvatar, channelData.thumbnail, channelData.avatar, ''),
