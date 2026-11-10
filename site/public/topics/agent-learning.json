@@ -1,0 +1,611 @@
+{
+  "topic_id": "agent-learning",
+  "canonical_name": "Agent 学习",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "ai",
+  "videos": [
+    {
+      "video_id": "EuN8WCWQf7g",
+      "title": "How to Build Your Own AI Agent (Like PewDiePie)",
+      "channel_title": "Hugging Face",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EuN8WCWQf7g",
+      "thumbnail": "https://i.ytimg.com/vi/EuN8WCWQf7g/mqdefault.jpg",
+      "duration_seconds": 1449,
+      "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w"
+    },
+    {
+      "video_id": "xy_7SzwsIjM",
+      "title": "How to Build Agents That Improve Over Time: Model, Harness, Context | Interrupt London",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=xy_7SzwsIjM",
+      "thumbnail": "https://i.ytimg.com/vi/xy_7SzwsIjM/mqdefault.jpg",
+      "duration_seconds": 1220,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "zlD-CkLVKtU",
+      "title": "How to kill your SaaS: what we learned replacing a $43K/yr tool with AI agents",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=zlD-CkLVKtU",
+      "thumbnail": "https://i.ytimg.com/vi/zlD-CkLVKtU/mqdefault.jpg",
+      "duration_seconds": 1685,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "maitMe9HCvw",
+      "title": "How to Get Frontier Coding Results at 70% Lower Cost - Nouha Dziri, Cohere",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=maitMe9HCvw",
+      "thumbnail": "https://i.ytimg.com/vi/maitMe9HCvw/mqdefault.jpg",
+      "duration_seconds": 1882,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "LnQce-eHm8k",
+      "title": "Your AI Agent Wants Your Data. Here's How to Lock It Down - Jeff Smith, Oracle",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=LnQce-eHm8k",
+      "thumbnail": "https://i.ytimg.com/vi/LnQce-eHm8k/mqdefault.jpg",
+      "duration_seconds": 1300,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "KZiF2J83zaY",
+      "title": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KZiF2J83zaY",
+      "thumbnail": "https://i.ytimg.com/vi/KZiF2J83zaY/mqdefault.jpg",
+      "duration_seconds": 1344,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "aRY7YrXOmKo",
+      "title": "🚀Grok Bot进阶玩法保姆级教程！超越Meta Muse/OpenAI Dots/Claude Duet！定制专属邮箱、自动沉淀skill、Pages制作、视频生成！让Grok Bot越用越聪明",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aRY7YrXOmKo",
+      "thumbnail": "https://i.ytimg.com/vi/aRY7YrXOmKo/mqdefault.jpg",
+      "duration_seconds": 486,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "uK3j5AbpiF0",
+      "title": "🚀Grok Bot高级玩法教程！超越Meta Muse/OpenAI Dots/Claude Duet！多设备任务互通、多智能体群聊、跨群协作、持久云电脑、AI 记忆管理！让Grok Bot越用越聪明",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uK3j5AbpiF0",
+      "thumbnail": "https://i.ytimg.com/vi/uK3j5AbpiF0/mqdefault.jpg",
+      "duration_seconds": 783,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "AyzLIRBuUN8",
+      "title": "What Are AI Evals? And How to Build Your First One",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AyzLIRBuUN8",
+      "thumbnail": "https://i.ytimg.com/vi/AyzLIRBuUN8/mqdefault.jpg",
+      "duration_seconds": 1153,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "XzjSx7u9mGw",
+      "title": "AI Engineering Full Course - Build and Deploy a Real AI App",
+      "channel_title": "Dave Ebbelaar",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=XzjSx7u9mGw",
+      "thumbnail": "https://i.ytimg.com/vi/XzjSx7u9mGw/mqdefault.jpg",
+      "duration_seconds": 11407,
+      "channel_id": "UCn8ujwUInbJkBhffxqAPBVQ"
+    },
+    {
+      "video_id": "gYXLRMycVMk",
+      "title": "MCP Security Fundamentals Course",
+      "channel_title": "freeCodeCamp.org",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=gYXLRMycVMk",
+      "thumbnail": "https://i.ytimg.com/vi/gYXLRMycVMk/mqdefault.jpg",
+      "duration_seconds": 7816,
+      "channel_id": "UC8butISFwT-Wl7EV0hUK0BQ"
+    },
+    {
+      "video_id": "AT3EltQ4gTM",
+      "title": "How to build and ship an AI agent in the GitHub Copilot app",
+      "channel_title": "GitHub",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AT3EltQ4gTM",
+      "thumbnail": "https://i.ytimg.com/vi/AT3EltQ4gTM/mqdefault.jpg",
+      "duration_seconds": 557,
+      "channel_id": "UC7c3Kb6jYCRj4JOHHZTxKsQ"
+    },
+    {
+      "video_id": "G6AwOYT-Gbw",
+      "title": "How to Use Grok Bot for Beginners",
+      "channel_title": "Kevin Stratvert",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=G6AwOYT-Gbw",
+      "thumbnail": "https://i.ytimg.com/vi/G6AwOYT-Gbw/mqdefault.jpg",
+      "duration_seconds": 540,
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig"
+    },
+    {
+      "video_id": "wETSpF4ef6E",
+      "title": "Hermes Agent Tutorial for Beginners (FREE & Local)",
+      "channel_title": "Kevin Stratvert",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=wETSpF4ef6E",
+      "thumbnail": "https://i.ytimg.com/vi/wETSpF4ef6E/mqdefault.jpg",
+      "duration_seconds": 614,
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig"
+    },
+    {
+      "video_id": "-I9Csc3khis",
+      "title": "ChatGPT Dots Tutorial for Beginners",
+      "channel_title": "Kevin Stratvert",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-I9Csc3khis",
+      "thumbnail": "https://i.ytimg.com/vi/-I9Csc3khis/mqdefault.jpg",
+      "duration_seconds": 528,
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig"
+    },
+    {
+      "video_id": "xBSLmwVTsRc",
+      "title": "How to Use Meta Muse",
+      "channel_title": "Kevin Stratvert",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=xBSLmwVTsRc",
+      "thumbnail": "https://i.ytimg.com/vi/xBSLmwVTsRc/mqdefault.jpg",
+      "duration_seconds": 479,
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig"
+    },
+    {
+      "video_id": "GXbZc1sHEJY",
+      "title": "React Native Full Course 2026 | Build a Real Airbnb-Style App with AI Agents",
+      "channel_title": "JavaScript Mastery",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GXbZc1sHEJY",
+      "thumbnail": "https://i.ytimg.com/vi/GXbZc1sHEJY/mqdefault.jpg",
+      "duration_seconds": 12732,
+      "channel_id": "UCmXmlB4-HJytD7wek0Uo97A"
+    },
+    {
+      "video_id": "q5RagIqBtjc",
+      "title": "Master Hermes Agent in 20 Minutes (Beginner Tutorial)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=q5RagIqBtjc",
+      "thumbnail": "https://i.ytimg.com/vi/q5RagIqBtjc/mqdefault.jpg",
+      "duration_seconds": 1276,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "nzAdaWt6oxM",
+      "title": "Run Claude Code 24/7 on a VPS (Always-On AI Agent Tutorial)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nzAdaWt6oxM",
+      "thumbnail": "https://i.ytimg.com/vi/nzAdaWt6oxM/mqdefault.jpg",
+      "duration_seconds": 822,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "SFhTgNOdg40",
+      "title": "Build Your First AI Agent For Free In 10 Minutes - No Coding | AI Agents Full Course",
+      "channel_title": "Ayushman Pandita",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=SFhTgNOdg40",
+      "thumbnail": "https://i.ytimg.com/vi/SFhTgNOdg40/mqdefault.jpg",
+      "duration_seconds": 842,
+      "channel_id": "UCyWN-BnWSKeHEnNOYvvpNnA"
+    },
+    {
+      "video_id": "7HQ4FWVwAsk",
+      "title": "Full Claude Tutorial for Beginners - Become A Pro In Just 30 Minutes!",
+      "channel_title": "Ayushman Pandita",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=7HQ4FWVwAsk",
+      "thumbnail": "https://i.ytimg.com/vi/7HQ4FWVwAsk/mqdefault.jpg",
+      "duration_seconds": 1915,
+      "channel_id": "UCyWN-BnWSKeHEnNOYvvpNnA"
+    },
+    {
+      "video_id": "nnTqbMhKr3E",
+      "title": "Grok Bot 新手教學，30 分鐘學會！",
+      "channel_title": "Gary Chen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nnTqbMhKr3E",
+      "thumbnail": "https://i.ytimg.com/vi/nnTqbMhKr3E/mqdefault.jpg",
+      "duration_seconds": 1692,
+      "channel_id": "UC9C3t-3ocL0LiwGRD0gBJ8A"
+    },
+    {
+      "video_id": "xFPiU5sit7g",
+      "title": "Codex 新手教學，非技術人員也能上手的 AI Agent 新手指南",
+      "channel_title": "Gary Chen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=xFPiU5sit7g",
+      "thumbnail": "https://i.ytimg.com/vi/xFPiU5sit7g/mqdefault.jpg",
+      "duration_seconds": 1077,
+      "channel_id": "UC9C3t-3ocL0LiwGRD0gBJ8A"
+    },
+    {
+      "video_id": "7c1S6DGsL_k",
+      "title": "Grok Bot 新手完整教學：我用它組了一支 24 小時上班的 AI 團隊",
+      "channel_title": "傑少 JAY",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=7c1S6DGsL_k",
+      "thumbnail": "https://i.ytimg.com/vi/7c1S6DGsL_k/mqdefault.jpg",
+      "duration_seconds": 2591,
+      "channel_id": "UCz-Sx71_C4d3AYFBj6e3ENw"
+    },
+    {
+      "video_id": "6rdWKKsQoPI",
+      "title": "用 Hermes Agent 組出 24 小時 AI 團隊！從安裝到行銷實戰｜Hermes Agent 教學",
+      "channel_title": "傑少 JAY",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=6rdWKKsQoPI",
+      "thumbnail": "https://i.ytimg.com/vi/6rdWKKsQoPI/mqdefault.jpg",
+      "duration_seconds": 1765,
+      "channel_id": "UCz-Sx71_C4d3AYFBj6e3ENw"
+    },
+    {
+      "video_id": "XNcKUSL1CTE",
+      "title": "The Ultimate Beginner’s Guide to Hermes Agent",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=XNcKUSL1CTE",
+      "thumbnail": "https://i.ytimg.com/vi/XNcKUSL1CTE/mqdefault.jpg",
+      "duration_seconds": 6217,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "DYdvJCxWd6M",
+      "title": "Hermes Agent - Full Tutorial & Setup Guide (For Beginners)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DYdvJCxWd6M",
+      "thumbnail": "https://i.ytimg.com/vi/DYdvJCxWd6M/mqdefault.jpg",
+      "duration_seconds": 2063,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "uqjjVTAWCpE",
+      "title": "How to Set Up AI Agents in monday.com (Full Guide)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uqjjVTAWCpE",
+      "thumbnail": "https://i.ytimg.com/vi/uqjjVTAWCpE/mqdefault.jpg",
+      "duration_seconds": 1574,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "b0ymN8OgiMM",
+      "title": "How to Build AI Agents That Actually Work (Hyperagent Tutorial)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=b0ymN8OgiMM",
+      "thumbnail": "https://i.ytimg.com/vi/b0ymN8OgiMM/mqdefault.jpg",
+      "duration_seconds": 1710,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "5MmToIaVvFc",
+      "title": "How to Build Your First AI Agent in 10 Minutes (No Code)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5MmToIaVvFc",
+      "thumbnail": "https://i.ytimg.com/vi/5MmToIaVvFc/mqdefault.jpg",
+      "duration_seconds": 609,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "Z0YO9KyVhVg",
+      "title": "Hermes Agent Hostinger Tutorial: Install and Setup Hermes on a VPS",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Z0YO9KyVhVg",
+      "thumbnail": "https://i.ytimg.com/vi/Z0YO9KyVhVg/mqdefault.jpg",
+      "duration_seconds": 1903,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "LvWobwr0Neg",
+      "title": "Hermes Agent Tutorial for Beginners (Full Step-by-Step Setup)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=LvWobwr0Neg",
+      "thumbnail": "https://i.ytimg.com/vi/LvWobwr0Neg/mqdefault.jpg",
+      "duration_seconds": 2028,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "UrPuSAFd_Ss",
+      "title": "The Only OpenClaw Tutorial You Will Ever Need",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=UrPuSAFd_Ss",
+      "thumbnail": "https://i.ytimg.com/vi/UrPuSAFd_Ss/mqdefault.jpg",
+      "duration_seconds": 3089,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "CwPUOVUdApE",
+      "title": "Hermes Agent: The Ultimate Beginner’s Guide",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=CwPUOVUdApE",
+      "thumbnail": "https://i.ytimg.com/vi/CwPUOVUdApE/mqdefault.jpg",
+      "duration_seconds": 2228,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "XXplTbQR9to",
+      "title": "Paperclip AI Tutorial: How to Build a Zero-Human Company",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=XXplTbQR9to",
+      "thumbnail": "https://i.ytimg.com/vi/XXplTbQR9to/mqdefault.jpg",
+      "duration_seconds": 1548,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "uycgV-eulGE",
+      "title": "Full Hermes Agent Setup Tutorial: Step-by-Step Walkthrough",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uycgV-eulGE",
+      "thumbnail": "https://i.ytimg.com/vi/uycgV-eulGE/mqdefault.jpg",
+      "duration_seconds": 1009,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "M0ciMpB-EMY",
+      "title": "NemoClaw Tutorial: Run OpenClaw Safely with NVIDIA (Full Setup)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=M0ciMpB-EMY",
+      "thumbnail": "https://i.ytimg.com/vi/M0ciMpB-EMY/mqdefault.jpg",
+      "duration_seconds": 1595,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "OUTTpiHA4dk",
+      "title": "OpenClaw Hostinger Setup Tutorial - Step by Step",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OUTTpiHA4dk",
+      "thumbnail": "https://i.ytimg.com/vi/OUTTpiHA4dk/mqdefault.jpg",
+      "duration_seconds": 859,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "WDHgibiZ9S8",
+      "title": "OpenClaw Tutorial for Beginners - Full Setup Guide",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=WDHgibiZ9S8",
+      "thumbnail": "https://i.ytimg.com/vi/WDHgibiZ9S8/mqdefault.jpg",
+      "duration_seconds": 944,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "st534T7-mdE",
+      "title": "The Ultimate Beginner’s Guide to OpenClaw",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=st534T7-mdE",
+      "thumbnail": "https://i.ytimg.com/vi/st534T7-mdE/mqdefault.jpg",
+      "duration_seconds": 3402,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "YCD2FSvj35I",
+      "title": "SECURE OpenClaw Setup Guide (ClawdBot Tutorial)",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YCD2FSvj35I",
+      "thumbnail": "https://i.ytimg.com/vi/YCD2FSvj35I/mqdefault.jpg",
+      "duration_seconds": 1534,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "5kTFyEOgark",
+      "title": "How to Build a Model Router in the Harness",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5kTFyEOgark",
+      "thumbnail": "https://i.ytimg.com/vi/5kTFyEOgark/mqdefault.jpg",
+      "duration_seconds": 819,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "pb-AAvvQZ-U",
+      "title": "How to go from your agent's traces to a fine-tuned model in one workflow",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=pb-AAvvQZ-U",
+      "thumbnail": "https://i.ytimg.com/vi/pb-AAvvQZ-U/mqdefault.jpg",
+      "duration_seconds": 541,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "HHUsHkYhkcM",
+      "title": "How To Build A Harness With Jev | A LangChain x TypeSafe Conversation",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=HHUsHkYhkcM",
+      "thumbnail": "https://i.ytimg.com/vi/HHUsHkYhkcM/mqdefault.jpg",
+      "duration_seconds": 2884,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "jdgYoKLmElY",
+      "title": "How to manage shared and user credentials with Managed Deep Agents Connections",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=jdgYoKLmElY",
+      "thumbnail": "https://i.ytimg.com/vi/jdgYoKLmElY/mqdefault.jpg",
+      "duration_seconds": 617,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "5cJB7-5Z7ME",
+      "title": "LangChain Academy Tutors: Learn LangChain with Your Coding Agent",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5cJB7-5Z7ME",
+      "thumbnail": "https://i.ytimg.com/vi/5cJB7-5Z7ME/mqdefault.jpg",
+      "duration_seconds": 360,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "qq2Hm4XNRgI",
+      "title": "How to Decide What Your AI Agent Should Remember - Wojciech Pluta, Oracle",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qq2Hm4XNRgI",
+      "thumbnail": "https://i.ytimg.com/vi/qq2Hm4XNRgI/mqdefault.jpg",
+      "duration_seconds": 1146,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "gv4w23xYj-0",
+      "title": "How to Write Your First AI Eval - SallyAnn DeLucia, Arize AI",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=gv4w23xYj-0",
+      "thumbnail": "https://i.ytimg.com/vi/gv4w23xYj-0/mqdefault.jpg",
+      "duration_seconds": 2120,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "DZ24Xbm9Joc",
+      "title": "How to Build Financial Agents That Work Across the Web - Jay Sahnan & Arik Bird, Browserbase",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DZ24Xbm9Joc",
+      "thumbnail": "https://i.ytimg.com/vi/DZ24Xbm9Joc/mqdefault.jpg",
+      "duration_seconds": 1178,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "uTrY8slys0w",
+      "title": "How to Let AI Agents Sign Up for Your App Safely — Isabelle Williams, WorkOS",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uTrY8slys0w",
+      "thumbnail": "https://i.ytimg.com/vi/uTrY8slys0w/mqdefault.jpg",
+      "duration_seconds": 1113,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "c_SPW__jF9w",
+      "title": "How to Test AI Agents When No Benchmark Exists — Nathanael Weill, Air Canada",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=c_SPW__jF9w",
+      "thumbnail": "https://i.ytimg.com/vi/c_SPW__jF9w/mqdefault.jpg",
+      "duration_seconds": 1190,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "a00xIn5kwhM",
+      "title": "RL Environments Explained: How AI Agents Learn Real-World Work | Brendan Foody, Mercor",
+      "channel_title": "Sequoia Capital",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=a00xIn5kwhM",
+      "thumbnail": "https://i.ytimg.com/vi/a00xIn5kwhM/mqdefault.jpg",
+      "duration_seconds": 1582,
+      "channel_id": "UCWrF0oN6unbXrWsTN7RctTw"
+    },
+    {
+      "video_id": "RGVZv7FKYxk",
+      "title": "不用 Canva 怎樣做 YouTube 封面？| GPT Image 2.6 + AI 相片編輯器教學",
+      "channel_title": "阿石OMP",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RGVZv7FKYxk",
+      "thumbnail": "https://i.ytimg.com/vi/RGVZv7FKYxk/mqdefault.jpg",
+      "duration_seconds": 402,
+      "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q"
+    },
+    {
+      "video_id": "L4HPiPtzkpA",
+      "title": "將 Grok Bot 放入公司 WhatsApp 群組｜Skill-Wise 教學",
+      "channel_title": "阿石OMP",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=L4HPiPtzkpA",
+      "thumbnail": "https://i.ytimg.com/vi/L4HPiPtzkpA/mqdefault.jpg",
+      "duration_seconds": 530,
+      "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q"
+    },
+    {
+      "video_id": "92VPLAFPnuc",
+      "title": "【Skill-Wise Webhook 教學】即時通知發送到 WhatsApp 群組：（Zapier + Google Forms）",
+      "channel_title": "阿石OMP",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=92VPLAFPnuc",
+      "thumbnail": "https://i.ytimg.com/vi/92VPLAFPnuc/mqdefault.jpg",
+      "duration_seconds": 503,
+      "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q"
+    },
+    {
+      "video_id": "sjOGyCwOeIY",
+      "title": "讓 AI 每日自動匯報廣告數據到 WhatsApp：Skill-Wise 定時任務教學（Manus Project 權限）",
+      "channel_title": "阿石OMP",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=sjOGyCwOeIY",
+      "thumbnail": "https://i.ytimg.com/vi/sjOGyCwOeIY/mqdefault.jpg",
+      "duration_seconds": 360,
+      "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q"
+    },
+    {
+      "video_id": "pMEY1AAElMY",
+      "title": "Manus Cue 教學：AI Agent 有自己的電話號碼，可以幫你打電話（實測 + 補習社應用）",
+      "channel_title": "阿石OMP",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=pMEY1AAElMY",
+      "thumbnail": "https://i.ytimg.com/vi/pMEY1AAElMY/mqdefault.jpg",
+      "duration_seconds": 287,
+      "channel_id": "UCnixWoic7ATGI0AZ2LrtJ7Q"
+    },
+    {
+      "video_id": "PhBNMk1_pcM",
+      "title": "豆包工作手把手教程，让你工作提效200%！（赠51页橙皮书）",
+      "channel_title": "花叔",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PhBNMk1_pcM",
+      "thumbnail": "https://i.ytimg.com/vi/PhBNMk1_pcM/mqdefault.jpg",
+      "duration_seconds": 875,
+      "channel_id": "UCzbSuf_A_D8dARJ33HzoDew"
+    },
+    {
+      "video_id": "MRMSY8JhRQg",
+      "title": "OpenClaw从入门到精通：9个使用技巧，让龙虾真正帮你干活",
+      "channel_title": "花叔",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MRMSY8JhRQg",
+      "thumbnail": "https://i.ytimg.com/vi/MRMSY8JhRQg/mqdefault.jpg",
+      "duration_seconds": 1221,
+      "channel_id": "UCzbSuf_A_D8dARJ33HzoDew"
+    },
+    {
+      "video_id": "MAJ5BApYQT0",
+      "title": "🦞OpenClaw养虾指南：从入门到精通（赠98页pdf资料）",
+      "channel_title": "花叔",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MAJ5BApYQT0",
+      "thumbnail": "https://i.ytimg.com/vi/MAJ5BApYQT0/mqdefault.jpg",
+      "duration_seconds": 2076,
+      "channel_id": "UCzbSuf_A_D8dARJ33HzoDew"
+    }
+  ],
+  "match_count": 60
+}

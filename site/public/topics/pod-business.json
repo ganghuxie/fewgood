@@ -1,0 +1,811 @@
+{
+  "topic_id": "pod-business",
+  "canonical_name": "商业创业",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "podcast",
+  "videos": [
+    {
+      "video_id": "2v8b062QzTI",
+      "title": "Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze, What’s Next for Trump",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2v8b062QzTI",
+      "thumbnail": "https://i.ytimg.com/vi/2v8b062QzTI/mqdefault.jpg",
+      "duration_seconds": 5584,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "9Asgxtk_kkI",
+      "title": "All-In Podcast REACTS to Democrat Sweep!",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9Asgxtk_kkI",
+      "thumbnail": "https://i.ytimg.com/vi/9Asgxtk_kkI/mqdefault.jpg",
+      "duration_seconds": 7090,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "p1Dy4e4ff0s",
+      "title": "Anthropic S-1 Shocker, Greatest Business Ever? Google’s $500B Wipeout, Midterm Predictions",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=p1Dy4e4ff0s",
+      "thumbnail": "https://i.ytimg.com/vi/p1Dy4e4ff0s/mqdefault.jpg",
+      "duration_seconds": 5147,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "Uc6xXNBWjfc",
+      "title": "WHOOP CEO, Will Ahmed: 50B Hours of Health Data, a 4 Million Member Data Moat, & the FDA Fight",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Uc6xXNBWjfc",
+      "thumbnail": "https://i.ytimg.com/vi/Uc6xXNBWjfc/mqdefault.jpg",
+      "duration_seconds": 3339,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "6czo-C3FU7I",
+      "title": "AI Cyber Panic, Ken Griffin’s Bubble Warning, The Fall of France?",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=6czo-C3FU7I",
+      "thumbnail": "https://i.ytimg.com/vi/6czo-C3FU7I/mqdefault.jpg",
+      "duration_seconds": 6203,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "yzk44lz-RGI",
+      "title": "Arvind Krishna & Nikesh Arora: Quantum Threat, Open vs Frontier AI, AI Cyber Warfare & SaaS Collapse",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yzk44lz-RGI",
+      "thumbnail": "https://i.ytimg.com/vi/yzk44lz-RGI/mqdefault.jpg",
+      "duration_seconds": 2400,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "2Zj6uMv3kTA",
+      "title": "Dylan Field: Is AI Replacing Designers?, Design is the New Code & Democratizing Creativity",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2Zj6uMv3kTA",
+      "thumbnail": "https://i.ytimg.com/vi/2Zj6uMv3kTA/mqdefault.jpg",
+      "duration_seconds": 2433,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "_b3LfMflIGs",
+      "title": "CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags, Bill Gates Doomer",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_b3LfMflIGs",
+      "thumbnail": "https://i.ytimg.com/vi/_b3LfMflIGs/mqdefault.jpg",
+      "duration_seconds": 5646,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "2tAywoHiIpo",
+      "title": "Billy Evans Speaks Out: Elizabeth Holmes' Trial, Prison & Nathan Fielder’s Documentary",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2tAywoHiIpo",
+      "thumbnail": "https://i.ytimg.com/vi/2tAywoHiIpo/mqdefault.jpg",
+      "duration_seconds": 2515,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "yZR8QW4qQmM",
+      "title": "Martin Shkreli: Big Pharma's Blind Spot, Betting Against Quantum & What Prison Taught Him",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yZR8QW4qQmM",
+      "thumbnail": "https://i.ytimg.com/vi/yZR8QW4qQmM/mqdefault.jpg",
+      "duration_seconds": 1517,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "TBLHdXABwAg",
+      "title": "Is Claude Conscious? Pope Rejects, Model Welfare Movement, OpenAI's Math Backlash, France Riots",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TBLHdXABwAg",
+      "thumbnail": "https://i.ytimg.com/vi/TBLHdXABwAg/mqdefault.jpg",
+      "duration_seconds": 5595,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "ZJKs08oU1zg",
+      "title": "Trump’s Super Intelligence Summit, AI Safety Accord, GDP Beats, Midterm Predictions",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZJKs08oU1zg",
+      "thumbnail": "https://i.ytimg.com/vi/ZJKs08oU1zg/mqdefault.jpg",
+      "duration_seconds": 4949,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "uzV45QvPKtU",
+      "title": "Jake Paul & The Chainsmokers: Turning Fame into Funds, Jake Enters Politics? & Venture Bubble Signs",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uzV45QvPKtU",
+      "thumbnail": "https://i.ytimg.com/vi/uzV45QvPKtU/mqdefault.jpg",
+      "duration_seconds": 3169,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "JEUboZzZGM4",
+      "title": "Daniel Ek: Life After Spotify, Broken Healthcare Incentives, Catching Disease Early & AI's Potential",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=JEUboZzZGM4",
+      "thumbnail": "https://i.ytimg.com/vi/JEUboZzZGM4/mqdefault.jpg",
+      "duration_seconds": 3076,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "cvP_1jmnkmM",
+      "title": "Anthropic IPO at Risk, Meta’s Muse Pop, Token Prices Fall, Open Source Gains Share, Alignment Fails",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cvP_1jmnkmM",
+      "thumbnail": "https://i.ytimg.com/vi/cvP_1jmnkmM/mqdefault.jpg",
+      "duration_seconds": 5664,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "6t5yF8ansoQ",
+      "title": "Luca Ferrari, Bending Spoons CEO: The $40K Start, Buying Product-Market Fit & Beating Private Equity",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=6t5yF8ansoQ",
+      "thumbnail": "https://i.ytimg.com/vi/6t5yF8ansoQ/mqdefault.jpg",
+      "duration_seconds": 1530,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "VF90rBzl26E",
+      "title": "Steve Hilton & Spencer Pratt: Fixing California, Cheaper Gas, Ballot Fraud & CA Republicans",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=VF90rBzl26E",
+      "thumbnail": "https://i.ytimg.com/vi/VF90rBzl26E/mqdefault.jpg",
+      "duration_seconds": 3344,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "Gnb-CfNPcPE",
+      "title": "Blake Scholl: Why Plane Speed Stalled, Supersonic Commercial Flight, & Revolutionizing the Engine",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Gnb-CfNPcPE",
+      "thumbnail": "https://i.ytimg.com/vi/Gnb-CfNPcPE/mqdefault.jpg",
+      "duration_seconds": 1060,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "yAsrMA_ADPc",
+      "title": "Naveen Rao: 4D Computing, AI's Energy Wall & Beating Biology",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yAsrMA_ADPc",
+      "thumbnail": "https://i.ytimg.com/vi/yAsrMA_ADPc/mqdefault.jpg",
+      "duration_seconds": 1355,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "JtomF4bGxHs",
+      "title": "Adam Foroughi, Applovin CEO: Surviving a 92% Drawdown, Ads as ML 1.0 & the $50B Game Ad Market",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=JtomF4bGxHs",
+      "thumbnail": "https://i.ytimg.com/vi/JtomF4bGxHs/mqdefault.jpg",
+      "duration_seconds": 1432,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "A4Q7zAayW20",
+      "title": "Bill Gurley: Searching for Feynman",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=A4Q7zAayW20",
+      "thumbnail": "https://i.ytimg.com/vi/A4Q7zAayW20/mqdefault.jpg",
+      "duration_seconds": 2309,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "VTF6p0U98ek",
+      "title": "Jared Isaacman: A New Era for NASA and American Space Exploration",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=VTF6p0U98ek",
+      "thumbnail": "https://i.ytimg.com/vi/VTF6p0U98ek/mqdefault.jpg",
+      "duration_seconds": 2314,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "SwBCPBNe_60",
+      "title": "Nick Shirley: Exposing Government Fraud, Suing California & Taking on the Media",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=SwBCPBNe_60",
+      "thumbnail": "https://i.ytimg.com/vi/SwBCPBNe_60/mqdefault.jpg",
+      "duration_seconds": 1952,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "qp2IbgJ5Z-8",
+      "title": "Meta's Dina Powell McCormick: The Case for Data Centers, Backlash, AI Job Boom & Meta’s Future",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qp2IbgJ5Z-8",
+      "thumbnail": "https://i.ytimg.com/vi/qp2IbgJ5Z-8/mqdefault.jpg",
+      "duration_seconds": 2632,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "PJrntzMA4iQ",
+      "title": "Brad Gerstner: No AI Bubble, Semis Eat the Nasdaq & AI's Take Off Problem",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PJrntzMA4iQ",
+      "thumbnail": "https://i.ytimg.com/vi/PJrntzMA4iQ/mqdefault.jpg",
+      "duration_seconds": 1090,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "PUcooQRy0PU",
+      "title": "JD Vance on AI, Entitlement Fraud, Iran War, Israel, H-1B Abuse & the Midterms",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PUcooQRy0PU",
+      "thumbnail": "https://i.ytimg.com/vi/PUcooQRy0PU/mqdefault.jpg",
+      "duration_seconds": 1652,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "hdcsTeCFE0I",
+      "title": "Satya Nadella on the AI Doomer Slowdown, Microsoft’s Master Plan & Who Wins AI",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hdcsTeCFE0I",
+      "thumbnail": "https://i.ytimg.com/vi/hdcsTeCFE0I/mqdefault.jpg",
+      "duration_seconds": 2193,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "iwBOQeFPAwg",
+      "title": "Elon Musk & Gwynne Shotwell on AI Risks and Peer Review, Starship, Terafab, SpaceX/Tesla Merger",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=iwBOQeFPAwg",
+      "thumbnail": "https://i.ytimg.com/vi/iwBOQeFPAwg/mqdefault.jpg",
+      "duration_seconds": 3864,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "S7CrlFLAmEA",
+      "title": "Jensen Huang: The Doomer Hoax, Superintelligence is Here, and The Future of AI (ft. President Trump)",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=S7CrlFLAmEA",
+      "thumbnail": "https://i.ytimg.com/vi/S7CrlFLAmEA/mqdefault.jpg",
+      "duration_seconds": 2807,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "cvxjqbfLVk0",
+      "title": "AI Kills Everybody or Doomer Psyop? OpenAI’s Math Breakthrough, Nike’s $200B Collapse",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cvxjqbfLVk0",
+      "thumbnail": "https://i.ytimg.com/vi/cvxjqbfLVk0/mqdefault.jpg",
+      "duration_seconds": 5757,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "DvFe9bR2eHA",
+      "title": "GPT-6 Hits AGI? Tech Euphoria 2.0, SF Mansion Shortage, NYC Bans AI in Schools & Venezuela Oil Deal",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DvFe9bR2eHA",
+      "thumbnail": "https://i.ytimg.com/vi/DvFe9bR2eHA/mqdefault.jpg",
+      "duration_seconds": 5516,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "1u5dMAKl_ks",
+      "title": "Nvidia's Historic Quarter, SaaS Comeback, Bessent vs Druck, America's Debt Crisis, Cancer Vaccine",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=1u5dMAKl_ks",
+      "thumbnail": "https://i.ytimg.com/vi/1u5dMAKl_ks/mqdefault.jpg",
+      "duration_seconds": 5801,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "y84ypzELP_s",
+      "title": "Eric Weinstein: The State of American Science, Breakthrough Coverups, and the Danger of Physics",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=y84ypzELP_s",
+      "thumbnail": "https://i.ytimg.com/vi/y84ypzELP_s/mqdefault.jpg",
+      "duration_seconds": 5420,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "Xj4pTYsVSWQ",
+      "title": "Inside Trump's Science Agenda: Anti-Science Claims, Fauci's Damage, DEI & China w/ Michael Kratsios",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Xj4pTYsVSWQ",
+      "thumbnail": "https://i.ytimg.com/vi/Xj4pTYsVSWQ/mqdefault.jpg",
+      "duration_seconds": 3359,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "Sij_v-mcZXQ",
+      "title": "Dario Defends Himself, Datacenter Panic, AI Doomer Trap, Senate Toss-Up",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Sij_v-mcZXQ",
+      "thumbnail": "https://i.ytimg.com/vi/Sij_v-mcZXQ/mqdefault.jpg",
+      "duration_seconds": 5453,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "5BWuvjGLMik",
+      "title": "Mass Surveillance, Police Misuse, and Who Controls Your Flock Cameras with Flock CEO, Garret Langley",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5BWuvjGLMik",
+      "thumbnail": "https://i.ytimg.com/vi/5BWuvjGLMik/mqdefault.jpg",
+      "duration_seconds": 3358,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "y4BdOtm40SA",
+      "title": "Inside Salesforce’s Acquisition Strategy for the AI Era",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=y4BdOtm40SA",
+      "thumbnail": "https://i.ytimg.com/vi/y4BdOtm40SA/mqdefault.jpg",
+      "duration_seconds": 2919,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "9iAQdKxyiQc",
+      "title": "How AI Is Turning Figma’s Finance Team Into Builders",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9iAQdKxyiQc",
+      "thumbnail": "https://i.ytimg.com/vi/9iAQdKxyiQc/mqdefault.jpg",
+      "duration_seconds": 3012,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "dSiTwPl0t1U",
+      "title": "The New AI Agents That Shop, Plan, and Gossip",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=dSiTwPl0t1U",
+      "thumbnail": "https://i.ytimg.com/vi/dSiTwPl0t1U/mqdefault.jpg",
+      "duration_seconds": 3016,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "Ezi-nwe6LlY",
+      "title": "Andrew Huberman on Focus, Energy, and Performing at Your Best",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Ezi-nwe6LlY",
+      "thumbnail": "https://i.ytimg.com/vi/Ezi-nwe6LlY/mqdefault.jpg",
+      "duration_seconds": 2888,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "lXkjXSul6yg",
+      "title": "What iPhone Packaging Reveals About the Robotics Opportunity",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=lXkjXSul6yg",
+      "thumbnail": "https://i.ytimg.com/vi/lXkjXSul6yg/mqdefault.jpg",
+      "duration_seconds": 2697,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "_d83IiEU7_0",
+      "title": "Hip Hop’s Origin Story, Told by the Legends Who Lived It",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_d83IiEU7_0",
+      "thumbnail": "https://i.ytimg.com/vi/_d83IiEU7_0/mqdefault.jpg",
+      "duration_seconds": 1470,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "iRMmPjunm3Q",
+      "title": "Why AI Could Turn Small Law Firms Into Billion-Dollar Businesses",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=iRMmPjunm3Q",
+      "thumbnail": "https://i.ytimg.com/vi/iRMmPjunm3Q/mqdefault.jpg",
+      "duration_seconds": 3131,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "cRJ7CfaK1Vc",
+      "title": "How to Build the Next SpaceX or Tesla",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cRJ7CfaK1Vc",
+      "thumbnail": "https://i.ytimg.com/vi/cRJ7CfaK1Vc/mqdefault.jpg",
+      "duration_seconds": 2957,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "5UWDUD6qaM4",
+      "title": "Mark Cuban on Why AI Could Turn Solo Founders Into Trillionaires",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5UWDUD6qaM4",
+      "thumbnail": "https://i.ytimg.com/vi/5UWDUD6qaM4/mqdefault.jpg",
+      "duration_seconds": 3618,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "T4u2FoIm3pw",
+      "title": "The AI School Kids Love More Than Vacation | Alpha School's Joe Liemandt",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=T4u2FoIm3pw",
+      "thumbnail": "https://i.ytimg.com/vi/T4u2FoIm3pw/mqdefault.jpg",
+      "duration_seconds": 3361,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "9v42ZOdiBJY",
+      "title": "Why OpenAI Is Racing to Make Computer Use Superhuman",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9v42ZOdiBJY",
+      "thumbnail": "https://i.ytimg.com/vi/9v42ZOdiBJY/mqdefault.jpg",
+      "duration_seconds": 2654,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "-YMMRQ1qscI",
+      "title": "Amazon CEO Andy Jassy on Reinventing Amazon for the AI Era",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-YMMRQ1qscI",
+      "thumbnail": "https://i.ytimg.com/vi/-YMMRQ1qscI/mqdefault.jpg",
+      "duration_seconds": 3639,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "-9XQMHhpypc",
+      "title": "Marc Andreessen: The Biggest Gap I’ve Seen in My Career",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-9XQMHhpypc",
+      "thumbnail": "https://i.ytimg.com/vi/-9XQMHhpypc/mqdefault.jpg",
+      "duration_seconds": 3635,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "9n0MI4D7TCM",
+      "title": "OpenAI’s Head of Health AI on Whether You Should Trust ChatGPT",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9n0MI4D7TCM",
+      "thumbnail": "https://i.ytimg.com/vi/9n0MI4D7TCM/mqdefault.jpg",
+      "duration_seconds": 3232,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "o_5f4N6Nq80",
+      "title": "Why a $1M Startup Wasn’t Worth Building in the Age of AI",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=o_5f4N6Nq80",
+      "thumbnail": "https://i.ytimg.com/vi/o_5f4N6Nq80/mqdefault.jpg",
+      "duration_seconds": 3719,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "blkIGLlZePg",
+      "title": "Why AI Can Write Code But Can’t Keep It Running (Yet)",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=blkIGLlZePg",
+      "thumbnail": "https://i.ytimg.com/vi/blkIGLlZePg/mqdefault.jpg",
+      "duration_seconds": 3538,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "q8cb1XL9sXA",
+      "title": "Agentic Commerce: Why Your Wallet Is About to Change",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=q8cb1XL9sXA",
+      "thumbnail": "https://i.ytimg.com/vi/q8cb1XL9sXA/mqdefault.jpg",
+      "duration_seconds": 3031,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "BKuK0M6oDTI",
+      "title": "Can Open Models Keep Up With OpenAI and Anthropic? | Nathan Lambert",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BKuK0M6oDTI",
+      "thumbnail": "https://i.ytimg.com/vi/BKuK0M6oDTI/mqdefault.jpg",
+      "duration_seconds": 3529,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "3Q1mdn5ZGvM",
+      "title": "Recursive Self-Improvement and the Future of AI",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3Q1mdn5ZGvM",
+      "thumbnail": "https://i.ytimg.com/vi/3Q1mdn5ZGvM/mqdefault.jpg",
+      "duration_seconds": 1927,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "1Q_7yU7FZ1k",
+      "title": "Former Intel CEO: Why This is the Best Time to Build Hardware",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=1Q_7yU7FZ1k",
+      "thumbnail": "https://i.ytimg.com/vi/1Q_7yU7FZ1k/mqdefault.jpg",
+      "duration_seconds": 3195,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "rn_afJaPldg",
+      "title": "Building the Cloud for AI Agents | AWS CEO Matt Garman",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rn_afJaPldg",
+      "thumbnail": "https://i.ytimg.com/vi/rn_afJaPldg/mqdefault.jpg",
+      "duration_seconds": 3378,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "cJsHel27Z6M",
+      "title": "The Biggest Shift in Cybersecurity in 30 Years",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cJsHel27Z6M",
+      "thumbnail": "https://i.ytimg.com/vi/cJsHel27Z6M/mqdefault.jpg",
+      "duration_seconds": 2870,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "aCvrzhwUxg0",
+      "title": "The Current State of Consumer AI",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aCvrzhwUxg0",
+      "thumbnail": "https://i.ytimg.com/vi/aCvrzhwUxg0/mqdefault.jpg",
+      "duration_seconds": 2988,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "ekK8urKHPMQ",
+      "title": "Why Specialized AI Could Beat The God Model",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ekK8urKHPMQ",
+      "thumbnail": "https://i.ytimg.com/vi/ekK8urKHPMQ/mqdefault.jpg",
+      "duration_seconds": 2900,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "OTQ-lFsq7zA",
+      "title": "Why Enterprise Software Is Being Rebuilt Around AI Agents",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OTQ-lFsq7zA",
+      "thumbnail": "https://i.ytimg.com/vi/OTQ-lFsq7zA/mqdefault.jpg",
+      "duration_seconds": 3554,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "bmDrbHOh7Bo",
+      "title": "Why One Internet Pioneer Thinks the Original Model Broke",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bmDrbHOh7Bo",
+      "thumbnail": "https://i.ytimg.com/vi/bmDrbHOh7Bo/mqdefault.jpg",
+      "duration_seconds": 2706,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "lr3hNhA0IfQ",
+      "title": "AI, Infrastructure, and the Next Investment Cycle",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=lr3hNhA0IfQ",
+      "thumbnail": "https://i.ytimg.com/vi/lr3hNhA0IfQ/mqdefault.jpg",
+      "duration_seconds": 3141,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "3T5sij3spWw",
+      "title": "We Tested the New Wave of Personal AI Agents",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3T5sij3spWw",
+      "thumbnail": "https://i.ytimg.com/vi/3T5sij3spWw/mqdefault.jpg",
+      "duration_seconds": 3015,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "Ut3LOjKNJaE",
+      "title": "How Jev Turns AI Into Software That Gets Things Done",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Ut3LOjKNJaE",
+      "thumbnail": "https://i.ytimg.com/vi/Ut3LOjKNJaE/mqdefault.jpg",
+      "duration_seconds": 2544,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "TLJNJDf2XGo",
+      "title": "The Next Chapter of AI Is Inside Our Software",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TLJNJDf2XGo",
+      "thumbnail": "https://i.ytimg.com/vi/TLJNJDf2XGo/mqdefault.jpg",
+      "duration_seconds": 3304,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "-ywZlfznTa4",
+      "title": "How to Spot Exceptional Talent Before Everyone Else",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-ywZlfznTa4",
+      "thumbnail": "https://i.ytimg.com/vi/-ywZlfznTa4/mqdefault.jpg",
+      "duration_seconds": 2992,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "Q8yFrGwIftE",
+      "title": "Replit CEO Amjad Masad on What Young People Should Learn in the AI Era",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Q8yFrGwIftE",
+      "thumbnail": "https://i.ytimg.com/vi/Q8yFrGwIftE/mqdefault.jpg",
+      "duration_seconds": 2824,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "Z4x71naDx1Q",
+      "title": "Why Education Has to Change",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Z4x71naDx1Q",
+      "thumbnail": "https://i.ytimg.com/vi/Z4x71naDx1Q/mqdefault.jpg",
+      "duration_seconds": 2562,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "ZO6VyDvysxY",
+      "title": "Why the People Who Built Hip-Hop Ended Up With Nothing",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZO6VyDvysxY",
+      "thumbnail": "https://i.ytimg.com/vi/ZO6VyDvysxY/mqdefault.jpg",
+      "duration_seconds": 3423,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "GzEtpAKYRvE",
+      "title": "Why Would AI Companies Want to Slow Down?",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GzEtpAKYRvE",
+      "thumbnail": "https://i.ytimg.com/vi/GzEtpAKYRvE/mqdefault.jpg",
+      "duration_seconds": 4013,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "SDbRJXQrYGY",
+      "title": "How Real-Time AI Video Is Changing How Creators Work",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=SDbRJXQrYGY",
+      "thumbnail": "https://i.ytimg.com/vi/SDbRJXQrYGY/mqdefault.jpg",
+      "duration_seconds": 2337,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "K5yGLO8c6T0",
+      "title": "Why the Next Generation of Enterprise Software Looks Nothing Like Salesforce",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=K5yGLO8c6T0",
+      "thumbnail": "https://i.ytimg.com/vi/K5yGLO8c6T0/mqdefault.jpg",
+      "duration_seconds": 3124,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "HKZdte6exaw",
+      "title": "How the Internet Turned Biohacking Into a Cultural Obsession",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=HKZdte6exaw",
+      "thumbnail": "https://i.ytimg.com/vi/HKZdte6exaw/mqdefault.jpg",
+      "duration_seconds": 2530,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "IJn8cagMW18",
+      "title": "OpenAI President on What it Means to Cross Into The Age of AGI",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=IJn8cagMW18",
+      "thumbnail": "https://i.ytimg.com/vi/IJn8cagMW18/mqdefault.jpg",
+      "duration_seconds": 2978,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "bsdJd2VeLvg",
+      "title": "Why Investors Are Rethinking Everything for the AI Era",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bsdJd2VeLvg",
+      "thumbnail": "https://i.ytimg.com/vi/bsdJd2VeLvg/mqdefault.jpg",
+      "duration_seconds": 2899,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "WO9c9qxDxzU",
+      "title": "Inside the Race to Measure Frontier Intelligence",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=WO9c9qxDxzU",
+      "thumbnail": "https://i.ytimg.com/vi/WO9c9qxDxzU/mqdefault.jpg",
+      "duration_seconds": 2355,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "1JvyLGd2Sfs",
+      "title": "Inside OpenAI’s Breakthroughs in Mathematical Reasoning",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=1JvyLGd2Sfs",
+      "thumbnail": "https://i.ytimg.com/vi/1JvyLGd2Sfs/mqdefault.jpg",
+      "duration_seconds": 3916,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "qn1QDDBnTA0",
+      "title": "Why Fei-Fei Li Is Betting on Spatial Intelligence",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qn1QDDBnTA0",
+      "thumbnail": "https://i.ytimg.com/vi/qn1QDDBnTA0/mqdefault.jpg",
+      "duration_seconds": 2623,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "J3pegsM5drk",
+      "title": "Why AI Agents Could Finally Reinvent the Credit Card",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=J3pegsM5drk",
+      "thumbnail": "https://i.ytimg.com/vi/J3pegsM5drk/mqdefault.jpg",
+      "duration_seconds": 3564,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    }
+  ],
+  "match_count": 647
+}

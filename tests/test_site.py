@@ -44,8 +44,15 @@ def test_topic_catalog_is_searchable_but_not_an_editorial_feed():
     topic_ids = {row['id'] for row in topics}
     assert topic_ids and all(row.get('topic_only') for row in topics)
     assert topic_ids <= {row['id'] for row in catalog}
+    # Fixture-only demos must stay out of editorial feeds. Curated V2 sub-topics
+    # are sliced from the same local library, so overlap with those feeds is expected.
+    fixture_ids = set()
+    for name in ['cafe.json', 'c-plus-plus.json', 'c-sharp.json', 'no-results.json', 'quota-deferred.json', 'waiting-demo.json']:
+        payload = json.loads((root / 'site/public/topics' / name).read_text())
+        fixture_ids.update(video.get('video_id') or video.get('id') for video in payload.get('videos') or [])
+    fixture_ids.discard(None)
     for feed in ['trending.json', 'ai.json', 'podcast.json', 'music.json', 'videos.json']:
-        assert not (topic_ids & {row['id'] for row in json.loads((root / 'site/src/data' / feed).read_text())['videos']})
+        assert not (fixture_ids & {row['id'] for row in json.loads((root / 'site/src/data' / feed).read_text())['videos']})
 
 
 def test_topic_helpers_cover_public_statuses():

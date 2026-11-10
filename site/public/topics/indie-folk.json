@@ -1,0 +1,811 @@
+{
+  "topic_id": "indie-folk",
+  "canonical_name": "独立 / 民谣",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "music",
+  "videos": [
+    {
+      "video_id": "2tyQWtK8wbQ",
+      "title": "anaiis performs \"Dreamer Too\" & more Live on KEXP",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T18:21:37Z",
+      "url": "https://www.youtube.com/watch?v=2tyQWtK8wbQ",
+      "thumbnail": "https://i.ytimg.com/vi/2tyQWtK8wbQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "xdr2Wm_byXk",
+      "title": "anaiis - Green Juice (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T14:00:30Z",
+      "url": "https://www.youtube.com/watch?v=xdr2Wm_byXk",
+      "thumbnail": "https://i.ytimg.com/vi/xdr2Wm_byXk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "rlJ7aOPueXI",
+      "title": "anaiis - Dreamer Too (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T12:00:37Z",
+      "url": "https://www.youtube.com/watch?v=rlJ7aOPueXI",
+      "thumbnail": "https://i.ytimg.com/vi/rlJ7aOPueXI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "rbgBXm-GnJo",
+      "title": "anaiis - My World (Beyond) (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T12:00:15Z",
+      "url": "https://www.youtube.com/watch?v=rbgBXm-GnJo",
+      "thumbnail": "https://i.ytimg.com/vi/rbgBXm-GnJo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "Eym4VYd6OsM",
+      "title": "anaiis - In Real Time (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T12:00:12Z",
+      "url": "https://www.youtube.com/watch?v=Eym4VYd6OsM",
+      "thumbnail": "https://i.ytimg.com/vi/Eym4VYd6OsM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "o06k79idM9E",
+      "title": "anaiis - Sunshine (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T12:00:04Z",
+      "url": "https://www.youtube.com/watch?v=o06k79idM9E",
+      "thumbnail": "https://i.ytimg.com/vi/o06k79idM9E/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "fJjg0QykS5Q",
+      "title": "anaiis - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-09T03:31:38Z",
+      "url": "https://www.youtube.com/watch?v=fJjg0QykS5Q",
+      "thumbnail": "https://i.ytimg.com/vi/fJjg0QykS5Q/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "R4qXTklMJTc",
+      "title": "Shabazz Palaces performs \"Tongue In Chic\" & more Live on KEXP",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-06T18:03:38Z",
+      "url": "https://www.youtube.com/watch?v=R4qXTklMJTc",
+      "thumbnail": "https://i.ytimg.com/vi/R4qXTklMJTc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "V8KJ89LFjD8",
+      "title": "Shabazz Palaces - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-06T16:00:24Z",
+      "url": "https://www.youtube.com/watch?v=V8KJ89LFjD8",
+      "thumbnail": "https://i.ytimg.com/vi/V8KJ89LFjD8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "DAaFOY4fc00",
+      "title": "Shabazz Palaces - An Echo From The Hosts That Profess Infinitum (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-06T12:00:27Z",
+      "url": "https://www.youtube.com/watch?v=DAaFOY4fc00",
+      "thumbnail": "https://i.ytimg.com/vi/DAaFOY4fc00/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "1pfZ-p2A-8c",
+      "title": "Shabazz Palaces - Are You…Can You… Were You? (Felt) (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-06T12:00:21Z",
+      "url": "https://www.youtube.com/watch?v=1pfZ-p2A-8c",
+      "thumbnail": "https://i.ytimg.com/vi/1pfZ-p2A-8c/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "0-N61rZsowk",
+      "title": "Shabazz Palaces - Jheri Curl Jump (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-06T12:00:14Z",
+      "url": "https://www.youtube.com/watch?v=0-N61rZsowk",
+      "thumbnail": "https://i.ytimg.com/vi/0-N61rZsowk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "FToJTq6fMgQ",
+      "title": "Shabazz Palaces - Tongue In Chic (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-06T12:00:14Z",
+      "url": "https://www.youtube.com/watch?v=FToJTq6fMgQ",
+      "thumbnail": "https://i.ytimg.com/vi/FToJTq6fMgQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "4Z2a2Iaj48M",
+      "title": "Olive Jones performs Mary for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-11-06T10:27:38Z",
+      "url": "https://www.youtube.com/watch?v=4Z2a2Iaj48M",
+      "thumbnail": "https://i.ytimg.com/vi/4Z2a2Iaj48M/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "QAN9tM68JlM",
+      "title": "Hargiuem Zaboy performs \"Whoa!!!\" & more Live on KEXP at AXEAN Festival",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T18:05:25Z",
+      "url": "https://www.youtube.com/watch?v=QAN9tM68JlM",
+      "thumbnail": "https://i.ytimg.com/vi/QAN9tM68JlM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "u-pJE8Udvpg",
+      "title": "Hariguem Zaboy - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T16:00:22Z",
+      "url": "https://www.youtube.com/watch?v=u-pJE8Udvpg",
+      "thumbnail": "https://i.ytimg.com/vi/u-pJE8Udvpg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "_kWuO8rN-hE",
+      "title": "Hariguem Zaboy - Radio Burst (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T14:00:36Z",
+      "url": "https://www.youtube.com/watch?v=_kWuO8rN-hE",
+      "thumbnail": "https://i.ytimg.com/vi/_kWuO8rN-hE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "jJZ7ZeS06NQ",
+      "title": "Hariguem Zaboy - Roomful Of Cool (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T12:00:39Z",
+      "url": "https://www.youtube.com/watch?v=jJZ7ZeS06NQ",
+      "thumbnail": "https://i.ytimg.com/vi/jJZ7ZeS06NQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "ewRuCAeb1EU",
+      "title": "Hariguem Zaboy - This Kind Of Meth (Make You Confess) (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T12:00:34Z",
+      "url": "https://www.youtube.com/watch?v=ewRuCAeb1EU",
+      "thumbnail": "https://i.ytimg.com/vi/ewRuCAeb1EU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "9utHd3OrPeE",
+      "title": "Hariguem Zaboy - Christine Thompson (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T12:00:17Z",
+      "url": "https://www.youtube.com/watch?v=9utHd3OrPeE",
+      "thumbnail": "https://i.ytimg.com/vi/9utHd3OrPeE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "wj7Hkryx7hg",
+      "title": "Hariguem Zaboy - Whoa!!! (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-05T12:00:10Z",
+      "url": "https://www.youtube.com/watch?v=wj7Hkryx7hg",
+      "thumbnail": "https://i.ytimg.com/vi/wj7Hkryx7hg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "dF4A4uB5Scs",
+      "title": "sub:shaman performs \"eat my tongue\" & more Live on KEXP",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T18:04:19Z",
+      "url": "https://www.youtube.com/watch?v=dF4A4uB5Scs",
+      "thumbnail": "https://i.ytimg.com/vi/dF4A4uB5Scs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "u1GtMLZMlDA",
+      "title": "Ella Red - Ball & Chain | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-11-04T18:00:23Z",
+      "url": "https://www.youtube.com/watch?v=u1GtMLZMlDA",
+      "thumbnail": "https://i.ytimg.com/vi/u1GtMLZMlDA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "19oaAYqgiU0",
+      "title": "Ella Red - Aphrodite | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-11-04T18:00:22Z",
+      "url": "https://www.youtube.com/watch?v=19oaAYqgiU0",
+      "thumbnail": "https://i.ytimg.com/vi/19oaAYqgiU0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "S2maODnQWGk",
+      "title": "#AltPop Ella Red on Audiotree Live - OUT NOW",
+      "channel_title": "Audiotree",
+      "published_at": "2026-11-04T18:00:22Z",
+      "url": "https://www.youtube.com/watch?v=S2maODnQWGk",
+      "thumbnail": "https://i.ytimg.com/vi/S2maODnQWGk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "fPnkAfXeArM",
+      "title": "Ella Red on Audiotree Live (Full Session)",
+      "channel_title": "Audiotree",
+      "published_at": "2026-11-04T18:00:10Z",
+      "url": "https://www.youtube.com/watch?v=fPnkAfXeArM",
+      "thumbnail": "https://i.ytimg.com/vi/fPnkAfXeArM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "AjoHm2q6jos",
+      "title": "Ella Red - I Like You Best | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-11-04T18:00:02Z",
+      "url": "https://www.youtube.com/watch?v=AjoHm2q6jos",
+      "thumbnail": "https://i.ytimg.com/vi/AjoHm2q6jos/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "paFAQKmmBuk",
+      "title": "Ella Red - He Asked For It | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-11-04T18:00:02Z",
+      "url": "https://www.youtube.com/watch?v=paFAQKmmBuk",
+      "thumbnail": "https://i.ytimg.com/vi/paFAQKmmBuk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "GXVZMiDbtiM",
+      "title": "sub:shaman - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T16:00:20Z",
+      "url": "https://www.youtube.com/watch?v=GXVZMiDbtiM",
+      "thumbnail": "https://i.ytimg.com/vi/GXVZMiDbtiM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "GNOjXB9p2_s",
+      "title": "sub:shaman - eat my tongue (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T14:00:30Z",
+      "url": "https://www.youtube.com/watch?v=GNOjXB9p2_s",
+      "thumbnail": "https://i.ytimg.com/vi/GNOjXB9p2_s/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "5tFv_E2WQes",
+      "title": "sub:shaman - Apnea (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T14:00:11Z",
+      "url": "https://www.youtube.com/watch?v=5tFv_E2WQes",
+      "thumbnail": "https://i.ytimg.com/vi/5tFv_E2WQes/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "ZXHLCAsaWxs",
+      "title": "sub:shaman - Maraschino Mist (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T12:00:36Z",
+      "url": "https://www.youtube.com/watch?v=ZXHLCAsaWxs",
+      "thumbnail": "https://i.ytimg.com/vi/ZXHLCAsaWxs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "RWuwrCEuWzQ",
+      "title": "sub:shaman - understanza (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T12:00:25Z",
+      "url": "https://www.youtube.com/watch?v=RWuwrCEuWzQ",
+      "thumbnail": "https://i.ytimg.com/vi/RWuwrCEuWzQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "9B2gFoQsZdo",
+      "title": "sub:shaman - cheshire cat (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T12:00:24Z",
+      "url": "https://www.youtube.com/watch?v=9B2gFoQsZdo",
+      "thumbnail": "https://i.ytimg.com/vi/9B2gFoQsZdo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "4KaSeHIsvS4",
+      "title": "sub:shaman - choke well (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-04T12:00:21Z",
+      "url": "https://www.youtube.com/watch?v=4KaSeHIsvS4",
+      "thumbnail": "https://i.ytimg.com/vi/4KaSeHIsvS4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "sDML3J45M9w",
+      "title": "Çudamani performs \"Rerejangan\" & more Live on KEXP at AXEAN Festival",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-03T19:31:48Z",
+      "url": "https://www.youtube.com/watch?v=sDML3J45M9w",
+      "thumbnail": "https://i.ytimg.com/vi/sDML3J45M9w/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "BWyrhKi-0Ck",
+      "title": "Çudamani - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-03T16:00:26Z",
+      "url": "https://www.youtube.com/watch?v=BWyrhKi-0Ck",
+      "thumbnail": "https://i.ytimg.com/vi/BWyrhKi-0Ck/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "V8HVygM1Z6I",
+      "title": "Çudamani - Rerejangan (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-03T12:00:38Z",
+      "url": "https://www.youtube.com/watch?v=V8HVygM1Z6I",
+      "thumbnail": "https://i.ytimg.com/vi/V8HVygM1Z6I/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "CJkwHp-IxOY",
+      "title": "Çudamani - Lipi Lengis (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-03T12:00:35Z",
+      "url": "https://www.youtube.com/watch?v=CJkwHp-IxOY",
+      "thumbnail": "https://i.ytimg.com/vi/CJkwHp-IxOY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "HlttcDh5EeA",
+      "title": "Çudamani - Rejang Lente (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-03T12:00:11Z",
+      "url": "https://www.youtube.com/watch?v=HlttcDh5EeA",
+      "thumbnail": "https://i.ytimg.com/vi/HlttcDh5EeA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "C1Rz7nEmchk",
+      "title": "Çudamani - Sekar Gadung (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-03T12:00:00Z",
+      "url": "https://www.youtube.com/watch?v=C1Rz7nEmchk",
+      "thumbnail": "https://i.ytimg.com/vi/C1Rz7nEmchk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "FirUOSC-_RQ",
+      "title": "Chanpan performs \"buzzin\" & more Live on KEXP",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-02T18:05:27Z",
+      "url": "https://www.youtube.com/watch?v=FirUOSC-_RQ",
+      "thumbnail": "https://i.ytimg.com/vi/FirUOSC-_RQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "dW_7LAB1zF8",
+      "title": "Chanpan - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-02T16:00:21Z",
+      "url": "https://www.youtube.com/watch?v=dW_7LAB1zF8",
+      "thumbnail": "https://i.ytimg.com/vi/dW_7LAB1zF8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "bVwSZQPjRYE",
+      "title": "Chanpan - romantic (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-02T12:00:39Z",
+      "url": "https://www.youtube.com/watch?v=bVwSZQPjRYE",
+      "thumbnail": "https://i.ytimg.com/vi/bVwSZQPjRYE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "mxLJxKfrCeM",
+      "title": "Chanpan - buzzin (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-02T12:00:29Z",
+      "url": "https://www.youtube.com/watch?v=mxLJxKfrCeM",
+      "thumbnail": "https://i.ytimg.com/vi/mxLJxKfrCeM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "P-a0yWL-u98",
+      "title": "Chanpan - endlessly (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-02T12:00:16Z",
+      "url": "https://www.youtube.com/watch?v=P-a0yWL-u98",
+      "thumbnail": "https://i.ytimg.com/vi/P-a0yWL-u98/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "e2eFWYYWdV0",
+      "title": "Chanpan - speculations (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-11-02T12:00:16Z",
+      "url": "https://www.youtube.com/watch?v=e2eFWYYWdV0",
+      "thumbnail": "https://i.ytimg.com/vi/e2eFWYYWdV0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "GefvKVW2-ig",
+      "title": "Russian Circles performs \"Eluvial\" & more Live on KEXP",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-30T17:05:08Z",
+      "url": "https://www.youtube.com/watch?v=GefvKVW2-ig",
+      "thumbnail": "https://i.ytimg.com/vi/GefvKVW2-ig/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "egDlxXlgfH8",
+      "title": "Russian Circles - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-30T15:13:27Z",
+      "url": "https://www.youtube.com/watch?v=egDlxXlgfH8",
+      "thumbnail": "https://i.ytimg.com/vi/egDlxXlgfH8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "ZLSqIZsRj8M",
+      "title": "Russian Circles - Empath (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-30T11:00:23Z",
+      "url": "https://www.youtube.com/watch?v=ZLSqIZsRj8M",
+      "thumbnail": "https://i.ytimg.com/vi/ZLSqIZsRj8M/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "FL0SBcKsMqg",
+      "title": "Russian Circles - Deficit (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-30T11:00:19Z",
+      "url": "https://www.youtube.com/watch?v=FL0SBcKsMqg",
+      "thumbnail": "https://i.ytimg.com/vi/FL0SBcKsMqg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "7mMkQXFbMsc",
+      "title": "Russian Circles - Eluvial (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-30T11:00:18Z",
+      "url": "https://www.youtube.com/watch?v=7mMkQXFbMsc",
+      "thumbnail": "https://i.ytimg.com/vi/7mMkQXFbMsc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "_rsT45DtcAI",
+      "title": "Russian Circles - Harper Lewis (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-30T11:00:18Z",
+      "url": "https://www.youtube.com/watch?v=_rsT45DtcAI",
+      "thumbnail": "https://i.ytimg.com/vi/_rsT45DtcAI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "qQidG4OpvqU",
+      "title": "Basajan performs \"Budak Leutik Bisa Ngapung\" & more Live on KEXP at AXEAN Festival",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-29T17:11:01Z",
+      "url": "https://www.youtube.com/watch?v=qQidG4OpvqU",
+      "thumbnail": "https://i.ytimg.com/vi/qQidG4OpvqU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "YdSY5DPq9n4",
+      "title": "Basajan - Full Performance (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-29T15:00:19Z",
+      "url": "https://www.youtube.com/watch?v=YdSY5DPq9n4",
+      "thumbnail": "https://i.ytimg.com/vi/YdSY5DPq9n4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "MJYbHo6VG_c",
+      "title": "Basajan - Waas (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-29T13:00:29Z",
+      "url": "https://www.youtube.com/watch?v=MJYbHo6VG_c",
+      "thumbnail": "https://i.ytimg.com/vi/MJYbHo6VG_c/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "8-FkJpU3JqY",
+      "title": "Basajan - Panonpoé (Live on KEXP) (Live on KEXP)",
+      "channel_title": "KEXP",
+      "published_at": "2026-10-29T11:00:36Z",
+      "url": "https://www.youtube.com/watch?v=8-FkJpU3JqY",
+      "thumbnail": "https://i.ytimg.com/vi/8-FkJpU3JqY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC3I2GFN_F8WudD_2jUZbojA"
+    },
+    {
+      "video_id": "mRKEU40vScM",
+      "title": "Novulent - inner peace | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:37Z",
+      "url": "https://www.youtube.com/watch?v=mRKEU40vScM",
+      "thumbnail": "https://i.ytimg.com/vi/mRKEU40vScM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "jl5_L9TvsT4",
+      "title": "Novulent - scars | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:35Z",
+      "url": "https://www.youtube.com/watch?v=jl5_L9TvsT4",
+      "thumbnail": "https://i.ytimg.com/vi/jl5_L9TvsT4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "l-8COAyWUu4",
+      "title": "#Shoegaze Novulent on Audiotree Live - OUT NOW",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:33Z",
+      "url": "https://www.youtube.com/watch?v=l-8COAyWUu4",
+      "thumbnail": "https://i.ytimg.com/vi/l-8COAyWUu4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "1KEiy1xHnoE",
+      "title": "Novulent - unknown feelings | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:32Z",
+      "url": "https://www.youtube.com/watch?v=1KEiy1xHnoE",
+      "thumbnail": "https://i.ytimg.com/vi/1KEiy1xHnoE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "PEHa128K1HA",
+      "title": "Novulent - cursed | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:32Z",
+      "url": "https://www.youtube.com/watch?v=PEHa128K1HA",
+      "thumbnail": "https://i.ytimg.com/vi/PEHa128K1HA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "Z7ayGje5MAM",
+      "title": "Novulent - molly and sex | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:32Z",
+      "url": "https://www.youtube.com/watch?v=Z7ayGje5MAM",
+      "thumbnail": "https://i.ytimg.com/vi/Z7ayGje5MAM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "YwZLa7C8GEk",
+      "title": "Novulent - euphoria | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:23Z",
+      "url": "https://www.youtube.com/watch?v=YwZLa7C8GEk",
+      "thumbnail": "https://i.ytimg.com/vi/YwZLa7C8GEk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "r9OjK4H8PDM",
+      "title": "Novulent on Audiotree Live (Full Session)",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:08Z",
+      "url": "https://www.youtube.com/watch?v=r9OjK4H8PDM",
+      "thumbnail": "https://i.ytimg.com/vi/r9OjK4H8PDM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "vVnAJDFge1A",
+      "title": "Novulent - savior | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-26T17:00:03Z",
+      "url": "https://www.youtube.com/watch?v=vVnAJDFge1A",
+      "thumbnail": "https://i.ytimg.com/vi/vVnAJDFge1A/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "sy7YbXvQCeg",
+      "title": "#Metalcore Downswing on Audiotree Live - OUT NOW",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:39Z",
+      "url": "https://www.youtube.com/watch?v=sy7YbXvQCeg",
+      "thumbnail": "https://i.ytimg.com/vi/sy7YbXvQCeg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "9pgqUUMQksc",
+      "title": "Downswing - Serpent | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:32Z",
+      "url": "https://www.youtube.com/watch?v=9pgqUUMQksc",
+      "thumbnail": "https://i.ytimg.com/vi/9pgqUUMQksc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "xx6BvPj_a4g",
+      "title": "Downswing - For What It's Worth | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:28Z",
+      "url": "https://www.youtube.com/watch?v=xx6BvPj_a4g",
+      "thumbnail": "https://i.ytimg.com/vi/xx6BvPj_a4g/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "OrYMMTDhDu4",
+      "title": "Downswing - Too Little Too Late | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:23Z",
+      "url": "https://www.youtube.com/watch?v=OrYMMTDhDu4",
+      "thumbnail": "https://i.ytimg.com/vi/OrYMMTDhDu4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "pHcznd3JPIM",
+      "title": "Downswing - Emptiness Remains | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:16Z",
+      "url": "https://www.youtube.com/watch?v=pHcznd3JPIM",
+      "thumbnail": "https://i.ytimg.com/vi/pHcznd3JPIM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "bDtZqIWWmwY",
+      "title": "Downswing on Audiotree Live (Full Session)",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:09Z",
+      "url": "https://www.youtube.com/watch?v=bDtZqIWWmwY",
+      "thumbnail": "https://i.ytimg.com/vi/bDtZqIWWmwY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "68cIylLLS1I",
+      "title": "Downswing - No God To Me | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-21T17:00:00Z",
+      "url": "https://www.youtube.com/watch?v=68cIylLLS1I",
+      "thumbnail": "https://i.ytimg.com/vi/68cIylLLS1I/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "rtTTQuBSBd4",
+      "title": "#IndieRock Penelope Road on Audiotree Live - OUT NOW",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-20T17:00:34Z",
+      "url": "https://www.youtube.com/watch?v=rtTTQuBSBd4",
+      "thumbnail": "https://i.ytimg.com/vi/rtTTQuBSBd4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "fj65AZWZeTw",
+      "title": "Penelope Road - Tired of Love | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-20T17:00:30Z",
+      "url": "https://www.youtube.com/watch?v=fj65AZWZeTw",
+      "thumbnail": "https://i.ytimg.com/vi/fj65AZWZeTw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "xSYEZE5T1bw",
+      "title": "Penelope Road - MIA | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-20T17:00:29Z",
+      "url": "https://www.youtube.com/watch?v=xSYEZE5T1bw",
+      "thumbnail": "https://i.ytimg.com/vi/xSYEZE5T1bw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "RY1Gx86bMu8",
+      "title": "Penelope Road on Audiotree Live (Full Session)",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-20T17:00:07Z",
+      "url": "https://www.youtube.com/watch?v=RY1Gx86bMu8",
+      "thumbnail": "https://i.ytimg.com/vi/RY1Gx86bMu8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "aWcddPpAWR4",
+      "title": "Penelope Road - I Wanna Know | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-20T17:00:07Z",
+      "url": "https://www.youtube.com/watch?v=aWcddPpAWR4",
+      "thumbnail": "https://i.ytimg.com/vi/aWcddPpAWR4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "TxzMeKWTmyg",
+      "title": "Penelope Road - comedown | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-20T17:00:06Z",
+      "url": "https://www.youtube.com/watch?v=TxzMeKWTmyg",
+      "thumbnail": "https://i.ytimg.com/vi/TxzMeKWTmyg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    },
+    {
+      "video_id": "q-NPxaRwauY",
+      "title": "Ra Ra Viper - Sister | Audiotree Live",
+      "channel_title": "Audiotree",
+      "published_at": "2026-10-19T17:00:38Z",
+      "url": "https://www.youtube.com/watch?v=q-NPxaRwauY",
+      "thumbnail": "https://i.ytimg.com/vi/q-NPxaRwauY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCWjmAUHmajb1-eo5WKk_22A"
+    }
+  ],
+  "match_count": 206
+}

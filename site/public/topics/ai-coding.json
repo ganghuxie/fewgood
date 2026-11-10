@@ -1,0 +1,811 @@
+{
+  "topic_id": "ai-coding",
+  "canonical_name": "AI 编程",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "ai",
+  "videos": [
+    {
+      "video_id": "whnDiwcL4HE",
+      "title": "Why Nobody Has Solved Continual Learning",
+      "channel_title": "LangChain",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=whnDiwcL4HE",
+      "thumbnail": "https://i.ytimg.com/vi/whnDiwcL4HE/mqdefault.jpg",
+      "duration_seconds": 1175,
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw"
+    },
+    {
+      "video_id": "rSWiNE92xqM",
+      "title": "GitHub’s Growth: 225M Developers, 34.3B Commits — Jay Parikh, EVP of CoreAI, Microsoft",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rSWiNE92xqM",
+      "thumbnail": "https://i.ytimg.com/vi/rSWiNE92xqM/mqdefault.jpg",
+      "duration_seconds": 1395,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "LL0YmIyBKSU",
+      "title": "⚡️ The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=LL0YmIyBKSU",
+      "thumbnail": "https://i.ytimg.com/vi/LL0YmIyBKSU/mqdefault.jpg",
+      "duration_seconds": 2088,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "OLqP8jxJ0Wc",
+      "title": "My Jev Pi Durable Agent CURATES News: HYPE, FACT, or SIGNAL",
+      "channel_title": "IndyDevDan",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OLqP8jxJ0Wc",
+      "thumbnail": "https://i.ytimg.com/vi/OLqP8jxJ0Wc/mqdefault.jpg",
+      "duration_seconds": 1354,
+      "channel_id": "UC_x36zCEGilGpB1m-V4gmjg"
+    },
+    {
+      "video_id": "DNDYYHsypZg",
+      "title": "Pi Durable PROACTIVE Agents: Jev Triggers My ON-CALL Pi Agent",
+      "channel_title": "IndyDevDan",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DNDYYHsypZg",
+      "thumbnail": "https://i.ytimg.com/vi/DNDYYHsypZg/mqdefault.jpg",
+      "duration_seconds": 2116,
+      "channel_id": "UC_x36zCEGilGpB1m-V4gmjg"
+    },
+    {
+      "video_id": "cCEAQiueLwo",
+      "title": "Datacenter at Home - GB300 GPU - w/ Asus DGX Station (ET900N G3)",
+      "channel_title": "sentdex",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cCEAQiueLwo",
+      "thumbnail": "https://i.ytimg.com/vi/cCEAQiueLwo/mqdefault.jpg",
+      "duration_seconds": 1645,
+      "channel_id": "UCfzlCWGWYyIQ0aLC5w48gBQ"
+    },
+    {
+      "video_id": "EaOit1mmR9g",
+      "title": "How Financial Planners With Zero Coding Experience Built Their Own Agents - Matt Ragone, Range",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EaOit1mmR9g",
+      "thumbnail": "https://i.ytimg.com/vi/EaOit1mmR9g/mqdefault.jpg",
+      "duration_seconds": 969,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "BT1Mo-fD-g0",
+      "title": "Your Coding Agent Can't Undo Its Own Mistakes - Tanmay Sah & Dolly Sah",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BT1Mo-fD-g0",
+      "thumbnail": "https://i.ytimg.com/vi/BT1Mo-fD-g0/mqdefault.jpg",
+      "duration_seconds": 998,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "ZJjRgvjhq3M",
+      "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZJjRgvjhq3M",
+      "thumbnail": "https://i.ytimg.com/vi/ZJjRgvjhq3M/mqdefault.jpg",
+      "duration_seconds": 6632,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "maitMe9HCvw",
+      "title": "How to Get Frontier Coding Results at 70% Lower Cost - Nouha Dziri, Cohere",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=maitMe9HCvw",
+      "thumbnail": "https://i.ytimg.com/vi/maitMe9HCvw/mqdefault.jpg",
+      "duration_seconds": 1882,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "pz74r-4dGfQ",
+      "title": "Your AI Agent Is Hiding Its Mistakes From You - Ben Holmes, Warp",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=pz74r-4dGfQ",
+      "thumbnail": "https://i.ytimg.com/vi/pz74r-4dGfQ/mqdefault.jpg",
+      "duration_seconds": 1160,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "ys6YQ2yfBpM",
+      "title": "Your Old Prompts Are Making Claude Worse - Lance Martin, Anthropic",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ys6YQ2yfBpM",
+      "thumbnail": "https://i.ytimg.com/vi/ys6YQ2yfBpM/mqdefault.jpg",
+      "duration_seconds": 3843,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "y9Sg--RDtks",
+      "title": "当我们什么都能做，还知道自己想做什么吗？When We Can Do Anything, Do We Still Know What We Want? — Ryo Lu, ex-Cursor",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=y9Sg--RDtks",
+      "thumbnail": "https://i.ytimg.com/vi/y9Sg--RDtks/mqdefault.jpg",
+      "duration_seconds": 1385,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "AYFcmnQrZCg",
+      "title": "AI Agents Will Upend Investing Even More Than Coding - Frank Long, Coatue",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AYFcmnQrZCg",
+      "thumbnail": "https://i.ytimg.com/vi/AYFcmnQrZCg/mqdefault.jpg",
+      "duration_seconds": 845,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "XIHZpZtYCzo",
+      "title": "Your AI Agents Shouldn't Care Where They Run - Nikhil Harithas, Factory",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=XIHZpZtYCzo",
+      "thumbnail": "https://i.ytimg.com/vi/XIHZpZtYCzo/mqdefault.jpg",
+      "duration_seconds": 1033,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "geMAe-PLJF4",
+      "title": "I Made a Fruit Fly Review My Code - Nick Nisi, WorkOS",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=geMAe-PLJF4",
+      "thumbnail": "https://i.ytimg.com/vi/geMAe-PLJF4/mqdefault.jpg",
+      "duration_seconds": 997,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "YX4Z4XqZ9Vo",
+      "title": "Most of Your Docs Readers Are Now AI Agents - Hahnbee Lee, Mintlify & Lincoln Murr, Coinbase",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YX4Z4XqZ9Vo",
+      "thumbnail": "https://i.ytimg.com/vi/YX4Z4XqZ9Vo/mqdefault.jpg",
+      "duration_seconds": 1132,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "9-Y_oS9OBLc",
+      "title": "When Running Your Own AI Models Beats Paying for APIs - Steven Latré, imec",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9-Y_oS9OBLc",
+      "thumbnail": "https://i.ytimg.com/vi/9-Y_oS9OBLc/mqdefault.jpg",
+      "duration_seconds": 1110,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "I5VxMzaBD6s",
+      "title": "What is the Future of IDEs?",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=I5VxMzaBD6s",
+      "thumbnail": "https://i.ytimg.com/vi/I5VxMzaBD6s/mqdefault.jpg",
+      "duration_seconds": 871,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "OrcsMi2-IcM",
+      "title": "NEW DeepSeek Harness -  Super Agent!",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OrcsMi2-IcM",
+      "thumbnail": "https://i.ytimg.com/vi/OrcsMi2-IcM/mqdefault.jpg",
+      "duration_seconds": 1073,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "BsfjQDSeTwI",
+      "title": "Flint - The First RSI Coding Model?",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BsfjQDSeTwI",
+      "thumbnail": "https://i.ytimg.com/vi/BsfjQDSeTwI/mqdefault.jpg",
+      "duration_seconds": 1133,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "4iK_UFzW6Zw",
+      "title": "Gemini 4 Argon - Out and Tested!!",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=4iK_UFzW6Zw",
+      "thumbnail": "https://i.ytimg.com/vi/4iK_UFzW6Zw/mqdefault.jpg",
+      "duration_seconds": 679,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "hgLI491ajG0",
+      "title": "I Tried 100+ AI Tools. These 7 Are the Best",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hgLI491ajG0",
+      "thumbnail": "https://i.ytimg.com/vi/hgLI491ajG0/mqdefault.jpg",
+      "duration_seconds": 616,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "HhZdNYI4pJs",
+      "title": "I Tried 100+ Github Repos for Claude. These 6 Are the Best",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=HhZdNYI4pJs",
+      "thumbnail": "https://i.ytimg.com/vi/HhZdNYI4pJs/mqdefault.jpg",
+      "duration_seconds": 637,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "B3_Ftfhkzz0",
+      "title": "well this is bad",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=B3_Ftfhkzz0",
+      "thumbnail": "https://i.ytimg.com/vi/B3_Ftfhkzz0/mqdefault.jpg",
+      "duration_seconds": 748,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "S79u6BtYvQ0",
+      "title": "The Greatest Business Ever?",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=S79u6BtYvQ0",
+      "thumbnail": "https://i.ytimg.com/vi/S79u6BtYvQ0/mqdefault.jpg",
+      "duration_seconds": 2758,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "Ka0p5tUUmgg",
+      "title": "This is Crazy",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Ka0p5tUUmgg",
+      "thumbnail": "https://i.ytimg.com/vi/Ka0p5tUUmgg/mqdefault.jpg",
+      "duration_seconds": 688,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "Bye5avxGMKM",
+      "title": "Programming Laws Tier list | TheStandup",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Bye5avxGMKM",
+      "thumbnail": "https://i.ytimg.com/vi/Bye5avxGMKM/mqdefault.jpg",
+      "duration_seconds": 3036,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "9OahTki4cPA",
+      "title": "OpenCode got hacked",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9OahTki4cPA",
+      "thumbnail": "https://i.ytimg.com/vi/9OahTki4cPA/mqdefault.jpg",
+      "duration_seconds": 772,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "O905JwSgoi4",
+      "title": "There Is No Way This Is Real",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=O905JwSgoi4",
+      "thumbnail": "https://i.ytimg.com/vi/O905JwSgoi4/mqdefault.jpg",
+      "duration_seconds": 512,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "y2C0Zpnl6p0",
+      "title": "Programmers vs Dream's Fake Manhunts | TheStandup",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=y2C0Zpnl6p0",
+      "thumbnail": "https://i.ytimg.com/vi/y2C0Zpnl6p0/mqdefault.jpg",
+      "duration_seconds": 3875,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "dBCLS8myarc",
+      "title": "🚨🚨 Vibe Coding WoW Forever Mods With Esfand🚨🚨",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=dBCLS8myarc",
+      "thumbnail": "https://i.ytimg.com/vi/dBCLS8myarc/mqdefault.jpg",
+      "duration_seconds": 9895,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "5WyoCv68Sok",
+      "title": "The Real Reason",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5WyoCv68Sok",
+      "thumbnail": "https://i.ytimg.com/vi/5WyoCv68Sok/mqdefault.jpg",
+      "duration_seconds": 785,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "ASY_H2nLG8g",
+      "title": "Anthropic says No More",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ASY_H2nLG8g",
+      "thumbnail": "https://i.ytimg.com/vi/ASY_H2nLG8g/mqdefault.jpg",
+      "duration_seconds": 637,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "FlWII9xFabo",
+      "title": "It’s not just you",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=FlWII9xFabo",
+      "thumbnail": "https://i.ytimg.com/vi/FlWII9xFabo/mqdefault.jpg",
+      "duration_seconds": 1120,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "s95Q7D0WR40",
+      "title": "AI Is Decompiling Every Game | TheStandup",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=s95Q7D0WR40",
+      "thumbnail": "https://i.ytimg.com/vi/s95Q7D0WR40/mqdefault.jpg",
+      "duration_seconds": 2385,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "WXh4LF3zJ1Q",
+      "title": "The Mathematics are Mad",
+      "channel_title": "The PrimeTime",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=WXh4LF3zJ1Q",
+      "thumbnail": "https://i.ytimg.com/vi/WXh4LF3zJ1Q/mqdefault.jpg",
+      "duration_seconds": 1059,
+      "channel_id": "UCUyeluBRhGPCW4rPe_UvBZQ"
+    },
+    {
+      "video_id": "ep4psgAFOqc",
+      "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ep4psgAFOqc",
+      "thumbnail": "https://i.ytimg.com/vi/ep4psgAFOqc/mqdefault.jpg",
+      "duration_seconds": 1965,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "AtjFk9f44HE",
+      "title": "He Built an AI Board of Billionaires (Free & Open-Source)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AtjFk9f44HE",
+      "thumbnail": "https://i.ytimg.com/vi/AtjFk9f44HE/mqdefault.jpg",
+      "duration_seconds": 2290,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "TVRCcMlvR10",
+      "title": "AI News: 24 Things You Need To Know This Week",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TVRCcMlvR10",
+      "thumbnail": "https://i.ytimg.com/vi/TVRCcMlvR10/mqdefault.jpg",
+      "duration_seconds": 1618,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "KGcuuhqmPhI",
+      "title": "AI News: 6 New Models & A Nano Banana Killer",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KGcuuhqmPhI",
+      "thumbnail": "https://i.ytimg.com/vi/KGcuuhqmPhI/mqdefault.jpg",
+      "duration_seconds": 1868,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "eBszYxzE2dk",
+      "title": "Google Just Caught Up (Gemini-4 Argon)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=eBszYxzE2dk",
+      "thumbnail": "https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg",
+      "duration_seconds": 1240,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "NUizyuGj-kE",
+      "title": "AI News: Haiku-5.5, Visual ChatGPT, Grok's New Trick, and more!",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NUizyuGj-kE",
+      "thumbnail": "https://i.ytimg.com/vi/NUizyuGj-kE/mqdefault.jpg",
+      "duration_seconds": 2128,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "o5iRKvXZEcY",
+      "title": "Claude Reverse Engineered Two 3DS Games to Add Real 3D",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=o5iRKvXZEcY",
+      "thumbnail": "https://i.ytimg.com/vi/o5iRKvXZEcY/mqdefault.jpg",
+      "duration_seconds": 1156,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "6Il7tudXo1E",
+      "title": "GPT-6.1 Terra vs Claude 5.5: Same Prompt, Not Even Close",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=6Il7tudXo1E",
+      "thumbnail": "https://i.ytimg.com/vi/6Il7tudXo1E/mqdefault.jpg",
+      "duration_seconds": 1258,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "B0HN9kLxf7A",
+      "title": "Claude Rebuilt This AI Video in Unreal Engine (Zero Imported Assets)",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=B0HN9kLxf7A",
+      "thumbnail": "https://i.ytimg.com/vi/B0HN9kLxf7A/mqdefault.jpg",
+      "duration_seconds": 1128,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "nexQA1qdExw",
+      "title": "TORNADO Mod in Red Dead Redemption 2",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nexQA1qdExw",
+      "thumbnail": "https://i.ytimg.com/vi/nexQA1qdExw/mqdefault.jpg",
+      "duration_seconds": 1226,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "RYIV5E2Xq60",
+      "title": "I REALLY Want Open Models to Win, But They Just Don't Cut It (Yet)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RYIV5E2Xq60",
+      "thumbnail": "https://i.ytimg.com/vi/RYIV5E2Xq60/mqdefault.jpg",
+      "duration_seconds": 1114,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "YHKuUjicB3M",
+      "title": "My AI Software Factory Ships Hundreds of PRs a Week (Here's How I Manage It)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YHKuUjicB3M",
+      "thumbnail": "https://i.ytimg.com/vi/YHKuUjicB3M/mqdefault.jpg",
+      "duration_seconds": 992,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "BlbxhsItZPg",
+      "title": "Anthropic's New Study: You're Not Controlling AI as Much as You Think You Are",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BlbxhsItZPg",
+      "thumbnail": "https://i.ytimg.com/vi/BlbxhsItZPg/mqdefault.jpg",
+      "duration_seconds": 987,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "qIWB1yMsqRo",
+      "title": "The 4 Components of Every Successful AI Second Brain (Build These Now)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qIWB1yMsqRo",
+      "thumbnail": "https://i.ytimg.com/vi/qIWB1yMsqRo/mqdefault.jpg",
+      "duration_seconds": 1250,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "tNKmMhiOw9w",
+      "title": "Run Your AI Software Factory Like a Real Engineering Org (Here's How)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=tNKmMhiOw9w",
+      "thumbnail": "https://i.ytimg.com/vi/tNKmMhiOw9w/mqdefault.jpg",
+      "duration_seconds": 1118,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "zj1TJlP7c9Y",
+      "title": "AI Makes Us WAY Faster but Fries Our Focus (Here's What I Do About It)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=zj1TJlP7c9Y",
+      "thumbnail": "https://i.ytimg.com/vi/zj1TJlP7c9Y/mqdefault.jpg",
+      "duration_seconds": 981,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "TVhhmhvCovg",
+      "title": "Let Your AI Agent Do ITS OWN Harness Engineering (Here's How)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TVhhmhvCovg",
+      "thumbnail": "https://i.ytimg.com/vi/TVhhmhvCovg/mqdefault.jpg",
+      "duration_seconds": 979,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "GQatuTWSRqY",
+      "title": "My AI Dark Factory Dream Is Dead (Here's What Actually Works)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GQatuTWSRqY",
+      "thumbnail": "https://i.ytimg.com/vi/GQatuTWSRqY/mqdefault.jpg",
+      "duration_seconds": 1156,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "2i_ZyqDmtio",
+      "title": "How I Keep Up with AI Without Drowning in It (Free Skill)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2i_ZyqDmtio",
+      "thumbnail": "https://i.ytimg.com/vi/2i_ZyqDmtio/mqdefault.jpg",
+      "duration_seconds": 856,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "PMOnd8T7Py0",
+      "title": "Is Learning to Build Software Still Worth It with AI? (My Honest Take)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PMOnd8T7Py0",
+      "thumbnail": "https://i.ytimg.com/vi/PMOnd8T7Py0/mqdefault.jpg",
+      "duration_seconds": 958,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "cWjS56edaUA",
+      "title": "Agentic Apps: How Big Companies Are Actually Deploying AI Agents",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cWjS56edaUA",
+      "thumbnail": "https://i.ytimg.com/vi/cWjS56edaUA/mqdefault.jpg",
+      "duration_seconds": 750,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "TFCDWrEBaFM",
+      "title": "How Claude Fixes It's Own Code",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TFCDWrEBaFM",
+      "thumbnail": "https://i.ytimg.com/vi/TFCDWrEBaFM/mqdefault.jpg",
+      "duration_seconds": 2535,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "tc8GNdrhozA",
+      "title": "I can't believe Pewdiepie made this",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=tc8GNdrhozA",
+      "thumbnail": "https://i.ytimg.com/vi/tc8GNdrhozA/mqdefault.jpg",
+      "duration_seconds": 2463,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "xq0eB8vxeqk",
+      "title": "Agents Sucked At UI (Until Today)",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=xq0eB8vxeqk",
+      "thumbnail": "https://i.ytimg.com/vi/xq0eB8vxeqk/mqdefault.jpg",
+      "duration_seconds": 1905,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "Hq2c7pww1Ds",
+      "title": "OpenAI is getting desperate",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Hq2c7pww1Ds",
+      "thumbnail": "https://i.ytimg.com/vi/Hq2c7pww1Ds/mqdefault.jpg",
+      "duration_seconds": 950,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "y5TEATUDDfc",
+      "title": "Anthropic can't stop winning",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=y5TEATUDDfc",
+      "thumbnail": "https://i.ytimg.com/vi/y5TEATUDDfc/mqdefault.jpg",
+      "duration_seconds": 1006,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "ebILGCoN4UU",
+      "title": "My last video about ai harnesses",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ebILGCoN4UU",
+      "thumbnail": "https://i.ytimg.com/vi/ebILGCoN4UU/mqdefault.jpg",
+      "duration_seconds": 2970,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "uLGxb4F3SyI",
+      "title": "T3 Code broke me",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uLGxb4F3SyI",
+      "thumbnail": "https://i.ytimg.com/vi/uLGxb4F3SyI/mqdefault.jpg",
+      "duration_seconds": 2510,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "NBCM_ZoWZo8",
+      "title": "How To Give Claude Unlimited Usage",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NBCM_ZoWZo8",
+      "thumbnail": "https://i.ytimg.com/vi/NBCM_ZoWZo8/mqdefault.jpg",
+      "duration_seconds": 2328,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "FHGfSjDGUIw",
+      "title": "the hard truth about token spend",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=FHGfSjDGUIw",
+      "thumbnail": "https://i.ytimg.com/vi/FHGfSjDGUIw/mqdefault.jpg",
+      "duration_seconds": 2168,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "5Bmp9cz1JN8",
+      "title": "These 3 skills changed my life",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5Bmp9cz1JN8",
+      "thumbnail": "https://i.ytimg.com/vi/5Bmp9cz1JN8/mqdefault.jpg",
+      "duration_seconds": 1838,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "USeyDcWyVCc",
+      "title": "Even The NSA Got Involved",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=USeyDcWyVCc",
+      "thumbnail": "https://i.ytimg.com/vi/USeyDcWyVCc/mqdefault.jpg",
+      "duration_seconds": 1763,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "3OshsLm3_OQ",
+      "title": "Opus 5.5 is proof that we do need smarter models",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3OshsLm3_OQ",
+      "thumbnail": "https://i.ytimg.com/vi/3OshsLm3_OQ/mqdefault.jpg",
+      "duration_seconds": 1873,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "m-B3jIMMmUE",
+      "title": "Your prompts kinda suck",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=m-B3jIMMmUE",
+      "thumbnail": "https://i.ytimg.com/vi/m-B3jIMMmUE/mqdefault.jpg",
+      "duration_seconds": 1908,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "hiI0Vk4NgeY",
+      "title": "Anthropic Rebuilt Git (yes really)",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hiI0Vk4NgeY",
+      "thumbnail": "https://i.ytimg.com/vi/hiI0Vk4NgeY/mqdefault.jpg",
+      "duration_seconds": 2885,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "NE006pkiAnk",
+      "title": "So I've been testing Gemini 4...",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NE006pkiAnk",
+      "thumbnail": "https://i.ytimg.com/vi/NE006pkiAnk/mqdefault.jpg",
+      "duration_seconds": 2310,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "DbWL6Zs2j_g",
+      "title": "Meta just caught up with Anthropic",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DbWL6Zs2j_g",
+      "thumbnail": "https://i.ytimg.com/vi/DbWL6Zs2j_g/mqdefault.jpg",
+      "duration_seconds": 2282,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "vRS2leJLAI0",
+      "title": "I thought AI was gonna get cheaper?",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vRS2leJLAI0",
+      "thumbnail": "https://i.ytimg.com/vi/vRS2leJLAI0/mqdefault.jpg",
+      "duration_seconds": 1098,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "ND_kRgU_WlY",
+      "title": "You can rewrite typescript in rust for $420k",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ND_kRgU_WlY",
+      "thumbnail": "https://i.ytimg.com/vi/ND_kRgU_WlY/mqdefault.jpg",
+      "duration_seconds": 2860,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "oFtTodDCbkE",
+      "title": "7 Things AI Coding Agents Get Wrong (Because You Let Them)",
+      "channel_title": "ArjanCodes",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=oFtTodDCbkE",
+      "thumbnail": "https://i.ytimg.com/vi/oFtTodDCbkE/mqdefault.jpg",
+      "duration_seconds": 836,
+      "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA"
+    },
+    {
+      "video_id": "45MgUX_ih0s",
+      "title": "The Visitor Pattern in Python (And Better Alternatives)",
+      "channel_title": "ArjanCodes",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=45MgUX_ih0s",
+      "thumbnail": "https://i.ytimg.com/vi/45MgUX_ih0s/mqdefault.jpg",
+      "duration_seconds": 728,
+      "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA"
+    },
+    {
+      "video_id": "RHCyTWaRZSk",
+      "title": "7 Python Features That Make Your Code Worse",
+      "channel_title": "ArjanCodes",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RHCyTWaRZSk",
+      "thumbnail": "https://i.ytimg.com/vi/RHCyTWaRZSk/mqdefault.jpg",
+      "duration_seconds": 928,
+      "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA"
+    },
+    {
+      "video_id": "rMvj3HAlTvg",
+      "title": "stop getting hacked: use devvm",
+      "channel_title": "Syntax",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rMvj3HAlTvg",
+      "thumbnail": "https://i.ytimg.com/vi/rMvj3HAlTvg/mqdefault.jpg",
+      "duration_seconds": 1269,
+      "channel_id": "UCyU5wkjgQYGRB0hIHMwm2Sg"
+    }
+  ],
+  "match_count": 251
+}

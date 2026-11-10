@@ -1,0 +1,2323 @@
+{
+  "generated_at": "2026-11-10 17:00:54",
+  "timezone": "Asia/Shanghai",
+  "source_commit": "a968db14fd6636ad3b4af9e95d9afa5a6f7ca8d1",
+  "branch": "v2-space",
+  "min_videos": 8,
+  "revision_notes": [
+    "Removed latin/SEA/kids/Indian film music and generic Official MV.",
+    "Removed programming talks, computing history, math visualized; also dropped programming talks from 全部.",
+    "Deduped cross-category subtopics into a single best-fit category; 全部 aggregates verticals.",
+    "Tightened Lex/generalist gates for 科技与 AI and 人文社会; tightened K-pop against vlog/variety.",
+    "Moved AI 安全与对齐 to needs_fetch due to thin local coverage (15 videos)."
+  ],
+  "inventories": {
+    "ai_pool": {
+      "label": "AI 入池频道已抓取候选（fewgood-r4-raw + 已上架 AI 条目）",
+      "video_count": 2789,
+      "channel_count": 86,
+      "with_tags": 1468,
+      "with_duration": 2784
+    },
+    "podcast_pool": {
+      "label": "播客入池频道已抓取候选（fewgood-podcast-raw）",
+      "video_count": 3664,
+      "channel_count": 38,
+      "with_tags": 2032,
+      "with_duration": 3664
+    },
+    "community_corpus": {
+      "label": "社区推荐已抓取语料（sqlite metadata + videos.json）",
+      "video_count": 3792,
+      "channel_count": 2071,
+      "with_tags": 3191,
+      "with_duration": 3788
+    },
+    "community_selected": {
+      "label": "当前社区推荐精选列表 videos.json",
+      "video_count": 41,
+      "channel_count": 34,
+      "with_tags": 0,
+      "with_duration": 41
+    },
+    "music_local": {
+      "label": "音乐页频道的本地视频（music.json ∪ channels.json 缓存）",
+      "video_count": 3831,
+      "channel_count": 85,
+      "with_tags": 0,
+      "with_duration": 100
+    },
+    "union_curated": {
+      "label": "精选并集：AI 池 ∪ 播客池 ∪ 社区语料 ∪ AI 页",
+      "video_count": 9371,
+      "channel_count": 2164,
+      "with_tags": 6353,
+      "with_duration": 9362
+    },
+    "editorial_ai": {
+      "label": "AI前沿页 ai.json",
+      "video_count": 84,
+      "channel_count": 15,
+      "with_tags": 0,
+      "with_duration": 84
+    },
+    "editorial_podcast": {
+      "label": "播客页 podcast.json（YouTube 热门播客，非精选池）",
+      "video_count": 100,
+      "channel_count": 69,
+      "with_tags": 0,
+      "with_duration": 100
+    },
+    "editorial_music": {
+      "label": "音乐页 music.json",
+      "video_count": 100,
+      "channel_count": 85,
+      "with_tags": 0,
+      "with_duration": 100
+    },
+    "editorial_community": {
+      "label": "社区推荐页 videos.json",
+      "video_count": 41,
+      "channel_count": 34,
+      "with_tags": 0,
+      "with_duration": 41
+    },
+    "editorial_trending": {
+      "label": "全部页 trending.json（YouTube 热门，不作为小主题主计数）",
+      "video_count": 100,
+      "channel_count": 74,
+      "with_tags": 0,
+      "with_duration": 100
+    }
+  },
+  "fetch_budget": {
+    "method": "playlistItems first page of uploads, 1 unit per page",
+    "estimated_unique_units": 52
+  },
+  "categories": [
+    {
+      "id": "trending",
+      "name_zh": "全部",
+      "subtopics": [],
+      "needs_fetch": [],
+      "notes": "「全部」去重后不再单列小主题，产品上聚合各垂类。"
+    },
+    {
+      "id": "ai",
+      "name_zh": "AI前沿",
+      "subtopics": [
+        {
+          "id": "ai-models",
+          "name_zh": "AI 模型与研究",
+          "source": "existing_config",
+          "inventory": "ai_pool",
+          "match": "频道：AI at Meta、Cohere、最佳拍档、Hugging Face、NVIDIA、IBM Technology、Machine Learning Street Talk、AI Explained、Google DeepMind、Lex Fridman 等 25 个频道（入池 subtopics 含 ai-models 或 trusted_channels）；标题或标签含：large language model、LLM、foundation model、reasoning model、AI research、research paper、interpretability、reinforcement learning、pretraining、fine-tuning、scaling law、open-weight…；匹配方式：频道命中或关键词命中；排除：stock to buy、make money、3d model、model kit、fashion model、role model；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "channel_or_terms",
+            "channel_ids": [
+              "UC5qxlwEKM7-5YZudb24l0bg",
+              "UCAKTUy0tz47ZY02DFpxMqoQ",
+              "UCGWYKICLOE8Wxy7q3eYXmPA",
+              "UCHlNU7kIZhRgSbhHvFoy72w",
+              "UCHuiy8bXnmK5nisYHUd1J5g",
+              "UCKWaEZ-_VweaEx1j62do_vQ",
+              "UCMLtBahI5DMrt0NPvDSoIRQ",
+              "UCNJ1Ymd5yFuUPtn21xtRbbw",
+              "UCP7jMXSY2xbc3KCAE0MHQ-A",
+              "UCSHZKyawb77ixDdsGog4iWA",
+              "UCXYvWkR9LAOsOZjYhghDiXw",
+              "UCXZCJLdBC09xxGZ6gcdrc6A",
+              "UCXl4i9dYBrFOabk0xGmbkRA",
+              "UCYO_jab_esuFRV4b17AJtAw",
+              "UC_CzsS7UTjcxJ-xXp1ftxtA",
+              "UCbY9xX3_jW5c2fjlZVBI4cg",
+              "UCbfYPyITQ-7l4upoX8nvctg",
+              "UCcIXc5mJsHVYTZR1maL5l9w",
+              "UCe4jUOmQPKMDvOkzJpDfMRQ",
+              "UCfzlCWGWYyIQ0aLC5w48gBQ",
+              "UCgfe2ooZD3VJPB6aJAnuQng",
+              "UCgiSqzt-AFeQFa6-pAxTIvA",
+              "UCqcbQf6yw5KzRoDDcZ_wBSw",
+              "UCrDwWp7EBBv4NwvScIpBDOA",
+              "UCtAcpQcYerN8xxZJYTfWBMw"
+            ],
+            "channel_note": "入池 subtopics 含 ai-models 或 trusted_channels",
+            "title_or_tags_any": [
+              "large language model",
+              "LLM",
+              "foundation model",
+              "reasoning model",
+              "AI research",
+              "research paper",
+              "interpretability",
+              "reinforcement learning",
+              "pretraining",
+              "fine-tuning",
+              "scaling law",
+              "open-weight",
+              "model release",
+              "模型",
+              "大语言模型"
+            ],
+            "channel_weak_terms": [
+              "benchmark",
+              "transformer",
+              "inference",
+              "评测",
+              "paper",
+              "GPT",
+              "Gemini",
+              "Claude",
+              "Llama",
+              "Qwen",
+              "DeepSeek"
+            ],
+            "exclude_terms": [
+              "stock to buy",
+              "make money",
+              "3d model",
+              "model kit",
+              "fashion model",
+              "role model"
+            ],
+            "min_duration_seconds": 240,
+            "apply_weak_with_channel": true
+          },
+          "channel_count": 36,
+          "video_count": 204,
+          "editorial_video_count": 2,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "_1f-o0nqpEI",
+              "title": "DeepSeek, China, OpenAI, NVIDIA, xAI, TSMC, Stargate, and AI Megaclusters | Lex Fridman Podcast #459",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "-RXD4bTuFTo",
+              "title": "Ryan Greenblatt – What happens once AI can automate AI research?",
+              "channel": "Dwarkesh Patel"
+            },
+            {
+              "id": "MRQTlwcW-aQ",
+              "title": "How Anthropic ships the #1 LLM in the World — with Katelyn Lesse and Angela Jiang",
+              "channel": "Latent Space"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "ai-agents",
+          "name_zh": "AI Agent",
+          "source": "existing_config",
+          "inventory": "ai_pool",
+          "match": "频道：Nate Herk、Sam Witteveen、Gary Chen、回到Axton、LangChain、Prompt Engineering、Hugging Face、AI超元域、IBM Technology、AI Engineer 等 28 个频道（入池 subtopics 含 ai-agents 或 trusted_channels）；标题或标签含：AI agent、AI agents、agentic AI、agentic、MCP、Model Context Protocol、computer use、agent framework、LangGraph、multi-agent、智能体、AI 智能体…；匹配方式：频道命中或关键词命中；排除：real estate agent、travel agent、valorant agent、movie agent、secret agent、insurance agent、agent 007、free agent；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "channel_or_terms",
+            "channel_ids": [
+              "UC2ojq-nuP8ceeHqiroeKhBA",
+              "UC55ODQSvARtgSyc8ThfiepQ",
+              "UC9C3t-3ocL0LiwGRD0gBJ8A",
+              "UCBj9S8TBRlCU4QnhTEOdWZQ",
+              "UCC-lyoTfSrcJzA1ab3APAgw",
+              "UCDq7SjbgRKty5TgGafW8Clg",
+              "UCHlNU7kIZhRgSbhHvFoy72w",
+              "UCIomFkAj4Vq_rGX2Jot7D8A",
+              "UCKWaEZ-_VweaEx1j62do_vQ",
+              "UCLKPca3kwwd-B59HNr-_lvA",
+              "UCMwVTLZIRRUyyVrkjDpn4pA",
+              "UCTulKzR5sldNq2eAxxdaEuA",
+              "UCVHFbqXqoYvEWM1Ddxl0QDg",
+              "UCWN3xxRkmTPmbKwht9FuE5A",
+              "UCXZCJLdBC09xxGZ6gcdrc6A",
+              "UC_x36zCEGilGpB1m-V4gmjg",
+              "UCawZsQWqfGSbCI5yjkdVkTA",
+              "UCcIXc5mJsHVYTZR1maL5l9w",
+              "UCeRjipR4_SsCddq9VZ2AeKg",
+              "UCgLxmJ8xER7Y7sywMN5SfWg",
+              "UCn8ujwUInbJkBhffxqAPBVQ",
+              "UCrXSVX9a1mj8l0CMLwKgMVw",
+              "UCuwpzP90g1LuGk6JUNms_AQ",
+              "UCvKRFNawVcuz4b9ihUTApCg",
+              "UCwAnu01qlnVg1Ai2AbtTMaA",
+              "UCxBcwypKK-W3GHd_RZ9FZrQ",
+              "UCz-Sx71_C4d3AYFBj6e3ENw",
+              "UCzbSuf_A_D8dARJ33HzoDew"
+            ],
+            "channel_note": "入池 subtopics 含 ai-agents 或 trusted_channels",
+            "title_or_tags_any": [
+              "AI agent",
+              "AI agents",
+              "agentic AI",
+              "agentic",
+              "MCP",
+              "Model Context Protocol",
+              "computer use",
+              "agent framework",
+              "LangGraph",
+              "multi-agent",
+              "智能体",
+              "AI 智能体",
+              "Grok Bot",
+              "OpenClaw",
+              "Manus",
+              "AI 團隊",
+              "AI 团队"
+            ],
+            "channel_weak_terms": [
+              "agent",
+              "agents",
+              "tool calling"
+            ],
+            "exclude_terms": [
+              "real estate agent",
+              "travel agent",
+              "valorant agent",
+              "movie agent",
+              "secret agent",
+              "insurance agent",
+              "agent 007",
+              "free agent",
+              "fbi agent"
+            ],
+            "min_duration_seconds": 240,
+            "apply_weak_with_channel": true
+          },
+          "channel_count": 50,
+          "video_count": 376,
+          "editorial_video_count": 22,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "NYFGCESmikA",
+              "title": "DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux | Lex Fridman Podcast #501",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "GXbZc1sHEJY",
+              "title": "React Native Full Course 2026 | Build a Real Airbnb-Style App with AI Agents",
+              "channel": "JavaScript Mastery"
+            },
+            {
+              "id": "XzjSx7u9mGw",
+              "title": "AI Engineering Full Course - Build and Deploy a Real AI App",
+              "channel": "Dave Ebbelaar"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "ai-coding",
+          "name_zh": "AI 编程",
+          "source": "existing_config",
+          "inventory": "ai_pool",
+          "match": "频道：Tina Huang、Cursor、GitHub、freeCodeCamp.org、Apna College、LangChain、AI超元域、AI Engineer、Riley Brown、Cole Medin 等 31 个频道（入池 subtopics 含 ai-coding 或 trusted_channels）；标题或标签含：AI coding、AI code、coding agent、code agent、Cursor、Copilot、Claude Code、Codex、vibe coding、Windsurf、AI IDE、code review agent…；匹配方式：频道命中或关键词命中；排除：learn python、python for beginners、python tutorial、make money with AI；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "channel_or_terms",
+            "channel_ids": [
+              "UC2UXDak6o7rBm23k3Vv5dww",
+              "UC6YYHJzM6PhZ2Yey9BQiUaw",
+              "UC7c3Kb6jYCRj4JOHHZTxKsQ",
+              "UC8butISFwT-Wl7EV0hUK0BQ",
+              "UCBwmMxybNva6P_5VmxjzwqA",
+              "UCC-lyoTfSrcJzA1ab3APAgw",
+              "UCIomFkAj4Vq_rGX2Jot7D8A",
+              "UCLKPca3kwwd-B59HNr-_lvA",
+              "UCMcoud_ZW7cfxeIugBflSBw",
+              "UCMwVTLZIRRUyyVrkjDpn4pA",
+              "UCUyeluBRhGPCW4rPe_UvBZQ",
+              "UCVHFbqXqoYvEWM1Ddxl0QDg",
+              "UCVhQ2NnY5Rskt6UjCUkJ_DA",
+              "UCWN3xxRkmTPmbKwht9FuE5A",
+              "UCZMli3czZnd1uoc1ShTouQw",
+              "UCZgt6AzoyjslHTC9dz0UoTw",
+              "UC_x36zCEGilGpB1m-V4gmjg",
+              "UCbRP3c757lWg9M-U7TyEkXA",
+              "UCcIXc5mJsHVYTZR1maL5l9w",
+              "UCfzlCWGWYyIQ0aLC5w48gBQ",
+              "UCgLxmJ8xER7Y7sywMN5SfWg",
+              "UCgoJjdR6-7AMu9fDitb6nVw",
+              "UCmXmlB4-HJytD7wek0Uo97A",
+              "UCrDwWp7EBBv4NwvScIpBDOA",
+              "UCs5Y5_7XK8HLDX0SLNwkd3w",
+              "UCsBjURrPoezykLs9EqgamOA",
+              "UCswG6FSbgZjbWtdf_hMLaow",
+              "UCuwpzP90g1LuGk6JUNms_AQ",
+              "UCxBcwypKK-W3GHd_RZ9FZrQ",
+              "UCyU5wkjgQYGRB0hIHMwm2Sg",
+              "UCzbSuf_A_D8dARJ33HzoDew"
+            ],
+            "channel_note": "入池 subtopics 含 ai-coding 或 trusted_channels",
+            "title_or_tags_any": [
+              "AI coding",
+              "AI code",
+              "coding agent",
+              "code agent",
+              "Cursor",
+              "Copilot",
+              "Claude Code",
+              "Codex",
+              "vibe coding",
+              "Windsurf",
+              "AI IDE",
+              "code review agent",
+              "GitHub Copilot",
+              "AI 编程"
+            ],
+            "channel_weak_terms": [
+              "code generation",
+              "软件开发",
+              "developer",
+              "coding",
+              "IDE",
+              "programming"
+            ],
+            "exclude_terms": [
+              "learn python",
+              "python for beginners",
+              "python tutorial",
+              "make money with AI"
+            ],
+            "min_duration_seconds": 240,
+            "apply_weak_with_channel": true
+          },
+          "channel_count": 43,
+          "video_count": 251,
+          "editorial_video_count": 6,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "NYFGCESmikA",
+              "title": "DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux | Lex Fridman Podcast #501",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "ql_-cPc_ZYQ",
+              "title": "Live Coding with Wes Bos, Burke Holland, Pierce Boggan & Friends | GitHub Copilot Day",
+              "channel": "GitHub"
+            },
+            {
+              "id": "Nq8uOOMH9fg",
+              "title": "I Gave 3 Coding Agents Full Access | Build and Deploy a Full Stack SaaS",
+              "channel": "JavaScript Mastery"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "ai-products",
+          "name_zh": "AI 产品与应用",
+          "source": "existing_config",
+          "inventory": "ai_pool",
+          "match": "频道：ElevenLabs、Tina Huang、MattVidPro AI、Lenny's Podcast、The Rundown AI、Gary Chen、回到Axton、Linus Ekenstam、The AI Advantage、AI超元域 等 34 个频道（入池 subtopics 含 ai-products 或 trusted_channels）；标题或标签含：AI product、AI app、AI application、ChatGPT、Claude、Gemini、AI tool、AI tools、AI feature、AI assistant、NotebookLM、AI video generator…；匹配方式：频道命中或关键词命中；排除：make money with AI、passive income、get rich、clickbait、top 10 AI tools to make money；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "channel_or_terms",
+            "channel_ids": [
+              "UC-ew9TfeD887qUSiWWAAj1w",
+              "UC2UXDak6o7rBm23k3Vv5dww",
+              "UC5Wz4fFacYuON6IKbhSa7Zw",
+              "UC6t1O76G0jYXOAoYCm153dA",
+              "UC8LUzR34nNX8KH3Edd0un1g",
+              "UC9C3t-3ocL0LiwGRD0gBJ8A",
+              "UCBj9S8TBRlCU4QnhTEOdWZQ",
+              "UCFnSHboIJpG6-hriXMyHvYg",
+              "UCHhYXsLBEVVnbvsq57n1MTQ",
+              "UCIomFkAj4Vq_rGX2Jot7D8A",
+              "UCLKPca3kwwd-B59HNr-_lvA",
+              "UCMcoud_ZW7cfxeIugBflSBw",
+              "UCTSqI4c58ffN6l5Mbdat6dg",
+              "UCUBqu_z5uP0AZhYtuyFZB3g",
+              "UCXZCJLdBC09xxGZ6gcdrc6A",
+              "UC_RovKmk0OCbuZjA8f08opw",
+              "UCawZsQWqfGSbCI5yjkdVkTA",
+              "UCcefcZRL2oaA_uBNeo5UOWg",
+              "UCfJT_eYDTmDE-ovKaxVE1ig",
+              "UCgoJjdR6-7AMu9fDitb6nVw",
+              "UCh1TRnUd33z_CWWDKyPTwtw",
+              "UChpleBmo18P08aKCIgti38g",
+              "UCldFPBqAVrok5DPUQeSMEqQ",
+              "UCnixWoic7ATGI0AZ2LrtJ7Q",
+              "UCrC3GjeSkxXgJ2hLQ2D-m4w",
+              "UCrhOqMww3ItTHOKxtYM56cg",
+              "UCuEvINOL2TLekZeeCk50Yug",
+              "UCuwpzP90g1LuGk6JUNms_AQ",
+              "UCvijahEyGtvMpmMHBu4FS2w",
+              "UCwAnu01qlnVg1Ai2AbtTMaA",
+              "UCwSozl89jl2zUDzQ4jGJD3g",
+              "UCyWN-BnWSKeHEnNOYvvpNnA",
+              "UCz-Sx71_C4d3AYFBj6e3ENw",
+              "UCzbSuf_A_D8dARJ33HzoDew"
+            ],
+            "channel_note": "入池 subtopics 含 ai-products 或 trusted_channels",
+            "title_or_tags_any": [
+              "AI product",
+              "AI app",
+              "AI application",
+              "ChatGPT",
+              "Claude",
+              "Gemini",
+              "AI tool",
+              "AI tools",
+              "AI feature",
+              "AI assistant",
+              "NotebookLM",
+              "AI video generator",
+              "AI 产品",
+              "AI 应用",
+              "Meta Muse",
+              "ChatGPT Dots",
+              "OpenAI Dots",
+              "Claude Duet",
+              "ChatGPT",
+              "Claude",
+              "Gemini",
+              "NotebookLM",
+              "Meta Muse",
+              "ChatGPT Dots",
+              "OpenAI Dots",
+              "Claude Duet"
+            ],
+            "channel_weak_terms": [
+              "product launch",
+              "new feature",
+              "use case",
+              "demo",
+              "launch",
+              "app",
+              "workflow"
+            ],
+            "exclude_terms": [
+              "make money with AI",
+              "passive income",
+              "get rich",
+              "clickbait",
+              "top 10 AI tools to make money"
+            ],
+            "min_duration_seconds": 240,
+            "apply_weak_with_channel": true
+          },
+          "channel_count": 48,
+          "video_count": 286,
+          "editorial_video_count": 6,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "ugvHCXCOmm4",
+              "title": "Dario Amodei: Anthropic CEO on Claude, AGI & the Future of AI & Humanity | Lex Fridman Podcast #452",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "XzjSx7u9mGw",
+              "title": "AI Engineering Full Course - Build and Deploy a Real AI App",
+              "channel": "Dave Ebbelaar"
+            },
+            {
+              "id": "ZJjRgvjhq3M",
+              "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
+              "channel": "AI Engineer"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "ai-industry",
+          "name_zh": "AI 产业动态",
+          "source": "existing_config",
+          "inventory": "ai_pool",
+          "match": "频道：Asianometry、ColdFusion、Lenny's Podcast、The Rundown AI、a16z、Scale AI、Cohere、All-In Podcast、最佳拍档、NVIDIA 等 28 个频道（入池 subtopics 含 ai-industry 或 trusted_channels）；标题或标签含：AI industry、AI company、AI funding、AI regulation、AI news、AI policy、AI startup、AI chips、data center、AI investment、AI bubble、AI 产业；匹配方式：频道命中或关键词命中；排除：stock to buy、buy this stock、price target、make money with AI；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "channel_or_terms",
+            "channel_ids": [
+              "UC1LpsuAUaKoMzzJSEt5WImw",
+              "UC4QZ_LsYcvcq7qOsOhpAX4A",
+              "UC6t1O76G0jYXOAoYCm153dA",
+              "UC8LUzR34nNX8KH3Edd0un1g",
+              "UC9cn0TuPq4dnbTY-CBsm8XA",
+              "UCAHS4cP-uIXdrpCsSfGq_OA",
+              "UCAKTUy0tz47ZY02DFpxMqoQ",
+              "UCESLZhusAkFfsNsApnjF_Cg",
+              "UCGWYKICLOE8Wxy7q3eYXmPA",
+              "UCHuiy8bXnmK5nisYHUd1J5g",
+              "UCNJ1Ymd5yFuUPtn21xtRbbw",
+              "UCSHZKyawb77ixDdsGog4iWA",
+              "UCSI7h9hydQ40K5MJHnCrQvw",
+              "UCWrF0oN6unbXrWsTN7RctTw",
+              "UCXZCJLdBC09xxGZ6gcdrc6A",
+              "UCXl4i9dYBrFOabk0xGmbkRA",
+              "UCaKiCexVhZ459j9sZ2e7XdQ",
+              "UCawZsQWqfGSbCI5yjkdVkTA",
+              "UCbY9xX3_jW5c2fjlZVBI4cg",
+              "UCcefcZRL2oaA_uBNeo5UOWg",
+              "UCf0PBRjhf0rF8fWBIxTuoWA",
+              "UChpleBmo18P08aKCIgti38g",
+              "UCqcbQf6yw5KzRoDDcZ_wBSw",
+              "UCrDwWp7EBBv4NwvScIpBDOA",
+              "UCuEvINOL2TLekZeeCk50Yug",
+              "UCvKRFNawVcuz4b9ihUTApCg",
+              "UCxBcwypKK-W3GHd_RZ9FZrQ",
+              "UCyFqFYfTW2VoIQKylJ04Rtw"
+            ],
+            "channel_note": "入池 subtopics 含 ai-industry 或 trusted_channels",
+            "title_or_tags_any": [
+              "AI industry",
+              "AI company",
+              "AI funding",
+              "AI regulation",
+              "AI news",
+              "AI policy",
+              "AI startup",
+              "AI chips",
+              "data center",
+              "AI investment",
+              "AI bubble",
+              "AI 产业"
+            ],
+            "channel_weak_terms": [
+              "startup",
+              "acquisition",
+              "policy",
+              "investment",
+              "融资",
+              "政策",
+              "earnings",
+              "IPO",
+              "regulation",
+              "chips",
+              "OpenAI",
+              "Nvidia",
+              "Anthropic"
+            ],
+            "exclude_terms": [
+              "stock to buy",
+              "buy this stock",
+              "price target",
+              "make money with AI"
+            ],
+            "min_duration_seconds": 240,
+            "apply_weak_with_channel": true
+          },
+          "channel_count": 29,
+          "video_count": 125,
+          "editorial_video_count": 1,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "_1f-o0nqpEI",
+              "title": "DeepSeek, China, OpenAI, NVIDIA, xAI, TSMC, Stargate, and AI Megaclusters | Lex Fridman Podcast #459",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "cFx9Z3ZXca0",
+              "title": "Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO",
+              "channel": "Latent Space"
+            },
+            {
+              "id": "CKFUx7COIwQ",
+              "title": "Workshop: Training Agents at the frontier of AI Industry",
+              "channel": "Hugging Face"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "agent-learning",
+          "name_zh": "Agent 学习",
+          "source": "jason_example",
+          "inventory": "ai_pool",
+          "match": "标题或标签同时含一类：AI agent / AI agents / agentic / MCP / Model Context Protocol / LangGraph / multi-agent / 智能体；标题同时含一类：tutorial / how to / beginner / guide / walkthrough / hands-on / full course / workshop；匹配方式：两组关键词同时命中；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "intersection",
+            "all_groups": [
+              {
+                "in": "tags_or_title",
+                "terms": [
+                  "AI agent",
+                  "AI agents",
+                  "agentic",
+                  "MCP",
+                  "Model Context Protocol",
+                  "LangGraph",
+                  "multi-agent",
+                  "智能体",
+                  "AI 智能体",
+                  "coding agent",
+                  "code agent",
+                  "Grok Bot",
+                  "OpenClaw",
+                  "Manus",
+                  "AI 團隊",
+                  "AI 团队"
+                ]
+              },
+              {
+                "in": "title",
+                "terms": [
+                  "tutorial",
+                  "how to",
+                  "beginner",
+                  "guide",
+                  "walkthrough",
+                  "hands-on",
+                  "full course",
+                  "workshop",
+                  "course",
+                  "learn",
+                  "教程",
+                  "教學",
+                  "教学",
+                  "新手",
+                  "上手",
+                  "入门",
+                  "入門",
+                  "从零",
+                  "從零",
+                  "实操",
+                  "實操"
+                ]
+              }
+            ],
+            "min_duration_seconds": 240
+          },
+          "channel_count": 19,
+          "video_count": 60,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "GXbZc1sHEJY",
+              "title": "React Native Full Course 2026 | Build a Real Airbnb-Style App with AI Agents",
+              "channel": "JavaScript Mastery"
+            },
+            {
+              "id": "XzjSx7u9mGw",
+              "title": "AI Engineering Full Course - Build and Deploy a Real AI App",
+              "channel": "Dave Ebbelaar"
+            },
+            {
+              "id": "gYXLRMycVMk",
+              "title": "MCP Security Fundamentals Course",
+              "channel": "freeCodeCamp.org"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "open-local-models",
+          "name_zh": "开源模型与本地部署",
+          "source": "draft",
+          "inventory": "ai_pool",
+          "match": "标题或标签含：Ollama、llama.cpp、vLLM、GGUF、LM Studio、Open WebUI、本地部署、开源模型、開源模型、open-weight、local LLM、local model…；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "terms_only",
+            "title_or_tags_any": [
+              "Ollama",
+              "llama.cpp",
+              "vLLM",
+              "GGUF",
+              "LM Studio",
+              "Open WebUI",
+              "本地部署",
+              "开源模型",
+              "開源模型",
+              "open-weight",
+              "local LLM",
+              "local model",
+              "quantization",
+              "量化",
+              "显存",
+              "顯存"
+            ],
+            "min_duration_seconds": 240
+          },
+          "channel_count": 11,
+          "video_count": 34,
+          "editorial_video_count": 1,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "CwPUOVUdApE",
+              "title": "Hermes Agent: The Ultimate Beginner’s Guide",
+              "channel": "Metics Media"
+            },
+            {
+              "id": "nWgvobB4hcw",
+              "title": "Who’s afraid of an open-weight model? GLM, context bombing and post-Black Hat attacks",
+              "channel": "IBM Technology"
+            },
+            {
+              "id": "_XXX5K-EMoc",
+              "title": "Kimi K3.1 Pro and Opus 5.5 Made the Same 13 Apps (Raw Results)",
+              "channel": "Prompt Engineering"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "zh-ai",
+          "name_zh": "中文 AI",
+          "source": "draft",
+          "inventory": "ai_pool",
+          "match": "频道：Gary Chen、回到Axton、最佳拍档、AI超元域、AI学长小林、howie.serious、阿石OMP、秋芝2046、零度解说、傑少 JAY、花叔（入池 lang=zh 的中文频道）；匹配方式：仅频道列表；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_ids": [
+              "UC9C3t-3ocL0LiwGRD0gBJ8A",
+              "UCBj9S8TBRlCU4QnhTEOdWZQ",
+              "UCGWYKICLOE8Wxy7q3eYXmPA",
+              "UCIomFkAj4Vq_rGX2Jot7D8A",
+              "UCXYvWkR9LAOsOZjYhghDiXw",
+              "UCh1TRnUd33z_CWWDKyPTwtw",
+              "UCnixWoic7ATGI0AZ2LrtJ7Q",
+              "UCrC3GjeSkxXgJ2hLQ2D-m4w",
+              "UCvijahEyGtvMpmMHBu4FS2w",
+              "UCz-Sx71_C4d3AYFBj6e3ENw",
+              "UCzbSuf_A_D8dARJ33HzoDew"
+            ],
+            "channel_note": "入池 lang=zh 的中文频道",
+            "min_duration_seconds": 240
+          },
+          "channel_count": 10,
+          "video_count": 250,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "f10jf_PQU2E",
+              "title": "Claude Code 完整教學：新手必學的 15 個核心觀念",
+              "channel": "傑少 JAY"
+            },
+            {
+              "id": "29F96QJEf6o",
+              "title": "借我 40 分鐘，讓我告訴你關於 Claude Code 你需要知道的所有觀念",
+              "channel": "Gary Chen"
+            },
+            {
+              "id": "6aJDuEU5n98",
+              "title": "DeepSeek V4是怎么训练出来的？73页PPT深入解析",
+              "channel": "花叔"
+            }
+          ],
+          "status": "ok"
+        }
+      ],
+      "needs_fetch": [
+        {
+          "id": "ai-safety",
+          "name_zh": "AI 安全与对齐",
+          "source": "draft",
+          "inventory": "ai_pool",
+          "match": "标题或标签含：AI safety、AI alignment、alignment problem、superalignment、jailbreak、越狱、AI 安全、对齐、對齊、red teaming、mechanistic interpretability；时长 ≥ 240 秒",
+          "rule": {
+            "logic": "terms_only",
+            "title_or_tags_any": [
+              "AI safety",
+              "AI alignment",
+              "alignment problem",
+              "superalignment",
+              "jailbreak",
+              "越狱",
+              "AI 安全",
+              "对齐",
+              "對齊",
+              "red teaming",
+              "mechanistic interpretability"
+            ],
+            "min_duration_seconds": 240
+          },
+          "channel_count": 7,
+          "video_count": 15,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_ai",
+          "example_titles": [
+            {
+              "id": "X7oI4Umt3DU",
+              "title": "AI Safety Fact vs. Fiction | YC Paper Club",
+              "channel": "Y Combinator"
+            },
+            {
+              "id": "XOUSuxY074U",
+              "title": "Why Own Your Intelligence? Harrison Chase Keynote | Interrupt London",
+              "channel": "LangChain"
+            },
+            {
+              "id": "00xONbN7qOw",
+              "title": "如果 AI 有意識，我哋係咪正在奴役佢？| Claude 新規、作弊實驗、靈魂文件",
+              "channel": "阿石OMP"
+            }
+          ],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "入池库存收紧词表后仅 15 条 / 7 个频道，作为可勾选小主题偏薄。",
+            "channels": [],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 0,
+            "new_channels_to_fetch": 0,
+            "estimated_units": 0,
+            "note": "不必新开 YouTube 抓取。可继续从已入池 AI 频道里用安全/对齐标题筛选；若要做可勾选，建议先补内容再上架。"
+          }
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "podcast",
+      "name_zh": "播客",
+      "subtopics": [
+        {
+          "id": "ted",
+          "name_zh": "TED",
+          "source": "jason_example",
+          "inventory": "podcast_pool",
+          "match": "频道：TED；频道名等于：TED、TEDx Talks；标题含：TED Talk、TED Talks、TEDTalk、TEDx Talk、| TED、| TEDx；匹配方式：频道命中或关键词命中；时长 ≥ 180 秒",
+          "rule": {
+            "logic": "channel_or_terms",
+            "channel_ids": [
+              "UCAuUUnT6oDeKwE6v1NGQxug"
+            ],
+            "channel_names_exact": [
+              "TED",
+              "TEDx Talks"
+            ],
+            "title_any": [
+              "TED Talk",
+              "TED Talks",
+              "TEDTalk",
+              "TEDx Talk",
+              "| TED",
+              "| TEDx"
+            ],
+            "min_duration_seconds": 180,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 1,
+          "video_count": 55,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "8bk1Llgvs4o",
+              "title": "The Joy of Foraging Your Own Food | Alexis Nikole Nelson | TED",
+              "channel": "TED"
+            },
+            {
+              "id": "SD1MypHgAwc",
+              "title": "Why You Fear the Unknown — and What It Can Teach You | Maya Shankar and Simone Stolzoff | TED",
+              "channel": "TED"
+            },
+            {
+              "id": "rUhllpnYWR8",
+              "title": "How to Make Learning Impossibly Fun | Mark Rober | TED",
+              "channel": "TED"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "business-interviews",
+          "name_zh": "商业访谈",
+          "source": "jason_example",
+          "inventory": "podcast_pool",
+          "match": "频道：Lenny's Podcast、Y Combinator、Sequoia Capital、20VC、Acquired、The Diary Of A CEO、Conversations with Tyler、硅谷101视频专栏、硅谷101播客、Invest Like The Best、a16z（访谈型商业/创投节目）；匹配方式：仅频道列表；时长 ≥ 600 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_ids": [
+              "UC6t1O76G0jYXOAoYCm153dA",
+              "UCcefcZRL2oaA_uBNeo5UOWg",
+              "UCWrF0oN6unbXrWsTN7RctTw",
+              "UCf0PBRjhf0rF8fWBIxTuoWA",
+              "UCyFqFYfTW2VoIQKylJ04Rtw",
+              "UCGq-a57w-aPwyi3pW7XLiHw",
+              "UC_AnpBvnhXTcipgGEHLWoOg",
+              "UCKV2yWPB3wn0RTZh3cTD8YA",
+              "UChnNjLyx_5rk_iDPQ2BQDQA",
+              "UCpQBb0fToph3jrDulwz1iUQ",
+              "UC9cn0TuPq4dnbTY-CBsm8XA"
+            ],
+            "channel_note": "访谈型商业/创投节目",
+            "min_duration_seconds": 600,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 11,
+          "video_count": 490,
+          "editorial_video_count": 5,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "lCEB7xHer5U",
+              "title": "Google Part III: The AI Company. Google is amazingly well-positioned... will they win in AI? (Audio)",
+              "channel": "Acquired"
+            },
+            {
+              "id": "OhOmLqR5nN4",
+              "title": "AI Experts Debate: The AI Labs Are Lying To Everyone, Is There A 99% Chance Of Human Extinction?",
+              "channel": "The Diary Of A CEO"
+            },
+            {
+              "id": "pC3QbOu7_s4",
+              "title": "再访Dyna Robotics：被部署教训了300天后，找到机器人Scaling Law【101视频播客】",
+              "channel": "硅谷101"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "pod-tech-ai",
+          "name_zh": "科技与 AI",
+          "source": "existing_config",
+          "inventory": "podcast_pool",
+          "match": "时长 ≥ 600 秒",
+          "rule": {
+            "logic": "channel_with_gates",
+            "channel_ids": [
+              "UC-yRDvpR99LUc5l7i7jLzew",
+              "UC9AHywQeW9BOcOl7dg-YMqA",
+              "UC9cn0TuPq4dnbTY-CBsm8XA",
+              "UCSHZKyawb77ixDdsGog4iWA",
+              "UCSI7h9hydQ40K5MJHnCrQvw",
+              "UCXl4i9dYBrFOabk0xGmbkRA",
+              "UCZcR2SVWaGWNlMqPxvQS3vw",
+              "UCaKiCexVhZ459j9sZ2e7XdQ",
+              "UCxBcwypKK-W3GHd_RZ9FZrQ"
+            ],
+            "channel_note": "trusted 科技播客；Lex 等综合频道须标题再命中科技/AI 词",
+            "gates": {
+              "UCSHZKyawb77ixDdsGog4iWA": {
+                "require_any": [
+                  "AI",
+                  "A.I.",
+                  "artificial intelligence",
+                  "LLM",
+                  "GPT",
+                  "OpenAI",
+                  "Anthropic",
+                  "NVIDIA",
+                  "Nvidia",
+                  "chip",
+                  "GPU",
+                  "AGI",
+                  "Claude",
+                  "Gemini",
+                  "model",
+                  "agent",
+                  "agentic",
+                  "software",
+                  "coding",
+                  "engineer",
+                  "technology",
+                  "tech",
+                  "startup",
+                  "silicon",
+                  "robot",
+                  "robotics",
+                  "semiconductor",
+                  "data center",
+                  "人工智能",
+                  "科技",
+                  "大模型",
+                  "芯片",
+                  "智能体"
+                ],
+                "title_only": true
+              }
+            },
+            "min_duration_seconds": 600,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 9,
+          "video_count": 408,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "EV7WhVT270Q",
+              "title": "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "dpY7YzZo4kE",
+              "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+              "channel": "Latent Space"
+            },
+            {
+              "id": "X50zezLFWWI",
+              "title": "Ajeya Cotra – \"This might be the clearest warning shot we ever get\"",
+              "channel": "Dwarkesh Patel"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "pod-business",
+          "name_zh": "商业创业",
+          "source": "existing_config",
+          "inventory": "podcast_pool",
+          "match": "频道：Bg2 Pod、Lenny's Podcast、Stratechery、a16z、All-In Podcast、The Diary Of A CEO、Sequoia Capital、Freakonomics Radio Network、Hard Fork、Y Combinator 等 14 个频道；匹配方式：仅频道列表；时长 ≥ 600 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_ids": [
+              "UC-yRDvpR99LUc5l7i7jLzew",
+              "UC6t1O76G0jYXOAoYCm153dA",
+              "UC9AHywQeW9BOcOl7dg-YMqA",
+              "UC9cn0TuPq4dnbTY-CBsm8XA",
+              "UCESLZhusAkFfsNsApnjF_Cg",
+              "UCGq-a57w-aPwyi3pW7XLiHw",
+              "UCWrF0oN6unbXrWsTN7RctTw",
+              "UCXjf7anLJA4NqUv8kPFIJWA",
+              "UCZcR2SVWaGWNlMqPxvQS3vw",
+              "UCcefcZRL2oaA_uBNeo5UOWg",
+              "UCf0PBRjhf0rF8fWBIxTuoWA",
+              "UCpQBb0fToph3jrDulwz1iUQ",
+              "UCwlvY6_2iza-QkE5CIWpIFA",
+              "UCyFqFYfTW2VoIQKylJ04Rtw"
+            ],
+            "min_duration_seconds": 600,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 14,
+          "video_count": 647,
+          "editorial_video_count": 5,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "lCEB7xHer5U",
+              "title": "Google Part III: The AI Company. Google is amazingly well-positioned... will they win in AI? (Audio)",
+              "channel": "Acquired"
+            },
+            {
+              "id": "OhOmLqR5nN4",
+              "title": "AI Experts Debate: The AI Labs Are Lying To Everyone, Is There A 99% Chance Of Human Extinction?",
+              "channel": "The Diary Of A CEO"
+            },
+            {
+              "id": "MCJn08wBeV8",
+              "title": "Hard Fork Live: Robots, Revelry and the A.I. Revolution",
+              "channel": "Hard Fork"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "pod-science-health",
+          "name_zh": "科学与健康",
+          "source": "existing_config",
+          "inventory": "podcast_pool",
+          "match": "频道：HubermanLab、Peter Attia MD、Sam Harris、Sean Carroll、FoundMyFitness、StarTalk（trusted 科学/健康频道；TED 已单独成题，这里不再计入）；匹配方式：仅频道列表；时长 ≥ 600 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_ids": [
+              "UC2D2CMWXMOVWx7giW1n3LIg",
+              "UC8kGsMa0LygSX9nkBcBH1Sg",
+              "UCNAxrHudMfdzNi6NxruKPLw",
+              "UCRhV1rWIpm_pU19bBm_2RXw",
+              "UCWF8SqJVNlx-ctXbLswcTcA",
+              "UCqoAEDirJPjEUFcF2FklnBA"
+            ],
+            "channel_note": "trusted 科学/健康频道；TED 已单独成题，这里不再计入",
+            "min_duration_seconds": 600,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 6,
+          "video_count": 368,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "IxHRYDM64dQ",
+              "title": "397 - Endometriosis and adenomyosis: diagnosis, fertility, reproductive aging, & emerging treatments",
+              "channel": "Peter Attia MD"
+            },
+            {
+              "id": "SUy6HwOhT3U",
+              "title": "Dr. Brad Schoenfeld: Resistance Training for Time Efficiency, Body Composition & Maximum Hypertrophy",
+              "channel": "FoundMyFitness"
+            },
+            {
+              "id": "_Q4XT82yd-Q",
+              "title": "The Most Effective Weight Training, Cardio & Nutrition for Women | Dr. Lauren Colenso-Semple",
+              "channel": "Andrew Huberman"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "pod-society",
+          "name_zh": "人文社会",
+          "source": "existing_config",
+          "inventory": "podcast_pool",
+          "match": "时长 ≥ 600 秒",
+          "rule": {
+            "logic": "channel_with_gates",
+            "channel_ids": [
+              "UCDZcnmxyaiunvPdaBwL264A",
+              "UCGq-a57w-aPwyi3pW7XLiHw",
+              "UCIaH-gZIVC432YRjNVvnyCA",
+              "UCNAxrHudMfdzNi6NxruKPLw",
+              "UCRhV1rWIpm_pU19bBm_2RXw",
+              "UCSHZKyawb77ixDdsGog4iWA",
+              "UCUk0AvSMU5CJ0wUqJf9TX8g",
+              "UCXjf7anLJA4NqUv8kPFIJWA",
+              "UC_AnpBvnhXTcipgGEHLWoOg",
+              "UCaqcvH8EvUtePORpN03jLMg",
+              "UCgjZeiV0Ks3Shx8xPgvm7pQ",
+              "UCnxuOd8obvLLtf5_-YKFbiQ",
+              "UCqoAEDirJPjEUFcF2FklnBA",
+              "UCwlvY6_2iza-QkE5CIWpIFA"
+            ],
+            "channel_note": "trusted 人文频道（不含 TED）；Lex、Diary Of A CEO、Chris Williamson 须标题再命中人文社会词",
+            "gates": {
+              "UCSHZKyawb77ixDdsGog4iWA": {
+                "require_any": [
+                  "society",
+                  "culture",
+                  "history",
+                  "philosophy",
+                  "psychology",
+                  "psychiatry",
+                  "religion",
+                  "politics",
+                  "democracy",
+                  "war",
+                  "book",
+                  "journalist",
+                  "philosopher",
+                  "historian",
+                  "mental health",
+                  "human nature",
+                  "meaning",
+                  "humanities",
+                  "civilization",
+                  "ethics",
+                  "morality",
+                  "人文",
+                  "社会",
+                  "文化",
+                  "历史",
+                  "歷史",
+                  "哲学",
+                  "哲學",
+                  "心理",
+                  "政治",
+                  "宗教"
+                ],
+                "title_only": true
+              },
+              "UCGq-a57w-aPwyi3pW7XLiHw": {
+                "require_any": [
+                  "society",
+                  "culture",
+                  "history",
+                  "philosophy",
+                  "psychology",
+                  "psychiatry",
+                  "religion",
+                  "politics",
+                  "democracy",
+                  "war",
+                  "book",
+                  "journalist",
+                  "philosopher",
+                  "historian",
+                  "mental health",
+                  "human nature",
+                  "meaning",
+                  "humanities",
+                  "civilization",
+                  "ethics",
+                  "morality",
+                  "人文",
+                  "社会",
+                  "文化",
+                  "历史",
+                  "歷史",
+                  "哲学",
+                  "哲學",
+                  "心理",
+                  "政治",
+                  "宗教"
+                ],
+                "title_only": true
+              },
+              "UCIaH-gZIVC432YRjNVvnyCA": {
+                "require_any": [
+                  "society",
+                  "culture",
+                  "history",
+                  "philosophy",
+                  "psychology",
+                  "psychiatry",
+                  "religion",
+                  "politics",
+                  "democracy",
+                  "war",
+                  "book",
+                  "journalist",
+                  "philosopher",
+                  "historian",
+                  "mental health",
+                  "human nature",
+                  "meaning",
+                  "humanities",
+                  "civilization",
+                  "ethics",
+                  "morality",
+                  "人文",
+                  "社会",
+                  "文化",
+                  "历史",
+                  "歷史",
+                  "哲学",
+                  "哲學",
+                  "心理",
+                  "政治",
+                  "宗教"
+                ],
+                "title_only": true
+              }
+            },
+            "min_duration_seconds": 600,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 14,
+          "video_count": 589,
+          "editorial_video_count": 1,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "s7d2d8FhevU",
+              "title": "Psychiatry, Insane Asylums, Mental Illness, ECT, Lobotomies, Freud & Jung | Lex Fridman Podcast #502",
+              "channel": "Lex Fridman"
+            },
+            {
+              "id": "AEvJQoowZUI",
+              "title": "Glenn Greenwald vs. Coleman Hughes Debate: Does Israel Control U.S. Foreign Policy?",
+              "channel": "Coleman Hughes"
+            },
+            {
+              "id": "gINYis8BgSY",
+              "title": "Mindscape 323 | Jacob Barandes on Indivisible Stochastic Quantum Mechanics",
+              "channel": "Sean Carroll"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "pod-zh",
+          "name_zh": "中文播客",
+          "source": "existing_config",
+          "inventory": "podcast_pool",
+          "match": "频道：Zhang Xiaojun Podcast、最佳拍档、硅谷101视频专栏、howie.serious、硅谷101播客；匹配方式：仅频道列表；时长 ≥ 600 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_ids": [
+              "UC3Sv1JuKpbOx3csUO8FAo5g",
+              "UCGWYKICLOE8Wxy7q3eYXmPA",
+              "UCKV2yWPB3wn0RTZh3cTD8YA",
+              "UCh1TRnUd33z_CWWDKyPTwtw",
+              "UChnNjLyx_5rk_iDPQ2BQDQA"
+            ],
+            "min_duration_seconds": 600,
+            "exclude_title_terms": [
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ]
+          },
+          "channel_count": 5,
+          "video_count": 310,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_podcast",
+          "example_titles": [
+            {
+              "id": "iDaxRNIddME",
+              "title": "Lindon Gao / Dyna: Finding Clarity in the Fog of Robotics, Disagreements & Choice, and Wang Yangming",
+              "channel": "Zhang Xiaojun Podcast"
+            },
+            {
+              "id": "pC3QbOu7_s4",
+              "title": "再访Dyna Robotics：被部署教训了300天后，找到机器人Scaling Law【101视频播客】",
+              "channel": "硅谷101"
+            },
+            {
+              "id": "XcastAK9pDM",
+              "title": "E257｜对话Vitalik：AI安全背后的哲学思想，有效利他主义如何影响硅谷？",
+              "channel": "硅谷101播客"
+            }
+          ],
+          "status": "ok"
+        }
+      ],
+      "needs_fetch": [],
+      "notes": null
+    },
+    {
+      "id": "music",
+      "name_zh": "音乐",
+      "subtopics": [
+        {
+          "id": "tiny-desk-live",
+          "name_zh": "Tiny Desk 现场",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "标题含：Tiny Desk Concert、Tiny Desk",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "Tiny Desk Concert",
+              "Tiny Desk"
+            ]
+          },
+          "channel_count": 1,
+          "video_count": 29,
+          "editorial_video_count": 2,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [
+            {
+              "id": "ZTcqu224vHw",
+              "title": "Los Tigres del Norte: Tiny Desk Concert",
+              "channel": "NPR Music"
+            },
+            {
+              "id": "HYA9e0XOUGk",
+              "title": "Cardi B: Tiny Desk Concert",
+              "channel": "NPR Music"
+            },
+            {
+              "id": "XoH44mH5laY",
+              "title": "Richard O'Brien's 'The Rocky Horror Show': Tiny Desk Concert",
+              "channel": "NPR Music"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "japanese-live",
+          "name_zh": "日系现场",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "频道：THE FIRST TAKE（仅 THE FIRST TAKE 官方频道的一发摄演出）；标题含：THE FIRST TAKE、ファーストテイク；匹配方式：频道且关键词",
+          "rule": {
+            "logic": "channel_and_terms",
+            "channel_ids": [
+              "UC9zY_E8mcAo_Oq772LEZq8Q"
+            ],
+            "channel_note": "仅 THE FIRST TAKE 官方频道的一发摄演出",
+            "title_any": [
+              "THE FIRST TAKE",
+              "ファーストテイク"
+            ]
+          },
+          "channel_count": 1,
+          "video_count": 38,
+          "editorial_video_count": 3,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [
+            {
+              "id": "gqVNaKiGIJY",
+              "title": "Original Love - 接吻 / THE FIRST TAKE",
+              "channel": "THE FIRST TAKE"
+            },
+            {
+              "id": "XuOicpNoUM4",
+              "title": "SiM - The Rumbling / THE FIRST TAKE",
+              "channel": "THE FIRST TAKE"
+            },
+            {
+              "id": "Q5Om3k90dMs",
+              "title": "忘れらんねえよ - なんもねえ / THE FIRST TAKE",
+              "channel": "THE FIRST TAKE"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "western-pop",
+          "name_zh": "欧美流行",
+          "source": "jason_example",
+          "inventory": "music_local",
+          "match": "频道：OliviaRodrigoVEVO、HarryStylesVEVO、U2VEVO（本地已有的官方 VEVO：Olivia Rodrigo、Harry Styles、U2）；匹配方式：仅频道列表",
+          "rule": {
+            "logic": "channel_only",
+            "channel_ids": [
+              "UCxE5jEls-T0QtlTHT8lI1lw",
+              "UCbOCbp5gXL8jigIBZLqMPrw",
+              "UCpd21W3qWyzIl8-PXvyDA2g"
+            ],
+            "channel_note": "本地已有的官方 VEVO：Olivia Rodrigo、Harry Styles、U2"
+          },
+          "channel_count": 3,
+          "video_count": 150,
+          "editorial_video_count": 3,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [
+            {
+              "id": "TUuVOW7XogA",
+              "title": "U2 - The Greatest Show On Earth",
+              "channel": "U2VEVO"
+            },
+            {
+              "id": "gsZauX8gwxo",
+              "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
+              "channel": "OliviaRodrigoVEVO"
+            },
+            {
+              "id": "M4qX5wzx-wY",
+              "title": "Harry Styles - Coming Up Roses (Official Video)",
+              "channel": "HarryStylesVEVO"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "kpop",
+          "name_zh": "K-pop",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "频道：UC3IZKseVpdzPSBaWxBxundA、UCYDmx2Sfpnaxg488yBpZIGg、UCeLPm9yH_a_QH8n6445G-Ow、UCLkAepWjdylmXSltofFvsYQ、UCwgtORdDtUKhpjE1VBv6XfA、UCTQVIXvcHrR9jYoJ6qaBAow（韩流厂牌/节目频道，且标题须像演出/MV；排除 vlog、运动会、综艺）；标题含：MV、M/V、Official MV、Official Music Video、Visualizer、Stage CAM、Stage、Live、Concert、Music Bank、뮤뱅、뮤직뱅크…；匹配方式：频道且关键词",
+          "rule": {
+            "logic": "channel_and_terms",
+            "channel_ids": [
+              "UC3IZKseVpdzPSBaWxBxundA",
+              "UCYDmx2Sfpnaxg488yBpZIGg",
+              "UCeLPm9yH_a_QH8n6445G-Ow",
+              "UCLkAepWjdylmXSltofFvsYQ",
+              "UCwgtORdDtUKhpjE1VBv6XfA",
+              "UCTQVIXvcHrR9jYoJ6qaBAow"
+            ],
+            "title_any": [
+              "MV",
+              "M/V",
+              "Official MV",
+              "Official Music Video",
+              "Visualizer",
+              "Stage CAM",
+              "Stage",
+              "Live",
+              "Concert",
+              "Music Bank",
+              "뮤뱅",
+              "뮤직뱅크",
+              "Performance",
+              "Highlight Medley",
+              "직캠",
+              "무대",
+              "라이브",
+              "Comeback"
+            ],
+            "exclude_title_terms": [
+              "vlog",
+              "VLOG",
+              "运动회",
+              "운동회",
+              "피클볼",
+              "스케치",
+              "Sketch",
+              "behind the scenes",
+              "Behind the Scenes",
+              "audition",
+              "AUDITION",
+              "리무진서비스",
+              "돌박",
+              "육상",
+              "exhibition",
+              "Concept Film",
+              "trailer",
+              "Trailer",
+              "teaser",
+              "Teaser",
+              "Preview",
+              "preview",
+              "RunBTS",
+              "달려라",
+              "#shorts",
+              "Shorts",
+              "trailer",
+              "teaser",
+              "#shorts",
+              "shorts",
+              "预告",
+              "花絮"
+            ],
+            "channel_note": "韩流厂牌/节目频道，且标题须像演出/MV；排除 vlog、运动会、综艺"
+          },
+          "channel_count": 6,
+          "video_count": 80,
+          "editorial_video_count": 4,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [
+            {
+              "id": "bRrjcdad2Zg",
+              "title": "KATSEYE (캣츠아이) “Unloveu” Visualizer",
+              "channel": "HYBE LABELS"
+            },
+            {
+              "id": "k259hkI6eto",
+              "title": "[뮤뱅 스테디캠 4K] A2O LITE 'NEON' 4k Bonus Ver. @뮤직뱅크(Music Bank) 261023",
+              "channel": "KBS Kpop"
+            },
+            {
+              "id": "rsNhWkC4neE",
+              "title": "IVE 아이브 'Looks Can Kill' MV",
+              "channel": "STARSHIP"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "hiphop",
+          "name_zh": "Hip-hop / 说唱",
+          "source": "jason_example",
+          "inventory": "music_local",
+          "match": "频道：Stones Throw（本地仅 Stones Throw 厂牌正片；中文说唱为 0，见补抓建议）；标题含：Official Music Video、Official Video、Dungeon Sessions、Visualizer、Jazz Cats、Crate Diggin、Whenimondamic、new music video、Official Audio；匹配方式：频道且关键词",
+          "rule": {
+            "logic": "channel_and_terms",
+            "channel_ids": [
+              "UC0L0PDO9kUS46JC1wEjLEbg"
+            ],
+            "title_any": [
+              "Official Music Video",
+              "Official Video",
+              "Dungeon Sessions",
+              "Visualizer",
+              "Jazz Cats",
+              "Crate Diggin",
+              "Whenimondamic",
+              "new music video",
+              "Official Audio"
+            ],
+            "channel_note": "本地仅 Stones Throw 厂牌正片；中文说唱为 0，见补抓建议"
+          },
+          "channel_count": 1,
+          "video_count": 13,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [
+            {
+              "id": "qtRRTZNTilw",
+              "title": "@sofieroyer  - AUTO - New music video out now on #StonesThrow. New tour dates on sale today, too.",
+              "channel": "Stones Throw"
+            },
+            {
+              "id": "l6DRamcYnxE",
+              "title": "Introducing @kiko. Watch her new music video \"Feelin' Wee\", out today. #StonesThrow",
+              "channel": "Stones Throw"
+            },
+            {
+              "id": "FmYYOQB1wQ8",
+              "title": "@BennySings x @elijahfoxmusic - “Real Person”. Watch the new visualizer today.",
+              "channel": "Stones Throw"
+            }
+          ],
+          "status": "ok",
+          "supplement_fetch_proposal": {
+            "reason": "Hip-hop 可先用本地 Stones Throw 正片凑数，但中文说唱为 0，建议单独补抓。",
+            "channels": [
+              {
+                "name": "COLORS",
+                "confidence": "high",
+                "note": "高质量现场/录音棚表演，也覆盖全球 hip-hop 与灵魂乐"
+              },
+              {
+                "name": "熱狗 MC HotDog",
+                "confidence": "high",
+                "note": "华语说唱艺人官方频道"
+              },
+              {
+                "name": "蛋堡 Soft Lipa",
+                "confidence": "high",
+                "note": "华语说唱艺人官方频道"
+              },
+              {
+                "name": "高爾宣 OSN",
+                "confidence": "high",
+                "note": "华语说唱艺人官方频道"
+              },
+              {
+                "name": "瘦子 E.SO",
+                "confidence": "high",
+                "note": "顽童成员官方频道"
+              },
+              {
+                "name": "張震嶽",
+                "confidence": "high",
+                "note": "艺人官方频道，华语嘻哈/摇滚"
+              },
+              {
+                "name": "法老 Pharaoh",
+                "confidence": "medium",
+                "note": "中文说唱艺人，频道名可能带厂牌后缀，收录前需核对"
+              },
+              {
+                "name": "頑童 MJ116",
+                "confidence": "high",
+                "note": "团体官方频道"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 8,
+            "estimated_units": 8,
+            "note": null
+          }
+        }
+      ],
+      "needs_fetch": [
+        {
+          "id": "mandopop",
+          "name_zh": "华语流行",
+          "source": "jason_example",
+          "inventory": "music_local",
+          "match": "标题含：周杰伦、周杰倫、林俊杰、林俊傑、邓紫棋、鄧紫棋、五月天、毛不易、告五人、华语流行、華語流行、杰威尔…",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "周杰伦",
+              "周杰倫",
+              "林俊杰",
+              "林俊傑",
+              "邓紫棋",
+              "鄧紫棋",
+              "五月天",
+              "毛不易",
+              "告五人",
+              "华语流行",
+              "華語流行",
+              "杰威尔",
+              "相信音樂"
+            ]
+          },
+          "channel_count": 0,
+          "video_count": 0,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "本地库存没有可确认的华语流行正片（无滚石/杰威尔/相信音樂等频道，标题也无对应艺人）。",
+            "channels": [
+              {
+                "name": "杰威尔音乐 JVR Music",
+                "confidence": "high",
+                "note": "周杰伦厂牌官方频道"
+              },
+              {
+                "name": "林俊傑 JJ Lin",
+                "confidence": "high",
+                "note": "艺人官方频道"
+              },
+              {
+                "name": "相信音樂 B'in Music",
+                "confidence": "high",
+                "note": "五月天等艺人厂牌官方频道"
+              },
+              {
+                "name": "滚石唱片 ROCK RECORDS",
+                "confidence": "high",
+                "note": "华语厂牌官方频道"
+              },
+              {
+                "name": "华纳音乐台湾 Warner Music Taiwan",
+                "confidence": "high",
+                "note": "华语发行官方频道；勿与欧美 Warner 主频道混淆"
+              },
+              {
+                "name": "台湾索尼音乐 Sony Music Taiwan",
+                "confidence": "high",
+                "note": "华语发行官方频道"
+              },
+              {
+                "name": "告五人 Accusefive",
+                "confidence": "high",
+                "note": "乐队官方频道"
+              },
+              {
+                "name": "毛不易",
+                "confidence": "high",
+                "note": "艺人官方频道"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 8,
+            "estimated_units": 8,
+            "note": null
+          }
+        },
+        {
+          "id": "cantonese",
+          "name_zh": "粤语",
+          "source": "jason_example",
+          "inventory": "music_local",
+          "match": "标题含：粤语、粵語、陳奕迅、陈奕迅、張學友、张学友、張國榮、张国荣、梅艷芳、梅艳芳、林家謙、Eason Chan",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "粤语",
+              "粵語",
+              "陳奕迅",
+              "陈奕迅",
+              "張學友",
+              "张学友",
+              "張國榮",
+              "张国荣",
+              "梅艷芳",
+              "梅艳芳",
+              "林家謙",
+              "Eason Chan"
+            ]
+          },
+          "channel_count": 0,
+          "video_count": 0,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "本地库存中粤语正片为 0（「beyond」等词会误伤英文标题，未采用）。",
+            "channels": [
+              {
+                "name": "陳奕迅 Eason Chan",
+                "confidence": "high",
+                "note": "艺人官方频道"
+              },
+              {
+                "name": "環球音樂香港 Universal Music Hong Kong",
+                "confidence": "high",
+                "note": "港区发行官方频道"
+              },
+              {
+                "name": "英皇娛樂 EEG / Emperor Entertainment",
+                "confidence": "high",
+                "note": "港区厂牌官方频道"
+              },
+              {
+                "name": "寰亞音樂 Media Asia Music",
+                "confidence": "high",
+                "note": "港区厂牌官方频道"
+              },
+              {
+                "name": "林家謙 Terence Lam",
+                "confidence": "high",
+                "note": "当代粤语创作人官方频道"
+              },
+              {
+                "name": "張學友 Jacky Cheung",
+                "confidence": "high",
+                "note": "艺人官方频道"
+              },
+              {
+                "name": "Warner Music Hong Kong 華納音樂香港",
+                "confidence": "high",
+                "note": "港区发行官方频道"
+              },
+              {
+                "name": "陳卓賢 Ian Chan",
+                "confidence": "medium",
+                "note": "MIRROR 成员官方频道；若主页更偏综艺可改用其正片列表"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 8,
+            "estimated_units": 8,
+            "note": null
+          }
+        },
+        {
+          "id": "indie-folk",
+          "name_zh": "独立 / 民谣",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "标题含：不可能匹配的占位符XYZ",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "不可能匹配的占位符XYZ"
+            ]
+          },
+          "channel_count": 0,
+          "video_count": 0,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "本地无可用的独立/民谣目录；Stones Throw 更偏地下嘻哈/厂牌花絮，不计入本主题。",
+            "channels": [
+              {
+                "name": "KEXP",
+                "confidence": "high",
+                "note": "现场录音会话，独立/另类为主"
+              },
+              {
+                "name": "Audiotree",
+                "confidence": "high",
+                "note": "Audiotree Live 官方频道"
+              },
+              {
+                "name": "Mahogany",
+                "confidence": "high",
+                "note": "Mahogany Sessions 官方频道"
+              },
+              {
+                "name": "陈粒",
+                "confidence": "high",
+                "note": "艺人官方频道"
+              },
+              {
+                "name": "万能青年旅店",
+                "confidence": "high",
+                "note": "乐队官方频道"
+              },
+              {
+                "name": "草東沒有派對 No Party For Cao Dong",
+                "confidence": "high",
+                "note": "乐队官方频道"
+              },
+              {
+                "name": "好妹妹乐队",
+                "confidence": "high",
+                "note": "组合官方频道"
+              },
+              {
+                "name": "新裤子 New Pants",
+                "confidence": "high",
+                "note": "乐队官方频道"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 8,
+            "estimated_units": 8,
+            "note": null
+          }
+        },
+        {
+          "id": "jazz-classical",
+          "name_zh": "爵士 / 古典",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "标题含：不可能匹配的占位符XYZ",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "不可能匹配的占位符XYZ"
+            ]
+          },
+          "channel_count": 0,
+          "video_count": 0,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "本地几乎没有爵士/古典正片（仅 Stones Throw 里偶有 Jazz 字样，不足且不对题）。",
+            "channels": [
+              {
+                "name": "Deutsche Grammophon",
+                "confidence": "high",
+                "note": "古典厂牌官方频道"
+              },
+              {
+                "name": "Berliner Philharmoniker",
+                "confidence": "high",
+                "note": "柏林爱乐官方频道"
+              },
+              {
+                "name": "Blue Note Records",
+                "confidence": "high",
+                "note": "爵士厂牌官方频道"
+              },
+              {
+                "name": "Jazz at Lincoln Center",
+                "confidence": "high",
+                "note": "爵士机构官方频道"
+              },
+              {
+                "name": "Classic FM",
+                "confidence": "high",
+                "note": "古典电台官方频道"
+              },
+              {
+                "name": "ECM Records",
+                "confidence": "medium",
+                "note": "爵士/当代古典厂牌；确认官方频道名后收录"
+              },
+              {
+                "name": "国家大剧院 NCPA",
+                "confidence": "medium",
+                "note": "频道名可能是「国家大剧院」或 NCPA China，收录前核对"
+              },
+              {
+                "name": "NPR Music",
+                "confidence": "high",
+                "note": "已在库中（Tiny Desk）；若只补爵士/古典，可不再重复抓，从已有缓存筛选即可"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 7,
+            "estimated_units": 7,
+            "note": null
+          }
+        },
+        {
+          "id": "rnb-soul",
+          "name_zh": "R&B / Soul",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "标题含：不可能匹配的占位符XYZ",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "不可能匹配的占位符XYZ"
+            ]
+          },
+          "channel_count": 0,
+          "video_count": 0,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "本地无可靠的 R&B/Soul 正片（soul 一词会被误伤）。",
+            "channels": [
+              {
+                "name": "SZA",
+                "confidence": "high",
+                "note": "SZA 或 SZAvevo 官方频道"
+              },
+              {
+                "name": "TheWeekndVEVO",
+                "confidence": "high",
+                "note": "The Weeknd 官方 VEVO"
+              },
+              {
+                "name": "方大同 Khalil Fong",
+                "confidence": "high",
+                "note": "华语 R&B 艺人官方频道"
+              },
+              {
+                "name": "陶喆 David Tao",
+                "confidence": "high",
+                "note": "华语 R&B 艺人官方频道"
+              },
+              {
+                "name": "COLORS",
+                "confidence": "high",
+                "note": "与说唱补抓共用，不重复计额度"
+              },
+              {
+                "name": "Mahogany",
+                "confidence": "high",
+                "note": "与独立/民谣补抓共用，不重复计额度"
+              },
+              {
+                "name": "Daniel Caesar",
+                "confidence": "high",
+                "note": "艺人官方频道"
+              },
+              {
+                "name": "蔡健雅 Tanya Chua",
+                "confidence": "high",
+                "note": "华语流行/R&B 艺人官方频道"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 6,
+            "estimated_units": 6,
+            "note": null
+          }
+        },
+        {
+          "id": "electronic",
+          "name_zh": "电子",
+          "source": "draft",
+          "inventory": "music_local",
+          "match": "标题含：不可能匹配的占位符XYZ",
+          "rule": {
+            "logic": "terms_only",
+            "title_any": [
+              "不可能匹配的占位符XYZ"
+            ]
+          },
+          "channel_count": 0,
+          "video_count": 0,
+          "editorial_video_count": 0,
+          "editorial_inventory": "editorial_music",
+          "example_titles": [],
+          "status": "needs_fetch",
+          "fetch_proposal": {
+            "reason": "本地没有可确认的电子音乐目录（technology 等词会误伤科技频道）。",
+            "channels": [
+              {
+                "name": "Boiler Room",
+                "confidence": "high",
+                "note": "电子现场会话官方频道"
+              },
+              {
+                "name": "Cercle",
+                "confidence": "high",
+                "note": "电子现场官方频道"
+              },
+              {
+                "name": "Ninja Tune",
+                "confidence": "high",
+                "note": "电子/左翼厂牌官方频道"
+              },
+              {
+                "name": "Mixmag",
+                "confidence": "high",
+                "note": "电子媒体官方频道，以 DJ set 为主"
+              },
+              {
+                "name": "Defected Records",
+                "confidence": "high",
+                "note": "House 厂牌官方频道"
+              },
+              {
+                "name": "Anjunadeep",
+                "confidence": "high",
+                "note": "偏旋律的电子厂牌官方频道，比纯 EDM 大节更贴受众"
+              },
+              {
+                "name": "Resident Advisor",
+                "confidence": "medium",
+                "note": "电子媒体官方频道；内容含采访与 set，收录前可先看 uploads 构成"
+              },
+              {
+                "name": "Innervisions",
+                "confidence": "medium",
+                "note": "厂牌官方频道，确认全名后收录"
+              }
+            ],
+            "method": "uploads-first：对各频道 uploads 播放列表调用 playlistItems，每页 50 条约 1 单位",
+            "pages_per_channel": 1,
+            "new_channels_to_fetch": 8,
+            "estimated_units": 8,
+            "note": null
+          }
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "community",
+      "name_zh": "社区推荐",
+      "subtopics": [
+        {
+          "id": "classic-talks",
+          "name_zh": "经典演讲",
+          "source": "draft",
+          "inventory": "community_corpus",
+          "match": "频道名包含：Stanford、MIT OpenCourseWare、Carnegie Mellon、University of California Television、UCTV、UChicago、MIT Club of Northern California、Strange Loop Conference、ClojureTV、CppCon、Confreaks、GOTO Conferences、Google TechTalks、Talks at Google、DEFCONConference、Computer History Museum、Royal Society of Arts；标题含：last lecture、inventing on principle、you and your research、mother of all demos、structure and interpretation、how to speak、Steve Jobs、Randy Pausch、Richard Feynman、Richard Hamming、Alan Kay、Douglas Engelbart…；匹配方式：精选经典标记，或标题含人名/名篇，或（大学/会议频道且标题含 lecture/keynote 等）；时长 ≥ 300 秒",
+          "rule": {
+            "logic": "classic_talks",
+            "title_any": [
+              "last lecture",
+              "inventing on principle",
+              "you and your research",
+              "mother of all demos",
+              "structure and interpretation",
+              "how to speak",
+              "Steve Jobs",
+              "Randy Pausch",
+              "Richard Feynman",
+              "Richard Hamming",
+              "Alan Kay",
+              "Douglas Engelbart",
+              "Bret Victor",
+              "Rich Hickey",
+              "Robert Sapolsky",
+              "Guy Steele",
+              "Joe Armstrong",
+              "Linus Torvalds",
+              "John Cleese",
+              "Jonathan Blow",
+              "Philip Wadler",
+              "Mike Acton",
+              "Patrick Winston",
+              "Robert Lustig",
+              "commencement address",
+              "full lecture"
+            ],
+            "channel_name_contains": [
+              "Stanford",
+              "MIT OpenCourseWare",
+              "Carnegie Mellon",
+              "University of California Television",
+              "UCTV",
+              "UChicago",
+              "MIT Club of Northern California",
+              "Strange Loop Conference",
+              "ClojureTV",
+              "CppCon",
+              "Confreaks",
+              "GOTO Conferences",
+              "Google TechTalks",
+              "Talks at Google",
+              "DEFCONConference",
+              "Computer History Museum",
+              "Royal Society of Arts"
+            ],
+            "min_duration_seconds": 300
+          },
+          "channel_count": 87,
+          "video_count": 137,
+          "editorial_video_count": 27,
+          "editorial_inventory": "community_selected",
+          "example_titles": [
+            {
+              "id": "QjJaFG63Hlo",
+              "title": "Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)",
+              "channel": "Yoshiki Ohshima (大島芳樹)"
+            },
+            {
+              "id": "92NNyd3m79I",
+              "title": "Steve Jobs Unveils the NeXT Computer - October 12, 1988",
+              "channel": "The ReDiscovered Future"
+            },
+            {
+              "id": "TwKpj2ISQAc",
+              "title": "the sham legacy of Richard Feynman",
+              "channel": "Angela Collier "
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "university-lectures",
+          "name_zh": "大学公开课",
+          "source": "draft",
+          "inventory": "community_corpus",
+          "match": "频道名包含：Stanford、MIT OpenCourseWare、Carnegie Mellon、University of California Television、UCTV、UChicago、MIT Club of Northern California；匹配方式：仅频道列表；时长 ≥ 300 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_name_contains": [
+              "Stanford",
+              "MIT OpenCourseWare",
+              "Carnegie Mellon",
+              "University of California Television",
+              "UCTV",
+              "UChicago",
+              "MIT Club of Northern California"
+            ],
+            "min_duration_seconds": 300
+          },
+          "channel_count": 12,
+          "video_count": 49,
+          "editorial_video_count": 9,
+          "editorial_inventory": "community_selected",
+          "example_titles": [
+            {
+              "id": "OBPpRqxY8Uw",
+              "title": "Leonard Susskind | \"ER = EPR\" or \"What's Behind the Horizons of Black Holes?\" - 1 of 2",
+              "channel": "Stanford Institute for Theoretical Physics"
+            },
+            {
+              "id": "KkpqA8yG9T4",
+              "title": "Breakthrough in  Nuclear Fusion? - Prof. Dennis Whyte",
+              "channel": "MIT Club of Northern California"
+            },
+            {
+              "id": "_njf8jwEGRo",
+              "title": "21. Chaos and Reductionism",
+              "channel": "Stanford"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "id": "science-explainers",
+          "name_zh": "科学科普",
+          "source": "draft",
+          "inventory": "community_corpus",
+          "match": "频道名包含：Veritasium、Kurzgesagt、CGP Grey、Tom Scott、3Blue1Brown、Numberphile、SmarterEveryDay、Computerphile；匹配方式：仅频道列表；时长 ≥ 60 秒",
+          "rule": {
+            "logic": "channel_only",
+            "channel_name_contains": [
+              "Veritasium",
+              "Kurzgesagt",
+              "CGP Grey",
+              "Tom Scott",
+              "3Blue1Brown",
+              "Numberphile",
+              "SmarterEveryDay",
+              "Computerphile"
+            ],
+            "min_duration_seconds": 60
+          },
+          "channel_count": 10,
+          "video_count": 293,
+          "editorial_video_count": 4,
+          "editorial_inventory": "community_selected",
+          "example_titles": [
+            {
+              "id": "8YUWDrLazCg",
+              "title": "A Million Dollars vs A Billion Dollars, Visualized: A Road Trip",
+              "channel": "Tom Scott"
+            },
+            {
+              "id": "OoJsPvmFixU",
+              "title": "I Was SCARED To Say This To NASA... (But I said it anyway) - Smarter Every Day 293",
+              "channel": "SmarterEveryDay"
+            },
+            {
+              "id": "QNznD9hMEh0",
+              "title": "Jim Simons (full length interview) - Numberphile",
+              "channel": "Numberphile2"
+            }
+          ],
+          "status": "ok"
+        }
+      ],
+      "needs_fetch": [],
+      "notes": null
+    }
+  ]
+}

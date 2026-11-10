@@ -1,0 +1,383 @@
+{
+  "generated_at": "2026-11-10T09:16:36Z",
+  "categories": [
+    {
+      "id": "trending",
+      "name_zh": "全部",
+      "subtopics": [
+        {
+          "id": "ai-models",
+          "name_zh": "AI 模型与研究",
+          "video_count": 204,
+          "status": "ready"
+        },
+        {
+          "id": "ai-agents",
+          "name_zh": "AI Agent",
+          "video_count": 376,
+          "status": "ready"
+        },
+        {
+          "id": "ai-coding",
+          "name_zh": "AI 编程",
+          "video_count": 251,
+          "status": "ready"
+        },
+        {
+          "id": "ai-products",
+          "name_zh": "AI 产品与应用",
+          "video_count": 286,
+          "status": "ready"
+        },
+        {
+          "id": "ai-industry",
+          "name_zh": "AI 产业动态",
+          "video_count": 125,
+          "status": "ready"
+        },
+        {
+          "id": "agent-learning",
+          "name_zh": "Agent 学习",
+          "video_count": 60,
+          "status": "ready"
+        },
+        {
+          "id": "open-local-models",
+          "name_zh": "开源模型与本地部署",
+          "video_count": 34,
+          "status": "ready"
+        },
+        {
+          "id": "zh-ai",
+          "name_zh": "中文 AI",
+          "video_count": 250,
+          "status": "ready"
+        },
+        {
+          "id": "ted",
+          "name_zh": "TED",
+          "video_count": 55,
+          "status": "ready"
+        },
+        {
+          "id": "business-interviews",
+          "name_zh": "商业访谈",
+          "video_count": 490,
+          "status": "ready"
+        },
+        {
+          "id": "pod-tech-ai",
+          "name_zh": "科技与 AI",
+          "video_count": 408,
+          "status": "ready"
+        },
+        {
+          "id": "pod-business",
+          "name_zh": "商业创业",
+          "video_count": 647,
+          "status": "ready"
+        },
+        {
+          "id": "pod-science-health",
+          "name_zh": "科学与健康",
+          "video_count": 368,
+          "status": "ready"
+        },
+        {
+          "id": "pod-society",
+          "name_zh": "人文社会",
+          "video_count": 589,
+          "status": "ready"
+        },
+        {
+          "id": "pod-zh",
+          "name_zh": "中文播客",
+          "video_count": 310,
+          "status": "ready"
+        },
+        {
+          "id": "tiny-desk-live",
+          "name_zh": "Tiny Desk 现场",
+          "video_count": 29,
+          "status": "ready"
+        },
+        {
+          "id": "japanese-live",
+          "name_zh": "日系现场",
+          "video_count": 38,
+          "status": "ready"
+        },
+        {
+          "id": "western-pop",
+          "name_zh": "欧美流行",
+          "video_count": 150,
+          "status": "ready"
+        },
+        {
+          "id": "kpop",
+          "name_zh": "K-pop",
+          "video_count": 80,
+          "status": "ready"
+        },
+        {
+          "id": "hiphop",
+          "name_zh": "Hip-hop / 说唱",
+          "video_count": 123,
+          "status": "ready"
+        },
+        {
+          "id": "mandopop",
+          "name_zh": "华语流行",
+          "video_count": 230,
+          "status": "ready"
+        },
+        {
+          "id": "cantonese",
+          "name_zh": "粤语",
+          "video_count": 191,
+          "status": "ready"
+        },
+        {
+          "id": "indie-folk",
+          "name_zh": "独立 / 民谣",
+          "video_count": 206,
+          "status": "ready"
+        },
+        {
+          "id": "jazz-classical",
+          "name_zh": "爵士 / 古典",
+          "video_count": 304,
+          "status": "ready"
+        },
+        {
+          "id": "rnb-soul",
+          "name_zh": "R&B / Soul",
+          "video_count": 281,
+          "status": "ready"
+        },
+        {
+          "id": "electronic",
+          "name_zh": "电子",
+          "video_count": 365,
+          "status": "ready"
+        },
+        {
+          "id": "classic-talks",
+          "name_zh": "经典演讲",
+          "video_count": 137,
+          "status": "ready"
+        },
+        {
+          "id": "university-lectures",
+          "name_zh": "大学公开课",
+          "video_count": 49,
+          "status": "ready"
+        },
+        {
+          "id": "science-explainers",
+          "name_zh": "科学科普",
+          "video_count": 293,
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "name_zh": "AI前沿",
+      "subtopics": [
+        {
+          "id": "ai-models",
+          "name_zh": "AI 模型与研究",
+          "video_count": 204,
+          "status": "ready"
+        },
+        {
+          "id": "ai-agents",
+          "name_zh": "AI Agent",
+          "video_count": 376,
+          "status": "ready"
+        },
+        {
+          "id": "ai-coding",
+          "name_zh": "AI 编程",
+          "video_count": 251,
+          "status": "ready"
+        },
+        {
+          "id": "ai-products",
+          "name_zh": "AI 产品与应用",
+          "video_count": 286,
+          "status": "ready"
+        },
+        {
+          "id": "ai-industry",
+          "name_zh": "AI 产业动态",
+          "video_count": 125,
+          "status": "ready"
+        },
+        {
+          "id": "agent-learning",
+          "name_zh": "Agent 学习",
+          "video_count": 60,
+          "status": "ready"
+        },
+        {
+          "id": "open-local-models",
+          "name_zh": "开源模型与本地部署",
+          "video_count": 34,
+          "status": "ready"
+        },
+        {
+          "id": "zh-ai",
+          "name_zh": "中文 AI",
+          "video_count": 250,
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "podcast",
+      "name_zh": "播客",
+      "subtopics": [
+        {
+          "id": "ted",
+          "name_zh": "TED",
+          "video_count": 55,
+          "status": "ready"
+        },
+        {
+          "id": "business-interviews",
+          "name_zh": "商业访谈",
+          "video_count": 490,
+          "status": "ready"
+        },
+        {
+          "id": "pod-tech-ai",
+          "name_zh": "科技与 AI",
+          "video_count": 408,
+          "status": "ready"
+        },
+        {
+          "id": "pod-business",
+          "name_zh": "商业创业",
+          "video_count": 647,
+          "status": "ready"
+        },
+        {
+          "id": "pod-science-health",
+          "name_zh": "科学与健康",
+          "video_count": 368,
+          "status": "ready"
+        },
+        {
+          "id": "pod-society",
+          "name_zh": "人文社会",
+          "video_count": 589,
+          "status": "ready"
+        },
+        {
+          "id": "pod-zh",
+          "name_zh": "中文播客",
+          "video_count": 310,
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "name_zh": "音乐",
+      "subtopics": [
+        {
+          "id": "tiny-desk-live",
+          "name_zh": "Tiny Desk 现场",
+          "video_count": 29,
+          "status": "ready"
+        },
+        {
+          "id": "japanese-live",
+          "name_zh": "日系现场",
+          "video_count": 38,
+          "status": "ready"
+        },
+        {
+          "id": "western-pop",
+          "name_zh": "欧美流行",
+          "video_count": 150,
+          "status": "ready"
+        },
+        {
+          "id": "kpop",
+          "name_zh": "K-pop",
+          "video_count": 80,
+          "status": "ready"
+        },
+        {
+          "id": "hiphop",
+          "name_zh": "Hip-hop / 说唱",
+          "video_count": 123,
+          "status": "ready"
+        },
+        {
+          "id": "mandopop",
+          "name_zh": "华语流行",
+          "video_count": 230,
+          "status": "ready"
+        },
+        {
+          "id": "cantonese",
+          "name_zh": "粤语",
+          "video_count": 191,
+          "status": "ready"
+        },
+        {
+          "id": "indie-folk",
+          "name_zh": "独立 / 民谣",
+          "video_count": 206,
+          "status": "ready"
+        },
+        {
+          "id": "jazz-classical",
+          "name_zh": "爵士 / 古典",
+          "video_count": 304,
+          "status": "ready"
+        },
+        {
+          "id": "rnb-soul",
+          "name_zh": "R&B / Soul",
+          "video_count": 281,
+          "status": "ready"
+        },
+        {
+          "id": "electronic",
+          "name_zh": "电子",
+          "video_count": 365,
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "name_zh": "社区推荐",
+      "subtopics": [
+        {
+          "id": "classic-talks",
+          "name_zh": "经典演讲",
+          "video_count": 137,
+          "status": "ready"
+        },
+        {
+          "id": "university-lectures",
+          "name_zh": "大学公开课",
+          "video_count": 49,
+          "status": "ready"
+        },
+        {
+          "id": "science-explainers",
+          "name_zh": "科学科普",
+          "video_count": 293,
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

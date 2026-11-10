@@ -1,0 +1,811 @@
+{
+  "topic_id": "ai-products",
+  "canonical_name": "AI 产品与应用",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "ai",
+  "videos": [
+    {
+      "video_id": "0Kw6_DTZPrY",
+      "title": "‘We may release models we can’t control’: Amodei, Altman … and Gemini Carbon",
+      "channel_title": "AI Explained",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=0Kw6_DTZPrY",
+      "thumbnail": "https://i.ytimg.com/vi/0Kw6_DTZPrY/mqdefault.jpg",
+      "duration_seconds": 1675,
+      "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw"
+    },
+    {
+      "video_id": "v-d1WTqIULs",
+      "title": "Building ChatGPT for Finance — Joseph Kim, OpenAI's Head of Financial Services",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=v-d1WTqIULs",
+      "thumbnail": "https://i.ytimg.com/vi/v-d1WTqIULs/mqdefault.jpg",
+      "duration_seconds": 1655,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "8oB9sf1SKhs",
+      "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
+      "channel_title": "ElevenLabs",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=8oB9sf1SKhs",
+      "thumbnail": "https://i.ytimg.com/vi/8oB9sf1SKhs/mqdefault.jpg",
+      "duration_seconds": 579,
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w"
+    },
+    {
+      "video_id": "yj83TIdcgtA",
+      "title": "How to Make an Ad with a Jingle using AI (Full Workflow)",
+      "channel_title": "ElevenLabs",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yj83TIdcgtA",
+      "thumbnail": "https://i.ytimg.com/vi/yj83TIdcgtA/mqdefault.jpg",
+      "duration_seconds": 457,
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w"
+    },
+    {
+      "video_id": "EaOit1mmR9g",
+      "title": "How Financial Planners With Zero Coding Experience Built Their Own Agents - Matt Ragone, Range",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EaOit1mmR9g",
+      "thumbnail": "https://i.ytimg.com/vi/EaOit1mmR9g/mqdefault.jpg",
+      "duration_seconds": 969,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "ZJjRgvjhq3M",
+      "title": "Build Your Own Finance Agent Inside ChatGPT - Stefano Fabbri & Oliver Steffmann, OpenAI",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZJjRgvjhq3M",
+      "thumbnail": "https://i.ytimg.com/vi/ZJjRgvjhq3M/mqdefault.jpg",
+      "duration_seconds": 6632,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "pz74r-4dGfQ",
+      "title": "Your AI Agent Is Hiding Its Mistakes From You - Ben Holmes, Warp",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=pz74r-4dGfQ",
+      "thumbnail": "https://i.ytimg.com/vi/pz74r-4dGfQ/mqdefault.jpg",
+      "duration_seconds": 1160,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "ys6YQ2yfBpM",
+      "title": "Your Old Prompts Are Making Claude Worse - Lance Martin, Anthropic",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ys6YQ2yfBpM",
+      "thumbnail": "https://i.ytimg.com/vi/ys6YQ2yfBpM/mqdefault.jpg",
+      "duration_seconds": 3843,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "EtZwTYahfek",
+      "title": "7 Things Your AI Coworker Needs - Philipp Schmid, Google DeepMind",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EtZwTYahfek",
+      "thumbnail": "https://i.ytimg.com/vi/EtZwTYahfek/mqdefault.jpg",
+      "duration_seconds": 1047,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "C2-v6wkHXhY",
+      "title": "Your AI Isn't the Advantage. Your Judgment Is - Sid Pednekar",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=C2-v6wkHXhY",
+      "thumbnail": "https://i.ytimg.com/vi/C2-v6wkHXhY/mqdefault.jpg",
+      "duration_seconds": 1093,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "-uBABM2AuFg",
+      "title": "Don't Approve the AI Model. Approve the App - Doneyli De Jesus, Langfuse",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-uBABM2AuFg",
+      "thumbnail": "https://i.ytimg.com/vi/-uBABM2AuFg/mqdefault.jpg",
+      "duration_seconds": 1160,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "vUJDyDnqT4c",
+      "title": "Your AI Pilots Won't Move the P&L. Here's What Will - Adam Nahari, Apollo",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vUJDyDnqT4c",
+      "thumbnail": "https://i.ytimg.com/vi/vUJDyDnqT4c/mqdefault.jpg",
+      "duration_seconds": 952,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "CvmZtAPmAW4",
+      "title": "78% Wanted This AI Feature. Almost Nobody Used It - Supriya Subudhi, Bumble",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=CvmZtAPmAW4",
+      "thumbnail": "https://i.ytimg.com/vi/CvmZtAPmAW4/mqdefault.jpg",
+      "duration_seconds": 884,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "GJ6PMUm5oTA",
+      "title": "OpenAI's Astra Just Opened The Black Box Of AI",
+      "channel_title": "Two Minute Papers",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GJ6PMUm5oTA",
+      "thumbnail": "https://i.ytimg.com/vi/GJ6PMUm5oTA/mqdefault.jpg",
+      "duration_seconds": 349,
+      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg"
+    },
+    {
+      "video_id": "CWdTBLsbaQs",
+      "title": "OpenAI Claims It Just Did The Impossible",
+      "channel_title": "Two Minute Papers",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=CWdTBLsbaQs",
+      "thumbnail": "https://i.ytimg.com/vi/CWdTBLsbaQs/mqdefault.jpg",
+      "duration_seconds": 442,
+      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg"
+    },
+    {
+      "video_id": "LWxX6vvHfrc",
+      "title": "Gemini 4 Argon Is Not What I Expected",
+      "channel_title": "Two Minute Papers",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=LWxX6vvHfrc",
+      "thumbnail": "https://i.ytimg.com/vi/LWxX6vvHfrc/mqdefault.jpg",
+      "duration_seconds": 409,
+      "channel_id": "UCbfYPyITQ-7l4upoX8nvctg"
+    },
+    {
+      "video_id": "I5VxMzaBD6s",
+      "title": "What is the Future of IDEs?",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=I5VxMzaBD6s",
+      "thumbnail": "https://i.ytimg.com/vi/I5VxMzaBD6s/mqdefault.jpg",
+      "duration_seconds": 871,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "OrcsMi2-IcM",
+      "title": "NEW DeepSeek Harness -  Super Agent!",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OrcsMi2-IcM",
+      "thumbnail": "https://i.ytimg.com/vi/OrcsMi2-IcM/mqdefault.jpg",
+      "duration_seconds": 1073,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "bEO_QeJU7U0",
+      "title": "Do Diffusion LLMs Scale? Testing Mercury 3 + Decide",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bEO_QeJU7U0",
+      "thumbnail": "https://i.ytimg.com/vi/bEO_QeJU7U0/mqdefault.jpg",
+      "duration_seconds": 1314,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "aKVfjG7_R4g",
+      "title": "Meta's New Models & Agent",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aKVfjG7_R4g",
+      "thumbnail": "https://i.ytimg.com/vi/aKVfjG7_R4g/mqdefault.jpg",
+      "duration_seconds": 1366,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "4iK_UFzW6Zw",
+      "title": "Gemini 4 Argon - Out and Tested!!",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=4iK_UFzW6Zw",
+      "thumbnail": "https://i.ytimg.com/vi/4iK_UFzW6Zw/mqdefault.jpg",
+      "duration_seconds": 679,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "tcb5q_6jwvY",
+      "title": "Every Claude 2.0 Concept Explained for Normal People",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=tcb5q_6jwvY",
+      "thumbnail": "https://i.ytimg.com/vi/tcb5q_6jwvY/mqdefault.jpg",
+      "duration_seconds": 1300,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "DByAR5Su1Yw",
+      "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DByAR5Su1Yw",
+      "thumbnail": "https://i.ytimg.com/vi/DByAR5Su1Yw/mqdefault.jpg",
+      "duration_seconds": 831,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "BQJRLZ2q_Ns",
+      "title": "4 Claude Systems That Sell For $3000+ Right Now (With PROOF)",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BQJRLZ2q_Ns",
+      "thumbnail": "https://i.ytimg.com/vi/BQJRLZ2q_Ns/mqdefault.jpg",
+      "duration_seconds": 660,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "DSS1Yqb6-qE",
+      "title": "/roast-room: How I Use Claude to Think Like the Top 1%",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DSS1Yqb6-qE",
+      "thumbnail": "https://i.ytimg.com/vi/DSS1Yqb6-qE/mqdefault.jpg",
+      "duration_seconds": 900,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "hgLI491ajG0",
+      "title": "I Tried 100+ AI Tools. These 7 Are the Best",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hgLI491ajG0",
+      "thumbnail": "https://i.ytimg.com/vi/hgLI491ajG0/mqdefault.jpg",
+      "duration_seconds": 616,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "nRXHWckVxoM",
+      "title": "This ONE Claude Skill Helps You Think Clearer Than 99% of People",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nRXHWckVxoM",
+      "thumbnail": "https://i.ytimg.com/vi/nRXHWckVxoM/mqdefault.jpg",
+      "duration_seconds": 885,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "HhZdNYI4pJs",
+      "title": "I Tried 100+ Github Repos for Claude. These 6 Are the Best",
+      "channel_title": "Nate Herk | AI Automation",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=HhZdNYI4pJs",
+      "thumbnail": "https://i.ytimg.com/vi/HhZdNYI4pJs/mqdefault.jpg",
+      "duration_seconds": 637,
+      "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA"
+    },
+    {
+      "video_id": "IrAHINf0M6E",
+      "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=IrAHINf0M6E",
+      "thumbnail": "https://i.ytimg.com/vi/IrAHINf0M6E/mqdefault.jpg",
+      "duration_seconds": 1484,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "ep4psgAFOqc",
+      "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ep4psgAFOqc",
+      "thumbnail": "https://i.ytimg.com/vi/ep4psgAFOqc/mqdefault.jpg",
+      "duration_seconds": 1965,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "eDiQNFa-zYg",
+      "title": "AI News: The Only 6 Stories Worth Knowing This Week",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=eDiQNFa-zYg",
+      "thumbnail": "https://i.ytimg.com/vi/eDiQNFa-zYg/mqdefault.jpg",
+      "duration_seconds": 1761,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "AtjFk9f44HE",
+      "title": "He Built an AI Board of Billionaires (Free & Open-Source)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AtjFk9f44HE",
+      "thumbnail": "https://i.ytimg.com/vi/AtjFk9f44HE/mqdefault.jpg",
+      "duration_seconds": 2290,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "TVRCcMlvR10",
+      "title": "AI News: 24 Things You Need To Know This Week",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TVRCcMlvR10",
+      "thumbnail": "https://i.ytimg.com/vi/TVRCcMlvR10/mqdefault.jpg",
+      "duration_seconds": 1618,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "umGZrkyTRtw",
+      "title": "11 AI Breakthroughs You Didn’t Know Existed",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=umGZrkyTRtw",
+      "thumbnail": "https://i.ytimg.com/vi/umGZrkyTRtw/mqdefault.jpg",
+      "duration_seconds": 1517,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "KGcuuhqmPhI",
+      "title": "AI News: 6 New Models & A Nano Banana Killer",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KGcuuhqmPhI",
+      "thumbnail": "https://i.ytimg.com/vi/KGcuuhqmPhI/mqdefault.jpg",
+      "duration_seconds": 1868,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "eBszYxzE2dk",
+      "title": "Google Just Caught Up (Gemini-4 Argon)",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=eBszYxzE2dk",
+      "thumbnail": "https://i.ytimg.com/vi/eBszYxzE2dk/mqdefault.jpg",
+      "duration_seconds": 1240,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "NUizyuGj-kE",
+      "title": "AI News: Haiku-5.5, Visual ChatGPT, Grok's New Trick, and more!",
+      "channel_title": "Matt Wolfe",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NUizyuGj-kE",
+      "thumbnail": "https://i.ytimg.com/vi/NUizyuGj-kE/mqdefault.jpg",
+      "duration_seconds": 2128,
+      "channel_id": "UChpleBmo18P08aKCIgti38g"
+    },
+    {
+      "video_id": "fQnrdr2DcqQ",
+      "title": "ChatGPT Can Make GIFs Now (Images 2.6 Tested)",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=fQnrdr2DcqQ",
+      "thumbnail": "https://i.ytimg.com/vi/fQnrdr2DcqQ/mqdefault.jpg",
+      "duration_seconds": 1078,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "o5iRKvXZEcY",
+      "title": "Claude Reverse Engineered Two 3DS Games to Add Real 3D",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=o5iRKvXZEcY",
+      "thumbnail": "https://i.ytimg.com/vi/o5iRKvXZEcY/mqdefault.jpg",
+      "duration_seconds": 1156,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "6Il7tudXo1E",
+      "title": "GPT-6.1 Terra vs Claude 5.5: Same Prompt, Not Even Close",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=6Il7tudXo1E",
+      "thumbnail": "https://i.ytimg.com/vi/6Il7tudXo1E/mqdefault.jpg",
+      "duration_seconds": 1258,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "B0HN9kLxf7A",
+      "title": "Claude Rebuilt This AI Video in Unreal Engine (Zero Imported Assets)",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=B0HN9kLxf7A",
+      "thumbnail": "https://i.ytimg.com/vi/B0HN9kLxf7A/mqdefault.jpg",
+      "duration_seconds": 1128,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "biFz8gYnoak",
+      "title": "GTA 6 Launch Night LIVE — Xbox 360 GTA V → PS5 GTA VI",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=biFz8gYnoak",
+      "thumbnail": "https://i.ytimg.com/vi/biFz8gYnoak/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "H6eduK5LgSI",
+      "title": "Gemini 4 Argon is Cheaper Than Opus... But the Catch?",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=H6eduK5LgSI",
+      "thumbnail": "https://i.ytimg.com/vi/H6eduK5LgSI/mqdefault.jpg",
+      "duration_seconds": 1011,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "nexQA1qdExw",
+      "title": "TORNADO Mod in Red Dead Redemption 2",
+      "channel_title": "MattVidPro",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nexQA1qdExw",
+      "thumbnail": "https://i.ytimg.com/vi/nexQA1qdExw/mqdefault.jpg",
+      "duration_seconds": 1226,
+      "channel_id": "UC5Wz4fFacYuON6IKbhSa7Zw"
+    },
+    {
+      "video_id": "5LkRDoGVook",
+      "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
+      "channel_title": "The AI Advantage",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5LkRDoGVook",
+      "thumbnail": "https://i.ytimg.com/vi/5LkRDoGVook/mqdefault.jpg",
+      "duration_seconds": 693,
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"
+    },
+    {
+      "video_id": "MNiurW07nLs",
+      "title": "ChatGPT & Grok Bot: 7 Useful Updates for Everyday Life",
+      "channel_title": "The AI Advantage",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MNiurW07nLs",
+      "thumbnail": "https://i.ytimg.com/vi/MNiurW07nLs/mqdefault.jpg",
+      "duration_seconds": 726,
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"
+    },
+    {
+      "video_id": "dc3pgMqhRzI",
+      "title": "Don't Buy Another App Until You See This",
+      "channel_title": "The AI Advantage",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=dc3pgMqhRzI",
+      "thumbnail": "https://i.ytimg.com/vi/dc3pgMqhRzI/mqdefault.jpg",
+      "duration_seconds": 338,
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"
+    },
+    {
+      "video_id": "Bd8-geZPwI4",
+      "title": "My Honest Take on Muse, Grok Bot, Dots & Duet",
+      "channel_title": "The AI Advantage",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Bd8-geZPwI4",
+      "thumbnail": "https://i.ytimg.com/vi/Bd8-geZPwI4/mqdefault.jpg",
+      "duration_seconds": 1046,
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"
+    },
+    {
+      "video_id": "KwvpDtUFS-s",
+      "title": "ChatGPT Just Solved My Biggest Browser Problem",
+      "channel_title": "The AI Advantage",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KwvpDtUFS-s",
+      "thumbnail": "https://i.ytimg.com/vi/KwvpDtUFS-s/mqdefault.jpg",
+      "duration_seconds": 439,
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"
+    },
+    {
+      "video_id": "qZqZ02AsYiA",
+      "title": "New Claude Motion is Insane",
+      "channel_title": "The AI Advantage",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qZqZ02AsYiA",
+      "thumbnail": "https://i.ytimg.com/vi/qZqZ02AsYiA/mqdefault.jpg",
+      "duration_seconds": 311,
+      "channel_id": "UCHhYXsLBEVVnbvsq57n1MTQ"
+    },
+    {
+      "video_id": "yNI84SU9x4I",
+      "title": "Gemini 4 Carbon - The Worlds Smartest AI (Beats Opus 5.5 and GPT-6 Astra)",
+      "channel_title": "TheAIGRID",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yNI84SU9x4I",
+      "thumbnail": "https://i.ytimg.com/vi/yNI84SU9x4I/mqdefault.jpg",
+      "duration_seconds": 1801,
+      "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg"
+    },
+    {
+      "video_id": "p_kGoHC3-Ys",
+      "title": "Meta Just Unleashed Its Most Powerful AI Yet  (Meta Muse Wonder)",
+      "channel_title": "TheAIGRID",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=p_kGoHC3-Ys",
+      "thumbnail": "https://i.ytimg.com/vi/p_kGoHC3-Ys/mqdefault.jpg",
+      "duration_seconds": 1757,
+      "channel_id": "UCbY9xX3_jW5c2fjlZVBI4cg"
+    },
+    {
+      "video_id": "TBLHdXABwAg",
+      "title": "Is Claude Conscious? Pope Rejects, Model Welfare Movement, OpenAI's Math Backlash, France Riots",
+      "channel_title": "All-In Podcast",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TBLHdXABwAg",
+      "thumbnail": "https://i.ytimg.com/vi/TBLHdXABwAg/mqdefault.jpg",
+      "duration_seconds": 5595,
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+    },
+    {
+      "video_id": "aRY7YrXOmKo",
+      "title": "🚀Grok Bot进阶玩法保姆级教程！超越Meta Muse/OpenAI Dots/Claude Duet！定制专属邮箱、自动沉淀skill、Pages制作、视频生成！让Grok Bot越用越聪明",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aRY7YrXOmKo",
+      "thumbnail": "https://i.ytimg.com/vi/aRY7YrXOmKo/mqdefault.jpg",
+      "duration_seconds": 486,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "9fGwwQaaLSQ",
+      "title": "🚀ChatGPT Images 2.6全方位实测！原生GIF生成、图像编辑一致性、电影分镜生成、产品摄影和UI界面原型生成、书法作品生成、换场景、改光影、多轮P图！样样精通！取代设计师！开发者效率倍增",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9fGwwQaaLSQ",
+      "thumbnail": "https://i.ytimg.com/vi/9fGwwQaaLSQ/mqdefault.jpg",
+      "duration_seconds": 627,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "uK3j5AbpiF0",
+      "title": "🚀Grok Bot高级玩法教程！超越Meta Muse/OpenAI Dots/Claude Duet！多设备任务互通、多智能体群聊、跨群协作、持久云电脑、AI 记忆管理！让Grok Bot越用越聪明",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uK3j5AbpiF0",
+      "thumbnail": "https://i.ytimg.com/vi/uK3j5AbpiF0/mqdefault.jpg",
+      "duration_seconds": 783,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "aQ8gC58O4l0",
+      "title": "🚀Claude Duet华语区首测！Anthropic的云电脑能否超越Dots、Grok Bot、Meta Muse？最强个人AI助手！从创建频道、设置定时任务到多任务并行不中断，开发者必备！效率倍增",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aQ8gC58O4l0",
+      "thumbnail": "https://i.ytimg.com/vi/aQ8gC58O4l0/mqdefault.jpg",
+      "duration_seconds": 717,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "C8hMcdSYtKk",
+      "title": "🚀Claude Fable 5.5动画视频生成能力深度实测！8个视频动画案例，连音效都能合成！从提示词到动画成片，每个都是大片效果！不给图片也能做动画！从儿童动画到科普视频，从电影特效到纪录片画质",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=C8hMcdSYtKk",
+      "thumbnail": "https://i.ytimg.com/vi/C8hMcdSYtKk/mqdefault.jpg",
+      "duration_seconds": 979,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "RYIV5E2Xq60",
+      "title": "I REALLY Want Open Models to Win, But They Just Don't Cut It (Yet)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RYIV5E2Xq60",
+      "thumbnail": "https://i.ytimg.com/vi/RYIV5E2Xq60/mqdefault.jpg",
+      "duration_seconds": 1114,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "YHKuUjicB3M",
+      "title": "My AI Software Factory Ships Hundreds of PRs a Week (Here's How I Manage It)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YHKuUjicB3M",
+      "thumbnail": "https://i.ytimg.com/vi/YHKuUjicB3M/mqdefault.jpg",
+      "duration_seconds": 992,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "BlbxhsItZPg",
+      "title": "Anthropic's New Study: You're Not Controlling AI as Much as You Think You Are",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BlbxhsItZPg",
+      "thumbnail": "https://i.ytimg.com/vi/BlbxhsItZPg/mqdefault.jpg",
+      "duration_seconds": 987,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "qIWB1yMsqRo",
+      "title": "The 4 Components of Every Successful AI Second Brain (Build These Now)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qIWB1yMsqRo",
+      "thumbnail": "https://i.ytimg.com/vi/qIWB1yMsqRo/mqdefault.jpg",
+      "duration_seconds": 1250,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "tNKmMhiOw9w",
+      "title": "Run Your AI Software Factory Like a Real Engineering Org (Here's How)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=tNKmMhiOw9w",
+      "thumbnail": "https://i.ytimg.com/vi/tNKmMhiOw9w/mqdefault.jpg",
+      "duration_seconds": 1118,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "zj1TJlP7c9Y",
+      "title": "AI Makes Us WAY Faster but Fries Our Focus (Here's What I Do About It)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=zj1TJlP7c9Y",
+      "thumbnail": "https://i.ytimg.com/vi/zj1TJlP7c9Y/mqdefault.jpg",
+      "duration_seconds": 981,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "GQatuTWSRqY",
+      "title": "My AI Dark Factory Dream Is Dead (Here's What Actually Works)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GQatuTWSRqY",
+      "thumbnail": "https://i.ytimg.com/vi/GQatuTWSRqY/mqdefault.jpg",
+      "duration_seconds": 1156,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "2i_ZyqDmtio",
+      "title": "How I Keep Up with AI Without Drowning in It (Free Skill)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2i_ZyqDmtio",
+      "thumbnail": "https://i.ytimg.com/vi/2i_ZyqDmtio/mqdefault.jpg",
+      "duration_seconds": 856,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "PMOnd8T7Py0",
+      "title": "Is Learning to Build Software Still Worth It with AI? (My Honest Take)",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PMOnd8T7Py0",
+      "thumbnail": "https://i.ytimg.com/vi/PMOnd8T7Py0/mqdefault.jpg",
+      "duration_seconds": 958,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "cWjS56edaUA",
+      "title": "Agentic Apps: How Big Companies Are Actually Deploying AI Agents",
+      "channel_title": "Cole Medin",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cWjS56edaUA",
+      "thumbnail": "https://i.ytimg.com/vi/cWjS56edaUA/mqdefault.jpg",
+      "duration_seconds": 750,
+      "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA"
+    },
+    {
+      "video_id": "TFCDWrEBaFM",
+      "title": "How Claude Fixes It's Own Code",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TFCDWrEBaFM",
+      "thumbnail": "https://i.ytimg.com/vi/TFCDWrEBaFM/mqdefault.jpg",
+      "duration_seconds": 2535,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "NBCM_ZoWZo8",
+      "title": "How To Give Claude Unlimited Usage",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NBCM_ZoWZo8",
+      "thumbnail": "https://i.ytimg.com/vi/NBCM_ZoWZo8/mqdefault.jpg",
+      "duration_seconds": 2328,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "NE006pkiAnk",
+      "title": "So I've been testing Gemini 4...",
+      "channel_title": "Theo - t3․gg",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NE006pkiAnk",
+      "thumbnail": "https://i.ytimg.com/vi/NE006pkiAnk/mqdefault.jpg",
+      "duration_seconds": 2310,
+      "channel_id": "UCbRP3c757lWg9M-U7TyEkXA"
+    },
+    {
+      "video_id": "oFtTodDCbkE",
+      "title": "7 Things AI Coding Agents Get Wrong (Because You Let Them)",
+      "channel_title": "ArjanCodes",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=oFtTodDCbkE",
+      "thumbnail": "https://i.ytimg.com/vi/oFtTodDCbkE/mqdefault.jpg",
+      "duration_seconds": 836,
+      "channel_id": "UCVhQ2NnY5Rskt6UjCUkJ_DA"
+    },
+    {
+      "video_id": "PXLTgW48TGo",
+      "title": "The App That Closed a $200K Deal (Showcase)",
+      "channel_title": "Replit",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PXLTgW48TGo",
+      "thumbnail": "https://i.ytimg.com/vi/PXLTgW48TGo/mqdefault.jpg",
+      "duration_seconds": 5594,
+      "channel_id": "UCgoJjdR6-7AMu9fDitb6nVw"
+    },
+    {
+      "video_id": "lclwLsZgOeo",
+      "title": "How to Publish a Mobile app to the App Store with Replit",
+      "channel_title": "Replit",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=lclwLsZgOeo",
+      "thumbnail": "https://i.ytimg.com/vi/lclwLsZgOeo/mqdefault.jpg",
+      "duration_seconds": 334,
+      "channel_id": "UCgoJjdR6-7AMu9fDitb6nVw"
+    },
+    {
+      "video_id": "9n0MI4D7TCM",
+      "title": "OpenAI’s Head of Health AI on Whether You Should Trust ChatGPT",
+      "channel_title": "a16z",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9n0MI4D7TCM",
+      "thumbnail": "https://i.ytimg.com/vi/9n0MI4D7TCM/mqdefault.jpg",
+      "duration_seconds": 3232,
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+    },
+    {
+      "video_id": "v12aSIZIXUs",
+      "title": "This Is How You Should Actually Make Launch Videos",
+      "channel_title": "Y Combinator",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=v12aSIZIXUs",
+      "thumbnail": "https://i.ytimg.com/vi/v12aSIZIXUs/mqdefault.jpg",
+      "duration_seconds": 2829,
+      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg"
+    },
+    {
+      "video_id": "rIlSsOHPbTU",
+      "title": "Someone Used ChatGPT to Spy on OpenAI (And Got Caught)",
+      "channel_title": "Big Technology",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rIlSsOHPbTU",
+      "thumbnail": "https://i.ytimg.com/vi/rIlSsOHPbTU/mqdefault.jpg",
+      "duration_seconds": 559,
+      "channel_id": "UCaKiCexVhZ459j9sZ2e7XdQ"
+    },
+    {
+      "video_id": "k-ar92HI2ZQ",
+      "title": "Claude Code 聊久了就忘事？我做了个免费工具，先写日志再压缩 | 回到Axton",
+      "channel_title": "回到Axton",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=k-ar92HI2ZQ",
+      "thumbnail": "https://i.ytimg.com/vi/k-ar92HI2ZQ/mqdefault.jpg",
+      "duration_seconds": 850,
+      "channel_id": "UCBj9S8TBRlCU4QnhTEOdWZQ"
+    },
+    {
+      "video_id": "-Bdt4-ZOCMs",
+      "title": "Claude Motion 只给企业用？我用开源 skill 在 Max 上做出来了，还赢了官方一局 | 回到Axton",
+      "channel_title": "回到Axton",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-Bdt4-ZOCMs",
+      "thumbnail": "https://i.ytimg.com/vi/-Bdt4-ZOCMs/mqdefault.jpg",
+      "duration_seconds": 442,
+      "channel_id": "UCBj9S8TBRlCU4QnhTEOdWZQ"
+    },
+    {
+      "video_id": "0M8o5KAQf6k",
+      "title": "dots、Muse、Grok Bot、Claude Code Projects 差在哪？ | 回到Axton",
+      "channel_title": "回到Axton",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=0M8o5KAQf6k",
+      "thumbnail": "https://i.ytimg.com/vi/0M8o5KAQf6k/mqdefault.jpg",
+      "duration_seconds": 917,
+      "channel_id": "UCBj9S8TBRlCU4QnhTEOdWZQ"
+    }
+  ],
+  "match_count": 286
+}

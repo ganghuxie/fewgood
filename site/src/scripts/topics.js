@@ -1,4 +1,25 @@
 import { getSupabase, supabaseEnabled } from './supabase.js';
+import subtopicData from '../data/subtopics.json';
+import aliasData from '../../../config/topic-aliases.json';
+
+const featuredTopics = (subtopicData.categories || [])
+  .filter(category => category.id !== 'trending')
+  .flatMap(category => category.subtopics || []);
+const normalizedName = value => String(value || '').normalize('NFC').trim().toLocaleLowerCase();
+const featuredByName = new Map();
+for (const topic of featuredTopics) {
+  featuredByName.set(normalizedName(topic.id), topic);
+  featuredByName.set(normalizedName(topic.name_zh), topic);
+}
+for (const [alias, canonicalName] of Object.entries(aliasData.aliases || {})) {
+  const topic = featuredByName.get(normalizedName(canonicalName));
+  if (topic) featuredByName.set(normalizedName(alias), topic);
+}
+
+/** Resolve a featured id, Chinese name, or configured alias to its stable static id. */
+export function resolveFeaturedTopic(value) {
+  return featuredByName.get(normalizedName(value)) || null;
+}
 
 export const mockTopicsEnabled = () => new URLSearchParams(location.search).get('mockTopics') === '1' || localStorage.getItem('fewgood:mockTopics') === '1' || String(import.meta.env.PUBLIC_V2_TOPICS_MOCK || '').toLowerCase() === 'true';
 export async function topicSession() {
@@ -44,10 +65,13 @@ export async function listMyTopics() {
   const names = new Map((await publicQueue()).map(row => [row.topic_id, row.canonical_name]));
   return (data || []).map(row => {
     const canonical = names.get(row.topic_id) || row.display_name || '';
+    const featured = resolveFeaturedTopic(canonical);
     return {
       user_topic_id: row.id,
       topic_uuid: row.topic_id,
-      topic_id: topicSlug(canonical),
+      // topicSlug intentionally collapses Chinese input to "topic".  Featured
+      // topics have stable published ids, so resolve them before falling back.
+      topic_id: featured?.id || topicSlug(canonical),
       canonical_name: canonical || '主题',
       display_name: row.display_name,
       sort_order: row.sort_order,

@@ -1,0 +1,811 @@
+{
+  "topic_id": "pod-science-health",
+  "canonical_name": "科学与健康",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "podcast",
+  "videos": [
+    {
+      "video_id": "wbJ_Q1xsDHg",
+      "title": "Overcome Addictions and Obsessions of All Kinds | Dr. Anna Lembke",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=wbJ_Q1xsDHg",
+      "thumbnail": "https://i.ytimg.com/vi/wbJ_Q1xsDHg/mqdefault.jpg",
+      "duration_seconds": 8211,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "yUdg7drjrZY",
+      "title": "Essentials: Cold & Heat Exposure for Metabolic Health | Dr. Susanna Søberg",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yUdg7drjrZY",
+      "thumbnail": "https://i.ytimg.com/vi/yUdg7drjrZY/mqdefault.jpg",
+      "duration_seconds": 2302,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "y-fRFiTrrg4",
+      "title": "Access the Sublime & Live Your Best Life | Robert Greene",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=y-fRFiTrrg4",
+      "thumbnail": "https://i.ytimg.com/vi/y-fRFiTrrg4/mqdefault.jpg",
+      "duration_seconds": 8305,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "arMMF0ISRRM",
+      "title": "Essentials: How Smells Influence Our Hormones, Health & Behavior | Dr. Noam Sobel",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=arMMF0ISRRM",
+      "thumbnail": "https://i.ytimg.com/vi/arMMF0ISRRM/mqdefault.jpg",
+      "duration_seconds": 2096,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "NlVu0P1RdHs",
+      "title": "Unlocking Persistent Motivation & Extreme Resilience | Ross Edgley",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NlVu0P1RdHs",
+      "thumbnail": "https://i.ytimg.com/vi/NlVu0P1RdHs/mqdefault.jpg",
+      "duration_seconds": 9818,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "eYSOabR3YP0",
+      "title": "Essentials: Developing a Rational Approach to Supplementation for Health & Performance",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=eYSOabR3YP0",
+      "thumbnail": "https://i.ytimg.com/vi/eYSOabR3YP0/mqdefault.jpg",
+      "duration_seconds": 2062,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "2oqBvTRYcv0",
+      "title": "What Makes Great Leaders & How to Live an Extraordinary Life | Dr. Jared Diamond",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2oqBvTRYcv0",
+      "thumbnail": "https://i.ytimg.com/vi/2oqBvTRYcv0/mqdefault.jpg",
+      "duration_seconds": 6800,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "YdIJW8RTptU",
+      "title": "Essentials: Neuralink & Technologies to Enhance Human Brains | Dr. Matt MacDougall",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YdIJW8RTptU",
+      "thumbnail": "https://i.ytimg.com/vi/YdIJW8RTptU/mqdefault.jpg",
+      "duration_seconds": 1818,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "PXHRYbr3mp4",
+      "title": "How Food Choices Shape Memory, Cognition & Cravings | Dr. Scott Kanoski",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PXHRYbr3mp4",
+      "thumbnail": "https://i.ytimg.com/vi/PXHRYbr3mp4/mqdefault.jpg",
+      "duration_seconds": 7327,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "RqMWvhvt0DQ",
+      "title": "Essentials: Manage Stress & Build Resilience | Dr. Elissa Epel",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RqMWvhvt0DQ",
+      "thumbnail": "https://i.ytimg.com/vi/RqMWvhvt0DQ/mqdefault.jpg",
+      "duration_seconds": 1846,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "SFX8FIHFLE4",
+      "title": "Bringing Extinct Species Back to Life | Dr. Beth Shapiro",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=SFX8FIHFLE4",
+      "thumbnail": "https://i.ytimg.com/vi/SFX8FIHFLE4/mqdefault.jpg",
+      "duration_seconds": 8137,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "8e3RC1L5V_Y",
+      "title": "Tools to Improve Your Focus & Concentration | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=8e3RC1L5V_Y",
+      "thumbnail": "https://i.ytimg.com/vi/8e3RC1L5V_Y/mqdefault.jpg",
+      "duration_seconds": 2242,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "nk15CT41MFc",
+      "title": "What Humans, Animals and Plants Tell Us About Consciousness | Michael Pollan",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nk15CT41MFc",
+      "thumbnail": "https://i.ytimg.com/vi/nk15CT41MFc/mqdefault.jpg",
+      "duration_seconds": 7339,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Gu04f6aFuBY",
+      "title": "Essentials: Optimal Protocols to Build Strength & Grow Muscles | Dr. Andy Galpin",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Gu04f6aFuBY",
+      "thumbnail": "https://i.ytimg.com/vi/Gu04f6aFuBY/mqdefault.jpg",
+      "duration_seconds": 2134,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "ecjEM3NJ0lU",
+      "title": "Best Tools for Gut Health & Weight Loss | Dr. Chris Thompson",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ecjEM3NJ0lU",
+      "thumbnail": "https://i.ytimg.com/vi/ecjEM3NJ0lU/mqdefault.jpg",
+      "duration_seconds": 8874,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "VjaPWC4VPPU",
+      "title": "Essentials: How to Assess & Improve All Aspects of Your Fitness | Dr. Andy Galpin",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=VjaPWC4VPPU",
+      "thumbnail": "https://i.ytimg.com/vi/VjaPWC4VPPU/mqdefault.jpg",
+      "duration_seconds": 1891,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Gk2ArbsrZwE",
+      "title": "The Art of True Happiness | Dr. Arthur Brooks",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Gk2ArbsrZwE",
+      "thumbnail": "https://i.ytimg.com/vi/Gk2ArbsrZwE/mqdefault.jpg",
+      "duration_seconds": 10199,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "1_iNTFSw4Nc",
+      "title": "Essentials: Genes & the Inheritance of Memories Across Generations | Dr. Oded Rechavi",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=1_iNTFSw4Nc",
+      "thumbnail": "https://i.ytimg.com/vi/1_iNTFSw4Nc/mqdefault.jpg",
+      "duration_seconds": 1889,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "bv56Cuq-fyY",
+      "title": "How Mitochondria Control Your Metabolism | Dr. Jared Rutter",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bv56Cuq-fyY",
+      "thumbnail": "https://i.ytimg.com/vi/bv56Cuq-fyY/mqdefault.jpg",
+      "duration_seconds": 7427,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "f1NNmiz547U",
+      "title": "Essentials: Use Sleep to Enhance Learning, Memory & Emotional State | Dr. Gina Poe",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=f1NNmiz547U",
+      "thumbnail": "https://i.ytimg.com/vi/f1NNmiz547U/mqdefault.jpg",
+      "duration_seconds": 1789,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Uzoe1RYVjiA",
+      "title": "How to Accelerate Learning & Improve Education | Joe Liemandt",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Uzoe1RYVjiA",
+      "thumbnail": "https://i.ytimg.com/vi/Uzoe1RYVjiA/mqdefault.jpg",
+      "duration_seconds": 9223,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "E56LSFCNdkI",
+      "title": "Essentials: Diet & Nutrition for Mental Health | Dr. Chris Palmer",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=E56LSFCNdkI",
+      "thumbnail": "https://i.ytimg.com/vi/E56LSFCNdkI/mqdefault.jpg",
+      "duration_seconds": 2086,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "58-k4F7-AoA",
+      "title": "How to Improve Motivation & Overcome Procrastination | Dr. Masud Husain",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=58-k4F7-AoA",
+      "thumbnail": "https://i.ytimg.com/vi/58-k4F7-AoA/mqdefault.jpg",
+      "duration_seconds": 8422,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "QP8Kpf1UQwM",
+      "title": "Essentials: How to Access Your Creativity | Rick Rubin",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=QP8Kpf1UQwM",
+      "thumbnail": "https://i.ytimg.com/vi/QP8Kpf1UQwM/mqdefault.jpg",
+      "duration_seconds": 1948,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "P-h5WSQG1Sw",
+      "title": "Neuroscience of Emotions & Tools for Improving Emotion Regulation | Dr. Ralph Adolphs",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=P-h5WSQG1Sw",
+      "thumbnail": "https://i.ytimg.com/vi/P-h5WSQG1Sw/mqdefault.jpg",
+      "duration_seconds": 7771,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "wbuPQPu-03Y",
+      "title": "Essentials: How to Optimize Female Hormone Health for Vitality & Longevity | Dr. Sara Gottfried",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=wbuPQPu-03Y",
+      "thumbnail": "https://i.ytimg.com/vi/wbuPQPu-03Y/mqdefault.jpg",
+      "duration_seconds": 2041,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "N5AQFYtqx8Q",
+      "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
+      "thumbnail": "https://i.ytimg.com/vi/N5AQFYtqx8Q/mqdefault.jpg",
+      "duration_seconds": 7693,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "xKvlK7OqZso",
+      "title": "Control Your Brain Chemistry for Focus, Motivation & Well-Being | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=xKvlK7OqZso",
+      "thumbnail": "https://i.ytimg.com/vi/xKvlK7OqZso/mqdefault.jpg",
+      "duration_seconds": 1851,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "s_tkMm5U9aY",
+      "title": "How Your Immune System Works & How to Improve It | Dr. Max Krummel",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=s_tkMm5U9aY",
+      "thumbnail": "https://i.ytimg.com/vi/s_tkMm5U9aY/mqdefault.jpg",
+      "duration_seconds": 8861,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "lxDf8uEypJU",
+      "title": "Essentials: How to Become Resilient, Forge Your Identity & Lead Others | Jocko Willink",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=lxDf8uEypJU",
+      "thumbnail": "https://i.ytimg.com/vi/lxDf8uEypJU/mqdefault.jpg",
+      "duration_seconds": 1988,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "ssP31IenzYA",
+      "title": "Your Top Health Questions Answered",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ssP31IenzYA",
+      "thumbnail": "https://i.ytimg.com/vi/ssP31IenzYA/mqdefault.jpg",
+      "duration_seconds": 6255,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "LQI8tl8S2PE",
+      "title": "Essentials: Using Meditation to Focus, View Consciousness & Expand Your Mind | Dr. Sam Harris",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=LQI8tl8S2PE",
+      "thumbnail": "https://i.ytimg.com/vi/LQI8tl8S2PE/mqdefault.jpg",
+      "duration_seconds": 2221,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "bPd9NnOzx78",
+      "title": "Accelerate Learning & Increase Cognitive Capacity | Dr. Tommy Wood",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bPd9NnOzx78",
+      "thumbnail": "https://i.ytimg.com/vi/bPd9NnOzx78/mqdefault.jpg",
+      "duration_seconds": 9686,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "UTB5gAkjevk",
+      "title": "The Science & Treatment of Bipolar Disorder | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=UTB5gAkjevk",
+      "thumbnail": "https://i.ytimg.com/vi/UTB5gAkjevk/mqdefault.jpg",
+      "duration_seconds": 1873,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "EIhilBpn8Ow",
+      "title": "How to Improve Your Memory & Cognitive Function at Any Age | Dr. Alan Castel",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EIhilBpn8Ow",
+      "thumbnail": "https://i.ytimg.com/vi/EIhilBpn8Ow/mqdefault.jpg",
+      "duration_seconds": 8920,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "AtU3EvMzZDY",
+      "title": "The Science & Treatment of Obsessive Compulsive Disorder (OCD) | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AtU3EvMzZDY",
+      "thumbnail": "https://i.ytimg.com/vi/AtU3EvMzZDY/mqdefault.jpg",
+      "duration_seconds": 1898,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "n_qKxNcMvtM",
+      "title": "Raising a Dog & Mastering Calm Assertive Energy | Cesar Millan",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=n_qKxNcMvtM",
+      "thumbnail": "https://i.ytimg.com/vi/n_qKxNcMvtM/mqdefault.jpg",
+      "duration_seconds": 9504,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "O-groYMqrQw",
+      "title": "Essentials: Tools for Hormone Optimization in Males | Dr. Kyle Gillett",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=O-groYMqrQw",
+      "thumbnail": "https://i.ytimg.com/vi/O-groYMqrQw/mqdefault.jpg",
+      "duration_seconds": 2178,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Zz8chJwh3S4",
+      "title": "Movement Practice to Strengthen Your Mind-Body Connection | Ido Portal",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Zz8chJwh3S4",
+      "thumbnail": "https://i.ytimg.com/vi/Zz8chJwh3S4/mqdefault.jpg",
+      "duration_seconds": 10789,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "WWe4up63hb4",
+      "title": "Essentials: The Science of Eating for Health, Fat Loss & Lean Muscle | Dr. Layne Norton",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=WWe4up63hb4",
+      "thumbnail": "https://i.ytimg.com/vi/WWe4up63hb4/mqdefault.jpg",
+      "duration_seconds": 1922,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "CV0GtUlJ6NM",
+      "title": "Science of Attraction, Compatibility & Romance | Dr. Paul Eastwick",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=CV0GtUlJ6NM",
+      "thumbnail": "https://i.ytimg.com/vi/CV0GtUlJ6NM/mqdefault.jpg",
+      "duration_seconds": 10216,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "syJYZm5OZhE",
+      "title": "Improve Flexibility with Research-Supported Stretching Protocols | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=syJYZm5OZhE",
+      "thumbnail": "https://i.ytimg.com/vi/syJYZm5OZhE/mqdefault.jpg",
+      "duration_seconds": 1936,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "baecUt1GaPk",
+      "title": "The Mental Frame & Specific Daily Actions to Succeed | Andy Stumpf",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=baecUt1GaPk",
+      "thumbnail": "https://i.ytimg.com/vi/baecUt1GaPk/mqdefault.jpg",
+      "duration_seconds": 10511,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "RTgJSQtvo88",
+      "title": "Essentials: Sleep Toolkit for Optimizing Sleep & Sleep-Wake Timing",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RTgJSQtvo88",
+      "thumbnail": "https://i.ytimg.com/vi/RTgJSQtvo88/mqdefault.jpg",
+      "duration_seconds": 2099,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "jjaFnKtytqI",
+      "title": "Eating for Better Sleep & Foods that Improve Metabolic Health | Dr. Marie-Pierre St-Onge",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=jjaFnKtytqI",
+      "thumbnail": "https://i.ytimg.com/vi/jjaFnKtytqI/mqdefault.jpg",
+      "duration_seconds": 7025,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "GkG1hMhIQ_Q",
+      "title": "Essentials: Psychedelics & Neurostimulation for Brain Rewiring | Dr. Nolan Williams",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GkG1hMhIQ_Q",
+      "thumbnail": "https://i.ytimg.com/vi/GkG1hMhIQ_Q/mqdefault.jpg",
+      "duration_seconds": 2204,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "_DfqnpSbMfE",
+      "title": "Peptides: The Science, Uses & Safety | Dr. Abud Bakri",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_DfqnpSbMfE",
+      "thumbnail": "https://i.ytimg.com/vi/_DfqnpSbMfE/mqdefault.jpg",
+      "duration_seconds": 10103,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "PlQyGIIAGNo",
+      "title": "The Science & Process of Healing from Grief | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PlQyGIIAGNo",
+      "thumbnail": "https://i.ytimg.com/vi/PlQyGIIAGNo/mqdefault.jpg",
+      "duration_seconds": 2111,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "s95KFJ2efm4",
+      "title": "Build Muscle, Great Posture & Resilience to Injury | Jeff Cavaliere",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=s95KFJ2efm4",
+      "thumbnail": "https://i.ytimg.com/vi/s95KFJ2efm4/mqdefault.jpg",
+      "duration_seconds": 8210,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "MOPqSEK6GvA",
+      "title": "Essentials: The Science of Learning & Speaking Languages | Dr. Eddie Chang",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MOPqSEK6GvA",
+      "thumbnail": "https://i.ytimg.com/vi/MOPqSEK6GvA/mqdefault.jpg",
+      "duration_seconds": 1713,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Q2hOryHdgAk",
+      "title": "How to Overcome Social Anxiety | Dr. Nick Epley",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Q2hOryHdgAk",
+      "thumbnail": "https://i.ytimg.com/vi/Q2hOryHdgAk/mqdefault.jpg",
+      "duration_seconds": 9025,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "916vhhUsmgE",
+      "title": "Understanding & Controlling Aggression | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=916vhhUsmgE",
+      "thumbnail": "https://i.ytimg.com/vi/916vhhUsmgE/mqdefault.jpg",
+      "duration_seconds": 1999,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "e89rVf4Pf0k",
+      "title": "Master Self Control & Overcome Procrastination | Dr. Kentaro Fujita",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=e89rVf4Pf0k",
+      "thumbnail": "https://i.ytimg.com/vi/e89rVf4Pf0k/mqdefault.jpg",
+      "duration_seconds": 8870,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "aKDzF_fMMrc",
+      "title": "Essentials: Compulsive Behaviors & Deep Brain Stimulation | Dr. Casey Halpern",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aKDzF_fMMrc",
+      "thumbnail": "https://i.ytimg.com/vi/aKDzF_fMMrc/mqdefault.jpg",
+      "duration_seconds": 2020,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "cWCs7dxrt-A",
+      "title": "Tools to Bolster Your Mental Health & Confidence | Dr. Paul Conti",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cWCs7dxrt-A",
+      "thumbnail": "https://i.ytimg.com/vi/cWCs7dxrt-A/mqdefault.jpg",
+      "duration_seconds": 7803,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "qUUfucHC7tU",
+      "title": "Control Sugar Cravings & Metabolism with Science-Based Tools | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=qUUfucHC7tU",
+      "thumbnail": "https://i.ytimg.com/vi/qUUfucHC7tU/mqdefault.jpg",
+      "duration_seconds": 1779,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "sQcS6f2qYoQ",
+      "title": "Male Roles, Obligations and Options for Building a Fulfilling Life | Scott Galloway",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=sQcS6f2qYoQ",
+      "thumbnail": "https://i.ytimg.com/vi/sQcS6f2qYoQ/mqdefault.jpg",
+      "duration_seconds": 9352,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "3bnLgOxHMB8",
+      "title": "Essentials: The Neuroscience of Speech, Language & Music | Dr. Erich Jarvis",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3bnLgOxHMB8",
+      "thumbnail": "https://i.ytimg.com/vi/3bnLgOxHMB8/mqdefault.jpg",
+      "duration_seconds": 2128,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "FBgM7jndkLQ",
+      "title": "How to Better Regulate Your Emotions | Dr. Marc Brackett",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=FBgM7jndkLQ",
+      "thumbnail": "https://i.ytimg.com/vi/FBgM7jndkLQ/mqdefault.jpg",
+      "duration_seconds": 8858,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "U6dnOVth7-I",
+      "title": "Understand & Improve Memory Using Science-Based Tools | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=U6dnOVth7-I",
+      "thumbnail": "https://i.ytimg.com/vi/U6dnOVth7-I/mqdefault.jpg",
+      "duration_seconds": 2150,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "RTPNJgHeZBI",
+      "title": "How Women Can Improve Their Fertility & Hormone Health | Dr. Natalie Crawford",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RTPNJgHeZBI",
+      "thumbnail": "https://i.ytimg.com/vi/RTPNJgHeZBI/mqdefault.jpg",
+      "duration_seconds": 9363,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "xZ4I2aE8zQA",
+      "title": "Essentials: The Biology of Aggression, Mating & Arousal | Dr. David Anderson",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=xZ4I2aE8zQA",
+      "thumbnail": "https://i.ytimg.com/vi/xZ4I2aE8zQA/mqdefault.jpg",
+      "duration_seconds": 2048,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Tmw2dW0a9DY",
+      "title": "Cultivating Awe & Emotional Connection in Daily Life | Dr. Dacher Keltner",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Tmw2dW0a9DY",
+      "thumbnail": "https://i.ytimg.com/vi/Tmw2dW0a9DY/mqdefault.jpg",
+      "duration_seconds": 8420,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "0VSOoMuStvg",
+      "title": "Essentials: How to Build Strength, Muscle Size & Endurance | Dr. Andy Galpin",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=0VSOoMuStvg",
+      "thumbnail": "https://i.ytimg.com/vi/0VSOoMuStvg/mqdefault.jpg",
+      "duration_seconds": 2066,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "6-mEiwe2NhE",
+      "title": "How Hormones Shape Sexual Orientation & Behavior | Dr. Marc Breedlove",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=6-mEiwe2NhE",
+      "thumbnail": "https://i.ytimg.com/vi/6-mEiwe2NhE/mqdefault.jpg",
+      "duration_seconds": 7878,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "hnzrPKvRBD8",
+      "title": "Using Salt to Optimize Mental & Physical Performance | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hnzrPKvRBD8",
+      "thumbnail": "https://i.ytimg.com/vi/hnzrPKvRBD8/mqdefault.jpg",
+      "duration_seconds": 2034,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "C0DMdUqF73Q",
+      "title": "The Best Vitality & Health Protocols | Dr. Rhonda Patrick",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=C0DMdUqF73Q",
+      "thumbnail": "https://i.ytimg.com/vi/C0DMdUqF73Q/mqdefault.jpg",
+      "duration_seconds": 12668,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "RECLTp_YxSU",
+      "title": "Essentials: Tools for Setting & Achieving Goals | Dr. Emily Balcetis",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=RECLTp_YxSU",
+      "thumbnail": "https://i.ytimg.com/vi/RECLTp_YxSU/mqdefault.jpg",
+      "duration_seconds": 1922,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "hlOA8ObQJXo",
+      "title": "Science-Based Meditation Tools to Improve Your Brain & Health | Dr. Richard Davidson",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hlOA8ObQJXo",
+      "thumbnail": "https://i.ytimg.com/vi/hlOA8ObQJXo/mqdefault.jpg",
+      "duration_seconds": 9825,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "iuPQmw4Ax00",
+      "title": "Benefits of Sauna & Deliberate Heat Exposure | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=iuPQmw4Ax00",
+      "thumbnail": "https://i.ytimg.com/vi/iuPQmw4Ax00/mqdefault.jpg",
+      "duration_seconds": 2360,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "u4VTFb4awrQ",
+      "title": "Avoiding, Treating & Curing Cancer | Dr. Alex Marson",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=u4VTFb4awrQ",
+      "thumbnail": "https://i.ytimg.com/vi/u4VTFb4awrQ/mqdefault.jpg",
+      "duration_seconds": 8833,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "cru_4P6qVYQ",
+      "title": "Essentials: The Biology of Taste Perception & Sugar Craving | Dr. Charles Zuker",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cru_4P6qVYQ",
+      "thumbnail": "https://i.ytimg.com/vi/cru_4P6qVYQ/mqdefault.jpg",
+      "duration_seconds": 1853,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "9G2MRFs4vac",
+      "title": "Unlearn Negative Thoughts & Behaviors Patterns | Dr. Alok Kanojia (Healthy Gamer)",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9G2MRFs4vac",
+      "thumbnail": "https://i.ytimg.com/vi/9G2MRFs4vac/mqdefault.jpg",
+      "duration_seconds": 11324,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "7UeojKTzeHE",
+      "title": "Using Light (Sunlight, Blue Light & Red Light) to Optimize Health | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=7UeojKTzeHE",
+      "thumbnail": "https://i.ytimg.com/vi/7UeojKTzeHE/mqdefault.jpg",
+      "duration_seconds": 2309,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "Ew0-Lg_Evj0",
+      "title": "Restore Youthfulness & Vitality to the Aging Brain & Body | Dr. Tony Wyss-Coray",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Ew0-Lg_Evj0",
+      "thumbnail": "https://i.ytimg.com/vi/Ew0-Lg_Evj0/mqdefault.jpg",
+      "duration_seconds": 7154,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "9GzlbLIU5dU",
+      "title": "Essentials: Optimize Your Exercise Program with Science-Based Tools | Jeff Cavaliere",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9GzlbLIU5dU",
+      "thumbnail": "https://i.ytimg.com/vi/9GzlbLIU5dU/mqdefault.jpg",
+      "duration_seconds": 2091,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "_Q4XT82yd-Q",
+      "title": "The Most Effective Weight Training, Cardio & Nutrition for Women | Dr. Lauren Colenso-Semple",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_Q4XT82yd-Q",
+      "thumbnail": "https://i.ytimg.com/vi/_Q4XT82yd-Q/mqdefault.jpg",
+      "duration_seconds": 9118,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "NEkUNahduWY",
+      "title": "The Science of Love, Desire & Attachment | Huberman Lab Essentials",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NEkUNahduWY",
+      "thumbnail": "https://i.ytimg.com/vi/NEkUNahduWY/mqdefault.jpg",
+      "duration_seconds": 2149,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "rAbJC-Qaw7Q",
+      "title": "How Genes Shape Your Risk Taking & Morals | Dr. Kathryn Paige Harden",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rAbJC-Qaw7Q",
+      "thumbnail": "https://i.ytimg.com/vi/rAbJC-Qaw7Q/mqdefault.jpg",
+      "duration_seconds": 9723,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    },
+    {
+      "video_id": "JsICN9ZiSjA",
+      "title": "Essentials: The Science & Practice of Movement | Ido Portal",
+      "channel_title": "Andrew Huberman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=JsICN9ZiSjA",
+      "thumbnail": "https://i.ytimg.com/vi/JsICN9ZiSjA/mqdefault.jpg",
+      "duration_seconds": 2170,
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg"
+    }
+  ],
+  "match_count": 368
+}

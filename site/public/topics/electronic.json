@@ -1,0 +1,811 @@
+{
+  "topic_id": "electronic",
+  "canonical_name": "电子",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "music",
+  "videos": [
+    {
+      "video_id": "18RaQ6ZkJrc",
+      "title": "Hannah Laing at Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-09T18:00:01Z",
+      "url": "https://www.youtube.com/watch?v=18RaQ6ZkJrc",
+      "thumbnail": "https://i.ytimg.com/vi/18RaQ6ZkJrc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "kpOWd-gQBL0",
+      "title": "Progressive house at its dreamiest, with live vocals to match, can only mean one name: @HANAtruly.",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-09T17:10:40Z",
+      "url": "https://www.youtube.com/watch?v=kpOWd-gQBL0",
+      "thumbnail": "https://i.ytimg.com/vi/kpOWd-gQBL0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "rYyooU5oQGo",
+      "title": "Natte Visstick at Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-09T17:00:14Z",
+      "url": "https://www.youtube.com/watch?v=rYyooU5oQGo",
+      "thumbnail": "https://i.ytimg.com/vi/rYyooU5oQGo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "EBfKZeHC5v4",
+      "title": "HANA | Anjunadeep Open Air: The Gorge Amphitheatre 2026 at #ABGT700",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-09T17:00:11Z",
+      "url": "https://www.youtube.com/watch?v=EBfKZeHC5v4",
+      "thumbnail": "https://i.ytimg.com/vi/EBfKZeHC5v4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "xH_zllbN8BE",
+      "title": "Vieze Asbak at Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-09T16:17:07Z",
+      "url": "https://www.youtube.com/watch?v=xH_zllbN8BE",
+      "thumbnail": "https://i.ytimg.com/vi/xH_zllbN8BE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "xoUkL0octQ0",
+      "title": "A beautiful melodic track from @NickyElisabethMusic, in her hometown of Amsterdam ✨ #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-09T10:31:43Z",
+      "url": "https://www.youtube.com/watch?v=xoUkL0octQ0",
+      "thumbnail": "https://i.ytimg.com/vi/xoUkL0octQ0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "2RTlPb6LZmU",
+      "title": "An unreleased @DuskyMusic heater in the hands of @becauseofart 🔥 #electronicmusic #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-08T17:00:28Z",
+      "url": "https://www.youtube.com/watch?v=2RTlPb6LZmU",
+      "thumbnail": "https://i.ytimg.com/vi/2RTlPb6LZmU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "X-Z62bA-XA8",
+      "title": "A melodic moment with @becauseofart at his headline London show ❤️ #electronicmusic #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-07T20:00:30Z",
+      "url": "https://www.youtube.com/watch?v=X-Z62bA-XA8",
+      "thumbnail": "https://i.ytimg.com/vi/X-Z62bA-XA8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "sz6A64AiXJU",
+      "title": "Kiimi made her Mixmag Lab debut and it was a special one. Watch the full set 🔗",
+      "channel_title": "Mixmag",
+      "published_at": "2026-11-07T12:00:10Z",
+      "url": "https://www.youtube.com/watch?v=sz6A64AiXJU",
+      "thumbnail": "https://i.ytimg.com/vi/sz6A64AiXJU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "HTpYt6nyhYI",
+      "title": "Why does clubbing feel so cathartic?",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-07T10:01:38Z",
+      "url": "https://www.youtube.com/watch?v=HTpYt6nyhYI",
+      "thumbnail": "https://i.ytimg.com/vi/HTpYt6nyhYI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "muzLMiGsMS0",
+      "title": "Kiimi | Mixmag Lab London",
+      "channel_title": "Mixmag",
+      "published_at": "2026-11-07T10:00:07Z",
+      "url": "https://www.youtube.com/watch?v=muzLMiGsMS0",
+      "thumbnail": "https://i.ytimg.com/vi/muzLMiGsMS0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "MxtM05hFd9o",
+      "title": "@Carlita_Music 's new album 'Telepathy' is out now",
+      "channel_title": "Ninja Tune",
+      "published_at": "2026-11-06T21:43:10Z",
+      "url": "https://www.youtube.com/watch?v=MxtM05hFd9o",
+      "thumbnail": "https://i.ytimg.com/vi/MxtM05hFd9o/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCEXRv_qihRwjsV91ftx23-A"
+    },
+    {
+      "video_id": "z28UbGAPteA",
+      "title": "Vieze Asbak | Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-06T20:51:11Z",
+      "url": "https://www.youtube.com/watch?v=z28UbGAPteA",
+      "thumbnail": "https://i.ytimg.com/vi/z28UbGAPteA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "20MdwhYia8E",
+      "title": "A melodic classic in Brazil - this is @benbohmermusic ’Breathing’ in São Paulo 🇧🇷 #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-06T20:00:38Z",
+      "url": "https://www.youtube.com/watch?v=20MdwhYia8E",
+      "thumbnail": "https://i.ytimg.com/vi/20MdwhYia8E/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "rGjgyjKBhDs",
+      "title": "JAZZY | Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-06T19:51:10Z",
+      "url": "https://www.youtube.com/watch?v=rGjgyjKBhDs",
+      "thumbnail": "https://i.ytimg.com/vi/rGjgyjKBhDs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "S4U5_EnixAA",
+      "title": "@Ciaran_1111 debut album 'Róisín' is out now",
+      "channel_title": "Ninja Tune",
+      "published_at": "2026-11-06T19:49:01Z",
+      "url": "https://www.youtube.com/watch?v=S4U5_EnixAA",
+      "thumbnail": "https://i.ytimg.com/vi/S4U5_EnixAA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCEXRv_qihRwjsV91ftx23-A"
+    },
+    {
+      "video_id": "AL75DHREheM",
+      "title": "Jowi | Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-06T18:53:07Z",
+      "url": "https://www.youtube.com/watch?v=AL75DHREheM",
+      "thumbnail": "https://i.ytimg.com/vi/AL75DHREheM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "3e9vxQty5QI",
+      "title": "FIFI | Boiler Room x Sebastian Professional: Centre Stage",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-06T18:00:10Z",
+      "url": "https://www.youtube.com/watch?v=3e9vxQty5QI",
+      "thumbnail": "https://i.ytimg.com/vi/3e9vxQty5QI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "svo1fX_il9k",
+      "title": "Natte Visstick | Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-06T17:55:11Z",
+      "url": "https://www.youtube.com/watch?v=svo1fX_il9k",
+      "thumbnail": "https://i.ytimg.com/vi/svo1fX_il9k/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "gsc_AICCFBE",
+      "title": "Hannah Laing | Boiler Room LA: Teletech",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-06T17:00:07Z",
+      "url": "https://www.youtube.com/watch?v=gsc_AICCFBE",
+      "thumbnail": "https://i.ytimg.com/vi/gsc_AICCFBE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "KHzB3fWLozw",
+      "title": "Behind the Track: chatting #drumandbass with Quivver 🎤 #producer",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-06T16:16:21Z",
+      "url": "https://www.youtube.com/watch?v=KHzB3fWLozw",
+      "thumbnail": "https://i.ytimg.com/vi/KHzB3fWLozw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "oaIShxK9SgI",
+      "title": "Cincity in the Mixmag Lab Amsterdam with BPM Supreme. Watch the full set 🔗",
+      "channel_title": "Mixmag",
+      "published_at": "2026-11-06T15:56:29Z",
+      "url": "https://www.youtube.com/watch?v=oaIShxK9SgI",
+      "thumbnail": "https://i.ytimg.com/vi/oaIShxK9SgI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "SWzDMP69aQg",
+      "title": "Sam Alfred drops his new five-track EP ‘No More’, out now on Technicolour.",
+      "channel_title": "Ninja Tune",
+      "published_at": "2026-11-06T14:25:27Z",
+      "url": "https://www.youtube.com/watch?v=SWzDMP69aQg",
+      "thumbnail": "https://i.ytimg.com/vi/SWzDMP69aQg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCEXRv_qihRwjsV91ftx23-A"
+    },
+    {
+      "video_id": "-mgjVhZLF1I",
+      "title": "Batu on all the “mad new ways” to make sound 🔊",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-06T11:00:51Z",
+      "url": "https://www.youtube.com/watch?v=-mgjVhZLF1I",
+      "thumbnail": "https://i.ytimg.com/vi/-mgjVhZLF1I/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "gntZ-Q-HexY",
+      "title": "Âme’s new album ‘Love Is The Dance’ is out now! #ame #innervisions",
+      "channel_title": "Innervisions",
+      "published_at": "2026-11-06T10:21:03Z",
+      "url": "https://www.youtube.com/watch?v=gntZ-Q-HexY",
+      "thumbnail": "https://i.ytimg.com/vi/gntZ-Q-HexY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCC7eKMxcVk1LZwzJlBdsVuQ"
+    },
+    {
+      "video_id": "k8NNEgs_cdc",
+      "title": "Unbelievable energy in the booth at @becauseofart‘s London headline show last week 😮‍💨 #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-05T19:26:50Z",
+      "url": "https://www.youtube.com/watch?v=k8NNEgs_cdc",
+      "thumbnail": "https://i.ytimg.com/vi/k8NNEgs_cdc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "Sp8mZLpZLUk",
+      "title": "FIFI | Boiler Room x Sebastian Professional: Centre Stage",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-05T18:00:14Z",
+      "url": "https://www.youtube.com/watch?v=Sp8mZLpZLUk",
+      "thumbnail": "https://i.ytimg.com/vi/Sp8mZLpZLUk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "wAa41J04YYQ",
+      "title": "The Anjunadeep Edition 618 with pølaroit",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-05T17:08:29Z",
+      "url": "https://www.youtube.com/watch?v=wAa41J04YYQ",
+      "thumbnail": "https://i.ytimg.com/vi/wAa41J04YYQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "LO45gKGQnIQ",
+      "title": "\"I was resigned to the fact that I was not going to make music again\" - Arca",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-05T16:01:31Z",
+      "url": "https://www.youtube.com/watch?v=LO45gKGQnIQ",
+      "thumbnail": "https://i.ytimg.com/vi/LO45gKGQnIQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "5zxzF7Orw-o",
+      "title": "Chase & Status on not taking the easy route",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-05T15:56:33Z",
+      "url": "https://www.youtube.com/watch?v=5zxzF7Orw-o",
+      "thumbnail": "https://i.ytimg.com/vi/5zxzF7Orw-o/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "A4ILS8xDxyE",
+      "title": "Dr Dubplate: Greenhouse Session",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-05T15:46:38Z",
+      "url": "https://www.youtube.com/watch?v=A4ILS8xDxyE",
+      "thumbnail": "https://i.ytimg.com/vi/A4ILS8xDxyE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "JQpv55V038M",
+      "title": "FIFI | Boiler Room x Sebastian Professional: Centre Stage",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-04T18:00:28Z",
+      "url": "https://www.youtube.com/watch?v=JQpv55V038M",
+      "thumbnail": "https://i.ytimg.com/vi/JQpv55V038M/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "YYpdXIlPNzw",
+      "title": "Step inside Brussels-based @gimic.radio. 🔊",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-04T17:01:16Z",
+      "url": "https://www.youtube.com/watch?v=YYpdXIlPNzw",
+      "thumbnail": "https://i.ytimg.com/vi/YYpdXIlPNzw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "z2_U22aFmJA",
+      "title": "@juan.cybotron.atkins, the man who could see the future 🕊️",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-04T15:00:55Z",
+      "url": "https://www.youtube.com/watch?v=z2_U22aFmJA",
+      "thumbnail": "https://i.ytimg.com/vi/z2_U22aFmJA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "oZCEoNf909U",
+      "title": "Chase & Status | How to sustain longevity in dance music",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-04T13:26:55Z",
+      "url": "https://www.youtube.com/watch?v=oZCEoNf909U",
+      "thumbnail": "https://i.ytimg.com/vi/oZCEoNf909U/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "LbxWr0_JBg8",
+      "title": "corto.alto performs ‘THIEF’ on Jools Holland 🎶",
+      "channel_title": "Ninja Tune",
+      "published_at": "2026-11-04T12:31:58Z",
+      "url": "https://www.youtube.com/watch?v=LbxWr0_JBg8",
+      "thumbnail": "https://i.ytimg.com/vi/LbxWr0_JBg8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCEXRv_qihRwjsV91ftx23-A"
+    },
+    {
+      "video_id": "35QNQLeDkTk",
+      "title": "CinCity | Mixmag Lab Amsterdam",
+      "channel_title": "Mixmag",
+      "published_at": "2026-11-03T20:00:05Z",
+      "url": "https://www.youtube.com/watch?v=35QNQLeDkTk",
+      "thumbnail": "https://i.ytimg.com/vi/35QNQLeDkTk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "PEejA4MdDkY",
+      "title": "Greenhouse Sessions: Dr Dubplate House Mix",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-03T17:01:21Z",
+      "url": "https://www.youtube.com/watch?v=PEejA4MdDkY",
+      "thumbnail": "https://i.ytimg.com/vi/PEejA4MdDkY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "IIrCjLayTEw",
+      "title": "Moments of melodic house magic with @NickyElisabethMusic, spinning a @Tinlicker classic ❤️",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-03T17:00:38Z",
+      "url": "https://www.youtube.com/watch?v=IIrCjLayTEw",
+      "thumbnail": "https://i.ytimg.com/vi/IIrCjLayTEw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "ba1AEt4Co5c",
+      "title": "Arca Interview: artistic practices, studio rituals & XXXXX",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-03T16:01:20Z",
+      "url": "https://www.youtube.com/watch?v=ba1AEt4Co5c",
+      "thumbnail": "https://i.ytimg.com/vi/ba1AEt4Co5c/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "mtlE886yFUc",
+      "title": "\"I was resigned to the fact that I was not going to make music again\" | Arca Interview",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-03T16:00:14Z",
+      "url": "https://www.youtube.com/watch?v=mtlE886yFUc",
+      "thumbnail": "https://i.ytimg.com/vi/mtlE886yFUc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "NT0R6Ai2mX4",
+      "title": "Shadow of Love by ÂME and Curses. Full album ‘Love is the Dance’ out Nov 06.",
+      "channel_title": "Innervisions",
+      "published_at": "2026-11-03T15:52:49Z",
+      "url": "https://www.youtube.com/watch?v=NT0R6Ai2mX4",
+      "thumbnail": "https://i.ytimg.com/vi/NT0R6Ai2mX4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCC7eKMxcVk1LZwzJlBdsVuQ"
+    },
+    {
+      "video_id": "9-a_uVk6uGc",
+      "title": "Making a welcome return to Anjunadeep: @Anyasa, with new single ‘Asman’ ❤️🇮🇳 #electronicmusic",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-03T13:34:09Z",
+      "url": "https://www.youtube.com/watch?v=9-a_uVk6uGc",
+      "thumbnail": "https://i.ytimg.com/vi/9-a_uVk6uGc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "l1cNA-U5CZw",
+      "title": "\"You're most definitely going to hear Juan Atkins\"—@moodymann313",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-11-02T17:01:11Z",
+      "url": "https://www.youtube.com/watch?v=l1cNA-U5CZw",
+      "thumbnail": "https://i.ytimg.com/vi/l1cNA-U5CZw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "6NcUMVP8LxI",
+      "title": "Last Friday night at @becauseofart’s headline show in London 🕺🕺 #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-11-02T16:46:58Z",
+      "url": "https://www.youtube.com/watch?v=6NcUMVP8LxI",
+      "thumbnail": "https://i.ytimg.com/vi/6NcUMVP8LxI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "tfvSCfBQN6M",
+      "title": "The original pioneer of Detroit Techno, Juan Atkins, had died aged 64. RIP 🖤",
+      "channel_title": "Mixmag",
+      "published_at": "2026-11-02T16:33:11Z",
+      "url": "https://www.youtube.com/watch?v=tfvSCfBQN6M",
+      "thumbnail": "https://i.ytimg.com/vi/tfvSCfBQN6M/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "PLECii0kJHA",
+      "title": "TiaCorine | Boiler Room x Sebastian Professional: Centre Stage",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-11-02T12:04:13Z",
+      "url": "https://www.youtube.com/watch?v=PLECii0kJHA",
+      "thumbnail": "https://i.ytimg.com/vi/PLECii0kJHA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "T888KgF6STc",
+      "title": "MPH plays a set of heaters only, dropping his own ‘Until The Morning’ in the Mixmag Lab",
+      "channel_title": "Mixmag",
+      "published_at": "2026-11-01T18:00:30Z",
+      "url": "https://www.youtube.com/watch?v=T888KgF6STc",
+      "thumbnail": "https://i.ytimg.com/vi/T888KgF6STc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "LO4ScSgjlng",
+      "title": "MPH serving up high energy only in his debut Mixmag Lab. Watch the full set 🔗",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-31T17:00:36Z",
+      "url": "https://www.youtube.com/watch?v=LO4ScSgjlng",
+      "thumbnail": "https://i.ytimg.com/vi/LO4ScSgjlng/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "XfliPcFwKd4",
+      "title": "Dusky, Nadeem Karim, Pritt - Kadhalan (Loverboy Mix) [Live from Dusky x Lab54 Pop-up]",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-10-31T17:00:20Z",
+      "url": "https://www.youtube.com/watch?v=XfliPcFwKd4",
+      "thumbnail": "https://i.ytimg.com/vi/XfliPcFwKd4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "Y5eysKfe6nQ",
+      "title": "RA Exchange: Boys Noize",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-31T13:00:58Z",
+      "url": "https://www.youtube.com/watch?v=Y5eysKfe6nQ",
+      "thumbnail": "https://i.ytimg.com/vi/Y5eysKfe6nQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "nsQY6rfvdd4",
+      "title": "‘Illusions’, Quivver’s progressive house anthem, in action in Malta 🇲🇹  #electronicmusic",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-10-31T12:06:38Z",
+      "url": "https://www.youtube.com/watch?v=nsQY6rfvdd4",
+      "thumbnail": "https://i.ytimg.com/vi/nsQY6rfvdd4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "TgJSWBLr2Fw",
+      "title": "Today we remember your favourite rapper’s favourite rapper, the late MF DOOM #MFDOOM #rap #rapper",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-31T12:00:18Z",
+      "url": "https://www.youtube.com/watch?v=TgJSWBLr2Fw",
+      "thumbnail": "https://i.ytimg.com/vi/TgJSWBLr2Fw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "tCm_sfTlURY",
+      "title": "Eris Drew and Octo Octa brought the energy to the Mixmag Lab on their debut as Alchemical Sisters",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-31T12:00:18Z",
+      "url": "https://www.youtube.com/watch?v=tCm_sfTlURY",
+      "thumbnail": "https://i.ytimg.com/vi/tCm_sfTlURY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "qC7yjEyom3w",
+      "title": "The Glitch Mob | Boiler Room LA: heds",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-10-30T18:56:06Z",
+      "url": "https://www.youtube.com/watch?v=qC7yjEyom3w",
+      "thumbnail": "https://i.ytimg.com/vi/qC7yjEyom3w/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "P1TWi_YY8fY",
+      "title": "Eris Drew and Octo Octa debut as the Alchemical Sisters",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-30T18:00:33Z",
+      "url": "https://www.youtube.com/watch?v=P1TWi_YY8fY",
+      "thumbnail": "https://i.ytimg.com/vi/P1TWi_YY8fY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "HaLqe-Jraz4",
+      "title": "DJ Sliink | Boiler Room LA: heds",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-10-30T18:00:07Z",
+      "url": "https://www.youtube.com/watch?v=HaLqe-Jraz4",
+      "thumbnail": "https://i.ytimg.com/vi/HaLqe-Jraz4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "ltCFO83qNVI",
+      "title": "DJ's worst nightmare! Happy Halloween 🎃credit: @nina.w.techno",
+      "channel_title": "Ninja Tune",
+      "published_at": "2026-10-30T17:09:58Z",
+      "url": "https://www.youtube.com/watch?v=ltCFO83qNVI",
+      "thumbnail": "https://i.ytimg.com/vi/ltCFO83qNVI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCEXRv_qihRwjsV91ftx23-A"
+    },
+    {
+      "video_id": "t_7AbjAEJAU",
+      "title": "WondaGurl | Boiler Room LA: heds",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-10-30T17:00:08Z",
+      "url": "https://www.youtube.com/watch?v=t_7AbjAEJAU",
+      "thumbnail": "https://i.ytimg.com/vi/t_7AbjAEJAU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "ghecFbw7res",
+      "title": "MPH puts a spin on his classic ‘One Sixty’ for the Mixmag Lab. Watch the full set 🔗",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-30T16:00:10Z",
+      "url": "https://www.youtube.com/watch?v=ghecFbw7res",
+      "thumbnail": "https://i.ytimg.com/vi/ghecFbw7res/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "d4XPUApeglE",
+      "title": "A brilliant, deep and dark new cut from @Dosem, this is ‘Lifegame’ 😮‍💨 #electronicmusic",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-10-30T12:44:54Z",
+      "url": "https://www.youtube.com/watch?v=d4XPUApeglE",
+      "thumbnail": "https://i.ytimg.com/vi/d4XPUApeglE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "oJydHoz61DY",
+      "title": "MPH in the Mixmag Lab London is out now #ukg #bassline #dj #dancemusic",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-29T19:00:18Z",
+      "url": "https://www.youtube.com/watch?v=oJydHoz61DY",
+      "thumbnail": "https://i.ytimg.com/vi/oJydHoz61DY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "CZc5Fz54dXc",
+      "title": "MPH | Mixmag Lab London",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-29T19:00:10Z",
+      "url": "https://www.youtube.com/watch?v=CZc5Fz54dXc",
+      "thumbnail": "https://i.ytimg.com/vi/CZc5Fz54dXc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "psHD2vBA_CA",
+      "title": "TiaCorine | Boiler Room x Sebastian Professional: Centre Stage",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-10-29T18:00:10Z",
+      "url": "https://www.youtube.com/watch?v=psHD2vBA_CA",
+      "thumbnail": "https://i.ytimg.com/vi/psHD2vBA_CA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "dtDL-pUNu7w",
+      "title": "I’m still looking for you … #innervisions #jimijules",
+      "channel_title": "Innervisions",
+      "published_at": "2026-10-29T17:19:43Z",
+      "url": "https://www.youtube.com/watch?v=dtDL-pUNu7w",
+      "thumbnail": "https://i.ytimg.com/vi/dtDL-pUNu7w/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCC7eKMxcVk1LZwzJlBdsVuQ"
+    },
+    {
+      "video_id": "n5f0aoY5A8Y",
+      "title": "Memories of ‘Brainsugar’, @cubicolormusic2811‘s debut album that just turned 10 years old 🎂",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-10-29T17:17:46Z",
+      "url": "https://www.youtube.com/watch?v=n5f0aoY5A8Y",
+      "thumbnail": "https://i.ytimg.com/vi/n5f0aoY5A8Y/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "IIxYcAlXqwk",
+      "title": "The Anjunadeep Edition 617 with PALLADIAN",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-10-29T17:03:28Z",
+      "url": "https://www.youtube.com/watch?v=IIxYcAlXqwk",
+      "thumbnail": "https://i.ytimg.com/vi/IIxYcAlXqwk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "wTJPTYN2dGI",
+      "title": "Eris Drew and Octo Octa debut as the Alchemical Sisters in the Mixmag Lab",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-29T17:00:32Z",
+      "url": "https://www.youtube.com/watch?v=wTJPTYN2dGI",
+      "thumbnail": "https://i.ytimg.com/vi/wTJPTYN2dGI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "wNWtww-ectw",
+      "title": "Onsite with Number 90",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-29T16:01:22Z",
+      "url": "https://www.youtube.com/watch?v=wNWtww-ectw",
+      "thumbnail": "https://i.ytimg.com/vi/wNWtww-ectw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "p2ngsoKHOns",
+      "title": "(ad) Dr Dubplate takes his foot off the pedal",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-29T15:00:37Z",
+      "url": "https://www.youtube.com/watch?v=p2ngsoKHOns",
+      "thumbnail": "https://i.ytimg.com/vi/p2ngsoKHOns/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "XMOS1GGci_I",
+      "title": "Dr Dubplate - Deep House Special | RA Greenhouse Sessions",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-29T15:00:09Z",
+      "url": "https://www.youtube.com/watch?v=XMOS1GGci_I",
+      "thumbnail": "https://i.ytimg.com/vi/XMOS1GGci_I/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "cftAtiVsqQw",
+      "title": "TiaCorine | Boiler Room x Sebastian Professional: Centre Stage",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-10-28T18:00:39Z",
+      "url": "https://www.youtube.com/watch?v=cftAtiVsqQw",
+      "thumbnail": "https://i.ytimg.com/vi/cftAtiVsqQw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "iosJ-C3Lyig",
+      "title": "DJ Sliink at Boiler Room LA: heds",
+      "channel_title": "Boiler Room",
+      "published_at": "2026-10-28T17:07:08Z",
+      "url": "https://www.youtube.com/watch?v=iosJ-C3Lyig",
+      "thumbnail": "https://i.ytimg.com/vi/iosJ-C3Lyig/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg"
+    },
+    {
+      "video_id": "UxvveXKdXBI",
+      "title": "“I always thought it was whack.” - Boys Noize",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-28T14:02:39Z",
+      "url": "https://www.youtube.com/watch?v=UxvveXKdXBI",
+      "thumbnail": "https://i.ytimg.com/vi/UxvveXKdXBI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "206-yN-QNCA",
+      "title": "Boys Noize on Nine Inch Nails, Skrillex and being too punk for techno",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-28T13:50:26Z",
+      "url": "https://www.youtube.com/watch?v=206-yN-QNCA",
+      "thumbnail": "https://i.ytimg.com/vi/206-yN-QNCA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "OC43p9Xw1RA",
+      "title": "A moment of calm with @becauseofart‘s new single ‘Shift Focus’ 💆 #djset",
+      "channel_title": "Anjunadeep",
+      "published_at": "2026-10-28T10:26:25Z",
+      "url": "https://www.youtube.com/watch?v=OC43p9Xw1RA",
+      "thumbnail": "https://i.ytimg.com/vi/OC43p9Xw1RA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCbDgBFAketcO26wz-pR6OKA"
+    },
+    {
+      "video_id": "ta4yJIrc_ZQ",
+      "title": "Michelle Manetti vinyl slinging in the Mixmag Lab",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-27T20:00:25Z",
+      "url": "https://www.youtube.com/watch?v=ta4yJIrc_ZQ",
+      "thumbnail": "https://i.ytimg.com/vi/ta4yJIrc_ZQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "Q7x_qRCv5jM",
+      "title": "Michelle Manetti | Mixmag Lab London",
+      "channel_title": "Mixmag",
+      "published_at": "2026-10-27T18:24:47Z",
+      "url": "https://www.youtube.com/watch?v=Q7x_qRCv5jM",
+      "thumbnail": "https://i.ytimg.com/vi/Q7x_qRCv5jM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCQdCIrTpkhEH5Z8KPsn7NvQ"
+    },
+    {
+      "video_id": "2Ep2OvXav2k",
+      "title": "Dresden: Art of DJing",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-27T16:55:40Z",
+      "url": "https://www.youtube.com/watch?v=2Ep2OvXav2k",
+      "thumbnail": "https://i.ytimg.com/vi/2Ep2OvXav2k/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    },
+    {
+      "video_id": "4K2gW6XqM5g",
+      "title": "How to do an all-night set with Dresden | The Art of DJing",
+      "channel_title": "Resident Advisor",
+      "published_at": "2026-10-27T15:01:55Z",
+      "url": "https://www.youtube.com/watch?v=4K2gW6XqM5g",
+      "thumbnail": "https://i.ytimg.com/vi/4K2gW6XqM5g/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCDHvlud7Hf86FxFsogrBcMg"
+    }
+  ],
+  "match_count": 365
+}

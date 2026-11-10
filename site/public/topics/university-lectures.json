@@ -1,0 +1,501 @@
+{
+  "topic_id": "university-lectures",
+  "canonical_name": "大学公开课",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "community",
+  "videos": [
+    {
+      "video_id": "ji5_MqicxSo",
+      "title": "Randy Pausch's Last Lecture: Achieving Your Childhood Dreams",
+      "channel_title": "Carnegie Mellon University",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ji5_MqicxSo",
+      "thumbnail": "https://i.ytimg.com/vi/ji5_MqicxSo/mqdefault.jpg",
+      "duration_seconds": 4587,
+      "channel_id": "UCf-COwmdNelXvbj-KaMCuLw"
+    },
+    {
+      "video_id": "UF8uR6Z6KLc",
+      "title": "Steve Jobs' 2005 Stanford Commencement Address",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=UF8uR6Z6KLc",
+      "thumbnail": "https://i.ytimg.com/vi/UF8uR6Z6KLc/mqdefault.jpg",
+      "duration_seconds": 905,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "NOAgplgTxfc",
+      "title": "Stanford's Sapolsky On Depression in U.S. (Full Lecture)",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NOAgplgTxfc",
+      "thumbnail": "https://i.ytimg.com/vi/NOAgplgTxfc/mqdefault.jpg",
+      "duration_seconds": 3149,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "dBnniua6-oM",
+      "title": "Sugar: THE BITTER TRUTH",
+      "channel_title": "University of California Television (UCTV)",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=dBnniua6-oM",
+      "thumbnail": "https://i.ytimg.com/vi/dBnniua6-oM/mqdefault.jpg",
+      "duration_seconds": 5377,
+      "channel_id": "UCh6KFtW4a4Ozr81GI1cxaBQ"
+    },
+    {
+      "video_id": "2Op3QLzMgSY",
+      "title": "Lecture 1A | MIT 6.001 Structure and Interpretation, 1986",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2Op3QLzMgSY",
+      "thumbnail": "https://i.ytimg.com/vi/2Op3QLzMgSY/mqdefault.jpg",
+      "duration_seconds": 4376,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "NNnIGh9g6fA",
+      "title": "1. Introduction to Human Behavioral Biology",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NNnIGh9g6fA",
+      "thumbnail": "https://i.ytimg.com/vi/NNnIGh9g6fA/mqdefault.jpg",
+      "duration_seconds": 3435,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "KkpqA8yG9T4",
+      "title": "Breakthrough in  Nuclear Fusion? - Prof. Dennis Whyte",
+      "channel_title": "MIT Club of Northern California",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KkpqA8yG9T4",
+      "thumbnail": "https://i.ytimg.com/vi/KkpqA8yG9T4/mqdefault.jpg",
+      "duration_seconds": 5929,
+      "channel_id": "UCu2dehvPe9e_ui_1HN7INxw"
+    },
+    {
+      "video_id": "vtIzMaLkCaM",
+      "title": "LEADERSHIP LAB: The Craft of Writing Effectively",
+      "channel_title": "UChicago Social Sciences",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vtIzMaLkCaM",
+      "thumbnail": "https://i.ytimg.com/vi/vtIzMaLkCaM/mqdefault.jpg",
+      "duration_seconds": 4912,
+      "channel_id": "UCil2G-oUNzJ7Bzfv11kDjNQ"
+    },
+    {
+      "video_id": "Unzc731iCUY",
+      "title": "How to Speak",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Unzc731iCUY",
+      "thumbnail": "https://i.ytimg.com/vi/Unzc731iCUY/mqdefault.jpg",
+      "duration_seconds": 3823,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "oTugjssqOT0",
+      "title": "Randy Pausch Lecture: Time Management",
+      "channel_title": "Carnegie Mellon University",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=oTugjssqOT0",
+      "thumbnail": "https://i.ytimg.com/vi/oTugjssqOT0/mqdefault.jpg",
+      "duration_seconds": 4582,
+      "channel_id": "UCf-COwmdNelXvbj-KaMCuLw"
+    },
+    {
+      "video_id": "akVL7QY0S8A",
+      "title": "The Coming Collapse of the Middle Class with Elizabeth Warren",
+      "channel_title": "University of California Television (UCTV)",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=akVL7QY0S8A",
+      "thumbnail": "https://i.ytimg.com/vi/akVL7QY0S8A/mqdefault.jpg",
+      "duration_seconds": 3458,
+      "channel_id": "UCh6KFtW4a4Ozr81GI1cxaBQ"
+    },
+    {
+      "video_id": "UzxYlbK2c7E",
+      "title": "Lecture 1 | Machine Learning (Stanford)",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=UzxYlbK2c7E",
+      "thumbnail": "https://i.ytimg.com/vi/UzxYlbK2c7E/mqdefault.jpg",
+      "duration_seconds": 4120,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "cn7kTPbW6QQ",
+      "title": "Building Your Own Dynamic Language",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cn7kTPbW6QQ",
+      "thumbnail": "https://i.ytimg.com/vi/cn7kTPbW6QQ/mqdefault.jpg",
+      "duration_seconds": 4472,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "k6U-i4gXkLM",
+      "title": "Lec 1 | MIT 6.00 Introduction to Computer Science and Programming, Fall 2008",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=k6U-i4gXkLM",
+      "thumbnail": "https://i.ytimg.com/vi/k6U-i4gXkLM/mqdefault.jpg",
+      "duration_seconds": 3210,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "k2h2lvhzMDc",
+      "title": "Ed Catmull, Pixar: Keep Your Crises Small",
+      "channel_title": "Stanford Graduate School of Business",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=k2h2lvhzMDc",
+      "thumbnail": "https://i.ytimg.com/vi/k2h2lvhzMDc/mqdefault.jpg",
+      "duration_seconds": 3251,
+      "channel_id": "UCGwuxdEeCf0TIA2RbPOj-8g"
+    },
+    {
+      "video_id": "3ka4KY7TMTU",
+      "title": "Self and Self: Whys and Wherefores",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3ka4KY7TMTU",
+      "thumbnail": "https://i.ytimg.com/vi/3ka4KY7TMTU/mqdefault.jpg",
+      "duration_seconds": 4211,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "_ZG8HBuDjgc",
+      "title": "DOUGLAS ADAMS: Parrots, the Universe and Everything",
+      "channel_title": "University of California Television (UCTV)",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_ZG8HBuDjgc",
+      "thumbnail": "https://i.ytimg.com/vi/_ZG8HBuDjgc/mqdefault.jpg",
+      "duration_seconds": 5257,
+      "channel_id": "UCh6KFtW4a4Ozr81GI1cxaBQ"
+    },
+    {
+      "video_id": "ZK3O402wf1c",
+      "title": "Lec 1 | MIT 18.06 Linear Algebra, Spring 2005",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZK3O402wf1c",
+      "thumbnail": "https://i.ytimg.com/vi/ZK3O402wf1c/mqdefault.jpg",
+      "duration_seconds": 2389,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "Hd_ptbiPoXM",
+      "title": "Steve Jobs' 2005 Stanford Commencement Address (with intro by President John Hennessy)",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Hd_ptbiPoXM",
+      "thumbnail": "https://i.ytimg.com/vi/Hd_ptbiPoXM/mqdefault.jpg",
+      "duration_seconds": 1330,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "Ps8jOj7diA0",
+      "title": "Lecture 1 | Programming Paradigms (Stanford)",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Ps8jOj7diA0",
+      "thumbnail": "https://i.ytimg.com/vi/Ps8jOj7diA0/mqdefault.jpg",
+      "duration_seconds": 1046,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "n8m7lFQ3njk",
+      "title": "Analogy as the Core of Cognition",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=n8m7lFQ3njk",
+      "thumbnail": "https://i.ytimg.com/vi/n8m7lFQ3njk/mqdefault.jpg",
+      "duration_seconds": 4117,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "KTJs-0EInW8",
+      "title": "Stanford Seminar - Google's Steve Yegge on GROK",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KTJs-0EInW8",
+      "thumbnail": "https://i.ytimg.com/vi/KTJs-0EInW8/mqdefault.jpg",
+      "duration_seconds": 4829,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "PE4gwstWhmc",
+      "title": "How We've Scaled Dropbox",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PE4gwstWhmc",
+      "thumbnail": "https://i.ytimg.com/vi/PE4gwstWhmc/mqdefault.jpg",
+      "duration_seconds": 4097,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "modXC5IWTJI",
+      "title": "Building Software Systems At Google and Lessons Learned",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=modXC5IWTJI",
+      "thumbnail": "https://i.ytimg.com/vi/modXC5IWTJI/mqdefault.jpg",
+      "duration_seconds": 4965,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "0m6hoOelZH8",
+      "title": "Lecture 7A | MIT 6.001 Structure and Interpretation, 1986",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=0m6hoOelZH8",
+      "thumbnail": "https://i.ytimg.com/vi/0m6hoOelZH8/mqdefault.jpg",
+      "duration_seconds": 5078,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "ceFyF9px20Y",
+      "title": "Fat Chance: Fructose 2.0",
+      "channel_title": "University of California Television (UCTV)",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ceFyF9px20Y",
+      "thumbnail": "https://i.ytimg.com/vi/ceFyF9px20Y/mqdefault.jpg",
+      "duration_seconds": 5175,
+      "channel_id": "UCh6KFtW4a4Ozr81GI1cxaBQ"
+    },
+    {
+      "video_id": "Q3oItpVa9fs",
+      "title": "CYMATICS: Science Vs. Music - Nigel Stanford",
+      "channel_title": "Nigel John Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Q3oItpVa9fs",
+      "thumbnail": "https://i.ytimg.com/vi/Q3oItpVa9fs/mqdefault.jpg",
+      "duration_seconds": 353,
+      "channel_id": "UCPhq7iR65k0gWcraXgLiY1A"
+    },
+    {
+      "video_id": "OBPpRqxY8Uw",
+      "title": "Leonard Susskind | \"ER = EPR\" or \"What's Behind the Horizons of Black Holes?\" - 1 of 2",
+      "channel_title": "Stanford Institute for Theoretical Physics",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OBPpRqxY8Uw",
+      "thumbnail": "https://i.ytimg.com/vi/OBPpRqxY8Uw/mqdefault.jpg",
+      "duration_seconds": 6474,
+      "channel_id": "UCj2PBh1npuzyQ52qqV9eAmQ"
+    },
+    {
+      "video_id": "oEuXA0_9feM",
+      "title": "Stanford Seminar - Dynamic Code Optimization and the NVIDIA Denver Processor",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=oEuXA0_9feM",
+      "thumbnail": "https://i.ytimg.com/vi/oEuXA0_9feM/mqdefault.jpg",
+      "duration_seconds": 4419,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "OQ5jsbhAv_M",
+      "title": "Lecture 19: Dynamic Programming I: Fibonacci, Shortest Paths",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OQ5jsbhAv_M",
+      "thumbnail": "https://i.ytimg.com/vi/OQ5jsbhAv_M/mqdefault.jpg",
+      "duration_seconds": 3107,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "TjZBTDzGeGg",
+      "title": "1. Introduction and Scope",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=TjZBTDzGeGg",
+      "thumbnail": "https://i.ytimg.com/vi/TjZBTDzGeGg/mqdefault.jpg",
+      "duration_seconds": 2839,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "21EiKfQYZXc",
+      "title": "Andrew Ng: Artificial Intelligence is the New Electricity",
+      "channel_title": "Stanford Graduate School of Business",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=21EiKfQYZXc",
+      "thumbnail": "https://i.ytimg.com/vi/21EiKfQYZXc/mqdefault.jpg",
+      "duration_seconds": 5264,
+      "channel_id": "UCGwuxdEeCf0TIA2RbPOj-8g"
+    },
+    {
+      "video_id": "aP0Y1uAA-2Y",
+      "title": "Stanford Seminar: Beyond Floating Point: Next Generation Computer Arithmetic",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aP0Y1uAA-2Y",
+      "thumbnail": "https://i.ytimg.com/vi/aP0Y1uAA-2Y/mqdefault.jpg",
+      "duration_seconds": 5488,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "MFRWDuduuSw",
+      "title": "Preface | MIT Calculus Revisited: Single Variable Calculus",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MFRWDuduuSw",
+      "thumbnail": "https://i.ytimg.com/vi/MFRWDuduuSw/mqdefault.jpg",
+      "duration_seconds": 1926,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "_6pl5GG8RQ4",
+      "title": "How to Find Product Market Fit - Stanford CS183F: Startup School",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_6pl5GG8RQ4",
+      "thumbnail": "https://i.ytimg.com/vi/_6pl5GG8RQ4/mqdefault.jpg",
+      "duration_seconds": 2891,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "id1WShzzMCQ",
+      "title": "How to Invent the Future I - Stanford CS183F: Startup School",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=id1WShzzMCQ",
+      "thumbnail": "https://i.ytimg.com/vi/id1WShzzMCQ/mqdefault.jpg",
+      "duration_seconds": 3482,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "_njf8jwEGRo",
+      "title": "21. Chaos and Reductionism",
+      "channel_title": "Stanford",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_njf8jwEGRo",
+      "thumbnail": "https://i.ytimg.com/vi/_njf8jwEGRo/mqdefault.jpg",
+      "duration_seconds": 5853,
+      "channel_id": "UC-EnprmCZ3OXyAoG7vjVNCA"
+    },
+    {
+      "video_id": "1e8VZlPBx_0",
+      "title": "How to Invent the Future II - Stanford CS183F: Startup School",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=1e8VZlPBx_0",
+      "thumbnail": "https://i.ytimg.com/vi/1e8VZlPBx_0/mqdefault.jpg",
+      "duration_seconds": 3390,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "PMotykw0SIk",
+      "title": "Chamath Palihapitiya, Founder and CEO Social Capital, on Money as an Instrument of Change",
+      "channel_title": "Stanford Graduate School of Business",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=PMotykw0SIk",
+      "thumbnail": "https://i.ytimg.com/vi/PMotykw0SIk/mqdefault.jpg",
+      "duration_seconds": 3376,
+      "channel_id": "UCGwuxdEeCf0TIA2RbPOj-8g"
+    },
+    {
+      "video_id": "_IgqJr8jG8M",
+      "title": "Stanford Seminar - Concatenative Programming: From Ivory to Metal",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_IgqJr8jG8M",
+      "thumbnail": "https://i.ytimg.com/vi/_IgqJr8jG8M/mqdefault.jpg",
+      "duration_seconds": 3885,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "GRYcSuyLiJk",
+      "title": "Robert Sapolsky: The Biology of Humans at Our Best and Worst",
+      "channel_title": "Stanford Iranian Studies Program",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=GRYcSuyLiJk",
+      "thumbnail": "https://i.ytimg.com/vi/GRYcSuyLiJk/mqdefault.jpg",
+      "duration_seconds": 4393,
+      "channel_id": "UCBOm2pt6QvO3vG8fdWTcGeg"
+    },
+    {
+      "video_id": "d1EB1zsxW0k",
+      "title": "Energy Investments Dialogue | Bill Gates | Global Energy Forum",
+      "channel_title": "Stanford ENERGY",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=d1EB1zsxW0k",
+      "thumbnail": "https://i.ytimg.com/vi/d1EB1zsxW0k/mqdefault.jpg",
+      "duration_seconds": 2172,
+      "channel_id": "UCl61FygpQRrpphc_GKSWLJw"
+    },
+    {
+      "video_id": "aFwVf5a3pZM",
+      "title": "LEADERSHIP LAB: Writing Beyond the Academy 1.23.15",
+      "channel_title": "UChicago Social Sciences",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aFwVf5a3pZM",
+      "thumbnail": "https://i.ytimg.com/vi/aFwVf5a3pZM/mqdefault.jpg",
+      "duration_seconds": 4615,
+      "channel_id": "UCil2G-oUNzJ7Bzfv11kDjNQ"
+    },
+    {
+      "video_id": "-J_xL4IGhJA",
+      "title": "Lecture 1A: Overview and Introduction to Lisp",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-J_xL4IGhJA",
+      "thumbnail": "https://i.ytimg.com/vi/-J_xL4IGhJA/mqdefault.jpg",
+      "duration_seconds": 4376,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "vvZA9n3e5pc",
+      "title": "Stanford Seminar - The Soul of a New Machine: Rethinking the Computer",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vvZA9n3e5pc",
+      "thumbnail": "https://i.ytimg.com/vi/vvZA9n3e5pc/mqdefault.jpg",
+      "duration_seconds": 5162,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "aAlR3cezPJg",
+      "title": "Lecture 7A: Metacircular Evaluator, Part 1",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aAlR3cezPJg",
+      "thumbnail": "https://i.ytimg.com/vi/aAlR3cezPJg/mqdefault.jpg",
+      "duration_seconds": 5078,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "Xn1EsFe7snQ",
+      "title": "Jen-Hsun Huang: Stanford student and Entrepreneur, co-founder and CEO of NVIDIA",
+      "channel_title": "Stanford Online",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Xn1EsFe7snQ",
+      "thumbnail": "https://i.ytimg.com/vi/Xn1EsFe7snQ/mqdefault.jpg",
+      "duration_seconds": 3819,
+      "channel_id": "UCBa5G_ESCn8Yd4vw5U-gIcg"
+    },
+    {
+      "video_id": "n068fel-W9I",
+      "title": "Special Lecture: F-22 Flight Controls",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=n068fel-W9I",
+      "thumbnail": "https://i.ytimg.com/vi/n068fel-W9I/mqdefault.jpg",
+      "duration_seconds": 4009,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    },
+    {
+      "video_id": "Ijst4g5KFN0",
+      "title": "26. Chernobyl — How It Happened",
+      "channel_title": "MIT OpenCourseWare",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Ijst4g5KFN0",
+      "thumbnail": "https://i.ytimg.com/vi/Ijst4g5KFN0/mqdefault.jpg",
+      "duration_seconds": 3264,
+      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw"
+    }
+  ],
+  "match_count": 49
+}

@@ -1,0 +1,811 @@
+{
+  "topic_id": "pod-tech-ai",
+  "canonical_name": "科技与 AI",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "podcast",
+  "videos": [
+    {
+      "video_id": "ZAzWPE9CItg",
+      "title": "AI Crisis in Math: Navier-Stokes, Riemann Hypothesis & Complexity Theory | Lex Fridman Podcast #503",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZAzWPE9CItg",
+      "thumbnail": "https://i.ytimg.com/vi/ZAzWPE9CItg/mqdefault.jpg",
+      "duration_seconds": 12867,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "NYFGCESmikA",
+      "title": "DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux | Lex Fridman Podcast #501",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NYFGCESmikA",
+      "thumbnail": "https://i.ytimg.com/vi/NYFGCESmikA/mqdefault.jpg",
+      "duration_seconds": 18951,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "nepKKz-MzFM",
+      "title": "FFmpeg: The Incredible Technology Behind Video on the Internet | Lex Fridman Podcast #496",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nepKKz-MzFM",
+      "thumbnail": "https://i.ytimg.com/vi/nepKKz-MzFM/mqdefault.jpg",
+      "duration_seconds": 15502,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "vif8NQcjVf0",
+      "title": "Jensen Huang: NVIDIA - The $4 Trillion Company & the AI Revolution | Lex Fridman Podcast #494",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vif8NQcjVf0",
+      "thumbnail": "https://i.ytimg.com/vi/vif8NQcjVf0/mqdefault.jpg",
+      "duration_seconds": 8759,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "YFjfBk8HI5o",
+      "title": "OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberger | Lex Fridman Podcast #491",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YFjfBk8HI5o",
+      "thumbnail": "https://i.ytimg.com/vi/YFjfBk8HI5o/mqdefault.jpg",
+      "duration_seconds": 11752,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "EV7WhVT270Q",
+      "title": "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI | Lex Fridman Podcast #490",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EV7WhVT270Q",
+      "thumbnail": "https://i.ytimg.com/vi/EV7WhVT270Q/mqdefault.jpg",
+      "duration_seconds": 15913,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "-HzgcbRXUK8",
+      "title": "Demis Hassabis: Future of AI, Simulating Reality, Physics and Video Games | Lex Fridman Podcast #475",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-HzgcbRXUK8",
+      "thumbnail": "https://i.ytimg.com/vi/-HzgcbRXUK8/mqdefault.jpg",
+      "duration_seconds": 8895,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "vagyIcmIGOQ",
+      "title": "DHH: Future of Programming, AI, Ruby on Rails, Productivity & Parenting | Lex Fridman Podcast #474",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vagyIcmIGOQ",
+      "thumbnail": "https://i.ytimg.com/vi/vagyIcmIGOQ/mqdefault.jpg",
+      "duration_seconds": 22128,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "HUkBz-cdB-k",
+      "title": "Terence Tao: Hardest Problems in Mathematics, Physics & the Future of AI | Lex Fridman Podcast #472",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=HUkBz-cdB-k",
+      "thumbnail": "https://i.ytimg.com/vi/HUkBz-cdB-k/mqdefault.jpg",
+      "duration_seconds": 11674,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "tNZnLkRBYA8",
+      "title": "ThePrimeagen: Programming, AI, ADHD, Productivity, Addiction, and God | Lex Fridman Podcast #461",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=tNZnLkRBYA8",
+      "thumbnail": "https://i.ytimg.com/vi/tNZnLkRBYA8/mqdefault.jpg",
+      "duration_seconds": 19208,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "_1f-o0nqpEI",
+      "title": "DeepSeek, China, OpenAI, NVIDIA, xAI, TSMC, Stargate, and AI Megaclusters | Lex Fridman Podcast #459",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_1f-o0nqpEI",
+      "thumbnail": "https://i.ytimg.com/vi/_1f-o0nqpEI/mqdefault.jpg",
+      "duration_seconds": 18379,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "OHWnPOKh_S0",
+      "title": "Marc Andreessen: Trump, Power, Tech, AI, Immigration & Future of America | Lex Fridman Podcast #458",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OHWnPOKh_S0",
+      "thumbnail": "https://i.ytimg.com/vi/OHWnPOKh_S0/mqdefault.jpg",
+      "duration_seconds": 13545,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "ugvHCXCOmm4",
+      "title": "Dario Amodei: Anthropic CEO on Claude, AGI & the Future of AI & Humanity | Lex Fridman Podcast #452",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ugvHCXCOmm4",
+      "thumbnail": "https://i.ytimg.com/vi/ugvHCXCOmm4/mqdefault.jpg",
+      "duration_seconds": 18901,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "oFfVt3S51T4",
+      "title": "Cursor Team: Future of Programming with AI | Lex Fridman Podcast #447",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=oFfVt3S51T4",
+      "thumbnail": "https://i.ytimg.com/vi/oFfVt3S51T4/mqdefault.jpg",
+      "duration_seconds": 8945,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "oFtjKbXKqbg",
+      "title": "Pieter Levels: Programming, Viral AI Startups, and Digital Nomad Life | Lex Fridman Podcast #440",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=oFtjKbXKqbg",
+      "thumbnail": "https://i.ytimg.com/vi/oFtjKbXKqbg/mqdefault.jpg",
+      "duration_seconds": 13414,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "e-gwvmhyU7A",
+      "title": "Aravind Srinivas: Perplexity CEO on Future of AI, Search & the Internet | Lex Fridman Podcast #434",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=e-gwvmhyU7A",
+      "thumbnail": "https://i.ytimg.com/vi/e-gwvmhyU7A/mqdefault.jpg",
+      "duration_seconds": 10936,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "NNr6gPelJ3E",
+      "title": "Roman Yampolskiy: Dangers of Superintelligent AI | Lex Fridman Podcast #431",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NNr6gPelJ3E",
+      "thumbnail": "https://i.ytimg.com/vi/NNr6gPelJ3E/mqdefault.jpg",
+      "duration_seconds": 8139,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "jvqFAi7vkBc",
+      "title": "Sam Altman: OpenAI, GPT-5, Sora, Board Saga, Elon Musk, Ilya, Power & AGI | Lex Fridman Podcast #419",
+      "channel_title": "Lex Fridman",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=jvqFAi7vkBc",
+      "thumbnail": "https://i.ytimg.com/vi/jvqFAi7vkBc/mqdefault.jpg",
+      "duration_seconds": 6910,
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+    },
+    {
+      "video_id": "dpY7YzZo4kE",
+      "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=dpY7YzZo4kE",
+      "thumbnail": "https://i.ytimg.com/vi/dpY7YzZo4kE/mqdefault.jpg",
+      "duration_seconds": 7245,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "rSWiNE92xqM",
+      "title": "GitHub’s Growth: 225M Developers, 34.3B Commits — Jay Parikh, EVP of CoreAI, Microsoft",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rSWiNE92xqM",
+      "thumbnail": "https://i.ytimg.com/vi/rSWiNE92xqM/mqdefault.jpg",
+      "duration_seconds": 1395,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "P735f1xlpL0",
+      "title": "Why Would Anthropic Go Public Now? — Jamin Ball, Altimeter",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=P735f1xlpL0",
+      "thumbnail": "https://i.ytimg.com/vi/P735f1xlpL0/mqdefault.jpg",
+      "duration_seconds": 6148,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "KgqWyVVH4Oc",
+      "title": "Cooking with Reducto’s CEO: Why PDFs Still Break AI — Adit Abraham",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KgqWyVVH4Oc",
+      "thumbnail": "https://i.ytimg.com/vi/KgqWyVVH4Oc/mqdefault.jpg",
+      "duration_seconds": 3038,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "3nAV2s4GYbs",
+      "title": "Mini Brains, Beating Heart Organoids, and the AI That Predicts Them — Fabian Theis, Helmholtz Munich",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3nAV2s4GYbs",
+      "thumbnail": "https://i.ytimg.com/vi/3nAV2s4GYbs/mqdefault.jpg",
+      "duration_seconds": 3051,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "QmDLDy3ZSNE",
+      "title": "Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=QmDLDy3ZSNE",
+      "thumbnail": "https://i.ytimg.com/vi/QmDLDy3ZSNE/mqdefault.jpg",
+      "duration_seconds": 4344,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "LL0YmIyBKSU",
+      "title": "⚡️ The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=LL0YmIyBKSU",
+      "thumbnail": "https://i.ytimg.com/vi/LL0YmIyBKSU/mqdefault.jpg",
+      "duration_seconds": 2088,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "bJBEFzlKPoQ",
+      "title": "Building Legal Agents When You Can't See the Data — Jacob Lauritzen, CTO of Legora",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bJBEFzlKPoQ",
+      "thumbnail": "https://i.ytimg.com/vi/bJBEFzlKPoQ/mqdefault.jpg",
+      "duration_seconds": 4042,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "KM3VQZKjpiY",
+      "title": "How Arca Handles a $100,000 Tax Bill With AI and Human Approval — Aman Singh",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KM3VQZKjpiY",
+      "thumbnail": "https://i.ytimg.com/vi/KM3VQZKjpiY/mqdefault.jpg",
+      "duration_seconds": 1566,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "v-d1WTqIULs",
+      "title": "Building ChatGPT for Finance — Joseph Kim, OpenAI's Head of Financial Services",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=v-d1WTqIULs",
+      "thumbnail": "https://i.ytimg.com/vi/v-d1WTqIULs/mqdefault.jpg",
+      "duration_seconds": 1655,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "zHG6sAss_kE",
+      "title": "Why Agents Love Supabase — with Paul Copplestone and Ant Wilson",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=zHG6sAss_kE",
+      "thumbnail": "https://i.ytimg.com/vi/zHG6sAss_kE/mqdefault.jpg",
+      "duration_seconds": 4599,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "MRQTlwcW-aQ",
+      "title": "How Anthropic ships the #1 LLM in the World — with Katelyn Lesse and Angela Jiang",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MRQTlwcW-aQ",
+      "thumbnail": "https://i.ytimg.com/vi/MRQTlwcW-aQ/mqdefault.jpg",
+      "duration_seconds": 6401,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "vhPCo-8K78U",
+      "title": "What 90,000 Rollouts Reveal About AI Agents Doing Science - Ian Quigley, Leash Bio",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vhPCo-8K78U",
+      "thumbnail": "https://i.ytimg.com/vi/vhPCo-8K78U/mqdefault.jpg",
+      "duration_seconds": 994,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "IiZ9yd2Do8I",
+      "title": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=IiZ9yd2Do8I",
+      "thumbnail": "https://i.ytimg.com/vi/IiZ9yd2Do8I/mqdefault.jpg",
+      "duration_seconds": 5133,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "DWHyPWnzGAI",
+      "title": "The Recommendation Engine for Commodity Traders — Anekha Sokhal, Moshi",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DWHyPWnzGAI",
+      "thumbnail": "https://i.ytimg.com/vi/DWHyPWnzGAI/mqdefault.jpg",
+      "duration_seconds": 1601,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "Vki6cklFqxo",
+      "title": "AI in NYC: How Tenex Builds an AI-Native Engineering Team — Alex Lieberman & CJ Hess",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Vki6cklFqxo",
+      "thumbnail": "https://i.ytimg.com/vi/Vki6cklFqxo/mqdefault.jpg",
+      "duration_seconds": 2613,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "EAtLq9_vrE0",
+      "title": "The Programmable Data Center — Evan Conrad, SF Compute",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=EAtLq9_vrE0",
+      "thumbnail": "https://i.ytimg.com/vi/EAtLq9_vrE0/mqdefault.jpg",
+      "duration_seconds": 2204,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "ZOH8Q401vt0",
+      "title": "High Taste Testers: OpenAI Shipped Everything. What Actually Works?",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZOH8Q401vt0",
+      "thumbnail": "https://i.ytimg.com/vi/ZOH8Q401vt0/mqdefault.jpg",
+      "duration_seconds": 4521,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "hQSBJVreLms",
+      "title": "From Wet Lab to RL Env: 10,000 Drug-Discovery Campaigns in a Weekend — Ian Quigley, Leash Bio",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hQSBJVreLms",
+      "thumbnail": "https://i.ytimg.com/vi/hQSBJVreLms/mqdefault.jpg",
+      "duration_seconds": 6597,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "BHiYomkfoGQ",
+      "title": "Robots That Predict the Future: Dyna-2 & Physical AI — Jason Ma, Dyna Robotics",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BHiYomkfoGQ",
+      "thumbnail": "https://i.ytimg.com/vi/BHiYomkfoGQ/mqdefault.jpg",
+      "duration_seconds": 4866,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "zlD-CkLVKtU",
+      "title": "How to kill your SaaS: what we learned replacing a $43K/yr tool with AI agents",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=zlD-CkLVKtU",
+      "thumbnail": "https://i.ytimg.com/vi/zlD-CkLVKtU/mqdefault.jpg",
+      "duration_seconds": 1685,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "NufiHZfMwaw",
+      "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet Kohli, Google DeepMind & Sal Candido, Biohub",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=NufiHZfMwaw",
+      "thumbnail": "https://i.ytimg.com/vi/NufiHZfMwaw/mqdefault.jpg",
+      "duration_seconds": 1962,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "YHiqVRxGViM",
+      "title": "AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YHiqVRxGViM",
+      "thumbnail": "https://i.ytimg.com/vi/YHiqVRxGViM/mqdefault.jpg",
+      "duration_seconds": 5121,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "MWX36ZYnsm0",
+      "title": "Which GPU Clouds Are Actually Good? | ClusterMAX 3.0",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MWX36ZYnsm0",
+      "thumbnail": "https://i.ytimg.com/vi/MWX36ZYnsm0/mqdefault.jpg",
+      "duration_seconds": 3472,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "kog7mwsDqnk",
+      "title": "Recursive Language Models — Alex Zhang, MIT PhD",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=kog7mwsDqnk",
+      "thumbnail": "https://i.ytimg.com/vi/kog7mwsDqnk/mqdefault.jpg",
+      "duration_seconds": 6205,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "z9OkBD2-MDU",
+      "title": "OpenAI’s New Agent Stack: Computer Use, Decisions API, UltraFast, Dots—Ari Weinstein & Nikunj Handa",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=z9OkBD2-MDU",
+      "thumbnail": "https://i.ytimg.com/vi/z9OkBD2-MDU/mqdefault.jpg",
+      "duration_seconds": 2424,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "IZAlq-V19U8",
+      "title": "Claude Code’s Bitter Lesson: Prompts, Harnesses, Mods, and Agents — Thariq Shihipar, Anthropic",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=IZAlq-V19U8",
+      "thumbnail": "https://i.ytimg.com/vi/IZAlq-V19U8/mqdefault.jpg",
+      "duration_seconds": 5672,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "dCX4PE2HxMs",
+      "title": "The $10 Trillion Token Economy — Alex Atallah, OpenRouter & Anjney Midha, AMP",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=dCX4PE2HxMs",
+      "thumbnail": "https://i.ytimg.com/vi/dCX4PE2HxMs/mqdefault.jpg",
+      "duration_seconds": 4961,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "fGRd5gYhztg",
+      "title": "Runway’s Bet Beyond Video: World Models, Robotics, and the Neural OS — Anastasis Germanidis",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=fGRd5gYhztg",
+      "thumbnail": "https://i.ytimg.com/vi/fGRd5gYhztg/mqdefault.jpg",
+      "duration_seconds": 5886,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "B7DdNj_VjcU",
+      "title": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=B7DdNj_VjcU",
+      "thumbnail": "https://i.ytimg.com/vi/B7DdNj_VjcU/mqdefault.jpg",
+      "duration_seconds": 5519,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "2xBSGluFkG0",
+      "title": "🔬 Google's AI Scientist Started as an Attempt to Automate Kaggle — John Platt, Google Fellow",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2xBSGluFkG0",
+      "thumbnail": "https://i.ytimg.com/vi/2xBSGluFkG0/mqdefault.jpg",
+      "duration_seconds": 7286,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "cFx9Z3ZXca0",
+      "title": "Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=cFx9Z3ZXca0",
+      "thumbnail": "https://i.ytimg.com/vi/cFx9Z3ZXca0/mqdefault.jpg",
+      "duration_seconds": 8542,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "V_9TCu_21SE",
+      "title": "A Worm With 302 Neurons Inspired Their Architecture — Ramin Hasani, Liquid AI",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=V_9TCu_21SE",
+      "thumbnail": "https://i.ytimg.com/vi/V_9TCu_21SE/mqdefault.jpg",
+      "duration_seconds": 4192,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "Sc2_LfWgHb4",
+      "title": "The Watchdogs of AGI — Rune Kvist of AI Underwriting Company",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Sc2_LfWgHb4",
+      "thumbnail": "https://i.ytimg.com/vi/Sc2_LfWgHb4/mqdefault.jpg",
+      "duration_seconds": 5218,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "eDFXtSg3zB8",
+      "title": "Recursive Self-Improvement: from Auto Research to Superintelligence — Richard Socher, Recursive",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=eDFXtSg3zB8",
+      "thumbnail": "https://i.ytimg.com/vi/eDFXtSg3zB8/mqdefault.jpg",
+      "duration_seconds": 5607,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "hvwtHZ5E27c",
+      "title": "Orbs: Shifting Coding to Cloud — Quinn Slack, Amp Code",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hvwtHZ5E27c",
+      "thumbnail": "https://i.ytimg.com/vi/hvwtHZ5E27c/mqdefault.jpg",
+      "duration_seconds": 2414,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "KS_IpnX7n9I",
+      "title": "Trillion Token Context. No, Really — Anima Anandkumar & Benedikt Jenik, Accelerated Understanding",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KS_IpnX7n9I",
+      "thumbnail": "https://i.ytimg.com/vi/KS_IpnX7n9I/mqdefault.jpg",
+      "duration_seconds": 1622,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "3uSI8q_RN-o",
+      "title": "The Inference Frontier: from 100 to 10,000 tokens per second — Sean Lie, Cerebras CTO",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=3uSI8q_RN-o",
+      "thumbnail": "https://i.ytimg.com/vi/3uSI8q_RN-o/mqdefault.jpg",
+      "duration_seconds": 2643,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "79mIutht1f4",
+      "title": "🔬 Why Transformers Hit a Wall the Moment Physics Shows Up — Anima Anandkumar, Caltech",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=79mIutht1f4",
+      "thumbnail": "https://i.ytimg.com/vi/79mIutht1f4/mqdefault.jpg",
+      "duration_seconds": 5012,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "MwNvowwcZOo",
+      "title": "⏭️ Forward Deployed: Voice AI on what works in 2026",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=MwNvowwcZOo",
+      "thumbnail": "https://i.ytimg.com/vi/MwNvowwcZOo/mqdefault.jpg",
+      "duration_seconds": 2191,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "KpOW9Pk4BUs",
+      "title": "Simulating Humanity: from Generative Agents to 8 Billion Digital Twins — Joon Sung Park, Simile AI",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=KpOW9Pk4BUs",
+      "thumbnail": "https://i.ytimg.com/vi/KpOW9Pk4BUs/mqdefault.jpg",
+      "duration_seconds": 4261,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "5lFD-34dhqE",
+      "title": "Exo: Harnesses should see their own code and logs — Alex Krentsel, UC Berekeley / Google Research",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=5lFD-34dhqE",
+      "thumbnail": "https://i.ytimg.com/vi/5lFD-34dhqE/mqdefault.jpg",
+      "duration_seconds": 2831,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "Qp5xklyJySI",
+      "title": "🔬They Thought the Model Was Broken — Matt McPartlon & Neil Patil, Chai Discovery",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Qp5xklyJySI",
+      "thumbnail": "https://i.ytimg.com/vi/Qp5xklyJySI/mqdefault.jpg",
+      "duration_seconds": 5720,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "7PSXtru6mmY",
+      "title": "Next 100x in AI: Inference, Networking, & Self-Optimizing Models — Philip Kiely & Ali Taha, Baseten",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=7PSXtru6mmY",
+      "thumbnail": "https://i.ytimg.com/vi/7PSXtru6mmY/mqdefault.jpg",
+      "duration_seconds": 6174,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "gKhW6vL4V9A",
+      "title": "OpenAI’s Vision for the AI Super App — Akshay Nathan, OpenAI",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=gKhW6vL4V9A",
+      "thumbnail": "https://i.ytimg.com/vi/gKhW6vL4V9A/mqdefault.jpg",
+      "duration_seconds": 4257,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "9_0hs2sxHHo",
+      "title": "The AI Frontier: from open weights to open research — Eiso Kant, Poolside AI",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=9_0hs2sxHHo",
+      "thumbnail": "https://i.ytimg.com/vi/9_0hs2sxHHo/mqdefault.jpg",
+      "duration_seconds": 6973,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "2AdS-2uuH80",
+      "title": "🔬Causal Models Need Causal Data - Xaira’s X-Cell model (Bo Wang & Ci Chu)",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2AdS-2uuH80",
+      "thumbnail": "https://i.ytimg.com/vi/2AdS-2uuH80/mqdefault.jpg",
+      "duration_seconds": 5387,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "2wIxPWK6nCs",
+      "title": "🔬 RL with Verifiable Rewards, but the Verifier is a Lab — Lila Sciences",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2wIxPWK6nCs",
+      "thumbnail": "https://i.ytimg.com/vi/2wIxPWK6nCs/mqdefault.jpg",
+      "duration_seconds": 6064,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "jhpmMTus5a0",
+      "title": "The AI Memory Problem: Why Long Context Isn’t Enough — Dan Biderman, Engram Co-founder & CEO",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=jhpmMTus5a0",
+      "thumbnail": "https://i.ytimg.com/vi/jhpmMTus5a0/mqdefault.jpg",
+      "duration_seconds": 2984,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "K796MYUgt0k",
+      "title": "Why AI Agents Don't Actually Understand You — Danielle Perszyk, Amazon AGI Lab",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=K796MYUgt0k",
+      "thumbnail": "https://i.ytimg.com/vi/K796MYUgt0k/mqdefault.jpg",
+      "duration_seconds": 2934,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "bIOCKXcxloQ",
+      "title": "Podcast Crossover: AIE, AGI, frontier lab strategy with ​ ⁨@matthew_berman⁩  and @swyxtv",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=bIOCKXcxloQ",
+      "thumbnail": "https://i.ytimg.com/vi/bIOCKXcxloQ/mqdefault.jpg",
+      "duration_seconds": 1683,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "UwxxlTNPjWo",
+      "title": "The Future of AI Infra: from Kubernetes to Agent Sandboxes — Akshat Bubna, Modal CTO",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=UwxxlTNPjWo",
+      "thumbnail": "https://i.ytimg.com/vi/UwxxlTNPjWo/mqdefault.jpg",
+      "duration_seconds": 3550,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "YQWXxnkK4dw",
+      "title": "🔬 \"The Most Innovative Diffusion Research Is Happening in Drug Discovery, Not Image Generation\"",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YQWXxnkK4dw",
+      "thumbnail": "https://i.ytimg.com/vi/YQWXxnkK4dw/mqdefault.jpg",
+      "duration_seconds": 6520,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "hLUGXO5DSpo",
+      "title": "The Blueprint for Autonomous Work Agents | Gavriel Cohen, NanoClaw",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hLUGXO5DSpo",
+      "thumbnail": "https://i.ytimg.com/vi/hLUGXO5DSpo/mqdefault.jpg",
+      "duration_seconds": 1395,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "fpAthTtha8c",
+      "title": "Cooking with OpenAI’s Research Chief: AGI, o1, Evals, and Scaling Laws — Mark Chen",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=fpAthTtha8c",
+      "thumbnail": "https://i.ytimg.com/vi/fpAthTtha8c/mqdefault.jpg",
+      "duration_seconds": 2478,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "Yp_u1NpbkJg",
+      "title": "The Agent Cloud: Databricks’ Bet on the Future of AI — Matei Zaharia and Reynold Xin",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Yp_u1NpbkJg",
+      "thumbnail": "https://i.ytimg.com/vi/Yp_u1NpbkJg/mqdefault.jpg",
+      "duration_seconds": 4206,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "j8BAficRjEc",
+      "title": "AI Security After Codex and Claude Code — Zico Kolter & Matt Fredrikson, Gray Swan",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=j8BAficRjEc",
+      "thumbnail": "https://i.ytimg.com/vi/j8BAficRjEc/mqdefault.jpg",
+      "duration_seconds": 4051,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "DcvgPEApHT8",
+      "title": "⚡️Every product of the future will be a living system  — Ronak Malde, Trajectory.ai",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=DcvgPEApHT8",
+      "thumbnail": "https://i.ytimg.com/vi/DcvgPEApHT8/mqdefault.jpg",
+      "duration_seconds": 2038,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "h5dlIPM0X18",
+      "title": "Why AI Labs With Unlimited GPUs Still Fail — Anjney Midha, AMP",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=h5dlIPM0X18",
+      "thumbnail": "https://i.ytimg.com/vi/h5dlIPM0X18/mqdefault.jpg",
+      "duration_seconds": 3637,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "4-sWFytOfRw",
+      "title": "🔬 The Limits of AI in Science - Why We Need Self-Driving Labs — Joseph Krause, Radical AI",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=4-sWFytOfRw",
+      "thumbnail": "https://i.ytimg.com/vi/4-sWFytOfRw/mqdefault.jpg",
+      "duration_seconds": 4610,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "-rIAVuaRjOg",
+      "title": "⚡️Making DeepSeek v4 outperform Opus 4.7 with Taste — @AhmadAwais , CommandCode.ai",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=-rIAVuaRjOg",
+      "thumbnail": "https://i.ytimg.com/vi/-rIAVuaRjOg/mqdefault.jpg",
+      "duration_seconds": 2441,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    },
+    {
+      "video_id": "T8u7wOXhDb0",
+      "title": "When AI Agents Run Businesses — Lukas Petersson and Axel Backlund of Andon Labs",
+      "channel_title": "Latent Space",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=T8u7wOXhDb0",
+      "thumbnail": "https://i.ytimg.com/vi/T8u7wOXhDb0/mqdefault.jpg",
+      "duration_seconds": 4677,
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+    }
+  ],
+  "match_count": 408
+}

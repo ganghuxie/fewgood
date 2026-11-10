@@ -1,0 +1,351 @@
+{
+  "topic_id": "open-local-models",
+  "canonical_name": "开源模型与本地部署",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "ai",
+  "videos": [
+    {
+      "video_id": "n7OgnIT_Q_A",
+      "title": "How Ollama keeps coding agents running",
+      "channel_title": "Together AI",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=n7OgnIT_Q_A",
+      "thumbnail": "https://i.ytimg.com/vi/n7OgnIT_Q_A/mqdefault.jpg",
+      "duration_seconds": 468,
+      "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA"
+    },
+    {
+      "video_id": "ZAGVED3purw",
+      "title": "How Ollama makes open models effortless for developers on Together AI",
+      "channel_title": "Together AI",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ZAGVED3purw",
+      "thumbnail": "https://i.ytimg.com/vi/ZAGVED3purw/mqdefault.jpg",
+      "duration_seconds": 867,
+      "channel_id": "UCgiSqzt-AFeQFa6-pAxTIvA"
+    },
+    {
+      "video_id": "il0dgxjpoC0",
+      "title": "Local AI 301: Quantization",
+      "channel_title": "Hugging Face",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=il0dgxjpoC0",
+      "thumbnail": "https://i.ytimg.com/vi/il0dgxjpoC0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w"
+    },
+    {
+      "video_id": "T-42NrYjwxM",
+      "title": "Our Smaller Model Beat Opus on Finance Tasks - Alexander Shevchenko, Ramp",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=T-42NrYjwxM",
+      "thumbnail": "https://i.ytimg.com/vi/T-42NrYjwxM/mqdefault.jpg",
+      "duration_seconds": 855,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "2dD4HXg-YJ4",
+      "title": "Ripple 65B: A Chip Design Lab Just Beat Every US Open Model",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2dD4HXg-YJ4",
+      "thumbnail": "https://i.ytimg.com/vi/2dD4HXg-YJ4/mqdefault.jpg",
+      "duration_seconds": 1202,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "vSCYL8ySh9g",
+      "title": "Dory - NVIDIA's Looped Transformer",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=vSCYL8ySh9g",
+      "thumbnail": "https://i.ytimg.com/vi/vSCYL8ySh9g/mqdefault.jpg",
+      "duration_seconds": 905,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "lEFFa0Z5BIE",
+      "title": "HP ZGX Fury - 3,000 Tokens/Sec Locally",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=lEFFa0Z5BIE",
+      "thumbnail": "https://i.ytimg.com/vi/lEFFa0Z5BIE/mqdefault.jpg",
+      "duration_seconds": 838,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "VhrtlfTyqp4",
+      "title": "100% Open Image Model Lets You Place Text With JSON",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=VhrtlfTyqp4",
+      "thumbnail": "https://i.ytimg.com/vi/VhrtlfTyqp4/mqdefault.jpg",
+      "duration_seconds": 824,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "BsfjQDSeTwI",
+      "title": "Flint - The First RSI Coding Model?",
+      "channel_title": "Sam Witteveen",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=BsfjQDSeTwI",
+      "thumbnail": "https://i.ytimg.com/vi/BsfjQDSeTwI/mqdefault.jpg",
+      "duration_seconds": 1133,
+      "channel_id": "UC55ODQSvARtgSyc8ThfiepQ"
+    },
+    {
+      "video_id": "W7lSIikNJBI",
+      "title": "🚀本地部署全方位实测Unlimited-OCR-2！33亿参数能把复杂文档读到什么程度？从模糊扫描书页到双栏研究报告，从复杂表格到数学公式，再到中日韩混排文档，逐项检查文字识别、表格结构与排版解析效果",
+      "channel_title": "AI超元域",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=W7lSIikNJBI",
+      "thumbnail": "https://i.ytimg.com/vi/W7lSIikNJBI/mqdefault.jpg",
+      "duration_seconds": 544,
+      "channel_id": "UCIomFkAj4Vq_rGX2Jot7D8A"
+    },
+    {
+      "video_id": "mmns33BsBcY",
+      "title": "What Is Quantization? How AI Models Get Smaller & Faster",
+      "channel_title": "IBM Technology",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=mmns33BsBcY",
+      "thumbnail": "https://i.ytimg.com/vi/mmns33BsBcY/mqdefault.jpg",
+      "duration_seconds": 481,
+      "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ"
+    },
+    {
+      "video_id": "AyzLIRBuUN8",
+      "title": "What Are AI Evals? And How to Build Your First One",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=AyzLIRBuUN8",
+      "thumbnail": "https://i.ytimg.com/vi/AyzLIRBuUN8/mqdefault.jpg",
+      "duration_seconds": 1153,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "wXJDtImT_-0",
+      "title": "Weight-Space Programming: AI Is Now Rewriting Other AI Models",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=wXJDtImT_-0",
+      "thumbnail": "https://i.ytimg.com/vi/wXJDtImT_-0/mqdefault.jpg",
+      "duration_seconds": 694,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "hOitZIkMT2Y",
+      "title": "I Trained Qwen 4B with Distillation to Catch Qwen 27B",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=hOitZIkMT2Y",
+      "thumbnail": "https://i.ytimg.com/vi/hOitZIkMT2Y/mqdefault.jpg",
+      "duration_seconds": 1396,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "_XXX5K-EMoc",
+      "title": "Kimi K3.1 Pro and Opus 5.5 Made the Same 13 Apps (Raw Results)",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=_XXX5K-EMoc",
+      "thumbnail": "https://i.ytimg.com/vi/_XXX5K-EMoc/mqdefault.jpg",
+      "duration_seconds": 1426,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "esdRFXgXaaQ",
+      "title": "DeepSeek Just Dropped a MASSIVE AI Breakthrough!",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=esdRFXgXaaQ",
+      "thumbnail": "https://i.ytimg.com/vi/esdRFXgXaaQ/mqdefault.jpg",
+      "duration_seconds": 977,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "YGEz40RSpTE",
+      "title": "DeepSeek Just Made Reasoning WAY More Efficient!",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=YGEz40RSpTE",
+      "thumbnail": "https://i.ytimg.com/vi/YGEz40RSpTE/mqdefault.jpg",
+      "duration_seconds": 836,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "Pl_2TelxjdY",
+      "title": "I Trained Qwen 4B With RL to Catch Qwen 27B",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=Pl_2TelxjdY",
+      "thumbnail": "https://i.ytimg.com/vi/Pl_2TelxjdY/mqdefault.jpg",
+      "duration_seconds": 970,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "rv-X-Qvd7nk",
+      "title": "We’ve Been Securing AI Agents Wrong",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=rv-X-Qvd7nk",
+      "thumbnail": "https://i.ytimg.com/vi/rv-X-Qvd7nk/mqdefault.jpg",
+      "duration_seconds": 797,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "yksrd5uNxcw",
+      "title": "Google is BACK! (Gemini 4 Argon - Fully Tested!)",
+      "channel_title": "Prompt Engineering",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=yksrd5uNxcw",
+      "thumbnail": "https://i.ytimg.com/vi/yksrd5uNxcw/mqdefault.jpg",
+      "duration_seconds": 1216,
+      "channel_id": "UCDq7SjbgRKty5TgGafW8Clg"
+    },
+    {
+      "video_id": "btMoPRHz8eM",
+      "title": "How to Use Ollama (Free Local AI)",
+      "channel_title": "Kevin Stratvert",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=btMoPRHz8eM",
+      "thumbnail": "https://i.ytimg.com/vi/btMoPRHz8eM/mqdefault.jpg",
+      "duration_seconds": 400,
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig"
+    },
+    {
+      "video_id": "ExOodQdeBo4",
+      "title": "Surface Laptop Ultra: Who Is This Actually For?",
+      "channel_title": "Kevin Stratvert",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=ExOodQdeBo4",
+      "thumbnail": "https://i.ytimg.com/vi/ExOodQdeBo4/mqdefault.jpg",
+      "duration_seconds": 487,
+      "channel_id": "UCfJT_eYDTmDE-ovKaxVE1ig"
+    },
+    {
+      "video_id": "fbqjJ97rDio",
+      "title": "中国开源模型被「西化」？Hermes 发布极具争议的 AI 模型，实测 Arete-27B 表现如何？| 零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=fbqjJ97rDio",
+      "thumbnail": "https://i.ytimg.com/vi/fbqjJ97rDio/mqdefault.jpg",
+      "duration_seconds": 633,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "2wnFmecg6-8",
+      "title": "Kimi K3.1 Pro 正式开源！“作死”本地部署，硬盘都拿来当内存！实测 3T 万亿参数模型效果如何？| 零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=2wnFmecg6-8",
+      "thumbnail": "https://i.ytimg.com/vi/2wnFmecg6-8/mqdefault.jpg",
+      "duration_seconds": 660,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "N4QH-RLT1xw",
+      "title": "推荐3款开源「越狱」模型！100%无审查，绕过限制，8G显存也能跑，一键部署教程来了！| 零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=N4QH-RLT1xw",
+      "thumbnail": "https://i.ytimg.com/vi/N4QH-RLT1xw/mqdefault.jpg",
+      "duration_seconds": 842,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "aa-t-Jpvx70",
+      "title": "太爽了！8~12G 显存就能跑 125B 大模型？Strata 开源神器来了！老电脑也能部署超大模型｜零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=aa-t-Jpvx70",
+      "thumbnail": "https://i.ytimg.com/vi/aa-t-Jpvx70/mqdefault.jpg",
+      "duration_seconds": 573,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "OGM6wOPE3P4",
+      "title": "Kimi K3.1 正式发布！性能逼近 Opus 5.5，3 万亿参数，复杂编程、3D 建模、游戏开发全能，开源模型即将到来！| 零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OGM6wOPE3P4",
+      "thumbnail": "https://i.ytimg.com/vi/OGM6wOPE3P4/mqdefault.jpg",
+      "duration_seconds": 553,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "OpSV5OcCObE",
+      "title": "DeepSeek-V4.1-Flash 正式发布！免费开源，GGUF 量化能否本地部署？实测教程来了 | 零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=OpSV5OcCObE",
+      "thumbnail": "https://i.ytimg.com/vi/OpSV5OcCObE/mqdefault.jpg",
+      "duration_seconds": 584,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "n17pKDffzgE",
+      "title": "MiniMax H3 LoRA 开源！一张图片生成 360° 环绕视频，免费本地部署，附模型、工作流下载！ | 零度解说",
+      "channel_title": "零度解说",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=n17pKDffzgE",
+      "thumbnail": "https://i.ytimg.com/vi/n17pKDffzgE/mqdefault.jpg",
+      "duration_seconds": 554,
+      "channel_id": "UCvijahEyGtvMpmMHBu4FS2w"
+    },
+    {
+      "video_id": "VYv3qrqh2FQ",
+      "title": "AI时代，如何选电脑？【小白必看】",
+      "channel_title": "秋芝2046",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=VYv3qrqh2FQ",
+      "thumbnail": "https://i.ytimg.com/vi/VYv3qrqh2FQ/mqdefault.jpg",
+      "duration_seconds": 533,
+      "channel_id": "UCrC3GjeSkxXgJ2hLQ2D-m4w"
+    },
+    {
+      "video_id": "CwPUOVUdApE",
+      "title": "Hermes Agent: The Ultimate Beginner’s Guide",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=CwPUOVUdApE",
+      "thumbnail": "https://i.ytimg.com/vi/CwPUOVUdApE/mqdefault.jpg",
+      "duration_seconds": 2228,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "uycgV-eulGE",
+      "title": "Full Hermes Agent Setup Tutorial: Step-by-Step Walkthrough",
+      "channel_title": "Metics Media",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=uycgV-eulGE",
+      "thumbnail": "https://i.ytimg.com/vi/uycgV-eulGE/mqdefault.jpg",
+      "duration_seconds": 1009,
+      "channel_id": "UCuwpzP90g1LuGk6JUNms_AQ"
+    },
+    {
+      "video_id": "P_0_Th_ZzIg",
+      "title": "Stop Guessing Your vLLM Config: Benchmarking LLMs on Runpod - Chris Vela, Runpod",
+      "channel_title": "AI Engineer",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=P_0_Th_ZzIg",
+      "thumbnail": "https://i.ytimg.com/vi/P_0_Th_ZzIg/mqdefault.jpg",
+      "duration_seconds": 989,
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+    },
+    {
+      "video_id": "nWgvobB4hcw",
+      "title": "Who’s afraid of an open-weight model? GLM, context bombing and post-Black Hat attacks",
+      "channel_title": "IBM Technology",
+      "published_at": "",
+      "url": "https://www.youtube.com/watch?v=nWgvobB4hcw",
+      "thumbnail": "https://i.ytimg.com/vi/nWgvobB4hcw/mqdefault.jpg",
+      "duration_seconds": 1603,
+      "channel_id": "UCKWaEZ-_VweaEx1j62do_vQ"
+    }
+  ],
+  "match_count": 34
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T00:45:00Z",
+  "generated_at": "2026-11-10T09:16:36Z",
   "topics": [
     {
       "topic_id": "c-plus-plus",
@@ -36,6 +36,209 @@
       "canonical_name": "Waiting Demo",
       "status": "refreshing",
       "generated_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "topic_id": "ai-models",
+      "canonical_name": "AI 模型与研究",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "ai-agents",
+      "canonical_name": "AI Agent",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "ai-coding",
+      "canonical_name": "AI 编程",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "ai-products",
+      "canonical_name": "AI 产品与应用",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "ai-industry",
+      "canonical_name": "AI 产业动态",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "agent-learning",
+      "canonical_name": "Agent 学习",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "open-local-models",
+      "canonical_name": "开源模型与本地部署",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "zh-ai",
+      "canonical_name": "中文 AI",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "ai"
+    },
+    {
+      "topic_id": "ted",
+      "canonical_name": "TED",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "business-interviews",
+      "canonical_name": "商业访谈",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "pod-tech-ai",
+      "canonical_name": "科技与 AI",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "pod-business",
+      "canonical_name": "商业创业",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "pod-science-health",
+      "canonical_name": "科学与健康",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "pod-society",
+      "canonical_name": "人文社会",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "pod-zh",
+      "canonical_name": "中文播客",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "podcast"
+    },
+    {
+      "topic_id": "tiny-desk-live",
+      "canonical_name": "Tiny Desk 现场",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "japanese-live",
+      "canonical_name": "日系现场",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "western-pop",
+      "canonical_name": "欧美流行",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "kpop",
+      "canonical_name": "K-pop",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "hiphop",
+      "canonical_name": "Hip-hop / 说唱",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "mandopop",
+      "canonical_name": "华语流行",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "cantonese",
+      "canonical_name": "粤语",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "indie-folk",
+      "canonical_name": "独立 / 民谣",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "jazz-classical",
+      "canonical_name": "爵士 / 古典",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "rnb-soul",
+      "canonical_name": "R&B / Soul",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "electronic",
+      "canonical_name": "电子",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "music"
+    },
+    {
+      "topic_id": "classic-talks",
+      "canonical_name": "经典演讲",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "community"
+    },
+    {
+      "topic_id": "university-lectures",
+      "canonical_name": "大学公开课",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "community"
+    },
+    {
+      "topic_id": "science-explainers",
+      "canonical_name": "科学科普",
+      "status": "ready",
+      "generated_at": "2026-11-10T09:16:36Z",
+      "category": "community"
     }
   ]
 }

@@ -1,0 +1,811 @@
+{
+  "topic_id": "rnb-soul",
+  "canonical_name": "R&B / Soul",
+  "status": "ready",
+  "generated_at": "2026-11-10T09:16:36Z",
+  "source": "curated_library",
+  "category": "music",
+  "videos": [
+    {
+      "video_id": "4Z2a2Iaj48M",
+      "title": "Olive Jones performs Mary for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-11-06T10:27:38Z",
+      "url": "https://www.youtube.com/watch?v=4Z2a2Iaj48M",
+      "thumbnail": "https://i.ytimg.com/vi/4Z2a2Iaj48M/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "YTNXXUauZ6s",
+      "title": "Daniel Caesar - Violence (Official Music Video)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-10-17T13:44:29Z",
+      "url": "https://www.youtube.com/watch?v=YTNXXUauZ6s",
+      "thumbnail": "https://i.ytimg.com/vi/YTNXXUauZ6s/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "M0lRhG6o0Qg",
+      "title": "500 Miles - Daniel Caesar (cover)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-10-17T13:32:04Z",
+      "url": "https://www.youtube.com/watch?v=M0lRhG6o0Qg",
+      "thumbnail": "https://i.ytimg.com/vi/M0lRhG6o0Qg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "_sf68tCJtXY",
+      "title": "Sparklmami performs running for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-09-09T18:30:33Z",
+      "url": "https://www.youtube.com/watch?v=_sf68tCJtXY",
+      "thumbnail": "https://i.ytimg.com/vi/_sf68tCJtXY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "vD5_ys2KurU",
+      "title": "Sparklmami performs quisiera for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-09-04T19:47:46Z",
+      "url": "https://www.youtube.com/watch?v=vD5_ys2KurU",
+      "thumbnail": "https://i.ytimg.com/vi/vD5_ys2KurU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "N4OIOudIROo",
+      "title": "olorunns performs Iris for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-08-27T19:34:09Z",
+      "url": "https://www.youtube.com/watch?v=N4OIOudIROo",
+      "thumbnail": "https://i.ytimg.com/vi/N4OIOudIROo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "CgXxYPAJU-s",
+      "title": "Matthew Ifield performs Thinking for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-07-30T09:10:34Z",
+      "url": "https://www.youtube.com/watch?v=CgXxYPAJU-s",
+      "thumbnail": "https://i.ytimg.com/vi/CgXxYPAJU-s/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "8U9PZCHihkw",
+      "title": "The Paper Kites perform Stormwall for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-07-27T09:00:10Z",
+      "url": "https://www.youtube.com/watch?v=8U9PZCHihkw",
+      "thumbnail": "https://i.ytimg.com/vi/8U9PZCHihkw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "NFLXX9J46sY",
+      "title": "【Vlog #44】上海 | 陶喆 David Tao | Soul Power II PLUS 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-07-21T05:40:08Z",
+      "url": "https://www.youtube.com/watch?v=NFLXX9J46sY",
+      "thumbnail": "https://i.ytimg.com/vi/NFLXX9J46sY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "hHqgo2HwGAQ",
+      "title": "Nia Smith performs Stuntin' for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-07-06T15:18:47Z",
+      "url": "https://www.youtube.com/watch?v=hHqgo2HwGAQ",
+      "thumbnail": "https://i.ytimg.com/vi/hHqgo2HwGAQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "pFWImFDgGXo",
+      "title": "Nia Smith performs High for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-06-11T16:03:35Z",
+      "url": "https://www.youtube.com/watch?v=pFWImFDgGXo",
+      "thumbnail": "https://i.ytimg.com/vi/pFWImFDgGXo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "QM23FEV6cdw",
+      "title": "【Vlog #43】重慶 | 陶喆 David Tao | Soul Power II PLUS 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-06-11T09:45:15Z",
+      "url": "https://www.youtube.com/watch?v=QM23FEV6cdw",
+      "thumbnail": "https://i.ytimg.com/vi/QM23FEV6cdw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "RCwKihCcdyo",
+      "title": "From the fields of wild flowers, Nia Smith joins Mahogany Sessions later today 🌸 #acoustic",
+      "channel_title": "Mahogany",
+      "published_at": "2026-06-11T09:35:42Z",
+      "url": "https://www.youtube.com/watch?v=RCwKihCcdyo",
+      "thumbnail": "https://i.ytimg.com/vi/RCwKihCcdyo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "1NdEaMCBlak",
+      "title": "Odhrán Murphy performs If I Were A God for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-05-31T17:00:07Z",
+      "url": "https://www.youtube.com/watch?v=1NdEaMCBlak",
+      "thumbnail": "https://i.ytimg.com/vi/1NdEaMCBlak/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "nB76r5ajvJM",
+      "title": "The Paper Kites perform Deep (In the Plans We Made) for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-05-29T08:59:32Z",
+      "url": "https://www.youtube.com/watch?v=nB76r5ajvJM",
+      "thumbnail": "https://i.ytimg.com/vi/nB76r5ajvJM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "RE4Dtq_eb1Y",
+      "title": "【Live】陶喆 David Tao |〈Katrina〉| Soul Power II PLUS 廣州",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-05-28T05:20:19Z",
+      "url": "https://www.youtube.com/watch?v=RE4Dtq_eb1Y",
+      "thumbnail": "https://i.ytimg.com/vi/RE4Dtq_eb1Y/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "_rjdK7WYPxs",
+      "title": "【Vlog #42】廣州 | 陶喆 David Tao | Soul Power II PLUS 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-05-21T12:55:04Z",
+      "url": "https://www.youtube.com/watch?v=_rjdK7WYPxs",
+      "thumbnail": "https://i.ytimg.com/vi/_rjdK7WYPxs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "oovq5XjgKSA",
+      "title": "【Vlog #41】天津 | 陶喆 David Tao | Soul Power II PLUS 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-05-06T09:18:00Z",
+      "url": "https://www.youtube.com/watch?v=oovq5XjgKSA",
+      "thumbnail": "https://i.ytimg.com/vi/oovq5XjgKSA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "65CmmZk3Jhk",
+      "title": "Odhrán Murphy performs Maryanne for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-05-05T13:31:14Z",
+      "url": "https://www.youtube.com/watch?v=65CmmZk3Jhk",
+      "thumbnail": "https://i.ytimg.com/vi/65CmmZk3Jhk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "MIsGM85_Wgg",
+      "title": "【Live】陶喆 David Tao |〈望春風〉Spring Wind | Soul Power II PLUS 天津",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-05-01T08:34:00Z",
+      "url": "https://www.youtube.com/watch?v=MIsGM85_Wgg",
+      "thumbnail": "https://i.ytimg.com/vi/MIsGM85_Wgg/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "iuw1Bbmu5PY",
+      "title": "zeyne | A COLORS INTERVIEW",
+      "channel_title": "COLORSxSTUDIOS",
+      "published_at": "2026-04-27T20:30:05Z",
+      "url": "https://www.youtube.com/watch?v=iuw1Bbmu5PY",
+      "thumbnail": "https://i.ytimg.com/vi/iuw1Bbmu5PY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCTiOxjxmB4RRdbGinK43LrA"
+    },
+    {
+      "video_id": "2hzPR6xgprU",
+      "title": "Alewya | A COLORS INTERVIEW",
+      "channel_title": "COLORSxSTUDIOS",
+      "published_at": "2026-04-27T17:15:00Z",
+      "url": "https://www.youtube.com/watch?v=2hzPR6xgprU",
+      "thumbnail": "https://i.ytimg.com/vi/2hzPR6xgprU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCTiOxjxmB4RRdbGinK43LrA"
+    },
+    {
+      "video_id": "5H5J-SjrqXs",
+      "title": "FKJ | A COLORS INTERVIEW",
+      "channel_title": "COLORSxSTUDIOS",
+      "published_at": "2026-04-27T17:00:11Z",
+      "url": "https://www.youtube.com/watch?v=5H5J-SjrqXs",
+      "thumbnail": "https://i.ytimg.com/vi/5H5J-SjrqXs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCTiOxjxmB4RRdbGinK43LrA"
+    },
+    {
+      "video_id": "R7Nc5rsjPkE",
+      "title": "Olive Jones performs End of Time for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-04-24T13:29:21Z",
+      "url": "https://www.youtube.com/watch?v=R7Nc5rsjPkE",
+      "thumbnail": "https://i.ytimg.com/vi/R7Nc5rsjPkE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "1cXMVWmHtAk",
+      "title": "【Live】陶喆David Tao |〈Moonchild〉夢在 | Soul Power II PLUS 武漢",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-04-20T09:45:00Z",
+      "url": "https://www.youtube.com/watch?v=1cXMVWmHtAk",
+      "thumbnail": "https://i.ytimg.com/vi/1cXMVWmHtAk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "6SVyYxwgwUA",
+      "title": "【Vlog #40】武漢 | 陶喆 David Tao | Soul Power II PLUS 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-04-17T09:00:16Z",
+      "url": "https://www.youtube.com/watch?v=6SVyYxwgwUA",
+      "thumbnail": "https://i.ytimg.com/vi/6SVyYxwgwUA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "JyWzegiAHQ4",
+      "title": "【Vlog #38】London & Paris | 陶喆 David Tao | Soul Power II 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-04-09T07:56:33Z",
+      "url": "https://www.youtube.com/watch?v=JyWzegiAHQ4",
+      "thumbnail": "https://i.ytimg.com/vi/JyWzegiAHQ4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "A9cpcBJ_bI0",
+      "title": "Roe Byrne performs Never Love You Fully for Mahogany",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-27T15:00:06Z",
+      "url": "https://www.youtube.com/watch?v=A9cpcBJ_bI0",
+      "thumbnail": "https://i.ytimg.com/vi/A9cpcBJ_bI0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "-BC_11c-u5k",
+      "title": "Soul Power II PLUS 彩排直擊 vlog 02",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-03-26T10:00:00Z",
+      "url": "https://www.youtube.com/watch?v=-BC_11c-u5k",
+      "thumbnail": "https://i.ytimg.com/vi/-BC_11c-u5k/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "kFcJuwBTIxQ",
+      "title": "Soul Power II PLUS 彩排直擊 vlog 01",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-03-26T04:02:46Z",
+      "url": "https://www.youtube.com/watch?v=kFcJuwBTIxQ",
+      "thumbnail": "https://i.ytimg.com/vi/kFcJuwBTIxQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "mJ9FbZXouYI",
+      "title": "【Vlog #39】新加坡 Singapore | 陶喆 David Tao | Soul Power II 2026 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-03-25T07:30:22Z",
+      "url": "https://www.youtube.com/watch?v=mJ9FbZXouYI",
+      "thumbnail": "https://i.ytimg.com/vi/mJ9FbZXouYI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "2wiCVmWvJVM",
+      "title": "It’s not even music, it’s something else… @chetfaker #jazz #music",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-24T14:03:51Z",
+      "url": "https://www.youtube.com/watch?v=2wiCVmWvJVM",
+      "thumbnail": "https://i.ytimg.com/vi/2wiCVmWvJVM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "Un5waV8pj88",
+      "title": "Five Songs with Chet Faker (John Coltrane, Cameron Winter..) | Mahogany",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-24T11:06:02Z",
+      "url": "https://www.youtube.com/watch?v=Un5waV8pj88",
+      "thumbnail": "https://i.ytimg.com/vi/Un5waV8pj88/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "L_vQYIuT_GM",
+      "title": "Brian Nasty performs Don't Look Down for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-23T13:16:49Z",
+      "url": "https://www.youtube.com/watch?v=L_vQYIuT_GM",
+      "thumbnail": "https://i.ytimg.com/vi/L_vQYIuT_GM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "L8Dj2fx9D8Q",
+      "title": "Soul Power II北京鳥巢站 現場切片",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-03-22T09:00:22Z",
+      "url": "https://www.youtube.com/watch?v=L8Dj2fx9D8Q",
+      "thumbnail": "https://i.ytimg.com/vi/L8Dj2fx9D8Q/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "5LXaRqvNnqc",
+      "title": "Wait for the camera handoff 🎥 #mahoganysessions #music",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-20T19:35:31Z",
+      "url": "https://www.youtube.com/watch?v=5LXaRqvNnqc",
+      "thumbnail": "https://i.ytimg.com/vi/5LXaRqvNnqc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "Y_vRiy4zSHc",
+      "title": "Derelict Pool + Chet Faker = Magic",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-19T14:41:30Z",
+      "url": "https://www.youtube.com/watch?v=Y_vRiy4zSHc",
+      "thumbnail": "https://i.ytimg.com/vi/Y_vRiy4zSHc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "GGF3GLiRRl4",
+      "title": "Chet Faker performs Far Side of the Moon for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-03-17T17:07:48Z",
+      "url": "https://www.youtube.com/watch?v=GGF3GLiRRl4",
+      "thumbnail": "https://i.ytimg.com/vi/GGF3GLiRRl4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "sHJrHHTYR_Y",
+      "title": "陶喆 David Tao〈讓愛再繼續〉One Life One Love Official Music Video",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-03-17T03:00:56Z",
+      "url": "https://www.youtube.com/watch?v=sHJrHHTYR_Y",
+      "thumbnail": "https://i.ytimg.com/vi/sHJrHHTYR_Y/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "bdcU_pHr4nQ",
+      "title": "Daniel Caesar - Who Knows (Official Bahasa Malaysia Lyric Video)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-03-09T21:21:07Z",
+      "url": "https://www.youtube.com/watch?v=bdcU_pHr4nQ",
+      "thumbnail": "https://i.ytimg.com/vi/bdcU_pHr4nQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "hgqkcPhOujA",
+      "title": "Daniel Caesar - Who Knows (Official Korean Lyric Video)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-03-09T21:21:03Z",
+      "url": "https://www.youtube.com/watch?v=hgqkcPhOujA",
+      "thumbnail": "https://i.ytimg.com/vi/hgqkcPhOujA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "djx2R0O-Q3A",
+      "title": "Daniel Caesar - Who Knows (Official Tagalog Lyric Video)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-03-09T21:21:00Z",
+      "url": "https://www.youtube.com/watch?v=djx2R0O-Q3A",
+      "thumbnail": "https://i.ytimg.com/vi/djx2R0O-Q3A/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "TIgD1pa_PCs",
+      "title": "Daniel Caesar - Who Knows (Official Thai Lyric Video)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-03-09T21:20:56Z",
+      "url": "https://www.youtube.com/watch?v=TIgD1pa_PCs",
+      "thumbnail": "https://i.ytimg.com/vi/TIgD1pa_PCs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "Xo8iSm3TIMs",
+      "title": "Daniel Caesar - Who Knows (Official Vietnamese Lyric Video)",
+      "channel_title": "Daniel Caesar",
+      "published_at": "2026-03-09T21:20:54Z",
+      "url": "https://www.youtube.com/watch?v=Xo8iSm3TIMs",
+      "thumbnail": "https://i.ytimg.com/vi/Xo8iSm3TIMs/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCKJg5mkBn18dtRFWUy_v1mw"
+    },
+    {
+      "video_id": "EPSH4fNYCeQ",
+      "title": "Khalil Fong (方大同) Twenty Three (才二十三) Official Music Video",
+      "channel_title": "Khalil Fong 方大同",
+      "published_at": "2026-02-28T16:00:39Z",
+      "url": "https://www.youtube.com/watch?v=EPSH4fNYCeQ",
+      "thumbnail": "https://i.ytimg.com/vi/EPSH4fNYCeQ/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC1GmSf_j9wopqsw0_f06hxw"
+    },
+    {
+      "video_id": "cHh5yDb5NFI",
+      "title": "“別忘了自己”生命中的經歷帶來成長，也引領著我們體會不同的境界…",
+      "channel_title": "Khalil Fong 方大同",
+      "published_at": "2026-02-26T16:09:25Z",
+      "url": "https://www.youtube.com/watch?v=cHh5yDb5NFI",
+      "thumbnail": "https://i.ytimg.com/vi/cHh5yDb5NFI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC1GmSf_j9wopqsw0_f06hxw"
+    },
+    {
+      "video_id": "F01cse-zfDY",
+      "title": "【Vlog #37】Toronto & Los Angeles | 陶喆 David Tao | Soul Power II 2025 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-02-26T03:17:00Z",
+      "url": "https://www.youtube.com/watch?v=F01cse-zfDY",
+      "thumbnail": "https://i.ytimg.com/vi/F01cse-zfDY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "o2IJ7Liqkmo",
+      "title": "MARO performs LOVE'S NOT TO BEG for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-24T20:25:15Z",
+      "url": "https://www.youtube.com/watch?v=o2IJ7Liqkmo",
+      "thumbnail": "https://i.ytimg.com/vi/o2IJ7Liqkmo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "IizYxyydCHc",
+      "title": "“時間等不了人” 這趟單程之旅，沒有暫停，也無法倒退…",
+      "channel_title": "Khalil Fong 方大同",
+      "published_at": "2026-02-21T03:02:57Z",
+      "url": "https://www.youtube.com/watch?v=IizYxyydCHc",
+      "thumbnail": "https://i.ytimg.com/vi/IizYxyydCHc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC1GmSf_j9wopqsw0_f06hxw"
+    },
+    {
+      "video_id": "4sm1ezKVTpc",
+      "title": "Katie Gregson-MacLeod performs Live at Mahogany",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-13T15:59:49Z",
+      "url": "https://www.youtube.com/watch?v=4sm1ezKVTpc",
+      "thumbnail": "https://i.ytimg.com/vi/4sm1ezKVTpc/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "JmGhSmlswPY",
+      "title": "【Vlog #36.5】Cleveland | 陶喆 David Tao | Soul Power II 2025 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-02-13T08:00:22Z",
+      "url": "https://www.youtube.com/watch?v=JmGhSmlswPY",
+      "thumbnail": "https://i.ytimg.com/vi/JmGhSmlswPY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "ltccrXfF5Jk",
+      "title": "His vocals on this are sublime.. Full session with Chet Faker on short #mahoganysessions #livemusic",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-11T14:47:14Z",
+      "url": "https://www.youtube.com/watch?v=ltccrXfF5Jk",
+      "thumbnail": "https://i.ytimg.com/vi/ltccrXfF5Jk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "cfA0V0WMzUU",
+      "title": "【Vlog #36】New York & Houston | 陶喆 David Tao | Soul Power II 2025 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-02-11T07:00:36Z",
+      "url": "https://www.youtube.com/watch?v=cfA0V0WMzUU",
+      "thumbnail": "https://i.ytimg.com/vi/cfA0V0WMzUU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "8avrM5SKCfI",
+      "title": "Chet Faker performs Over You for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-08T17:49:03Z",
+      "url": "https://www.youtube.com/watch?v=8avrM5SKCfI",
+      "thumbnail": "https://i.ytimg.com/vi/8avrM5SKCfI/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "F0KEYa1Bes0",
+      "title": "‘If you’re feeling fragile, put this song on’ #sadsong #piano #pianomusic",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-08T15:01:53Z",
+      "url": "https://www.youtube.com/watch?v=F0KEYa1Bes0",
+      "thumbnail": "https://i.ytimg.com/vi/F0KEYa1Bes0/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "yVocA-Ip688",
+      "title": "‘This song feels like you’re the main character in a movie’ #fredagain #soundtrack",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-07T13:04:07Z",
+      "url": "https://www.youtube.com/watch?v=yVocA-Ip688",
+      "thumbnail": "https://i.ytimg.com/vi/yVocA-Ip688/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "J7ah9qaQsgY",
+      "title": "Five Songs with SYML (Fred Again, Jeff Buckley, Max Richter...) | Mahogany",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-07T12:15:26Z",
+      "url": "https://www.youtube.com/watch?v=J7ah9qaQsgY",
+      "thumbnail": "https://i.ytimg.com/vi/J7ah9qaQsgY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "OYFhQ7sGX7c",
+      "title": "SYML performs Heartbreakdown for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-05T14:00:11Z",
+      "url": "https://www.youtube.com/watch?v=OYFhQ7sGX7c",
+      "thumbnail": "https://i.ytimg.com/vi/OYFhQ7sGX7c/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "DbutrZ3sj3A",
+      "title": "【Vlog #35】Vancouver & Connecticut | 陶喆 David Tao | Soul Power II 2025 World Tour",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-02-04T11:30:12Z",
+      "url": "https://www.youtube.com/watch?v=DbutrZ3sj3A",
+      "thumbnail": "https://i.ytimg.com/vi/DbutrZ3sj3A/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "HSb4cG16Z30",
+      "title": "16 years of one-shot sessions 🎬 #mahoganysessions #btsedits",
+      "channel_title": "Mahogany",
+      "published_at": "2026-02-02T12:34:56Z",
+      "url": "https://www.youtube.com/watch?v=HSb4cG16Z30",
+      "thumbnail": "https://i.ytimg.com/vi/HSb4cG16Z30/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "TMB4sGixHbo",
+      "title": "Love this sax solo 🎷 #newmusic #sax #fyp",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-30T14:47:20Z",
+      "url": "https://www.youtube.com/watch?v=TMB4sGixHbo",
+      "thumbnail": "https://i.ytimg.com/vi/TMB4sGixHbo/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "ZG0LjjCum14",
+      "title": "Charlie Jeer performs I Found Love for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-30T10:45:03Z",
+      "url": "https://www.youtube.com/watch?v=ZG0LjjCum14",
+      "thumbnail": "https://i.ytimg.com/vi/ZG0LjjCum14/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "6mccVS-zN-8",
+      "title": "締造Soul Power II PLUS（下篇）",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-01-29T08:00:09Z",
+      "url": "https://www.youtube.com/watch?v=6mccVS-zN-8",
+      "thumbnail": "https://i.ytimg.com/vi/6mccVS-zN-8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "M1swUCy1pI8",
+      "title": "Five Songs with Jacob Collier (Mk.gee, Laura Mvula, Angelo De Augustine...) - fixed upload",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-28T16:06:19Z",
+      "url": "https://www.youtube.com/watch?v=M1swUCy1pI8",
+      "thumbnail": "https://i.ytimg.com/vi/M1swUCy1pI8/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "1rCyflhBBvE",
+      "title": "When @jacobcollier met @maro 😍 #mahoganysessions #newmusic",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-28T07:18:45Z",
+      "url": "https://www.youtube.com/watch?v=1rCyflhBBvE",
+      "thumbnail": "https://i.ytimg.com/vi/1rCyflhBBvE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "KDtTQB9fu4s",
+      "title": "Jacob Collier & The Choir 🥹 #mahoganysessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-27T10:38:58Z",
+      "url": "https://www.youtube.com/watch?v=KDtTQB9fu4s",
+      "thumbnail": "https://i.ytimg.com/vi/KDtTQB9fu4s/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "toNjne10VHw",
+      "title": "Jacob Collier — The Mahogany Sessions Collection",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-26T18:30:41Z",
+      "url": "https://www.youtube.com/watch?v=toNjne10VHw",
+      "thumbnail": "https://i.ytimg.com/vi/toNjne10VHw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "wrDGBthbe5k",
+      "title": "‘He died on my birthday’ 😢 #fivesongs #music",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-23T15:02:36Z",
+      "url": "https://www.youtube.com/watch?v=wrDGBthbe5k",
+      "thumbnail": "https://i.ytimg.com/vi/wrDGBthbe5k/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "ur1vJCPfw04",
+      "title": "Five Songs with Brian Nasty (Tame Impala, D'Angelo...) | Mahogany",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-23T14:07:18Z",
+      "url": "https://www.youtube.com/watch?v=ur1vJCPfw04",
+      "thumbnail": "https://i.ytimg.com/vi/ur1vJCPfw04/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "hPdSFLD_nxw",
+      "title": "締造Soul Power II PLUS（上篇）",
+      "channel_title": "陶喆 David Tao",
+      "published_at": "2026-01-23T08:00:52Z",
+      "url": "https://www.youtube.com/watch?v=hPdSFLD_nxw",
+      "thumbnail": "https://i.ytimg.com/vi/hPdSFLD_nxw/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UC09rCtuyhWEQKCgF0xgJbSw"
+    },
+    {
+      "video_id": "Fkkp-F3yZoM",
+      "title": "2016 Soulful perfection… Jordan Rakei & Tom Misch #mahoganysessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-22T09:17:49Z",
+      "url": "https://www.youtube.com/watch?v=Fkkp-F3yZoM",
+      "thumbnail": "https://i.ytimg.com/vi/Fkkp-F3yZoM/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "6nkWRLozqb4",
+      "title": "There were a few skeletons ☠️ #livemusic #mahoganysessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-21T11:14:35Z",
+      "url": "https://www.youtube.com/watch?v=6nkWRLozqb4",
+      "thumbnail": "https://i.ytimg.com/vi/6nkWRLozqb4/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "gqSDDJHY8ow",
+      "title": "Brian Nasty performs One for Mahogany Sessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-20T15:04:30Z",
+      "url": "https://www.youtube.com/watch?v=gqSDDJHY8ow",
+      "thumbnail": "https://i.ytimg.com/vi/gqSDDJHY8ow/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "XtFyRrfUjeE",
+      "title": "2016, we see you 👀 St Paul & The Broken Bones #music #mahoganysessions",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-19T14:36:12Z",
+      "url": "https://www.youtube.com/watch?v=XtFyRrfUjeE",
+      "thumbnail": "https://i.ytimg.com/vi/XtFyRrfUjeE/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "UUMaUTa6UDU",
+      "title": "How we made it 🎬 #mahoganysessions #behindthescenes nd",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-18T10:21:57Z",
+      "url": "https://www.youtube.com/watch?v=UUMaUTa6UDU",
+      "thumbnail": "https://i.ytimg.com/vi/UUMaUTa6UDU/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "C6mOr6adP5k",
+      "title": "Folk Americana 🇺🇸 #mahoganysessions #music",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-16T15:18:23Z",
+      "url": "https://www.youtube.com/watch?v=C6mOr6adP5k",
+      "thumbnail": "https://i.ytimg.com/vi/C6mOr6adP5k/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "RI2HJlHGV18",
+      "title": "Favourite cover song of all time… #cover #music",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-15T22:18:54Z",
+      "url": "https://www.youtube.com/watch?v=RI2HJlHGV18",
+      "thumbnail": "https://i.ytimg.com/vi/RI2HJlHGV18/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "nmiRgVnXoeY",
+      "title": "Incredible vocals 🎧  newmusic #vocals #singersongwriter",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-15T11:45:52Z",
+      "url": "https://www.youtube.com/watch?v=nmiRgVnXoeY",
+      "thumbnail": "https://i.ytimg.com/vi/nmiRgVnXoeY/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "Ae0W0RLoLSA",
+      "title": "Five Songs with Charlie Jeer (Olivia Dean, Naomi Sharon...) | Mahogany",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-15T11:43:38Z",
+      "url": "https://www.youtube.com/watch?v=Ae0W0RLoLSA",
+      "thumbnail": "https://i.ytimg.com/vi/Ae0W0RLoLSA/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    },
+    {
+      "video_id": "EnNJx63qnCk",
+      "title": "Wait for it 🎷 #sax #jazz",
+      "channel_title": "Mahogany",
+      "published_at": "2026-01-14T18:04:39Z",
+      "url": "https://www.youtube.com/watch?v=EnNJx63qnCk",
+      "thumbnail": "https://i.ytimg.com/vi/EnNJx63qnCk/mqdefault.jpg",
+      "duration_seconds": 0,
+      "channel_id": "UCG36u-k09zdIPQh5EEdVgTA"
+    }
+  ],
+  "match_count": 281
+}
