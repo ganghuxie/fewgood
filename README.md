@@ -33,7 +33,7 @@ For the normal deployable refresh, use `python -m ytrec refresh`. It runs trendi
 
 `trending` uses medium+long `search.list` pages with `order=viewCount` across five weekly six-day windows, then batches `videos.list`; 推荐 keeps landscape videos only when player dimensions prove that orientation. It reports an approximate quota cost: search calls cost roughly 100 units each and video batches roughly one. Both YouTube feeds exclude videos shorter than 60 seconds (Shorts). `resolve-ai-channels` tries cheap `channels.list?forHandle=` lookups first and caps expensive channel searches at 40; unresolved accounts are dropped. The seed contains the editorial AI company, researcher, creator, and podcast candidates; `ai_channels.yaml` is the resolved, reviewed tracking file.
 
-Cards open a privacy-enhanced in-site player at `/v/<videoId>/?from=trending|ai|community` (under Pages: `/youtuber/v/<videoId>/…`). The `from` query selects the source feed's metadata and related list; the page also provides a clear **进入 YouTube 观看** link for opening YouTube in a new tab.
+Cards open a privacy-enhanced in-site player at `/v/<videoId>/?from=trending|ai|community`. The `from` query selects the source feed's metadata and related list; the page also provides a clear **进入 YouTube 观看** link for opening YouTube in a new tab.
 
 For a site-only local preview from the committed `site/src/data/videos.json`, build with root-relative URLs and serve the output:
 
@@ -44,7 +44,7 @@ cd ..
 python -m http.server 8000 --directory site/dist
 ```
 
-Open http://localhost:8000. A normal `npm run build` uses the production base `/youtuber/`; the intended Pages URL is https://ganghuxie.github.io/youtuber/. The former project path will redirect or return 404 until hosting redirects are configured after the repository rename. Nothing is deployed by these local commands. The full crawl defaults to 2007-01-01 through the current UTC time and can take many hours. No fabricated seed videos are provided; a small smoke crawl will usually select zero videos.
+Open http://localhost:8000. A normal `npm run build` uses root-relative URLs (`/`); the intended production URL is https://fewgood.io (www also works once configured). The old https://ganghuxie.github.io/youtuber/ URL will redirect once the custom domain is configured on GitHub Pages. Nothing is deployed by these local commands. The full crawl defaults to 2007-01-01 through the current UTC time and can take many hours. No fabricated seed videos are provided; a small smoke crawl will usually select zero videos.
 
 Individual stages / explicit date range:
 

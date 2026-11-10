@@ -1,14 +1,12 @@
 import { defineConfig } from 'astro/config';
 
-const configuredBase = process.env.PUBLIC_BASE;
-const base = configuredBase === undefined
-  ? '/youtuber'
-  : configuredBase === '/'
-    ? ''
-    : configuredBase;
+const configuredBase = process.env.PUBLIC_BASE ?? '/';
+const base = configuredBase === '/'
+  ? ''
+  : configuredBase;
 
 export default defineConfig({
-  site: 'https://ganghuxie.github.io',
+  site: 'https://fewgood.io',
   base,
   output: 'static',
   build: { format: 'directory' },
