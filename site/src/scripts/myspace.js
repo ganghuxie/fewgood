@@ -13,7 +13,10 @@ const featured = categories.flatMap(category => category.subtopics || []);
 const byId = new Map(featured.map(topic => [topic.id, topic]));
 const localSelected = () => { try { return [...new Set(JSON.parse(localStorage.getItem(FEATURED_KEY) || '[]').filter(id => byId.has(id)))].slice(0, MAX_TOPICS); } catch { return []; } };
 const saveSelected = ids => { try { localStorage.setItem(FEATURED_KEY, JSON.stringify(ids.filter(id => byId.has(id)))); } catch {} };
-function card(video, source, base) { const id = video.video_id || video.id; const channel = video.channel_title || video.channel || '频道'; return `<a class="video-card" href="${base}/v/${encodeURIComponent(id)}/?from=${encodeURIComponent(source)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info"><div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(channel)}</p></div></div></a>`; }
+const avatar = video => video.channel_thumbnail
+  ? `<img class="channel-avatar" src="${esc(video.channel_thumbnail)}" alt="">`
+  : (() => { const name = video.channel_title || video.channel || '频道'; const letter = [...name.trim()][0] || '频'; let hash = 0; for (const ch of name) hash = (hash * 31 + ch.codePointAt(0)) >>> 0; const color = ['#d14b4b','#b06b2f','#8a6d1d','#4f8a3d','#357a8a','#5367a6','#7a5795'][hash % 7]; return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; })();
+function card(video, source, base) { const id = video.video_id || video.id; const channel = video.channel_title || video.channel || '频道'; return `<a class="video-card" href="${base}/v/${encodeURIComponent(id)}/?from=${encodeURIComponent(source)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(channel)}</p></div></div></a>`; }
 
 const shell = document.querySelector('[data-alpha-myspace]');
 const explore = document.querySelector('[data-explore-view]');
