@@ -14,7 +14,9 @@
       "duration_seconds": 82,
       "view_count": 672005,
       "like_count": 9027,
-      "why_good": "AI 前沿精选频道 OpenAI 本周新片"
+      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "9ZxCOHkfn_8",
@@ -25,7 +27,9 @@
       "duration_seconds": 88,
       "view_count": 373245,
       "like_count": 4666,
-      "why_good": "AI 前沿精选频道 OpenAI 本周新片"
+      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "GJ6PMUm5oTA",
@@ -36,7 +40,9 @@
       "duration_seconds": 349,
       "view_count": 221242,
       "like_count": 3616,
-      "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片"
+      "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "pz74r-4dGfQ",
@@ -47,7 +53,9 @@
       "duration_seconds": 1160,
       "view_count": 81175,
       "like_count": 584,
-      "why_good": "AI 前沿精选频道 AI Engineer 本周新片"
+      "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "8oB9sf1SKhs",
@@ -58,7 +66,9 @@
       "duration_seconds": 579,
       "view_count": 53206,
       "like_count": 1106,
-      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片"
+      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "hJOwOkLHRN0",
@@ -69,7 +79,9 @@
       "duration_seconds": 65,
       "view_count": 45890,
       "like_count": 514,
-      "why_good": "AI 前沿精选频道 OpenAI 本周新片"
+      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "XgC1QTs6A2U",
@@ -80,7 +92,9 @@
       "duration_seconds": 2779,
       "view_count": 45741,
       "like_count": 555,
-      "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片"
+      "why_good": "AI 前沿精选频道 Two Minute Papers 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "nKjPBAw_N_0",
@@ -91,7 +105,9 @@
       "duration_seconds": 1321,
       "view_count": 30534,
       "like_count": 259,
-      "why_good": "AI 前沿精选频道 AI Engineer 本周新片"
+      "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "21tuT-e4NVo",
@@ -102,7 +118,9 @@
       "duration_seconds": 1228,
       "view_count": 29107,
       "like_count": 203,
-      "why_good": "AI 前沿精选频道 AI Engineer 本周新片"
+      "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "784YQBiZArk",
@@ -113,7 +131,9 @@
       "duration_seconds": 93,
       "view_count": 28911,
       "like_count": 241,
-      "why_good": "AI 前沿精选频道 NVIDIA 本周新片"
+      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "LL0YmIyBKSU",
@@ -124,7 +144,9 @@
       "duration_seconds": 2088,
       "view_count": 23215,
       "like_count": 153,
-      "why_good": "AI 前沿精选频道 Latent Space 本周新片"
+      "why_good": "AI 前沿精选频道 Latent Space 本周新片",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "P735f1xlpL0",
@@ -135,7 +157,9 @@
       "duration_seconds": 6148,
       "view_count": 21731,
       "like_count": 91,
-      "why_good": "AI 前沿精选频道 Latent Space 本周新片"
+      "why_good": "AI 前沿精选频道 Latent Space 本周新片",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "yLMjEpMio2w",
@@ -146,7 +170,9 @@
       "duration_seconds": 2280,
       "view_count": 18945,
       "like_count": 199,
-      "why_good": "AI 前沿精选频道 NVIDIA 本周新片"
+      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "9F9x3MufdMQ",
@@ -157,7 +183,9 @@
       "duration_seconds": 2139,
       "view_count": 18230,
       "like_count": 238,
-      "why_good": "AI 前沿精选频道 Hugging Face 本周新片"
+      "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "0K3sIlkKosA",
@@ -168,7 +196,9 @@
       "duration_seconds": 70,
       "view_count": 17792,
       "like_count": 921,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片"
+      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "KgqWyVVH4Oc",
@@ -179,7 +209,9 @@
       "duration_seconds": 3038,
       "view_count": 14039,
       "like_count": 43,
-      "why_good": "AI 前沿精选频道 Latent Space 本周新片"
+      "why_good": "AI 前沿精选频道 Latent Space 本周新片",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "bymDXo7FVE8",
@@ -190,7 +222,9 @@
       "duration_seconds": 66,
       "view_count": 12454,
       "like_count": 684,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片"
+      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "ibdmyMFd_z8",
@@ -201,7 +235,9 @@
       "duration_seconds": 1154,
       "view_count": 10999,
       "like_count": 19,
-      "why_good": "AI 前沿精选频道 Siraj Raval 本周新片"
+      "why_good": "AI 前沿精选频道 Siraj Raval 本周新片",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "eKSVnRvBTXc",
@@ -212,7 +248,9 @@
       "duration_seconds": 279,
       "view_count": 10776,
       "like_count": 203,
-      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片"
+      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "ty8i2zl9q2c",
@@ -223,7 +261,9 @@
       "duration_seconds": 184,
       "view_count": 9949,
       "like_count": 120,
-      "why_good": "AI 前沿精选频道 LangChain 本周新片"
+      "why_good": "AI 前沿精选频道 LangChain 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "GH16vW9TyaI",
@@ -234,7 +274,9 @@
       "duration_seconds": 81,
       "view_count": 9622,
       "like_count": 393,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片"
+      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "r1iJzoxFBtg",
@@ -245,7 +287,9 @@
       "duration_seconds": 334,
       "view_count": 7585,
       "like_count": 57,
-      "why_good": "AI 前沿精选频道 LangChain 本周新片"
+      "why_good": "AI 前沿精选频道 LangChain 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "SPOGTliV48s",
@@ -256,7 +300,9 @@
       "duration_seconds": 195,
       "view_count": 6968,
       "like_count": 67,
-      "why_good": "AI 前沿精选频道 LangChain 本周新片"
+      "why_good": "AI 前沿精选频道 LangChain 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "5__Fm2TnPcU",
@@ -267,7 +313,9 @@
       "duration_seconds": 66,
       "view_count": 5072,
       "like_count": 21,
-      "why_good": "AI 前沿精选频道 DeepLearningAI 本周新片"
+      "why_good": "AI 前沿精选频道 DeepLearningAI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "hb8WqJqM4SE",
@@ -278,7 +326,9 @@
       "duration_seconds": 153,
       "view_count": 2324,
       "like_count": 20,
-      "why_good": "AI 前沿精选频道 Runway 本周新片"
+      "why_good": "AI 前沿精选频道 Runway 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "PzzGrl6RW0I",
@@ -289,7 +339,9 @@
       "duration_seconds": 153,
       "view_count": 2149,
       "like_count": 21,
-      "why_good": "AI 前沿精选频道 Hugging Face 本周新片"
+      "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
+      "default_audio_language": "en",
+      "default_language": "de"
     },
     {
       "id": "iYTqtJlfbqU",
@@ -300,7 +352,9 @@
       "duration_seconds": 84,
       "view_count": 1835,
       "like_count": 25,
-      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片"
+      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "tZWZHePbd8g",
@@ -311,7 +365,9 @@
       "duration_seconds": 278,
       "view_count": 870,
       "like_count": 19,
-      "why_good": "AI 前沿精选频道 Runway 本周新片"
+      "why_good": "AI 前沿精选频道 Runway 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "7yJ3U57vyaA",
@@ -322,7 +378,9 @@
       "duration_seconds": 164,
       "view_count": 442,
       "like_count": 6,
-      "why_good": "AI 前沿精选频道 Scale 本周新片"
+      "why_good": "AI 前沿精选频道 Scale 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "jJnL48TXiQY",
@@ -333,7 +391,9 @@
       "duration_seconds": 3281,
       "view_count": 328,
       "like_count": 8,
-      "why_good": "AI 前沿精选频道 Together AI 本周新片"
+      "why_good": "AI 前沿精选频道 Together AI 本周新片",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "Rra-6e0Twww",
@@ -344,7 +404,9 @@
       "duration_seconds": 1576,
       "view_count": 119,
       "like_count": null,
-      "why_good": "AI 前沿精选频道 Together AI 本周新片"
+      "why_good": "AI 前沿精选频道 Together AI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "FsSt0EoJczU",
@@ -355,9 +417,11 @@
       "duration_seconds": 792,
       "view_count": 78,
       "like_count": null,
-      "why_good": "AI 前沿精选频道 Together AI 本周新片"
+      "why_good": "AI 前沿精选频道 Together AI 本周新片",
+      "default_audio_language": null,
+      "default_language": "en"
     }
   ],
   "dropped_language": 0,
-  "dropped_channel": 58
+  "dropped_channel": 0
 }

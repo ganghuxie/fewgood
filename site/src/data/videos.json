@@ -36,7 +36,9 @@
         "B_channel_duration",
         "C_speaker_duration"
       ],
-      "why_good": "63 位 HN 用户跨 19 年反复推荐"
+      "why_good": "63 位 HN 用户跨 19 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "UF8uR6Z6KLc",
@@ -72,7 +74,9 @@
       "classic_speech_reasons": [
         "A_speech"
       ],
-      "why_good": "67 位 HN 用户跨 18 年反复推荐"
+      "why_good": "67 位 HN 用户跨 18 年反复推荐",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "ZTC_RxWN_xo",
@@ -108,7 +112,9 @@
       "classic_speech_reasons": [
         "B_channel_duration"
       ],
-      "why_good": "84 位 HN 用户跨 17 年反复推荐"
+      "why_good": "84 位 HN 用户跨 17 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "NOAgplgTxfc",
@@ -146,7 +152,9 @@
         "B_channel_duration",
         "C_speaker_duration"
       ],
-      "why_good": "56 位 HN 用户跨 17 年反复推荐"
+      "why_good": "56 位 HN 用户跨 17 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "dBnniua6-oM",
@@ -182,7 +190,9 @@
       "classic_speech_reasons": [
         "B_channel_duration"
       ],
-      "why_good": "198 位 HN 用户跨 17 年反复推荐"
+      "why_good": "198 位 HN 用户跨 17 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "0CDXJ6bMkMY",
@@ -218,7 +228,9 @@
       "classic_speech_reasons": [
         "C_speaker_duration"
       ],
-      "why_good": "46 位 HN 用户跨 16 年反复推荐"
+      "why_good": "46 位 HN 用户跨 16 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "2Op3QLzMgSY",
@@ -255,7 +267,9 @@
         "A_speech",
         "B_channel_duration"
       ],
-      "why_good": "48 位 HN 用户跨 17 年反复推荐"
+      "why_good": "48 位 HN 用户跨 17 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "NNnIGh9g6fA",
@@ -291,44 +305,9 @@
       "classic_speech_reasons": [
         "B_channel_duration"
       ],
-      "why_good": "36 位 HN 用户跨 15 年反复推荐"
-    },
-    {
-      "id": "PUv66718DII",
-      "months": 60,
-      "first": 1330212035,
-      "last": 1782334239,
-      "quotes": [
-        {
-          "author": "jamii",
-          "text": "Bret Victor - Inventing on Principle",
-          "url": "https://news.ycombinator.com/item?id=3634167"
-        },
-        {
-          "author": "deltasquared",
-          "text": "This is a demo from a talk presented by Bret Victor. The full video is here: http://youtu.be/PUv66718DII",
-          "url": "https://news.ycombinator.com/item?id=3647434"
-        },
-        {
-          "author": "daralthus",
-          "text": "I am also missing the real-time simulation, after seeing Bret Victor's talk and his demo. http://www.youtube.com/watch?v=PUv66718DII&feature=playe...",
-          "url": "https://news.ycombinator.com/item?id=3693507"
-        }
-      ],
-      "recommenders": 77,
-      "span_days": 5232.895879629629,
-      "title": "Bret Victor - Inventing on Principle",
-      "channel": "Rui Oliveira",
-      "channel_id": "UCFPghaxzjDwteRTyrkRUoug",
-      "published_at": "2012-02-22T14:28:38Z",
-      "duration_seconds": 3260,
-      "selected_at": 1793854536,
-      "classic_speech": true,
-      "classic_speech_reasons": [
-        "A_speech",
-        "C_speaker_duration"
-      ],
-      "why_good": "77 位 HN 用户跨 14 年反复推荐"
+      "why_good": "36 位 HN 用户跨 15 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "rI8tNMsozo0",
@@ -365,7 +344,9 @@
         "A_speech",
         "C_speaker_duration"
       ],
-      "why_good": "38 位 HN 用户跨 13 年反复推荐"
+      "why_good": "38 位 HN 用户跨 13 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "_ahvzDzKdB0",
@@ -401,7 +382,9 @@
       "classic_speech_reasons": [
         "C_speaker_duration"
       ],
-      "why_good": "79 位 HN 用户跨 14 年反复推荐"
+      "why_good": "79 位 HN 用户跨 14 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "a1zDuOPkMSw",
@@ -438,7 +421,9 @@
         "A_speech",
         "C_speaker_duration"
       ],
-      "why_good": "48 位 HN 用户跨 14 年反复推荐"
+      "why_good": "48 位 HN 用户跨 14 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "EKWGGDXe5MA",
@@ -475,7 +460,9 @@
         "A_speech",
         "C_speaker_duration"
       ],
-      "why_good": "53 位 HN 用户跨 14 年反复推荐"
+      "why_good": "53 位 HN 用户跨 14 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "yJDv-zdhzMY",
@@ -513,7 +500,9 @@
         "C_speaker_duration",
         "D_classic_demo"
       ],
-      "why_good": "108 位 HN 用户跨 14 年反复推荐"
+      "why_good": "108 位 HN 用户跨 14 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "oKg1hTOQXoY",
@@ -549,43 +538,9 @@
       "classic_speech_reasons": [
         "C_speaker_duration"
       ],
-      "why_good": "52 位 HN 用户跨 14 年反复推荐"
-    },
-    {
-      "id": "f84n5oFoZBc",
-      "months": 75,
-      "first": 1369547814,
-      "last": 1791921164,
-      "quotes": [
-        {
-          "author": "praptak",
-          "text": "the whole notion of\"let's step back a bit and ponder\" - it has an official name: Hammock Driven Development. Presentation about: http://www.youtube.com/watch?v=f84n5oFoZBc As to trickling from Clojure to the mainstream - I wonder how far this could go without the foundation work that went into creating Clojure as it is. You definitely need a clutter-free syn",
-          "url": "https://news.ycombinator.com/item?id=5770194"
-        },
-        {
-          "author": "saurabh",
-          "text": "Rich Hickey would like to disagree. http://www.youtube.com/watch?v=f84n5oFoZBc",
-          "url": "https://news.ycombinator.com/item?id=5855707"
-        },
-        {
-          "author": "cgag",
-          "text": "Yes, \"Simple Made Easy\" is a must watch imo. http://www.infoq.com/presentations/Simple-Made-Easy \"Are we there yet\" is also great: http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hic... I also love \"Hammock Driven Development\": http://www.youtube.com/watch?v=f84n5oFoZBc",
-          "url": "https://news.ycombinator.com/item?id=6291706"
-        }
-      ],
-      "recommenders": 109,
-      "span_days": 4888.580439814815,
-      "title": "Hammock Driven Development - Rich Hickey",
-      "channel": "ClojureTV",
-      "channel_id": "UCaLlzGqiPE2QRj6sSOawJRg",
-      "published_at": "2012-12-17T00:14:23Z",
-      "duration_seconds": 2389,
-      "selected_at": 1793854536,
-      "classic_speech": true,
-      "classic_speech_reasons": [
-        "C_speaker_duration"
-      ],
-      "why_good": "109 位 HN 用户跨 13 年反复推荐"
+      "why_good": "52 位 HN 用户跨 14 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "8pTEmbeENF4",
@@ -621,7 +576,9 @@
       "classic_speech_reasons": [
         "C_speaker_duration"
       ],
-      "why_good": "72 位 HN 用户跨 13 年反复推荐"
+      "why_good": "72 位 HN 用户跨 13 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "lKXe3HUG2l4",
@@ -657,7 +614,9 @@
       "classic_speech_reasons": [
         "C_speaker_duration"
       ],
-      "why_good": "69 位 HN 用户跨 12 年反复推荐"
+      "why_good": "69 位 HN 用户跨 12 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "rX0ItVEVjHc",
@@ -693,7 +652,9 @@
       "classic_speech_reasons": [
         "C_speaker_duration"
       ],
-      "why_good": "98 位 HN 用户跨 12 年反复推荐"
+      "why_good": "98 位 HN 用户跨 12 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "DJklHwoYgBQ",
@@ -726,7 +687,9 @@
       "duration_seconds": 662,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "63 位 HN 用户跨 12 年反复推荐"
+      "why_good": "63 位 HN 用户跨 12 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "w3_0x6oaDmI",
@@ -759,7 +722,9 @@
       "duration_seconds": 501,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "62 位 HN 用户跨 11 年反复推荐"
+      "why_good": "62 位 HN 用户跨 11 年反复推荐",
+      "default_audio_language": "en-GB",
+      "default_language": "en-GB"
     },
     {
       "id": "rE3j_RHkqJc",
@@ -792,7 +757,9 @@
       "duration_seconds": 377,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "79 位 HN 用户跨 11 年反复推荐"
+      "why_good": "79 位 HN 用户跨 11 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "MFzDaBzBlL0",
@@ -825,7 +792,9 @@
       "duration_seconds": 478,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "53 位 HN 用户跨 11 年反复推荐"
+      "why_good": "53 位 HN 用户跨 11 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "IOiZatlZtGU",
@@ -858,7 +827,9 @@
       "duration_seconds": 2563,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "31 位 HN 用户跨 11 年反复推荐"
+      "why_good": "31 位 HN 用户跨 11 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "QM1iUe6IofM",
@@ -891,7 +862,9 @@
       "duration_seconds": 2675,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "58 位 HN 用户跨 10 年反复推荐"
+      "why_good": "58 位 HN 用户跨 10 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "eJ3RzGoQC4s",
@@ -924,7 +897,9 @@
       "duration_seconds": 14084,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "42 位 HN 用户跨 10 年反复推荐"
+      "why_good": "42 位 HN 用户跨 10 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "KkpqA8yG9T4",
@@ -957,7 +932,9 @@
       "duration_seconds": 5929,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "48 位 HN 用户跨 10 年反复推荐"
+      "why_good": "48 位 HN 用户跨 10 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "YJg02ivYzSs",
@@ -990,7 +967,9 @@
       "duration_seconds": 376,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "64 位 HN 用户跨 10 年反复推荐"
+      "why_good": "64 位 HN 用户跨 10 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "rStL7niR7gs",
@@ -1023,7 +1002,9 @@
       "duration_seconds": 1093,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "138 位 HN 用户跨 10 年反复推荐"
+      "why_good": "138 位 HN 用户跨 10 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "oyLBGkS5ICk",
@@ -1056,7 +1037,9 @@
       "duration_seconds": 4574,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "73 位 HN 用户跨 8 年反复推荐"
+      "why_good": "73 位 HN 用户跨 8 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "Pb5oIIPO62g",
@@ -1089,7 +1072,9 @@
       "duration_seconds": 2220,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "36 位 HN 用户跨 9 年反复推荐"
+      "why_good": "36 位 HN 用户跨 9 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "9CO6M2HsoIA",
@@ -1122,7 +1107,9 @@
       "duration_seconds": 468,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "62 位 HN 用户跨 8 年反复推荐"
+      "why_good": "62 位 HN 用户跨 8 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "kZRE7HIO3vk",
@@ -1155,7 +1142,9 @@
       "duration_seconds": 6535,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "58 位 HN 用户跨 8 年反复推荐"
+      "why_good": "58 位 HN 用户跨 8 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "vtIzMaLkCaM",
@@ -1191,7 +1180,9 @@
       "classic_speech_reasons": [
         "B_channel_duration"
       ],
-      "why_good": "56 位 HN 用户跨 8 年反复推荐"
+      "why_good": "56 位 HN 用户跨 8 年反复推荐",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "uD4izuDMUQA",
@@ -1224,7 +1215,9 @@
       "duration_seconds": 1761,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "49 位 HN 用户跨 7 年反复推荐"
+      "why_good": "49 位 HN 用户跨 7 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "JvBT4XBdoUE",
@@ -1257,7 +1250,9 @@
       "duration_seconds": 2523,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "52 位 HN 用户跨 7 年反复推荐"
+      "why_good": "52 位 HN 用户跨 7 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "Unzc731iCUY",
@@ -1290,7 +1285,9 @@
       "duration_seconds": 3823,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "54 位 HN 用户跨 6 年反复推荐"
+      "why_good": "54 位 HN 用户跨 6 年反复推荐",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "ZSRHeXYDLko",
@@ -1323,7 +1320,9 @@
       "duration_seconds": 3762,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "88 位 HN 用户跨 7 年反复推荐"
+      "why_good": "88 位 HN 用户跨 7 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "oeqPrUmVz-o",
@@ -1356,7 +1355,9 @@
       "duration_seconds": 315,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "48 位 HN 用户跨 6 年反复推荐"
+      "why_good": "48 位 HN 用户跨 6 年反复推荐",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "Uhx-26GfCBU",
@@ -1389,7 +1390,9 @@
       "duration_seconds": 914,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "80 位 HN 用户跨 6 年反复推荐"
+      "why_good": "80 位 HN 用户跨 6 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en-GB"
     },
     {
       "id": "SxdOUGdseq4",
@@ -1422,7 +1425,9 @@
       "duration_seconds": 3699,
       "selected_at": 1793854536,
       "classic_speech": false,
-      "why_good": "74 位 HN 用户跨 5 年反复推荐"
+      "why_good": "74 位 HN 用户跨 5 年反复推荐",
+      "default_audio_language": "en",
+      "default_language": "en-US"
     }
   ],
   "summary": {
@@ -1867,7 +1872,7 @@
       }
     }
   },
-  "dropped_language": 0,
+  "dropped_language": 2,
   "dropped_channel": 0,
   "feed": "community"
 }

@@ -16,17 +16,6 @@
   "quota_units_approx": 1010,
   "videos": [
     {
-      "id": "foEYL-ElhTc",
-      "title": "Dhruv Rathee Interviews Former Chief Election Commissioner | Dr. S.Y. Quraishi",
-      "channel": "Dhruv Rathee",
-      "channel_id": "UC-CSyyi47VX1lD9zyeABW3w",
-      "published_at": "2026-10-22T17:44:17Z",
-      "duration_seconds": 4622,
-      "view_count": 11942196,
-      "like_count": 304047,
-      "why_good": "近 30 天同类长视频播放第 1"
-    },
-    {
       "id": "3kuNW8hRc2U",
       "title": "WW3 Threat Expert: The Warning We Are Ignoring, The Only Way Out Is THIS! | Dr Sarah Paine",
       "channel": "The Diary Of A CEO",
@@ -35,18 +24,9 @@
       "duration_seconds": 6102,
       "view_count": 9887622,
       "like_count": 195291,
-      "why_good": "近 30 天同类长视频播放第 2"
-    },
-    {
-      "id": "WgQkUOeXs4E",
-      "title": "HEH OM BOTAAAK.. KAMU KEFARAAAT YA NANYA AKUNYA‼️🤣",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-10-13T04:20:35Z",
-      "duration_seconds": 4115,
-      "view_count": 8378954,
-      "like_count": 87429,
-      "why_good": "近 30 天同类长视频播放第 3"
+      "why_good": "近 30 天同类长视频播放第 1",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "Ce43Rt_h5jw",
@@ -57,7 +37,9 @@
       "duration_seconds": 1630,
       "view_count": 7299218,
       "like_count": 104036,
-      "why_good": "近 30 天同类长视频播放第 4"
+      "why_good": "近 30 天同类长视频播放第 2",
+      "default_audio_language": "en-IN",
+      "default_language": "en"
     },
     {
       "id": "sRH-XlBE2cQ",
@@ -68,7 +50,9 @@
       "duration_seconds": 6572,
       "view_count": 7296964,
       "like_count": 50773,
-      "why_good": "近 30 天同类长视频播放第 5"
+      "why_good": "近 30 天同类长视频播放第 3",
+      "default_audio_language": "en-US",
+      "default_language": "en-US"
     },
     {
       "id": "5x9dkYIRb58",
@@ -79,7 +63,9 @@
       "duration_seconds": 6598,
       "view_count": 6979068,
       "like_count": 221716,
-      "why_good": "近 30 天同类长视频播放第 6"
+      "why_good": "近 30 天同类长视频播放第 4",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "wmPi8NLgzSI",
@@ -90,29 +76,9 @@
       "duration_seconds": 6880,
       "view_count": 5656932,
       "like_count": 83342,
-      "why_good": "近 30 天同类长视频播放第 7"
-    },
-    {
-      "id": "jRLUcLG2FT0",
-      "title": "EKS KAPOLRI SADAP PRABOWO, JOKOWI TERLIBAT?",
-      "channel": "Mahfud MD Official ",
-      "channel_id": "UC9ZHe6vps-DC79TU_7lRAsA",
-      "published_at": "2026-11-03T15:45:06Z",
-      "duration_seconds": 1822,
-      "view_count": 4732270,
-      "like_count": 69778,
-      "why_good": "近 30 天同类长视频播放第 8"
-    },
-    {
-      "id": "BKXeW00-XiY",
-      "title": "KENZY, KIESHA, NJAN & AMANDA KALO UDAH NGUMPUL… UDAH GAK KETOLONG‼️🥲🤣",
-      "channel": "CURHAT BANG Denny Sumargo",
-      "channel_id": "UCapUP1gKtGuhEkyaaHwxlpw",
-      "published_at": "2026-10-26T12:31:55Z",
-      "duration_seconds": 3807,
-      "view_count": 4460557,
-      "like_count": 46409,
-      "why_good": "近 30 天同类长视频播放第 9"
+      "why_good": "近 30 天同类长视频播放第 5",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "TjPPIf-M6KE",
@@ -123,18 +89,9 @@
       "duration_seconds": 4081,
       "view_count": 4088364,
       "like_count": 67815,
-      "why_good": "近 30 天同类长视频播放第 10"
-    },
-    {
-      "id": "tts4cbd7Pho",
-      "title": "EL CHAPO, EL MAYO Y EL MENCHO NO ERAN LOS JEFES | Jesús Tovar # 409",
-      "channel": "Doble G",
-      "channel_id": "UCe4yxFAIPvftQ9aYGzJ6iTA",
-      "published_at": "2026-10-18T20:00:51Z",
-      "duration_seconds": 6592,
-      "view_count": 4070120,
-      "like_count": 46020,
-      "why_good": "近 30 天同类长视频播放第 11"
+      "why_good": "近 30 天同类长视频播放第 6",
+      "default_audio_language": "en-US",
+      "default_language": "en-US"
     },
     {
       "id": "vqFX1u_exDc",
@@ -145,18 +102,9 @@
       "duration_seconds": 1037,
       "view_count": 3804284,
       "like_count": 34286,
-      "why_good": "近 30 天同类长视频播放第 12"
-    },
-    {
-      "id": "XBk3FkzL7nU",
-      "title": "VIBE MEMANAS‼️ KAMAL DAN DR. TIRTA BERANTEM SEPANJANG PODCAST | RADIO BAHLUL",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-11-04T12:00:06Z",
-      "duration_seconds": 2960,
-      "view_count": 3755527,
-      "like_count": 28461,
-      "why_good": "近 30 天同类长视频播放第 13"
+      "why_good": "近 30 天同类长视频播放第 7",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "2v99_8xJoqA",
@@ -167,95 +115,9 @@
       "duration_seconds": 7014,
       "view_count": 3678214,
       "like_count": 40905,
-      "why_good": "近 30 天同类长视频播放第 14"
-    },
-    {
-      "id": "o7byKgFN28s",
-      "title": "Fadil Jaidi Menghilang Sebulan",
-      "channel": "Raditya Dika",
-      "channel_id": "UC0rzsIrAxF4kCsALP6J2EsA",
-      "published_at": "2026-10-26T12:00:30Z",
-      "duration_seconds": 3268,
-      "view_count": 3670336,
-      "like_count": 45272,
-      "why_good": "近 30 天同类长视频播放第 15"
-    },
-    {
-      "id": "Pc-PyrlVT3I",
-      "title": "Sule Pusing Ngajarin Sugeng & Opik - Sekolah Normal",
-      "channel": "Tretan Universe",
-      "channel_id": "UCzRxkmSKHlNOMNiJRG275Ow",
-      "published_at": "2026-10-12T12:00:10Z",
-      "duration_seconds": 1154,
-      "view_count": 3665654,
-      "like_count": 42535,
-      "why_good": "近 30 天同类长视频播放第 16"
-    },
-    {
-      "id": "XijaDWgHAEc",
-      "title": "DOKTOR SELAMAT GINTING: SIAGA SATU BERLAKU SAMPAI GIBRAN LENGSER...!!!",
-      "channel": "Forum Keadilan TV",
-      "channel_id": "UC80mzf_mrz7-dcSK7rLbzQQ",
-      "published_at": "2026-11-04T05:41:06Z",
-      "duration_seconds": 2662,
-      "view_count": 3639793,
-      "like_count": 33467,
-      "why_good": "近 30 天同类长视频播放第 17"
-    },
-    {
-      "id": "gbaqK_i-m6w",
-      "title": "NIKEN SALINDRY : BAWAKAN LAGU LINGSIR WENGI, RITUAL, DAN NYANYI DI PANTAI SELATAN #OMMAMAT",
-      "channel": "RJL 5 - Fajar Aditya",
-      "channel_id": "UCiFM5EHunF5tL0pMR6Pooaw",
-      "published_at": "2026-10-22T13:35:42Z",
-      "duration_seconds": 4120,
-      "view_count": 3630484,
-      "like_count": 35182,
-      "why_good": "近 30 天同类长视频播放第 18"
-    },
-    {
-      "id": "JlZqXwryUOw",
-      "title": "KARHUTLA: PROFESOR INI KELUARGANYA BERKALI-KALI DIANCAM!‼️ APA YANG DIA KETAHUI!?",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-10-28T04:20:18Z",
-      "duration_seconds": 4892,
-      "view_count": 3535659,
-      "like_count": 30741,
-      "why_good": "近 30 天同类长视频播放第 19"
-    },
-    {
-      "id": "UXHNgJO9Tuc",
-      "title": "KEJAR SETORAN - RESPECT!! PERJUANGAN KEHAMILAN AMANDA MANOPO SAMPE BIKIN CHANEL YOUTUBE EDUKASI ANAK",
-      "channel": "Tuah Kreasi",
-      "channel_id": "UCcB5cXUCggZGnVzR_84Xyag",
-      "published_at": "2026-10-24T10:00:00Z",
-      "duration_seconds": 3976,
-      "view_count": 3424836,
-      "like_count": 26873,
-      "why_good": "近 30 天同类长视频播放第 20"
-    },
-    {
-      "id": "4auTjwwG2RI",
-      "title": "MI NOVIO ME S3CU3STRÓ Y V1ØLØ REPETIDAMENTE POR 20 DÍAS: ASÍ ESCAPÉ Y AYUDÉ A LA POLICÍA A ATRAPARLO",
-      "channel": "Más Allá del Silencio Podcast",
-      "channel_id": "UCro1VNb7hqX38TvyUN64JkQ",
-      "published_at": "2026-10-30T17:00:32Z",
-      "duration_seconds": 3835,
-      "view_count": 3339870,
-      "like_count": 31556,
-      "why_good": "近 30 天同类长视频播放第 21"
-    },
-    {
-      "id": "-FW7Xae7JWc",
-      "title": "TERNYATA INI DRAMA RACHEL VENNYA YANG SEBENARNYA‼️KAMI SEMUA KAGET🤣- VADI, NINO, REINATA, REGINA",
-      "channel": "Deddy Corbuzier",
-      "channel_id": "UCYk4LJI0Pr6RBDWowMm-KUw",
-      "published_at": "2026-10-24T02:20:01Z",
-      "duration_seconds": 5116,
-      "view_count": 3212581,
-      "like_count": 28170,
-      "why_good": "近 30 天同类长视频播放第 22"
+      "why_good": "近 30 天同类长视频播放第 8",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "biPsM4c0F7M",
@@ -266,73 +128,9 @@
       "duration_seconds": 4442,
       "view_count": 3170316,
       "like_count": 77616,
-      "why_good": "近 30 天同类长视频播放第 23"
-    },
-    {
-      "id": "tGHjvJWA5CI",
-      "title": "#111 - EX TESTIGOS DE JEHOVÁ: UNA FAMILIA ROTA | Noemimisma en Roca Project",
-      "channel": "ROCA PROJECT",
-      "channel_id": "UCYQgLLpqeFe3FGzv18ZabdA",
-      "published_at": "2026-10-14T17:30:30Z",
-      "duration_seconds": 5879,
-      "view_count": 3082687,
-      "like_count": 57563,
-      "why_good": "近 30 天同类长视频播放第 24"
-    },
-    {
-      "id": "BV7QRw8wtjs",
-      "title": "How To Build An Unbreakable Mind & Push Beyond Your Limits | Ayyoub El Osrouti | FO578 Raj Shamani",
-      "channel": "Raj Shamani",
-      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
-      "published_at": "2026-10-22T15:39:01Z",
-      "duration_seconds": 10209,
-      "view_count": 3042031,
-      "like_count": 35922,
-      "why_good": "近 30 天同类长视频播放第 25"
-    },
-    {
-      "id": "WB8S0jcMQno",
-      "title": "MAKANAN YANG DIBAWA TANBOY KUN UNTUK PRAZ BIKIN FLASHBACK SAMA MATI PENASARAN!! - KASIH PAHAM BRO",
-      "channel": "Rockaroma ID",
-      "channel_id": "UCrI6c17u5Fvrf2mFDOAhRFQ",
-      "published_at": "2026-11-03T10:00:13Z",
-      "duration_seconds": 3752,
-      "view_count": 2958225,
-      "like_count": 17692,
-      "why_good": "近 30 天同类长视频播放第 26"
-    },
-    {
-      "id": "qa31tANX0tU",
-      "title": "Inside America's Most Secret Base | Aircraft, Testing, Secrecy  | Annie Jacobsen | FO581 Raj Shamani",
-      "channel": "Raj Shamani",
-      "channel_id": "UCzwCEE_PchiBULMnAJqhGVg",
-      "published_at": "2026-10-29T15:39:05Z",
-      "duration_seconds": 11403,
-      "view_count": 2944497,
-      "like_count": 17630,
-      "why_good": "近 30 天同类长视频播放第 27"
-    },
-    {
-      "id": "WksaXhGPBSQ",
-      "title": "KENAPA KAPOLRI SADAP PRABOWO?",
-      "channel": "Pandji Pragiwaksono",
-      "channel_id": "UCh1SzxJAH9B5nZDYYa42UqQ",
-      "published_at": "2026-11-05T01:00:37Z",
-      "duration_seconds": 987,
-      "view_count": 2901860,
-      "like_count": 26446,
-      "why_good": "近 30 天同类长视频播放第 28"
-    },
-    {
-      "id": "OQnvClWgN-g",
-      "title": "Das Ende von Deutschland steht bevor (Markus Krall)",
-      "channel": "{ungeskriptet} by Ben",
-      "channel_id": "UCjkSqbf8E4MybdYmfhlW10A",
-      "published_at": "2026-10-17T08:00:30Z",
-      "duration_seconds": 12062,
-      "view_count": 2864480,
-      "like_count": 78317,
-      "why_good": "近 30 天同类长视频播放第 29"
+      "why_good": "近 30 天同类长视频播放第 9",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "e1cwjeP5Ofs",
@@ -343,7 +141,9 @@
       "duration_seconds": 996,
       "view_count": 2863962,
       "like_count": 25949,
-      "why_good": "近 30 天同类长视频播放第 30"
+      "why_good": "近 30 天同类长视频播放第 10",
+      "default_audio_language": "en",
+      "default_language": "en-IN"
     },
     {
       "id": "k-NpZntHGxs",
@@ -354,7 +154,9 @@
       "duration_seconds": 910,
       "view_count": 2777332,
       "like_count": 26332,
-      "why_good": "近 30 天同类长视频播放第 31"
+      "why_good": "近 30 天同类长视频播放第 11",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "iIvpZx1jx28",
@@ -365,51 +167,9 @@
       "duration_seconds": 5241,
       "view_count": 2745519,
       "like_count": 43429,
-      "why_good": "近 30 天同类长视频播放第 32"
-    },
-    {
-      "id": "f8j99y64CDQ",
-      "title": "DEDDY CORBUZIER: GAK ADA ORANG NGEGYM BUAT KESEHATAN! \"TAI KUCING!” - PODCAST BAHLUL",
-      "channel": "NOICE",
-      "channel_id": "UCU7U3fcM-PQs39jFSj5pVMg",
-      "published_at": "2026-10-19T12:21:00Z",
-      "duration_seconds": 4895,
-      "view_count": 2709943,
-      "like_count": 26381,
-      "why_good": "近 30 天同类长视频播放第 33"
-    },
-    {
-      "id": "4WKrKH5IqJc",
-      "title": "\"SAYA DIPANGGIL TEDDY, SAYA TOLAK TAWARAN PRABOWO\" ?! | YUNARTO WIJAYA",
-      "channel": "Helmy Yahya Bicara",
-      "channel_id": "UC5kyULWIngxMEeXsivTydLQ",
-      "published_at": "2026-10-21T10:03:26Z",
-      "duration_seconds": 3036,
-      "view_count": 2646930,
-      "like_count": 15879,
-      "why_good": "近 30 天同类长视频播放第 34"
-    },
-    {
-      "id": "Zr-YMX2QoVA",
-      "title": "Unplugged ft. Waqar Younis |  India vs Pakistan | Cricket Podcast |  Shubhankar Mishra",
-      "channel": "Shubhankar Mishra ",
-      "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
-      "published_at": "2026-10-28T14:34:07Z",
-      "duration_seconds": 5775,
-      "view_count": 2630091,
-      "like_count": 27147,
-      "why_good": "近 30 天同类长视频播放第 35"
-    },
-    {
-      "id": "znhO4tPO6e4",
-      "title": "RANGKUMAN MADIUN",
-      "channel": "Hirotada Radifan",
-      "channel_id": "UCFQoE23adk7NSPNhBlanu4w",
-      "published_at": "2026-10-28T08:15:32Z",
-      "duration_seconds": 1382,
-      "view_count": 2623807,
-      "like_count": 48899,
-      "why_good": "近 30 天同类长视频播放第 36"
+      "why_good": "近 30 天同类长视频播放第 12",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "cUeJSNR1xJM",
@@ -420,40 +180,9 @@
       "duration_seconds": 34601,
       "view_count": 2618836,
       "like_count": 54674,
-      "why_good": "近 30 天同类长视频播放第 37"
-    },
-    {
-      "id": "NJ04KISduB8",
-      "title": "KAMAL STAR SYNDROME?! RIGEN JEGEL BONGKAR SISI LIAR DUO BAHLUL!! KNALPODCAST EP. 36",
-      "channel": "Yamaha Motor Indonesia",
-      "channel_id": "UCDE454ZKSWksDbQDw7pyxUg",
-      "published_at": "2026-10-30T12:30:21Z",
-      "duration_seconds": 3382,
-      "view_count": 2545296,
-      "like_count": 16614,
-      "why_good": "近 30 天同类长视频播放第 38"
-    },
-    {
-      "id": "NXGqKIIXUgQ",
-      "title": "PWK - CUMAN GJLS YANG BERHASIL NGAJAK GRINDBOYS MAIN FILM",
-      "channel": "HAS Creative",
-      "channel_id": "UCio3ArXLJ_Mo8FLLGVzIC5A",
-      "published_at": "2026-10-31T12:00:34Z",
-      "duration_seconds": 4993,
-      "view_count": 2481386,
-      "like_count": 16240,
-      "why_good": "近 30 天同类长视频播放第 39"
-    },
-    {
-      "id": "yi-AJd7ygHY",
-      "title": "Unplugged ft. Pawan Jallad | Muskan Rastogi & Sahil | Nirbhaya Case | Blue Drum Case| Saurabh Rajput",
-      "channel": "Shubhankar Mishra ",
-      "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
-      "published_at": "2026-10-15T15:08:02Z",
-      "duration_seconds": 4708,
-      "view_count": 2400220,
-      "like_count": 15380,
-      "why_good": "近 30 天同类长视频播放第 40"
+      "why_good": "近 30 天同类长视频播放第 13",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "sQ8MX1j6sUU",
@@ -464,7 +193,9 @@
       "duration_seconds": 7298,
       "view_count": 2375820,
       "like_count": 63343,
-      "why_good": "近 30 天同类长视频播放第 41"
+      "why_good": "近 30 天同类长视频播放第 14",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "Axv-1C9-07U",
@@ -475,7 +206,9 @@
       "duration_seconds": 4459,
       "view_count": 2369259,
       "like_count": 22464,
-      "why_good": "近 30 天同类长视频播放第 42"
+      "why_good": "近 30 天同类长视频播放第 15",
+      "default_audio_language": "en-GB",
+      "default_language": "en"
     },
     {
       "id": "2rjgtx6NgMM",
@@ -486,18 +219,9 @@
       "duration_seconds": 5265,
       "view_count": 2344384,
       "like_count": 16164,
-      "why_good": "近 30 天同类长视频播放第 43"
-    },
-    {
-      "id": "LmDWj47akGw",
-      "title": "Martinez's United Outburst, Gerrard’s Wirtz Warning & City’s Title Future | Stick to Football EP 153",
-      "channel": "The Overlap",
-      "channel_id": "UCjXIw1GlwaY1IzpW_jN9iCQ",
-      "published_at": "2026-10-15T07:00:00Z",
-      "duration_seconds": 5261,
-      "view_count": 2343023,
-      "like_count": 15736,
-      "why_good": "近 30 天同类长视频播放第 44"
+      "why_good": "近 30 天同类长视频播放第 16",
+      "default_audio_language": "en-GB",
+      "default_language": "en"
     },
     {
       "id": "wllFRT0BRTY",
@@ -508,40 +232,9 @@
       "duration_seconds": 790,
       "view_count": 2247822,
       "like_count": 27157,
-      "why_good": "近 30 天同类长视频播放第 45"
-    },
-    {
-      "id": "VksKFo6Lt9o",
-      "title": "BAHAYA!! DESTA TANYA GOFAR! GOFAR TANYA DESTA!",
-      "channel": "ORANG BENER",
-      "channel_id": "UC9Baay6c_NM_1sgY-6fqLjw",
-      "published_at": "2026-11-02T05:00:08Z",
-      "duration_seconds": 3954,
-      "view_count": 2243476,
-      "like_count": 20623,
-      "why_good": "近 30 天同类长视频播放第 46"
-    },
-    {
-      "id": "WZAyUZWiP5I",
-      "title": "BECKHAM PUTRA SATU MEJA DENGAN FANS PERSIJA?! - IDL PODCAST",
-      "channel": "celloszxz",
-      "channel_id": "UCYeySNdFnZg7vfGGPCR9ePw",
-      "published_at": "2026-11-02T11:30:39Z",
-      "duration_seconds": 5102,
-      "view_count": 2243161,
-      "like_count": 22464,
-      "why_good": "近 30 天同类长视频播放第 47"
-    },
-    {
-      "id": "9rQsJ_DbfVg",
-      "title": "17 Consejos de la Medicina China Para no Enfermar Jamás, Subir tus Defensas y Vivir Más Años",
-      "channel": "A lo Grande Podcast (con Marian Gamboa)",
-      "channel_id": "UCTFVgK2cp9t5IJslBKoqSbQ",
-      "published_at": "2026-10-19T16:00:24Z",
-      "duration_seconds": 7814,
-      "view_count": 2241379,
-      "like_count": 43208,
-      "why_good": "近 30 天同类长视频播放第 48"
+      "why_good": "近 30 天同类长视频播放第 17",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "BOiDLE3oKe4",
@@ -552,7 +245,9 @@
       "duration_seconds": 1018,
       "view_count": 2234123,
       "like_count": null,
-      "why_good": "近 30 天同类长视频播放第 49"
+      "why_good": "近 30 天同类长视频播放第 18",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "kuCqAWFEtDI",
@@ -563,7 +258,9 @@
       "duration_seconds": 3632,
       "view_count": 2233356,
       "like_count": 7197,
-      "why_good": "近 30 天同类长视频播放第 50"
+      "why_good": "近 30 天同类长视频播放第 19",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "XKC7ICpLT8c",
@@ -574,40 +271,9 @@
       "duration_seconds": 4952,
       "view_count": 2227745,
       "like_count": 64088,
-      "why_good": "近 30 天同类长视频播放第 51"
-    },
-    {
-      "id": "K0H5wYDJJjo",
-      "title": "KEJAR SETORAN - UJIAN AWAL KARIR GANTA.. KETIPU BELI IPHONE DENGAN HARGA 2 JUTA!",
-      "channel": "Tuah Kreasi",
-      "channel_id": "UCcB5cXUCggZGnVzR_84Xyag",
-      "published_at": "2026-10-31T10:00:33Z",
-      "duration_seconds": 4172,
-      "view_count": 2209825,
-      "like_count": 30910,
-      "why_good": "近 30 天同类长视频播放第 52"
-    },
-    {
-      "id": "MNnQ-V8TOpY",
-      "title": "Fala Glauber REACT: FLÁVIO X LULA APURAÇÃO DO RESULTADO DAS ELEIÇÕES!",
-      "channel": "Fala Glauber Podcast",
-      "channel_id": "UC3BM4LVGTrG5OER815AM7Bg",
-      "published_at": "2026-10-26T04:00:56Z",
-      "duration_seconds": 33791,
-      "view_count": 2206268,
-      "like_count": 80200,
-      "why_good": "近 30 天同类长视频播放第 53"
-    },
-    {
-      "id": "kJLS8t2mUKg",
-      "title": "IGUN: \"GUE BELUM JADI APA-APA, DAVE HENDRIK UDAH PAKAI JAM ROLEX\" | BUTIK HAJI IGUN",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-10-20T12:00:09Z",
-      "duration_seconds": 3112,
-      "view_count": 2167287,
-      "like_count": 10530,
-      "why_good": "近 30 天同类长视频播放第 54"
+      "why_good": "近 30 天同类长视频播放第 20",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "8P_-7Fersss",
@@ -618,7 +284,9 @@
       "duration_seconds": 7938,
       "view_count": 2166172,
       "like_count": 41109,
-      "why_good": "近 30 天同类长视频播放第 55"
+      "why_good": "近 30 天同类长视频播放第 21",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "lgBLqo8TwgE",
@@ -629,18 +297,9 @@
       "duration_seconds": 7826,
       "view_count": 2159800,
       "like_count": 28019,
-      "why_good": "近 30 天同类长视频播放第 56"
-    },
-    {
-      "id": "qi5ZUH3WKe8",
-      "title": "Crushes raros 😍🫠 l Las Alucines l 03x19 [Me dio colitis este episodio 🥴]",
-      "channel": "Las Alucines",
-      "channel_id": "UCYF9YCqlD7SUen2RalDasNg",
-      "published_at": "2026-10-20T01:00:06Z",
-      "duration_seconds": 5635,
-      "view_count": 2147372,
-      "like_count": 39510,
-      "why_good": "近 30 天同类长视频播放第 57"
+      "why_good": "近 30 天同类长视频播放第 22",
+      "default_audio_language": "en-US",
+      "default_language": "en-US"
     },
     {
       "id": "iU-7L8Cft6M",
@@ -651,40 +310,9 @@
       "duration_seconds": 12775,
       "view_count": 2118379,
       "like_count": 74429,
-      "why_good": "近 30 天同类长视频播放第 58"
-    },
-    {
-      "id": "-XIpMJBet1c",
-      "title": "JOB DESK UTAMA YAJUJ DAN MAJUJ ADALAH MEMBAKAR HUTAN?! | MEJA MONGOL",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-10-22T12:00:10Z",
-      "duration_seconds": 3350,
-      "view_count": 2114067,
-      "like_count": 19756,
-      "why_good": "近 30 天同类长视频播放第 59"
-    },
-    {
-      "id": "8ebOUNXWgr0",
-      "title": "FENOMENA SANTET ONLINE & SANTET TURUN TEMURUN | MEJA MONGOL",
-      "channel": "C8 Podcast",
-      "channel_id": "UCKfYcwD7SWX-cheO1LOoQCA",
-      "published_at": "2026-10-29T12:00:09Z",
-      "duration_seconds": 2873,
-      "view_count": 2106469,
-      "like_count": 15142,
-      "why_good": "近 30 天同类长视频播放第 60"
-    },
-    {
-      "id": "lJNl226Xpfs",
-      "title": "FLÁVIO BOLSONARO FOGE APÓS ELEIÇÃO - RENAN SANTOS, FELIPE MOURA BRASIL E IGOR 3K",
-      "channel": "Flow Podcast",
-      "channel_id": "UC4ncvgh5hFr5O83MH7-jRJg",
-      "published_at": "2026-10-28T03:02:58Z",
-      "duration_seconds": 10299,
-      "view_count": 2085624,
-      "like_count": 72241,
-      "why_good": "近 30 天同类长视频播放第 61"
+      "why_good": "近 30 天同类长视频播放第 23",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "a2K-AHeZ3o0",
@@ -695,7 +323,9 @@
       "duration_seconds": 9495,
       "view_count": 2081186,
       "like_count": 18172,
-      "why_good": "近 30 天同类长视频播放第 62"
+      "why_good": "近 30 天同类长视频播放第 24",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "omut4LhPuT8",
@@ -706,18 +336,9 @@
       "duration_seconds": 1716,
       "view_count": 2048661,
       "like_count": 47390,
-      "why_good": "近 30 天同类长视频播放第 63"
-    },
-    {
-      "id": "xRIw-ZmDzj4",
-      "title": "La crise est historique : j'ai interrogé Emmanuel Macron",
-      "channel": "HugoDécrypte - Grands formats",
-      "channel_id": "UCUo1RqYV8tGjV38sQ8S5p9A",
-      "published_at": "2026-10-28T21:21:07Z",
-      "duration_seconds": 4875,
-      "view_count": 2024051,
-      "like_count": 31017,
-      "why_good": "近 30 天同类长视频播放第 64"
+      "why_good": "近 30 天同类长视频播放第 25",
+      "default_audio_language": "en",
+      "default_language": "en-US"
     },
     {
       "id": "lkRnKBODrN0",
@@ -728,7 +349,9 @@
       "duration_seconds": 6717,
       "view_count": 2017000,
       "like_count": 56675,
-      "why_good": "近 30 天同类长视频播放第 65"
+      "why_good": "近 30 天同类长视频播放第 26",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "sdw-9wFMT1A",
@@ -739,7 +362,9 @@
       "duration_seconds": 1238,
       "view_count": 1983400,
       "like_count": 33632,
-      "why_good": "近 30 天同类长视频播放第 66"
+      "why_good": "近 30 天同类长视频播放第 27",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "rn6iW7XDEHc",
@@ -750,128 +375,9 @@
       "duration_seconds": 9822,
       "view_count": 1978894,
       "like_count": 18508,
-      "why_good": "近 30 天同类长视频播放第 67"
-    },
-    {
-      "id": "U3DTDKOii50",
-      "title": "Unplugged FT. Gulam Sarwar | Indian Muslims: The Hard Questions | BJP, Islam & Madrasas",
-      "channel": "Shubhankar Mishra ",
-      "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
-      "published_at": "2026-10-24T14:07:54Z",
-      "duration_seconds": 7142,
-      "view_count": 1969490,
-      "like_count": 21002,
-      "why_good": "近 30 天同类长视频播放第 68"
-    },
-    {
-      "id": "TCbIVkttJmc",
-      "title": "RENAN SANTOS - Inteligência Ltda. Podcast #1966",
-      "channel": "Inteligência Ltda",
-      "channel_id": "UCWZoPPW7u2I4gZfhJBZ6NqQ",
-      "published_at": "2026-10-27T00:44:21Z",
-      "duration_seconds": 8642,
-      "view_count": 1944872,
-      "like_count": 79558,
-      "why_good": "近 30 天同类长视频播放第 69"
-    },
-    {
-      "id": "0U_aks1-iAQ",
-      "title": "PWK - CUMAN JIMI MULTHAZAM YANG BERANI NYURUH SLANK TURUN PANGGUNG",
-      "channel": "HAS Creative",
-      "channel_id": "UCio3ArXLJ_Mo8FLLGVzIC5A",
-      "published_at": "2026-10-24T12:00:10Z",
-      "duration_seconds": 8062,
-      "view_count": 1900992,
-      "like_count": 14390,
-      "why_good": "近 30 天同类长视频播放第 70"
-    },
-    {
-      "id": "XhxqL5I6zeg",
-      "title": "Chi vuol esser Miliardario? con Leonardo Maria Del Vecchio | Pulp Podcast #67",
-      "channel": "Pulp Podcast",
-      "channel_id": "UCY99TnBJ8xyat2lpeN_hcEA",
-      "published_at": "2026-10-12T11:00:18Z",
-      "duration_seconds": 5114,
-      "view_count": 1892866,
-      "like_count": 25761,
-      "why_good": "近 30 天同类长视频播放第 71"
-    },
-    {
-      "id": "5-BdF3thmQA",
-      "title": "KISAH VIRAL DI BOGOR! URBAN LEGEND ANGKOT BIRU GAIB, SEMUA PENUMPANG SUDAH MENINGGAL #OMMAMAT",
-      "channel": "RJL 5 - Fajar Aditya",
-      "channel_id": "UCiFM5EHunF5tL0pMR6Pooaw",
-      "published_at": "2026-10-27T13:15:26Z",
-      "duration_seconds": 3135,
-      "view_count": 1869860,
-      "like_count": 14717,
-      "why_good": "近 30 天同类长视频播放第 72"
-    },
-    {
-      "id": "_A-h4JLTf6Q",
-      "title": "SPILL 3 TIPE CEWEK FAJAR YANG MAU DIPACARIN, NIKAH, JADI TEMEN - PODCAST BAHLUL",
-      "channel": "NOICE",
-      "channel_id": "UCU7U3fcM-PQs39jFSj5pVMg",
-      "published_at": "2026-10-12T10:00:39Z",
-      "duration_seconds": 4006,
-      "view_count": 1863320,
-      "like_count": 12091,
-      "why_good": "近 30 天同类长视频播放第 73"
-    },
-    {
-      "id": "0FbzHpPRFjc",
-      "title": "The Wild Project #388 - Brais Moure | 10 Formas en las que la IA podría EXTERMINARNOS",
-      "channel": "The Wild Project",
-      "channel_id": "UCBYyJBCtCvgqA4NwtoPMwpQ",
-      "published_at": "2026-10-22T15:00:32Z",
-      "duration_seconds": 16559,
-      "view_count": 1830047,
-      "like_count": 20147,
-      "why_good": "近 30 天同类长视频播放第 74"
-    },
-    {
-      "id": "tcC9HNGUQ_Y",
-      "title": "KARHUTLA Indonesia Sudah di Ujung Nafasnya",
-      "channel": "Raymond Chin",
-      "channel_id": "UCm4eA46c6boHmPrD0Lp2iEg",
-      "published_at": "2026-10-14T11:02:25Z",
-      "duration_seconds": 848,
-      "view_count": 1804951,
-      "like_count": 25369,
-      "why_good": "近 30 天同类长视频播放第 75"
-    },
-    {
-      "id": "PLRrmis9prI",
-      "title": "Papá de Antonella rompe el silencio “Silvana M4TØ a mi hija”",
-      "channel": "Conducta Delictiva",
-      "channel_id": "UC1hnBY1vAbEVqzxKiXZWv3Q",
-      "published_at": "2026-10-13T17:30:33Z",
-      "duration_seconds": 3726,
-      "view_count": 1775660,
-      "like_count": 24795,
-      "why_good": "近 30 天同类长视频播放第 76"
-    },
-    {
-      "id": "tOVUEzQpyck",
-      "title": "Unplugged ft. Omar Abdullah | Nidhi Razdan | Love & Life | Kashmir Politics | 370 | Pahalgam | Qazi",
-      "channel": "Shubhankar Mishra ",
-      "channel_id": "UCYalWwW79BdxmMTKUyBFj5g",
-      "published_at": "2026-10-31T14:45:17Z",
-      "duration_seconds": 8151,
-      "view_count": 1744222,
-      "like_count": 12267,
-      "why_good": "近 30 天同类长视频播放第 77"
-    },
-    {
-      "id": "UUKtux3KQHU",
-      "title": "QUAL O FUTURO DO BRASIL COM O LULA ELEITO? FT. RENAN SANTOS | #ACHISMOS PODCAST #441",
-      "channel": "AchismosTV",
-      "channel_id": "UCxcDCeShqZWIUQuEo2iJSVA",
-      "published_at": "2026-10-27T19:07:53Z",
-      "duration_seconds": 7325,
-      "view_count": 1697801,
-      "like_count": 56710,
-      "why_good": "近 30 天同类长视频播放第 78"
+      "why_good": "近 30 天同类长视频播放第 28",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "JByflci8EYE",
@@ -882,7 +388,9 @@
       "duration_seconds": 2058,
       "view_count": 1696144,
       "like_count": 11125,
-      "why_good": "近 30 天同类长视频播放第 79"
+      "why_good": "近 30 天同类长视频播放第 29",
+      "default_audio_language": "en-GB",
+      "default_language": "en"
     },
     {
       "id": "8AJizVO6ZFg",
@@ -893,18 +401,9 @@
       "duration_seconds": 8654,
       "view_count": 1679221,
       "like_count": 26943,
-      "why_good": "近 30 天同类长视频播放第 80"
-    },
-    {
-      "id": "Cmq3dp0R7FA",
-      "title": "Jefri Nichol Udah Bosen Dikasih Peran Cowok Baik",
-      "channel": "MALAKA",
-      "channel_id": "UCbmCx2xsM1qfk5vyXE9UC8g",
-      "published_at": "2026-10-27T11:06:35Z",
-      "duration_seconds": 4437,
-      "view_count": 1671186,
-      "like_count": 10380,
-      "why_good": "近 30 天同类长视频播放第 81"
+      "why_good": "近 30 天同类长视频播放第 30",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "pH4Dpa6rzbo",
@@ -915,18 +414,9 @@
       "duration_seconds": 5428,
       "view_count": 1649859,
       "like_count": 7381,
-      "why_good": "近 30 天同类长视频播放第 82"
-    },
-    {
-      "id": "r8T98tDwh_g",
-      "title": "EP59. ¿Qué le importa ... a Aldo Rendón?",
-      "channel": "CAPI Pérez",
-      "channel_id": "UCty65avi7SZ48CmKkfmbRhw",
-      "published_at": "2026-10-27T12:00:36Z",
-      "duration_seconds": 5193,
-      "view_count": 1643431,
-      "like_count": 25355,
-      "why_good": "近 30 天同类长视频播放第 83"
+      "why_good": "近 30 天同类长视频播放第 31",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     },
     {
       "id": "uOJyMoZt3Q0",
@@ -937,29 +427,9 @@
       "duration_seconds": 3749,
       "view_count": 1641881,
       "like_count": 29566,
-      "why_good": "近 30 天同类长视频播放第 84"
-    },
-    {
-      "id": "7xfdoAvPSDc",
-      "title": "Deusi Bhailo Chaleko Riti - Raju Pariyar | Eleena Chauhan | Shila | Badri | Rita | Khuman | Deepika",
-      "channel": "Kamal Sargam Podcast",
-      "channel_id": "UCFI-a9kaCk5QjwTsvTJ1izw",
-      "published_at": "2026-10-28T02:00:09Z",
-      "duration_seconds": 721,
-      "view_count": 1636640,
-      "like_count": 11193,
-      "why_good": "近 30 天同类长视频播放第 85"
-    },
-    {
-      "id": "Pd-02Y1n0qQ",
-      "title": "TIKAM PRABOWO, LISTYO 'BEKERJA' UNTUK JOKOWI. JARINGAN MAKAR TERCIUM",
-      "channel": "Akbar Faizal Uncensored",
-      "channel_id": "UCpHsdx-LjZ2FC1xcdFzU6vg",
-      "published_at": "2026-11-04T13:45:06Z",
-      "duration_seconds": 3603,
-      "view_count": 1597579,
-      "like_count": 16342,
-      "why_good": "近 30 天同类长视频播放第 86"
+      "why_good": "近 30 天同类长视频播放第 32",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "uBfOIZJTw2E",
@@ -970,7 +440,9 @@
       "duration_seconds": 5971,
       "view_count": 1579431,
       "like_count": 20384,
-      "why_good": "近 30 天同类长视频播放第 87"
+      "why_good": "近 30 天同类长视频播放第 33",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "CYCNhPgfA-g",
@@ -981,7 +453,9 @@
       "duration_seconds": 4001,
       "view_count": 1565231,
       "like_count": 29815,
-      "why_good": "近 30 天同类长视频播放第 88"
+      "why_good": "近 30 天同类长视频播放第 34",
+      "default_audio_language": "en",
+      "default_language": "en"
     },
     {
       "id": "yvNpoXd3sRc",
@@ -992,18 +466,9 @@
       "duration_seconds": 667,
       "view_count": 1565119,
       "like_count": 19043,
-      "why_good": "近 30 天同类长视频播放第 89"
-    },
-    {
-      "id": "4intZzYWOxs",
-      "title": "Habla Juan Carlos Suárez, condenado a 37 años por el crimen de Jaime Esteban Moreno",
-      "channel": "Conducta Delictiva",
-      "channel_id": "UC1hnBY1vAbEVqzxKiXZWv3Q",
-      "published_at": "2026-10-30T17:00:37Z",
-      "duration_seconds": 4282,
-      "view_count": 1561201,
-      "like_count": 20277,
-      "why_good": "近 30 天同类长视频播放第 90"
+      "why_good": "近 30 天同类长视频播放第 35",
+      "default_audio_language": "en-US",
+      "default_language": "en-US"
     },
     {
       "id": "lGF8FD-vKP4",
@@ -1014,29 +479,9 @@
       "duration_seconds": 286,
       "view_count": 1553080,
       "like_count": 24191,
-      "why_good": "近 30 天同类长视频播放第 91"
-    },
-    {
-      "id": "53O2ki090-w",
-      "title": "KEJAR SETORAN - OMANYA PAUL & KEISYA LEVRONKA PUNYA ENERGY EXTROVERT YANG SAMA!!",
-      "channel": "Tuah Kreasi",
-      "channel_id": "UCcB5cXUCggZGnVzR_84Xyag",
-      "published_at": "2026-10-17T10:00:08Z",
-      "duration_seconds": 4484,
-      "view_count": 1542599,
-      "like_count": 12218,
-      "why_good": "近 30 天同类长视频播放第 92"
-    },
-    {
-      "id": "fPQyHFus7CM",
-      "title": "4BU5Ó de nuestras hijas de 8 y 12 años: Ayudé a la Policía a capturarlo antes de que se escapara",
-      "channel": "Más Allá del Silencio Podcast",
-      "channel_id": "UCro1VNb7hqX38TvyUN64JkQ",
-      "published_at": "2026-10-15T17:00:02Z",
-      "duration_seconds": 2665,
-      "view_count": 1530682,
-      "like_count": 14816,
-      "why_good": "近 30 天同类长视频播放第 93"
+      "why_good": "近 30 天同类长视频播放第 36",
+      "default_audio_language": null,
+      "default_language": "en"
     },
     {
       "id": "ZAzWPE9CItg",
@@ -1047,7 +492,9 @@
       "duration_seconds": 12867,
       "view_count": 1505771,
       "like_count": 9742,
-      "why_good": "近 30 天同类长视频播放第 94"
+      "why_good": "近 30 天同类长视频播放第 37",
+      "default_audio_language": "en-US",
+      "default_language": "en"
     }
   ],
   "publish_date_span": {
@@ -1055,7 +502,7 @@
     "max": "2026-11-06T23:00:09Z"
   },
   "query": "podcast",
-  "dropped_language": 3,
+  "dropped_language": 54,
   "dropped_channel": 0,
   "dropped_podcast_display_cap": 3
 }
