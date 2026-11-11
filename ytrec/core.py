@@ -686,6 +686,70 @@ def is_official_brand_clip(video):
     return bool(_PICKS_OFFICIAL_TITLE_RE.search(title))
 
 
+# Same-id channels listed under both AI and podcast use a topic-fit gate for
+# the AI column. Keep this explicit list in one place so it can be extended.
+# Matching is case-insensitive and uses ASCII alphanumeric word-ish edges, so
+# short tokens such as "AI" do not match inside "said" or "maintain".
+AI_TOPIC_KEYWORDS = (
+    'AI', 'A.I.', 'AGI', 'LLM', 'LLMs', 'GPT', 'ChatGPT', 'Claude', 'Gemini',
+    'Grok', 'OpenAI', 'Anthropic', 'DeepMind', 'Mistral', 'machine learning',
+    'deep learning', 'neural net', 'neural nets', 'neural network',
+    'neural networks', 'language model', 'language models', 'foundation model',
+    'foundation models', 'transformer', 'alignment', 'agentic',
+    'artificial intelligence',
+)
+
+
+def _keyword_pattern(keyword):
+    parts = [re.escape(part) for part in str(keyword).split()]
+    escaped = r'\s+'.join(parts)
+    return rf'(?<![A-Za-z0-9]){escaped}(?![A-Za-z0-9])'
+
+
+AI_TOPIC_RE = re.compile('|'.join(_keyword_pattern(keyword) for keyword in AI_TOPIC_KEYWORDS), re.IGNORECASE)
+
+
+def dual_topic_channel_ids(sources=None):
+    """Return channel ids that sources.yaml lists under both AI and podcast."""
+    ids = set()
+    for row in load_source_rows(sources):
+        if not isinstance(row, dict) or row.get('type') not in (None, 'channel'):
+            continue
+        topics = {str(topic).lower() for topic in (row.get('topics') or [])}
+        if not {'ai', 'podcast'} <= topics:
+            continue
+        channel_id = str(row.get('external_id') or row.get('youtube_channel_id') or '')
+        if channel_id:
+            ids.add(channel_id)
+    return ids
+
+
+def matches_ai_topic_keywords(video):
+    """Return whether a video title or description matches the AI topic list."""
+    snippet = video.get('snippet') or {}
+    text = '\n'.join(str(value or '') for value in (
+        video.get('title'), snippet.get('title'),
+        video.get('description'), snippet.get('description'),
+    ))
+    return bool(AI_TOPIC_RE.search(text))
+
+
+def is_ai_topic_video(video, dual_channel_ids=None):
+    """Apply the AI-topic gate only to channels that are AI+podcast dual-listed."""
+    channel_id = str(video.get('channel_id') or (video.get('snippet') or {}).get('channelId') or '')
+    ids = dual_topic_channel_ids() if dual_channel_ids is None else dual_channel_ids
+    if channel_id not in ids:
+        return True
+    return matches_ai_topic_keywords(video)
+
+
+def filter_ai_topic_videos(videos, dual_channel_ids=None):
+    """Drop non-AI items from dual-listed channels and return the dropped count."""
+    ids = dual_topic_channel_ids() if dual_channel_ids is None else dual_channel_ids
+    kept = [video for video in videos if is_ai_topic_video(video, ids)]
+    return kept, len(videos) - len(kept)
+
+
 def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
     """Generate the 今日精选 feed (≤10) from scored per-column candidates."""
     limit = max(0, min(10, int(limit)))
@@ -694,12 +758,15 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
         at = at.replace(tzinfo=UTC)
     at = at.astimezone(UTC)
     source_rows = load_source_rows(sources)
+    dual_channel_ids = dual_topic_channel_ids(source_rows)
     labels = {'community': '社区推荐', 'ai': 'AI前沿', 'podcast': '播客', 'editorial': '科学教育'}
     groups = {}
 
     for key in ('community', 'ai', 'podcast', 'editorial'):
         videos = []
         for video in (feeds.get(key) or {}).get('videos') or []:
+            if key == 'ai' and not is_ai_topic_video(video, dual_channel_ids):
+                continue
             if not language_gate(video):
                 continue
             duration_seconds = int(video.get('duration_seconds') or 0)
@@ -970,6 +1037,7 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
         sources_file = 'config/sources.yaml'
     if sources_file:
         channels = channels_for_topic('ai', channels, path=sources_file)
+    dual_channel_ids = dual_topic_channel_ids(sources_file or 'config/sources.yaml')
     cutoff = datetime.now(UTC) - timedelta(days=FRESHNESS_MAX_DAYS)
     discovered, units = {}, 0
     for channel in channels:
@@ -997,11 +1065,13 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     videos = [dict(cached[vid]) for vid in ids if vid in cached]
     for raw in raws:
         record = video_record(raw)
+        record['description'] = (raw.get('snippet') or {}).get('description', '')
         record['_metadata_fetched_at'] = fetched_at
         videos.append(record)
     videos = [v for v in videos if int(v.get('duration_seconds') or 0) >= 60]
     dropped_language = sum(1 for v in videos if not language_gate(v))
     videos = [v for v in videos if language_gate(v)]
+    videos, dropped_ai_topic = filter_ai_topic_videos(videos, dual_channel_ids)
     videos, dropped_stale = drop_stale_videos(videos)
     videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds('ai', output), feed_name='ai')
     for video in videos:
@@ -1009,7 +1079,8 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     videos.sort(key=freshness_sort_key)
     payload = dict(generated_at=iso_now(), window_days=FRESHNESS_MAX_DAYS, exclude_shorts_under_seconds=60,
                    quota_units_approx=units, channels_used=len(channels), dropped_language=dropped_language,
-                   dropped_channel=dropped_channel, dropped_stale=dropped_stale, videos=videos)
+                   dropped_ai_topic=dropped_ai_topic, dropped_channel=dropped_channel,
+                   dropped_stale=dropped_stale, videos=videos)
     payload = write_feed_if_not_sharply_smaller('ai', payload, output)
     print(f"AI: {len(payload.get('videos', []))} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))

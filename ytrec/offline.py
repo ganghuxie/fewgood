@@ -17,6 +17,8 @@ from .core import (
     build_picks,
     write_feed,
     _video_view,
+    dual_topic_channel_ids,
+    filter_ai_topic_videos,
     freshness_sort_key,
     drop_stale_videos,
 )
@@ -38,6 +40,7 @@ def enrich_records(records, raws):
         snippet = raw.get('snippet', {})
         update = dict(
             title=snippet.get('title', ''),
+            description=snippet.get('description', ''),
             channel=snippet.get('channelTitle', ''),
             channel_id=snippet.get('channelId', ''),
             published_at=snippet.get('publishedAt', ''),
@@ -52,7 +55,7 @@ def enrich_records(records, raws):
         if update:
             record['default_audio_language'] = update.get('default_audio_language')
             record['default_language'] = update.get('default_language')
-            for key in ('title', 'channel', 'channel_id', 'published_at', 'duration_seconds'):
+            for key in ('title', 'description', 'channel', 'channel_id', 'published_at', 'duration_seconds'):
                 if update.get(key):
                     record[key] = update[key]
     return records
@@ -93,6 +96,12 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                 dropped += 1
         lang_kept[name] = kept
         dropped_language[name] = dropped
+
+    dropped_ai_topic = 0
+    if 'ai' in lang_kept:
+        lang_kept['ai'], dropped_ai_topic = filter_ai_topic_videos(
+            lang_kept['ai'], dual_topic_channel_ids(),
+        )
 
     cap_kept, dropped_channel = apply_channel_caps_pool(lang_kept)
 
@@ -157,6 +166,8 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                            dropped_channel=dropped_channel.get(name, 0))
             if name == 'podcast':
                 payload['dropped_podcast_display_cap'] = dropped_podcast
+            if name == 'ai':
+                payload['dropped_ai_topic'] = int(feeds[name].get('dropped_ai_topic') or 0) + dropped_ai_topic
             if name in ('ai', 'podcast', 'music', 'editorial'):
                 payload['dropped_stale'] = int(feeds[name].get('dropped_stale') or 0) + dropped_stale.get(name, 0)
             if name == 'videos':
@@ -169,6 +180,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     summary = {
         'generated_at': pick_payload['generated_at'],
         'feeds': {name: {'kept': len(final.get(name, [])), 'dropped_language': dropped_language.get(name, 0), 'dropped_channel': dropped_channel.get(name, 0)} for name in feeds},
+        'dropped_ai_topic': dropped_ai_topic,
         'dropped_stale': dropped_stale,
         'dropped_podcast_display_cap': dropped_podcast,
         'picks': len(pick_payload['videos']),

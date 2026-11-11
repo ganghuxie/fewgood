@@ -70,6 +70,20 @@ def test_lex_is_one_source_for_ai_and_podcast():
     assert lex[0]['topics'] == ['ai', 'podcast']
 
 
+def test_only_lex_has_the_same_channel_id_on_ai_and_podcast():
+    sources = load_sources(ROOT / 'config' / 'sources.yaml')
+    topics_by_id = {}
+    for source in sources:
+        if source.get('type') != 'channel':
+            continue
+        topics_by_id.setdefault(source['external_id'], set()).update(source.get('topics') or [])
+    dual_listings = {
+        channel_id for channel_id, topics in topics_by_id.items()
+        if {'ai', 'podcast'} <= topics
+    }
+    assert dual_listings == {LEX_ID}
+
+
 def test_hacker_news_community_row_exists():
     sources = load_sources(ROOT / 'config' / 'sources.yaml')
     hn = [source for source in sources if source['external_id'] == 'hn']
