@@ -2,7 +2,7 @@
   "generated_at": "2026-11-11T00:50:15Z",
   "kind": "hn_pool",
   "limit": 1000,
-  "count": 658,
+  "count": 642,
   "videos": [
     {
       "id": "d-7o9xYp7eE",
@@ -255,44 +255,6 @@
         "A_speech",
         "C_speaker_duration",
         "D_classic_demo"
-      ]
-    },
-    {
-      "id": "4XpnKHJAok8",
-      "title": "Tech Talk: Linus Torvalds on git",
-      "channel": "Google",
-      "channel_id": "UCK8sQmJBp8GCxrOtXWBpyEA",
-      "published_at": "2007-05-14T19:01:27Z",
-      "duration_seconds": 4215,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 4079614,
-      "like_count": 32829,
-      "recommenders": 105,
-      "months": 86,
-      "span_days": 7072.632465277778,
-      "first": 1179803283,
-      "last": 1790878728,
-      "quotes": [
-        {
-          "author": "amichail",
-          "text": "Tech Talk: Linus Torvalds on git",
-          "url": "https://news.ycombinator.com/item?id=23777"
-        },
-        {
-          "author": "jsmcgd",
-          "text": "Sorry this doesn't answer your question but you might find this relevant or at least interesting (and just maybe slightly amusing). http://www.youtube.com/watch?v=4XpnKHJAok8",
-          "url": "https://news.ycombinator.com/item?id=32414"
-        },
-        {
-          "author": "uuilly",
-          "text": "http://www.youtube.com/watch?v=4XpnKHJAok8 I think he has a unique combination of mild autism, artistic stubborness and scandanavian directness. In the end he makes valid points and he sold me on trying git. It is hard to tell if he's being serious or if he's just making socially retarded attempts at sarcasm. Either way he's infinitely more charming than Mr.",
-          "url": "https://news.ycombinator.com/item?id=51624"
-        }
-      ],
-      "classic_speech": true,
-      "classic_speech_reasons": [
-        "C_speaker_duration"
       ]
     },
     {
@@ -835,44 +797,6 @@
           "author": "micampe",
           "text": "Bret Victor: The Future of Programming [video]",
           "url": "https://news.ycombinator.com/item?id=6199970"
-        }
-      ],
-      "classic_speech": true,
-      "classic_speech_reasons": [
-        "C_speaker_duration"
-      ]
-    },
-    {
-      "id": "pW-SOdj4Kkk",
-      "title": "Jonathan Blow - Preventing the Collapse of Civilization (English only)",
-      "channel": "bus",
-      "channel_id": "UCtk6dEXdQwusDszRbnheBJw",
-      "published_at": "2019-05-18T02:48:30Z",
-      "duration_seconds": 3881,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 268434,
-      "like_count": 7290,
-      "recommenders": 71,
-      "months": 37,
-      "span_days": 2295.0491782407407,
-      "first": 1558150773,
-      "last": 1756443022,
-      "quotes": [
-        {
-          "author": "dmit",
-          "text": "Preventing the Collapse of Civilization [video]",
-          "url": "https://news.ycombinator.com/item?id=19945452"
-        },
-        {
-          "author": "davemp",
-          "text": "Jonathan Blow – Preventing the Collapse of Civilization [video]",
-          "url": "https://news.ycombinator.com/item?id=19950860"
-        },
-        {
-          "author": "btrask",
-          "text": "Jonathan Blow – Preventing the Collapse of Civilization",
-          "url": "https://news.ycombinator.com/item?id=19965908"
         }
       ],
       "classic_speech": true,
@@ -3525,79 +3449,6 @@
       ]
     },
     {
-      "id": "wf-BqAjZb8M",
-      "title": "Raymond Hettinger - Beyond PEP 8 -- Best practices for beautiful intelligible code - PyCon 2015",
-      "channel": "PyCon 2015",
-      "channel_id": "UCgxzjK6GuOHVKR_08TT4hJQ",
-      "published_at": "2015-04-11T11:56:25Z",
-      "duration_seconds": 3125,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 521260,
-      "like_count": 8964,
-      "recommenders": 36,
-      "months": 32,
-      "span_days": 3784.552835648148,
-      "first": 1428915160,
-      "last": 1755900525,
-      "quotes": [
-        {
-          "author": "krig",
-          "text": "Raymond Hettinger – Beyond PEP 8 – PyCon 2015",
-          "url": "https://news.ycombinator.com/item?id=9366583"
-        },
-        {
-          "author": "hartror",
-          "text": "A number of these answers are highly unidiomatic, symptoms of people coming from another language to Python. Trying to shoe horn one language's patterns into another is fraught with problems, not only are you going to be less effective in the new language but experienced coders of that language are going to hate working with your code. Raymond Hettinger's Py",
-          "url": "https://news.ycombinator.com/item?id=9483829"
-        },
-        {
-          "author": "nharada",
-          "text": "Beyond PEP 8 – Best practices for beautiful intelligible code [video]",
-          "url": "https://news.ycombinator.com/item?id=10023818"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "Pb5oIIPO62g",
-      "title": "John Cleese on Creativity In Management",
-      "channel": "Video Arts",
-      "channel_id": "UC9UHHS9id7KonzYR1fNqFyw",
-      "published_at": "2017-06-21T17:13:13Z",
-      "duration_seconds": 2220,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 1331074,
-      "like_count": 27589,
-      "recommenders": 36,
-      "months": 45,
-      "span_days": 3275.2506828703704,
-      "first": 1503762957,
-      "last": 1786744616,
-      "quotes": [
-        {
-          "author": "lj3",
-          "text": "> However, if I look at the top 100 musicians in the world, they would have all practiced thousands of hours and I expect practice to have diminishing returns, so it should be responsible for very little of the variation in their ability. I think you're talking about two different things here. There are lots of musicians and artists and writers who have mast",
-          "url": "https://news.ycombinator.com/item?id=15105959"
-        },
-        {
-          "author": "onuralp",
-          "text": "John Cleese on creativity",
-          "url": "https://news.ycombinator.com/item?id=15263161"
-        },
-        {
-          "author": "mathgenius",
-          "text": "John Cleese on Creativity in Management (1991) [video]",
-          "url": "https://news.ycombinator.com/item?id=15635881"
-        }
-      ],
-      "classic_speech": true,
-      "classic_speech_reasons": [
-        "C_speaker_duration"
-      ]
-    },
-    {
       "id": "cZYNADOHhVY",
       "title": "We Were Taught to Call Death a Blessing",
       "channel": "CGP Grey",
@@ -3948,41 +3799,6 @@
       "classic_speech": false
     },
     {
-      "id": "AyzOUbkUf3M",
-      "title": "The Next Generation of Neural Networks",
-      "channel": "Google TechTalks",
-      "channel_id": "UCtXKDgv1AVoG88PLl8nGXmw",
-      "published_at": "2007-12-04T11:02:36Z",
-      "duration_seconds": 3564,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 520574,
-      "like_count": 2991,
-      "recommenders": 34,
-      "months": 33,
-      "span_days": 6567.315023148148,
-      "first": 1197834828,
-      "last": 1765250846,
-      "quotes": [
-        {
-          "author": "amichail",
-          "text": "The Next Generation of Neural Networks [Google Tech Talk]",
-          "url": "https://news.ycombinator.com/item?id=90154"
-        },
-        {
-          "author": "MaysonL",
-          "text": "There's a great Google tech talk on this subject: http://www.youtube.com/watch?v=AyzOUbkUf3M",
-          "url": "https://news.ycombinator.com/item?id=263537"
-        },
-        {
-          "author": "lpellis",
-          "text": "For the last few month I'm getting the 'were sorry this video is no longer available' for almost every video on youtube. Sometimes refreshing a few times work, but lately even that doesnt fix it. For example this vid: http://www.youtube.com/watch?v=AyzOUbkUf3M (and its not just me. pretty much everyone around me here in South Africa report the same issues)",
-          "url": "https://news.ycombinator.com/item?id=265582"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
       "id": "F-QA2rkpBSY",
       "title": "The Most IMPORTANT Video You'll Ever See (part 1 of 8)",
       "channel": "wonderingmind42",
@@ -4223,41 +4039,6 @@
           "author": "agumonkey",
           "text": "Symbolics Lisp Machine demo Jan 2013 - Kalman Reti",
           "url": "https://news.ycombinator.com/item?id=6515593"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "MCs5OvhV9S4",
-      "title": "David Beazley - Python Concurrency From the Ground Up: LIVE! - PyCon 2015",
-      "channel": "PyCon 2015",
-      "channel_id": "UCgxzjK6GuOHVKR_08TT4hJQ",
-      "published_at": "2015-04-11T12:33:33Z",
-      "duration_seconds": 2810,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 238427,
-      "like_count": 4819,
-      "recommenders": 33,
-      "months": 31,
-      "span_days": 4171.805694444444,
-      "first": 1428765632,
-      "last": 1789209644,
-      "quotes": [
-        {
-          "author": "cing",
-          "text": "David Beazley's PyCon 2015 Talk – Python Concurrency from the Ground Up: Live",
-          "url": "https://news.ycombinator.com/item?id=9359613"
-        },
-        {
-          "author": "erbdex",
-          "text": "David Beazley: Python Concurrency from the Ground Up [video]",
-          "url": "https://news.ycombinator.com/item?id=9871538"
-        },
-        {
-          "author": "fermigier",
-          "text": "I'm guessing that this project is related to this presentation: https://www.youtube.com/watch?v=MCs5OvhV9S4 ] From the youtube description: \"There are currently three popular approaches to Python concurrency: threads, event loops, and coroutines. Each is shrouded by various degrees of mystery and peril. In this talk, all three approaches will be deconstructe",
-          "url": "https://news.ycombinator.com/item?id=10487278"
         }
       ],
       "classic_speech": false
@@ -5283,41 +5064,6 @@
           "author": "dgellow",
           "text": "There Are No Zero-Cost Abstractions – CppCon 2019 [video]",
           "url": "https://news.ycombinator.com/item?id=21205629"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "W3aieHjyNvw",
-      "title": "Overwatch Gameplay Architecture and Netcode",
-      "channel": "GDC Festival of Gaming",
-      "channel_id": "UC0JB7TSe49lg56u6qH8y_MQ",
-      "published_at": "2019-02-08T17:12:54Z",
-      "duration_seconds": 3844,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 195752,
-      "like_count": 4667,
-      "recommenders": 31,
-      "months": 20,
-      "span_days": 2481.7859722222224,
-      "first": 1549693739,
-      "last": 1764120047,
-      "quotes": [
-        {
-          "author": "fritzy",
-          "text": "Overwatch Gameplay Architecture and Netcode – A Great Explanation of ECS",
-          "url": "https://news.ycombinator.com/item?id=19121094"
-        },
-        {
-          "author": "valkum",
-          "text": "Here is a talk by Blizzard about Overwatch which uses ECS: https://youtu.be/W3aieHjyNvw",
-          "url": "https://news.ycombinator.com/item?id=19170344"
-        },
-        {
-          "author": "hortense",
-          "text": "I've been wondering for a long time about how ECS can be cache friendly. If you look at Overwatch's ECS ( https://youtu.be/W3aieHjyNvw?t=326 ), there are many systems that can read from 10+ different components. For every entity in this system, at least 10 reads with no locality whatsoever are done. That seems crazy slow to me.",
-          "url": "https://news.ycombinator.com/item?id=19170445"
         }
       ],
       "classic_speech": false
@@ -10393,41 +10139,6 @@
       "classic_speech": false
     },
     {
-      "id": "21X5lGlDOfg",
-      "title": "NASA Live: Official Stream of NASA TV",
-      "channel": "NASA",
-      "channel_id": "UCLA_DiR1FfKNvjuUpBHmylQ",
-      "published_at": "2018-12-28T18:40:15Z",
-      "duration_seconds": 179022606,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 149281002,
-      "like_count": 2161713,
-      "recommenders": 22,
-      "months": 12,
-      "span_days": 1917.124837962963,
-      "first": 1551609140,
-      "last": 1717248726,
-      "quotes": [
-        {
-          "author": "DavidSJ",
-          "text": "SpaceX Dragon ISS Docking in Progress",
-          "url": "https://news.ycombinator.com/item?id=19293777"
-        },
-        {
-          "author": "huhtenberg",
-          "text": "Live stream - https://www.youtube.com/watch?v=21X5lGlDOfg As of now - it's 90 min to the hatch opening.",
-          "url": "https://news.ycombinator.com/item?id=19294061"
-        },
-        {
-          "author": "Klathmon",
-          "text": "Congratulations to the team at SpaceX! They are opening the hatch right now on the stream if anyone here wants to watch along https://youtu.be/21X5lGlDOfg",
-          "url": "https://news.ycombinator.com/item?id=19294194"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
       "id": "wdgULBpRoXk",
       "title": "How does a USB keyboard work?",
       "channel": "Ben Eater",
@@ -10986,41 +10697,6 @@
           "author": "droob",
           "text": "https://www.youtube.com/watch?v=l_F9jxsfGCw",
           "url": "https://news.ycombinator.com/item?id=8772067"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "npw4s1QTmPg",
-      "title": "Raymond Hettinger   Modern Python Dictionaries    A confluence of a dozen great ideas   PyCon 2017",
-      "channel": "PyCon 2017",
-      "channel_id": "UCrJhliKNQ8g0qoE_zvL8eVg",
-      "published_at": "2017-05-20T22:43:40Z",
-      "duration_seconds": 2258,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 82691,
-      "like_count": 1438,
-      "recommenders": 21,
-      "months": 18,
-      "span_days": 3398.836990740741,
-      "first": 1495405127,
-      "last": 1789064643,
-      "quotes": [
-        {
-          "author": "emj",
-          "text": "YT video: https://www.youtube.com/watch?v=npw4s1QTmPg slides for the 2016 talk: https://dl.dropboxusercontent.com/u/3967849/sfmu2/_build/htm... The 2017 slides are better, but I can't find them they are mentioned in the beginning of the talk though.",
-          "url": "https://news.ycombinator.com/item?id=14389543"
-        },
-        {
-          "author": "sidmitra",
-          "text": "Raymond Hettingers presentation this year at Pycon was also interesting. Modern Python Dictionaries A confluence of a dozen great ideas PyCon 2017 - https://www.youtube.com/watch?v=npw4s1QTmPg",
-          "url": "https://news.ycombinator.com/item?id=14436566"
-        },
-        {
-          "author": "happy-go-lucky",
-          "text": "Modern Python Dictionaries: A confluence of a dozen great ideas (PyCon 2017)",
-          "url": "https://news.ycombinator.com/item?id=14490023"
         }
       ],
       "classic_speech": false
@@ -11869,41 +11545,6 @@
       "classic_speech": false
     },
     {
-      "id": "Jib2AmRb_rk",
-      "title": "SQLite: The Database at the Edge of the Network with Dr. Richard Hipp",
-      "channel": "Method",
-      "channel_id": "UCQjlOy1mNc9IockEk5BS5GQ",
-      "published_at": "2015-05-26T19:23:23Z",
-      "duration_seconds": 3598,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 81939,
-      "like_count": 1607,
-      "recommenders": 20,
-      "months": 22,
-      "span_days": 3311.6525694444445,
-      "first": 1449454064,
-      "last": 1735580846,
-      "quotes": [
-        {
-          "author": "i_feel_great",
-          "text": "SQLite: The Database at the Edge of the Network with Dr. Richard Hipp",
-          "url": "https://news.ycombinator.com/item?id=10687690"
-        },
-        {
-          "author": "tambourine_man",
-          "text": "SQLite: The Database at the Edge of the Network with Dr. Richard Hipp",
-          "url": "https://news.ycombinator.com/item?id=10689510"
-        },
-        {
-          "author": "__derek__",
-          "text": "> Hmmmm, there's a better talk by D. Richard Hipp around, but I'm not finding it atm. In the better talk he explains they (SQLite) are planning to be around for the 30 year timeframe you mention. Something to do with an airplane manufacturer looking for long term guarantees, but I don't remember the details. Here's the video[1] linked to from a tweet[2] link",
-          "url": "https://news.ycombinator.com/item?id=13569391"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
       "id": "443UNeGrFoM",
       "title": "How I program C",
       "channel": "Eskil Steenberg",
@@ -12605,41 +12246,6 @@
           "author": "jayess",
           "text": "> I disagree that Clinton is trying to distort reality. She is more old school - she just stright up lies from time to time. Trump, on the other hand, is quite literally trying to create an alternate reality. https://www.youtube.com/watch?v=5IuJGHuIkzY",
           "url": "https://news.ycombinator.com/item?id=12727098"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "v_UyVmITiYQ",
-      "title": "Google Wave Developer Preview at Google I/O 2009",
-      "channel": "Google",
-      "channel_id": "UCK8sQmJBp8GCxrOtXWBpyEA",
-      "published_at": "2009-05-29T00:58:05Z",
-      "duration_seconds": 4812,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 11401026,
-      "like_count": 20627,
-      "recommenders": 19,
-      "months": 15,
-      "span_days": 6336.760254629629,
-      "first": 1243563833,
-      "last": 1791059919,
-      "quotes": [
-        {
-          "author": "s3graham",
-          "text": "Google Wave Developer Preview at Google I/O 2009",
-          "url": "https://news.ycombinator.com/item?id=631405"
-        },
-        {
-          "author": "tlrobinson",
-          "text": "Google Wave Developer Preview at Google I/O 2009",
-          "url": "https://news.ycombinator.com/item?id=631473"
-        },
-        {
-          "author": "luigi",
-          "text": "That's probably the most blatant example of FUD in internet history. Jumping to conclusions while remaining blissfully ignorant to the actual implementation. Until we get access to the sandbox, you should draw your own conclusions by watching the keynote: http://www.youtube.com/watch?v=v_UyVmITiYQ",
-          "url": "https://news.ycombinator.com/item?id=631481"
         }
       ],
       "classic_speech": false
@@ -14581,44 +14187,6 @@
       "classic_speech": false
     },
     {
-      "id": "ZK3O402wf1c",
-      "title": "Lec 1 | MIT 18.06 Linear Algebra, Spring 2005",
-      "channel": "MIT OpenCourseWare",
-      "channel_id": "UCEBb1b_L6zDS3xTUrIALZOw",
-      "published_at": "2009-05-07T04:07:58Z",
-      "duration_seconds": 2389,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 4935884,
-      "like_count": 42678,
-      "recommenders": 18,
-      "months": 18,
-      "span_days": 3368.9464351851852,
-      "first": 1293988759,
-      "last": 1585065731,
-      "quotes": [
-        {
-          "author": "jackfoxy",
-          "text": "I'm not sure how to pass the clearly understandable Khan academy style test, but Gilbert Strang of MIT has a series of 35 excellent lectures on Linear Algebra, starting here http://www.youtube.com/watch?v=ZK3O402wf1c",
-          "url": "https://news.ycombinator.com/item?id=2060420"
-        },
-        {
-          "author": "palebluedot",
-          "text": "I highly recommend the MIT 18.06 open course on linear algebra - the lectures are first rate. I've been going through this as a refresher, in prep for the Stanford machine learning class. Link to the course: http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-... Link to the YouTube videos of the lectures: http://www.youtube.com/watch?v=ZK3O402wf1c&f",
-          "url": "https://news.ycombinator.com/item?id=2992134"
-        },
-        {
-          "author": "fferen",
-          "text": "The MIT ones taught by Strang, my new favorite professor. http://www.youtube.com/watch?v=ZK3O402wf1c",
-          "url": "https://news.ycombinator.com/item?id=4662870"
-        }
-      ],
-      "classic_speech": true,
-      "classic_speech_reasons": [
-        "B_channel_duration"
-      ]
-    },
-    {
       "id": "p33CVV29OG8",
       "title": "Modern Dictionaries by Raymond Hettinger",
       "channel": "SF Python",
@@ -14824,41 +14392,6 @@
           "author": "ekimekim",
           "text": "There's also this excellent talk from CCC a few years back: https://www.youtube.com/watch?v=xx7Lfh5SKUQ",
           "url": "https://news.ycombinator.com/item?id=18974885"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "2DIl3Hfh9tY",
-      "title": "Leonard Susskind on The World As Hologram | TVO Docs",
-      "channel": "TVO Docs",
-      "channel_id": "UCerKNh8xgFXstLdgVlikaxQ",
-      "published_at": "2011-11-04T12:00:00Z",
-      "duration_seconds": 3327,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 4131632,
-      "like_count": null,
-      "recommenders": 18,
-      "months": 12,
-      "span_days": 2976.961388888889,
-      "first": 1368642157,
-      "last": 1625851621,
-      "quotes": [
-        {
-          "author": "YuriNiyazov",
-          "text": "Leonard Susskind on The World As Hologram",
-          "url": "https://news.ycombinator.com/item?id=5713795"
-        },
-        {
-          "author": "damon_c",
-          "text": "I have found this Leonard Susskind lecture to come closest to answering the question of \"why would anyone even suggest such a thing?\" about this subject: http://www.youtube.com/watch?v=2DIl3Hfh9tY",
-          "url": "https://news.ycombinator.com/item?id=6883926"
-        },
-        {
-          "author": "andy112",
-          "text": "Others can hopefully chime in with more, but when I first was learning about it, my reaction to the word \"hologram\" was the same as your (1). My understanding is that when they say \"hologram\", they're simply meaning an n dimensional object that's encoded in n-1 dimensional space. If you're not familiar with the basics of the Holographic Principle, start here",
-          "url": "https://news.ycombinator.com/item?id=6884337"
         }
       ],
       "classic_speech": false
@@ -16731,41 +16264,6 @@
           "author": "mindcrime",
           "text": "I'm a little iffy on this idea that there is any monopoly on air travel in the US in any general sense. Maybe for specific routes, but if you look at the big picture, you have: 4 \"major\" carriers - American, Delta, United, Southwest 1 \"mid major\" / borderline major in Alaska Airlines 1 \"not a major, but not exactly a regional carrier\" in Jet Blue and a bunch",
           "url": "https://news.ycombinator.com/item?id=14110432"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "3nwwKbM_vJc",
-      "title": "Mindfulness with Jon Kabat-Zinn",
-      "channel": "Google",
-      "channel_id": "UCK8sQmJBp8GCxrOtXWBpyEA",
-      "published_at": "2007-11-12T18:29:05Z",
-      "duration_seconds": 4325,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 5080100,
-      "like_count": 29490,
-      "recommenders": 17,
-      "months": 15,
-      "span_days": 3114.17818287037,
-      "first": 1233369742,
-      "last": 1502434737,
-      "quotes": [
-        {
-          "author": "anthonyrubin",
-          "text": "Wherever You Go, There You Are by Jon Kabat-Zinn His talk at Google: http://www.youtube.com/watch?v=3nwwKbM_vJc",
-          "url": "https://news.ycombinator.com/item?id=459146"
-        },
-        {
-          "author": "anguslong",
-          "text": "I've had success with the approach of Jon Kabat-Zinn -- see his talk @ Google: http://www.youtube.com/watch?v=3nwwKbM_vJc ... his book, Full Catastrophe Living is a good read as well.",
-          "url": "https://news.ycombinator.com/item?id=938684"
-        },
-        {
-          "author": "vidar",
-          "text": "As engineers we should be looking at root cause, not fixing the superficial symptoms. The root cause here is that we don't have 100% control over the decisions that we make. The way to gain that control is not via willpower or superdiscipline, but rather through meditation which trains our brains to recognize the moment where we are about to fly off to Faceb",
-          "url": "https://news.ycombinator.com/item?id=1425862"
         }
       ],
       "classic_speech": false
@@ -19125,41 +18623,6 @@
       "classic_speech": false
     },
     {
-      "id": "EcKxaq1FTac",
-      "title": "The KGB, the Computer, and Me (Complete)",
-      "channel": "GBPPR2",
-      "channel_id": "UC30jm2WJ03mTCOxzU3mBC1A",
-      "published_at": "2011-01-23T14:13:01Z",
-      "duration_seconds": 3418,
-      "default_audio_language": null,
-      "default_language": "en",
-      "view_count": 304789,
-      "like_count": 2571,
-      "recommenders": 16,
-      "months": 12,
-      "span_days": 2986.2816087962965,
-      "first": 1319735124,
-      "last": 1577749855,
-      "quotes": [
-        {
-          "author": "blauwbilgorgel",
-          "text": "Clifford Stoll: The KGB, the Computer, and Me (1990)",
-          "url": "https://news.ycombinator.com/item?id=3164163"
-        },
-        {
-          "author": "JetSpiegel",
-          "text": "The KGB, the Computer, and Me",
-          "url": "https://news.ycombinator.com/item?id=6885212"
-        },
-        {
-          "author": "squinn2",
-          "text": "& more Cliff, somewhat younger: https://www.youtube.com/watch?v=EcKxaq1FTac",
-          "url": "https://news.ycombinator.com/item?id=9764453"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
       "id": "ZuvK-od647c",
       "title": "Quantum Entanglement & Spooky Action at a Distance",
       "channel": "Veritasium",
@@ -20628,41 +20091,6 @@
           "author": "kotaKat",
           "text": "https://youtu.be/29co_Hksk6o?t=157 Having been linked this elsewhere in the thread I don't quite like the fact that they're so brazen that they bought internal lighting from Camping World and drive it with a Logitech USB gamepad and using half-ass construction piping as a ballast. Or the fact that they scrubbed a Titanic launch for the media due to weather (",
           "url": "https://news.ycombinator.com/item?id=36394672"
-        }
-      ],
-      "classic_speech": false
-    },
-    {
-      "id": "i6Fr65PFqfk",
-      "title": "DjangoCon 2008 Keynote: Cal Henderson",
-      "channel": "Google for Developers",
-      "channel_id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-      "published_at": "2008-09-16T00:28:47Z",
-      "duration_seconds": 3764,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 125283,
-      "like_count": 581,
-      "recommenders": 15,
-      "months": 14,
-      "span_days": 6532.9108680555555,
-      "first": 1221566039,
-      "last": 1786009538,
-      "quotes": [
-        {
-          "author": "0_o",
-          "text": "If that link doesn't work for you,click this one http://www.youtube.com/watch?v=i6Fr65PFqfk",
-          "url": "https://news.ycombinator.com/item?id=305678"
-        },
-        {
-          "author": "wensing",
-          "text": "Have you listened to Cal Henderson's friendly rant against Django from a scalability perspective? http://www.youtube.com/watch?v=i6Fr65PFqfk For example, did you modify the source to support multiple databases for read/write? Or is that not an issue and it's OK that it's coming later in the framework's roadmap?",
-          "url": "https://news.ycombinator.com/item?id=523448"
-        },
-        {
-          "author": "jodrellblank",
-          "text": "Cal Henderson gave one of the DjangoCon 2008 keynote talks, and it's very good: http://www.youtube.com/watch?v=i6Fr65PFqfk He seems to know his stuff. Good luck to them.",
-          "url": "https://news.ycombinator.com/item?id=588941"
         }
       ],
       "classic_speech": false

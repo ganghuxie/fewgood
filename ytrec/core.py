@@ -12,6 +12,7 @@ from collections import Counter
 import requests
 import yaml
 from .links import extract_ids, plain
+from .playability import playability_reason
 from .scoring import (
     channel_median_views,
     has_chapters_from_description,
@@ -911,7 +912,7 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
 def youtube_videos(client, key, ids):
     found = []
     for offset in range(0, len(ids), 50):
-        response = client.get(YOUTUBE_API + 'videos', dict(part='snippet,contentDetails,statistics,player', maxWidth=640, maxHeight=640, id=','.join(ids[offset:offset+50]), key=key), youtube=True)
+        response = client.get(YOUTUBE_API + 'videos', dict(part='snippet,contentDetails,statistics,player,status', maxWidth=640, maxHeight=640, id=','.join(ids[offset:offset+50]), key=key), youtube=True)
         found.extend(response.get('items', []))
     return found
 
@@ -941,12 +942,18 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
 
     records = youtube_videos(client, key, sorted(candidate_ids))
     quota_video_batches = (len(candidate_ids) + 49) // 50 if candidate_ids else 0
+    found_ids = {item.get('id') for item in records if item.get('id')}
+    dropped_playability = Counter()
+    dropped_playability['missing'] += len(candidate_ids - found_ids)
 
     def accepted():
         videos = []
         dropped_short = dropped_vertical = dropped_language = 0
         for item in records:
-            if duration(item.get('contentDetails', {}).get('duration')) < 60:
+            reason = playability_reason(item)
+            if reason:
+                dropped_playability[reason] += 1
+            elif duration(item.get('contentDetails', {}).get('duration')) < 60:
                 dropped_short += 1
             elif landscape_only and not landscape_video(item):
                 dropped_vertical += 1
@@ -986,6 +993,8 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
         payload['query'] = query
     if category_id:
         payload['video_category_id'] = category_id
+    for reason, count in dropped_playability.items():
+        payload[f'dropped_{reason}'] = count
     write_feed(name, payload, output)
     print(f"{name.title()}: {len(payload['videos'])} videos from {payload['candidates_fetched']} candidates across {payload['windows']} {payload['window_size_days']}-day windows; approximate YouTube quota units: {payload['quota_units_approx']}")
     print(quota_line(quota_limit))
@@ -1110,9 +1119,16 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     cached = load_fresh_feed_records('ai', root=output, cache_days=metadata_cache_days())
     pending = [vid for vid in ids if vid not in cached]
     raws = youtube_videos(client, key, pending); units += (len(pending) + 49) // 50 if pending else 0
+    found_ids = {raw.get('id') for raw in raws if raw.get('id')}
+    dropped_playability = Counter()
+    dropped_playability['missing'] += sum(1 for vid in pending if vid not in found_ids)
     fetched_at = iso_now()
     videos = [dict(cached[vid]) for vid in ids if vid in cached]
     for raw in raws:
+        reason = playability_reason(raw)
+        if reason:
+            dropped_playability[reason] += 1
+            continue
         record = video_record(raw)
         record['description'] = (raw.get('snippet') or {}).get('description', '')
         record['_metadata_fetched_at'] = fetched_at
@@ -1134,13 +1150,15 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
                    dropped_ai_topic=dropped_ai_topic, dropped_channel=dropped_channel,
                    dropped_stale=dropped_stale, dropped_ai_display_cap=dropped_ai_display_cap,
                    pre_cap_count=pre_cap_count, final_count=len(videos), videos=videos)
+    for reason, count in dropped_playability.items():
+        payload[f'dropped_{reason}'] = count
     payload = write_feed_if_not_sharply_smaller('ai', payload, output)
     print(f"AI: {len(payload.get('videos', []))} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))
     return payload
 
 def metadata_gates(raw, c, at):
-    if not raw or raw.get('status', {}).get('privacyStatus') != 'public' or raw.get('status', {}).get('uploadStatus') != 'processed':
+    if not raw or playability_reason(raw):
         return {'metadata_unavailable': True, 'publish_age': False, 'duration': False}
     try:
         age = at - stamp(raw['snippet']['publishedAt'])

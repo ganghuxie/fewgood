@@ -23,10 +23,37 @@ def refresh():
         config = yaml.safe_load(Path('config.yaml').read_text())
         limit = daily_limit(config)
         trending_feed(quota_limit=limit); ai_feed(quota_limit=limit); curated_podcast_feed(quota_limit=limit); curated_music_feed(quota_limit=limit); channels_feed(quota_limit=limit); curated_editorial_feed(quota_limit=limit)
+        from .playability import backfill_playability, format_summary
+        try:
+            summary = backfill_playability(
+                root='site/src/data', cache_path='data/playability.json',
+                cache_days=config.get('metadata', {}).get('cache_days', 30),
+                quota_limit=limit, rebuild=False,
+            )
+            print(format_summary(summary))
+        except RuntimeError as error:
+            # A transient status lookup must not wipe feeds, but a quota
+            # refusal is a hard stop for the whole refresh.
+            message = str(error)
+            if any(token in message for token in ('quota would exceed', 'quota budget', 'HTTP 401', 'HTTP 403')):
+                raise
+            print(f'WARNING: playability backfill skipped: {error}')
         rebuild_offline()
         print(quota_line(limit))
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True, stdout=handle, stderr=handle)
-        paths = ['site/src/data', 'site/public/catalog.json', 'site/public/channels.json', 'site/public/search-index.json']
+        from .crawl_links import crawl_dist
+        broken = crawl_dist('site/dist')
+        if broken:
+            for item in broken[:100]:
+                print(item)
+            raise RuntimeError(f'{len(broken)} broken internal link(s) after build; refusing to commit')
+        print('Internal link check: 0 broken links')
+        paths = [
+            'site/src/data', 'site/public/catalog.json', 'site/public/channels.json',
+            'site/public/search-index.json', 'site/public/topics.json',
+            'site/public/topic_lookup.json', 'site/public/templates.json',
+            'site/public/hn_pool.json',
+        ]
         changed = subprocess.run(['git', 'status', '--porcelain', '--', *paths], text=True, stdout=subprocess.PIPE, check=True).stdout
         if changed:
             subprocess.run(['git', 'add', *paths], check=True, stdout=handle, stderr=handle)
@@ -39,7 +66,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -50,6 +77,8 @@ def main():
     parser.add_argument('--provider', choices=['gemini','deepseek'])
     parser.add_argument('--estimate', action='store_true', help='R3 fetch plan only')
     parser.add_argument('--unit-cap', type=int, default=250, help='R3 non-search unit cap')
+    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--no-rebuild', action='store_true')
     args = parser.parse_args()
     if args.command in ('fewgood-r3-fetch','fewgood-r3-select'):
         from . import fewgood_r3
@@ -77,6 +106,16 @@ def main():
         from . import build_topics
         build_topics.build_topics()
         return
+    if args.command == 'backfill-playability':
+        from .playability import main as playability_main
+        forwarded = ['--config', args.config]
+        if args.force:
+            forwarded.append('--force')
+        if args.dry_run:
+            forwarded.append('--dry-run')
+        if args.no_rebuild:
+            forwarded.append('--no-rebuild')
+        return playability_main(forwarded)
     config = yaml.safe_load(Path(args.config).read_text())
     limit = daily_limit(config)
     if args.command == 'trending':

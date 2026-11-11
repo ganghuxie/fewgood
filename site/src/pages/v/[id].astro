@@ -2,17 +2,40 @@
 import picks from '../../data/picks.json';
 import trending from '../../data/trending.json';
 import ai from '../../data/ai.json';
+import podcast from '../../data/podcast.json';
+import music from '../../data/music.json';
+import editorial from '../../data/editorial.json';
 import community from '../../data/videos.json';
+import catalog from '../../data/catalog.json';
+import hnPool from '../../data/hn_pool.json';
+import topicsData from '../../data/topics.json';
 import zhData from '../../data/zh.json';
 import channelsData from '../../data/channels.json';
-import { optionalFeed } from '../../lib/feeds.mjs';
 import { videoUrl } from '../../lib/pagination.mjs';
 import Layout from '../../components/Layout.astro';
 import ChannelAvatar from '../../components/ChannelAvatar.astro';
 import { SITE_NAME } from '../../lib/brand.mjs';
 import { humanizeRecommendSpan } from '../../lib/format.mjs';
-const feeds = { picks, trending, ai, podcast: optionalFeed('podcast'), music: optionalFeed('music'), community };
-export function getStaticPaths() { const sources = { picks, trending, ai, podcast: optionalFeed('podcast'), music: optionalFeed('music'), community }; const byId = new Map(); for (const [section, feed] of Object.entries(sources)) for (const video of feed.videos) byId.set(video.id, [...(byId.get(video.id) || []), { section, video }]); return [...byId].map(([id, entries]) => ({ params: { id }, props: { entries } })); }
+const feeds = { picks, trending, ai, podcast, music, editorial, community };
+export function getStaticPaths() {
+  const sources = { picks, trending, ai, podcast, music, community };
+  const byId = new Map();
+  const add = (video, section) => {
+    if (!video?.id) return;
+    const entries = byId.get(video.id) || [];
+    if (!entries.some(entry => entry.section === section)) entries.push({ section, video });
+    byId.set(video.id, entries);
+  };
+  for (const [section, feed] of Object.entries(sources)) for (const video of feed.videos) add(video, section);
+  for (const video of catalog) if (!byId.has(video.id)) add(video, video.section || 'editorial');
+  const poolById = new Map((hnPool.videos || []).map(video => [video.id, video]));
+  for (const video of hnPool.videos || []) if (!byId.has(video.id)) add(video, 'topic');
+  for (const topic of topicsData.topics || []) for (const id of topic.video_ids || []) {
+    if (byId.has(id)) continue;
+    add(poolById.get(id) || { id, title: id, channel: '', duration_seconds: 0 }, 'topic');
+  }
+  return [...byId].map(([id, entries]) => ({ params: { id }, props: { entries } }));
+}
 const { entries } = Astro.props; const base = import.meta.env.BASE_URL;
 const duration = n => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`;
 const snapshot = video => ({ id: video.id, title: video.title, thumbnail: video.thumb || `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`, channelId: video.channel_id, channel: video.channel, avatar: video.channel_id ? (channelsData.channels || []).find(c => c.id === video.channel_id)?.thumbnail || '' : '', duration: video.duration_seconds, views: video.view_count, published_at: video.published_at, why_good: video.why_good, pick_source: video.pick_source, source: video.source, recommenders: video.recommenders, months: video.months });

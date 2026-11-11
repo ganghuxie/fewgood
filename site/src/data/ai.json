@@ -630,7 +630,7 @@
       "why_good": "AI 前沿精选频道 Stanford HAI 本周新片"
     }
   ],
-  "dropped_ai_display_cap": 110,
-  "pre_cap_count": 150,
+  "dropped_ai_display_cap": 0,
+  "pre_cap_count": 40,
   "final_count": 40
 }

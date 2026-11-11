@@ -21,6 +21,7 @@ from .core import (
     youtube_videos,
     iso_now,
 )
+from .playability import playability_reason
 
 SHORTS_MAX_SECONDS = 60
 HN_POOL_MIN_SECONDS = 480
@@ -99,7 +100,11 @@ def backfill_hn_pool(config, limit=1000, client=None, output='site/src/data/hn_p
     for video in candidates:
         raw = raw_by_id.get(video['id']) or fetched.get(video['id'])
         if not raw:
-            drops['metadata_unavailable'] += 1
+            drops['missing'] += 1
+            continue
+        reason = playability_reason(raw)
+        if reason:
+            drops[reason] += 1
             continue
         record = video_record(raw)
         if not language_gate(record):

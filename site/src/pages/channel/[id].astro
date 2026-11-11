@@ -2,8 +2,32 @@
 import Layout from '../../components/Layout.astro';
 import ChannelAvatar from '../../components/ChannelAvatar.astro';
 import channelsData from '../../data/channels.json';
+import catalog from '../../data/catalog.json';
+import hnPool from '../../data/hn_pool.json';
 import { SITE_NAME } from '../../lib/brand.mjs';
-export function getStaticPaths() { return (channelsData.channels || []).map(channel => ({ params: { id: channel.id }, props: { channel } })); }
+export function getStaticPaths() {
+  const byId = new Map((channelsData.channels || []).map(channel => [channel.id, channel]));
+  for (const video of [...catalog, ...(hnPool.videos || [])]) {
+    if (!video.channel_id) continue;
+    const existing = byId.get(video.channel_id);
+    if (existing) {
+      if (!existing.title && video.channel) existing.title = video.channel;
+      continue;
+    }
+    byId.set(video.channel_id, {
+      id: video.channel_id,
+      title: video.channel || video.channel_id,
+      thumbnail: '',
+      subscriber_count: null,
+      uploads_playlist_id: '',
+      videos: [],
+    });
+  }
+  return [...byId.values()].map(channel => ({
+    params: { id: channel.id },
+    props: { channel: { ...channel, title: channel.title || channel.id, videos: channel.videos || [] } },
+  }));
+}
 const { channel } = Astro.props; const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const compact = n => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(n || 0);
 ---

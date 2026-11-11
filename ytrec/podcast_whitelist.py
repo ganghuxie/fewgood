@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 import xml.etree.ElementTree as ET
 import os
+from collections import Counter
 
 import requests
 import yaml
@@ -19,6 +20,7 @@ from .core import (
     _load_existing_feeds, freshness_sort_key, drop_stale_videos,
     load_fresh_feed_records, metadata_cache_days,
 )
+from .playability import playability_reason
 from .sources import channels_for_topic
 
 MIN_DURATION = 1500
@@ -287,9 +289,16 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
     pending = [vid for vid in ids if vid not in cached]
     raws = youtube_videos(client, key, pending)
     units += (len(pending) + 49) // 50 if pending else 0
+    found_ids = {raw.get('id') for raw in raws if raw.get('id')}
+    dropped_playability = Counter()
+    dropped_playability['missing'] += sum(1 for vid in pending if vid not in found_ids)
     fetched_at = iso_now()
     videos = [dict(cached[vid]) for vid in ids if vid in cached]
     for raw in raws:
+        reason = playability_reason(raw)
+        if reason:
+            dropped_playability[reason] += 1
+            continue
         record = video_record(raw)
         record['_metadata_fetched_at'] = fetched_at
         videos.append(record)
@@ -328,6 +337,8 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
                dropped_stale=dropped_stale,
                final_count=len(kept), quota_units_approx=units,
                videos=kept)
+    for reason, count in dropped_playability.items():
+        out[f'dropped_{reason}'] = count
     if maximum is not None:
         out['max_duration_seconds'] = maximum
         out['dropped_long'] = dropped_long
