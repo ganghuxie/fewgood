@@ -43,7 +43,10 @@ channels:
 - name: 张小珺
   handle: null
 - name: 张小玺
-  handle: null
+  handle: xiaojunpodcast
+  youtube_channel_id: UC3Sv1JuKpbOx3csUO8FAo5g
+  youtube_title: Zhang Xiaojun Podcast
+  resolved_via: forHandle
 - name: 晚点 LatePost
   handle: latepost
   youtube_channel_id: UCy5_zPTtj0aW8Tg8v3UpNNw

@@ -1159,8 +1159,8 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 16450,
-    "view_count": 3221893,
-    "like_count": 62282,
+    "view_count": 3222667,
+    "like_count": 62283,
     "why_good": "近 30 天同类长视频播放第 1",
     "section": "podcast",
     "sections": [
@@ -1179,8 +1179,8 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 12276,
-    "view_count": 2597812,
-    "like_count": 23744,
+    "view_count": 2599905,
+    "like_count": 23752,
     "why_good": "近 30 天同类长视频播放第 2",
     "section": "podcast",
     "sections": [
@@ -1199,8 +1199,8 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 3160,
-    "view_count": 1712138,
-    "like_count": 18803,
+    "view_count": 1714131,
+    "like_count": 18830,
     "why_good": "近 30 天同类长视频播放第 3",
     "section": "podcast",
     "sections": [
@@ -1216,8 +1216,8 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 5844,
-    "view_count": 865121,
-    "like_count": 9031,
+    "view_count": 866108,
+    "like_count": 9042,
     "why_good": "近 30 天同类长视频播放第 4",
     "section": "podcast",
     "sections": [
@@ -1233,9 +1233,26 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 3962,
-    "view_count": 256486,
+    "view_count": 256545,
     "like_count": 4591,
     "why_good": "近 30 天同类长视频播放第 5",
+    "section": "podcast",
+    "sections": [
+      "podcast"
+    ]
+  },
+  {
+    "id": "ttkd0t5qTD4",
+    "title": "Yao Shunyu: Let Me Go a Little Crazy! Training Models at Anthropic & Gemini, Heroism Is Over",
+    "channel": "Zhang Xiaojun Podcast",
+    "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
+    "published_at": "2026-05-11T00:00:51Z",
+    "default_audio_language": "en-US",
+    "default_language": "zh",
+    "duration_seconds": 13681,
+    "view_count": 238500,
+    "like_count": 2751,
+    "why_good": "近 30 天同类长视频播放第 6",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1250,9 +1267,26 @@
     "default_audio_language": "en",
     "default_language": "en-US",
     "duration_seconds": 2243,
-    "view_count": 162369,
+    "view_count": 162418,
     "like_count": 1750,
-    "why_good": "近 30 天同类长视频播放第 6",
+    "why_good": "近 30 天同类长视频播放第 7",
+    "section": "podcast",
+    "sections": [
+      "podcast"
+    ]
+  },
+  {
+    "id": "UqMtkgQe-kI",
+    "title": "Manus' Final Interview Before the Acquisition: Oh, the Surreal Odyssey of 2025…",
+    "channel": "Zhang Xiaojun Podcast",
+    "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
+    "published_at": "2025-12-30T14:08:07Z",
+    "default_audio_language": "zh-Hans",
+    "default_language": "zh",
+    "duration_seconds": 12661,
+    "view_count": 147642,
+    "like_count": 2708,
+    "why_good": "近 30 天同类长视频播放第 8",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1267,9 +1301,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 13686,
-    "view_count": 142839,
-    "like_count": 1171,
-    "why_good": "近 30 天同类长视频播放第 7",
+    "view_count": 142905,
+    "like_count": 1172,
+    "why_good": "近 30 天同类长视频播放第 9",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1284,9 +1318,9 @@
     "default_audio_language": "en-US",
     "default_language": "en-US",
     "duration_seconds": 4406,
-    "view_count": 93612,
-    "like_count": 725,
-    "why_good": "近 30 天同类长视频播放第 8",
+    "view_count": 94565,
+    "like_count": 734,
+    "why_good": "近 30 天同类长视频播放第 10",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1301,9 +1335,9 @@
     "default_audio_language": "en",
     "default_language": "en-US",
     "duration_seconds": 3732,
-    "view_count": 84230,
+    "view_count": 84347,
     "like_count": 828,
-    "why_good": "近 30 天同类长视频播放第 9",
+    "why_good": "近 30 天同类长视频播放第 11",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1318,9 +1352,9 @@
     "default_audio_language": "en-US",
     "default_language": "en-US",
     "duration_seconds": 4113,
-    "view_count": 38829,
+    "view_count": 39031,
     "like_count": 157,
-    "why_good": "近 30 天同类长视频播放第 10",
+    "why_good": "近 30 天同类长视频播放第 12",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1335,9 +1369,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 2363,
-    "view_count": 19293,
+    "view_count": 19322,
     "like_count": 251,
-    "why_good": "近 30 天同类长视频播放第 11",
+    "why_good": "近 30 天同类长视频播放第 13",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1352,9 +1386,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 2294,
-    "view_count": 11912,
+    "view_count": 11914,
     "like_count": 76,
-    "why_good": "近 30 天同类长视频播放第 12",
+    "why_good": "近 30 天同类长视频播放第 14",
     "section": "podcast",
     "sections": [
       "podcast"

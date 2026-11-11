@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T16:59:41Z",
+  "generated_at": "2026-11-11T00:29:13Z",
   "source": "curated_whitelist",
   "min_duration_seconds": 1500,
   "channels_configured": 12,
@@ -7,13 +7,12 @@
   "unresolved": [
     "张小珺"
   ],
-  "candidates_fetched": 328,
-  "dropped_short": 220,
+  "candidates_fetched": 378,
+  "dropped_short": 221,
   "dropped_language": 0,
-  "dropped_channel": 3,
-  "dropped_podcast_display_cap": 93,
-  "final_count": 12,
-  "quota_units_approx": 39,
+  "dropped_channel": 0,
+  "final_count": 14,
+  "quota_units_approx": 41,
   "videos": [
     {
       "id": "qjPH9njnaVU",
@@ -24,8 +23,8 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 16450,
-      "view_count": 3221893,
-      "like_count": 62282,
+      "view_count": 3222667,
+      "like_count": 62283,
       "why_good": "近 30 天同类长视频播放第 1"
     },
     {
@@ -37,8 +36,8 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 12276,
-      "view_count": 2597812,
-      "like_count": 23744,
+      "view_count": 2599905,
+      "like_count": 23752,
       "why_good": "近 30 天同类长视频播放第 2"
     },
     {
@@ -50,8 +49,8 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 3160,
-      "view_count": 1712138,
-      "like_count": 18803,
+      "view_count": 1714131,
+      "like_count": 18830,
       "why_good": "近 30 天同类长视频播放第 3"
     },
     {
@@ -63,8 +62,8 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 5844,
-      "view_count": 865121,
-      "like_count": 9031,
+      "view_count": 866108,
+      "like_count": 9042,
       "why_good": "近 30 天同类长视频播放第 4"
     },
     {
@@ -76,9 +75,22 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 3962,
-      "view_count": 256486,
+      "view_count": 256545,
       "like_count": 4591,
       "why_good": "近 30 天同类长视频播放第 5"
+    },
+    {
+      "id": "ttkd0t5qTD4",
+      "title": "Yao Shunyu: Let Me Go a Little Crazy! Training Models at Anthropic & Gemini, Heroism Is Over",
+      "channel": "Zhang Xiaojun Podcast",
+      "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
+      "published_at": "2026-05-11T00:00:51Z",
+      "default_audio_language": "en-US",
+      "default_language": "zh",
+      "duration_seconds": 13681,
+      "view_count": 238500,
+      "like_count": 2751,
+      "why_good": "近 30 天同类长视频播放第 6"
     },
     {
       "id": "MM-C3JqCXBk",
@@ -89,9 +101,22 @@
       "default_audio_language": "en",
       "default_language": "en-US",
       "duration_seconds": 2243,
-      "view_count": 162369,
+      "view_count": 162418,
       "like_count": 1750,
-      "why_good": "近 30 天同类长视频播放第 6"
+      "why_good": "近 30 天同类长视频播放第 7"
+    },
+    {
+      "id": "UqMtkgQe-kI",
+      "title": "Manus' Final Interview Before the Acquisition: Oh, the Surreal Odyssey of 2025…",
+      "channel": "Zhang Xiaojun Podcast",
+      "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
+      "published_at": "2025-12-30T14:08:07Z",
+      "default_audio_language": "zh-Hans",
+      "default_language": "zh",
+      "duration_seconds": 12661,
+      "view_count": 147642,
+      "like_count": 2708,
+      "why_good": "近 30 天同类长视频播放第 8"
     },
     {
       "id": "ipiKIgdynZE",
@@ -102,9 +127,9 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 13686,
-      "view_count": 142839,
-      "like_count": 1171,
-      "why_good": "近 30 天同类长视频播放第 7"
+      "view_count": 142905,
+      "like_count": 1172,
+      "why_good": "近 30 天同类长视频播放第 9"
     },
     {
       "id": "4UmFfI8CWuA",
@@ -115,9 +140,9 @@
       "default_audio_language": "en-US",
       "default_language": "en-US",
       "duration_seconds": 4406,
-      "view_count": 93612,
-      "like_count": 725,
-      "why_good": "近 30 天同类长视频播放第 8"
+      "view_count": 94565,
+      "like_count": 734,
+      "why_good": "近 30 天同类长视频播放第 10"
     },
     {
       "id": "3I6QYkccd3o",
@@ -128,9 +153,9 @@
       "default_audio_language": "en",
       "default_language": "en-US",
       "duration_seconds": 3732,
-      "view_count": 84230,
+      "view_count": 84347,
       "like_count": 828,
-      "why_good": "近 30 天同类长视频播放第 9"
+      "why_good": "近 30 天同类长视频播放第 11"
     },
     {
       "id": "4nKt18AZDsQ",
@@ -141,9 +166,9 @@
       "default_audio_language": "en-US",
       "default_language": "en-US",
       "duration_seconds": 4113,
-      "view_count": 38829,
+      "view_count": 39031,
       "like_count": 157,
-      "why_good": "近 30 天同类长视频播放第 10"
+      "why_good": "近 30 天同类长视频播放第 12"
     },
     {
       "id": "AwuTTOJGEi0",
@@ -154,9 +179,9 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 2363,
-      "view_count": 19293,
+      "view_count": 19322,
       "like_count": 251,
-      "why_good": "近 30 天同类长视频播放第 11"
+      "why_good": "近 30 天同类长视频播放第 13"
     },
     {
       "id": "N1rjtDs8blY",
@@ -167,9 +192,10 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 2294,
-      "view_count": 11912,
+      "view_count": 11914,
       "like_count": 76,
-      "why_good": "近 30 天同类长视频播放第 12"
+      "why_good": "近 30 天同类长视频播放第 14"
     }
-  ]
+  ],
+  "dropped_podcast_display_cap": 0
 }

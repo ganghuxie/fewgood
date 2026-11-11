@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T00:11:46Z",
+  "generated_at": "2026-11-11T00:29:13Z",
   "kind": "picks",
   "limit": 10,
   "mix": {
@@ -72,8 +72,8 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 16450,
-      "view_count": 3221893,
-      "like_count": 62282,
+      "view_count": 3222667,
+      "like_count": 62283,
       "why_good": "近 30 天同类长视频播放第 1",
       "source": "podcast",
       "pick_source": "播客"
@@ -139,8 +139,8 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 12276,
-      "view_count": 2597812,
-      "like_count": 23744,
+      "view_count": 2599905,
+      "like_count": 23752,
       "why_good": "近 30 天同类长视频播放第 2",
       "source": "podcast",
       "pick_source": "播客"
