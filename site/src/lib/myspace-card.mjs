@@ -29,7 +29,11 @@ export function cardMeta(video) {
   return parts.join(' · ');
 }
 
-export function card(video, href = '') {
+export function card(video, href = '', zh = null) {
   const meta = cardMeta(video);
-  return `<a class="video-card" href="${esc(href)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/mqdefault.jpg'" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(video.channel)}</p>${meta ? `<p class="video-meta">${esc(meta)}</p>` : ''}</div></div></a>`;
+  const zhTitle = zh?.title_zh || video.title_zh || '';
+  const blurb = zh?.blurb_zh || video.blurb_zh || '';
+  const title = zhTitle || video.title;
+  const subtitle = zhTitle && video.title && zhTitle !== video.title ? `<p class="zh-title">${esc(video.title)}</p>` : '';
+  return `<a class="video-card" href="${esc(href)}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/mqdefault.jpg'" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(title)}</h2>${subtitle}<p class="video-meta">${esc(video.channel)}</p>${meta ? `<p class="video-meta">${esc(meta)}</p>` : ''}${blurb ? `<p class="zh-blurb">${esc(blurb)}</p>` : ''}</div></div></a>`;
 }

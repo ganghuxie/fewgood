@@ -59,3 +59,39 @@ assert.deepEqual(metas(community), ['OpenAI', '5 人推荐 · 1 年前']);
 const sparse = card({ ...base }, '/v/abcdefghijk/');
 assert.deepEqual(metas(sparse), ['OpenAI']);
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+def test_myspace_card_uses_zh_title_when_present():
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { card } from './site/src/lib/myspace-card.mjs';
+
+const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
+const html = card({ ...base, view_count: 1, published_at: new Date().toISOString() }, '/v/abcdefghijk/', {
+  title_zh: '中文标题',
+  blurb_zh: '中文简介',
+});
+assert.ok(html.includes('<h2 class="video-title">中文标题</h2>'));
+assert.ok(html.includes('<p class="zh-title">A test video</p>'));
+assert.ok(html.includes('<p class="zh-blurb">中文简介</p>'));
+
+const plain = card(base, '/v/abcdefghijk/');
+assert.ok(plain.includes('<h2 class="video-title">A test video</h2>'));
+assert.ok(!plain.includes('zh-title'));
+'''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
+    about = (Path(__file__).resolve().parents[1] / 'site/src/pages/about.astro').read_text()
+    assert 'YouTube' in about
+    assert 'YouTube Data API' in about
+    assert 'Hacker News' in about
+    assert 'hello@fewgood.io' in about
+    for banned in ('可能', '计划', '大概', 'sync.js', 'localStorage'):
+        assert banned not in about
+
+
+def test_video_page_heading_keeps_last_updated_outside_h1():
+    source = (Path(__file__).resolve().parents[1] / 'site/src/components/VideoPage.astro').read_text()
+    assert '<h1>{label}</h1>' in source
+    assert '<h1>{label}{feed' not in source

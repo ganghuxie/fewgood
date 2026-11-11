@@ -13,7 +13,7 @@ from .core import (
     language_gate,
     apply_channel_caps_pool,
     podcast_display_cap,
-    why_good_for,
+    why_good_or_existing,
     build_picks,
     write_feed,
     _video_view,
@@ -22,6 +22,11 @@ from .core import (
     freshness_sort_key,
     drop_stale_videos,
     cap_ai_feed_display,
+    visible_language_blocked,
+    content_type_blocked,
+    is_official_short_promo,
+    filter_ai_duration_and_promo_titles,
+    channel_display_cap,
 )
 
 FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'editorial', 'videos')
@@ -86,17 +91,37 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     root = Path(root)
     feeds = feeds if feeds is not None else load_feeds(root)
 
+    editorial_feeds = {'trending', 'ai', 'podcast', 'music', 'editorial'}
     lang_kept = {}
     dropped_language = {}
+    dropped_visible_language = {}
+    dropped_content_type = {}
+    dropped_official_short = {}
     for name, feed in feeds.items():
-        kept, dropped = [], 0
+        kept = []
+        d_language = d_visible = d_content = d_official = 0
+        editorial = name in editorial_feeds
         for video in feed.get('videos', []):
-            if language_gate(video):
-                kept.append(video)
-            else:
-                dropped += 1
+            if not language_gate(video):
+                d_language += 1
+                continue
+            if editorial:
+                if visible_language_blocked(video):
+                    d_visible += 1
+                    continue
+                blocked, _reason = content_type_blocked(video, name)
+                if blocked:
+                    d_content += 1
+                    continue
+            if is_official_short_promo(video, name if editorial else 'community'):
+                d_official += 1
+                continue
+            kept.append(video)
         lang_kept[name] = kept
-        dropped_language[name] = dropped
+        dropped_language[name] = d_language
+        dropped_visible_language[name] = d_visible
+        dropped_content_type[name] = d_content
+        dropped_official_short[name] = d_official
 
     dropped_ai_topic = 0
     if 'ai' in lang_kept:
@@ -111,16 +136,28 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         if name in cap_kept:
             cap_kept[name], dropped_stale[name] = drop_stale_videos(cap_kept[name])
 
+    dropped_ai_short = dropped_ai_promo_title = 0
+    if 'ai' in cap_kept:
+        cap_kept['ai'], dropped_ai_short, dropped_ai_promo_title = (
+            filter_ai_duration_and_promo_titles(cap_kept['ai'])
+        )
+
     dropped_podcast = 0
     if 'podcast' in cap_kept:
         cap_kept['podcast'], dropped_podcast = podcast_display_cap(cap_kept['podcast'])
 
     final = {}
+    dropped_channel_display_cap = {}
     for name in FEED_NAMES:
         if name not in cap_kept:
             continue
         if name == 'trending':
-            final[name] = sort_by_view(cap_kept[name])
+            ordered = sort_by_view(cap_kept[name])
+            ordered, dropped_channel_display_cap[name] = channel_display_cap(
+                ordered, per_channel=2,
+                order_key=lambda video: (-_video_view(video), str(video.get('id', ''))),
+            )
+            final[name] = ordered
         elif name in ('ai', 'podcast', 'music', 'editorial'):
             final[name] = sorted(cap_kept[name], key=freshness_sort_key)
         else:
@@ -143,19 +180,23 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     for name, videos in final.items():
         if name in ('trending', 'podcast', 'music', 'editorial'):
             for rank, video in enumerate(sort_by_view(videos), 1):
-                video['why_good'] = why_good_for(video, name, rank=rank)
+                video['why_good'] = why_good_or_existing(video, name, rank=rank)
         elif name == 'ai':
             for video in videos:
-                video['why_good'] = why_good_for(video, 'ai')
+                video['why_good'] = why_good_or_existing(video, 'ai')
         else:
             for video in videos:
-                video['why_good'] = why_good_for(video, 'community')
+                video['why_good'] = why_good_or_existing(video, 'community')
 
     dropped_ai_display_cap = 0
+    dropped_ai_channel_display_cap = 0
     ai_pre_cap_count = 0
     if 'ai' in final:
         ai_pre_cap_count = len(final['ai'])
         final['ai'], dropped_ai_display_cap = cap_ai_feed_display(final['ai'])
+        final['ai'], dropped_ai_channel_display_cap = channel_display_cap(
+            final['ai'], per_channel=2,
+        )
 
     pick_payload = build_picks(
         {'community': {'videos': final.get('videos') or []}, 'ai': {'videos': final.get('ai') or []},
@@ -170,14 +211,22 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                 continue
             payload = dict(feeds[name], videos=final.get(name, []),
                            dropped_language=dropped_language.get(name, 0),
-                           dropped_channel=dropped_channel.get(name, 0))
+                           dropped_channel=dropped_channel.get(name, 0),
+                           dropped_content_type=dropped_content_type.get(name, 0),
+                           dropped_visible_language=dropped_visible_language.get(name, 0),
+                           dropped_official_short=dropped_official_short.get(name, 0))
             if name == 'podcast':
                 payload['dropped_podcast_display_cap'] = dropped_podcast
             if name == 'ai':
                 payload['dropped_ai_topic'] = int(feeds[name].get('dropped_ai_topic') or 0) + dropped_ai_topic
                 payload['dropped_ai_display_cap'] = dropped_ai_display_cap
+                payload['dropped_channel_display_cap'] = dropped_ai_channel_display_cap
+                payload['dropped_ai_short'] = dropped_ai_short
+                payload['dropped_ai_promo_title'] = dropped_ai_promo_title
                 payload['pre_cap_count'] = ai_pre_cap_count
                 payload['final_count'] = len(final.get('ai', []))
+            if name == 'trending':
+                payload['dropped_channel_display_cap'] = dropped_channel_display_cap.get(name, 0)
             if name in ('ai', 'podcast', 'music', 'editorial'):
                 payload['dropped_stale'] = int(feeds[name].get('dropped_stale') or 0) + dropped_stale.get(name, 0)
             if name == 'videos':
@@ -192,6 +241,13 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         'feeds': {name: {'kept': len(final.get(name, [])), 'dropped_language': dropped_language.get(name, 0), 'dropped_channel': dropped_channel.get(name, 0)} for name in feeds},
         'dropped_ai_topic': dropped_ai_topic,
         'dropped_ai_display_cap': dropped_ai_display_cap,
+        'dropped_ai_channel_display_cap': dropped_ai_channel_display_cap,
+        'dropped_ai_short': dropped_ai_short,
+        'dropped_ai_promo_title': dropped_ai_promo_title,
+        'dropped_channel_display_cap': dropped_channel_display_cap,
+        'dropped_content_type': dropped_content_type,
+        'dropped_visible_language': dropped_visible_language,
+        'dropped_official_short': dropped_official_short,
         'dropped_stale': dropped_stale,
         'dropped_podcast_display_cap': dropped_podcast,
         'picks': len(pick_payload['videos']),

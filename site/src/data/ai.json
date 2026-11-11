@@ -10,20 +10,6 @@
   "dropped_stale": 0,
   "videos": [
     {
-      "id": "9ZxCOHkfn_8",
-      "title": "GPT-Image-2.6: Faster image generation with Flare and Sunburst",
-      "channel": "OpenAI",
-      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-04T23:42:40Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 88,
-      "view_count": 378248,
-      "like_count": 4693,
-      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
       "id": "pz74r-4dGfQ",
       "title": "Your AI Agent Is Hiding Its Mistakes From You - Ben Holmes, Warp",
       "channel": "AI Engineer",
@@ -34,7 +20,7 @@
       "duration_seconds": 1160,
       "view_count": 92723,
       "like_count": 648,
-      "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
+      "why_good": "讲 AI 智能体出错时不易被发现，对开发者实用。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -53,7 +39,7 @@
       "has_chapters": true,
       "description": "Replit was building toward the AI coding era years before it had a name. In 2024, the company shipped an agent that could take a request in plain English, work through errors, provision its own infrastructure, and keep going until the software actually worked. The model companies even reached out to ask how Replit had pulled it off.\n\nCo-founder and CEO Amjad Masad had been thinking about making programming radically more accessible since 2008, and Replit’s original pitch deck predicted AI-generated code before the Transformer paper was published. Today, that same technology is moving into banks, manufacturers, and other large companies, where Amjad says teams are replacing software projects once scoped at $10 million with $250,000 of Replit.\n\nOn How to Build the Future, Paul Graham sits down with Amjad to talk about why Replit was so well positioned when coding agents arrived, what comes after vibe coding, and his bigger vision for the “self-driving company,” where AI agents increasingly build and operate the software a company needs.\n\nChapters:\n00:00 - \"You guys basically invented vibe coding\"\n02:43 - Watching users copy-paste from ChatGPT\n05:27 - The origins of Replit\n08:00 - People underestimate their ability to predict the future\n10:27 - Grieving the craft\n12:52 - A culture of obsessing over users\n15:13 - Why enterprises pick Replit\n17:28 - The agent was just another user\n20:17 - It barely worked, and users loved it\n23:13 - $10 million projects now for $250,000\n25:45 - Sandboxing for humans\n28:14 - \"The self-driving company\"\n30:34 - The way AI flows into companies\n33:28 - What Steve Jobs knew before the iPad\n35:59 - Killing the sacred cow\n38:25 - The rest of the world is two years behind\n41:15 - The compute brought on AI\n43:46 - The person who assumes dramatic change\n\nApply to Y Combinator: https://www.ycombinator.com/apply\nWork at a startup: https://www.ycombinator.com/jobs",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Y Combinator 本周新片"
+      "why_good": "两位创业者聊产品与 AI 编程，观点有分量。"
     },
     {
       "id": "nKjPBAw_N_0",
@@ -66,7 +52,7 @@
       "duration_seconds": 1321,
       "view_count": 65515,
       "like_count": 519,
-      "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
+      "why_good": "讲软件工厂的搭建思路，适合工程团队参考。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -85,25 +71,7 @@
       "has_chapters": true,
       "description": "Google, Anthropic, and Databricks were all started by founders with PhDs. But they’re the exceptions. Most academic founders fail, because the instincts that get you published are the ones that can get you killed in a startup. Francois Chaubard knows both sides. He’s a visiting partner at YC and a current PhD student, and before that he was a researcher in Fei-Fei Li’s lab and the founder and CEO of Focal. In this episode of Startup School, Francois breaks down the ten mindset shifts you have to make to go from researcher to formidable founder. He'll cover how to thrive without deadlines or grades, the difference between an interesting idea and an important one, and why being the first to an idea can actually be a disadvantage.\n\nChapters:\n00:00 - Why academics struggle as founders\n00:53 - Vanity metrics vs. what people want\n01:45 - Interesting vs. important\n02:27 - Novelty vs. plagiarism\n03:54 - There is no finish line\n04:32 - Get on a plane and talk to people\n05:53 - Hyperbole is okay\n06:28 - The 70% rule\n07:11 - You can't delegate the hard stuff\n07:52 - Become a capitalist\n08:16 - Nobody cares how smart you are\n09:04 - Get out of your office\n\nApply to Y Combinator: https://www.ycombinator.com/apply\nWork at a startup: https://www.ycombinator.com/jobs",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Y Combinator 本周新片"
-    },
-    {
-      "id": "-XL2gClQ2gg",
-      "title": "Is AI Now Good Enough To Cure Cancer? | YC Paper Club",
-      "channel": "Y Combinator",
-      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
-      "published_at": "2026-11-08T15:00:39Z",
-      "default_audio_language": "en-US",
-      "default_language": "en-US",
-      "duration_seconds": 4903,
-      "view_count": 43640,
-      "like_count": 429,
-      "comment_count": 21,
-      "has_captions": false,
-      "has_chapters": true,
-      "description": "This week’s Paper Club is all about AI for biology. The cost of sequencing has collapsed, which means biology now generates more data than anyone can mine, and the models are finally catching up. We cover how falling sequencing costs are turning cancer care into a per-patient data problem, what it takes to model a cell rather than a molecule, what a language model trained on DNA actually learns, and why in-context learning showed up in a genome model that nobody trained for it.\n\nChapters:\n00:00 - Is the Turing test solved? A live experiment\n03:22 - Why now is the best time for AI Bio\n08:26 - Alfredo Gonzalez: cancer as a data problem\n29:50 - Yusuf Roohani: virtual cells and autonomous research\n51:47 - Garyk Brixi: what a model learns from DNA\n1:09:57 - Divya Nori: few-shot prompting for biological design\n\nApply to Y Combinator: https://www.ycombinator.com/apply\nWork at a startup: https://www.ycombinator.com/jobs",
-      "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Y Combinator 本周新片"
+      "why_good": "给学术背景创业者的实用提醒，来自亲身经历。"
     },
     {
       "id": "9F9x3MufdMQ",
@@ -116,7 +84,7 @@
       "duration_seconds": 2139,
       "view_count": 27252,
       "like_count": 330,
-      "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
+      "why_good": "适合想了解 DSH 架构与插件机制的人。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -135,21 +103,7 @@
       "has_chapters": false,
       "description": "This closing fireside chat brings together two of the field's most consequential builders — Jeff Dean, whose work at Google has helped define the modern AI stack, and Fei-Fei Li, whose case for human-centered AI has shaped how the field thinks about who this technology should actually serve. Coming at the end of a day spent grappling with AI's risks and unresolved questions, the conversation turns to where the two of them agree, where they don't, and what they think the choices ahead really come down to.\n\n*Speakers:* \n\n- Fei-Fei Li: Inaugural Sequoia Professor in the Computer Science Department at Stanford University, and a Founding Director of HAI. She served as the Director of Stanford’s AI Lab from 2013 to 2018. Li has served as a Vice President at Google and Chief Scientist of AI/ML at Google Cloud (2017-2018), board member or advisor in various public or private companies and is currently a Co-founder/CEO of World Labs, an AI company focusing on Spatial Intelligence and generative AI. \n\n- Jeff Dean: Computer scientist and software engineer. He is best known for his work at Google, which he joined in 1999. He led Google AI from 2018 to 2023 and was Google's chief scientist from 2023 to 2026. Dean co-founded the AI research start-up Discovery Loop in 2026.",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Stanford HAI 本周新片"
-    },
-    {
-      "id": "ZrJhFIIwUD8",
-      "title": "Claude just helped crack open one of biology’s biggest mysteries 🔬👀 #trendingshorts #ai #sciecne",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-11-09T18:30:13Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 63,
-      "view_count": 20645,
-      "like_count": 874,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
+      "why_good": "两位重量级人物同台，讨论 AI 该服务谁。"
     },
     {
       "id": "32vxW6GMeLY",
@@ -167,7 +121,7 @@
       "has_chapters": true,
       "description": "Today’s agents are stuck in what Ronak Malde calls “pseudo continual learning”: intelligent, but updated in offline batches, like a paper road map you can’t reroute mid-trip. Ronak, co-founder of Trajectory, explains why closing that loop is the next learning paradigm, and why training your own model, which used to take a dedicated research team, months of work and hundreds of millions in compute, is now something a company can do in a few clicks with their own data. He details two research bets they are making available to everyone with their product: 1) a variant of GRPO that removes the need for a simulated environment by learning from single real-world rollouts instead of 16 replays of the same task, and 1) a meta-grader that increased data efficiency by 100x. Ronak explains how Harvey trained a model six times cheaper than frontier, improving an open-source baseline by over 4x on Harvey's own legal benchmark. He defines the difference between continual learning and recursive self-improvement and predicts product builders will become gardeners, setting trellises for products that grow themselves.\n\nHosted by Pat Grady and Lauren Reeder, Sequoia Capital\n\n0:00 – Introduction\n0:45 – Pseudo continual learning: paper maps vs Google Maps\n2:48 – Do we need new architectures? Rich Sutton, David Silver, and the missing layer\n4:33 – From a $100M consulting model to a product: lessons from SWE-1 at Windsurf\n7:36 – Harvey: 6x cheaper than frontier, 4% to 18% on its own benchmark\n8:55 – Why \"Trajectory\": the unit of work is a task, not a token\n10:13 – The primitives of continual learning: traces, replayable environments, reward\n12:56 – Group Size 1 and the meta-grader: training without an environment or a labeled reward\n16:16 – The platform: train, eval and deploy in one click, and who it's for\n18:58 – Rogo and intelligence density\n20:14 – What's next: curiosity, and why continual learning beats RSI on alignment\n24:19 – Research and product under one roof, and the product builder as gardener\n27:26 – Why work at Trajectory, and the optimistic case: from 1% to 99%",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Sequoia Capital 本周新片"
+      "why_good": "从创业者视角讲持续学习的产品化路径。"
     },
     {
       "id": "583ThJIqQ7k",
@@ -180,21 +134,7 @@
       "duration_seconds": 1901,
       "view_count": 19508,
       "like_count": 917,
-      "why_good": "AI 前沿精选频道 AI Explained 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "0K3sIlkKosA",
-      "title": "The internet still runs on around 1 million miles of undersea cables 🌎👀 #technology #internet",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-11-07T15:00:23Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 70,
-      "view_count": 19086,
-      "like_count": 991,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "why_good": "聚焦模型自我改进机制，适合关注 AI 前沿的观众。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -208,7 +148,7 @@
       "duration_seconds": 2039,
       "view_count": 15018,
       "like_count": 261,
-      "why_good": "AI 前沿精选频道 sentdex 本周新片",
+      "why_good": "对 AI 行业热度持怀疑视角的一期讨论。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -227,7 +167,7 @@
       "has_chapters": true,
       "description": "What makes a startup worth acquiring when software has never been easier to build? Salesforce’s John Somorjai says the answer goes well beyond technology: the best acquisitions can accelerate a product roadmap, bring in exceptional talent, and put a startup in front of 15,000 Salesforce sales reps almost overnight.\n\nJohn joins a16z General Partner Alex Immerman to unpack the thinking behind nearly $100 billion in acquisitions during his tenure, from Slack and MuleSoft to a new generation of AI-native companies. They discuss Salesforce’s build-versus-buy framework, why outcome-based pricing is replacing seats in parts of enterprise software, and what founders should consider when deciding whether to sell.\n\nJohn also shares what can kill a deal during diligence, why he thinks parts of today’s venture market are overvalued, and how Salesforce Ventures is expanding from enterprise software into frontier AI and robotics. Did We Not Notice AGI Already H…\n\nTimestamps:\n00:00 Intro\n00:59 Working with Marc Benioff\n02:45 How Salesforce decides what to buy\n05:12 Headless Salesforce and outcome-based pricing\n10:31 Partner with Salesforce, or sell to it?\n17:33 Build vs. buy: Listen Labs and Fin\n22:54 Slack: the perfect interface for agents\n28:16 How Salesforce Ventures’ strategy evolved\n35:48 New CRM startups and a coming valuation reckoning\n41:51 What kills a deal\n46:00 Growing up with a pioneering chemist father\n\nResources:\nFollow John Somorjai: https://www.linkedin.com/in/johnsomorjai/\nFollow Alex Immerman: https://x.com/aleximm\nLearn more about Salesforce Ventures: https://salesforceventures.com/\n\nStay Updated:\nIf you enjoyed this episode, be sure to like, subscribe, and share with your friends!\n\nFind a16z on X: https://twitter.com/a16z\n\nFind a16z on LinkedIn: https://www.linkedin.com/company/a16z\n\nListen to the a16z Show on Spotify: https://open.spotify.com/show/5bC65RDvs3oxnLyqqvkUYX\n\nListen to the a16z Show on Apple Podcasts: https://podcasts.apple.com/us/podcast/a16z-podcast/id842818711\n\nFollow our host: https://x.com/eriktorenberg\n\nPlease note that the content here is for informational purposes only; should NOT be taken as legal, business, tax, or investment advice or be used to evaluate any investment or security; and is not directed at any investors or potential investors in any a16z fund. a16z and its affiliates may maintain investments in the companies discussed. For more details please see http://a16z.com/disclosures.",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 a16z 本周新片"
+      "why_good": "讲清大厂收购看重的不只是技术。"
     },
     {
       "id": "il0dgxjpoC0",
@@ -240,7 +180,7 @@
       "duration_seconds": 5643,
       "view_count": 6147,
       "like_count": 192,
-      "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
+      "why_good": "想在自己机器上跑模型的人可以看看。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -254,7 +194,7 @@
       "duration_seconds": 3281,
       "view_count": 333,
       "like_count": 8,
-      "why_good": "AI 前沿精选频道 Together AI 本周新片",
+      "why_good": "直接听两家团队讲这款模型。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -268,49 +208,7 @@
       "duration_seconds": 5519,
       "view_count": 19368139,
       "like_count": 7061,
-      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "rySnll4sgu4",
-      "title": "NVIDIA GTC Berlin 2026 | Live Keynote Pregame",
-      "channel": "NVIDIA",
-      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
-      "published_at": "2026-10-24T10:42:33Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 6914,
-      "view_count": 4965491,
-      "like_count": 1222,
-      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "_tsiWjmWEZ8",
-      "title": "NVIDIA RTX Spark | A New Beginning for Windows PCs",
-      "channel": "NVIDIA",
-      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
-      "published_at": "2026-10-16T11:59:06Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 76,
-      "view_count": 2870983,
-      "like_count": 1614,
-      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "NCxD-qsQcN0",
-      "title": "Design hardware with Astra",
-      "channel": "OpenAI",
-      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-03T18:30:30Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 82,
-      "view_count": 686085,
-      "like_count": 9174,
-      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "why_good": "NVIDIA 年度大会主题演讲的完整记录。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -329,61 +227,7 @@
       "has_chapters": true,
       "description": "Amazon expects to spend roughly $220 billion in CapEx in 2026, yet CEO Andy Jassy says the company is still leaving meaningful AI demand on the table. He believes the buildout could ultimately help make AWS a $1 trillion annual run-rate business.\n\nAndy joins a16z co-founder Ben Horowitz and Erik Torenberg to discuss why AI demand is growing so quickly, how Amazon decides how much infrastructure to build, and why lower inference costs could unlock broader enterprise adoption.\n\nThey also discuss how AI is reshaping Amazon itself, from smaller teams building products faster to reimagining Alexa, and why Andy sees cybersecurity, human judgment, and critical thinking as increasingly important in the AI era.\n\nTimestamps:\n00:00 Intro\n00:47 Five years as CEO: from pandemic overbuild to the AI boom\n09:38 How much AI CapEx is too much?\n15:44 Is the backlash against data centers fair?\n20:56 AI demand as a barbell, and the capacity crunch\n28:12 Annapurna Labs and Amazon’s custom chips\n33:36 Why Amazon invested in Anthropic and OpenAI\n37:14 Smaller teams, faster security: rebuilding orgs for AI\n46:29 Rebuilding Alexa and reinventing existing products\n53:06 Advice for an 18-year-old\n56:36 How Amazon avoids spreading itself too thin\n\nResources:\nFollow Andy Jassy on X: https://x.com/ajassy \nFollow Ben Horowitz on X: https://x.com/bhorowitz\n\nStay Updated:\nIf you enjoyed this episode, be sure to like, subscribe, and share with your friends!\n\nFind a16z on X: https://twitter.com/a16z\n\nFind a16z on LinkedIn: https://www.linkedin.com/company/a16z\n\nListen to the a16z Show on Spotify: https://open.spotify.com/show/5bC65RDvs3oxnLyqqvkUYX\n\nListen to the a16z Show on Apple Podcasts: https://podcasts.apple.com/us/podcast/a16z-podcast/id842818711\n\nFollow our host: https://x.com/eriktorenberg\n\nPlease note that the content here is for informational purposes only; should NOT be taken as legal, business, tax, or investment advice or be used to evaluate any investment or security; and is not directed at any investors or potential investors in any a16z fund. a16z and its affiliates may maintain investments in the companies discussed. For more details please see http://a16z.com/disclosures.",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 a16z 本周新片"
-    },
-    {
-      "id": "eojywvxqoLc",
-      "title": "The New Full-Stack Designer",
-      "channel": "Y Combinator",
-      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
-      "published_at": "2026-10-26T14:00:10Z",
-      "default_audio_language": "en-US",
-      "default_language": "en-US",
-      "duration_seconds": 3944,
-      "view_count": 144039,
-      "like_count": 1669,
-      "comment_count": 57,
-      "has_captions": false,
-      "has_chapters": true,
-      "description": "In this episode of Design Review, Marvin Schwaibold, who leads the product design studio at Shopify, joins YC's Aaron Epstein to walk through his design process. He shows the admin redesign and Sidekick work his team recently shipped, a weekend project where he rebuilt real grass as a shader, and a carousel that took 91 attempts to get right. Then they review five viewer-submitted websites with a focus on motion and interactivity. \n\nApply to Y Combinator: https://www.ycombinator.com/apply\nWork at a startup: https://www.ycombinator.com/jobs\n\nHere is the link for the Grass Shader Github Repo if you want to try it out: https://github.com/MarvinSchwaibold/grass-shader \n\nChapters:\n00:00 - How the design process has changed\n03:25 - Inside Shopify's product design studio\n05:58 - Molly, the Brooklyn studio\n08:58 - The Collins bookshelf\n11:51 - Toby's mandate: the future needs to be designed\n13:24 - How the studio works inside Shopify\n15:32 - Sidekick suggestions and the new admin\n18:27 - Designers who build\n21:58 - Rebuilding grass as a shader\n23:48 - The topographic map insight\n26:16 - Dialkit: exposing the variables\n28:45 - Advice for founders and designers\n31:04 - Website review 1: Endstack\n33:12 - One primary goal per page\n35:02 - Website review 2: SkillSync\n36:43 - The problem with tabs\n38:25 - AI illustrations that add nothing\n40:49 - Website review 3: Instaplay\n43:04 - Show the games, not the thumbnails\n45:34 - Website review 4: Mintlify\n47:25 - Social proof, and when less is more\n49:35 - Homepage sections as chapters\n51:42 - Website review 5: Knowlify\n54:02 - Let people explore the work\n56:06 - Scroll jacking\n58:34 - Website review 6: Instinct Space\n1:00:42 - Launch, cruise, land\n1:02:42 - The technology page\n1:04:16 - Blossom Carousel",
-      "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Y Combinator 本周新片"
-    },
-    {
-      "id": "-9XQMHhpypc",
-      "title": "Marc Andreessen: The Biggest Gap I’ve Seen in My Career",
-      "channel": "a16z",
-      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
-      "published_at": "2026-10-22T16:36:24Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 3635,
-      "view_count": 130713,
-      "like_count": null,
-      "comment_count": 76,
-      "has_captions": false,
-      "has_chapters": true,
-      "description": "a16z is expanding a16z crypto into a16z Frontier, a broader mandate to back founders building at the edges of what's possible. Chris Dixon joins Marc Andreessen, Ben Horowitz, and Erik Torenberg to explain why founders should increasingly ask not “is this too ambitious?” but “is this ambitious enough?” — and how AI could pull decades of technological progress forward across hardware, robotics, entertainment, science, and entirely new forms of media.\n\nThey also explore the coming internet of AI agents, why open source matters as AI becomes more powerful, and why some of the most important companies of the next decade may combine technologies and business models that previously belonged in separate categories.\n\nTimestamps:\n00:00 Intro\n00:49 Announcing a16z Frontier\n15:15 Is being too early still a risk?\n18:18 The widest gap between early adopters and everyone else\n22:06 Will AI favor incumbents or startups?\n28:33 AI social networks and agents online\n30:08 Beyond “product manager brain”: games, film and hardware\n38:22 Is AI centralizing? The case for open source\n46:37 The internet’s broken covenant\n49:12 What comes after the iPhone\n53:59 What to study if you’re 18 today\n\nResources:\nFollow Chris Dixon on X: https://x.com/cdixon\nFollow Marc Andreessen on X: https://x.com/pmarca\nFollow Ben Horowitz on X: https://x.com/bhorowitz\nLearn more about a16z Frontier: \na16zfrontier.com\na16zfrontier.substack.com\nx.com/a16zfrontier\n\nStay Updated:\nIf you enjoyed this episode, be sure to like, subscribe, and share with your friends!\n\nFind a16z on X: https://twitter.com/a16z\n\nFind a16z on LinkedIn: https://www.linkedin.com/company/a16z\n\nListen to the a16z Show on Spotify: https://open.spotify.com/show/5bC65RDvs3oxnLyqqvkUYX\n\nListen to the a16z Show on Apple Podcasts: https://podcasts.apple.com/us/podcast/a16z-podcast/id842818711\n\nFollow our host: https://x.com/eriktorenberg\n\nPlease note that the content here is for informational purposes only; should NOT be taken as legal, business, tax, or investment advice or be used to evaluate any investment or security; and is not directed at any investors or potential investors in any a16z fund. a16z and its affiliates may maintain investments in the companies discussed. For more details please see http://a16z.com/disclosures.",
-      "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 a16z 本周新片"
-    },
-    {
-      "id": "vl7HiMdGfjo",
-      "title": "What Happens When Everyone Can Build Software",
-      "channel": "Y Combinator",
-      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
-      "published_at": "2026-10-30T14:30:00Z",
-      "default_audio_language": "en-US",
-      "default_language": "en-US",
-      "duration_seconds": 2926,
-      "view_count": 108315,
-      "like_count": 719,
-      "comment_count": 43,
-      "has_captions": false,
-      "has_chapters": true,
-      "description": "In this episode of the Lightcone, the hosts sit down with Paul Copplestone, co-founder and CEO of Supabase. Since starting in the YC summer batch of 2020, the company has exploded to 13 million users and over 50 million databases under management. Supabase is now positioning for a future where everyone can write their own software, billions have access to personal databases and agents are driving much of the demand.  \n\nApply to Y Combinator: https://www.ycombinator.com/apply\nWork at a startup: https://www.ycombinator.com/jobs\n\nChapters:\n00:00 Intro\n01:18 Growth and 4x Revenue \n02:35 Three Eras of Supabase\n04:34 “Builders” vs. Traditional Devs\n08:42 Personalized Apps \n12:12 Personal Databases & Data Ownership\n15:56 Scaling to Billions\n17:58 AI Adoption At Supabase\n19:58 Lessons Learned Along The Way\n27:29 Building For Personal Agents, Dogfooding\n30:01 Agent-First Design and Evals\n38:42 The Future Of Coding\n42:36 Opening Up More Entrepreneurship + Outro",
-      "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Y Combinator 本周新片"
+      "why_good": "听亚马逊一把手讲 AI 基础设施布局。"
     },
     {
       "id": "xy_7SzwsIjM",
@@ -396,39 +240,7 @@
       "duration_seconds": 1220,
       "view_count": 106101,
       "like_count": 1195,
-      "why_good": "AI 前沿精选频道 LangChain 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "5UWDUD6qaM4",
-      "title": "Mark Cuban on Why AI Could Turn Solo Founders Into Trillionaires",
-      "channel": "a16z",
-      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
-      "published_at": "2026-10-28T14:30:15Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 3618,
-      "view_count": 104045,
-      "like_count": null,
-      "comment_count": 105,
-      "has_captions": false,
-      "has_chapters": true,
-      "description": "Mark Cuban thinks AI could transform healthcare, but it won’t fix opaque prices and broken incentives on its own. His starting point for employers: run every benefits contract through AI and ask where you’re getting ripped off.\n\nMark joins a16z General Partner Julie Yoo and Erik Torenberg to discuss what he’s learned building Cost Plus Drugs, why trust is its core product, and how greater transparency could put pressure on healthcare costs.\n\nThey also explore where AI can help, what personalized medicine could look like, how the role of doctors may change, and why Mark believes founders should use AI to learn, not as an excuse to stop thinking.\n\nTimestamps:\n0:00 Intro\n0:50 Cost Plus Drugs: 111 Meds to 4,000 SKUs\n6:25 $20M Mobile Factories That Make Any Drug\n9:00 Direct Contracts That Bypass the Middlemen\n11:30 How UnitedHealth Really Makes Money\n15:25 Why AI Can't Save You After You Sign\n19:45 \"Where Are They Screwing Me Over?\": Cuban's AI Prompt\n25:50 Why Tech Alone Won't Fix Healthcare\n31:40 The Biggest AI Win Is for Patients\n35:30 The End of One-Size-Fits-All Drugs\n39:23 Why Doctors Won't Be Replaced\n47:36 If Mark Advised the President\n53:06 His Advice to the AI Industry\n\nResources:\nFollow Mark Cuban on X: https://x.com/mcuban \nFollow Julie Yoo: https://x.com/julesyoo \nMark Cuban Cost Plus Drug Company: https://costplusdrugs.com/\nCost Plus Wellness: https://costpluswellness.com/\n\nStay Updated:\nIf you enjoyed this episode, be sure to like, subscribe, and share with your friends!\n\nFind a16z on X: https://twitter.com/a16z\n\nFind a16z on LinkedIn: https://www.linkedin.com/company/a16z\n\nListen to the a16z Show on Spotify: https://open.spotify.com/show/5bC65RDvs3oxnLyqqvkUYX\n\nListen to the a16z Show on Apple Podcasts: https://podcasts.apple.com/us/podcast/a16z-podcast/id842818711\n\nFollow our host: https://x.com/eriktorenberg\n\nPlease note that the content here is for informational purposes only; should NOT be taken as legal, business, tax, or investment advice or be used to evaluate any investment or security; and is not directed at any investors or potential investors in any a16z fund. a16z and its affiliates may maintain investments in the companies discussed. For more details please see http://a16z.com/disclosures.",
-      "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 a16z 本周新片"
-    },
-    {
-      "id": "69PmQWuV73Q",
-      "title": "Anthropic just acquired this “one-person company” 🧪👀 #trendingshorts #science #ai",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-10-31T15:22:10Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 86,
-      "view_count": 76239,
-      "like_count": 2076,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "why_good": "做 agent 的人可参考的实践思路。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -447,21 +259,7 @@
       "has_chapters": true,
       "description": "David Silver spent two years building AlphaGo on human data. When he removed human data altogether building AlphaGo Zero, the AI surpassed AlphaGo in under two days. He left DeepMind to run that same bet in pursuit of superintelligence. David and Lasse Espeholt, co-founders of Ineffable Intelligence, explain their plan to build a “superlearner”—an agent that starts knowing nothing and discovers science, mathematics, and language for itself by direct experience instead of through a pre-training run. Silver argues that human-language reasoning is a ceiling, not a foundation, that alignment via chain-of-thought monitoring is already reaching its limits, and that the science of how superintelligences coexist should be worked out in simulation before anything touches the real world. Espeholt describes the GPU cluster and the lineage from IMPALA and SEED RL that makes the experiment possible. Silver’s forecast: strong evidence within a year, superintelligence in three.\n\nHosted by Sonya Huang, Sequoia Capital\n\n 0:00 – Introduction\n 1:09 – What held true from Go to today, and what the LLM era changed\n 3:35 – Why leave DeepMind to start a new lab\n 5:58 – Why \"Ineffable\" (and the secret second reason)\n 7:03 – Lasse's path: scaling RL at DeepMind and Google Brain\n 9:31 – Defining a super learner and first contact\n 12:35 – Super learners vs. LLMs that make discoveries\n 13:59 – Day to day: the RL stack, crucibles and human-journey milestones\n 16:13 – Don't breadcrumb the objective: simple rewards, emergent complexity\n 21:16 – What a crucible looks like\n 24:14 – Go: one agent is boring, two is infinite\n 25:41 – Will agents rediscover language?\n 27:22 – Removing human priors: AlphaGo to AlphaZero\n 32:05 – Keeping human bias out of the crucibles\n 33:35 – Confidence, timing and super forecasting\n 36:24 – Is compute the driver?\n 38:13 – The ceiling on simulation and Rich Sutton's objection\n 43:44 – Alignment and the science of superintelligence\n 47:45 – Monitoring agents that don't think in English\n 51:01 – Pacing the frontier\n 52:54 – The compute setup: Vera Rubin on GCP\n 55:18 – Training, inference, simulation and RL scaling laws\n 57:40 – IMPALA and SEED RL\n 1:00:58 – 20 people and the compute-per-person ratio\n 1:04:49 – A research-led culture\n 1:05:47 – Predictions",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Sequoia Capital 本周新片"
-    },
-    {
-      "id": "ti3vVYwzW4A",
-      "title": "Pi Durable EXPLAINED: Build Always-On Agents with Local Models",
-      "channel": "Hugging Face",
-      "channel_id": "UCHlNU7kIZhRgSbhHvFoy72w",
-      "published_at": "2026-10-19T03:34:17Z",
-      "default_audio_language": null,
-      "default_language": "en",
-      "duration_seconds": 1803,
-      "view_count": 68636,
-      "like_count": 869,
-      "why_good": "AI 前沿精选频道 Hugging Face 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
+      "why_good": "从 AlphaGo Zero 讲到超级智能的路线。"
     },
     {
       "id": "bwyxgCjYWgU",
@@ -474,7 +272,7 @@
       "duration_seconds": 1160,
       "view_count": 55947,
       "like_count": 509,
-      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
+      "why_good": "聚焦印度市场的行业变化案例。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -488,91 +286,7 @@
       "duration_seconds": 579,
       "view_count": 54904,
       "like_count": 1154,
-      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "vIAHgDA5GQk",
-      "title": "This AI can (sort of) read your mind 🧠👀 #trendingshorts #ai #tech #research",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-10-22T19:11:48Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 73,
-      "view_count": 49878,
-      "like_count": 2086,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "B8_b0QEdxBw",
-      "title": "This startup is building “ChatGPT for hardware devices” 👀 #trendingshorts #ai #technology",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-10-28T20:04:59Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 74,
-      "view_count": 36155,
-      "like_count": 1456,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "SGM45fgBfiE",
-      "title": "What happens when AI agents are stranded on a virtual desert island? 🏝️ #trendingshorts #ai #tech",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-10-26T22:39:29Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 66,
-      "view_count": 17459,
-      "like_count": 926,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "w9b4pqVTjwI",
-      "title": "What makes laundry such an important test for robots? 🧺#trendingshorts #tech #robot #ai",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-10-13T20:31:21Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 70,
-      "view_count": 15352,
-      "like_count": 829,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "dF88QzkFS2c",
-      "title": "This open source AI spots heart defects 🩺👀 #trendingshorts #tech #medical #ai",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-10-14T22:25:14Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 68,
-      "view_count": 14690,
-      "like_count": 829,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "_metadata_fetched_at": "2026-11-11T02:48:49Z"
-    },
-    {
-      "id": "bymDXo7FVE8",
-      "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-11-03T20:31:56Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 66,
-      "view_count": 12509,
-      "like_count": 688,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "why_good": "想看具体工具组合工作流的人适合。",
       "_metadata_fetched_at": "2026-11-11T02:48:49Z"
     },
     {
@@ -591,7 +305,7 @@
       "has_chapters": false,
       "description": "Executive Producer: Rachel Gordon\nDP & Editor: Time Malieckal\nScript Supervisor: Alex Shipps\n\nSpecial Thanks:\n\nJohn J. Leonard | MIT Mechanical Engineering\nCaroline Keenan | Graduate Student, MIT WHOI\nTim Briggs | Filmmaker, MIT Lincoln Laboratory\nKevin Kibitz | Chief Historian, Heritage Operations at General Motors\nRebecca Buschmann | Archivist, General Motors\nCraig LaPlante | Director of Digital Media, Woods Hole Oceanographic Institution\nKen Kostel | Director of Research Communication, Woods Hole Oceanographic Institution\nSteve Minehan | IMCA Closed Bell Diving Supervisor",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 MIT CSAIL 本周新片"
+      "why_good": "展示水下机器人这一硬核方向的真实难点。"
     },
     {
       "id": "mOvHKBOQ6mU",
@@ -609,28 +323,16 @@
       "has_chapters": true,
       "description": "The Queen Elizabeth Prize for Engineering is awarded to engineers responsible for innovations of global benefit to humanity. Past laureates include the inventors of the internet and the World Wide Web, the creators of GPS, and, closer to home, Fei-Fei Li alongside Geoffrey Hinton, Yoshua Bengio, and Jensen Huang for their contributions to modern machine learning.\n\nStanford HAI Founding Director Fei-Fei Li, a QEPrize Laureate, and former Stanford University President John Hennessy, a QEPrize Trustee, discuss what sustains engineering breakthroughs in the age of AI, from open innovation to preparing the next generation. The conversation was moderated by Lord Vallance of Balham, Chair of the QE Prize's Trustee Board.\n\nThis event was held on October 7, 2026 at Stanford University.\n\n00:00:00 Introduction\n00:04:59 Fireside chat\n00:33:20 Q&A",
       "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Stanford HAI 本周新片"
-    },
-    {
-      "id": "ERiv7oSQtSQ",
-      "title": "HAI Seminar: AI Financial Advice: Supply, Demand, and Life Cycle Implications",
-      "channel": "Stanford HAI",
-      "channel_id": "UChugFTK0KyrES9terTid8vA",
-      "published_at": "2026-10-21T18:52:12Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 3392,
-      "view_count": 800,
-      "like_count": 15,
-      "comment_count": null,
-      "has_captions": false,
-      "has_chapters": true,
-      "description": "Generative AI has the potential to improve financial decision-making, but the research suggests that its impact is likely to vary across individuals. \n\nIn this HAI Seminar, assistant professor of finance, Tim de Silva, argued that while current general-purpose LLMs often provide advice that aligns with standard financial guidance, this advice is sensitive to demand and, therefore, differs systematically across users.\n\nThis video was recorded at Stanford University on October 7, 2026. \n\n00:00:00 Introduction\n00:00:48 Presentation\n00:42:52 Q&A",
-      "_metadata_fetched_at": "2026-11-11T06:53:45Z",
-      "why_good": "AI 前沿精选频道 Stanford HAI 本周新片"
+      "why_good": "了解工程创新大奖得主的第一手对话。"
     }
   ],
   "dropped_ai_display_cap": 0,
-  "pre_cap_count": 40,
-  "final_count": 40
+  "pre_cap_count": 20,
+  "final_count": 20,
+  "dropped_content_type": 0,
+  "dropped_visible_language": 0,
+  "dropped_official_short": 0,
+  "dropped_channel_display_cap": 0,
+  "dropped_ai_short": 0,
+  "dropped_ai_promo_title": 0
 }

@@ -129,7 +129,10 @@ def test_why_good_community_and_ai():
     assert len(why_good_for(community, 'community')) <= 40
     ai = video(channel='A very long channel name that must be truncated', view_count=1)
     reason = why_good_for(ai, 'ai')
-    assert 'AI 前沿精选频道' in reason and len(reason) <= 40
+    assert reason.startswith('来自 AI 策展频道「') and len(reason) <= 40
+    assert '本周新片' not in reason and '播放第' not in reason
+    assert '播放第' not in why_good_for(video(channel='Channel'), 'podcast')
+    assert '本周新片' not in why_good_for(video(channel='Channel'), 'trending')
 
 
 def test_picks_require_why_good_and_never_exceed_ten():
@@ -137,7 +140,7 @@ def test_picks_require_why_good_and_never_exceed_ten():
                        recommenders=100 - i, months=60, span_days=3000) for i in range(8)]
     ai = [video(id=f'a{i}', channel_id=f'ac{i}', published_at='2026-11-01T00:00:00Z',
                 view_count=100 - i, why_good=why_good_for(video(id=f'a{i}'), 'ai')) for i in range(8)]
-    podcast_with_reason = [video(id='p0', channel_id='pc0', published_at='2026-11-01T00:00:00Z', view_count=9, why_good='近 30 天同类长视频播放第 1')]
+    podcast_with_reason = [video(id='p0', channel_id='pc0', published_at='2026-11-01T00:00:00Z', view_count=9, why_good='来自策展频道「Channel」')]
     podcast_without_reason = [video(id='p1', channel_id='pc1', published_at='2026-11-01T00:00:00Z', view_count=8)]
     picks = build_picks({'community': {'videos': community}, 'ai': {'videos': ai}, 'podcast': {'videos': podcast_with_reason + podcast_without_reason}})
     ids = [v['id'] for v in picks['videos']]
@@ -166,7 +169,7 @@ def test_picks_missing_duration_counts_as_zero():
 
 def test_picks_never_pick_trending_even_when_other_pools_are_small():
     trending = [video(id='mrbeast', title='MrBeast Lab Ep 1', channel='MrBeast', duration_seconds=900,
-                      view_count=999, why_good='近 30 天同类长视频播放第 1')]
+                      view_count=999, why_good='来自频道「MrBeast」的近期长视频')]
     picks = build_picks({'community': {'videos': []}, 'ai': {'videos': []}, 'podcast': {'videos': []},
                          'trending': {'videos': trending}})
     assert picks['videos'] == []
@@ -196,6 +199,22 @@ def test_rebuild_offline_without_editorial_feed(tmp_path):
     assert summary['picks'] > 0
     assert updated['picks']['videos']
     assert not (tmp_path / 'editorial.json').exists()
+
+
+def test_rebuild_offline_keeps_honest_why_good_and_replaces_metadata(tmp_path):
+    from ytrec.offline import rebuild_offline
+
+    honest = video(id='honest', channel_id='ch-honest', published_at=_days_ago_iso(1),
+                   why_good='来自频道「Channel」的近期长视频')
+    metadata = video(id='metadata', channel_id='ch-metadata', published_at=_days_ago_iso(1),
+                     why_good='近 30 天同类长视频播放第 1')
+    (tmp_path / 'trending.json').write_text(json.dumps({'videos': [honest, metadata]}))
+
+    _summary, updated = rebuild_offline(root=tmp_path)
+
+    reasons = {video['id']: video['why_good'] for video in updated['trending']['videos']}
+    assert reasons['honest'] == '来自频道「Channel」的近期长视频'
+    assert reasons['metadata'] == '来自频道「Channel」的近期长视频'
 
 
 def test_picks_exclude_official_brand_clip_under_three_minutes():
@@ -254,9 +273,9 @@ def test_build_picks_drops_stale_ai_and_podcast_but_keeps_fresh():
     ]
     podcast = [
         video(id='pod-stale', channel_id='p1', published_at=_days_ago_iso(31), view_count=999,
-              why_good='近 30 天同类长视频播放第 1'),
+              why_good='来自策展频道「Channel」'),
         video(id='pod-fresh', channel_id='p2', published_at=_days_ago_iso(6), view_count=1,
-              why_good='近 30 天同类长视频播放第 2'),
+              why_good='来自策展频道「Channel」'),
     ]
     picks = build_picks({'community': {'videos': []}, 'ai': {'videos': ai}, 'podcast': {'videos': podcast}})
     ids = [v['id'] for v in picks['videos']]

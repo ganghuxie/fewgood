@@ -80,7 +80,7 @@ def test_stage_one_rejects_short_and_trending_only_items_even_with_high_scores()
 
     trending = video(
         'trending', duration_seconds=1200, view_count=10_000_000,
-        like_count=900_000, recommenders=500, why_good='近 30 天同类长视频播放第 1',
+        like_count=900_000, recommenders=500, why_good='来自频道「Channel trending」的近期长视频',
     )
     assert build_picks({'community': {'videos': []}, 'ai': {'videos': []},
                         'podcast': {'videos': []}, 'trending': {'videos': [trending]}},

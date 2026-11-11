@@ -356,6 +356,24 @@ _LANGUAGE_SCRIPT_BLOCKS = [
 _LANGUAGE_SCRIPT_RE = re.compile('|'.join(f'[{chr(lo)}-{chr(hi)}]' for lo, hi in _LANGUAGE_SCRIPT_BLOCKS))
 _TURKISH_LETTERS = frozenset('ĞğİıŞş')
 
+# Visible-title language net ------------------------------------------------
+# YouTube sometimes tags subtitled foreign dramas/MVs as English.  A language
+# code alone therefore is not enough.  Count script characters so a single
+# borrowed glyph in an English/Chinese title does not trip the gate, while a
+# title actually written in one of these scripts does.
+_VISIBLE_LANGUAGE_SCRIPT_BLOCKS = _LANGUAGE_SCRIPT_BLOCKS + [
+    (0x0980, 0x09FF),  # Bengali
+    (0x1000, 0x109F),  # Myanmar
+    (0xA9E0, 0xA9FF),  # Myanmar Extended-A
+    (0xAA60, 0xAA7F),  # Myanmar Extended-B
+]
+_VISIBLE_LANGUAGE_SCRIPT_RE = re.compile(
+    '|'.join(f'[{chr(lo)}-{chr(hi)}]' for lo, hi in _VISIBLE_LANGUAGE_SCRIPT_BLOCKS)
+)
+_VIETNAMESE_LETTERS = frozenset('ăâêôơưđĂÂÊÔƠƯĐ')
+_VIETNAMESE_MIN_CHARS = 2
+_VISIBLE_SCRIPT_MIN_CHARS = 3
+
 
 def _title_uses_foreign_script(title):
     if not title:
@@ -363,6 +381,34 @@ def _title_uses_foreign_script(title):
     if _LANGUAGE_SCRIPT_RE.search(title):
         return True
     return any(char in _TURKISH_LETTERS for char in title)
+
+
+def _title_uses_visible_foreign_language(title):
+    """Return True when a title is substantially written in a blocked script.
+
+    Unlike the legacy language gate this is a conservative visible-title net:
+    three script characters (or two Vietnamese-specific letters) are required,
+    so English/Chinese titles with one borrowed glyph stay eligible.
+    """
+    if not title:
+        return False
+    if len(_VISIBLE_LANGUAGE_SCRIPT_RE.findall(title)) >= _VISIBLE_SCRIPT_MIN_CHARS:
+        return True
+    vietnamese = sum(
+        1 for char in title
+        if char in _VIETNAMESE_LETTERS or 0x1EA0 <= ord(char) <= 0x1EF9
+    )
+    return vietnamese >= _VIETNAMESE_MIN_CHARS
+
+
+def visible_language_blocked(video):
+    """Visible-title language net; accepts a video dict or a title string."""
+    title = video.get('title', '') if isinstance(video, dict) else str(video or '')
+    return _title_uses_visible_foreign_language(title)
+
+
+def visible_language_gate(video):
+    return not visible_language_blocked(video)
 
 
 def language_ok(default_audio_language=None, default_language=None, title=''):
@@ -434,6 +480,36 @@ def _published_utc(video):
 FRESHNESS_MAX_DAYS = 30
 FRESHNESS_RECENT_DAYS = 7
 AI_FEED_DISPLAY_CAP = 40
+AI_MIN_DURATION_SECONDS = 8 * 60
+
+_AI_PROMO_TITLE_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:live|pregame|premiere|trailer|livestream)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+
+
+def ai_title_promo_blocked(video):
+    """AI-only title ban for live/pregame/premiere/trailer promotions."""
+    title = str(video.get('title') or '')
+    return bool(_AI_PROMO_TITLE_RE.search(title))
+
+
+def filter_ai_duration_and_promo_titles(videos):
+    """Apply the approved AI 8-minute + promo-title gates.
+
+    Returns ``(kept, dropped_short, dropped_promo_title)``.  Missing duration
+    counts as zero, so it fails the 8-minute gate.
+    """
+    kept, dropped_short, dropped_promo_title = [], 0, 0
+    for video in videos:
+        if int(video.get('duration_seconds') or 0) < AI_MIN_DURATION_SECONDS:
+            dropped_short += 1
+            continue
+        if ai_title_promo_blocked(video):
+            dropped_promo_title += 1
+            continue
+        kept.append(video)
+    return kept, dropped_short, dropped_promo_title
 
 
 def published_at_dt(video):
@@ -608,6 +684,35 @@ def podcast_display_cap(videos, top_n=20, per_channel=2):
     return kept, dropped
 
 
+def channel_display_cap(videos, per_channel=2, order_key=None):
+    """Keep at most ``per_channel`` visible videos from any one channel.
+
+    When ``order_key`` is supplied, higher-priority videos (for example more
+    viewed trending items) are kept first; otherwise the incoming order is
+    preserved. Returned videos stay in their incoming order.
+    """
+    videos = list(videos)
+    limit = max(0, int(per_channel))
+    if limit == 0:
+        return [], len(videos)
+    order = list(range(len(videos)))
+    if order_key is not None:
+        order.sort(key=lambda index: order_key(videos[index]))
+    counts, keep, dropped = {}, set(), 0
+    for index in order:
+        video = videos[index]
+        channel = str(video.get('channel_id') or video.get('channel') or '')
+        if not channel:
+            keep.add(index)
+            continue
+        if counts.get(channel, 0) >= limit:
+            dropped += 1
+            continue
+        counts[channel] = counts.get(channel, 0) + 1
+        keep.add(index)
+    return [video for index, video in enumerate(videos) if index in keep], dropped
+
+
 def _load_existing_feeds(exclude, root='site/src/data'):
     existing = []
     for name in ('trending', 'ai', 'podcast', 'music', 'videos'):
@@ -680,6 +785,27 @@ def load_fresh_feed_records(feed_name, root='site/src/data', cache_days=None, at
 
 # why_good + picks ----------------------------------------------------------
 
+WHY_GOOD_BANNED_PATTERNS = ('本周新片', '近30天播放', '近 30 天同类', '播放第')
+
+
+def why_good_is_honest(value):
+    """True when a stored reason is non-empty and not metadata paraphrased as a reason."""
+    text = str(value or '').strip()
+    return bool(text) and not any(pattern in text for pattern in WHY_GOOD_BANNED_PATTERNS)
+
+
+def _channel_reason(prefix, channel, suffix, fallback):
+    channel = str(channel or '').strip()
+    if not channel:
+        return fallback
+    budget = 40 - len(prefix) - len(suffix)
+    if budget < 1:
+        return fallback
+    if len(channel) > budget:
+        channel = channel[:budget].rstrip().rstrip(' ,，、:：-')
+    return f'{prefix}{channel}{suffix}' if channel else fallback
+
+
 def why_good_for(video, section='trending', rank=None):
     """Build an honest Chinese reason string (≤40 chars) from real fields."""
     section = section or 'trending'
@@ -697,16 +823,27 @@ def why_good_for(video, section='trending', rank=None):
             return f'{recommenders} 位 HN 用户跨 {int(months)} 个月反复推荐'
         return f'{recommenders} 位 HN 用户反复推荐'
     if section == 'ai':
-        channel = str(video.get('channel') or '').strip()
-        if not channel:
-            return 'AI 前沿精选频道本周新片'
-        budget = 40 - len('AI 前沿精选频道 ') - len(' 本周新片')
-        if len(channel) > budget:
-            channel = channel[:budget].rstrip()
-        return f'AI 前沿精选频道 {channel} 本周新片'
-    if rank is None:
-        return None
-    return f'近 30 天同类长视频播放第 {int(rank)}'
+        return _channel_reason(
+            '来自 AI 策展频道「', video.get('channel'), '」',
+            '来自 AI 策展频道的近期长视频',
+        )
+    if section in ('podcast', 'music'):
+        return _channel_reason(
+            '来自策展频道「', video.get('channel'), '」',
+            '来自策展频道的近期长视频',
+        )
+    return _channel_reason(
+        '来自频道「', video.get('channel'), '」的近期长视频',
+        '来自频道的近期长视频',
+    )
+
+
+def why_good_or_existing(video, section='trending', rank=None):
+    """Keep an honest stored reason; replace banned metadata or fill a missing one."""
+    existing = video.get('why_good')
+    if why_good_is_honest(existing):
+        return existing
+    return why_good_for(video, section, rank=rank)
 
 
 # 今日精选 duration + source rules ------------------------------------------
@@ -723,6 +860,13 @@ _PICKS_OFFICIAL_TITLE_RE = re.compile(
 )
 _PICKS_OFFICIAL_CHANNEL_RE = re.compile(r'\bofficial\b', re.IGNORECASE)
 _PICKS_OFFICIAL_CJK = ('官方',)
+_PICKS_OFFICIAL_VENDOR_RE = re.compile(
+    r'openai|nvidia|hyundai|bambu\s*lab|nintendo|'
+    r'(?<![A-Za-z0-9])(?:tesla|samsung|google|microsoft|amazon|sony|intel|amd|'
+    r'qualcomm|adobe|canon|nikon|dji|xiaomi|huawei|oneplus|lenovo|dell|asus|'
+    r'acer|logitech|razer|corsair|apple)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
 
 
 def is_official_brand_clip(video):
@@ -731,9 +875,162 @@ def is_official_brand_clip(video):
     channel = str(video.get('channel') or '')
     if any(marker in title for marker in _PICKS_OFFICIAL_CJK) or any(marker in channel for marker in _PICKS_OFFICIAL_CJK):
         return True
+    if _PICKS_OFFICIAL_VENDOR_RE.search(channel):
+        return True
     if _PICKS_OFFICIAL_CHANNEL_RE.search(channel):
         return True
     return bool(_PICKS_OFFICIAL_TITLE_RE.search(title))
+
+
+OFFICIAL_SHORT_MAX_SECONDS = 180
+
+_OBVIOUS_PROMO_TITLE_RE = re.compile(
+    r'\b(?:trailer|teaser|launch\s+video|official\s+(?:music\s+)?(?:video|mv)|'
+    r'promo|promotional|commercial|advertisement)\b',
+    re.IGNORECASE,
+)
+
+
+def is_official_short_promo(video, section=None):
+    """Return True for an official/brand clip shorter than three minutes."""
+    if int(video.get('duration_seconds') or 0) >= OFFICIAL_SHORT_MAX_SECONDS:
+        return False
+    if not is_official_brand_clip(video):
+        return False
+    if str(section or '').lower() in ('community', 'videos'):
+        # Community/HN is recommender-driven; only strip an obvious short
+        # trailer/promo, never a normal short talk or performance.
+        return bool(_OBVIOUS_PROMO_TITLE_RE.search(str(video.get('title') or '')))
+    return True
+
+
+# Content-type filter -------------------------------------------------------
+# Dramas/TV episodes, variety/news, trailers, full-episode reuploads, kids
+# cartoons, and scripted episode factories are not editorial recommendations.
+# Science/tech/documentary/talk channels are explicitly protected so the
+# heuristics stay conservative around the content this site wants to keep.
+
+_CONTENT_TYPE_ALLOW_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:veritasium|mark\s+rober|kurzgesagt|linus\s+tech\s+tips|'
+    r'3blue1brown|computerphile|numberphile|pbs\s+space\s+time|pbs\s+eons|ted|tedx|'
+    r'stanford|mit\s+opencourseware|mit\s+csail|y\s+combinator|a16z|sequoia\s+capital)'
+    r'(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_FULL_EPISODE_RE = re.compile(
+    r'\bfull[\s-]*(?:episode|movie|movies|film)\b|\bnigerian\s+movies?\b',
+    re.IGNORECASE,
+)
+_CONTENT_TRAILER_RE = re.compile(
+    r'\b(?:official\s+)?(?:trailer|teaser)\b|\b(?:launch|overview)\s+(?:video|trailer)\b',
+    re.IGNORECASE,
+)
+_CONTENT_PROMO_TITLE_RE = re.compile(
+    r'\b(?:promo|promotional|product\s+(?:video|demo)|launch\s+video|'
+    r'advertisement|commercial)\b',
+    re.IGNORECASE,
+)
+_CONTENT_NEWS_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:cnn|itv\s+news|9\s*news(?:\s+australia)?|ms\s+now|'
+    r'fox\s+business|dw\s+news|fox\s+news|msnbc|bbc\s+news|sky\s+news|abc\s+news|'
+    r'cbs\s+news|nbc\s+news|al\s+jazeera|reuters)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_POLITICS_RE = re.compile(
+    r'\b(?:midterms?|midterm\s+elections?|election\s+(?:day|results?|rout|losses?|night)|'
+    r'blue\s+tsunami|trump|biden|harris|democrats?|republicans?|'
+    r'senate\s+(?:race|majority)|house\s+(?:race|majority)|voter\s+fraud)\b',
+    re.IGNORECASE,
+)
+_CONTENT_VARIETY_CHANNEL_RE = re.compile(
+    r'jimmy\s+kimmel|the\s+tonight\s+show|tonight\s+show\s+starring|'
+    r'late\s+night\s+with\s+seth\s+meyers|saturday\s+night\s+live|\bsnl\b|'
+    r'the\s+daily\s+show|last\s*week\s*tonight',
+    re.IGNORECASE,
+)
+_CONTENT_DRAMA_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:har\s+pal\s+geo|green\s+tv|laser\s+vision|natok|geo\s+tv|'
+    r'geo\s+entertainment|hum\s+tv|ary\s+digital|zee\s+tv|star\s+plus|star\s+jalsha|'
+    r'colors\s+tv|sony\s+(?:tv|entertainment)|sab\s+tv|taarak\s+mehta|'
+    r'upin\s*&\s*ipin)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_SCRIPTED_CHANNEL_RE = re.compile(r'dhar\s+mann', re.IGNORECASE)
+_CONTENT_KIDS_RE = re.compile(
+    r'cocomelon|nursery\s+rhymes|kids\s+songs|dc\s*kids|kids\s+cartoons?|'
+    r'cartoon\s+full\s+episode',
+    re.IGNORECASE,
+)
+_CONTENT_TV_EPISODE_RE = re.compile(r'\b(?:ep|episode)\.?\s*#?\s*\d+\b', re.IGNORECASE)
+_CONTENT_DRAMA_TITLE_RE = re.compile(
+    r'\bnatok\b|\bdrama\b|\bepisode\b.{0,40}\b(?:eng|english)?\s*sub\b',
+    re.IGNORECASE,
+)
+_CONTENT_OFFICIAL_MV_RE = re.compile(
+    r'\bofficial\s+(?:music\s+)?(?:video|mv)\b|\bofficial\s+visuali[sz]er\b|'
+    r'\bmusic\s+video\b|\bm\/?v\b',
+    re.IGNORECASE,
+)
+
+
+def content_type_blocked(video, section=None):
+    """Return ``(blocked, reason)`` for non-editorial content types.
+
+    Community/HN feeds are intentionally left alone; callers can apply the
+    short official-trailer rule there separately.
+    """
+    section = str(section or 'trending').lower()
+    if section in ('community', 'videos'):
+        return False, ''
+    title = str(video.get('title') or '')
+    channel = str(video.get('channel') or '')
+    if not title and not channel:
+        return False, ''
+    if _CONTENT_TYPE_ALLOW_CHANNEL_RE.search(channel):
+        return False, ''
+    if _CONTENT_FULL_EPISODE_RE.search(title):
+        return True, 'full_episode'
+    if _CONTENT_TRAILER_RE.search(title):
+        return True, 'trailer'
+
+    if section == 'music':
+        # Music keeps tracks/MVs and curated concerts; only clear promos go.
+        if _CONTENT_PROMO_TITLE_RE.search(title):
+            return True, 'promo'
+        return False, ''
+
+    if section == 'podcast':
+        if _CONTENT_DRAMA_CHANNEL_RE.search(channel) or _CONTENT_SCRIPTED_CHANNEL_RE.search(channel):
+            return True, 'drama_tv'
+        if _CONTENT_KIDS_RE.search(title) or _CONTENT_KIDS_RE.search(channel):
+            return True, 'kids'
+        return False, ''
+
+    if section == 'ai':
+        if _CONTENT_PROMO_TITLE_RE.search(title):
+            return True, 'promo'
+        return False, ''
+
+    if _CONTENT_NEWS_CHANNEL_RE.search(channel):
+        return True, 'news'
+    if _CONTENT_VARIETY_CHANNEL_RE.search(channel):
+        return True, 'variety'
+    if _CONTENT_DRAMA_CHANNEL_RE.search(channel):
+        return True, 'drama_tv'
+    if _CONTENT_SCRIPTED_CHANNEL_RE.search(channel):
+        return True, 'scripted_drama'
+    if _CONTENT_KIDS_RE.search(title) or _CONTENT_KIDS_RE.search(channel):
+        return True, 'kids'
+    if _CONTENT_DRAMA_TITLE_RE.search(title):
+        return True, 'drama_tv'
+    if section == 'trending':
+        if _CONTENT_TV_EPISODE_RE.search(title):
+            return True, 'tv_episode'
+        if _CONTENT_OFFICIAL_MV_RE.search(title):
+            return True, 'official_mv'
+        if _CONTENT_POLITICS_RE.search(title):
+            return True, 'news'
+    return False, ''
 
 
 # Same-id channels listed under both AI and podcast use a topic-fit gate for
@@ -819,12 +1116,26 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
                 continue
             if not language_gate(video):
                 continue
+            if key != 'community' and visible_language_blocked(video):
+                continue
+            if key != 'community':
+                blocked, _reason = content_type_blocked(video, key)
+                if blocked:
+                    continue
+            if key == 'ai' and ai_title_promo_blocked(video):
+                continue
             duration_seconds = int(video.get('duration_seconds') or 0)
             if duration_seconds < PICKS_MIN_DURATION_SECONDS:
                 continue
             if duration_seconds < PICKS_OFFICIAL_MIN_DURATION_SECONDS and is_official_brand_clip(video):
                 continue
-            why = video.get('why_good') or why_good_for(video, key)
+            existing_why = video.get('why_good')
+            if why_good_is_honest(existing_why):
+                why = existing_why
+            elif existing_why or key in ('community', 'ai', 'editorial'):
+                why = why_good_for(video, key)
+            else:
+                why = None
             if not why and key != 'editorial':
                 continue
             videos.append(dict(video, why_good=why or '', source=key))
@@ -833,7 +1144,7 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
             videos.sort(key=lambda item: freshness_sort_key(item, now=at))
         if key == 'editorial':
             for rank, video in enumerate(sorted(videos, key=lambda item: (-_video_view(item), str(item.get('id', '')))), 1):
-                video['why_good'] = video.get('why_good') or why_good_for(video, 'editorial', rank=rank)
+                video['why_good'] = why_good_or_existing(video, 'editorial', rank=rank)
         groups[key] = videos
 
     medians = channel_median_views(
@@ -949,6 +1260,7 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
     def accepted():
         videos = []
         dropped_short = dropped_vertical = dropped_language = 0
+        dropped_content_type = dropped_visible_language = dropped_official_short = 0
         for item in records:
             reason = playability_reason(item)
             if reason:
@@ -959,34 +1271,58 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
                 dropped_vertical += 1
             else:
                 record = video_record(item)
-                if language_gate(record):
-                    videos.append(record)
-                else:
+                if not language_gate(record):
                     dropped_language += 1
+                    continue
+                if visible_language_blocked(record):
+                    dropped_visible_language += 1
+                    continue
+                blocked, _reason = content_type_blocked(record, name)
+                if blocked:
+                    dropped_content_type += 1
+                    continue
+                if is_official_short_promo(record, name):
+                    dropped_official_short += 1
+                    continue
+                videos.append(record)
         videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds(name, output), feed_name=name)
         videos.sort(key=lambda v: (-v['view_count'], v['id']))
-        return videos, dropped_short, dropped_vertical, dropped_language, dropped_channel
+        return (videos, dropped_short, dropped_vertical, dropped_language, dropped_channel,
+                dropped_content_type, dropped_visible_language, dropped_official_short)
 
-    videos, dropped_short, dropped_vertical, dropped_language, dropped_channel = accepted()
+    (videos, dropped_short, dropped_vertical, dropped_language, dropped_channel,
+     dropped_content_type, dropped_visible_language, dropped_official_short) = accepted()
     dropped_podcast = 0
     if name == 'podcast':
         videos, dropped_podcast = podcast_display_cap(videos)
+    dropped_channel_display_cap = 0
+    if name == 'trending':
+        videos, dropped_channel_display_cap = channel_display_cap(
+            videos, per_channel=2,
+            order_key=lambda video: (-_video_view(video), str(video.get('id', ''))),
+        )
     final_videos = videos[:100]
     if name in ('trending', 'podcast', 'music'):
         for rank, video in enumerate(final_videos, 1):
-            video['why_good'] = why_good_for(video, name, rank=rank)
+            video['why_good'] = why_good_or_existing(video, name, rank=rank)
     published = [video['published_at'] for video in final_videos if video['published_at']]
 
     payload = dict(generated_at=iso_now(), window_days=30, exclude_shorts_under_seconds=60,
                    window_size_days=6, windows=5,
                    candidates_fetched=len(candidate_ids), dropped_short=dropped_short,
                    dropped_vertical=dropped_vertical, dropped_language=dropped_language,
-                   dropped_channel=dropped_channel, landscape_only=landscape_only,
+                   dropped_channel=dropped_channel,
+                   dropped_content_type=dropped_content_type,
+                   dropped_visible_language=dropped_visible_language,
+                   dropped_official_short=dropped_official_short,
+                   landscape_only=landscape_only,
                    video_duration_buckets=['medium', 'long'], final_count=len(final_videos),
                    quota_units_approx=searches * 100 + quota_video_batches,
                    videos=final_videos)
     if dropped_podcast:
         payload['dropped_podcast_display_cap'] = dropped_podcast
+    if dropped_channel_display_cap:
+        payload['dropped_channel_display_cap'] = dropped_channel_display_cap
     if published:
         payload['publish_date_span'] = {'min': min(published), 'max': max(published)}
     if query:
@@ -1139,20 +1475,44 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     videos, dropped_ai_topic = filter_ai_topic_videos(videos, dual_channel_ids)
     videos, dropped_stale = drop_stale_videos(videos)
     videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds('ai', output), feed_name='ai')
+    pre_ai_filter_count = len(videos)
+    videos, dropped_ai_short, dropped_ai_promo_title = filter_ai_duration_and_promo_titles(videos)
+    dropped_content_type = dropped_visible_language = dropped_official_short = 0
+    filtered = []
     for video in videos:
-        video['why_good'] = why_good_for(video, 'ai')
+        if visible_language_blocked(video):
+            dropped_visible_language += 1
+            continue
+        blocked, _reason = content_type_blocked(video, 'ai')
+        if blocked:
+            dropped_content_type += 1
+            continue
+        if is_official_short_promo(video, 'ai'):
+            dropped_official_short += 1
+            continue
+        filtered.append(video)
+    videos = filtered
+    for video in videos:
+        video['why_good'] = why_good_or_existing(video, 'ai')
     pre_cap_count = len(videos)
     videos, dropped_ai_display_cap = cap_ai_feed_display(
         videos, sources=load_source_rows(sources_file or 'config/sources.yaml'),
     )
+    videos, dropped_channel_display_cap = channel_display_cap(videos, per_channel=2)
     payload = dict(generated_at=iso_now(), window_days=FRESHNESS_MAX_DAYS, exclude_shorts_under_seconds=60,
                    quota_units_approx=units, channels_used=len(channels), dropped_language=dropped_language,
                    dropped_ai_topic=dropped_ai_topic, dropped_channel=dropped_channel,
                    dropped_stale=dropped_stale, dropped_ai_display_cap=dropped_ai_display_cap,
+                   dropped_channel_display_cap=dropped_channel_display_cap,
+                   dropped_ai_short=dropped_ai_short,
+                   dropped_ai_promo_title=dropped_ai_promo_title,
+                   dropped_content_type=dropped_content_type,
+                   dropped_visible_language=dropped_visible_language,
+                   dropped_official_short=dropped_official_short,
                    pre_cap_count=pre_cap_count, final_count=len(videos), videos=videos)
     for reason, count in dropped_playability.items():
         payload[f'dropped_{reason}'] = count
-    payload = write_feed_if_not_sharply_smaller('ai', payload, output)
+    payload = write_feed_if_not_sharply_smaller('ai', payload, output, pre_cap_count=pre_ai_filter_count)
     print(f"AI: {len(payload.get('videos', []))} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))
     return payload
@@ -1259,7 +1619,7 @@ def report(db, config, videos, output='reports'):
         selected_at = db.execute('SELECT selected_at FROM selections WHERE video_id=?', (v['id'],)).fetchone()[0]
         selected.append(dict(v, title=snippet.get('title', ''), channel=snippet.get('channelTitle', ''), channel_id=snippet.get('channelId', ''), published_at=snippet.get('publishedAt', ''), default_audio_language=snippet.get('defaultAudioLanguage') or None, default_language=snippet.get('defaultLanguage') or None, duration_seconds=duration(raw['contentDetails']['duration']), selected_at=selected_at, classic_speech=bool(over_upload_age and exempt), **({'classic_speech_reasons': classic_reasons} if over_upload_age and exempt else {})))
     for record in selected:
-        record['why_good'] = why_good_for(record, 'community')
+        record['why_good'] = why_good_or_existing(record, 'community')
     db.commit()
     what_if = []
     for people in (5,10,20,30,50):

@@ -24,7 +24,7 @@
       "duration_seconds": 4113,
       "view_count": 39055,
       "like_count": 157,
-      "why_good": "近 30 天同类长视频播放第 10",
+      "why_good": "一期节目串起几条科技财经大新闻。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -38,7 +38,7 @@
       "duration_seconds": 3249,
       "view_count": 6799,
       "like_count": 92,
-      "why_good": "近 30 天同类长视频播放第 14",
+      "why_good": "CEO 亲述金融科技与 AI 交易结合的方向。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -52,7 +52,7 @@
       "duration_seconds": 5418,
       "view_count": 1657486,
       "like_count": 30035,
-      "why_good": "近 30 天同类长视频播放第 1",
+      "why_good": "轻松的对谈场景，能看到黄仁勋生活化的一面。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -66,7 +66,7 @@
       "duration_seconds": 12867,
       "view_count": 1539525,
       "like_count": 9867,
-      "why_good": "近 30 天同类长视频播放第 2",
+      "why_good": "把AI与数学前沿难题放在一起聊。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -80,7 +80,7 @@
       "duration_seconds": 4141,
       "view_count": 327664,
       "like_count": 3598,
-      "why_good": "近 30 天同类长视频播放第 3",
+      "why_good": "对芯片长期走向的一次前瞻讨论。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -94,7 +94,7 @@
       "duration_seconds": 3670,
       "view_count": 307037,
       "like_count": 4254,
-      "why_good": "近 30 天同类长视频播放第 4",
+      "why_good": "听资深传记作者讲权力研究的心得。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -108,7 +108,7 @@
       "duration_seconds": 4406,
       "view_count": 94871,
       "like_count": 734,
-      "why_good": "近 30 天同类长视频播放第 5",
+      "why_good": "关于AI推理市场与投资判断的直白观点。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -122,7 +122,7 @@
       "duration_seconds": 4333,
       "view_count": 77707,
       "like_count": 773,
-      "why_good": "近 30 天同类长视频播放第 6",
+      "why_good": "用通俗方式讲清模型内部机制。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -136,7 +136,7 @@
       "duration_seconds": 5148,
       "view_count": 74933,
       "like_count": 745,
-      "why_good": "近 30 天同类长视频播放第 7",
+      "why_good": "讲产品市场契合，偏实操而非空谈。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -150,21 +150,7 @@
       "duration_seconds": 10279,
       "view_count": 50525,
       "like_count": 263,
-      "why_good": "近 30 天同类长视频播放第 8",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
-    },
-    {
-      "id": "Wm53dMsn5dk",
-      "title": "Seinfeld - Full Episode (Audio)",
-      "channel": "Acquired",
-      "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
-      "published_at": "2026-10-19T04:22:04Z",
-      "default_audio_language": "en-US",
-      "default_language": "en",
-      "duration_seconds": 13819,
-      "view_count": 43793,
-      "like_count": 285,
-      "why_good": "近 30 天同类长视频播放第 9",
+      "why_good": "机器人创业者的经历与思考，角度个人化。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -182,7 +168,7 @@
       "has_captions": true,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:53:54Z",
-      "why_good": "近 30 天同类长视频播放第 11"
+      "why_good": "创始人亲述从造飞机到做产品的经历。"
     },
     {
       "id": "86wFCPat2GY",
@@ -195,7 +181,7 @@
       "duration_seconds": 7192,
       "view_count": 21371,
       "like_count": 78,
-      "why_good": "近 30 天同类长视频播放第 12",
+      "why_good": "少见地谈家族企业传承与个人意义。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
@@ -209,9 +195,12 @@
       "duration_seconds": 2363,
       "view_count": 19322,
       "like_count": 251,
-      "why_good": "近 30 天同类长视频播放第 13",
+      "why_good": "OpenAI总裁谈AI在两个行业的实际影响。",
       "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     }
   ],
-  "dropped_podcast_display_cap": 0
+  "dropped_podcast_display_cap": 0,
+  "dropped_content_type": 0,
+  "dropped_visible_language": 0,
+  "dropped_official_short": 0
 }

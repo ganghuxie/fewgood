@@ -1,18 +1,167 @@
 {
-  "generated_at": "2026-11-06T14:50:56Z",
+  "generated_at": "2026-11-11T08:23:07Z",
   "feed": "community",
   "limit": 10,
   "video_ids": [
+    "-YMMRQ1qscI",
+    "-YP3OCTy3lg",
+    "-zRN7XLCRhc",
+    "0CDXJ6bMkMY",
+    "0DEOtXTQOG4",
+    "19qrLchbQEc",
+    "1czUusLWcZg",
+    "26P1KyvrmjI",
+    "2Op3QLzMgSY",
+    "2ZKANCH80-M",
+    "32vxW6GMeLY",
+    "4UmFfI8CWuA",
+    "4nKt18AZDsQ",
+    "4xcxvWivWBU",
+    "583ThJIqQ7k",
+    "5_Fayfx2NUM",
+    "73wCQRQb7v0",
+    "7Pq-S557XQU",
+    "7VA9cHUELaY",
+    "7fwMSrtNLEo",
+    "7wLhJ7q7By4",
+    "86wFCPat2GY",
+    "88itHnh8eMI",
+    "8oB9sf1SKhs",
+    "8pTEmbeENF4",
+    "9CO6M2HsoIA",
+    "9F9x3MufdMQ",
+    "9l9szCohqbE",
+    "APe7fhdkp9Q",
+    "Ark1UNElQlk",
+    "AwuTTOJGEi0",
+    "B8EhqJLto6w",
+    "BWyrhKi-0Ck",
+    "BsFx3ZZh91U",
+    "C_2wWuYomjo",
+    "CrO0Timw2z4",
+    "D8rpR3c-Fb0",
+    "DJklHwoYgBQ",
+    "Deenp3PtSEE",
+    "DuwDrPcC5fs",
+    "EKWGGDXe5MA",
+    "F1inSnWGaLk",
+    "FGCP2F_7rQk",
+    "GXVZMiDbtiM",
+    "Gevh6u7wkfw",
+    "GfkwWYl5aX4",
+    "GriFRs3Us7U",
+    "HYA9e0XOUGk",
+    "IOiZatlZtGU",
+    "JHo-aiePjoM",
+    "JvBT4XBdoUE",
+    "K-aJ4L5xxcg",
+    "KfODG5REyss",
+    "KkpqA8yG9T4",
+    "L4SWQebqhek",
+    "LktQRU8OD4Y",
+    "LtUDeizHqKk",
+    "MFzDaBzBlL0",
+    "MYdu77oejOs",
+    "MzpgppYi8dU",
+    "N-3CblQjwnU",
+    "N-ZdH5kQQ1I",
+    "NDviWuSMRtU",
+    "NNnIGh9g6fA",
+    "NOAgplgTxfc",
+    "NdoymvcC8LY",
+    "O6mRxDItyWQ",
+    "P7Nb6-bw1Vs",
+    "PHe0bXAIuk0",
+    "Q78dJ0vkWe8",
+    "QM1iUe6IofM",
+    "QRVz697rEx0",
+    "Qn_q-FA1PjM",
+    "RJl7SoKny-A",
+    "SNZJiuImnks",
+    "SxdOUGdseq4",
+    "TOBmHM6_hGc",
+    "TW3Hy5-Z2Pc",
+    "UF8uR6Z6KLc",
+    "Uhx-26GfCBU",
+    "Unzc731iCUY",
+    "V8KJ89LFjD8",
+    "Vi_EMRLVk34",
+    "XiCdhLJE93Q",
+    "XoH44mH5laY",
+    "YJg02ivYzSs",
+    "YLrpvo1YJM0",
+    "ZAzWPE9CItg",
+    "ZSRHeXYDLko",
+    "ZTC_RxWN_xo",
+    "ZTcqu224vHw",
+    "ZkouG0BTQt4",
+    "_Krn7n4q2pU",
+    "_Mp_bpIZKlI",
+    "_ahvzDzKdB0",
+    "a1zDuOPkMSw",
+    "b2F-DItXtZs",
+    "bwyxgCjYWgU",
+    "cxzsYD7zmpk",
     "d-7o9xYp7eE",
     "dBnniua6-oM",
-    "b2F-DItXtZs",
-    "-zRN7XLCRhc",
-    "rStL7niR7gs",
-    "7Pq-S557XQU",
-    "PHe0bXAIuk0",
+    "dfHADOYmfk0",
+    "eJ3RzGoQC4s",
+    "eMXsnh3kd1I",
+    "egDlxXlgfH8",
+    "f0J_EeW42Lo",
     "f84n5oFoZBc",
+    "fZh4mYDxixQ",
+    "frYSOKvNiiE",
+    "fywP9nZ5yzM",
+    "g-xa75k3ILg",
+    "hADjbGhsios",
+    "hCb3oiSH-Bc",
+    "i0O2URp0HpM",
+    "iDaxRNIddME",
+    "ikOnfR01Vyc",
+    "il0dgxjpoC0",
+    "ioBAxblGGqI",
+    "iw9SZgyahqg",
+    "jJnL48TXiQY",
+    "ji5_MqicxSo",
+    "kZRE7HIO3vk",
+    "kp0jkUqVuok",
+    "lKXe3HUG2l4",
+    "mJYxSed0D_I",
+    "mOvHKBOQ6mU",
+    "nF4FxCTq6-Y",
+    "nKjPBAw_N_0",
+    "nMLeGbEsSBM",
+    "oKg1hTOQXoY",
+    "oeqPrUmVz-o",
+    "ooGKNwJWdb8",
+    "oyLBGkS5ICk",
+    "pz74r-4dGfQ",
+    "q6tFekbtzNw",
+    "qC7yjEyom3w",
+    "rE3j_RHkqJc",
+    "rI8tNMsozo0",
+    "rStL7niR7gs",
+    "rX0ItVEVjHc",
+    "s_mN0DpOttI",
+    "t4YGJV7wONw",
+    "u-8KpXcPYCw",
+    "u6XAPnuFjJc",
+    "uD4izuDMUQA",
+    "v-NGxyPjcrE",
+    "vPUn6QzJzO4",
+    "vQSz3PO-zA0",
+    "vtIzMaLkCaM",
+    "w3_0x6oaDmI",
+    "xFYUo0ZmK-A",
+    "xPIMk4d4ulI",
+    "xhahGIzYftI",
+    "xy_7SzwsIjM",
+    "y4BdOtm40SA",
     "yJDv-zdhzMY",
-    "u6XAPnuFjJc"
+    "yULk8eNa2mg",
+    "z28UbGAPteA",
+    "zKtbu_O484k"
   ],
   "videos": {
     "d-7o9xYp7eE": {
@@ -151,7 +300,7 @@
     },
     "-zRN7XLCRhc": {
       "title_zh": "LISA11 - 枝繁叶茂！illumos 的崛起与发展",
-      "blurb_zh": "回顾 illumos 操作系统的历史与未来，探索其作为 OpenSolaris ",
+      "blurb_zh": "回顾 illumos 操作系统的历史与未来，探索其作为 OpenSolaris",
       "highlights": [
         {
           "text": "10.1s 演讲开场与对历史长河的思考",
@@ -493,6 +642,602 @@
       },
       "youtube_comment_units": 1,
       "updated_at": "2026-11-06T14:38:51Z"
+    },
+    "583ThJIqQ7k": {
+      "title_zh": "Fable 5.2：自我改进循环仍在循环……（外加 Gemini Carbon）",
+      "blurb_zh": "AI Explained 解析 Fable 5.2 的自我改进循环，并谈及"
+    },
+    "yULk8eNa2mg": {
+      "title_zh": "代币化、智能体交易、Harmonic：Robinhood CEO Vlad Tenev 谈扩大所有权",
+      "blurb_zh": "No Priors 对话 Robinhood CEO，聊代币化、智能体交易与扩大"
+    },
+    "ooGKNwJWdb8": {
+      "title_zh": "直面我们的 AI 未来：Jeff Dean 与李飞飞闭幕主题对话“发现循环”",
+      "blurb_zh": "斯坦福 HAI 闭幕炉边对话，Jeff Dean 与李飞飞谈 AI 未来与风险。"
+    },
+    "FGCP2F_7rQk": {
+      "title_zh": "台湾：与黄仁勋一起体验最精彩的夜市 | Lex Fridman",
+      "blurb_zh": "Lex Fridman 与黄仁勋逛台湾夜市，边走边聊。"
+    },
+    "u-8KpXcPYCw": {
+      "title_zh": "博士创业必须戒掉的 10 个习惯 | Startup School",
+      "blurb_zh": "YC 讲师讲博士生做创业需要改掉的学术思维习惯。"
+    },
+    "rX0ItVEVjHc": {
+      "title_zh": "CppCon 2014：Mike Acton《面向数据的设计与 C++》",
+      "blurb_zh": "CppCon 经典演讲，讲面向数据的设计思路与 C++ 实践。"
+    },
+    "i0O2URp0HpM": {
+      "title_zh": "水下机器人：物理 AI 最难的考验",
+      "blurb_zh": "MIT CSAIL 介绍水下机器人研究及其面临的工程挑战。"
+    },
+    "mJYxSed0D_I": {
+      "title_zh": "探索地球上最偏远的岛屿（光路程就要 15 天）",
+      "blurb_zh": "纪录片式探访地球上最难抵达的偏远岛屿。"
+    },
+    "26P1KyvrmjI": {
+      "title_zh": "我解开了所有桌游",
+      "blurb_zh": "Mark Rober 用工程与实验方式挑战各类桌游。"
+    },
+    "KfODG5REyss": {
+      "title_zh": "我终于亲眼看到了量子力学……（比预想的更诡异）",
+      "blurb_zh": "Veritasium 用实验直观展示量子力学现象。"
+    },
+    "2ZKANCH80-M": {
+      "title_zh": "珍珠港事件后美国空袭东京",
+      "blurb_zh": "Yarnhub 讲述珍珠港之后美军对东京的报复性空袭。"
+    },
+    "7wLhJ7q7By4": {
+      "title_zh": "中国超级工程 | 工程奇迹",
+      "blurb_zh": "Lifeder 盘点中国的超级工程与建设成就。"
+    },
+    "5_Fayfx2NUM": {
+      "title_zh": "我如何从晚期癌症中活下来（一个有趣的故事）",
+      "blurb_zh": "用轻松方式讲述一段晚期癌症幸存经历。"
+    },
+    "vQSz3PO-zA0": {
+      "title_zh": "致命里尔喷气机坠毁事件惊人新细节！",
+      "blurb_zh": "航空频道分析一起里尔喷气机坠毁的新细节。"
+    },
+    "dfHADOYmfk0": {
+      "title_zh": "我去了最便宜的排灯节鞭炮制作工厂！",
+      "blurb_zh": "探访印度最便宜的排灯节鞭炮生产工厂。"
+    },
+    "7VA9cHUELaY": {
+      "title_zh": "现代汽车的印度之路：30年的规模、信任与进步",
+      "blurb_zh": "现代汽车回顾在印度三十年的发展历程。"
+    },
+    "B8EhqJLto6w": {
+      "title_zh": "我找到了我最偏远的订阅者",
+      "blurb_zh": "博主出发寻找地理位置最偏远的订阅者。"
+    },
+    "kp0jkUqVuok": {
+      "title_zh": "如果俄罗斯明天发动攻击，北约的计划是什么",
+      "blurb_zh": "用地图推演北约面对俄罗斯攻击的应对方案。"
+    },
+    "4xcxvWivWBU": {
+      "title_zh": "我在直播中骗走13000美元，骗子气炸了！",
+      "blurb_zh": "直播反制诈骗者，把对方的钱反骗回来。"
+    },
+    "q6tFekbtzNw": {
+      "title_zh": "我买到了梦想之车！！（2027款劳斯莱斯）",
+      "blurb_zh": "博主提走自己梦想中的劳斯莱斯新车。"
+    },
+    "F1inSnWGaLk": {
+      "title_zh": "布鲁伊 - 最佳憋笑挑战合集 🤣 全程搞怪混乱 [YTP]",
+      "blurb_zh": "布鲁伊素材的恶搞混剪憋笑挑战合集。"
+    },
+    "N-ZdH5kQQ1I": {
+      "title_zh": "Magale | Baththa | Sai Abhyankar | Vijay Sethupathi",
+      "blurb_zh": "维杰·塞图帕蒂相关歌曲的剪辑短片。"
+    },
+    "RJl7SoKny-A": {
+      "title_zh": "里尔喷气机坠毁更新：NTSB在数英里外发现尾部残骸",
+      "blurb_zh": "机长解读NTSB关于坠机尾部残骸的新发现。"
+    },
+    "SNZJiuImnks": {
+      "title_zh": "《罗摩衍那》电影影评 | Yogi Bolta Hai",
+      "blurb_zh": "影评频道点评《罗摩衍那》电影。"
+    },
+    "BsFx3ZZh91U": {
+      "title_zh": "我们见过这一幕……就在俄罗斯入侵乌克兰之前",
+      "blurb_zh": "军事频道分析当前局势与俄乌战争前兆的相似之处。"
+    },
+    "9l9szCohqbE": {
+      "title_zh": "无聊在家能做的所有软软玩具和指尖玩具",
+      "blurb_zh": "教你用家常材料自制各种解压软玩具和指尖玩具。"
+    },
+    "fZh4mYDxixQ": {
+      "title_zh": "非洲家庭：万圣节僵尸",
+      "blurb_zh": "SamSpedy 喜剧短剧，非洲家庭系列的万圣节僵尸篇。"
+    },
+    "NdoymvcC8LY": {
+      "title_zh": "走进皮革工厂 ft. Medha｜Jist",
+      "blurb_zh": "探访皮革工厂，了解皮革制品的生产流程。"
+    },
+    "Deenp3PtSEE": {
+      "title_zh": "夫妇自己动手改造后院，省下9万美元",
+      "blurb_zh": "一对夫妇DIY改造自家后院，节省了大笔施工费用。"
+    },
+    "QRVz697rEx0": {
+      "title_zh": "我们让AI造了一个机器人士兵，结果正如专家所警告",
+      "blurb_zh": "用AI构建机器人士兵，结果印证了专家的担忧。"
+    },
+    "GfkwWYl5aX4": {
+      "title_zh": "iPhone Duo 对比 18 Pro Max：用两天我受够了，解锁、静音、打字、充电都要多等一下｜彼得森",
+      "blurb_zh": "彼得森分享两天使用iPhone Duo与18 Pro Max的体验吐槽。"
+    },
+    "eMXsnh3kd1I": {
+      "title_zh": "关于这个冬天，大家都错了……",
+      "blurb_zh": "气象频道讨论对今年冬季天气的常见误判。"
+    },
+    "C_2wWuYomjo": {
+      "title_zh": "问头等舱乘客的职业（票价7万）",
+      "blurb_zh": "在头等舱采访乘客，询问他们的职业背景。"
+    },
+    "zKtbu_O484k": {
+      "title_zh": "MrBeast 把我妻子关了起来",
+      "blurb_zh": "ZHC 参与 MrBeast 的挑战，妻子被“关”了起来。"
+    },
+    "LktQRU8OD4Y": {
+      "title_zh": "里尔60坠机：她想对机长说什么？",
+      "blurb_zh": "分析里尔60坠机事故中，副驾驶试图传达的信息。"
+    },
+    "s_mN0DpOttI": {
+      "title_zh": "这个假贝斯手回应了……而且更糟。",
+      "blurb_zh": "Davie504 回应假贝斯手事件，情况反而更糟。"
+    },
+    "vPUn6QzJzO4": {
+      "title_zh": "我爬上冰山进行极限悬崖跳水",
+      "blurb_zh": "红牛极限运动：攀上冰山后完成悬崖跳水。"
+    },
+    "Qn_q-FA1PjM": {
+      "title_zh": "全新梅赛德斯 SEC：80 年代超级双门轿跑重生！| 4K",
+      "blurb_zh": "Top Gear 4K 呈现梅赛德斯 SEC 超级双门轿跑。"
+    },
+    "nMLeGbEsSBM": {
+      "title_zh": "新歌 2026 | 印地语新歌《Teri Yaadon Ka Silsila》| Emran Hashmi | Kriti Sanon | 新歌",
+      "blurb_zh": "印地语新歌，由 Emran Hashmi 与 Kriti Sanon 出演。"
+    },
+    "YLrpvo1YJM0": {
+      "title_zh": "我买下了世界上最深的深海怪物……",
+      "blurb_zh": "The Fish Guys 购入深海生物并展示。"
+    },
+    "nF4FxCTq6-Y": {
+      "title_zh": "2,351,672 次尝试打破一项世界纪录",
+      "blurb_zh": "Yosh 记录为打破一项世界纪录的反复尝试。"
+    },
+    "ikOnfR01Vyc": {
+      "title_zh": "2026 VCT 冠军赛开幕式 ft. Grabbitz、Oli Sykes、Courtney LaPlante、keshi 与 Nana Ouyang",
+      "blurb_zh": "2026 VCT 冠军赛开幕式演出集锦。"
+    },
+    "D8rpR3c-Fb0": {
+      "title_zh": "无需 WiFi！把 SIM 卡放进充电器就能用",
+      "blurb_zh": "Creator Tips 演示把 SIM 卡放入充电器的用法。"
+    },
+    "cxzsYD7zmpk": {
+      "title_zh": "墨西哥城往事 | DHL x Holly Humberstone",
+      "blurb_zh": "Holly Humberstone 与 DHL 合作的墨西哥城短片。"
+    },
+    "88itHnh8eMI": {
+      "title_zh": "互联网上最令人忌惮的孩子们",
+      "blurb_zh": "fern 讲述网络上令人忌惮的青少年群体。"
+    },
+    "GriFRs3Us7U": {
+      "title_zh": "Facebook 刚越过了底线……人们正在发现",
+      "blurb_zh": "She Prepares 谈 Facebook 引发关注的新动向。"
+    },
+    "ioBAxblGGqI": {
+      "title_zh": "LET’S GR00VE [MEGA EVOLUTION]",
+      "blurb_zh": "anifi beats 的电子音乐作品《LET’S GR00VE》。"
+    },
+    "xhahGIzYftI": {
+      "title_zh": "我 42 岁，这 11 种圣经超级食物让我感觉回到 28 岁",
+      "blurb_zh": "Ben Azadi 介绍 11 种所谓圣经超级食物。"
+    },
+    "iw9SZgyahqg": {
+      "title_zh": "支撑理论计算机科学的那个东西刚刚坏了……算是吧",
+      "blurb_zh": "Fireship 讲理论计算机科学近期出现的一个变化。"
+    },
+    "xFYUo0ZmK-A": {
+      "title_zh": "这可能是我们收到的最糟糕的 AI 警告",
+      "blurb_zh": "AI In Context 讨论一则关于 AI 风险的警告。"
+    },
+    "K-aJ4L5xxcg": {
+      "title_zh": "两只兔子占领一座岛会发生什么？",
+      "blurb_zh": "Nature exe 讲述兔子在岛上繁殖带来的生态后果。"
+    },
+    "CrO0Timw2z4": {
+      "title_zh": "我让员工升级办公室（他们差点搞砸了）",
+      "blurb_zh": "Linus Tech Tips 记录员工自行改造办公室的过程。"
+    },
+    "NDviWuSMRtU": {
+      "title_zh": "一个视频如何毁了 PopularMMOs 的生活",
+      "blurb_zh": "SkyBoi 回顾 PopularMMOs 因一个视频遭遇的变故。"
+    },
+    "-YP3OCTy3lg": {
+      "title_zh": "这家牛排馆是迈阿密最难订的位子 | On The Line | Bon Appétit",
+      "blurb_zh": "Bon Appétit 走进迈阿密一家极难订位的牛排馆后厨。"
+    },
+    "fywP9nZ5yzM": {
+      "title_zh": "我们坦白了两真一假 | Confession Booth",
+      "blurb_zh": "OG Crew 玩两真一假，成员轮流坦白并互相猜。"
+    },
+    "Vi_EMRLVk34": {
+      "title_zh": "急救人员在凌晨三点看到的事很吓人",
+      "blurb_zh": "Doctor Mike 聊急救人员在深夜出诊时遇到的状况。"
+    },
+    "_Krn7n4q2pU": {
+      "title_zh": "他把陡峭山坡变成了一栋 50 万美元的小屋",
+      "blurb_zh": "Quantum Makers 记录在陡坡上建造小屋的过程。"
+    },
+    "pz74r-4dGfQ": {
+      "title_zh": "你的 AI 智能体正在对你隐瞒错误 - Ben Holmes, Warp",
+      "blurb_zh": "Warp 的 Ben Holmes 讲 AI 智能体隐藏自身错误的问题。"
+    },
+    "Q78dJ0vkWe8": {
+      "title_zh": "如何构建未来：Paul Graham 与 Amjad Masad 对谈",
+      "blurb_zh": "Y Combinator 对谈，聊 Replit 与 AI 编程的发展。"
+    },
+    "nKjPBAw_N_0": {
+      "title_zh": "如何打造一座能自我改进的软件工厂 - Zach Lloyd, Warp",
+      "blurb_zh": "Warp 的 Zach Lloyd 讲如何搭建能自我改进的软件工厂。"
+    },
+    "9F9x3MufdMQ": {
+      "title_zh": "DeepSeek Harness（DSH）解析：一切皆插件",
+      "blurb_zh": "介绍 DeepSeek Harness 的插件化设计思路。"
+    },
+    "32vxW6GMeLY": {
+      "title_zh": "人人可用的模型：Trajectory 的 Ronak 如何打造持续学习产品",
+      "blurb_zh": "Trajectory 联合创始人谈持续学习与自训练模型。"
+    },
+    "g-xa75k3ILg": {
+      "title_zh": "AI 泡沫破了吗？——AI 圈动态",
+      "blurb_zh": "sentdex 盘点近期 AI 领域动态并讨论泡沫话题。"
+    },
+    "y4BdOtm40SA": {
+      "title_zh": "Salesforce 在 AI 时代的收购策略",
+      "blurb_zh": "Salesforce 高管谈 AI 时代什么样的初创公司值得收购。"
+    },
+    "il0dgxjpoC0": {
+      "title_zh": "本地 AI 301：量化",
+      "blurb_zh": "Hugging Face 本地 AI 系列讲模型量化。"
+    },
+    "jJnL48TXiQY": {
+      "title_zh": "关于 Kimi K3.1 Pro 你需要知道的一切：对话 Moonshot AI 与 Together AI",
+      "blurb_zh": "Moonshot AI 与 Together AI 对谈介绍 Kimi K3.1"
+    },
+    "v-NGxyPjcrE": {
+      "title_zh": "NVIDIA GTC 柏林 2026 主题演讲：CEO 黄仁勋",
+      "blurb_zh": "黄仁勋在 GTC 柏林 2026 的主题演讲。"
+    },
+    "-YMMRQ1qscI": {
+      "title_zh": "亚马逊 CEO Andy Jassy 谈为 AI 时代重塑亚马逊",
+      "blurb_zh": "Jassy 谈亚马逊在 AI 时代的投入与重构。"
+    },
+    "xy_7SzwsIjM": {
+      "title_zh": "如何构建会随时间变好的智能体：模型、框架与上下文 | Interrupt 伦敦",
+      "blurb_zh": "LangChain 活动上谈让智能体持续改进的方法。"
+    },
+    "L4SWQebqhek": {
+      "title_zh": "Ineffable Intelligence 的 David Silver 与 Lasse Espeholt：经验时代的超级学习者",
+      "blurb_zh": "AlphaGo 作者谈打造从零开始学习的超级学习者。"
+    },
+    "bwyxgCjYWgU": {
+      "title_zh": "AI 如何改变印度的内容与广告",
+      "blurb_zh": "讨论 AI 对印度内容创作和广告行业的影响。"
+    },
+    "8oB9sf1SKhs": {
+      "title_zh": "专业团队用的 AI 写实工作流（Eleven v4 + Seedance 2.5）",
+      "blurb_zh": "演示用 Eleven v4 与 Seedance 2.5 做写实风格内容。"
+    },
+    "mOvHKBOQ6mU": {
+      "title_zh": "与伊丽莎白女王工程奖得主炉边对话",
+      "blurb_zh": "斯坦福HAI举办的炉边对话，邀请伊丽莎白女王工程奖得主交流。"
+    },
+    "4nKt18AZDsQ": {
+      "title_zh": "谷歌12小时蒸发5000亿美元 | DoorDash以170亿美元收购Instacart | Kalshi融资10亿美元",
+      "blurb_zh": "20VC盘点谷歌市值波动、DoorDash收购与Kalshi融资等科技财经大事。"
+    },
+    "ZAzWPE9CItg": {
+      "title_zh": "数学中的AI危机：纳维-斯托克斯方程、黎曼猜想与复杂性理论 | Lex Fridman播客第503期",
+      "blurb_zh": "Lex Fridman与嘉宾探讨AI对数学研究的冲击与相关难题。"
+    },
+    "frYSOKvNiiE": {
+      "title_zh": "2045年的计算机芯片会是什么样？",
+      "blurb_zh": "Dwarkesh Patel访谈嘉宾，展望2045年芯片的形态与走向。"
+    },
+    "f0J_EeW42Lo": {
+      "title_zh": "罗伯特·卡罗研究权力50年学到了什么",
+      "blurb_zh": "Dwarkesh Patel对话传记作家罗伯特·卡罗，谈他对权力的长期观察。"
+    },
+    "4UmFfI8CWuA": {
+      "title_zh": "推理将成10万亿美元市场：无人看清之处 | 软件投资者要完蛋 | Naveen Rao",
+      "blurb_zh": "20VC对话Naveen Rao，谈推理市场前景与软件投资的处境。"
+    },
+    "JHo-aiePjoM": {
+      "title_zh": "走进AI黑箱：AI模型究竟如何思考 | Emmanuel Ameisen（Anthropic）",
+      "blurb_zh": "Lenny播客对话Anthropic的Emmanuel Ameisen，聊AI模"
+    },
+    "19qrLchbQEc": {
+      "title_zh": "如何真正找到产品市场契合 | Rob Snyder（《The Power of Pull》作者）",
+      "blurb_zh": "Lenny播客请Rob Snyder讲找产品市场契合的实操方法。"
+    },
+    "iDaxRNIddME": {
+      "title_zh": "Lindon Gao / Dyna：在机器人迷雾中寻找清晰、分歧与选择，以及王阳明",
+      "blurb_zh": "张小珺播客对话Dyna的Lindon Gao，聊机器人创业与个人思考。"
+    },
+    "hADjbGhsios": {
+      "title_zh": "徕芬科技创始人叶洪新×罗永浩！初中毕业后，我先造飞机去了……｜罗永浩的十字路口",
+      "blurb_zh": "罗永浩对话徕芬创始人叶洪新，聊他的早年经历与创业故事。"
+    },
+    "86wFCPat2GY": {
+      "title_zh": "David Qian / ECOVACS：父子、企业传承内幕、机器人与我对意义的追寻",
+      "blurb_zh": "张小珺播客对话科沃斯的David Qian，聊家族企业传承与机器人。"
+    },
+    "AwuTTOJGEi0": {
+      "title_zh": "网络安全与药物研发的物理法则之变：对话OpenAI总裁Greg Brockman",
+      "blurb_zh": "No Priors对话Greg Brockman，谈AI如何改变网络安全与药物研"
+    },
+    "LtUDeizHqKk": {
+      "title_zh": "Fat Joe：Tiny Desk 音乐会",
+      "blurb_zh": "Fat Joe 在 NPR Tiny Desk 带来现场演出。"
+    },
+    "z28UbGAPteA": {
+      "title_zh": "Vieze Asbak | Boiler Room LA：Teletech",
+      "blurb_zh": "Vieze Asbak 在 Boiler Room 洛杉矶 Teletech 场"
+    },
+    "1czUusLWcZg": {
+      "title_zh": "Rex Orange County - Iron Man | A COLORS SHOW",
+      "blurb_zh": "Rex Orange County 在 COLORS 演绎《Iron Man》。"
+    },
+    "TOBmHM6_hGc": {
+      "title_zh": "Sienna Senate - Do Your Thing | A COLORS SHOW",
+      "blurb_zh": "Sienna Senate 在 COLORS 带来《Do Your Thing》"
+    },
+    "GXVZMiDbtiM": {
+      "title_zh": "sub:shaman - 完整演出（KEXP 现场）",
+      "blurb_zh": "sub:shaman 在 KEXP 录制完整现场演出。"
+    },
+    "V8KJ89LFjD8": {
+      "title_zh": "Shabazz Palaces - 完整演出（KEXP 现场）",
+      "blurb_zh": "Shabazz Palaces 在 KEXP 带来完整现场表演。"
+    },
+    "XiCdhLJE93Q": {
+      "title_zh": "Sienna Senate | A COLORS 访谈",
+      "blurb_zh": "COLORS 对 Sienna Senate 的访谈节目。"
+    },
+    "HYA9e0XOUGk": {
+      "title_zh": "Cardi B：Tiny Desk 音乐会",
+      "blurb_zh": "Cardi B 在 NPR Tiny Desk 带来现场演出。"
+    },
+    "ZTcqu224vHw": {
+      "title_zh": "Los Tigres del Norte：Tiny Desk 音乐会",
+      "blurb_zh": "Los Tigres del Norte 在 Tiny Desk 现场演出。"
+    },
+    "73wCQRQb7v0": {
+      "title_zh": "Jungle：Tiny Desk 音乐会",
+      "blurb_zh": "Jungle 在 NPR Tiny Desk 带来现场表演。"
+    },
+    "xPIMk4d4ulI": {
+      "title_zh": "CMAT：Tiny Desk 音乐会",
+      "blurb_zh": "CMAT 在 NPR Tiny Desk 带来现场演出。"
+    },
+    "XoH44mH5laY": {
+      "title_zh": "Richard O'Brien 的《洛基恐怖秀》：Tiny Desk 音乐会",
+      "blurb_zh": "《洛基恐怖秀》剧组在 Tiny Desk 现场演出。"
+    },
+    "TW3Hy5-Z2Pc": {
+      "title_zh": "Anderson .Paak 与 Cordae - 58th Floor | A COLORS SHOW",
+      "blurb_zh": "Anderson .Paak 和 Cordae 在 COLORS 节目中合作演出"
+    },
+    "_Mp_bpIZKlI": {
+      "title_zh": "Brìghde Chaimbeul：Tiny Desk Concert",
+      "blurb_zh": "苏格兰风笛手 Brìghde Chaimbeul 的 NPR Tiny"
+    },
+    "MYdu77oejOs": {
+      "title_zh": "Draco Rosa：Tiny Desk Concert",
+      "blurb_zh": "波多黎各音乐人 Draco Rosa 的 NPR Tiny Desk 演出。"
+    },
+    "DuwDrPcC5fs": {
+      "title_zh": "The Womack Sisters - I Am Your Season | A COLORS SHOW",
+      "blurb_zh": "The Womack Sisters 在 COLORS 节目中演唱 I Am"
+    },
+    "egDlxXlgfH8": {
+      "title_zh": "Russian Circles - 完整演出（KEXP 现场）",
+      "blurb_zh": "后金属乐队 Russian Circles 在 KEXP 的完整现场演出。"
+    },
+    "P7Nb6-bw1Vs": {
+      "title_zh": "Zara Larsson - Blue Moon | Radio 1 的 Big Weekend 2026",
+      "blurb_zh": "Zara Larsson 在 BBC Radio 1 Big Weekend"
+    },
+    "hCb3oiSH-Bc": {
+      "title_zh": "Cristale - H2O | A COLORS SHOW",
+      "blurb_zh": "Cristale 在 COLORS 节目中表演 H2O。"
+    },
+    "Ark1UNElQlk": {
+      "title_zh": "Jenna Ortega 和 Amy Adams 点评与否决“不受欢迎观点”",
+      "blurb_zh": "两位演员在 BBC Radio 1 节目里点评听众的不受欢迎观点。"
+    },
+    "MzpgppYi8dU": {
+      "title_zh": "Olivia Colman 和 Alexander Skarsgård 点评或否决你的“不受欢迎观点”",
+      "blurb_zh": "两位演员在 BBC Radio 1 节目中回应听众的不受欢迎观点。"
+    },
+    "Gevh6u7wkfw": {
+      "title_zh": "Love Spells - Maybe I Still Love You | A COLORS SHOW",
+      "blurb_zh": "Love Spells 在 COLORS 节目中演唱 Maybe I"
+    },
+    "0DEOtXTQOG4": {
+      "title_zh": "“原谅我的屁股！”《Wicker》的 Olivia Colman 与 Alexander Skarsgård 聊床戏与杀青礼物",
+      "blurb_zh": "两位演员聊拍摄中的床戏场面和杀青礼物等幕后趣事。"
+    },
+    "APe7fhdkp9Q": {
+      "title_zh": "Dj Smokey | Boiler Room：洛杉矶",
+      "blurb_zh": "Dj Smokey 在 Boiler Room 洛杉矶场的 DJ 演出。"
+    },
+    "O6mRxDItyWQ": {
+      "title_zh": "Ryan Beatty - Delancey | A COLORS SHOW",
+      "blurb_zh": "Ryan Beatty 在 COLORS 节目中演唱 Delancey。"
+    },
+    "BWyrhKi-0Ck": {
+      "title_zh": "Çudamani 完整演出（KEXP 现场）",
+      "blurb_zh": "Çudamani 在 KEXP 的完整现场演出。"
+    },
+    "7fwMSrtNLEo": {
+      "title_zh": "Sematary | Boiler Room：洛杉矶",
+      "blurb_zh": "Sematary 在 Boiler Room 洛杉矶场的演出。"
+    },
+    "ZkouG0BTQt4": {
+      "title_zh": "Josh Baker 在 Amnesia 第二部分 - Radio 1 Essential Mix - 日落时段",
+      "blurb_zh": "Josh Baker 在 Amnesia 日落时段的 Essential"
+    },
+    "qC7yjEyom3w": {
+      "title_zh": "The Glitch Mob | Boiler Room 洛杉矶：heds",
+      "blurb_zh": "The Glitch Mob 在 Boiler Room 洛杉矶 heds 场的"
+    },
+    "t4YGJV7wONw": {
+      "title_zh": "JID 与 TiaCorine - Backyard | Boiler Room：纽约",
+      "blurb_zh": "JID 和 TiaCorine 在 Boiler Room 纽约场表演"
+    },
+    "N-3CblQjwnU": {
+      "title_zh": "Cristale | A COLORS 访谈",
+      "blurb_zh": "COLORS 对 Cristale 的访谈节目。"
+    },
+    "ji5_MqicxSo": {
+      "title_zh": "Randy Pausch 最后的讲座：实现童年梦想",
+      "blurb_zh": "Randy Pausch 在卡内基梅隆大学的最后一场讲座。"
+    },
+    "UF8uR6Z6KLc": {
+      "title_zh": "史蒂夫·乔布斯 2005 年斯坦福毕业演讲",
+      "blurb_zh": "乔布斯在斯坦福大学毕业典礼上的演讲。"
+    },
+    "ZTC_RxWN_xo": {
+      "title_zh": "硅谷秘史",
+      "blurb_zh": "计算机历史博物馆讲述硅谷历史的讲座。"
+    },
+    "NOAgplgTxfc": {
+      "title_zh": "斯坦福 Sapolsky 谈美国抑郁症（完整讲座）",
+      "blurb_zh": "Sapolsky 在斯坦福关于美国抑郁症的完整讲座。"
+    },
+    "0CDXJ6bMkMY": {
+      "title_zh": "David Heinemeier Hansson 在 2008 创业学校的演讲",
+      "blurb_zh": "David Heinemeier Hansson 在创业学校的分享。"
+    },
+    "2Op3QLzMgSY": {
+      "title_zh": "MIT 6.001 计算机程序的构造与解释 1986 第一讲 A",
+      "blurb_zh": "MIT 经典课程 SICP 的 1986 年第一堂课录像。"
+    },
+    "NNnIGh9g6fA": {
+      "title_zh": "人类行为生物学导论",
+      "blurb_zh": "斯坦福课程，介绍人类行为生物学的基本框架。"
+    },
+    "rI8tNMsozo0": {
+      "title_zh": "Rails Conf 2012 主题演讲：简洁至关重要（Rich Hickey）",
+      "blurb_zh": "Rich Hickey 在 Rails Conf 谈为何简洁在软件设计中重要。"
+    },
+    "_ahvzDzKdB0": {
+      "title_zh": "语言的成长（Guy Steele）",
+      "blurb_zh": "Guy Steele 关于编程语言如何设计与成长的演讲。"
+    },
+    "a1zDuOPkMSw": {
+      "title_zh": "Hamming：你和你的研究（1995 年 6 月 6 日）",
+      "blurb_zh": "Richard Hamming 谈如何做出重要研究工作的经典演讲。"
+    },
+    "EKWGGDXe5MA": {
+      "title_zh": "费曼计算机科学讲座：硬件、软件与启发式",
+      "blurb_zh": "费曼从物理视角谈计算机硬件、软件与启发式方法。"
+    },
+    "oKg1hTOQXoY": {
+      "title_zh": "Alan Kay 在 OOPSLA 1997：计算机革命尚未发生",
+      "blurb_zh": "Alan Kay 回顾计算历史，谈尚未实现的计算机革命。"
+    },
+    "8pTEmbeENF4": {
+      "title_zh": "Bret Victor：编程的未来",
+      "blurb_zh": "Bret Victor 谈编程方式可能的未来方向。"
+    },
+    "lKXe3HUG2l4": {
+      "title_zh": "Joe Armstrong：我们身处的混乱",
+      "blurb_zh": "Joe Armstrong 在 Strange Loop 谈软件行业的现状与问题"
+    },
+    "DJklHwoYgBQ": {
+      "title_zh": "智能管道｜伪广告｜Adult Swim",
+      "blurb_zh": "Adult Swim 伪广告短片，讽刺智能管道式产品。"
+    },
+    "w3_0x6oaDmI": {
+      "title_zh": "为什么电子投票是个坏主意 - Computerphile",
+      "blurb_zh": "Computerphile 解释电子投票系统为何存在风险。"
+    },
+    "rE3j_RHkqJc": {
+      "title_zh": "你能看完这段而不生气吗？",
+      "blurb_zh": "CGP Grey 讲解一个容易让人情绪激动的议题。"
+    },
+    "MFzDaBzBlL0": {
+      "title_zh": "反向大脑自行车 - Smarter Every Day 133",
+      "blurb_zh": "通过改装自行车实验，探讨大脑学习与习惯形成的过程。"
+    },
+    "IOiZatlZtGU": {
+      "title_zh": "Philip Wadler 演讲：命题即类型",
+      "blurb_zh": "Philip Wadler 讲解命题与类型对应关系的编程语言理论演讲。"
+    },
+    "QM1iUe6IofM": {
+      "title_zh": "面向对象编程很糟糕",
+      "blurb_zh": "Brian Will 阐述他对面向对象编程的批评观点。"
+    },
+    "eJ3RzGoQC4s": {
+      "title_zh": "自我的世纪（Adam Curtis 完整纪录片）",
+      "blurb_zh": "Adam Curtis 探讨心理学与消费文化如何影响现代社会的纪录片。"
+    },
+    "KkpqA8yG9T4": {
+      "title_zh": "核聚变突破？——Dennis Whyte 教授",
+      "blurb_zh": "MIT 教授 Dennis Whyte 讲解核聚变研究进展的演讲。"
+    },
+    "YJg02ivYzSs": {
+      "title_zh": "超现实",
+      "blurb_zh": "Keiichi Matsuda 创作的增强现实未来生活概念短片。"
+    },
+    "oyLBGkS5ICk": {
+      "title_zh": "Spec-ulation 主题演讲 - Rich Hickey",
+      "blurb_zh": "Rich Hickey 关于软件版本与规范演进的会议主题演讲。"
+    },
+    "9CO6M2HsoIA": {
+      "title_zh": "杀戮机器人",
+      "blurb_zh": "关于自主武器风险的警示短片。"
+    },
+    "kZRE7HIO3vk": {
+      "title_zh": "三千万行代码问题",
+      "blurb_zh": "Molly Rocket 探讨大型软件代码库规模问题的视频。"
+    },
+    "vtIzMaLkCaM": {
+      "title_zh": "领导力实验室：高效写作的技艺",
+      "blurb_zh": "芝加哥大学关于学术与专业写作技巧的讲座。"
+    },
+    "uD4izuDMUQA": {
+      "title_zh": "未来的时间流逝：通往时间尽头的旅程（4K）",
+      "blurb_zh": "melodysheep 制作的宇宙未来演化 4K 视觉短片。"
+    },
+    "JvBT4XBdoUE": {
+      "title_zh": "Erlang 与 Elixir 的灵魂 • Sasa Juric • GOTO 2019",
+      "blurb_zh": "Sasa Juric 在 GOTO 2019 讲解 Erlang 与"
+    },
+    "Unzc731iCUY": {
+      "title_zh": "如何演讲",
+      "blurb_zh": "MIT公开课，讲公开演讲的方法与技巧。"
+    },
+    "ZSRHeXYDLko": {
+      "title_zh": "防止文明崩溃 / Jonathan Blow（Thekla, Inc）",
+      "blurb_zh": "游戏开发者Jonathan Blow谈文明与软件复杂性的演讲。"
+    },
+    "oeqPrUmVz-o": {
+      "title_zh": "史蒂夫·乔布斯回应侮辱——最高画质",
+      "blurb_zh": "乔布斯面对观众挑衅时的现场回应片段。"
+    },
+    "Uhx-26GfCBU": {
+      "title_zh": "为什么加拿大人冬天不能骑车（芬兰人却可以）",
+      "blurb_zh": "对比加拿大与芬兰的冬季骑行条件与城市设计。"
+    },
+    "SxdOUGdseq4": {
+      "title_zh": "“简单源于容易”——Rich Hickey（2011）",
+      "blurb_zh": "Rich Hickey谈简单与容易之别的经典技术演讲。"
     }
   },
   "stats": {
@@ -509,5 +1254,6 @@
     "models": {
       "gemini-3.5-flash-lite": 10
     }
-  }
+  },
+  "title_source": "deepseek-title-blurb"
 }

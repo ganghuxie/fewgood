@@ -222,7 +222,7 @@ def test_ai_feed_falls_back_when_rss_returns_no_entries(tmp_path, monkeypatch):
         'name': 'AI Channel', 'youtube_channel_id': 'UC1',
     }]}, allow_unicode=True))
     client = FallbackRecordingClient(
-        {'fallbackAI01': raw_video('fallbackAI01', 'PT5M')},
+        {'fallbackAI01': raw_video('fallbackAI01', 'PT10M')},
         playlists={'UU1': [upload('fallbackAI01')]},
     )
 
@@ -243,7 +243,7 @@ def test_ai_feed_discovers_via_rss_and_prefilters_old_posts(tmp_path, monkeypatc
         'name': 'AI Channel', 'youtube_channel_id': 'UC1',
     }]}, allow_unicode=True))
     old = (datetime.now(timezone.utc) - timedelta(days=40)).isoformat()
-    client = RecordingClient({'freshAI0001': raw_video('freshAI0001', 'PT5M')})
+    client = RecordingClient({'freshAI0001': raw_video('freshAI0001', 'PT10M')})
 
     result = ai_feed(
         channels_file=str(channels_path), client=client, output=str(tmp_path / 'out'),

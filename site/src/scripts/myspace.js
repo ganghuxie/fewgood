@@ -29,6 +29,7 @@ if (enabled && shell && explore && space) {
   const topicsById = new Map();
   let pool = [];
   const poolById = new Map();
+  const zhById = new Map();
   let templates = [];
   let mode = 'explore';
 
@@ -55,7 +56,7 @@ if (enabled && shell && explore && space) {
 
   function card(video, column) {
     const href = `${base}/v/${encodeURIComponent(video.id)}/${isTopicColumn(column) ? `?from=${encodeURIComponent('topic:' + (column.topic_id || column.source))}` : ''}`;
-    return videoCard(video, href);
+    return videoCard(video, href, zhById.get(video.id) || null);
   }
   function matching(videos, column) {
     if (isTopicColumn(column)) {
@@ -237,8 +238,8 @@ if (enabled && shell && explore && space) {
   const templatesReady = list => list.length > 0 && list.every(template => templateColumnsReady(template, MYSPACE_SOURCES, topics, catalog));
 
   (async () => {
-    const [topicsPayload, poolPayload, templatesPayload, catalogPayload] = await Promise.all([
-      fetchJSON('/topics.json'), fetchJSON('/hn_pool.json'), fetchJSON('/templates.json'), fetchJSON('/catalog.json'),
+    const [topicsPayload, poolPayload, templatesPayload, catalogPayload, zhPayload] = await Promise.all([
+      fetchJSON('/topics.json'), fetchJSON('/hn_pool.json'), fetchJSON('/templates.json'), fetchJSON('/catalog.json'), fetchJSON('/zh.json'),
     ]);
     topics = topicsPayload?.topics || [];
     topics.forEach(topic => topicsById.set(topic.id, topic));
@@ -246,6 +247,7 @@ if (enabled && shell && explore && space) {
     pool.forEach(video => poolById.set(video.id, video));
     templates = templatesPayload?.templates || [];
     catalog = Array.isArray(catalogPayload) ? catalogPayload : [];
+    Object.entries(zhPayload?.videos || {}).forEach(([id, entry]) => zhById.set(id, entry));
     state = load();
     const last = localStorage.getItem(LAST_TAB_KEY);
     const first = (last === 'myspace' || last === 'explore') ? last : (templatesReady(templates) ? 'myspace' : 'explore');

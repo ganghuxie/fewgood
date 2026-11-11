@@ -16,9 +16,10 @@ import yaml
 from .core import (
     Client, youtube_key, youtube_videos, video_record, iso_now,
     write_feed_if_not_sharply_smaller,
-    language_gate, podcast_display_cap, why_good_for, dedupe_channel_caps,
+    language_gate, podcast_display_cap, why_good_or_existing, dedupe_channel_caps,
     _load_existing_feeds, freshness_sort_key, drop_stale_videos,
     load_fresh_feed_records, metadata_cache_days,
+    visible_language_blocked, content_type_blocked, is_official_short_promo,
 )
 from .playability import playability_reason
 from .sources import channels_for_topic
@@ -303,6 +304,7 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
         record['_metadata_fetched_at'] = fetched_at
         videos.append(record)
     dropped_short = dropped_long = dropped_language = 0
+    dropped_content_type = dropped_visible_language = dropped_official_short = 0
     filtered = []
     for record in videos:
         duration_seconds = int(record.get('duration_seconds') or 0)
@@ -315,6 +317,16 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
         if not language_gate(record):
             dropped_language += 1
             continue
+        if visible_language_blocked(record):
+            dropped_visible_language += 1
+            continue
+        blocked, _reason = content_type_blocked(record, feed_name)
+        if blocked:
+            dropped_content_type += 1
+            continue
+        if is_official_short_promo(record, feed_name):
+            dropped_official_short += 1
+            continue
         filtered.append(record)
     videos = filtered
     existing = _load_existing_feeds(feed_name, output)
@@ -325,7 +337,7 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
         kept, dropped_display = podcast_display_cap(kept)
     kept.sort(key=lambda video: (-int(video.get('view_count') or 0), str(video.get('id', ''))))
     for rank, video in enumerate(kept, 1):
-        video['why_good'] = why_good_for(video, feed_name, rank=rank)
+        video['why_good'] = why_good_or_existing(video, feed_name, rank=rank)
     kept.sort(key=freshness_sort_key)
     out = dict(generated_at=iso_now(), source='curated_whitelist',
                min_duration_seconds=minimum,
@@ -335,6 +347,9 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
                candidates_fetched=len(ids), dropped_short=dropped_short,
                dropped_language=dropped_language, dropped_channel=dropped_channel,
                dropped_stale=dropped_stale,
+               dropped_content_type=dropped_content_type,
+               dropped_visible_language=dropped_visible_language,
+               dropped_official_short=dropped_official_short,
                final_count=len(kept), quota_units_approx=units,
                videos=kept)
     for reason, count in dropped_playability.items():

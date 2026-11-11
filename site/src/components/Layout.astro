@@ -2,7 +2,7 @@
 import Header from './Header.astro';
 import Sidebar from './Sidebar.astro';
 import { SITE_NAME, TAGLINE } from '../lib/brand.mjs';
-const { title = SITE_NAME, active = 'picks', description = `${SITE_NAME} 视频发现`, ogTitle = title, ogDescription = description, ogImage } = Astro.props;
+const { title = SITE_NAME, active = 'picks', description = '每天从 YouTube 与 Hacker News 里挑几条值得看的长视频', ogTitle = title, ogDescription = description, ogImage } = Astro.props;
 const defaultOgImage = `${import.meta.env.SITE || 'https://fewgood.io'}${import.meta.env.BASE_URL}og-image-1200x630.png`.replace(/([^:]\/)\/+/g, '$1');
 const shareImage = ogImage || defaultOgImage;
 const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN?.trim();
