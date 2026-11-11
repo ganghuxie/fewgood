@@ -21,7 +21,7 @@ from .core import (
     drop_stale_videos,
 )
 
-FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'videos')
+FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'editorial', 'videos')
 
 
 def enrich_records(records, raws):
@@ -97,7 +97,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     cap_kept, dropped_channel = apply_channel_caps_pool(lang_kept)
 
     dropped_stale = {}
-    for name in ('ai', 'podcast', 'music'):
+    for name in ('ai', 'podcast', 'music', 'editorial'):
         if name in cap_kept:
             cap_kept[name], dropped_stale[name] = drop_stale_videos(cap_kept[name])
 
@@ -111,13 +111,27 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
             continue
         if name == 'trending':
             final[name] = sort_by_view(cap_kept[name])
-        elif name in ('ai', 'podcast', 'music'):
+        elif name in ('ai', 'podcast', 'music', 'editorial'):
             final[name] = sorted(cap_kept[name], key=freshness_sort_key)
         else:
             final[name] = cap_kept[name]
 
+    feed_priority = {'videos': 0, 'community': 0, 'ai': 1, 'podcast': 2, 'music': 3, 'editorial': 4, 'trending': 5}
+    seen_ids, unique = set(), {}
+    for name in sorted(final, key=lambda feed: feed_priority.get(feed, 99)):
+        kept_videos = []
+        for video in final[name]:
+            video_id = video.get('id')
+            if video_id and video_id in seen_ids:
+                continue
+            if video_id:
+                seen_ids.add(video_id)
+            kept_videos.append(video)
+        unique[name] = kept_videos
+    final = unique
+
     for name, videos in final.items():
-        if name in ('trending', 'podcast', 'music'):
+        if name in ('trending', 'podcast', 'music', 'editorial'):
             for rank, video in enumerate(sort_by_view(videos), 1):
                 video['why_good'] = why_good_for(video, name, rank=rank)
         elif name == 'ai':
@@ -128,7 +142,8 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                 video['why_good'] = why_good_for(video, 'community')
 
     pick_payload = build_picks(
-        {'community': {'videos': final.get('videos')}, 'ai': {'videos': final.get('ai')}, 'podcast': {'videos': final.get('podcast')}},
+        {'community': {'videos': final.get('videos')}, 'ai': {'videos': final.get('ai')},
+         'podcast': {'videos': final.get('podcast')}, 'editorial': {'videos': final.get('editorial')}},
         generated_at=generated_at or iso_now(),
     )
 
@@ -142,7 +157,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                            dropped_channel=dropped_channel.get(name, 0))
             if name == 'podcast':
                 payload['dropped_podcast_display_cap'] = dropped_podcast
-            if name in ('ai', 'podcast', 'music'):
+            if name in ('ai', 'podcast', 'music', 'editorial'):
                 payload['dropped_stale'] = int(feeds[name].get('dropped_stale') or 0) + dropped_stale.get(name, 0)
             if name == 'videos':
                 payload['feed'] = 'community'

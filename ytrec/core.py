@@ -12,6 +12,7 @@ from collections import Counter
 import requests
 import yaml
 from .links import extract_ids, plain
+from .sources import channels_for_topic
 
 UTC = timezone.utc
 PACIFIC = ZoneInfo('America/Los_Angeles')
@@ -329,7 +330,13 @@ def _channel_priority(feed_name):
         return 0
     if feed_name == 'ai':
         return 1
-    return 2
+    if feed_name == 'podcast':
+        return 2
+    if feed_name == 'music':
+        return 3
+    if feed_name == 'editorial':
+        return 4
+    return 5
 
 
 def _video_view(video):
@@ -631,9 +638,9 @@ def is_official_brand_clip(video):
 
 
 def build_picks(feeds, generated_at=None, limit=10):
-    """Generate the 今日精选 feed (≤10) from community, AI and curated podcast."""
+    """Generate the 今日精选 feed (≤10) from community, AI, podcast, then editorial overflow."""
     groups = {}
-    for key, source_label in (('community', '社区推荐'), ('ai', 'AI前沿'), ('podcast', '播客')):
+    for key, source_label in (('community', '社区推荐'), ('ai', 'AI前沿'), ('podcast', '播客'), ('editorial', '科学教育')):
         feed = feeds.get(key) or {}
         videos = []
         for video in feed.get('videos', []):
@@ -643,14 +650,17 @@ def build_picks(feeds, generated_at=None, limit=10):
             if duration_seconds < PICKS_OFFICIAL_MIN_DURATION_SECONDS and is_official_brand_clip(video):
                 continue
             why = video.get('why_good') or why_good_for(video, key)
-            if not why:
+            if not why and key != 'editorial':
                 continue
-            videos.append(dict(video, why_good=why, source=key))
+            videos.append(dict(video, why_good=why or '', source=key))
         if key == 'community':
             videos.sort(key=lambda item: (-int(item.get('recommenders') or 0), -int(item.get('months') or 0)))
         else:
             videos, _dropped = drop_stale_videos(videos)
             videos.sort(key=freshness_sort_key)
+            if key == 'editorial':
+                for rank, video in enumerate(sorted(videos, key=lambda item: (-_video_view(item), str(item.get('id', '')))), 1):
+                    video['why_good'] = video.get('why_good') or why_good_for(video, 'editorial', rank=rank)
         groups[key] = (videos, source_label)
     quotas = {'community': 4, 'ai': 4, 'podcast': 2}
     picked = []
@@ -687,6 +697,15 @@ def build_picks(feeds, generated_at=None, limit=10):
                 continue
             seen.add(candidate['id'])
             picked.append(dict(candidate, pick_source=groups[key][1]))
+    if len(picked) < limit:
+        videos, _label = groups['editorial']
+        while cursor['editorial'] < len(videos) and len(picked) < limit:
+            candidate = videos[cursor['editorial']]
+            cursor['editorial'] += 1
+            if candidate['id'] in seen:
+                continue
+            seen.add(candidate['id'])
+            picked.append(dict(candidate, pick_source=groups['editorial'][1]))
     return dict(generated_at=generated_at or iso_now(), kind='picks', limit=limit,
                 mix=quotas, videos=picked)
 
@@ -857,13 +876,17 @@ def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_c
     return channels
 
 def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data', quota_limit=8000,
-            *, rss_fetcher=None):
+            *, rss_fetcher=None, sources_file=None):
     from .podcast_whitelist import (
         fetch_channel_rss_video_ids, normalize_rss_entries,
     )
     key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     rss_fetcher = rss_fetcher or fetch_channel_rss_video_ids
     channels = yaml.safe_load(Path(channels_file).read_text()).get('channels', [])
+    if sources_file is None and Path(channels_file).resolve() == Path('config/ai_channels.yaml').resolve():
+        sources_file = 'config/sources.yaml'
+    if sources_file:
+        channels = channels_for_topic('ai', channels, path=sources_file)
     cutoff = datetime.now(UTC) - timedelta(days=FRESHNESS_MAX_DAYS)
     discovered, units = {}, 0
     for channel in channels:

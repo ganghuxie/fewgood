@@ -17,10 +17,12 @@ from .core import (
     _load_existing_feeds, freshness_sort_key, drop_stale_videos,
     load_fresh_feed_records, metadata_cache_days,
 )
+from .sources import channels_for_topic
 
 MIN_DURATION = 1500
 MUSIC_MIN_DURATION = 180
 MUSIC_MAX_DURATION = 7200
+EDITORIAL_MIN_DURATION = 240
 DEFAULT_PODCAST_CONFIG = 'config/podcast_channels.yaml'
 DEFAULT_MUSIC_CONFIG = 'config/music_channels.yaml'
 RSS_URL = 'https://www.youtube.com/feeds/videos.xml'
@@ -160,11 +162,10 @@ def resolve_handles(channels, client=None, key=None, path=DEFAULT_PODCAST_CONFIG
     return channels, unresolved
 
 
-def curated_channel_feed(config_path, client=None, output='site/src/data', quota_limit=8000,
-                         *, feed_name, default_min, default_max=None, display_cap=False,
-                         rss_fetcher=None):
-    """Fetch a curated whitelist feed via channel RSS (no `search.list`)."""
-    payload, channels, minimum, maximum = _load_channels_config(config_path, default_min, default_max)
+def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, display_cap=False,
+                               client=None, output='site/src/data', quota_limit=8000,
+                               rss_fetcher=None, config_path=None):
+    """Shared fetch/write path for every curated channel feed."""
     key = youtube_key()
     client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     rss_fetcher = rss_fetcher or fetch_channel_rss_video_ids
@@ -172,7 +173,13 @@ def curated_channel_feed(config_path, client=None, output='site/src/data', quota
         1 for channel in channels
         if not channel.get('youtube_channel_id') and (channel.get('handle') or '').strip()
     )
-    channels, unresolved = resolve_handles(channels, client=client, key=key, path=config_path, write=True)
+    unresolved = [channel.get('name') for channel in channels if not channel.get('youtube_channel_id')]
+    if config_path and resolve_units:
+        channels, unresolved = resolve_handles(
+            channels, client=client, key=key, path=config_path, write=True,
+        )
+    else:
+        unresolved = [name for name in unresolved if name]
     ids, seen, units = [], set(), resolve_units
     for channel in channels:
         cid = channel.get('youtube_channel_id')
@@ -244,19 +251,46 @@ def curated_channel_feed(config_path, client=None, output='site/src/data', quota
     return out
 
 
+def curated_channel_feed(config_path, client=None, output='site/src/data', quota_limit=8000,
+                         *, feed_name, default_min, default_max=None, display_cap=False,
+                         rss_fetcher=None, sources_file=None):
+    """Fetch a curated whitelist feed via channel RSS (no `search.list`)."""
+    payload, channels, minimum, maximum = _load_channels_config(config_path, default_min, default_max)
+    if sources_file is None and Path(config_path).resolve() in (Path(DEFAULT_PODCAST_CONFIG).resolve(), Path(DEFAULT_MUSIC_CONFIG).resolve()):
+        sources_file = 'config/sources.yaml'
+    if sources_file:
+        channels = channels_for_topic(feed_name, channels, path=sources_file)
+    return _curated_feed_from_channels(
+        channels, feed_name=feed_name, minimum=minimum, maximum=maximum,
+        display_cap=display_cap, client=client, output=output,
+        quota_limit=quota_limit, rss_fetcher=rss_fetcher, config_path=config_path,
+    )
+
+
 def curated_podcast_feed(config_path=DEFAULT_PODCAST_CONFIG, client=None, output='site/src/data', quota_limit=8000,
-                         *, rss_fetcher=None):
+                         *, rss_fetcher=None, sources_file=None):
     return curated_channel_feed(
         config_path, client=client, output=output, quota_limit=quota_limit,
         feed_name='podcast', default_min=MIN_DURATION, display_cap=True,
+        rss_fetcher=rss_fetcher, sources_file=sources_file,
+    )
+
+
+def curated_editorial_feed(client=None, output='site/src/data', quota_limit=8000,
+                           *, rss_fetcher=None, sources_file='config/sources.yaml'):
+    """Fetch the active editorial/science channels from sources.yaml."""
+    channels = channels_for_topic('editorial', (), path=sources_file)
+    return _curated_feed_from_channels(
+        channels, feed_name='editorial', minimum=EDITORIAL_MIN_DURATION,
+        client=client, output=output, quota_limit=quota_limit,
         rss_fetcher=rss_fetcher,
     )
 
 
 def curated_music_feed(config_path=DEFAULT_MUSIC_CONFIG, client=None, output='site/src/data', quota_limit=8000,
-                       *, rss_fetcher=None):
+                       *, rss_fetcher=None, sources_file=None):
     return curated_channel_feed(
         config_path, client=client, output=output, quota_limit=quota_limit,
         feed_name='music', default_min=MUSIC_MIN_DURATION, default_max=MUSIC_MAX_DURATION,
-        rss_fetcher=rss_fetcher,
+        rss_fetcher=rss_fetcher, sources_file=sources_file,
     )

@@ -781,7 +781,7 @@ def _refresh_cluster_signals(clusters):
 
 def _load_editorial(root='site/src/data'):
     videos = []
-    for name in ('picks', 'trending', 'ai', 'podcast', 'music', 'videos'):
+    for name in ('picks', 'trending', 'ai', 'podcast', 'music', 'editorial', 'videos'):
         path = Path(root) / f'{name}.json'
         if not path.exists():
             continue

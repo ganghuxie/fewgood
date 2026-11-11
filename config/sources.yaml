@@ -1,0 +1,934 @@
+# Repo-static source table for curated feeds.
+sources:
+- id: openai
+  type: channel
+  external_id: UCXZCJLdBC09xxGZ6gcdrc6A
+  handle: OpenAI
+  display_name: OpenAI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: anthropic
+  type: channel
+  external_id: UCrDwWp7EBBv4NwvScIpBDOA
+  handle: AnthropicAI
+  display_name: Anthropic
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: google-deepmind
+  type: channel
+  external_id: UCP7jMXSY2xbc3KCAE0MHQ-A
+  handle: GoogleDeepMind
+  display_name: Google DeepMind
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: ai-at-meta
+  type: channel
+  external_id: UC5qxlwEKM7-5YZudb24l0bg
+  handle: AIatMeta
+  display_name: AI at Meta
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: nvidia
+  type: channel
+  external_id: UCHuiy8bXnmK5nisYHUd1J5g
+  handle: nvidia
+  display_name: NVIDIA
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: hugging-face
+  type: channel
+  external_id: UCHlNU7kIZhRgSbhHvFoy72w
+  handle: huggingface
+  display_name: Hugging Face
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: stability-ai
+  type: channel
+  external_id: UCrhOqMww3ItTHOKxtYM56cg
+  handle: StabilityAI
+  display_name: Stability AI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: midjourney
+  type: channel
+  external_id: UCldFPBqAVrok5DPUQeSMEqQ
+  handle: midjourney
+  display_name: Midjourney
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: deeplearning-ai
+  type: channel
+  external_id: UCcIXc5mJsHVYTZR1maL5l9w
+  handle: DeepLearningAI
+  display_name: DeepLearning.AI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: mistral-ai
+  type: channel
+  external_id: UCRaz_dquopKtb4ptswKcxTA
+  handle: MistralAI
+  display_name: Mistral AI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: cohere
+  type: channel
+  external_id: UCAKTUy0tz47ZY02DFpxMqoQ
+  handle: cohere
+  display_name: Cohere
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: perplexity
+  type: channel
+  external_id: UCTSqI4c58ffN6l5Mbdat6dg
+  handle: perplexity_ai
+  display_name: Perplexity
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: runway
+  type: channel
+  external_id: UCUBqu_z5uP0AZhYtuyFZB3g
+  handle: runwayml
+  display_name: Runway
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: elevenlabs
+  type: channel
+  external_id: UC-ew9TfeD887qUSiWWAAj1w
+  handle: ElevenLabs
+  display_name: ElevenLabs
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: character-ai
+  type: channel
+  external_id: UCwU4GDx7DC7eUVtgTuI4zeA
+  handle: character_ai
+  display_name: Character.AI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: scale-ai
+  type: channel
+  external_id: UCAHS4cP-uIXdrpCsSfGq_OA
+  handle: scale_AI
+  display_name: Scale AI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: together-ai
+  type: channel
+  external_id: UCgiSqzt-AFeQFa6-pAxTIvA
+  handle: togethercompute
+  display_name: Together AI
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: cursor
+  type: channel
+  external_id: UC6YYHJzM6PhZ2Yey9BQiUaw
+  handle: cursor_ai
+  display_name: Cursor
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: langchain
+  type: channel
+  external_id: UCC-lyoTfSrcJzA1ab3APAgw
+  handle: LangChain
+  display_name: LangChain
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: pinecone
+  type: channel
+  external_id: UCulYMQ-GOvXkDeoxFojwKQw
+  handle: pinecone
+  display_name: Pinecone
+  tier: 1
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: ai-engineer
+  type: channel
+  external_id: UCLKPca3kwwd-B59HNr-_lvA
+  handle: aiDotEngineer
+  display_name: AI Engineer
+  tier: 2
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: the-rundown-ai
+  type: channel
+  external_id: UC8LUzR34nNX8KH3Edd0un1g
+  handle: TheRundownAI
+  display_name: The Rundown AI
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: latent-space-ai
+  type: channel
+  external_id: UCxBcwypKK-W3GHd_RZ9FZrQ
+  handle: latentspacepod
+  display_name: Latent Space
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  notes: AI whitelist channel; distinct from the podcast-whitelist Latent Space channel.
+- id: andrej-karpathy
+  type: channel
+  external_id: UCe4jUOmQPKMDvOkzJpDfMRQ
+  handle: karpathy
+  display_name: Andrej Karpathy
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: andrew-ng
+  type: channel
+  external_id: UC0nw93YVMDAuABkfDexpF2Q
+  handle: AndrewYNg
+  display_name: Andrew Ng
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: yann-lecun
+  type: channel
+  external_id: UCMU7l2bIv6MXlgJR3-E33Dw
+  handle: ylecun
+  display_name: Yann LeCun
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: francois-chollet
+  type: channel
+  external_id: UC820bCs6DQWEozZnLeBPpaQ
+  handle: fchollet
+  display_name: François Chollet
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: greg-brockman
+  type: channel
+  external_id: UCF3n5QTuQ6qel9kEZ6JWO7g
+  handle: gdb
+  display_name: Greg Brockman
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: jack-clark
+  type: channel
+  external_id: UCNFv-eBKW_xhTCiziy8zjJA
+  handle: jackclarkSF
+  display_name: Jack Clark
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: jim-fan
+  type: channel
+  external_id: UC4vr9HaKGCYLmmiCXnzac7A
+  handle: DrJimFan
+  display_name: Jim Fan
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: hardmaru
+  type: channel
+  external_id: UCw-ZrGIgic129_VsuwUHWFg
+  handle: hardmaru
+  display_name: hardmaru
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: lex-fridman
+  type: channel
+  external_id: UCSHZKyawb77ixDdsGog4iWA
+  handle: lexfridman
+  display_name: Lex Fridman
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  - podcast
+- id: two-minute-papers
+  type: channel
+  external_id: UCbfYPyITQ-7l4upoX8nvctg
+  handle: twominutepapers
+  display_name: Two Minute Papers
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: sentdex
+  type: channel
+  external_id: UCfzlCWGWYyIQ0aLC5w48gBQ
+  handle: Sentdex
+  display_name: Sentdex
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: 3blue1brown
+  type: channel
+  external_id: UCYO_jab_esuFRV4b17AJtAw
+  handle: 3blue1brown
+  display_name: 3Blue1Brown
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: ai-explained
+  type: channel
+  external_id: UCNJ1Ymd5yFuUPtn21xtRbbw
+  handle: AIExplainedYT
+  display_name: AI Explained
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: siraj-raval
+  type: channel
+  external_id: UCWN3xxRkmTPmbKwht9FuE5A
+  handle: sirajraval
+  display_name: Siraj Raval
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: swyx
+  type: channel
+  external_id: UC50YKpKY_2Y86Qo4DZY3mMQ
+  handle: swyx
+  display_name: swyx
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: ethan-mollick
+  type: channel
+  external_id: UCuEvINOL2TLekZeeCk50Yug
+  handle: emollick
+  display_name: Ethan Mollick
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: rowan-cheung
+  type: channel
+  external_id: UCt6l0E-bBC1Z4d7C3qgh3cA
+  handle: rowancheung
+  display_name: Rowan Cheung
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: linus-ekenstam
+  type: channel
+  external_id: UCFnSHboIJpG6-hriXMyHvYg
+  handle: LinusEkenstam
+  display_name: Linus Ekenstam
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: mckay-wrigley
+  type: channel
+  external_id: UCXZFVVCFahewxr3est7aT7Q
+  handle: mckaywrigley
+  display_name: Mckay Wrigley
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+- id: dwarkesh
+  type: channel
+  external_id: UCXl4i9dYBrFOabk0xGmbkRA
+  handle: dwarkeshpatel
+  display_name: Dwarkesh
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: acquired
+  type: channel
+  external_id: UCyFqFYfTW2VoIQKylJ04Rtw
+  handle: acquiredfm
+  display_name: Acquired
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: lennys-podcast
+  type: channel
+  external_id: UC6t1O76G0jYXOAoYCm153dA
+  handle: LennysPodcast
+  display_name: Lenny's Podcast
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: 20vc
+  type: channel
+  external_id: UCf0PBRjhf0rF8fWBIxTuoWA
+  handle: 20vc
+  display_name: 20VC
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: latent-space-podcast
+  type: channel
+  external_id: UC_gbloeO227-3D_otwJUrGQ
+  handle: latentspace
+  display_name: Latent Space
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - podcast
+  notes: Podcast whitelist channel; distinct from the AI-whitelist Latent Space channel.
+- id: no-priors
+  type: channel
+  external_id: UCSI7h9hydQ40K5MJHnCrQvw
+  handle: NoPriorsPodcast
+  display_name: No Priors
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: silicon-valley-101
+  type: channel
+  external_id: UCd5AYYgeVHSO8eafpnkix6A
+  handle: SiliconValley101
+  display_name: 硅谷101
+  tier: 3
+  daily_cap: 1
+  language: zh
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: zhang-xiaojun
+  type: channel
+  external_id: UC3Sv1JuKpbOx3csUO8FAo5g
+  handle: xiaojunpodcast
+  display_name: 张小珺
+  tier: 3
+  daily_cap: 1
+  language: zh
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: latepost
+  type: channel
+  external_id: UCy5_zPTtj0aW8Tg8v3UpNNw
+  handle: latepost
+  display_name: 晚点 LatePost
+  tier: 3
+  daily_cap: 1
+  language: zh
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: luanfanshu
+  type: channel
+  external_id: UCQjFF8rhcydwOV7I4U9_YMQ
+  handle: luanfanshu
+  display_name: 乱翻书
+  tier: 3
+  daily_cap: 1
+  language: zh
+  status: active
+  topics:
+  - podcast
+  notes: Existing podcast whitelist.
+- id: npr-music
+  type: channel
+  external_id: UC4eYXhJI4-7wSWc8UNRwD4A
+  handle: nprmusic
+  display_name: NPR Music
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - music
+  notes: Existing music whitelist.
+- id: kexp
+  type: channel
+  external_id: UC3I2GFN_F8WudD_2jUZbojA
+  handle: kexp
+  display_name: KEXP
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - music
+  notes: Existing music whitelist.
+- id: colors
+  type: channel
+  external_id: UC2Qw1dzXDBAZPwS7zm37g8g
+  handle: COLORSxSTUDIOS
+  display_name: COLORS
+  tier: 3
+  daily_cap: 1
+  language: multi
+  status: active
+  topics:
+  - music
+  notes: Existing music whitelist.
+- id: cercle
+  type: channel
+  external_id: UCPKT_csvP72boVX0XrMtagQ
+  handle: Cercle
+  display_name: Cercle
+  tier: 3
+  daily_cap: 1
+  language: multi
+  status: active
+  topics:
+  - music
+  notes: Existing music whitelist.
+- id: boiler-room
+  type: channel
+  external_id: UCGBpxWJr9FNOcFYA5GkKrMg
+  handle: boilerroom
+  display_name: Boiler Room
+  tier: 3
+  daily_cap: 1
+  language: multi
+  status: active
+  topics:
+  - music
+  notes: Existing music whitelist.
+- id: bbc-radio-1
+  type: channel
+  external_id: UC-FQUIVQ-bZiefzBiQAa8Fw
+  handle: BBCRadio1
+  display_name: BBC Radio 1
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - music
+  notes: Existing music whitelist.
+- id: hacker-news
+  type: community
+  external_id: hn
+  display_name: Hacker News
+  tier: 4
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - community
+  notes: HN community source; no channel fetch.
+- id: crossroads-luoyonghao
+  type: channel
+  external_id: UC33VP_gIBzCVcEvaGKBocZA
+  handle: 罗永浩的十字路口
+  display_name: 罗永浩的十字路口
+  tier: 3
+  daily_cap: 1
+  language: zh
+  status: active
+  topics:
+  - podcast
+  notes: 45.5K subs; public upload 7d before 2026-11-11 (CrossRoads Ep.37). Chinese long-form talk channel.
+- id: stanford-hai
+  type: channel
+  external_id: UChugFTK0KyrES9terTid8vA
+  handle: stanfordhai
+  display_name: Stanford HAI
+  tier: 2
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  notes: 36.5K subs; public upload 6d before 2026-11-11. Stanford HAI talks/conference series.
+- id: ycombinator
+  type: channel
+  external_id: UCcefcZRL2oaA_uBNeo5UOWg
+  handle: ycombinator
+  display_name: Y Combinator
+  tier: 2
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  notes: 2.43M subs; public upload 2d before 2026-11-11. Startup/AI speaker series.
+- id: a16z
+  type: channel
+  external_id: UC9cn0TuPq4dnbTY-CBsm8XA
+  handle: a16z
+  display_name: a16z
+  tier: 2
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  notes: 308K subs; public upload 14h before 2026-11-11. AI/startup talks and interviews.
+- id: mit-csail
+  type: channel
+  external_id: UCBpxspUNl1Th33XbugiHJzw
+  handle: MITCSAIL
+  display_name: MIT CSAIL
+  tier: 2
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  notes: 90.5K subs; public upload 3w before 2026-11-11. Research talks.
+- id: sequoia-capital
+  type: channel
+  external_id: UCWrF0oN6unbXrWsTN7RctTw
+  handle: sequoiacapital
+  display_name: Sequoia Capital
+  tier: 2
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - ai
+  notes: 257K subs; public upload 5d before 2026-11-11. Founder/AI interviews.
+- id: veritasium
+  type: channel
+  external_id: UCHnyfMqiRRG1u-2MsSQLbXA
+  handle: veritasium
+  display_name: Veritasium
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 21.4M subs; public upload 6d before 2026-11-11. Science explainers.
+- id: computerphile
+  type: channel
+  external_id: UC9-y-6csu5WGm29I7JiwpnA
+  handle: Computerphile
+  display_name: Computerphile
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 2.64M subs; public upload 5d before 2026-11-11. CS explainers.
+- id: ted
+  type: channel
+  external_id: UCAuUUnT6oDeKwE6v1NGQxug
+  handle: TED
+  display_name: TED
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 28M subs; public upload 14h before 2026-11-11. Talks.
+- id: long-now
+  type: channel
+  external_id: UCT1yd7gEOrja_gecmA1lT0Q
+  handle: longnow
+  display_name: The Long Now Foundation
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 141K subs; public upload 6d before 2026-11-11. Long-form talks.
+- id: computer-history-museum
+  type: channel
+  external_id: UCHDr4RtxwA1KqKGwxgdK4Vg
+  handle: ComputerHistory
+  display_name: Computer History Museum
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 180K subs; public upload 4d before 2026-11-11. Computing history.
+- id: kurzgesagt
+  type: channel
+  external_id: UCsXVk37bltHxD1rDPwtNM8Q
+  handle: kurzgesagt
+  display_name: Kurzgesagt – In a Nutshell
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 25.8M subs; public upload 15h before 2026-11-11. Science animation.
+- id: numberphile
+  type: channel
+  external_id: UCoxcjq-8xIDTYp3uz647V5A
+  handle: numberphile
+  display_name: Numberphile
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 4.79M subs; public upload 1d before 2026-11-11. Mathematics.
+- id: pbs-space-time
+  type: channel
+  external_id: UC7_gcs09iThXybpVgjHZ_7g
+  handle: pbsspacetime
+  display_name: PBS Space Time
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 3.54M subs; public upload 5d before 2026-11-11. Physics/space.
+- id: usenix
+  type: channel
+  external_id: UC4-GrpQBx6WCGwmwozP744Q
+  handle: UsenixOrg
+  display_name: USENIX
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 42.8K subs; public upload 1d before 2026-11-11. Systems conference talks.
+- id: stanford-gsb
+  type: channel
+  external_id: UCGwuxdEeCf0TIA2RbPOj-8g
+  handle: stanfordgsb
+  display_name: Stanford Graduate School of Business
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 2.81M subs; public upload 4d before 2026-11-11. Business/tech talks.
+- id: harvard-business-review
+  type: channel
+  external_id: UCWo4IA01TXzBeGJJKWHOG9g
+  handle: harvardbusinessreview
+  display_name: Harvard Business Review
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 1.68M subs; public upload 12h before 2026-11-11. Business/tech interviews.
+- id: knowledge-project
+  type: channel
+  external_id: UCLtTf_uKt0Itd0NG7txrwXA
+  handle: tkppodcast
+  display_name: The Knowledge Project Podcast
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 468K subs; public upload 19h before 2026-11-11. Long-form interviews.
+- id: hard-fork
+  type: channel
+  external_id: UCZcR2SVWaGWNlMqPxvQS3vw
+  handle: hardfork
+  display_name: Hard Fork
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 77.4K subs; public upload 15h before 2026-11-11. Tech journalism.
+- id: steve-mould
+  type: channel
+  external_id: UCEIwxahdLz7bap-VDs9h35A
+  handle: SteveMould
+  display_name: Steve Mould
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 3.62M subs; public upload 10d before 2026-11-11. Science explainers.
+- id: sabine-hossenfelder
+  type: channel
+  external_id: UC1yNl2E66ZzKApQdRuTQ4tw
+  handle: SabineHossenfelder
+  display_name: Sabine Hossenfelder
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 1.79M subs; public upload 1d before 2026-11-11. Physics.
+- id: minutephysics
+  type: channel
+  external_id: UCUHW94eEFW7hkUMVaZz4eDg
+  handle: minutephysics
+  display_name: minutephysics
+  tier: 3
+  daily_cap: 1
+  language: en
+  status: active
+  topics:
+  - editorial
+  notes: 5.99M subs; public upload 12d before 2026-11-11. Physics animation.
+
