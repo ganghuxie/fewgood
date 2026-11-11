@@ -92,17 +92,34 @@ def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
     assert 'YouTube Data API' in about
     assert 'Hacker News' in about
     assert 'hello@fewgood.io' in about
-    for banned in ('Reddit', '可能', '计划', '大概', 'sync.js', 'end-to-end', '端到端', '今日精选', '服务器不收集任何痕迹'):
+    for banned in (
+        'Reddit', '可能', '计划', '大概', 'sync.js', 'end-to-end', '端到端',
+        '今日精选', '服务器不收集任何痕迹', '安全加密同步', '为什么有 fewgood',
+        '内容从哪里来', '数据与隐私', '联系我们', '第三方播放器', '稍后再看',
+    ):
         assert banned not in about
     assert '前往精选' in about
     assert 'fewgood/issues' in about
-    assert '通过加密连接同步' in about
+    assert '通过加密连接同步到云端数据库' in about
     assert 'mailto:' in about
     assert 'localStorage' in about
     assert 'a few good videos · 告别无尽刷屏，只看好内容' in about
-    assert '从今天精选的几条开始看起' in about
+    assert '不必在海量视频里迷失，从今天精选的几条开始看起。' in about
+    assert '为什么做 fewgood？' in about
+    assert '我们给你的三个承诺' in about
+    assert '少而精，拒绝信息过载' in about
+    assert '高信噪比的硬核来源' in about
     assert '纯净、克制、诚实' in about
-    assert '关于视频广告的诚实说明' in about
+    assert '关于视频广告的诚实说明：视频通过 YouTube 官方播放器嵌入展示' in about
+    assert '隐私与数据承诺' in about
+    assert '你的个人数据属于你，我们不做用户画像追踪：' in about
+    assert '稍后看 100%' in about
+    assert '不会同步到我们的数据库' in about
+    assert 'PostHog 会尊重「请勿追踪」设置' in about
+    assert '版权与内容归属' in about
+    assert '开启今天的发现' in about
+    assert '交流与反馈' in about
+    assert 'fewgood 是一个持续生长的独立产品' in about
 
 
 def test_video_page_heading_keeps_last_updated_outside_h1():
