@@ -6,7 +6,9 @@ from ytrec.core import (
     dedupe_channel_caps,
     apply_channel_caps_pool,
     podcast_display_cap,
+    why_good_is_honest,
     why_good_for,
+    why_good_or_existing,
     build_picks,
     PICKS_MIN_DURATION_SECONDS,
     PICKS_OFFICIAL_MIN_DURATION_SECONDS,
@@ -135,6 +137,42 @@ def test_why_good_community_and_ai():
     assert '本周新片' not in why_good_for(video(channel='Channel'), 'trending')
 
 
+def test_music_why_good_rejects_boilerplate_and_builds_concrete_series_reasons():
+    assert not why_good_is_honest('适合喜欢这位歌手', 'music')
+    assert not why_good_is_honest('想了解这位歌手背景和想法可以看这段对话', 'music')
+    assert not why_good_is_honest('适合电子乐听众', 'music')
+    assert not why_good_is_honest('适合喜欢这位歌手')
+    assert not why_good_is_honest('想了解这位歌手背景和想法可以看这段对话。')
+    assert why_good_is_honest('说唱歌手在办公桌旁的小型现场，气氛轻松。', 'music')
+
+    cases = (
+        ('Fat Joe: Tiny Desk Concert', 'NPR Music', 'Tiny Desk'),
+        ('Rex Orange County - Iron Man | A COLORS SHOW', 'COLORS', 'COLORS 舞台现场'),
+        ('Sienna Senate | A COLORS INTERVIEW', 'COLORS', 'COLORS 音乐人访谈'),
+        ('Vieze Asbak | Boiler Room LA: Teletech', 'Boiler Room', 'Boiler Room 现场'),
+        ('Josh Baker at Amnesia pt. II - Radio 1’s Essential Mix - Sunset set', 'BBC Radio 1', 'Essential Mix'),
+        ('sub:shaman - Full Performance (Live on KEXP)', 'KEXP', 'KEXP 完整现场演出'),
+    )
+    for title, channel, marker in cases:
+        reason = why_good_for(video(title=title, channel=channel), 'music')
+        assert marker in reason
+        assert len(reason) <= 40
+        for banned in ('适合', '想听', '想了解', '想看'):
+            assert banned not in reason
+
+
+def test_music_why_good_or_existing_replaces_boilerplate_keeps_honest():
+    honest_reason = '说唱歌手在办公桌旁的小型现场，气氛轻松。'
+    boilerplate = video(title='Ryan Beatty - Delancey | A COLORS SHOW', channel='COLORS',
+                        why_good='COLORS 现场演出，适合喜欢这位歌手的人。')
+    honest = video(title='Fat Joe: Tiny Desk Concert', channel='NPR Music', why_good=honest_reason)
+
+    replaced = why_good_or_existing(boilerplate, 'music')
+    assert replaced != boilerplate['why_good']
+    assert 'COLORS' in replaced and '适合' not in replaced
+    assert why_good_or_existing(honest, 'music') == honest_reason
+
+
 def test_picks_require_why_good_and_never_exceed_ten():
     community = [video(id=f'c{i}', channel_id=f'cc{i}', published_at='2018-01-01T00:00:00Z',
                        recommenders=100 - i, months=60, span_days=3000) for i in range(8)]
@@ -215,6 +253,27 @@ def test_rebuild_offline_keeps_honest_why_good_and_replaces_metadata(tmp_path):
     reasons = {video['id']: video['why_good'] for video in updated['trending']['videos']}
     assert reasons['honest'] == '来自频道「Channel」的近期长视频'
     assert reasons['metadata'] == '来自频道「Channel」的近期长视频'
+
+
+def test_rebuild_offline_rewrites_music_boilerplate_and_keeps_honest(tmp_path):
+    from ytrec.offline import rebuild_offline
+
+    honest_reason = '说唱歌手在办公桌旁的小型现场，气氛轻松。'
+    boilerplate = video(id='music-boiler', title='Ryan Beatty - Delancey | A COLORS SHOW',
+                        channel='COLORS', channel_id='colors', published_at=_days_ago_iso(1),
+                        view_count=100, why_good='COLORS 现场演出，适合喜欢这位歌手的人。')
+    honest = video(id='music-honest', title='Fat Joe: Tiny Desk Concert', channel='NPR Music',
+                   channel_id='npr', published_at=_days_ago_iso(2), view_count=90,
+                   why_good=honest_reason)
+    (tmp_path / 'music.json').write_text(json.dumps({'videos': [boilerplate, honest]}))
+
+    _summary, updated = rebuild_offline(root=tmp_path)
+
+    reasons = {video['id']: video['why_good'] for video in updated['music']['videos']}
+    assert reasons['music-boiler'] != boilerplate['why_good']
+    assert 'COLORS' in reasons['music-boiler']
+    assert '适合' not in reasons['music-boiler']
+    assert reasons['music-honest'] == honest_reason
 
 
 def test_picks_exclude_official_brand_clip_under_three_minutes():

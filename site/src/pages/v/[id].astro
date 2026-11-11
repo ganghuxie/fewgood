@@ -49,7 +49,7 @@ const titleFor = (section, video) => zhFor(section, video)?.title_zh || video.ti
 const bannedWhyGood = /本周新片|近30天播放|近 30 天同类|播放第/;
 const humanWhyGood = value => { const text = String(value || '').trim(); return text && !bannedWhyGood.test(text) ? text : ''; };
 const beijingDate = value => { if (!value) return ''; const date = new Date(value); if (Number.isNaN(date.getTime())) return ''; const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(date); const part = type => parts.find(item => item.type === type)?.value || ''; return `${part('year')}-${part('month')}-${part('day')}`; };
-const metaLine = (section, video) => { const span = humanizeRecommendSpan(video.span_days); const body = isCommunity(section, video) ? `${video.recommenders} 人推荐${span ? ` · ${span}` : ''}` : `${compact(video.view_count)} 次观看`; return [beijingDate(video.published_at), body, duration(video.duration_seconds)].filter(Boolean).join(' · '); };
+const metaLine = (section, video) => { const span = humanizeRecommendSpan(video.span_days); const body = isCommunity(section, video) ? `${video.recommenders} 人推荐${span ? ` · ${span}` : ''}` : `${compact(video.view_count)}次观看`; return [beijingDate(video.published_at), body, duration(video.duration_seconds)].filter(Boolean).join(' · '); };
 const timestamp = seconds => `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
 const relatedFor = (section, video) => (feeds[section]?.videos || []).filter(v => v.id !== video.id).slice(0, 6).map(v => ({ id: v.id, title: v.title, channel: v.channel, thumb: `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`, url: videoUrl(section, v.id, base) }));
 const primary = entries[0];

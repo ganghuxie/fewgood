@@ -1,3 +1,4 @@
+import re
 import subprocess
 from pathlib import Path
 
@@ -51,7 +52,7 @@ const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', dura
 
 const regular = card({ ...base, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
 assert.equal((regular.match(/OpenAI/g) || []).length, 1);
-assert.deepEqual(metas(regular), ['OpenAI', '12.3万 次观看 · 今天']);
+assert.deepEqual(metas(regular), ['OpenAI', '12.3万次观看 · 今天']);
 
 const community = card({ ...base, recommenders: 5, months: 18, span_days: 180, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
 assert.equal((community.match(/OpenAI/g) || []).length, 1);
@@ -136,10 +137,17 @@ def test_recommendation_age_uses_span_days_everywhere():
 def test_library_panel_footer_is_tab_driven_not_static_history_duplicate():
     header = (Path(__file__).resolve().parents[1] / 'site/src/components/Header.astro').read_text()
     footer_line = next(line for line in header.splitlines() if 'data-panel-footer' in line)
-    assert '/history/' not in footer_line
-    assert 'href="#"' in footer_line
+    assert "href={link('/history/')}" in footer_line
+    assert 'href="#"' not in footer_line
     assert "paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' }" in header
     assert 'footer.href = `${base}${paths[kind]}`' in header
+    assert "document.querySelector('.library-cluster')" in header
+    nav = re.search(r'<nav class="libraries"[^>]*>(.*?)</nav>', header, re.S)
+    assert nav
+    nav_body = nav.group(1)
+    assert 'lib-panel' not in nav_body
+    assert '查看全部' not in nav_body
+    assert nav_body.count('data-lib-kind=') == 3
 
 
 def test_myspace_card_shows_community_classic_badge_only_when_flagged():
@@ -161,3 +169,55 @@ def test_layout_keeps_global_styles_and_classic_badge():
     assert '.site-header' in source
     assert '.community-classic-badge' in source
     assert '.video-grid' in source
+
+
+def test_compact_counts_have_no_space_before_units():
+    root = Path(__file__).resolve().parents[1]
+    sources = (
+        'site/src/components/VideoPage.astro',
+        'site/src/pages/v/[id].astro',
+        'site/src/lib/myspace-card.mjs',
+        'site/src/pages/channel/[id].astro',
+        'site/src/pages/following.astro',
+        'site/src/pages/search.astro',
+    )
+    for name in sources:
+        source = (root / name).read_text()
+        assert ' 次观看' not in source, name
+        assert ' 位订阅者' not in source, name
+
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { card } from './site/src/lib/myspace-card.mjs';
+
+const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
+const large = card({ ...base, view_count: 123456 }, '/v/abcdefghijk/');
+assert.ok(large.includes('12.3万次观看'));
+assert.ok(!large.includes('12.3万 次观看'));
+const twentyThousand = card({ ...base, view_count: 20000 }, '/v/abcdefghijk/');
+assert.ok(twentyThousand.includes('2万次观看'));
+assert.ok(!twentyThousand.includes('2万 次观看'));
+'''], cwd=root, check=True)
+
+
+def test_layout_og_dimensions_only_for_default_image():
+    source = (Path(__file__).resolve().parents[1] / 'site/src/components/Layout.astro').read_text()
+    assert 'const shareImage = ogImage || defaultOgImage;' in source
+    assert source.count('property="og:image:width"') == 1
+    assert source.count('property="og:image:height"') == 1
+    assert '{!ogImage && <meta property="og:image:width" content="1200"/>}' in source
+    assert '{!ogImage && <meta property="og:image:height" content="630"/>}' in source
+
+
+def test_card_text_layout_clamps_and_prevents_grid_overflow():
+    root = Path(__file__).resolve().parents[1]
+    layout = (root / 'site/src/components/Layout.astro').read_text()
+    page = (root / 'site/src/components/VideoPage.astro').read_text()
+    myspace = (root / 'site/src/lib/myspace-card.mjs').read_text()
+    assert 'grid-template-columns:36px minmax(0,1fr)' in layout
+    assert 'grid-row:span 2' not in layout
+    assert '.video-copy{min-width:0' in layout
+    assert '-webkit-line-clamp:1' in layout
+    assert 'class="video-copy"' in page
+    assert 'class="video-copy"' in myspace
+    assert ':root{' in layout

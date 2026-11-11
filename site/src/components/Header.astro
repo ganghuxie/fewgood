@@ -11,21 +11,24 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`} title="a few good videos · 无广告 · 只看好视频"><img class="logo-mark" src={`${base}logo-mark.svg`} alt=""/><span>{SITE_NAME}</span></a>
     <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="只搜索 fewgood 精选池" aria-label="只搜索 fewgood 精选池"/><button aria-label="搜索">⌕</button></form>
     <AuthMenu />
-    <nav class="libraries" aria-label="个人视频库">
-      <div class="lib-item" data-lib-kind="history"><a class="lib-trigger" href={link('/history/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span></a></div>
-      <div class="lib-item" data-lib-kind="favorites"><a class="lib-trigger" href={link('/favorites/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.5 5.1 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 4Z"/></svg><span>收藏</span></a></div>
-      <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a></div>
+    <div class="library-cluster">
+      <nav class="libraries" aria-label="个人视频库">
+        <div class="lib-item" data-lib-kind="history"><a class="lib-trigger" href={link('/history/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span></a></div>
+        <div class="lib-item" data-lib-kind="favorites"><a class="lib-trigger" href={link('/favorites/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.5 5.1 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 4Z"/></svg><span>收藏</span></a></div>
+        <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a></div>
+      </nav>
       <div class="lib-panel" data-panel hidden>
         <div class="lib-panel-tabs" role="tablist" aria-label="视频库"><button type="button" data-panel-tab="history">历史</button><button type="button" data-panel-tab="favorites">收藏</button><button type="button" data-panel-tab="watchLater">稍后再看</button></div>
         <div class="lib-panel-scroll" data-panel-list></div>
-        <a class="lib-panel-footer" data-panel-footer href="#">查看全部</a>
+        <a class="lib-panel-footer" data-panel-footer href={link('/history/')}>查看全部</a>
       </div>
-    </nav>
+    </div>
   </div>
   <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'picks' }} href={link('/')}>{SECTION_LABELS.picks}</a><a class:list={{ active: active === 'trending' }} href={link('/trending/')}>{SECTION_LABELS.trending}</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>{SECTION_LABELS.ai}</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>{SECTION_LABELS.podcast}</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>{SECTION_LABELS.music}</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>{SECTION_LABELS.community}</a></nav></div>
 </header>
 <style>
-.libraries{display:flex;gap:8px;align-items:center;position:relative}
+.library-cluster{position:relative;display:flex;align-items:center}
+.libraries{display:flex;gap:8px;align-items:center}
 .lib-item{position:relative}
 .lib-trigger{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:13px;white-space:nowrap;padding:4px 8px;border-radius:10px;color:#0f0f0f;text-decoration:none}
 .lib-trigger:hover{background:#f2f2f2}
@@ -49,7 +52,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 :global(.lib-row b){font-size:13px;line-height:18px;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0 0 6px;color:#0f0f0f;background:none;position:static;min-width:0;padding:0;border-radius:0;text-align:left}
 :global(.lib-row small){display:block;color:#606060;font-size:12px;line-height:16px}
 @media(max-width:899px){:global(.lib-panel){right:-20px}}
-@media(max-width:599px){:global(.site-header .header-row){padding:0 8px;gap:6px;flex-wrap:nowrap;min-width:0}:global(.site-header .menu-toggle){width:36px}:global(.site-header .logo > span:last-child){display:none}:global(.site-header .libraries){gap:0;margin-left:auto;flex:none}:global(.site-header .libraries .lib-trigger){padding:4px 3px}:global(.site-header .auth-login){height:34px;padding:0 7px;gap:4px;font-size:13px;white-space:nowrap}:global(.site-header .auth-login svg){width:18px;height:18px}}
+@media(max-width:599px){:global(.site-header .header-row){padding:0 8px;gap:6px;flex-wrap:nowrap;min-width:0}:global(.site-header .menu-toggle){width:36px}:global(.site-header .logo > span:last-child){display:none}:global(.site-header .library-cluster){margin-left:auto;flex:none}:global(.site-header .libraries){gap:0}:global(.site-header .libraries .lib-trigger){padding:4px 3px}:global(.site-header .auth-login){height:34px;padding:0 7px;gap:4px;font-size:13px;white-space:nowrap}:global(.site-header .auth-login svg){width:18px;height:18px}}
 </style>
 <script>
   import { KEYS, list, updateBadges, markWatchLaterSeen } from '../scripts/library.js';
@@ -110,7 +113,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     }
   };
 
-  const libraries = document.querySelector('.libraries');
+  const libraries = document.querySelector('.library-cluster');
   const panel = libraries?.querySelector('[data-panel]');
   const footer = panel?.querySelector('[data-panel-footer]');
   const touch = matchMedia('(pointer: coarse)').matches && !matchMedia('(hover: hover)').matches;

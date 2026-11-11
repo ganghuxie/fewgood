@@ -875,12 +875,27 @@ def load_fresh_feed_records(feed_name, root='site/src/data', cache_days=None, at
 # why_good + picks ----------------------------------------------------------
 
 WHY_GOOD_BANNED_PATTERNS = ('本周新片', '近30天播放', '近 30 天同类', '播放第')
+WHY_GOOD_FAN_COPY_PATTERNS = (
+    '适合喜欢', '适合想看', '适合想听', '适合想了解这位',
+    '适合电子乐', '适合发现', '想了解这位', '想听',
+)
+MUSIC_WHY_GOOD_BOILERPLATE = ('适合', '想听', '想了解', '想看')
 
 
-def why_good_is_honest(value):
-    """True when a stored reason is non-empty and not metadata paraphrased as a reason."""
+def why_good_is_honest(value, section=None):
+    """True when a stored reason is non-empty and not metadata paraphrased as a reason.
+
+    Music fan-copy such as「适合喜欢…」「想了解…」is unverifiable, so it is
+    rejected only for the music feed; other feeds keep their existing reasons.
+    """
     text = str(value or '').strip()
-    return bool(text) and not any(pattern in text for pattern in WHY_GOOD_BANNED_PATTERNS)
+    if not text or any(pattern in text for pattern in WHY_GOOD_BANNED_PATTERNS):
+        return False
+    if any(pattern in text for pattern in WHY_GOOD_FAN_COPY_PATTERNS):
+        return False
+    if section == 'music' and any(marker in text for marker in MUSIC_WHY_GOOD_BOILERPLATE):
+        return False
+    return True
 
 
 def _channel_reason(prefix, channel, suffix, fallback):
@@ -893,6 +908,67 @@ def _channel_reason(prefix, channel, suffix, fallback):
     if len(channel) > budget:
         channel = channel[:budget].rstrip().rstrip(' ,，、:：-')
     return f'{prefix}{channel}{suffix}' if channel else fallback
+
+
+def _music_reason_with_detail(prefix, detail='', suffix='）'):
+    detail = str(detail or '').strip()
+    if not detail:
+        return prefix.rstrip('（:： ')
+    candidate = f'{prefix}{detail}{suffix}'
+    if len(candidate) <= 40:
+        return candidate
+    budget = 40 - len(prefix) - len(suffix)
+    if budget < 4:
+        return prefix.rstrip('（:： ')
+    trimmed = detail[:budget].rstrip()
+    if ' ' in trimmed:
+        word_trimmed = trimmed.rsplit(' ', 1)[0].rstrip()
+        if len(word_trimmed) >= 4:
+            trimmed = word_trimmed
+    return f'{prefix}{trimmed}{suffix}'
+
+
+def _music_why_good(video):
+    """Build a concrete music reason from the title and channel only."""
+    title = str(video.get('title') or '').strip()
+    title_l = title.lower()
+    channel = str(video.get('channel') or '').strip()
+
+    if 'tiny desk' in title_l:
+        artist = title.split(':', 1)[0].strip() if ':' in title else ''
+        return _music_reason_with_detail('NPR Tiny Desk 小型现场（', artist)
+
+    colors_kind = 'INTERVIEW' if 'a colors interview' in title_l else ('SHOW' if 'a colors show' in title_l else '')
+    if colors_kind:
+        marker = re.search(r'\|\s*A COLORS\b|A COLORS\b', title, re.IGNORECASE)
+        head = title[:marker.start()].strip().rstrip('|').strip() if marker else ''
+        if colors_kind == 'INTERVIEW':
+            return _music_reason_with_detail('COLORS 音乐人访谈（', head)
+        song = head.split(' - ', 1)[1].strip() if ' - ' in head else ''
+        if song:
+            return _music_reason_with_detail('COLORS 舞台现场：', song, '')
+        artist = head.split(' - ', 1)[0].strip()
+        return _music_reason_with_detail('COLORS 舞台现场：', artist, '')
+
+    if 'boiler room' in title_l:
+        match = re.search(r'boiler\s+room(.*)$', title, re.IGNORECASE)
+        tail = match.group(1).strip(' :|-') if match else ''
+        tail = re.sub(r'\s*:\s*', ' · ', tail)
+        tail = re.sub(r'\s+', ' ', tail).strip()
+        return _music_reason_with_detail('Boiler Room 现场：', tail, '')
+
+    if 'essential mix' in title_l:
+        return 'BBC Radio 1 Essential Mix（日落场）' if 'sunset' in title_l else 'BBC Radio 1 Essential Mix'
+    if 'sunset set' in title_l:
+        return 'BBC Radio 1 日落场'
+    if 'big weekend' in title_l:
+        return 'Radio 1 Big Weekend 音乐节现场'
+
+    if 'full performance' in title_l or 'live on kexp' in title_l:
+        head = title.split(' - ', 1)[0].strip() if ' - ' in title else ''
+        return _music_reason_with_detail('KEXP 完整现场演出（', head)
+
+    return _channel_reason('来自策展频道「', channel, '」', '来自策展频道')
 
 
 def why_good_for(video, section='trending', rank=None):
@@ -916,7 +992,9 @@ def why_good_for(video, section='trending', rank=None):
             '来自 AI 策展频道「', video.get('channel'), '」',
             '来自 AI 策展频道的近期长视频',
         )
-    if section in ('podcast', 'music'):
+    if section == 'music':
+        return _music_why_good(video)
+    if section == 'podcast':
         return _channel_reason(
             '来自策展频道「', video.get('channel'), '」',
             '来自策展频道的近期长视频',
@@ -928,9 +1006,9 @@ def why_good_for(video, section='trending', rank=None):
 
 
 def why_good_or_existing(video, section='trending', rank=None):
-    """Keep an honest stored reason; replace banned metadata or fill a missing one."""
+    """Keep an honest stored reason; replace banned metadata or music boilerplate."""
     existing = video.get('why_good')
-    if why_good_is_honest(existing):
+    if why_good_is_honest(existing, section):
         return existing
     return why_good_for(video, section, rank=rank)
 
