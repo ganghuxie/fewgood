@@ -172,6 +172,32 @@ def test_picks_never_pick_trending_even_when_other_pools_are_small():
     assert picks['videos'] == []
 
 
+def test_build_picks_tolerates_missing_or_none_editorial():
+    community = [video(id='c0', channel_id='ch-c', published_at=_days_ago_iso(1),
+                       recommenders=12, months=3)]
+    base = {'community': {'videos': community}, 'ai': {'videos': []}, 'podcast': {'videos': []}}
+    for feeds in (base, dict(base, editorial={'videos': None})):
+        picks = build_picks(feeds)
+        assert [item['id'] for item in picks['videos']] == ['c0']
+
+
+def test_rebuild_offline_without_editorial_feed(tmp_path):
+    from ytrec.offline import rebuild_offline
+
+    community = video(id='community0', channel_id='ch-community', published_at=_days_ago_iso(1),
+                      recommenders=12, months=3)
+    ai = video(id='ai0', channel_id='ch-ai', published_at=_days_ago_iso(1), view_count=20)
+    podcast = video(id='podcast0', channel_id='ch-podcast', published_at=_days_ago_iso(1), view_count=10)
+    for name, items in (('videos', [community]), ('ai', [ai]), ('podcast', [podcast])):
+        (tmp_path / f'{name}.json').write_text(json.dumps({'videos': items}))
+
+    summary, updated = rebuild_offline(root=tmp_path)
+
+    assert summary['picks'] > 0
+    assert updated['picks']['videos']
+    assert not (tmp_path / 'editorial.json').exists()
+
+
 def test_picks_exclude_official_brand_clip_under_three_minutes():
     clip = video(id='official', title='Song (Official Video)', channel='Artist',
                  duration_seconds=PICKS_OFFICIAL_MIN_DURATION_SECONDS - 1,

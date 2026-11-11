@@ -699,7 +699,7 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
 
     for key in ('community', 'ai', 'podcast', 'editorial'):
         videos = []
-        for video in (feeds.get(key) or {}).get('videos', []):
+        for video in (feeds.get(key) or {}).get('videos') or []:
             if not language_gate(video):
                 continue
             duration_seconds = int(video.get('duration_seconds') or 0)

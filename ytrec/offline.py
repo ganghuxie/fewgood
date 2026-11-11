@@ -142,8 +142,8 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                 video['why_good'] = why_good_for(video, 'community')
 
     pick_payload = build_picks(
-        {'community': {'videos': final.get('videos')}, 'ai': {'videos': final.get('ai')},
-         'podcast': {'videos': final.get('podcast')}, 'editorial': {'videos': final.get('editorial')}},
+        {'community': {'videos': final.get('videos') or []}, 'ai': {'videos': final.get('ai') or []},
+         'podcast': {'videos': final.get('podcast') or []}, 'editorial': {'videos': final.get('editorial') or []}},
         generated_at=generated_at or iso_now(),
     )
 
