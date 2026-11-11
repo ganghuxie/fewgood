@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-11-11T00:00:00.000000Z",
+  "templates": [
+    {
+      "id": "ai-practitioner",
+      "name_zh": "AI 从业者",
+      "topic_ids": ["ai", "cpp", "programming", "mit", "systems"]
+    },
+    {
+      "id": "indie-developer",
+      "name_zh": "独立开发者",
+      "topic_ids": ["programming", "startups", "systems", "maker", "cpp"]
+    },
+    {
+      "id": "general-tech-reader",
+      "name_zh": "泛科技读者",
+      "topic_ids": ["science", "math", "tech-review", "documentary", "climate"]
+    }
+  ]
+}
