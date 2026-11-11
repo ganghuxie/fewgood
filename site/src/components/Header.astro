@@ -57,6 +57,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 <script>
   import { KEYS, list, updateBadges, markWatchLaterSeen } from '../scripts/library.js';
   import { track } from '../scripts/analytics.js';
+  import { thumbFallbackAttr, thumbFor } from '../lib/format.mjs';
   updateBadges();
   window.addEventListener('storage', updateBadges);
   document.addEventListener('youtuber:library-change', updateBadges);
@@ -86,7 +87,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   const emptyText = { history: '还没有观看记录', favorites: '还没有收藏视频', watchLater: '稍后再看是空的' };
   const rowHtml = (item, kind) => {
     const bar = kind === 'history' ? '<span class="bar" aria-hidden="true"><i></i></span>' : '';
-    return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img src="${esc(item.thumbnail || `https://i.ytimg.com/vi/${item.id}/mqdefault.jpg`)}" alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
+    return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img src="${esc(thumbFor(item))}" ${thumbFallbackAttr(item.id)} alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
   };
   const renderPanel = (kind) => {
     const items = list(KEYS[kind]);

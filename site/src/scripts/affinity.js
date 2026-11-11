@@ -44,7 +44,7 @@ function suggest(topicId) {
   store.lastSuggestedAt = Date.now();
   write(store);
   topicName(topicId).then(name => {
-    const prompt = showPrompt(`要不要订阅「${name}」这个主题？`, {
+    const prompt = showPrompt(`要不要订阅「${name}」栏目？`, {
       ttl: 0,
       actions: [
         { id: 'subscribe', label: '订阅', onClick: () => { document.dispatchEvent(new CustomEvent('fewgood:subscribe-topic', { detail: { topicId } })); dismissPrompt(prompt); } },

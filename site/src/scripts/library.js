@@ -1,5 +1,6 @@
-const PREFIX = 'youtuber:';
 import { track } from './analytics.js';
+import { thumbUrl } from '../lib/format.mjs';
+const PREFIX = 'youtuber:';
 export const KEYS = {
   favorites: `${PREFIX}favorites`,
   watchLater: `${PREFIX}watchLater`,
@@ -26,7 +27,7 @@ const video = (item, catalog = {}, channels = {}) => {
   const result = {
     id,
     title,
-    thumbnail: first(source.thumbnail, source.thumb, catalog.thumbnail, catalog.thumb, id ? `https://i.ytimg.com/vi/${id}/maxresdefault.jpg` : ''),
+    thumbnail: first(source.thumbnail, source.thumb, catalog.thumbnail, catalog.thumb, thumbUrl(id)),
     channelId,
     channel: channelName,
     avatar: first(source.avatar, source.channelAvatar, channelData.thumbnail, channelData.avatar, ''),

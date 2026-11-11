@@ -3,11 +3,12 @@ import { MYSPACE_KEY, MAX_ACTIVE_COLUMNS, defaultState, validateState, topicColu
 import { MYSPACE_SOURCES } from '../lib/brand.mjs';
 import { templateToColumns, templateColumnsReady } from '../lib/template-columns.mjs';
 import { card as videoCard } from '../lib/myspace-card.mjs';
+import { paintTopicChip } from '../lib/topic-labels.mjs';
 import { showPrompt } from './prompts.js';
 
 const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
 const LAST_TAB_KEY = 'fewgood:lastTab';
-const DEVICE_NOTICE = '这些栏目只存在这台设备的浏览器里';
+const DEVICE_NOTICE = '这些订阅栏目只存在这台设备的浏览器里';
 const feedSourceById = new Map(MYSPACE_SOURCES.map(source => [source.id, source]));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
@@ -103,7 +104,7 @@ if (enabled && shell && explore && space) {
     if (!save(state)) { state.columns.pop(); return false; }
     render();
     paintTopicChips();
-    if (activeColumns().length === 3) showPrompt('这 3 个栏目目前只存在这台电脑的浏览器里。注册后换手机也能看。', { ttl: 0 });
+    if (activeColumns().length === 3) showPrompt('这 3 个订阅栏目目前只存在这台电脑的浏览器里。注册后换手机也能看。', { ttl: 0 });
     return true;
   };
 
@@ -118,7 +119,7 @@ if (enabled && shell && explore && space) {
     const feedOptions = MYSPACE_SOURCES
       .filter(source => !state.columns.some(column => !isTopicColumn(column) && column.source === source.id))
       .map(source => `<option value="${esc(source.id)}">${esc(source.label)}</option>`).join('');
-    dialog.innerHTML = `<div class="myspace-editor-inner"><div class="myspace-editor-title"><h2>管理栏目</h2><button class="myspace-editor-close" type="button" data-editor-close aria-label="关闭">×</button></div><p class="myspace-editor-note">显示至多 ${MAX_ACTIVE_COLUMNS} 个栏目；顺序会同步到上方标签。</p>${state.columns.map((column, index) => `<div class="myspace-row"><label><input type="checkbox" data-enable="${esc(column.id)}" ${column.enabled ? 'checked' : ''} aria-label="显示 ${esc(columnLabel(column))}"></label><span class="myspace-row-name">${esc(columnLabel(column))}</span><button type="button" data-up="${esc(column.id)}" ${index === 0 ? 'disabled' : ''} aria-label="上移">↑</button><button type="button" data-down="${esc(column.id)}" ${index === state.columns.length - 1 ? 'disabled' : ''} aria-label="下移">↓</button><button type="button" data-remove="${esc(column.id)}" aria-label="移除">×</button></div>`).join('')}<div class="myspace-add"><select data-add aria-label="添加栏目"><option value="">添加现有栏目…</option>${feedOptions}${topicOptions}</select></div></div>`;
+    dialog.innerHTML = `<div class="myspace-editor-inner"><div class="myspace-editor-title"><h2>管理订阅栏目</h2><button class="myspace-editor-close" type="button" data-editor-close aria-label="关闭">×</button></div><p class="myspace-editor-note">显示至多 ${MAX_ACTIVE_COLUMNS} 个订阅栏目；顺序会同步到上方标签。</p>${state.columns.map((column, index) => `<div class="myspace-row"><label><input type="checkbox" data-enable="${esc(column.id)}" ${column.enabled ? 'checked' : ''} aria-label="显示 ${esc(columnLabel(column))}"></label><span class="myspace-row-name">${esc(columnLabel(column))}</span><button type="button" data-up="${esc(column.id)}" ${index === 0 ? 'disabled' : ''} aria-label="上移">↑</button><button type="button" data-down="${esc(column.id)}" ${index === state.columns.length - 1 ? 'disabled' : ''} aria-label="下移">↓</button><button type="button" data-remove="${esc(column.id)}" aria-label="移除">×</button></div>`).join('')}<div class="myspace-add"><select data-add aria-label="添加订阅栏目"><option value="">添加订阅栏目…</option>${feedOptions}${topicOptions}</select></div></div>`;
     dialog.querySelector('[data-editor-close]')?.addEventListener('click', () => dialog.close());
     dialog.querySelectorAll('[data-enable]').forEach(input => input.addEventListener('change', () => {
       const column = state.columns.find(item => item.id === input.dataset.enable);
@@ -145,7 +146,7 @@ if (enabled && shell && explore && space) {
       else {
         if (state.columns.length >= MYSPACE_SOURCES.length + topics.length) return;
         state.columns.push({ id: value, source: value, kind: 'feed', topic_id: null, label: null, enabled: activeColumns().length < MAX_ACTIVE_COLUMNS });
-        if (activeColumns().length === 3) showPrompt('这 3 个栏目目前只存在这台电脑的浏览器里。注册后换手机也能看。', { ttl: 0 });
+        if (activeColumns().length === 3) showPrompt('这 3 个订阅栏目目前只存在这台电脑的浏览器里。注册后换手机也能看。', { ttl: 0 });
         persist(true);
       }
     });
@@ -160,7 +161,7 @@ if (enabled && shell && explore && space) {
       const isTopic = isTopicColumn(column);
       const videos = matching(isTopic ? pool : catalog, column).slice(0, 8);
       return `<section class="myspace-column" data-myspace-column="${esc(column.id)}"><h2>${esc(columnLabel(column))}</h2>${videos.length ? `<div class="video-grid">${videos.map(video => card(video, column)).join('')}</div>` : '<p class="myspace-loading">该栏目暂时没有匹配视频。</p>'}</section>`;
-    }).join('') || '<p class="myspace-loading">还没有栏目。<a href="' + (base || '') + '/">从现有主题里挑几个开始</a></p>';
+    }).join('') || '<p class="myspace-loading">还没有栏目。<a href="' + (base || '') + '/">从现有栏目里挑几个开始</a></p>';
   };
 
   const hasTopicColumns = () => state.columns.some(isTopicColumn);
@@ -184,12 +185,12 @@ if (enabled && shell && explore && space) {
 
   const paintTopicChips = () => {
     const subscribed = subscribedTopicIds();
-    document.querySelectorAll('[data-topic-subscribe]').forEach(button => {
+    document.querySelectorAll('.topic-chip[data-topic-subscribe]').forEach(button => {
       const id = button.dataset.topicSubscribe;
       const active = subscribed.has(id);
-      button.classList.toggle('is-subscribed', active);
-      button.textContent = active ? '已订阅主题' : '订阅这个主题';
+      paintTopicChip(button, active, button.dataset.topicName);
     });
+    document.querySelectorAll('.hot-topics-row [data-topic-subscribe]').forEach(button => button.classList.toggle('is-subscribed', subscribed.has(button.dataset.topicSubscribe)));
   };
   const renderHotTopics = () => {
     const host = document.querySelector('[data-hot-topics]');
@@ -197,12 +198,12 @@ if (enabled && shell && explore && space) {
     const hot = topics.filter(topic => Number(topic.added_last_24h) > 0).sort((a, b) => Number(b.added_last_24h) - Number(a.added_last_24h)).slice(0, 8);
     host.hidden = !hot.length;
     if (!hot.length) return;
-    host.innerHTML = `<h2>热门主题</h2><div class="hot-topics-row">${hot.map(topic => `<button type="button" data-topic-subscribe="${esc(topic.id)}">${esc(topic.name_zh)} <span>今日新增 ${Number(topic.added_last_24h)} 条</span></button>`).join('')}</div>`;
+    host.innerHTML = `<h2>热门栏目</h2><div class="hot-topics-row">${hot.map(topic => `<button type="button" data-topic-subscribe="${esc(topic.id)}" data-topic-name="${esc(topic.name_zh)}">${esc(topic.name_zh)} <span>今日新增 ${Number(topic.added_last_24h)} 条</span></button>`).join('')}</div>`;
     paintTopicChips();
   };
 
   const render = (keepEditor = false) => {
-    space.innerHTML = `<div class="myspace-heading"><div><h1>我的空间</h1><p class="myspace-device-note">${esc(DEVICE_NOTICE)}</p></div><button class="myspace-manage" type="button" data-myspace-manage aria-label="管理栏目" title="管理栏目">⚙</button></div><div data-template-picker hidden></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理我的空间"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>`;
+    space.innerHTML = `<div class="myspace-heading"><div><h1>我的空间</h1><p class="myspace-device-note">${esc(DEVICE_NOTICE)}</p></div><button class="myspace-manage" type="button" data-myspace-manage aria-label="管理订阅栏目" title="管理订阅栏目">⚙</button></div><div data-template-picker hidden></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理订阅栏目"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>`;
     space.querySelector('[data-myspace-manage]')?.addEventListener('click', () => { renderEditor(); space.querySelector('[data-myspace-editor]')?.showModal(); });
     renderTemplates();
     renderColumns();

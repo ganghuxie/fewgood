@@ -209,6 +209,66 @@ def test_layout_og_dimensions_only_for_default_image():
     assert '{!ogImage && <meta property="og:image:height" content="630"/>}' in source
 
 
+def test_thumbnail_helpers_choose_available_sizes():
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { card } from './site/src/lib/myspace-card.mjs';
+import { thumbCandidates, thumbFallbackAttr, thumbFor, thumbUrl } from './site/src/lib/format.mjs';
+
+for (const id of ['hQVTIJBZook', 'aAb7hSCtvGw', 'jVkLVRt6c1U']) {
+  assert.equal(thumbFor({ id }), thumbUrl(id, 'hqdefault'));
+  assert.ok(!thumbFor({ id }).includes('maxresdefault'));
+}
+assert.equal(
+  thumbFor({ id: 'aAb7hSCtvGw', thumb: 'https://i.ytimg.com/vi/aAb7hSCtvGw/mqdefault.jpg' }),
+  'https://i.ytimg.com/vi/aAb7hSCtvGw/mqdefault.jpg',
+);
+assert.equal(
+  thumbFor({ id: 'aAb7hSCtvGw', thumbnail: 'https://i.ytimg.com/vi/aAb7hSCtvGw/maxresdefault.jpg' }),
+  thumbUrl('aAb7hSCtvGw', 'hqdefault'),
+);
+assert.equal(
+  thumbFor({ id: 'aAb7hSCtvGw', thumb: 'https://i.ytimg.com/vi/aAb7hSCtvGw/maxresdefault.jpg', thumb_verified: true }),
+  'https://i.ytimg.com/vi/aAb7hSCtvGw/maxresdefault.jpg',
+);
+assert.deepEqual(thumbCandidates('hQVTIJBZook'), [
+  thumbUrl('hQVTIJBZook', 'hqdefault'),
+  thumbUrl('hQVTIJBZook', 'mqdefault'),
+]);
+assert.equal(thumbFallbackAttr('hQVTIJBZook'), 'data-thumb-id="hQVTIJBZook"');
+const html = card({ id: 'hQVTIJBZook', title: 'JavaScript: The Good Parts', channel: 'Google TechTalks', duration_seconds: 3600 }, '/v/hQVTIJBZook/');
+assert.ok(html.includes('hqdefault.jpg'));
+assert.ok(html.includes('data-thumb-id="hQVTIJBZook"'));
+assert.ok(!html.includes('maxresdefault'));
+'''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+def test_thumbnail_fallback_is_wired_into_every_card_renderer():
+    root = Path(__file__).resolve().parents[1]
+    renderers = (
+        'site/src/components/VideoPage.astro',
+        'site/src/lib/myspace-card.mjs',
+        'site/src/components/LibraryPage.astro',
+        'site/src/components/Header.astro',
+        'site/src/pages/search.astro',
+        'site/src/pages/following.astro',
+        'site/src/pages/channel/[id].astro',
+        'site/src/pages/v/[id].astro',
+    )
+    for name in renderers:
+        source = (root / name).read_text()
+        assert 'data-thumb-id' in source or 'thumbFallbackAttr' in source, name
+        assert 'maxresdefault' not in source, name
+
+    layout = (root / 'site/src/components/Layout.astro').read_text()
+    detector = (root / 'site/src/scripts/thumbnails.js').read_text()
+    assert "import '../scripts/thumbnails.js'" in layout
+    assert 'PLACEHOLDER_MAX_WIDTH = 120' in detector
+    assert "image.naturalWidth > PLACEHOLDER_MAX_WIDTH" in detector
+    assert "thumbUrl(id, 'hqdefault')" in detector or 'thumbCandidates(id)' in detector
+    assert "thumbUrl(id, 'mqdefault')" in detector or 'thumbCandidates(id)' in detector
+
+
 def test_card_text_layout_clamps_and_prevents_grid_overflow():
     root = Path(__file__).resolve().parents[1]
     layout = (root / 'site/src/components/Layout.astro').read_text()
@@ -221,3 +281,60 @@ def test_card_text_layout_clamps_and_prevents_grid_overflow():
     assert 'class="video-copy"' in page
     assert 'class="video-copy"' in myspace
     assert ':root{' in layout
+
+
+def test_detail_share_has_no_login_wall_and_uses_share_or_clipboard():
+    root = Path(__file__).resolve().parents[1]
+    detail = (root / 'site/src/pages/v/[id].astro').read_text()
+    assert '生成分享链接需要登录' not in detail
+    assert '不用验证邮箱' not in detail
+    assert 'navigator.share' in detail
+    assert 'navigator.clipboard' in detail
+    assert 'writeText' in detail
+    assert "showPrompt('链接已复制'" in detail
+    assert "url.search = ''" in detail and "url.hash = ''" in detail
+
+
+def test_topic_subscribe_copy_and_chip_is_off_thumbnail():
+    root = Path(__file__).resolve().parents[1]
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { TOPIC_SUBSCRIBED_LABEL, topicSubscribeLabel, topicSubscribeTitle } from './site/src/lib/topic-labels.mjs';
+assert.equal(topicSubscribeLabel('经典演讲'), '+ 订阅「经典演讲」栏目');
+assert.equal(topicSubscribeTitle('经典演讲'), '订阅后，「经典演讲」会作为一栏出现在我的空间');
+assert.equal(TOPIC_SUBSCRIBED_LABEL, '✓ 已订阅，在我的空间');
+'''], cwd=root, check=True)
+
+    page = (root / 'site/src/components/VideoPage.astro').read_text()
+    layout = (root / 'site/src/components/Layout.astro').read_text()
+    myspace = (root / 'site/src/scripts/myspace.js').read_text()
+    affinity = (root / 'site/src/scripts/affinity.js').read_text()
+    for source in (page, myspace):
+        assert '订阅这个主题' not in source
+        assert '已订阅主题' not in source
+        assert '加到我的空间' not in source
+        assert '已在我的空间' not in source
+    assert 'topicSubscribeLabel(v.topic_name)' in page
+    assert 'topicSubscribeTitle(v.topic_name)' in page
+    assert 'paintTopicChip(button, active, button.dataset.topicName)' in myspace
+    assert '<h2>管理订阅栏目</h2>' in myspace
+    assert '添加订阅栏目…' in myspace
+    assert 'aria-label="管理订阅栏目" title="管理订阅栏目"' in myspace
+    assert '要不要订阅「${name}」栏目？' in affinity
+
+    chip_rule = re.search(r'\.topic-chip\{([^}]*)\}', layout)
+    assert chip_rule and 'position:absolute' not in chip_rule.group(1)
+    assert chip_rule and 'top:8px' not in chip_rule.group(1)
+    template = next(line for line in page.splitlines() if 'data-topic-subscribe={v.topic_id}' in line)
+    assert template.index('</div></a>') < template.index('class="topic-chip"')
+
+
+def test_search_orders_videos_before_channels_and_caps_expandable_channels():
+    source = (Path(__file__).resolve().parents[1] / 'site/src/pages/search.astro').read_text()
+    assert source.index('data-video-section') < source.index('data-channel-section')
+    assert 'items.slice(0, 3)' in source
+    assert 'items.length <= 3 || showAll' in source
+    assert '更多频道' in source
+    assert '更多频道' in source.split('data-channel-more', 1)[1].split('</button>', 1)[0]
+    assert 'moreButton.onclick = () => renderChannels(channelMatches, true);' in source
+    assert '显示更多' not in source

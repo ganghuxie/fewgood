@@ -38,6 +38,12 @@ def refresh():
             if any(token in message for token in ('quota would exceed', 'quota budget', 'HTTP 401', 'HTTP 403')):
                 raise
             print(f'WARNING: playability backfill skipped: {error}')
+        from .thumbnails import backfill_thumbnail_sizes
+        try:
+            thumb_summary = backfill_thumbnail_sizes(root='site/src/data', cache_path='data/thumbnails.json')
+            print(f"Thumbnails: checked={thumb_summary['checked']} cached={thumb_summary['from_cache']} updated={thumb_summary['updated']} network_failures={thumb_summary['network_failures']}")
+        except Exception as error:
+            print(f'WARNING: thumbnail probe skipped: {error}')
         rebuild_offline()
         print(quota_line(limit))
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True, stdout=handle, stderr=handle)
@@ -52,8 +58,9 @@ def refresh():
             'site/src/data', 'site/public/catalog.json', 'site/public/channels.json',
             'site/public/search-index.json', 'site/public/topics.json',
             'site/public/topic_lookup.json', 'site/public/templates.json',
-            'site/public/hn_pool.json', 'data/playability.json',
+            'site/public/hn_pool.json', 'data/playability.json', 'data/thumbnails.json',
         ]
+        paths = [path for path in paths if Path(path).exists()]
         changed = subprocess.run(['git', 'status', '--porcelain', '--', *paths], text=True, stdout=subprocess.PIPE, check=True).stdout
         if changed:
             subprocess.run(['git', 'add', *paths], check=True, stdout=handle, stderr=handle)

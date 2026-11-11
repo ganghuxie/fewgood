@@ -7,6 +7,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <Layout title={`${title} · ${SITE_NAME}`}><section class="library-page" data-kind={kind} data-base={base}><div class="library-heading"><h1>{title}</h1>{kind === 'history' && <button class="clear" data-clear>清空历史</button>}</div><p class="empty" data-empty>{empty}</p><div class="video-grid library-list" data-list></div></section></Layout>
 <script>
  import { KEYS, list as libraryList, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
+ import { thumbFallbackAttr, thumbFor } from '../lib/format.mjs';
  const root = document.querySelector('[data-kind]'), kind = root.dataset.kind, key = KEYS[kind], base = root.dataset.base;
  const list = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]');
  const duration = n => `${Math.floor((n || 0) / 60)}:${String((n || 0) % 60).padStart(2, '0')}`;
@@ -28,7 +29,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
  };
  const render = snapshots => {
    empty.hidden = snapshots.length > 0;
-   list.innerHTML = snapshots.map(video => `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(video.thumbnail || `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`)}" onerror="this.onerror=null;this.src=\`https://i.ytimg.com/vi/${video.id}/mqdefault.jpg\`" alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(video.title || video.id)}</h2><p class="video-meta">${esc(video.channel)}</p></div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`).join('');
+   list.innerHTML = snapshots.map(video => `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(thumbFor(video))}" ${thumbFallbackAttr(video.id)} alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(video.title || video.id)}</h2><p class="video-meta">${esc(video.channel)}</p></div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`).join('');
    list.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); event.stopPropagation(); remove(key, button.dataset.remove); render(libraryList(key)); });
    observeSeen();
    updateBadges();
