@@ -1,4 +1,5 @@
-/data/
+/data/*
+!/data/playability.json
 data/quota.json
 *.sqlite*
 __pycache__/

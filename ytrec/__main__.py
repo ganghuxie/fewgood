@@ -52,7 +52,7 @@ def refresh():
             'site/src/data', 'site/public/catalog.json', 'site/public/channels.json',
             'site/public/search-index.json', 'site/public/topics.json',
             'site/public/topic_lookup.json', 'site/public/templates.json',
-            'site/public/hn_pool.json',
+            'site/public/hn_pool.json', 'data/playability.json',
         ]
         changed = subprocess.run(['git', 'status', '--porcelain', '--', *paths], text=True, stdout=subprocess.PIPE, check=True).stdout
         if changed:
