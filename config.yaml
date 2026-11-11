@@ -9,6 +9,7 @@ recommendation:
   positive_sentiment:
     enabled: false
 metadata:
+  weekly_topic_cap: 3
   min_publish_age_days: 365
   # Set to 0 (or omit) to disable the community upload-age cutoff.
   max_upload_age_years: 12

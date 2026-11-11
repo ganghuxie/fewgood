@@ -90,10 +90,14 @@ def main():
     parser.add_argument('--no-commit', action='store_true', help='write artifacts but do not commit')
     parser.add_argument('--no-push', action='store_true', help='commit but do not push')
     parser.add_argument('--llm-cap', type=int, default=30, help='maximum DeepSeek calls for weekly-topics')
+    parser.add_argument('--topic-cap', type=int,
+                        help='maximum new videos per topic for weekly-topics')
     args = parser.parse_args()
     if args.command == 'weekly-topics':
         from . import weekly_topics
         forwarded = ['--config', args.config, '--days', str(args.days), '--llm-cap', str(args.llm_cap)]
+        if args.topic_cap is not None:
+            forwarded += ['--topic-cap', str(args.topic_cap)]
         if args.dry_run:
             forwarded.append('--dry-run')
         if args.no_commit:

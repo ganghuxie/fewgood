@@ -21,7 +21,8 @@ def _write(path, payload):
 
 
 def _raw(video_id, title, *, channel_id='chan-new-1', duration='PT20M',
-         language='en', privacy='public', embeddable=True):
+         language='en', privacy='public', embeddable=True,
+         view_count=1234, like_count=10):
     return {
         'id': video_id,
         'snippet': {
@@ -32,7 +33,7 @@ def _raw(video_id, title, *, channel_id='chan-new-1', duration='PT20M',
             'defaultAudioLanguage': language,
         },
         'contentDetails': {'duration': duration},
-        'statistics': {'viewCount': '1234', 'likeCount': '10'},
+        'statistics': {'viewCount': str(view_count), 'likeCount': str(like_count)},
         'status': {'privacyStatus': privacy, 'uploadStatus': 'processed',
                    'embeddable': embeddable},
     }
@@ -162,7 +163,13 @@ def test_topup_preserves_existing_data_drops_bad_gates_and_appends_pass(monkeypa
         'vertical_or_short': 1, 'not_embeddable': 1, 'language': 1, 'duration': 1,
     }
     assert summary['fetched_batches'] == 1
-    assert summary['per_topic'] == {'ai': {'count': 1, 'samples': ['AI agents in production']}}
+    assert summary['per_topic'] == {
+        'ai': {
+            'count': 1,
+            'titles': ['AI agents in production'],
+            'samples': ['AI agents in production'],
+        },
+    }
 
     pool = json.loads((root / 'hn_pool.json').read_text())
     assert pool['videos'][:2] == old_pool
@@ -186,6 +193,53 @@ def test_topup_preserves_existing_data_drops_bad_gates_and_appends_pass(monkeypa
     playability = json.loads((tmp_path / 'playability.json').read_text())['entries']
     assert playability['goodvideo01']['reason'] is None
     assert 'shortvid001' in playability
+
+
+def test_weekly_cap_keeps_top_three_confident_videos_per_topic(monkeypatch, tmp_path):
+    root, old_pool, old_topics, old_lookup, config = _fixture_root(tmp_path)
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-key')
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    monkeypatch.setattr(wt, 'probe_thumbnail',
+                        lambda video_id: {'kind': 'maxresdefault', 'url': f'https://img/{video_id}.jpg'})
+    ids = {
+        'capvideo001': _raw('capvideo001', 'AI agents ranked first', view_count=1000, like_count=40),
+        'capvideo002': _raw('capvideo002', 'AI agents ranked second', view_count=1000, like_count=30),
+        'capvideo003': _raw('capvideo003', 'AI agents ranked third', view_count=1000, like_count=20),
+        'capvideo004': _raw('capvideo004', 'AI agents ranked fourth', view_count=1000, like_count=10),
+    }
+    hits = [_hit(f'item-{video_id}', video_id) for video_id in ids]
+
+    summary = _run(root, config, tmp_path, hits, ids)
+
+    kept_ids = ['capvideo001', 'capvideo002', 'capvideo003']
+    assert summary['new_videos'] == 3, summary
+    assert summary['topic_cap'] == 3
+    assert summary['per_topic']['ai']['titles'] == [
+        'AI agents ranked first', 'AI agents ranked second', 'AI agents ranked third',
+    ]
+    assert summary['skipped_over_cap'] == ['capvideo004']
+    assert summary['skipped_over_cap_details'][0]['reason'] == 'over_cap'
+    report = wt.format_summary(summary)
+    for title in ('AI agents ranked first', 'AI agents ranked second', 'AI agents ranked third'):
+        assert title in report
+    assert 'Skipped over cap: 1' in report
+    assert 'capvideo004' in report
+    assert 'AI agents ranked fourth' in report
+
+    pool = json.loads((root / 'hn_pool.json').read_text())
+    assert pool['videos'][:2] == old_pool
+    assert [video['id'] for video in pool['videos']] == [
+        'oldvideo001', 'oldvideo002', *kept_ids,
+    ]
+    topics = json.loads((root / 'topics.json').read_text())
+    by_id = {topic['id']: topic for topic in topics['topics']}
+    assert by_id['ai']['video_ids'] == ['oldvideo001', *kept_ids]
+    lookup = json.loads((root / 'topic_lookup.json').read_text())
+    assert {video_id: lookup.get(video_id) for video_id in kept_ids} == {
+        video_id: 'ai' for video_id in kept_ids
+    }
+    assert 'capvideo004' not in lookup
+    assert lookup['oldvideo001'] == old_lookup['oldvideo001']
 
 
 @pytest.mark.parametrize('run_kwargs', [{'dry_run': True}, {'write': False}])
@@ -224,10 +278,10 @@ def test_curation_rules_beat_llm(monkeypatch):
                'channel': 'Example', 'channel_id': 'chan-1'}]
     topics = [{'id': 'ai', 'name_zh': '人工智能', 'keywords': ['ai']},
               {'id': 'programming', 'name_zh': '编程思想', 'keywords': ['code']}]
-    curated, unmatched, fallback_only = wt._curation_partition(videos, {'ai', 'programming'})
+    curated, unmatched, skipped = wt._curation_partition(videos, {'ai', 'programming'})
     assert curated == {'curated0001': 'ai'}
     assert unmatched == []
-    assert fallback_only == set()
+    assert skipped == {}
 
     monkeypatch.setenv('DEEPSEEK_API_KEY', 'test-key')
 
@@ -266,6 +320,10 @@ def test_llm_cap_invalid_topic_and_missing_key(monkeypatch):
     assert len(calls) == 1
     assert calls[0]['model'] == 'deepseek-flash'
     assert calls[0].get('thinking') == {'type': 'disabled'}
+    prompt = calls[0]['messages'][0]['content']
+    assert 'only for MIT content' in prompt
+    assert 'Return null when the fit is uncertain' in prompt
+    assert 'Never invent a video id or topic id' in prompt
     assert stats['calls'] == 1
     assert assignments == {'llmvideo000': 'ai'}
     assert stats['invalid_topic_ids'] == 1
@@ -281,7 +339,87 @@ def test_llm_cap_invalid_topic_and_missing_key(monkeypatch):
     assert stats['skipped'] == 'missing_key'
 
 
-def test_centroid_fallback_appends_strong_and_lookup_only_for_weak(tmp_path):
+def test_llm_mit_assignment_is_rejected_for_non_mit_video(monkeypatch):
+    topics = [{'id': 'mit', 'name_zh': '高校公开课', 'keywords': ['mit']},
+              {'id': 'classic-talks', 'name_zh': '经典演讲', 'keywords': ['lecture']}]
+    videos = [{'id': 'stanford001', 'title': 'Stanford CS146S lecture',
+               'channel': 'Stanford University', 'channel_id': 'chan-stanford'}]
+
+    def post(url, headers, json, timeout):
+        return FakeResponse({
+            'choices': [{'message': {'content': json_module.dumps({
+                'assignments': {'stanford001': 'mit'},
+            })}}],
+            'usage': {'prompt_tokens': 10, 'completion_tokens': 5, 'total_tokens': 15},
+        })
+
+    monkeypatch.setenv('DEEPSEEK_API_KEY', 'test-key')
+    assignments, stats = wt.llm_assignments(videos, topics, cap=1, post=post)
+    assert assignments == {}
+    assert stats['disallowed_mit_ids'] == 1
+
+
+def test_weekly_mit_guard_reroutes_non_mit_university_lectures():
+    topics = {'mit', 'classic-talks', 'conferences'}
+    videos = [
+        {'id': 'stanford001', 'title': 'Stanford CS146S: How always-on agents work',
+         'channel': 'Stanford', 'channel_id': 'UC-EnprmCZ3OXyAoG7vjVNCA'},
+        {'id': 'harvard0001', 'title': 'Justice: What is the Right Thing to Do? Lecture 1',
+         'channel': 'Harvard University', 'channel_id': 'chan-harvard'},
+        {'id': 'stanconfer1', 'title': 'Stanford Systems Conference keynote',
+         'channel': 'Stanford', 'channel_id': 'UC-EnprmCZ3OXyAoG7vjVNCA'},
+        {'id': 'mitocw0001', 'title': '6.006 Introduction to Algorithms, Lecture 1',
+         'channel': 'MIT OpenCourseWare', 'channel_id': 'UCEBb1b_L6zDS3xTUrIALZOw'},
+        {'id': 'mitocw0002', 'title': 'MIT OpenCourseWare: 6.006 Lecture 2',
+         'channel': 'MIT OpenCourseWare', 'channel_id': 'chan-mit-title'},
+    ]
+
+    curated, unmatched, skipped = wt._curation_partition(videos, topics)
+
+    assert curated == {
+        'stanford001': 'classic-talks',
+        'harvard0001': 'classic-talks',
+        'stanconfer1': 'conferences',
+        'mitocw0001': 'mit',
+        'mitocw0002': 'mit',
+    }
+    assert unmatched == []
+    assert skipped == {}
+
+
+def test_topic_cap_config_default_and_cli_override():
+    assert wt._resolve_topic_cap({}) == 3
+    assert wt._resolve_topic_cap({'metadata': {'weekly_topic_cap': 2}}) == 2
+    assert wt._resolve_topic_cap({'metadata': {'weekly_topic_cap': 2}}, override=1) == 1
+    with pytest.raises(ValueError, match='zero or positive'):
+        wt._resolve_topic_cap({'metadata': {'weekly_topic_cap': -1}})
+
+
+def test_weekly_config_topic_cap_override_is_used(monkeypatch, tmp_path):
+    root, _old_pool, _old_topics, _old_lookup, config = _fixture_root(tmp_path)
+    config['metadata']['weekly_topic_cap'] = 1
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-key')
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    monkeypatch.setattr(wt, 'probe_thumbnail',
+                        lambda video_id: {'kind': 'maxresdefault', 'url': f'https://img/{video_id}.jpg'})
+    ids = {
+        'override001': _raw('override001', 'AI agents preferred', like_count=40),
+        'override002': _raw('override002', 'AI agents overflow', like_count=10),
+    }
+
+    summary = _run(root, config, tmp_path,
+                   [_hit(f'item-{video_id}', video_id) for video_id in ids], ids)
+
+    assert summary['topic_cap'] == 1
+    assert summary['new_videos'] == 1
+    assert summary['per_topic']['ai']['titles'] == ['AI agents preferred']
+    assert summary['skipped_over_cap'] == ['override002']
+    lookup = json.loads((root / 'topic_lookup.json').read_text())
+    assert lookup['override001'] == 'ai'
+    assert 'override002' not in lookup
+
+
+def test_centroid_fallback_appends_strong_and_omits_weak(tmp_path):
     pool = [
         {'id': 'oldvideo001', 'title': 'Linux kernel networking internals',
          'channel': 'Systems Channel', 'channel_id': 'chan-sys', 'quotes': []},
@@ -314,8 +452,13 @@ def test_centroid_fallback_appends_strong_and_lookup_only_for_weak(tmp_path):
     assert 'chan-strong' in topic['source_channel_ids']
     assert 'chan-weak' not in topic['source_channel_ids']
     assert updated_lookup['strong00001'] == 'systems'
-    assert updated_lookup['weak0000001'] == 'systems'
-    assert diagnostics['weak_assignments'] == ['weak0000001']
+    assert 'weak0000001' not in updated_lookup
+    assert diagnostics['skipped_low_confidence'] == ['weak0000001']
+    assert diagnostics['skipped_low_confidence_details'] == [{
+        'id': 'weak0000001',
+        'title': 'Zebra umbrella',
+        'reason': 'low_confidence',
+    }]
 
 
 def test_news_recap_is_not_added_to_classic_talks(tmp_path):
@@ -346,13 +489,13 @@ def test_news_recap_is_not_added_to_classic_talks(tmp_path):
     assert 'newsvid0001' in diagnostics['retag_dropped']
 
 
-def test_curation_none_target_gets_lookup_without_topic_column():
+def test_curation_none_target_is_omitted_entirely():
     videos = [{'id': 'leaptech001', 'title': 'Leap Technology', 'channel': 'C',
                'channel_id': 'chan-leap'}]
-    curated, unmatched, fallback_only = wt._curation_partition(videos, {'systems'})
+    curated, unmatched, skipped = wt._curation_partition(videos, {'systems'})
     assert curated == {}
     assert unmatched == []
-    assert fallback_only == {'leaptech001'}
+    assert skipped == {'leaptech001': 'curation_none'}
 
     pool = [{'id': 'oldvideo001', 'title': 'Leap technology systems', 'channel': 'C',
              'channel_id': 'chan-old', 'quotes': []}]
@@ -362,11 +505,11 @@ def test_curation_none_target_gets_lookup_without_topic_column():
                           'source_channel_ids': ['chan-old'], 'video_ids': ['oldvideo001'],
                           'added_last_24h': 0}]}
     updated_topics, updated_lookup, _diagnostics = wt.apply_topic_assignments(
-        pool, videos, topics, {'oldvideo001': 'systems'}, [], curated, {}, fallback_only,
+        pool, videos, topics, {'oldvideo001': 'systems'}, [], curated, {}, skipped,
         now_dt=NOW,
     )
     assert updated_topics['topics'][0]['video_ids'] == ['oldvideo001']
-    assert updated_lookup['leaptech001'] == 'systems'
+    assert 'leaptech001' not in updated_lookup
 
 
 def test_quota_cap_refusal_writes_nothing(monkeypatch, tmp_path):
@@ -404,4 +547,5 @@ def test_weekly_topics_command_is_in_help():
     assert result.returncode == 0
     assert 'weekly-topics' in result.stdout
     assert '--llm-cap' in result.stdout
+    assert '--topic-cap' in result.stdout
     assert '--no-commit' in result.stdout

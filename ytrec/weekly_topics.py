@@ -8,6 +8,7 @@ optional small DeepSeek run, or nearest-centroid fallback.
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from collections import Counter
@@ -47,6 +48,7 @@ from .playability import (
     playability_reason,
     save_cache as save_playability_cache,
 )
+from .scoring import score_video
 from .thumbnails import (
     DEFAULT_CACHE_PATH as THUMBNAIL_CACHE_PATH,
     _write_json,
@@ -57,9 +59,35 @@ from .zh import parse_json_response
 
 UTC = timezone.utc
 DEFAULT_DB = 'data/weekly_topics.sqlite'
-NEAREST_TOPIC_MIN_SIMILARITY = 0.1
+WEEKLY_TOPIC_CAP_DEFAULT = 3
+# Incidental shared title words can produce 0.1-0.2 similarity. Weekly additions
+# need clearly high lexical overlap before a centroid assignment is trusted.
+NEAREST_TOPIC_MIN_SIMILARITY = 0.3
 LLM_BATCH_SIZE = 8
 DEEPSEEK_MODEL = 'deepseek-flash'
+MIT_CHANNEL_IDS = {
+    'UCEBb1b_L6zDS3xTUrIALZOw',  # MIT OpenCourseWare
+    'UCu2dehvPe9e_ui_1HN7INxw',  # MIT Club of Northern California
+    'UCMFsHceLUJNkXMiCMFNnvkA',  # MIT Plasma Science and Fusion Center
+    'UCjSXSHPOU4Dr94ENpf2YAiw',  # MIT Video Productions
+}
+_MIT_RE = re.compile(r'\bMIT\b|OpenCourseWare|Massachusetts Institute of Technology', re.I)
+_UNIVERSITY_RE = re.compile(
+    r'\b(?:Stanford|Harvard|Carnegie Mellon|CS50|Yale|UMBC|UC\s*Berkeley|Berkeley|'
+    r'UCTV|University of California|Princeton|Oxford|Cambridge|Columbia|Cornell|'
+    r'NYU|University|College)\b',
+    re.I,
+)
+_CONFERENCE_RE = re.compile(
+    r'\b(?:conference|summit|meetup|meet-up|symposium|workshop|devcon|pycon|'
+    r'jsconf|panel discussion)\b',
+    re.I,
+)
+_LECTURE_RE = re.compile(
+    r'\b(?:lecture|course|class|address|commencement|speech|seminar|presentation|'
+    r'talk|justice|cs\s?\d{2,4}[a-z]?|courseware)\b',
+    re.I,
+)
 # Official deepseek-flash prices, CNY per 1M tokens.
 # Peak is weekdays 09:00-12:00 and 14:00-18:00 Asia/Shanghai; otherwise half price.
 DEEPSEEK_CNY_PER_MILLION = {
@@ -231,19 +259,55 @@ def _select_pool_videos(candidates, raw_by_id, config):
     return selected, drops
 
 
+def _is_mit_video(video):
+    channel_id = str(video.get('channel_id') or '')
+    text = f"{video.get('title') or ''} {video.get('channel') or ''}"
+    return channel_id in MIT_CHANNEL_IDS or bool(_MIT_RE.search(text))
+
+
+def _non_mit_university_target(video):
+    """Reroute a clear non-MIT university lecture away from the MIT topic."""
+    text = f"{video.get('title') or ''} {video.get('channel') or ''}"
+    if _CONFERENCE_RE.search(text):
+        return True, 'conferences'
+    if _LECTURE_RE.search(text):
+        return True, 'classic-talks'
+    return False, None
+
+
+def _weekly_curation_target(video):
+    """Apply shipped curation, with weekly-only guards for MIT and dropped rules."""
+    matched, target = _curation_target(video)
+    if matched and target is None:
+        return True, None
+    if target == 'mit' and not _is_mit_video(video):
+        return _non_mit_university_target(video)
+    if matched:
+        return True, target
+
+    if _is_mit_video(video):
+        return True, 'mit'
+    text = f"{video.get('title') or ''} {video.get('channel') or ''}"
+    if _UNIVERSITY_RE.search(text) and _LECTURE_RE.search(text):
+        return _non_mit_university_target(video)
+    return False, None
+
+
 def _curation_partition(videos, topic_ids):
     curated = {}
     unmatched = []
-    fallback_only = set()
+    skipped = {}
     for video in videos:
-        matched, target = _curation_target(video)
+        matched, target = _weekly_curation_target(video)
         if matched and target is None:
-            fallback_only.add(video['id'])
+            skipped[video['id']] = 'curation_none'
         elif matched and target in topic_ids:
             curated[video['id']] = target
+        elif matched:
+            skipped[video['id']] = 'unknown_curation_topic'
         else:
             unmatched.append(video)
-    return curated, unmatched, fallback_only
+    return curated, unmatched, skipped
 
 
 def _llm_prompt(videos, topics):
@@ -264,9 +328,13 @@ def _llm_prompt(videos, topics):
             'context': quote,
         })
     return (
-        'Assign each YouTube video to at most one existing topic. '
+        'Assign a YouTube video only when it clearly fits one existing topic. '
+        'Return null when the fit is uncertain; do not force a weak match. '
+        'The "mit" topic is only for MIT content, never for Stanford, Harvard, '
+        'or another university. '
         'Return strict JSON: {"assignments":{"<video_id>":"<topic_id>"}}. '
-        'Use null when no existing topic fits. Never invent a topic id.\n'
+        'Every input video id must be present: use null when no existing topic '
+        'clearly fits. Never invent a video id or topic id.\n'
         f'Topics: {json.dumps(topic_rows, ensure_ascii=False)}\n'
         f'Videos: {json.dumps(video_rows, ensure_ascii=False)}'
     )
@@ -283,6 +351,7 @@ def _empty_llm_stats(cap):
         'estimated_cost_cny': 0.0,
         'invalid_topic_ids': 0,
         'invalid_video_ids': 0,
+        'disallowed_mit_ids': 0,
         'skipped': None,
         'errors': [],
     }
@@ -330,6 +399,7 @@ def llm_assignments(videos, topics, cap=30, post=None):
         return {}, stats
 
     topic_ids = {topic['id'] for topic in topics}
+    video_by_id = {video['id']: video for video in videos}
     assignments = {}
     post = post or requests.post
     eligible = videos[:cap * LLM_BATCH_SIZE]
@@ -366,6 +436,9 @@ def llm_assignments(videos, topics, cap=30, post=None):
             if topic_id not in topic_ids:
                 stats['invalid_topic_ids'] += 1
                 continue
+            if topic_id == 'mit' and not _is_mit_video(video_by_id.get(video_id) or {}):
+                stats['disallowed_mit_ids'] += 1
+                continue
             assignments[video_id] = topic_id
     return assignments, stats
 
@@ -374,18 +447,68 @@ def _nearest_topic(video, centroids, topic_ids):
     if not topic_ids:
         return None, 0.0
     if not centroids:
-        return sorted(topic_ids)[0], 0.0
+        return None, 0.0
     doc = _binary_vector({**video, 'quotes': []})
-    fallback_topic = sorted(centroids)[0]
     if not doc:
-        return fallback_topic, 0.0
+        return None, 0.0
     nearest = max(sorted(centroids), key=lambda topic_id: _cosine(doc, centroids[topic_id]))
     return nearest, _cosine(doc, centroids[nearest])
 
 
+def _int_or_zero(value):
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _resolve_topic_cap(config, override=None):
+    raw = override
+    if raw is None:
+        raw = (config.get('metadata') or {}).get(
+            'weekly_topic_cap', WEEKLY_TOPIC_CAP_DEFAULT,
+        )
+    try:
+        cap = int(raw)
+    except (TypeError, ValueError) as error:
+        raise ValueError('weekly topic cap must be an integer') from error
+    if cap < 0:
+        raise ValueError('weekly topic cap must be zero or positive')
+    return cap
+
+
+def _weekly_rank_key(video):
+    """Rank confident additions deterministically, reusing community scoring."""
+    score = score_video(video, section='community')
+    parts = score.parts
+    return (
+        -float(score),
+        -_int_or_zero(video.get('recommenders')),
+        -float(parts.get('s_eng') or 0),
+        -float(parts.get('s_str') or 0),
+        -_int_or_zero(video.get('duration_seconds')),
+        str(video.get('id') or ''),
+    )
+
+
+def _skip_row(video, *, reason, topic_id=None):
+    row = {
+        'id': video.get('id'),
+        'title': video.get('title') or video.get('id'),
+        'reason': reason,
+    }
+    if topic_id:
+        row['topic_id'] = topic_id
+    return row
+
+
 def apply_topic_assignments(pool, new_videos, topics_payload, lookup, editorial,
-                            curated, llm_map, fallback_only, now_dt=None):
-    """Append new ids to existing topics and return updated artifacts + diagnostics."""
+                            curated, llm_map, curation_skipped,
+                            topic_cap=WEEKLY_TOPIC_CAP_DEFAULT, now_dt=None):
+    """Append confident, capped new ids and return updated artifacts + diagnostics."""
+    if topic_cap is None:
+        topic_cap = WEEKLY_TOPIC_CAP_DEFAULT
+    topic_cap = max(0, int(topic_cap))
     topics = topics_payload.get('topics') or []
     topic_by_id = {topic['id']: topic for topic in topics}
     topic_ids = set(topic_by_id)
@@ -398,50 +521,77 @@ def apply_topic_assignments(pool, new_videos, topics_payload, lookup, editorial,
         if centroid:
             centroids[topic['id']] = centroid
 
+    skipped_reasons = curation_skipped if isinstance(curation_skipped, dict) else {
+        video_id: 'curation_none' for video_id in (curation_skipped or set())
+    }
     decisions = {}
-    append_allowed = {}
+    low_confidence = []
     for video in new_videos:
         video_id = video['id']
-        if video_id in curated:
-            decisions[video_id] = curated[video_id]
-            append_allowed[video_id] = True
+        if video_id in skipped_reasons:
             continue
-        if video_id not in fallback_only and llm_map.get(video_id) in topic_ids:
-            decisions[video_id] = llm_map[video_id]
-            append_allowed[video_id] = True
-            continue
-        topic_id, similarity = _nearest_topic(video, centroids, topic_ids)
-        if topic_id:
-            decisions[video_id] = topic_id
-            append_allowed[video_id] = (
-                video_id not in fallback_only and similarity >= NEAREST_TOPIC_MIN_SIMILARITY
-            )
 
-    updated_lookup = dict(lookup)
-    updated_lookup.update(decisions)
+        topic_id = curated.get(video_id)
+        if topic_id == 'mit' and not _is_mit_video(video):
+            _matched, topic_id = _non_mit_university_target(video)
+        if topic_id not in topic_ids:
+            topic_id = llm_map.get(video_id)
+        if topic_id == 'mit' and not _is_mit_video(video):
+            topic_id = None
+        if topic_id in topic_ids:
+            decisions[video_id] = topic_id
+            continue
+
+        allowed_centroids = {
+            candidate_id: centroid for candidate_id, centroid in centroids.items()
+            if candidate_id != 'mit' or _is_mit_video(video)
+        }
+        topic_id, similarity = _nearest_topic(video, allowed_centroids, topic_ids)
+        if topic_id in topic_ids and similarity >= NEAREST_TOPIC_MIN_SIMILARITY:
+            decisions[video_id] = topic_id
+        else:
+            low_confidence.append(video)
+
     metadata = {video['id']: video for video in pool if video.get('id')}
     metadata.update({video['id']: video for video in new_videos if video.get('id')})
     metadata.update({video['id']: video for video in editorial if video.get('id')})
-    updated_lookup, retagged_count = retag_topic_lookup(updated_lookup, metadata)
-    retag_dropped = set(decisions) - set(updated_lookup)
+    new_lookup, retagged_count = retag_topic_lookup(decisions, metadata)
+    retag_dropped = set(decisions) - set(new_lookup)
+
+    videos_by_id = {video['id']: video for video in new_videos if video.get('id')}
+    by_topic = {}
+    for video_id, topic_id in new_lookup.items():
+        if topic_id in topic_ids and video_id in videos_by_id:
+            by_topic.setdefault(topic_id, []).append(videos_by_id[video_id])
 
     additions = {}
-    for video in new_videos:
-        video_id = video['id']
-        topic_id = decisions.get(video_id)
-        if (not topic_id or not append_allowed.get(video_id)
-                or updated_lookup.get(video_id) != topic_id):
-            continue
+    kept_lookup = {}
+    kept_videos = []
+    over_cap = []
+    for topic_id in sorted(by_topic):
+        ranked = sorted(by_topic[topic_id], key=_weekly_rank_key)
+        for index, video in enumerate(ranked):
+            if index >= topic_cap:
+                over_cap.append(_skip_row(video, reason='over_cap', topic_id=topic_id))
+                continue
+            kept_lookup[video['id']] = topic_id
+            kept_videos.append(video)
+
         topic = topic_by_id[topic_id]
-        if video_id not in topic.setdefault('video_ids', []):
-            topic['video_ids'].append(video_id)
-        channel_id = video.get('channel_id')
-        if channel_id and channel_id not in topic.setdefault('source_channel_ids', []):
-            topic['source_channel_ids'].append(channel_id)
-        additions.setdefault(topic_id, []).append(video)
+        for video in ranked[:topic_cap]:
+            video_id = video['id']
+            if video_id not in topic.setdefault('video_ids', []):
+                topic['video_ids'].append(video_id)
+            channel_id = video.get('channel_id')
+            if channel_id and channel_id not in topic.setdefault('source_channel_ids', []):
+                topic['source_channel_ids'].append(channel_id)
+            additions.setdefault(topic_id, []).append(video)
+
+    updated_lookup = dict(lookup)
+    updated_lookup.update(kept_lookup)
 
     now_dt = now_dt or datetime.now(UTC)
-    combined_pool = list(pool) + list(new_videos)
+    combined_pool = list(pool) + kept_videos
     for topic in topics:
         topic['added_last_24h'] = _added_last_24h(
             topic['id'], editorial, combined_pool, updated_lookup, now=now_dt,
@@ -454,11 +604,20 @@ def apply_topic_assignments(pool, new_videos, topics_payload, lookup, editorial,
         'decisions': decisions,
         'retag_dropped': sorted(retag_dropped),
         'retagged_count': retagged_count,
-        'fallback_only': sorted(fallback_only),
-        'weak_assignments': sorted(
-            video_id for video_id, topic_id in decisions.items()
-            if not append_allowed.get(video_id)
-        ),
+        'kept': [video['id'] for video in kept_videos],
+        'skipped_over_cap': [row['id'] for row in over_cap],
+        'skipped_over_cap_details': over_cap,
+        'skipped_low_confidence': [video['id'] for video in low_confidence],
+        'skipped_low_confidence_details': [
+            _skip_row(video, reason='low_confidence') for video in low_confidence
+        ],
+        'curation_skipped': [
+            _skip_row(videos_by_id.get(video_id) or {'id': video_id},
+                      reason=reason)
+            for video_id, reason in skipped_reasons.items()
+            if video_id in videos_by_id
+        ],
+        'weak_assignments': [video['id'] for video in low_confidence],
     }
 
 
@@ -517,9 +676,11 @@ def probe_new_thumbnails(videos, cache_path=THUMBNAIL_CACHE_PATH, probe=None, wr
 def _per_topic_summary(additions):
     summary = {}
     for topic_id, videos in additions.items():
+        titles = [video.get('title') or video.get('id') for video in videos]
         summary[topic_id] = {
             'count': len(videos),
-            'samples': [video.get('title') or video.get('id') for video in videos[:3]],
+            'titles': titles,
+            'samples': titles,
         }
     return summary
 
@@ -565,7 +726,7 @@ def _commit_and_push(no_commit, no_push):
 
 
 def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=False,
-                      no_push=False, llm_cap=30, root='site/src/data',
+                      no_push=False, llm_cap=30, topic_cap=None, root='site/src/data',
                       yaml_path='config/topics.yaml', db_path=DEFAULT_DB,
                       algolia_client=None, youtube_client=None, deepseek_post=None,
                       playability_cache_path=PLAYABILITY_CACHE_PATH,
@@ -575,6 +736,7 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
     if write is False:
         dry_run = True
     now_dt = now_dt or datetime.now(UTC)
+    topic_cap = _resolve_topic_cap(config, topic_cap)
     root = Path(root)
     pool_path = root / 'hn_pool.json'
     topics_path = root / 'topics.json'
@@ -596,16 +758,18 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
                                     client=algolia_client, now_dt=now_dt)
     candidates = _new_candidates(aggregates, pool_ids)
     raw_by_id, fetch_stats = _metadata_for_candidates(candidates, config, youtube_client)
-    new_videos, drops = _select_pool_videos(candidates, raw_by_id, config)
+    selected_videos, drops = _select_pool_videos(candidates, raw_by_id, config)
     editorial = _load_editorial(root=str(root))
     topic_ids = {topic['id'] for topic in topics_payload['topics']}
-    curated, unmatched, fallback_only = _curation_partition(new_videos, topic_ids)
+    curated, unmatched, curation_skipped = _curation_partition(selected_videos, topic_ids)
     llm_map, llm_stats = llm_assignments(unmatched, topics_payload['topics'],
                                          cap=llm_cap, post=deepseek_post)
     topics_payload, lookup, topic_diagnostics = apply_topic_assignments(
-        pool, new_videos, topics_payload, lookup, editorial,
-        curated, llm_map, fallback_only, now_dt=now_dt,
+        pool, selected_videos, topics_payload, lookup, editorial,
+        curated, llm_map, curation_skipped, topic_cap=topic_cap, now_dt=now_dt,
     )
+    kept_ids = set(topic_diagnostics['kept'])
+    new_videos = [video for video in selected_videos if video['id'] in kept_ids]
 
     thumbnail_stats = {'checked': 0, 'from_cache': 0, 'network_failures': 0}
     if new_videos:
@@ -615,7 +779,9 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
 
     summary = {
         'candidates': len(candidates),
+        'gate_passed_videos': len(selected_videos),
         'new_videos': len(new_videos),
+        'topic_cap': topic_cap,
         'dropped_by_gate': dict(drops),
         'fetched_batches': fetch_stats['batches'],
         'fetched_ids': fetch_stats['fetched'],
@@ -624,7 +790,11 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
                                      fetch_stats['used_before'], fetch_stats['batches']),
         'deepseek': llm_stats,
         'per_topic': _per_topic_summary(topic_diagnostics['additions']),
-        'weak_assignments': topic_diagnostics['weak_assignments'],
+        'skipped_over_cap': topic_diagnostics['skipped_over_cap'],
+        'skipped_over_cap_details': topic_diagnostics['skipped_over_cap_details'],
+        'skipped_low_confidence': topic_diagnostics['skipped_low_confidence'],
+        'skipped_low_confidence_details': topic_diagnostics['skipped_low_confidence_details'],
+        'curation_skipped': topic_diagnostics['curation_skipped'],
         'retag_dropped': topic_diagnostics['retag_dropped'],
         'thumbnails': thumbnail_stats,
         'dry_run': bool(dry_run),
@@ -632,7 +802,7 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
         'commit': {'committed': False, 'pushed': False, 'reason': 'dry_run' if dry_run else None},
     }
     if not new_videos:
-        summary['commit']['reason'] = 'no_new_videos'
+        summary['commit']['reason'] = 'no_kept_videos'
         return summary
     if dry_run:
         return summary
@@ -666,7 +836,8 @@ def format_summary(summary):
     deepseek = summary.get('deepseek') or {}
     lines = [
         (f"Weekly topics: candidates={summary['candidates']} "
-         f"new_videos={summary['new_videos']} dry_run={summary['dry_run']}"),
+         f"new_videos={summary['new_videos']} topic_cap={summary.get('topic_cap', 3)} "
+         f"dry_run={summary['dry_run']}"),
         f"dropped_by_gate={summary['dropped_by_gate'] or {}}",
         (f"videos.list batches={summary['fetched_batches']} "
          f"fetched={summary['fetched_ids']} cached={summary['cached_ids']}"),
@@ -676,21 +847,44 @@ def format_summary(summary):
          f"(prompt={deepseek.get('prompt_tokens', 0)}, "
          f"completion={deepseek.get('completion_tokens', 0)}) "
          f"estimated_cost_cny={deepseek.get('estimated_cost_cny', 0.0):.6f} "
-         f"invalid_topic_ids={deepseek.get('invalid_topic_ids', 0)}"
+         f"invalid_topic_ids={deepseek.get('invalid_topic_ids', 0)} "
+         f"disallowed_mit_ids={deepseek.get('disallowed_mit_ids', 0)}"
          + (f" skipped={deepseek['skipped']}" if deepseek.get('skipped') else '')),
     ]
     if summary['per_topic']:
         lines.append('New videos by topic:')
         for topic_id, row in sorted(summary['per_topic'].items()):
-            lines.append(f"- {topic_id}: {row['count']} (samples: {' | '.join(row['samples'])})")
-    if summary.get('weak_assignments'):
-        lines.append(f"Lookup-only weak assignments: {', '.join(summary['weak_assignments'])}")
+            titles = row.get('titles') or row.get('samples') or []
+            lines.append(f"- {topic_id}: {row['count']} (titles: {' | '.join(titles)})")
+    if summary.get('skipped_low_confidence_details') or summary.get('skipped_low_confidence'):
+        rows = summary.get('skipped_low_confidence_details') or [
+            {'id': video_id, 'title': video_id}
+            for video_id in summary.get('skipped_low_confidence') or []
+        ]
+        lines.append(f'Skipped low confidence: {len(rows)}')
+        for row in rows:
+            lines.append(f"- {row.get('id')}: {row.get('title') or row.get('id')}")
+    if summary.get('skipped_over_cap_details') or summary.get('skipped_over_cap'):
+        rows = summary.get('skipped_over_cap_details') or [
+            {'id': video_id, 'title': video_id}
+            for video_id in summary.get('skipped_over_cap') or []
+        ]
+        lines.append(f'Skipped over cap: {len(rows)}')
+        for row in rows:
+            topic = f" [{row['topic_id']}]" if row.get('topic_id') else ''
+            lines.append(f"- {row.get('id')}{topic}: {row.get('title') or row.get('id')}")
+    if summary.get('curation_skipped'):
+        rows = summary['curation_skipped']
+        lines.append(f'Skipped by curation: {len(rows)}')
+        for row in rows:
+            lines.append(f"- {row.get('id')} ({row.get('reason')}): {row.get('title') or row.get('id')}")
     if summary.get('retag_dropped'):
-        lines.append(f"Retagged non-classic lookups: {', '.join(summary['retag_dropped'])}")
+        lines.append(f"Retagged and omitted non-classic lookups: "
+                     f"{', '.join(summary['retag_dropped'])}")
     if summary['dry_run']:
         lines.append('Dry run: no JSON, cache, build, crawl, or commit changes written.')
     elif not summary['new_videos']:
-        lines.append('No new videos passed the gates; nothing changed and nothing was committed.')
+        lines.append('No new videos were kept; nothing changed and nothing was committed.')
     else:
         commit = summary.get('commit') or {}
         if commit.get('committed'):
@@ -708,17 +902,21 @@ def main(argv=None):
     parser.add_argument('--no-commit', action='store_true')
     parser.add_argument('--no-push', action='store_true')
     parser.add_argument('--llm-cap', type=int, default=30)
+    parser.add_argument('--topic-cap', type=int,
+                        help='maximum new videos per topic (default: config metadata.weekly_topic_cap or 3)')
     args = parser.parse_args(argv)
     if args.days <= 0:
         parser.error('--days must be positive')
     if args.llm_cap < 0:
         parser.error('--llm-cap must be zero or positive')
+    if args.topic_cap is not None and args.topic_cap < 0:
+        parser.error('--topic-cap must be zero or positive')
     config = yaml.safe_load(Path(args.config).read_text()) or {}
 
     if args.dry_run:
         summary = run_weekly_topics(
             config, days=args.days, dry_run=True, no_commit=True, no_push=True,
-            llm_cap=args.llm_cap,
+            llm_cap=args.llm_cap, topic_cap=args.topic_cap,
         )
         print(format_summary(summary))
         return 0
@@ -732,6 +930,7 @@ def main(argv=None):
             summary = run_weekly_topics(
                 config, days=args.days, no_commit=args.no_commit,
                 no_push=args.no_push, llm_cap=args.llm_cap,
+                topic_cap=args.topic_cap,
             )
             print(format_summary(summary))
     except Exception:
