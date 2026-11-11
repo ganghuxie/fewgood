@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-11T15:48:35Z",
+  "generated_at": "2026-11-11T23:57:47Z",
   "kind": "hn_pool",
   "limit": 1000,
-  "count": 702,
+  "count": 698,
   "videos": [
     {
       "id": "d-7o9xYp7eE",
@@ -23542,34 +23542,6 @@
       "thumb_verified": true
     },
     {
-      "id": "txb79zMKFv4",
-      "title": "Spitting on a Cybertruck",
-      "channel": "Regular Car Reviews",
-      "channel_id": "UCo1pShh6dtg-T_ZZkgi_JDQ",
-      "published_at": "2026-04-15T11:01:34Z",
-      "duration_seconds": 751,
-      "default_audio_language": "en",
-      "default_language": "en-GB",
-      "view_count": 41395,
-      "like_count": 3121,
-      "recommenders": 1,
-      "months": 1,
-      "span_days": 0.0,
-      "first": 1794066361,
-      "last": 1794066361,
-      "quotes": [
-        {
-          "author": "willis936",
-          "text": "The real deal in case anyone prefers literal spitting. https://youtu.be/txb79zMKFv4",
-          "url": "https://news.ycombinator.com/item?id=50405501"
-        }
-      ],
-      "classic_speech": false,
-      "thumb": "https://i.ytimg.com/vi/txb79zMKFv4/maxresdefault.jpg",
-      "thumb_kind": "maxresdefault",
-      "thumb_verified": true
-    },
-    {
       "id": "QGdLZTgMDd4",
       "title": "How EA found 20,000 lost tapes in a storage closet",
       "channel": "The Game Business",
@@ -23706,34 +23678,6 @@
       ],
       "classic_speech": false,
       "thumb": "https://i.ytimg.com/vi/5211iYEqnzo/maxresdefault.jpg",
-      "thumb_kind": "maxresdefault",
-      "thumb_verified": true
-    },
-    {
-      "id": "dMBBOawFy_4",
-      "title": "Joe Rogan Experience #2578 - Calley Means",
-      "channel": "PowerfulJRE",
-      "channel_id": "UCzQUP1qoWDoEbmsQxvdjxgQ",
-      "published_at": "2026-11-06T18:00:02Z",
-      "duration_seconds": 8312,
-      "default_audio_language": "en-US",
-      "default_language": "en",
-      "view_count": 1819244,
-      "like_count": 33443,
-      "recommenders": 1,
-      "months": 1,
-      "span_days": 0.0,
-      "first": 1794117685,
-      "last": 1794117685,
-      "quotes": [
-        {
-          "author": "jakeogh",
-          "text": "Joe Rogan Experience #2578 – Calley Means [video]",
-          "url": "https://news.ycombinator.com/item?id=50410806"
-        }
-      ],
-      "classic_speech": false,
-      "thumb": "https://i.ytimg.com/vi/dMBBOawFy_4/maxresdefault.jpg",
       "thumb_kind": "maxresdefault",
       "thumb_verified": true
     },
@@ -24186,34 +24130,6 @@
       "thumb_verified": true
     },
     {
-      "id": "M1si1y5lvkk",
-      "title": "No one can force me to have a secure website!!!",
-      "channel": "suckerpinch",
-      "channel_id": "UC3azLjQuz9s5qk76KEXaTvA",
-      "published_at": "2026-04-13T23:10:04Z",
-      "duration_seconds": 2110,
-      "default_audio_language": "en-US",
-      "default_language": "en-US",
-      "view_count": 233015,
-      "like_count": 15349,
-      "recommenders": 1,
-      "months": 1,
-      "span_days": 0.0,
-      "first": 1794288536,
-      "last": 1794288536,
-      "quotes": [
-        {
-          "author": "cobbal",
-          "text": "Or if you prefer the paper in video form: https://www.youtube.com/watch?v=M1si1y5lvkk",
-          "url": "https://news.ycombinator.com/item?id=50436439"
-        }
-      ],
-      "classic_speech": false,
-      "thumb": "https://i.ytimg.com/vi/M1si1y5lvkk/maxresdefault.jpg",
-      "thumb_kind": "maxresdefault",
-      "thumb_verified": true
-    },
-    {
       "id": "RSlctyQmVSE",
       "title": "From the Invisible to the Universe | A Journey Across 40 Powers of Ten",
       "channel": "Velmoxia",
@@ -24294,34 +24210,6 @@
       ],
       "classic_speech": false,
       "thumb": "https://i.ytimg.com/vi/l9CI6KSV560/maxresdefault.jpg",
-      "thumb_kind": "maxresdefault",
-      "thumb_verified": true
-    },
-    {
-      "id": "6bqaHVSlVeU",
-      "title": "MIT Scientist: “Your Brain Evolved To Ignore Aliens – They’re Everywhere!”",
-      "channel": "Jesse Michels",
-      "channel_id": "UCuG2KzrIMe3qoNcuDVpwnXw",
-      "published_at": "2026-06-02T00:37:59Z",
-      "duration_seconds": 12015,
-      "default_audio_language": "en",
-      "default_language": "en",
-      "view_count": 1106244,
-      "like_count": 20039,
-      "recommenders": 1,
-      "months": 1,
-      "span_days": 0.0,
-      "first": 1794343102,
-      "last": 1794343102,
-      "quotes": [
-        {
-          "author": "ptrhvns",
-          "text": "MIT Scientist: \"Your Brain Evolved to Ignore Aliens – They're Everywhere \" [video]",
-          "url": "https://news.ycombinator.com/item?id=50445977"
-        }
-      ],
-      "classic_speech": false,
-      "thumb": "https://i.ytimg.com/vi/6bqaHVSlVeU/maxresdefault.jpg",
       "thumb_kind": "maxresdefault",
       "thumb_verified": true
     },

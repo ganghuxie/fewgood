@@ -1,5 +1,5 @@
 # Auto-generated from data clustering; do not hand-edit.
-generated_at: 2026-11-11T15:47:51Z
+generated_at: 2026-11-11T23:57:47Z
 topics:
 - id: ai
   name_zh: "人工智能"
@@ -76,14 +76,14 @@ topics:
   aliases_en: ["suckerpinch", "ars technica", "war stories", "stories ars", "zelda history"]
   keywords: ["suckerpinch", "games", "tom7", "nes", "game", "technica", "sm64", "roblox"]
   source_channel_ids: ["UCE1jXbVAGJQEORz9nZqb5bQ", "UC0fDG3byEcMtbOqPMymDNbw", "UC4EFgGdLCsUKXO4LzMfypMA", "UCMm211NGh4Ls5SAMZJF7E8A", "UC3ltptWa0xfrDweghW94Acg", "UCuvSqzfO_LV_QzHdmEj84SQ", "UC3azLjQuz9s5qk76KEXaTvA", "UCZB6V9fUov0Mx_us3MWWILg", "UCALPBCryAkPlmukKlQcLG8w", "UCGNm2vGRTPwbO0Q6u-X7MuA", "UCCDU1fsmgvWljcW2aodfJsA", "UCAnzaHhB0ONtwDkYdc3MFCw", "UC4NHiuL2clWzw23ug7u_ejQ", "UCnueMliL7Ooj-mPSa9DiRXw"]
-  video_ids: ["roBkg-iPrbw", "VAhHkJQ3KgY", "5wAo54DHDY0", "kpk2tdsPh0A", "uHQ4WCU1WQc", "rvLFEh7V18A", "t_rzYnXEQlE", "ar9WRwCiSr0", "xOCurBYI_gY", "_gXlauRB1EQ", "JcJSW7Rprio", "vTMF6xEiAaY", "DpXy041BIlA", "LA_DrBwkiJA", "JjDsP5n2kSM", "5TFDG-y-EHs", "ZWQ0591PAxM", "Y65FRxE7uMc", "izxXGuVL21o", "1hs451PfFzQ", "sw0VfmXKq54", "M1si1y5lvkk", "v7fM06jmHso", "9GRFNThJIIQ"]
+  video_ids: ["roBkg-iPrbw", "VAhHkJQ3KgY", "5wAo54DHDY0", "kpk2tdsPh0A", "uHQ4WCU1WQc", "rvLFEh7V18A", "t_rzYnXEQlE", "ar9WRwCiSr0", "xOCurBYI_gY", "_gXlauRB1EQ", "JcJSW7Rprio", "vTMF6xEiAaY", "DpXy041BIlA", "LA_DrBwkiJA", "JjDsP5n2kSM", "5TFDG-y-EHs", "ZWQ0591PAxM", "Y65FRxE7uMc", "izxXGuVL21o", "1hs451PfFzQ", "sw0VfmXKq54", "v7fM06jmHso", "9GRFNThJIIQ"]
   added_last_24h: 0
 - id: ideas
   name_zh: "人物与思想"
   aliases_en: ["ai", "lex fridman", "rogan experience", "joe rogan", "ray dalio"]
   keywords: ["rogan", "powerfuljre", "podcast", "society", "lex", "joe", "experience", "principles"]
   source_channel_ids: ["UCvhsiQGy_zcNCiSbeXEjhLg", "UCJIfeSCssxSC_Dhc5s7woww", "UCMFqCWI1HZRNDQIKERXEg3Q", "UCxHTM1FYxeC4F7xDsBVltGg", "UCcEDTBdietc2JmgN6TL8wAg", "UCSHZKyawb77ixDdsGog4iWA", "UCil2G-oUNzJ7Bzfv11kDjNQ", "UCIb2ti8V0Mhgvxgs80-Lo1w", "UCR85PW_B_7_Aisx5vNS7Gjw", "UCqvaXJ1K3HheTPNjH-KpwXQ", "UCzQUP1qoWDoEbmsQxvdjxgQ", "UC51_awyLXl2nxCduuzzmw4w", "UCY7dD6waquGnKTZSumPMTlQ", "UCK8sQmJBp8GCxrOtXWBpyEA", "UCv_vLHiWVBh_FR9vbeuiY-A", "UCvdvXkC2ZZEo82yaPh7yC4A"]
-  video_ids: ["zDZFcDGpL4U", "ipRvjS7q1DI", "98LdFA-_zfA", "tybOi4hjZFQ", "GTQnarzmTOc", "O9upVbGSBFo", "vtIzMaLkCaM", "aB8zcAttP1E", "3wfNl2L0Gf8", "nM9f0W2KD5s", "u6XAPnuFjJc", "xguam0TKMw8", "PHe0bXAIuk0", "Eco2s3-0zsQ", "pwaWilO_Pig", "mPqWstVnRjQ", "E3URhJx0NSw", "ycPr5-27vSI", "xtpgkX588nM", "f7CW7S0zxv4", "hvk_XylEmLo", "Nb2tebYAaOA", "yAj5EnyuakI", "dMBBOawFy_4", "FGCP2F_7rQk"]
+  video_ids: ["zDZFcDGpL4U", "ipRvjS7q1DI", "98LdFA-_zfA", "tybOi4hjZFQ", "GTQnarzmTOc", "O9upVbGSBFo", "vtIzMaLkCaM", "aB8zcAttP1E", "3wfNl2L0Gf8", "nM9f0W2KD5s", "u6XAPnuFjJc", "xguam0TKMw8", "PHe0bXAIuk0", "Eco2s3-0zsQ", "pwaWilO_Pig", "mPqWstVnRjQ", "E3URhJx0NSw", "ycPr5-27vSI", "xtpgkX588nM", "f7CW7S0zxv4", "hvk_XylEmLo", "Nb2tebYAaOA", "yAj5EnyuakI", "FGCP2F_7rQk"]
   added_last_24h: 0
 - id: maker
   name_zh: "动手与黑客"
@@ -103,8 +103,8 @@ topics:
   name_zh: "高校公开课"
   aliases_en: ["mit", "mit opencourseware", "university california", "television uctv", "randy pausch"]
   keywords: ["university", "mit", "professor", "lecture", "opencourseware", "stanford", "harvard", "california"]
-  source_channel_ids: ["UCYN8R_LpgxCkeVTO_YdVJoA", "UCh6KFtW4a4Ozr81GI1cxaBQ", "UC-EnprmCZ3OXyAoG7vjVNCA", "UCf-COwmdNelXvbj-KaMCuLw", "UCcabW7890RKJzL968QWEykA", "UCSh-dNnqe1agUSzPM01LgBA", "UCVCldvV9TWPPGM0kRB91G7w", "UCaVCxGpbDeDI47HDmPYkFCQ", "UCEBb1b_L6zDS3xTUrIALZOw", "UCu2dehvPe9e_ui_1HN7INxw", "UCMFsHceLUJNkXMiCMFNnvkA", "UCmQaIlWu3u23iXFsk5s8l3g", "UCjSXSHPOU4Dr94ENpf2YAiw", "UCblU02pAw9C5jnDZSGNs_Hw", "UCuG2KzrIMe3qoNcuDVpwnXw"]
-  video_ids: ["oIG9ztQw2Gc", "akVL7QY0S8A", "dBnniua6-oM", "UF8uR6Z6KLc", "ji5_MqicxSo", "NOAgplgTxfc", "xFFs9UgOAlE", "NNnIGh9g6fA", "8X7Ng75e5gQ", "_tpB-B8BXk0", "oTugjssqOT0", "n8m7lFQ3njk", "d-7o9xYp7eE", "Unzc731iCUY", "2Op3QLzMgSY", "KkpqA8yG9T4", "L0KuAx1COEk", "-J_xL4IGhJA", "MShbP3OpASA", "Gk-9Fd2mEnI", "WwslBPj8GgI", "6bqaHVSlVeU"]
+  source_channel_ids: ["UCYN8R_LpgxCkeVTO_YdVJoA", "UCh6KFtW4a4Ozr81GI1cxaBQ", "UC-EnprmCZ3OXyAoG7vjVNCA", "UCf-COwmdNelXvbj-KaMCuLw", "UCcabW7890RKJzL968QWEykA", "UCSh-dNnqe1agUSzPM01LgBA", "UCVCldvV9TWPPGM0kRB91G7w", "UCaVCxGpbDeDI47HDmPYkFCQ", "UCEBb1b_L6zDS3xTUrIALZOw", "UCu2dehvPe9e_ui_1HN7INxw", "UCMFsHceLUJNkXMiCMFNnvkA", "UCmQaIlWu3u23iXFsk5s8l3g", "UCjSXSHPOU4Dr94ENpf2YAiw", "UCblU02pAw9C5jnDZSGNs_Hw"]
+  video_ids: ["oIG9ztQw2Gc", "akVL7QY0S8A", "dBnniua6-oM", "UF8uR6Z6KLc", "ji5_MqicxSo", "NOAgplgTxfc", "xFFs9UgOAlE", "NNnIGh9g6fA", "8X7Ng75e5gQ", "_tpB-B8BXk0", "oTugjssqOT0", "n8m7lFQ3njk", "d-7o9xYp7eE", "Unzc731iCUY", "2Op3QLzMgSY", "KkpqA8yG9T4", "L0KuAx1COEk", "-J_xL4IGhJA", "MShbP3OpASA", "Gk-9Fd2mEnI", "WwslBPj8GgI"]
   added_last_24h: 0
 - id: pioneers
   name_zh: "计算机先驱访谈"
@@ -146,5 +146,5 @@ topics:
   aliases_en: ["scott", "technology connections", "tech tips", "linus tech", "tom scott"]
   keywords: ["connections", "technology", "scott", "tom", "computerphile", "tips", "rossmann", "linus"]
   source_channel_ids: ["UCy0tKL1T7wFoYcxCe0xjN6Q", "UCj--iMtToRO_cGG_fpmP5XQ", "UC5WjFrtBdufl6CZojX3D8dQ", "UC18R5fEIi0uleFNt3v4KwaQ", "UCXuqSBlHAE6Xw-yeJA0Tunw", "UCl2mFZoRqjw_ELax4Yisf6w", "UChIs72whgZI9w6d6FhwGGHA", "UCshObcm-nLhbu8MY50EZ5Ng", "UCGsaijjOJshS2_ZmMNZgS-g", "UCSpFnDQr88xCZ80N-X7t0nQ", "UC9-y-6csu5WGm29I7JiwpnA", "UCBa659QWEk1AI4Tg--mrJ2A", "UCo1pShh6dtg-T_ZZkgi_JDQ"]
-  video_ids: ["_rBO8neWw04", "YAtLTLiqNwg", "jMmUoZh3Hq4", "l6T9xIeZTds", "UiS27feX8o0", "Pzl1B7nB9Kc", "0506yDSgU7M", "4To-F6W1NT0", "OX31kZbAXsA", "GiYO1TObNz8", "zb7Bs98KmnY", "6IFVTcM28KA", "Ll6-eGDpimU", "_bP80DEAbuo", "o2_SZ4tfLns", "wh4aWZRtTwU", "5eo8nz_niiM", "1OfxlSG6q5Y", "OHKKcd3sx2c", "_9LX9HSQkWo", "-5wpm-gesOY", "w3_0x6oaDmI", "LkH2r-sNjQs", "1Jwo5qc78QU", "2tdiKTSdE9Y", "BxV14h0kFs0", "y4GB_NDU43Q", "NTfOnGZUZDk", "WO2X3oZEJOA", "MijmeoH9LT4", "mfv0V1SxbNA", "RSTNhvDGbYI", "AUaJ8pDlxi8", "_yMMTVVJI4c", "L3oO510dyVI", "txb79zMKFv4", "i_mLxyIXpSY"]
+  video_ids: ["_rBO8neWw04", "YAtLTLiqNwg", "jMmUoZh3Hq4", "l6T9xIeZTds", "UiS27feX8o0", "Pzl1B7nB9Kc", "0506yDSgU7M", "4To-F6W1NT0", "OX31kZbAXsA", "GiYO1TObNz8", "zb7Bs98KmnY", "6IFVTcM28KA", "Ll6-eGDpimU", "_bP80DEAbuo", "o2_SZ4tfLns", "wh4aWZRtTwU", "5eo8nz_niiM", "1OfxlSG6q5Y", "OHKKcd3sx2c", "_9LX9HSQkWo", "-5wpm-gesOY", "w3_0x6oaDmI", "LkH2r-sNjQs", "1Jwo5qc78QU", "2tdiKTSdE9Y", "BxV14h0kFs0", "y4GB_NDU43Q", "NTfOnGZUZDk", "WO2X3oZEJOA", "MijmeoH9LT4", "mfv0V1SxbNA", "RSTNhvDGbYI", "AUaJ8pDlxi8", "_yMMTVVJI4c", "L3oO510dyVI", "i_mLxyIXpSY"]
   added_last_24h: 0
