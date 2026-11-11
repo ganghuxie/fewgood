@@ -923,7 +923,7 @@ def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_c
 def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data', quota_limit=8000,
             *, rss_fetcher=None, sources_file=None):
     from .podcast_whitelist import (
-        fetch_channel_rss_video_ids, normalize_rss_entries,
+        fetch_channel_rss_video_ids, fetch_channel_video_ids, normalize_rss_entries,
     )
     key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     rss_fetcher = rss_fetcher or fetch_channel_rss_video_ids
@@ -939,10 +939,13 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
         if not channel_id:
             continue
         try:
-            entries = rss_fetcher(channel_id)
+            entries, fallback_units = fetch_channel_video_ids(
+                channel_id, rss_fetcher=rss_fetcher, client=client, key=key, feed_name='ai',
+            )
         except Exception as error:
             print(f"AI channel skipped: {channel.get('name', channel_id)} ({error})")
             continue
+        units += fallback_units
         for entry in normalize_rss_entries(entries):
             vid = entry.get('id')
             published = _feed_timestamp(entry.get('published_at'))

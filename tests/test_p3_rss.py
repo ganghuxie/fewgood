@@ -70,6 +70,33 @@ class RecordingClient:
         return {'items': [self.raws[vid] for vid in params['id'].split(',')]}
 
 
+class FallbackRecordingClient:
+    def __init__(self, raws, playlists=None, uploads=None):
+        self.raws = raws
+        self.playlists = playlists or {}
+        self.uploads = uploads or {}
+        self.calls = []
+
+    def get(self, url, params, youtube=False):
+        self.calls.append((url, dict(params)))
+        endpoint = url.rsplit('/', 1)[-1]
+        if endpoint == 'playlistItems':
+            return {'items': self.playlists.get(params['playlistId'], [])}
+        if endpoint == 'channels':
+            uploads = self.uploads.get(params['id'])
+            return {'items': [{'contentDetails': {'relatedPlaylists': {'uploads': uploads}}}]} if uploads else {'items': []}
+        assert endpoint == 'videos', url
+        return {'items': [self.raws[vid] for vid in params['id'].split(',')]}
+
+
+def upload(video_id, published_at=None):
+    published_at = published_at or iso_now()
+    return {
+        'snippet': {'publishedAt': published_at},
+        'contentDetails': {'videoId': video_id, 'videoPublishedAt': published_at},
+    }
+
+
 def write_music_config(path, channels):
     path.write_text(yaml.safe_dump({
         'min_duration_seconds': 180,
@@ -106,6 +133,29 @@ def test_fetch_channel_rss_uses_plain_http_without_youtube_quota():
     ]
 
 
+def test_fetch_channel_rss_404_falls_back_to_derived_uploads_playlist():
+    class Response:
+        status_code = 404
+        text = ''
+
+    class Session:
+        def get(self, url, params, timeout):
+            return Response()
+
+    client = FallbackRecordingClient(
+        {'fallback001': raw_video('fallback001', 'PT5M')},
+        playlists={'UU1': [upload('fallback001')]},
+    )
+
+    entries = fetch_channel_rss_video_ids(
+        'UC1', session=Session(), client=client, key='test-only',
+    )
+
+    assert [entry['id'] for entry in entries] == ['fallback001']
+    assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['playlistItems']
+    assert client.calls[0][1]['playlistId'] == 'UU1'
+
+
 def test_curated_music_feed_discovers_via_rss_without_playlist_items(tmp_path, monkeypatch):
     monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
     config_path = tmp_path / 'music_channels.yaml'
@@ -122,6 +172,51 @@ def test_curated_music_feed_discovers_via_rss_without_playlist_items(tmp_path, m
     assert [video['id'] for video in result['videos']] == ['rssTrack001']
     assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['videos']
     assert result['quota_units_approx'] == 1
+
+
+def test_curated_music_feed_falls_back_when_rss_raises(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    config_path = tmp_path / 'music_channels.yaml'
+    write_music_config(config_path, [{
+        'name': 'Test Channel', 'handle': 'test', 'youtube_channel_id': 'UC1',
+    }])
+    client = FallbackRecordingClient(
+        {'fallback001': raw_video('fallback001', 'PT5M')},
+        playlists={'UU1': [upload('fallback001')]},
+    )
+
+    def rss_fetcher(channel_id):
+        raise RuntimeError('RSS unavailable')
+
+    result = curated_music_feed(
+        config_path=str(config_path), client=client, output=str(tmp_path / 'out'),
+        rss_fetcher=rss_fetcher,
+    )
+
+    assert [video['id'] for video in result['videos']] == ['fallback001']
+    assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['playlistItems', 'videos']
+    assert result['quota_units_approx'] == 2
+
+
+def test_ai_feed_falls_back_when_rss_returns_no_entries(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    channels_path = tmp_path / 'ai_channels.yaml'
+    channels_path.write_text(yaml.safe_dump({'channels': [{
+        'name': 'AI Channel', 'youtube_channel_id': 'UC1',
+    }]}, allow_unicode=True))
+    client = FallbackRecordingClient(
+        {'fallbackAI01': raw_video('fallbackAI01', 'PT5M')},
+        playlists={'UU1': [upload('fallbackAI01')]},
+    )
+
+    result = ai_feed(
+        channels_file=str(channels_path), client=client, output=str(tmp_path / 'out'),
+        rss_fetcher=lambda channel_id: [],
+    )
+
+    assert [video['id'] for video in result['videos']] == ['fallbackAI01']
+    assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['playlistItems', 'videos']
+    assert result['quota_units_approx'] == 2
 
 
 def test_ai_feed_discovers_via_rss_and_prefilters_old_posts(tmp_path, monkeypatch):
@@ -182,6 +277,40 @@ def test_fresh_cached_record_is_reused_and_new_id_is_fetched(tmp_path, monkeypat
     assert result['quota_units_approx'] == 1
 
 
+def test_fallback_reuses_fresh_cached_record_without_videos_list(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    config_path = tmp_path / 'music_channels.yaml'
+    write_music_config(config_path, [{
+        'name': 'One', 'handle': 'one', 'youtube_channel_id': 'UC1',
+    }])
+    output = tmp_path / 'out'
+    output.mkdir()
+    cached_published = (datetime.now(timezone.utc) - timedelta(days=1)).isoformat()
+    cached = {
+        'id': 'cachedTrack1', 'title': 'Cached', 'channel': 'One', 'channel_id': 'UC1',
+        'published_at': cached_published, 'default_audio_language': 'en', 'default_language': 'en',
+        'duration_seconds': 300, 'view_count': 999, 'like_count': 5,
+    }
+    (output / 'music.json').write_text(json.dumps({
+        'generated_at': iso_now(),
+        'videos': [cached],
+    }))
+    client = FallbackRecordingClient(
+        {'newTrack0001': raw_video('newTrack0001', 'PT5M')},
+        playlists={'UU1': [upload('cachedTrack1'), upload('newTrack0001')]},
+    )
+
+    result = curated_music_feed(
+        config_path=str(config_path), client=client, output=str(output),
+        rss_fetcher=lambda channel_id: (_ for _ in ()).throw(RuntimeError('RSS unavailable')),
+    )
+
+    assert {video['id'] for video in result['videos']} == {'cachedTrack1', 'newTrack0001'}
+    video_calls = [params for url, params in client.calls if url.endswith('/videos')]
+    assert [params['id'] for params in video_calls] == ['newTrack0001']
+    assert result['quota_units_approx'] == 2
+
+
 def test_stale_cached_record_is_refetched(tmp_path, monkeypatch):
     monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
     config_path = tmp_path / 'music_channels.yaml'
@@ -211,14 +340,20 @@ def test_stale_cached_record_is_refetched(tmp_path, monkeypatch):
     assert [params['id'] for _url, params in client.calls] == ['staleTrack01']
 
 
-def test_failed_rss_fetch_skips_one_channel_and_keeps_others(tmp_path, monkeypatch):
+def test_failed_rss_fetch_falls_back_and_keeps_other_channels(tmp_path, monkeypatch):
     monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
     config_path = tmp_path / 'music_channels.yaml'
     write_music_config(config_path, [
         {'name': 'Broken', 'handle': 'broken', 'youtube_channel_id': 'UC1'},
         {'name': 'Working', 'handle': 'working', 'youtube_channel_id': 'UC2'},
     ])
-    client = RecordingClient({'workingTrack': raw_video('workingTrack', 'PT5M', channel_id='UC2')})
+    client = FallbackRecordingClient(
+        {
+            'fallbackTrack': raw_video('fallbackTrack', 'PT5M', channel_id='UC1'),
+            'workingTrack': raw_video('workingTrack', 'PT5M', channel_id='UC2'),
+        },
+        playlists={'UU1': [upload('fallbackTrack')]},
+    )
 
     def rss_fetcher(channel_id):
         if channel_id == 'UC1':
@@ -230,5 +365,6 @@ def test_failed_rss_fetch_skips_one_channel_and_keeps_others(tmp_path, monkeypat
         rss_fetcher=rss_fetcher,
     )
 
-    assert [video['id'] for video in result['videos']] == ['workingTrack']
-    assert [params['id'] for _url, params in client.calls] == ['workingTrack']
+    assert {video['id'] for video in result['videos']} == {'fallbackTrack', 'workingTrack'}
+    assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['playlistItems', 'videos']
+    assert result['quota_units_approx'] == 2

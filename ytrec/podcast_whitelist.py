@@ -7,6 +7,7 @@ fetch pipeline and never call `search.list`.
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 import xml.etree.ElementTree as ET
+import os
 
 import requests
 import yaml
@@ -109,14 +110,97 @@ def normalize_rss_entries(entries):
     return normalized
 
 
-def fetch_channel_rss_video_ids(channel_id, session=None, timeout=15):
-    """Fetch a channel's public Atom feed; this costs zero YouTube API units."""
+def _fetch_channel_rss_entries(channel_id, session=None, timeout=15):
     response = (session or requests).get(
         RSS_URL, params={'channel_id': channel_id}, timeout=timeout,
     )
     if getattr(response, 'status_code', 200) != 200:
         raise RuntimeError(f'RSS HTTP {response.status_code}')
     return parse_channel_rss(response.text)
+
+
+def fetch_channel_rss_video_ids(channel_id, session=None, timeout=15, *, client=None, key=None):
+    """Fetch a channel's public Atom feed, with an optional API fallback.
+
+    The RSS request itself costs zero YouTube API units. When an API client is
+    supplied and the feed fails or has no entries, the shared helper falls back
+    to the channel's uploads playlist.
+    """
+    if client is None:
+        return _fetch_channel_rss_entries(channel_id, session=session, timeout=timeout)
+    entries, _units = fetch_channel_video_ids(
+        channel_id,
+        rss_fetcher=lambda cid: _fetch_channel_rss_entries(cid, session=session, timeout=timeout),
+        client=client,
+        key=key,
+    )
+    return entries
+
+
+def _playlist_entries(client, key, uploads_playlist_id):
+    response = client.get(
+        'https://www.googleapis.com/youtube/v3/playlistItems',
+        dict(part='snippet,contentDetails', playlistId=uploads_playlist_id, maxResults=50, key=key),
+        youtube=True,
+    )
+    entries = []
+    for item in response.get('items') or []:
+        snippet = item.get('snippet') or {}
+        details = item.get('contentDetails') or {}
+        video_id = details.get('videoId') or (snippet.get('resourceId') or {}).get('videoId')
+        if not video_id:
+            continue
+        published_at = details.get('videoPublishedAt') or snippet.get('publishedAt')
+        entries.append(dict(id=video_id, published_at=published_at))
+    return entries
+
+
+def _fallback_uploads_entries(client, key, channel_id):
+    """Read uploads via playlistItems, deriving ``UU…`` for UC channel IDs."""
+    units = 0
+    uploads_playlist_id = 'UU' + channel_id[2:] if channel_id.startswith('UC') else None
+    if uploads_playlist_id:
+        units += 1
+        try:
+            return _playlist_entries(client, key, uploads_playlist_id), units
+        except Exception as error:
+            print(f"Uploads playlist lookup failed for channel {channel_id}: {error}")
+
+    units += 1
+    try:
+        response = client.get(
+            'https://www.googleapis.com/youtube/v3/channels',
+            dict(part='contentDetails', id=channel_id, key=key),
+            youtube=True,
+        )
+        item = (response.get('items') or [None])[0] or {}
+        uploads_playlist_id = ((item.get('contentDetails') or {}).get('relatedPlaylists') or {}).get('uploads')
+        if not uploads_playlist_id:
+            return [], units
+        units += 1
+        return _playlist_entries(client, key, uploads_playlist_id), units
+    except Exception as error:
+        print(f"Uploads playlist resolution failed for channel {channel_id}: {error}")
+        return [], units
+
+
+def fetch_channel_video_ids(channel_id, *, rss_fetcher=None, client=None, key=None, feed_name=None):
+    """Return ``(entries, fallback_units)`` using RSS before paid API fallback."""
+    rss_fetcher = rss_fetcher or fetch_channel_rss_video_ids
+    try:
+        entries = normalize_rss_entries(rss_fetcher(channel_id))
+        if entries:
+            return entries, 0
+        reason = 'RSS returned no parseable entries'
+    except Exception as error:
+        reason = f'RSS failed: {error}'
+
+    if client is None:
+        raise RuntimeError(reason)
+    key = key or os.environ.get('YOUTUBE_API_KEY')
+    label = f'{feed_name.title()} ' if feed_name else ''
+    print(f"{label}RSS fallback: channel={channel_id}; reason={reason}")
+    return _fallback_uploads_entries(client, key, channel_id)
 
 
 def resolve_handles(channels, client=None, key=None, path=DEFAULT_PODCAST_CONFIG, write=True):
@@ -186,11 +270,14 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
         if not cid:
             continue
         try:
-            entries = rss_fetcher(cid)
+            entries, fallback_units = fetch_channel_video_ids(
+                cid, rss_fetcher=rss_fetcher, client=client, key=key, feed_name=feed_name,
+            )
         except Exception as error:
             print(f"{feed_name.title()} channel skipped: {channel.get('name', cid)} ({error})")
             continue
-        for entry in normalize_rss_entries(entries):
+        units += fallback_units
+        for entry in entries:
             vid = entry.get('id')
             if vid and vid not in seen:
                 seen.add(vid)
