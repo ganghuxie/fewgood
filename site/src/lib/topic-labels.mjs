@@ -1,5 +1,5 @@
 export const TOPIC_SUBSCRIBED_LABEL = '✓ 已订阅';
-export const TOPIC_DEFAULT_LABEL = '+ 订阅栏目';
+export const TOPIC_DEFAULT_LABEL = '+订阅栏目';
 
 export const topicSubscribeLabel = () => TOPIC_DEFAULT_LABEL;
 export const topicSubscribeTitle = topicName => `订阅「${topicName}」栏目，它会作为一栏出现在我的空间`;

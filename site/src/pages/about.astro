@@ -1,38 +1,54 @@
 ---
 import Layout from '../components/Layout.astro';
-import { SITE_NAME, TAGLINE } from '../lib/brand.mjs';
+import { SITE_NAME } from '../lib/brand.mjs';
+const homeHref = import.meta.env.BASE_URL || '/';
 ---
 <Layout title={`关于 · ${SITE_NAME}`} active="about" description="fewgood. 关于本站">
   <article class="about">
     <h1>关于 {SITE_NAME}</h1>
-    <p class="tagline">{TAGLINE}</p>
+    <p class="about-subtitle">a few good videos · 告别无尽刷屏，只看好内容</p>
+
     <section>
-      <h2>产品是什么</h2>
-      <p>fewgood. 是一个个人内容工具，每天只挑几条值得看的长视频。无广告，不看海量推荐流，只看好视频。</p>
+      <h2>为什么有 fewgood.</h2>
+      <p>信息越来越多，值得花时间的内容却越来越难找。fewgood. 每天从海量视频里替你挑出几条值得完整看完的，把选择成本降下来，让你把时间留给内容本身。</p>
     </section>
+
     <section>
-      <h2>数据来源</h2>
-      <p>数据来自 YouTube（YouTube Data API）和 Hacker News 社区推荐。本站不转载、不托管视频文件；播放使用 YouTube 嵌入，也可在 YouTube 打开原片。</p>
+      <h2>内容从哪里来</h2>
+      <p>数据结合 Hacker News 等深度讨论社区的高赞共识与跨领域推荐，并通过 YouTube Data API 获取视频的公开元数据。本站不转载、不托管视频文件；播放使用 YouTube 嵌入，也可以在 YouTube 打开原片。内容版权归原作者所有。</p>
     </section>
+
     <section>
-      <h2>内容版权</h2>
-      <p>内容版权归原作者所有。</p>
+      <h2>三个承诺</h2>
+      <ul class="about-list">
+        <li><strong>少而好</strong><p>每天只挑几条，宁缺毋滥。不发海量推荐流，也不为凑数降低标准。</p></li>
+        <li><strong>不打扰</strong><p>本站不插入广告，也不加弹幕和评论区，不遮挡或改写 YouTube 播放器，更不做让人停不下来的推荐流。</p></li>
+        <li><strong>纯净、克制、诚实</strong><p>关于视频广告的诚实说明：本站不插入广告，也不遮挡 YouTube 播放器里的广告或平台功能；YouTube 嵌入视频本身的广告由 Google / YouTube 按平台规则展示，我们不会替它承诺“无广告”。</p></li>
+      </ul>
     </section>
+
     <section>
-      <h2>更新频率</h2>
-      <p>站点内容每日更新。页面上显示最后更新时间。</p>
+      <h2>数据与隐私</h2>
+      <ul class="about-list">
+        <li><strong>本地优先</strong><p>未登录时，播放记录、收藏和稍后再看 100% 只存在当前浏览器的 localStorage，不会同步到我们的账号数据库。</p></li>
+        <li><strong>访问统计</strong><p>站点使用 PostHog 和 Cloudflare Web Analytics 统计访问与功能使用情况，例如页面浏览、点击和搜索；登录后会带上账号标识，仅用于了解产品是否好用并改进产品，不用于用户画像或推荐建模。我们尊重浏览器的 DNT 设置。</p></li>
+        <li><strong>跨端同步</strong><p>登录后，收藏、稍后再看、播放记录和订阅栏目通过加密连接同步到云端数据库（Supabase），方便你在不同设备间继续使用。</p></li>
+        <li><strong>第三方播放器</strong><p>YouTube 嵌入播放器受 Google / YouTube 的隐私政策约束，其数据处理不在本站控制范围内。</p></li>
+      </ul>
     </section>
+
     <section>
-      <h2>收藏和历史存在哪</h2>
-      <p>收藏、稍后再看和历史记录默认保存在你当前浏览器的本地存储中。登录后，这些记录以及你关注的频道会同步到你的账号；未登录时只保存在这台设备的浏览器里。</p>
+      <h2>联系我们</h2>
+      <p>邮箱：<a href="mailto:hello@fewgood.io">hello@fewgood.io</a></p>
+      <p>问题与建议：<a href="https://github.com/ganghuxie/youtuber/issues" target="_blank" rel="noopener noreferrer">github.com/ganghuxie/youtuber/issues</a></p>
     </section>
-    <section>
-      <h2>联系方式</h2>
-      <p>联系邮箱：<a href="mailto:hello@fewgood.io">hello@fewgood.io</a></p>
-      <p class="contact-extra">也可以在 GitHub 反馈问题：<a href="https://github.com/ganghuxie/youtuber/issues" target="_blank" rel="noopener noreferrer">github.com/ganghuxie/youtuber/issues</a></p>
+
+    <section class="about-cta">
+      <p>从今天精选的几条开始看起</p>
+      <a class="cta-button" href={homeHref}>前往精选</a>
     </section>
   </article>
 </Layout>
 <style>
-.about{max-width:760px;margin:auto}.about h1{font-size:28px;margin:0 0 6px}.tagline{color:#606060;margin:0 0 28px}.about section{margin:0 0 24px}.about h2{font-size:18px;margin:0 0 8px}.about p{margin:0;line-height:1.7}.about .contact-extra{margin-top:8px}.about a{color:#065fd4}
+.about{max-width:760px;margin:auto}.about h1{font-size:28px;margin:0 0 6px}.about-subtitle{color:#606060;margin:0 0 28px}.about section{margin:0 0 24px}.about h2{font-size:18px;margin:0 0 8px}.about p{margin:0;line-height:1.7}.about-list{margin:0;padding-left:20px}.about-list li+li{margin-top:10px}.about-list p{margin-top:3px}.about a{color:#065fd4}.about-cta{margin-top:32px;padding-top:24px;border-top:1px solid #e5e5e5}.about-cta p{margin:0 0 12px}.about .cta-button{display:inline-block;border-radius:20px;background:#0f0f0f;color:#fff;padding:10px 22px;font-weight:500;text-decoration:none}.about .cta-button:hover{background:#2b2b2b}
 </style>

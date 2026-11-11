@@ -92,8 +92,17 @@ def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
     assert 'YouTube Data API' in about
     assert 'Hacker News' in about
     assert 'hello@fewgood.io' in about
-    for banned in ('可能', '计划', '大概', 'sync.js', 'localStorage'):
+    for banned in ('Reddit', '可能', '计划', '大概', 'sync.js', 'end-to-end', '端到端', '今日精选', '服务器不收集任何痕迹'):
         assert banned not in about
+    assert '前往精选' in about
+    assert 'youtuber/issues' in about
+    assert '通过加密连接同步' in about
+    assert 'mailto:' in about
+    assert 'localStorage' in about
+    assert 'a few good videos · 告别无尽刷屏，只看好内容' in about
+    assert '从今天精选的几条开始看起' in about
+    assert '纯净、克制、诚实' in about
+    assert '关于视频广告的诚实说明' in about
 
 
 def test_video_page_heading_keeps_last_updated_outside_h1():
@@ -328,7 +337,7 @@ def test_topic_subscribe_copy_and_chip_is_on_thumbnail():
     subprocess.run(['node', '--input-type=module', '-e', '''
 import assert from 'node:assert/strict';
 import { TOPIC_SUBSCRIBED_LABEL, paintTopicChip, topicSubscribeLabel, topicSubscribeTitle } from './site/src/lib/topic-labels.mjs';
-assert.equal(topicSubscribeLabel('经典演讲'), '+ 订阅栏目');
+assert.equal(topicSubscribeLabel('经典演讲'), '+订阅栏目');
 assert.equal(topicSubscribeTitle('经典演讲'), '订阅「经典演讲」栏目，它会作为一栏出现在我的空间');
 assert.equal(TOPIC_SUBSCRIBED_LABEL, '✓ 已订阅');
 const button = { classList: { toggle() {} }, dataset: {}, textContent: '', title: '', attrs: {}, setAttribute(name, value) { this.attrs[name] = value; } };
@@ -337,7 +346,7 @@ assert.equal(button.textContent, '✓ 已订阅');
 assert.equal(button.title, '订阅「经典演讲」栏目，它会作为一栏出现在我的空间');
 assert.equal(button.attrs['aria-pressed'], 'true');
 paintTopicChip(button, false, '经典演讲');
-assert.equal(button.textContent, '+ 订阅栏目');
+assert.equal(button.textContent, '+订阅栏目');
 assert.equal(button.attrs['aria-pressed'], 'false');
 '''], cwd=root, check=True)
 
@@ -361,8 +370,15 @@ assert.equal(button.attrs['aria-pressed'], 'false');
 
     chip_rule = re.search(r'\.topic-chip\{([^}]*)\}', layout)
     assert chip_rule and 'position:absolute' in chip_rule.group(1)
-    assert chip_rule and 'top:7px' in chip_rule.group(1)
-    assert chip_rule and 'right:7px' in chip_rule.group(1)
+    assert chip_rule and 'top:8px' in chip_rule.group(1)
+    assert chip_rule and 'right:8px' in chip_rule.group(1)
+    assert chip_rule and 'background:#0f0f0fcc' in chip_rule.group(1)
+    assert chip_rule and 'border-radius:14px' in chip_rule.group(1)
+    assert chip_rule and 'opacity:0' in chip_rule.group(1)
+    assert chip_rule and 'pointer-events:none' in chip_rule.group(1)
+    assert '.video-card:hover .topic-chip,.video-card:focus-within .topic-chip{opacity:1;pointer-events:auto}' in layout
+    assert '.topic-chip.is-subscribed{background:#065fd4}' in layout
+    assert '@media(hover:none){.topic-chip{opacity:1;pointer-events:auto}}' in layout
     template = next(line for line in page.splitlines() if 'data-topic-subscribe={v.topic_id}' in line)
     assert template.index('</div></a>') < template.index('class="topic-chip"')
     assert '+ 订阅「' not in page and '✓ 已订阅，在我的空间' not in page
