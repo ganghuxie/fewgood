@@ -1743,7 +1743,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "startups",
+    "topic_name": "创业与硅谷"
   },
   {
     "id": "nKjPBAw_N_0",
@@ -4385,7 +4387,9 @@
     "section": "trending",
     "sections": [
       "trending"
-    ]
+    ],
+    "topic_id": "science",
+    "topic_name": "科技科普"
   },
   {
     "id": "2ZKANCH80-M",
