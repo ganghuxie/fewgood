@@ -283,26 +283,62 @@ def test_card_text_layout_clamps_and_prevents_grid_overflow():
     assert ':root{' in layout
 
 
-def test_detail_share_has_no_login_wall_and_uses_share_or_clipboard():
+def test_detail_share_modal_uses_canonical_fewgood_url_and_local_qr():
     root = Path(__file__).resolve().parents[1]
     detail = (root / 'site/src/pages/v/[id].astro').read_text()
+    modal = (root / 'site/src/scripts/share-modal.js').read_text()
+    share_lib = (root / 'site/src/lib/share.mjs').read_text()
     assert '生成分享链接需要登录' not in detail
     assert '不用验证邮箱' not in detail
-    assert 'navigator.share' in detail
-    assert 'navigator.clipboard' in detail
-    assert 'writeText' in detail
-    assert "showPrompt('链接已复制'" in detail
-    assert "url.search = ''" in detail and "url.hash = ''" in detail
+    assert '请登录' not in detail
+    assert "import { initShareModal } from '../../scripts/share-modal.js';" in detail
+    assert 'initShareModal();' in detail
+    assert 'data-share' in detail and 'data-share-id={video.id}' in detail
+    assert 'navigator.share' in modal
+    assert 'navigator.clipboard' in modal
+    assert 'writeText' in modal
+    assert "from 'uqr'" in modal and 'renderSVG' in modal
+    assert '微信扫码分享' in modal
+    assert '已复制' in modal
+    assert 'shareUrlFor' in modal and "linkField.value = currentUrl" in modal
+    assert "target = '_blank'" in modal and "rel = 'noopener noreferrer'" in modal
+    assert "typeof navigator.share === 'function'" in modal and "'系统分享'" in modal
+    for source in (detail, modal, share_lib):
+        assert '发帖' not in source
+        assert '嵌入' not in source
+        assert '开始时间' not in source
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { shareUrlFor, shareIntents } from './site/src/lib/share.mjs';
+assert.equal(shareUrlFor('abc123'), 'https://fewgood.io/v/abc123/');
+const canonical = encodeURIComponent('https://fewgood.io/v/abc123/');
+const intents = shareIntents({ id: 'abc123', title: '一条视频' });
+assert.deepEqual(intents.map(item => item.label), ['X', 'Facebook', 'WhatsApp', 'Telegram', '微博', '邮件']);
+for (const intent of intents) {
+  assert.ok(intent.href.includes(canonical), intent.href);
+  assert.ok(!intent.href.includes('youtube.com'), intent.href);
+}
+assert.ok(intents.find(item => item.key === 'email').href.startsWith('mailto:?subject='));
+assert.ok(!JSON.stringify(intents).includes('localhost'));
+'''], cwd=root, check=True)
 
 
-def test_topic_subscribe_copy_and_chip_is_off_thumbnail():
+def test_topic_subscribe_copy_and_chip_is_on_thumbnail():
     root = Path(__file__).resolve().parents[1]
     subprocess.run(['node', '--input-type=module', '-e', '''
 import assert from 'node:assert/strict';
-import { TOPIC_SUBSCRIBED_LABEL, topicSubscribeLabel, topicSubscribeTitle } from './site/src/lib/topic-labels.mjs';
-assert.equal(topicSubscribeLabel('经典演讲'), '+ 订阅「经典演讲」栏目');
-assert.equal(topicSubscribeTitle('经典演讲'), '订阅后，「经典演讲」会作为一栏出现在我的空间');
-assert.equal(TOPIC_SUBSCRIBED_LABEL, '✓ 已订阅，在我的空间');
+import { TOPIC_SUBSCRIBED_LABEL, paintTopicChip, topicSubscribeLabel, topicSubscribeTitle } from './site/src/lib/topic-labels.mjs';
+assert.equal(topicSubscribeLabel('经典演讲'), '+ 订阅栏目');
+assert.equal(topicSubscribeTitle('经典演讲'), '订阅「经典演讲」栏目，它会作为一栏出现在我的空间');
+assert.equal(TOPIC_SUBSCRIBED_LABEL, '✓ 已订阅');
+const button = { classList: { toggle() {} }, dataset: {}, textContent: '', title: '', attrs: {}, setAttribute(name, value) { this.attrs[name] = value; } };
+paintTopicChip(button, true, '经典演讲');
+assert.equal(button.textContent, '✓ 已订阅');
+assert.equal(button.title, '订阅「经典演讲」栏目，它会作为一栏出现在我的空间');
+assert.equal(button.attrs['aria-pressed'], 'true');
+paintTopicChip(button, false, '经典演讲');
+assert.equal(button.textContent, '+ 订阅栏目');
+assert.equal(button.attrs['aria-pressed'], 'false');
 '''], cwd=root, check=True)
 
     page = (root / 'site/src/components/VideoPage.astro').read_text()
@@ -316,6 +352,7 @@ assert.equal(TOPIC_SUBSCRIBED_LABEL, '✓ 已订阅，在我的空间');
         assert '已在我的空间' not in source
     assert 'topicSubscribeLabel(v.topic_name)' in page
     assert 'topicSubscribeTitle(v.topic_name)' in page
+    assert "chip.className = 'topic-chip'" in page and 'article.append(chip)' in page
     assert 'paintTopicChip(button, active, button.dataset.topicName)' in myspace
     assert '<h2>管理订阅栏目</h2>' in myspace
     assert '添加订阅栏目…' in myspace
@@ -323,10 +360,12 @@ assert.equal(TOPIC_SUBSCRIBED_LABEL, '✓ 已订阅，在我的空间');
     assert '要不要订阅「${name}」栏目？' in affinity
 
     chip_rule = re.search(r'\.topic-chip\{([^}]*)\}', layout)
-    assert chip_rule and 'position:absolute' not in chip_rule.group(1)
-    assert chip_rule and 'top:8px' not in chip_rule.group(1)
+    assert chip_rule and 'position:absolute' in chip_rule.group(1)
+    assert chip_rule and 'top:7px' in chip_rule.group(1)
+    assert chip_rule and 'right:7px' in chip_rule.group(1)
     template = next(line for line in page.splitlines() if 'data-topic-subscribe={v.topic_id}' in line)
     assert template.index('</div></a>') < template.index('class="topic-chip"')
+    assert '+ 订阅「' not in page and '✓ 已订阅，在我的空间' not in page
 
 
 def test_search_orders_videos_before_channels_and_caps_expandable_channels():
