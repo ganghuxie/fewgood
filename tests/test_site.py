@@ -38,3 +38,24 @@ assert.equal(humanizeRecommendSpan(116), '9 年前');
 assert.equal(humanizeRecommendSpan(11), '11 个月');
 
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+def test_myspace_card_does_not_repeat_channel_name():
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { card } from './site/src/lib/myspace-card.mjs';
+
+const metas = html => [...html.matchAll(/<p class="video-meta">(.*?)<\\/p>/g)].map(match => match[1]);
+const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
+
+const regular = card({ ...base, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
+assert.equal((regular.match(/OpenAI/g) || []).length, 1);
+assert.deepEqual(metas(regular), ['OpenAI', '12.3万 次观看 · 今天']);
+
+const community = card({ ...base, recommenders: 5, months: 18, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
+assert.equal((community.match(/OpenAI/g) || []).length, 1);
+assert.deepEqual(metas(community), ['OpenAI', '5 人推荐 · 1 年前']);
+
+const sparse = card({ ...base }, '/v/abcdefghijk/');
+assert.deepEqual(metas(sparse), ['OpenAI']);
+'''], cwd=Path(__file__).resolve().parents[1], check=True)

@@ -2,6 +2,7 @@ import { track } from './analytics.js';
 import { MYSPACE_KEY, MAX_ACTIVE_COLUMNS, defaultState, validateState, topicColumnId, isTopicColumn } from '../lib/myspace-schema.mjs';
 import { MYSPACE_SOURCES } from '../lib/brand.mjs';
 import { templateToColumns, templateColumnsReady } from '../lib/template-columns.mjs';
+import { card as videoCard } from '../lib/myspace-card.mjs';
 import { showPrompt } from './prompts.js';
 
 const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
@@ -9,7 +10,6 @@ const LAST_TAB_KEY = 'fewgood:lastTab';
 const DEVICE_NOTICE = '这些栏目只存在这台设备的浏览器里';
 const feedSourceById = new Map(MYSPACE_SOURCES.map(source => [source.id, source]));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
-const duration = seconds => `${Math.floor((Number(seconds) || 0) / 60)}:${String((Number(seconds) || 0) % 60).padStart(2, '0')}`;
 
 const shell = document.querySelector('[data-alpha-myspace]');
 const explore = document.querySelector('[data-explore-view]');
@@ -53,18 +53,9 @@ if (enabled && shell && explore && space) {
   };
   const activeColumns = () => (state?.columns || []).filter(column => column.enabled);
 
-  function avatar(video) {
-    const name = video.channel || '频道';
-    const letter = [...name.trim()][0] || '频';
-    let hash = 0; for (const char of name) hash = (hash * 31 + char.codePointAt(0)) >>> 0;
-    const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7];
-    return `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`;
-  }
   function card(video, column) {
-    const label = columnLabel(column);
-    const meta = Number(video.recommenders) ? `${video.recommenders} 人推荐` : esc(video.channel || label);
     const href = `${base}/v/${encodeURIComponent(video.id)}/${isTopicColumn(column) ? `?from=${encodeURIComponent('topic:' + (column.topic_id || column.source))}` : ''}`;
-    return `<a class="video-card" href="${href}"><div class="thumbnail"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/mqdefault.jpg'" alt=""><span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div><h2 class="video-title">${esc(video.title)}</h2><p class="video-meta">${esc(video.channel)}</p><p class="video-meta">${meta}</p></div></div></a>`;
+    return videoCard(video, href);
   }
   function matching(videos, column) {
     if (isTopicColumn(column)) {
