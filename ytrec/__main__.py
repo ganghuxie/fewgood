@@ -6,8 +6,8 @@ from contextlib import redirect_stdout, redirect_stderr
 from datetime import datetime, timezone
 from pathlib import Path
 import yaml
-from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now, trending_feed, podcast_feed, music_feed, channels_feed, resolve_ai_channels, ai_feed, quota_line
-from .podcast_whitelist import curated_podcast_feed
+from .core import connect, crawl, extract, aggregate, enrich, report, stamp, now, trending_feed, channels_feed, resolve_ai_channels, ai_feed, quota_line
+from .podcast_whitelist import curated_podcast_feed, curated_music_feed
 from .offline import rebuild_offline
 from .zh import enrich_zh
 
@@ -22,7 +22,7 @@ def refresh():
         print(f'=== refresh {datetime.now(timezone.utc).isoformat()} ===')
         config = yaml.safe_load(Path('config.yaml').read_text())
         limit = daily_limit(config)
-        trending_feed(quota_limit=limit); ai_feed(quota_limit=limit); curated_podcast_feed(quota_limit=limit); music_feed(quota_limit=limit); channels_feed(quota_limit=limit)
+        trending_feed(quota_limit=limit); ai_feed(quota_limit=limit); curated_podcast_feed(quota_limit=limit); curated_music_feed(quota_limit=limit); channels_feed(quota_limit=limit)
         rebuild_offline()
         print(quota_line(limit))
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True, stdout=handle, stderr=handle)
@@ -87,7 +87,7 @@ def main():
     if args.command in ('podcast', 'music', 'channels', 'refresh'):
         try:
             if args.command == 'podcast': curated_podcast_feed(quota_limit=limit)
-            elif args.command == 'music': music_feed(quota_limit=limit)
+            elif args.command == 'music': curated_music_feed(quota_limit=limit)
             elif args.command == 'channels': channels_feed(quota_limit=limit)
             else: refresh()
         except (RuntimeError, subprocess.CalledProcessError) as error:

@@ -1,14 +1,33 @@
-# Draft only — not wired into the music feed. Jason still chooses keep-curated vs remove.
+min_duration_seconds: 180
+max_duration_seconds: 7200
 channels:
-  - name: NPR Music
-    handle: nprmusic
-  - name: KEXP
-    handle: kexp
-  - name: COLORS
-    handle: COLORSxSTUDIOS
-  - name: Cercle
-    handle: Cercle
-  - name: Boiler Room
-    handle: boilerroom
-  - name: BBC Radio 1
-    handle: BBCRadio1
+- name: NPR Music
+  handle: nprmusic
+  youtube_channel_id: UC4eYXhJI4-7wSWc8UNRwD4A
+  youtube_title: NPR Music
+  resolved_via: forHandle
+- name: KEXP
+  handle: kexp
+  youtube_channel_id: UC3I2GFN_F8WudD_2jUZbojA
+  youtube_title: KEXP
+  resolved_via: forHandle
+- name: COLORS
+  handle: COLORSxSTUDIOS
+  youtube_channel_id: UC2Qw1dzXDBAZPwS7zm37g8g
+  youtube_title: COLORS
+  resolved_via: forHandle
+- name: Cercle
+  handle: Cercle
+  youtube_channel_id: UCPKT_csvP72boVX0XrMtagQ
+  youtube_title: Cercle
+  resolved_via: forHandle
+- name: Boiler Room
+  handle: boilerroom
+  youtube_channel_id: UCGBpxWJr9FNOcFYA5GkKrMg
+  youtube_title: Boiler Room
+  resolved_via: forHandle
+- name: BBC Radio 1
+  handle: BBCRadio1
+  youtube_channel_id: UC-FQUIVQ-bZiefzBiQAa8Fw
+  youtube_title: BBC Radio 1
+  resolved_via: forHandle
