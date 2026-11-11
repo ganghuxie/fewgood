@@ -227,3 +227,15 @@ def test_rebuild_offline_applies_ai_duration_and_trending_drama_gate(tmp_path):
     assert summary['feeds']['trending']['kept'] == 1
     assert summary['dropped_content_type']['trending'] == 1
     assert summary['feeds']['music']['kept'] == 1
+
+
+def test_trending_drops_vendor_brand_film_over_three_minutes():
+    hyundai = video(
+        title="Hyundai’s India Journey: 30 Years of Scale, Trust and Progress",
+        channel='HyundaiIndia', duration_seconds=330,
+    )
+    science = video(title='I finally saw quantum mechanics', channel='Veritasium', duration_seconds=3956)
+    blocked, reason = content_type_blocked(hyundai, 'trending')
+    assert blocked and reason == 'brand_promo'
+    kept, _ = content_type_blocked(science, 'trending')
+    assert not kept

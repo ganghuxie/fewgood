@@ -122,19 +122,6 @@
       "why_good": "实地探访视角，节日背后的生产现场。"
     },
     {
-      "id": "7VA9cHUELaY",
-      "title": "Hyundai’s India Journey: 30 Years of Scale, Trust and Progress",
-      "channel": "HyundaiIndia",
-      "channel_id": "UCRbP2fAbCBOMiaci7tz_sAA",
-      "published_at": "2026-10-14T02:30:31Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 330,
-      "view_count": 5680015,
-      "like_count": 529,
-      "why_good": "官方视角梳理车企在印度的发展脉络。"
-    },
-    {
       "id": "B8EhqJLto6w",
       "title": "I Hunted Down My Most Remote Subscriber",
       "channel": "Max Fosh",
@@ -672,7 +659,7 @@
     "min": "2026-10-12T15:38:02Z",
     "max": "2026-11-08T16:56:01Z"
   },
-  "dropped_content_type": 0,
+  "dropped_content_type": 1,
   "dropped_visible_language": 0,
   "dropped_official_short": 0,
   "dropped_channel_display_cap": 0

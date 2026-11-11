@@ -1030,6 +1030,10 @@ def content_type_blocked(video, section=None):
             return True, 'official_mv'
         if _CONTENT_POLITICS_RE.search(title):
             return True, 'news'
+        # Official vendor channels' short/mid corporate films (e.g. Hyundai
+        # "30 Years of Scale, Trust and Progress") are ads, even if >3 minutes.
+        if _PICKS_OFFICIAL_VENDOR_RE.search(channel) and int(video.get('duration_seconds') or 0) < 15 * 60:
+            return True, 'brand_promo'
     return False, ''
 
 
