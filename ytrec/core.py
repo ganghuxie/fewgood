@@ -12,6 +12,12 @@ from collections import Counter
 import requests
 import yaml
 from .links import extract_ids, plain
+from .scoring import (
+    channel_median_views,
+    has_chapters_from_description,
+    load_source_rows,
+    score_video,
+)
 from .sources import channels_for_topic
 
 UTC = timezone.utc
@@ -241,13 +247,18 @@ def youtube_key():
 def video_record(raw):
     snippet = raw.get('snippet', {})
     stats = raw.get('statistics', {})
+    content = raw.get('contentDetails', {}) or {}
+    caption = content.get('caption')
     return dict(id=raw['id'], title=snippet.get('title', ''), channel=snippet.get('channelTitle', ''),
                 channel_id=snippet.get('channelId', ''), published_at=snippet.get('publishedAt', ''),
                 default_audio_language=snippet.get('defaultAudioLanguage') or None,
                 default_language=snippet.get('defaultLanguage') or None,
-                duration_seconds=duration(raw.get('contentDetails', {}).get('duration')),
+                duration_seconds=duration(content.get('duration')),
                 view_count=int(stats.get('viewCount', 0)),
-                like_count=int(stats['likeCount']) if stats.get('likeCount') is not None else None)
+                like_count=int(stats['likeCount']) if stats.get('likeCount') is not None else None,
+                comment_count=int(stats['commentCount']) if stats.get('commentCount') is not None else None,
+                has_captions=(str(caption).strip().lower() == 'true') if caption is not None else None,
+                has_chapters=has_chapters_from_description(snippet.get('description', '')))
 
 def landscape_video(raw):
     """Return whether a video has player dimensions proving it is landscape."""
@@ -637,13 +648,22 @@ def is_official_brand_clip(video):
     return bool(_PICKS_OFFICIAL_TITLE_RE.search(title))
 
 
-def build_picks(feeds, generated_at=None, limit=10):
-    """Generate the 今日精选 feed (≤10) from community, AI, podcast, then editorial overflow."""
+def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
+    """Generate the 今日精选 feed (≤10) from scored per-column candidates."""
+    limit = max(0, min(10, int(limit)))
+    at = now or datetime.now(UTC)
+    if at.tzinfo is None:
+        at = at.replace(tzinfo=UTC)
+    at = at.astimezone(UTC)
+    source_rows = load_source_rows(sources)
+    labels = {'community': '社区推荐', 'ai': 'AI前沿', 'podcast': '播客', 'editorial': '科学教育'}
     groups = {}
-    for key, source_label in (('community', '社区推荐'), ('ai', 'AI前沿'), ('podcast', '播客'), ('editorial', '科学教育')):
-        feed = feeds.get(key) or {}
+
+    for key in ('community', 'ai', 'podcast', 'editorial'):
         videos = []
-        for video in feed.get('videos', []):
+        for video in (feeds.get(key) or {}).get('videos', []):
+            if not language_gate(video):
+                continue
             duration_seconds = int(video.get('duration_seconds') or 0)
             if duration_seconds < PICKS_MIN_DURATION_SECONDS:
                 continue
@@ -653,59 +673,84 @@ def build_picks(feeds, generated_at=None, limit=10):
             if not why and key != 'editorial':
                 continue
             videos.append(dict(video, why_good=why or '', source=key))
-        if key == 'community':
-            videos.sort(key=lambda item: (-int(item.get('recommenders') or 0), -int(item.get('months') or 0)))
-        else:
-            videos, _dropped = drop_stale_videos(videos)
-            videos.sort(key=freshness_sort_key)
-            if key == 'editorial':
-                for rank, video in enumerate(sorted(videos, key=lambda item: (-_video_view(item), str(item.get('id', '')))), 1):
-                    video['why_good'] = video.get('why_good') or why_good_for(video, 'editorial', rank=rank)
-        groups[key] = (videos, source_label)
+        if key != 'community':
+            videos, _dropped = drop_stale_videos(videos, now=at)
+            videos.sort(key=lambda item: freshness_sort_key(item, now=at))
+        if key == 'editorial':
+            for rank, video in enumerate(sorted(videos, key=lambda item: (-_video_view(item), str(item.get('id', '')))), 1):
+                video['why_good'] = video.get('why_good') or why_good_for(video, 'editorial', rank=rank)
+        groups[key] = videos
+
+    medians = channel_median_views(
+        [video for key in ('community', 'ai', 'podcast', 'editorial') for video in groups[key]],
+        now=at,
+    )
     quotas = {'community': 4, 'ai': 4, 'podcast': 2}
-    picked = []
-    seen = set()
-    used = {key: 0 for key in groups}
-    cursor = {key: 0 for key in groups}
     order = ('community', 'ai', 'podcast')
+    picked, seen = [], set()
+    used = {key: 0 for key in order}
+    channel_picks = {}
+
+    def score_candidate(candidate, key):
+        channel_id = str(candidate.get('channel_id') or '')
+        return score_video(
+            candidate, channel_median_views=medians.get(channel_id),
+            already_picked_from_channel=channel_picks.get(channel_id, 0),
+            now=at, sources=source_rows, section=key,
+        )
+
+    def accept(candidate, key, result):
+        channel_id = str(candidate.get('channel_id') or '')
+        seen.add(candidate.get('id'))
+        if channel_id:
+            channel_picks[channel_id] = channel_picks.get(channel_id, 0) + 1
+        picked.append(dict(candidate, pick_source=labels[key], score=float(result),
+                           score_parts=dict(result.parts)))
+
+    def select_best(key):
+        best = None
+        for candidate in groups[key]:
+            if candidate.get('id') in seen:
+                continue
+            result = score_candidate(candidate, key)
+            if result.excluded:
+                continue
+            rank_key = (-float(result),) + freshness_sort_key(candidate, now=at)
+            if best is None or rank_key < best[0]:
+                best = (rank_key, candidate, result)
+        if best is None:
+            return False
+        _rank_key, candidate, result = best
+        accept(candidate, key, result)
+        return True
+
     while len(picked) < limit:
         progressed = False
         for key in order:
             if used[key] >= quotas[key]:
                 continue
-            videos, _label = groups[key]
-            while cursor[key] < len(videos):
-                candidate = videos[cursor[key]]
-                cursor[key] += 1
-                if candidate['id'] in seen:
-                    continue
-                seen.add(candidate['id'])
-                picked.append(dict(candidate, pick_source=groups[key][1]))
+            if select_best(key):
                 used[key] += 1
                 progressed = True
-                break
         if not progressed:
             break
+
     for key in order:
-        if len(picked) >= limit:
-            break
-        videos, _label = groups[key]
-        while cursor[key] < len(videos) and len(picked) < limit:
-            candidate = videos[cursor[key]]
-            cursor[key] += 1
-            if candidate['id'] in seen:
-                continue
-            seen.add(candidate['id'])
-            picked.append(dict(candidate, pick_source=groups[key][1]))
-    if len(picked) < limit:
-        videos, _label = groups['editorial']
-        while cursor['editorial'] < len(videos) and len(picked) < limit:
-            candidate = videos[cursor['editorial']]
-            cursor['editorial'] += 1
-            if candidate['id'] in seen:
-                continue
-            seen.add(candidate['id'])
-            picked.append(dict(candidate, pick_source=groups['editorial'][1]))
+        while len(picked) < limit and select_best(key):
+            pass
+
+    editorial_cursor = 0
+    editorial = groups['editorial']
+    while len(picked) < limit and editorial_cursor < len(editorial):
+        candidate = editorial[editorial_cursor]
+        editorial_cursor += 1
+        if candidate.get('id') in seen:
+            continue
+        result = score_candidate(candidate, 'editorial')
+        if result.excluded:
+            continue
+        accept(candidate, 'editorial', result)
+
     return dict(generated_at=generated_at or iso_now(), kind='picks', limit=limit,
                 mix=quotas, videos=picked)
 
