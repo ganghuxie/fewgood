@@ -7,6 +7,9 @@ from ytrec.core import (
     podcast_display_cap,
     why_good_for,
     build_picks,
+    PICKS_MIN_DURATION_SECONDS,
+    PICKS_OFFICIAL_MIN_DURATION_SECONDS,
+    is_official_brand_clip,
 )
 
 
@@ -123,14 +126,56 @@ def test_picks_require_why_good_and_never_exceed_ten():
                        recommenders=100 - i, months=60, span_days=3000) for i in range(8)]
     ai = [video(id=f'a{i}', channel_id=f'ac{i}', published_at='2026-11-01T00:00:00Z',
                 view_count=100 - i, why_good=why_good_for(video(id=f'a{i}'), 'ai')) for i in range(8)]
-    trending_with_reason = [video(id='t0', channel_id='tc0', published_at='2026-11-01T00:00:00Z', view_count=9, why_good='近 30 天同类长视频播放第 1')]
-    trending_without_reason = [video(id='t1', channel_id='tc1', published_at='2026-11-01T00:00:00Z', view_count=8)]
-    picks = build_picks({'community': {'videos': community}, 'ai': {'videos': ai}, 'trending': {'videos': trending_with_reason + trending_without_reason}})
+    podcast_with_reason = [video(id='p0', channel_id='pc0', published_at='2026-11-01T00:00:00Z', view_count=9, why_good='近 30 天同类长视频播放第 1')]
+    podcast_without_reason = [video(id='p1', channel_id='pc1', published_at='2026-11-01T00:00:00Z', view_count=8)]
+    picks = build_picks({'community': {'videos': community}, 'ai': {'videos': ai}, 'podcast': {'videos': podcast_with_reason + podcast_without_reason}})
     ids = [v['id'] for v in picks['videos']]
     assert len(ids) <= 10
-    assert 't1' not in ids
+    assert 'p1' not in ids
     assert all(v.get('why_good') for v in picks['videos'])
     assert all(v.get('pick_source') for v in picks['videos'])
+    assert all(int(v.get('duration_seconds') or 0) >= PICKS_MIN_DURATION_SECONDS for v in picks['videos'])
+
+
+def test_picks_require_eight_minutes():
+    short = video(id='short', recommenders=99, months=12, span_days=400, duration_seconds=PICKS_MIN_DURATION_SECONDS - 1)
+    long = video(id='long', recommenders=98, months=12, span_days=400, duration_seconds=PICKS_MIN_DURATION_SECONDS)
+    picks = build_picks({'community': {'videos': [short, long]}, 'ai': {'videos': []}, 'podcast': {'videos': []}})
+    ids = [v['id'] for v in picks['videos']]
+    assert 'short' not in ids
+    assert 'long' in ids
+
+
+def test_picks_missing_duration_counts_as_zero():
+    missing = video(id='missing', recommenders=99, months=12, span_days=400)
+    missing.pop('duration_seconds')
+    picks = build_picks({'community': {'videos': [missing]}, 'ai': {'videos': []}, 'podcast': {'videos': []}})
+    assert picks['videos'] == []
+
+
+def test_picks_never_pick_trending_even_when_other_pools_are_small():
+    trending = [video(id='mrbeast', title='MrBeast Lab Ep 1', channel='MrBeast', duration_seconds=900,
+                      view_count=999, why_good='近 30 天同类长视频播放第 1')]
+    picks = build_picks({'community': {'videos': []}, 'ai': {'videos': []}, 'podcast': {'videos': []},
+                         'trending': {'videos': trending}})
+    assert picks['videos'] == []
+
+
+def test_picks_exclude_official_brand_clip_under_three_minutes():
+    clip = video(id='official', title='Song (Official Video)', channel='Artist',
+                 duration_seconds=PICKS_OFFICIAL_MIN_DURATION_SECONDS - 1,
+                 recommenders=99, months=12, span_days=400)
+    picks = build_picks({'community': {'videos': [clip]}, 'ai': {'videos': []}, 'podcast': {'videos': []}})
+    assert picks['videos'] == []
+
+
+def test_official_brand_clip_detection():
+    assert is_official_brand_clip(video(title='Foo (Official Video)'))
+    assert is_official_brand_clip(video(title='Foo Trailer'))
+    assert is_official_brand_clip(video(title='Foo MV'))
+    assert is_official_brand_clip(video(title='官方 MV'))
+    assert is_official_brand_clip(video(channel='Artist Official'))
+    assert not is_official_brand_clip(video(title='A normal talk', channel='Lectures'))
 
 
 def test_enrich_records_merges_videos_list_fields():

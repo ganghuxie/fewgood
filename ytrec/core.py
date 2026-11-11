@@ -488,13 +488,45 @@ def why_good_for(video, section='trending', rank=None):
     return f'近 30 天同类长视频播放第 {int(rank)}'
 
 
+# 今日精选 duration + source rules ------------------------------------------
+# Every pick must run at least 8 minutes; missing duration counts as 0 and is
+# excluded. Official/brand promotional clips are additionally rejected below
+# 3 minutes as belt-and-suspenders on top of the 8-minute gate.
+
+PICKS_MIN_DURATION_SECONDS = 480
+PICKS_OFFICIAL_MIN_DURATION_SECONDS = 180
+
+_PICKS_OFFICIAL_TITLE_RE = re.compile(
+    r'\b(?:official(?:\s+(?:video|trailer|music\s*video|audio|lyric|visualizer|mv))?|trailer|music\s*video|m\/?v)\b',
+    re.IGNORECASE,
+)
+_PICKS_OFFICIAL_CHANNEL_RE = re.compile(r'\bofficial\b', re.IGNORECASE)
+_PICKS_OFFICIAL_CJK = ('官方',)
+
+
+def is_official_brand_clip(video):
+    """Detect official/brand promotional clips from title or channel name."""
+    title = str(video.get('title') or '')
+    channel = str(video.get('channel') or '')
+    if any(marker in title for marker in _PICKS_OFFICIAL_CJK) or any(marker in channel for marker in _PICKS_OFFICIAL_CJK):
+        return True
+    if _PICKS_OFFICIAL_CHANNEL_RE.search(channel):
+        return True
+    return bool(_PICKS_OFFICIAL_TITLE_RE.search(title))
+
+
 def build_picks(feeds, generated_at=None, limit=10):
-    """Generate the 今日精选 feed (≤10) from community, AI and trending feeds."""
+    """Generate the 今日精选 feed (≤10) from community, AI and curated podcast."""
     groups = {}
-    for key, source_label in (('community', '社区推荐'), ('ai', 'AI前沿'), ('trending', '趋势')):
+    for key, source_label in (('community', '社区推荐'), ('ai', 'AI前沿'), ('podcast', '播客')):
         feed = feeds.get(key) or {}
         videos = []
         for video in feed.get('videos', []):
+            duration_seconds = int(video.get('duration_seconds') or 0)
+            if duration_seconds < PICKS_MIN_DURATION_SECONDS:
+                continue
+            if duration_seconds < PICKS_OFFICIAL_MIN_DURATION_SECONDS and is_official_brand_clip(video):
+                continue
             why = video.get('why_good') or why_good_for(video, key)
             if not why:
                 continue
@@ -504,12 +536,12 @@ def build_picks(feeds, generated_at=None, limit=10):
         else:
             videos.sort(key=lambda item: (-_video_view(item), str(item.get('id', ''))))
         groups[key] = (videos, source_label)
-    quotas = {'community': 4, 'ai': 4, 'trending': 2}
+    quotas = {'community': 4, 'ai': 4, 'podcast': 2}
     picked = []
     seen = set()
     used = {key: 0 for key in groups}
     cursor = {key: 0 for key in groups}
-    order = ('community', 'ai', 'trending')
+    order = ('community', 'ai', 'podcast')
     while len(picked) < limit:
         progressed = False
         for key in order:
