@@ -32,7 +32,8 @@ def _cached_metadata(path='data/ytrec.sqlite'):
     if not db_path.exists():
         return {}
     try:
-        db = sqlite3.connect(db_path)
+        uri = db_path.resolve().as_uri() + '?mode=ro'
+        db = sqlite3.connect(uri, uri=True)
         db.row_factory = sqlite3.Row
         cached = {}
         for row in db.execute('SELECT video_id, raw FROM metadata'):
@@ -62,6 +63,44 @@ def _is_vertical_short(raw, record):
     if width and height and height > width:
         return True
     return False
+
+
+def pool_video_record(video, raw, classic_cfg):
+    """Apply the shipped HN-pool gates and return ``(record, drop_reason)``."""
+    if not raw:
+        return None, 'missing'
+    reason = playability_reason(raw)
+    if reason:
+        return None, reason
+    record = video_record(raw)
+    if not language_gate(record):
+        return None, 'language'
+    if _is_vertical_short(raw, record):
+        return None, 'vertical_or_short'
+    duration_seconds = int(record.get('duration_seconds') or 0)
+    exempt, reasons = classic_speech_exemption(raw, classic_cfg)
+    if duration_seconds < HN_POOL_MIN_SECONDS and not exempt:
+        return None, 'duration'
+    return {
+        'id': record['id'],
+        'title': record['title'],
+        'channel': record['channel'],
+        'channel_id': record['channel_id'],
+        'published_at': record['published_at'],
+        'duration_seconds': duration_seconds,
+        'default_audio_language': record.get('default_audio_language'),
+        'default_language': record.get('default_language'),
+        'view_count': record.get('view_count', 0),
+        'like_count': record.get('like_count'),
+        'recommenders': video.get('recommenders'),
+        'months': video.get('months'),
+        'span_days': video.get('span_days'),
+        'first': video.get('first'),
+        'last': video.get('last'),
+        'quotes': video.get('quotes', []),
+        'classic_speech': bool(exempt),
+        **({'classic_speech_reasons': reasons} if exempt else {}),
+    }, None
 
 
 def backfill_hn_pool(config, limit=1000, client=None, output='site/src/data/hn_pool.json'):
@@ -99,45 +138,11 @@ def backfill_hn_pool(config, limit=1000, client=None, output='site/src/data/hn_p
     selected = []
     for video in candidates:
         raw = raw_by_id.get(video['id']) or fetched.get(video['id'])
-        if not raw:
-            drops['missing'] += 1
-            continue
-        reason = playability_reason(raw)
+        record, reason = pool_video_record(video, raw, classic_cfg)
         if reason:
             drops[reason] += 1
             continue
-        record = video_record(raw)
-        if not language_gate(record):
-            drops['language'] += 1
-            continue
-        if _is_vertical_short(raw, record):
-            drops['vertical_or_short'] += 1
-            continue
-        duration_seconds = int(record.get('duration_seconds') or 0)
-        exempt, reasons = classic_speech_exemption(raw, classic_cfg)
-        if duration_seconds < HN_POOL_MIN_SECONDS and not exempt:
-            drops['duration'] += 1
-            continue
-        selected.append({
-            'id': record['id'],
-            'title': record['title'],
-            'channel': record['channel'],
-            'channel_id': record['channel_id'],
-            'published_at': record['published_at'],
-            'duration_seconds': duration_seconds,
-            'default_audio_language': record.get('default_audio_language'),
-            'default_language': record.get('default_language'),
-            'view_count': record.get('view_count', 0),
-            'like_count': record.get('like_count'),
-            'recommenders': video.get('recommenders'),
-            'months': video.get('months'),
-            'span_days': video.get('span_days'),
-            'first': video.get('first'),
-            'last': video.get('last'),
-            'quotes': video.get('quotes', []),
-            'classic_speech': bool(exempt),
-            **({'classic_speech_reasons': reasons} if exempt else {}),
-        })
+        selected.append(record)
 
     selected.sort(key=lambda video: (-int(video['recommenders'] or 0),
                                      -float(video['span_days'] or 0),

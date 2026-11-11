@@ -73,7 +73,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','weekly-topics','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -86,7 +86,24 @@ def main():
     parser.add_argument('--unit-cap', type=int, default=250, help='R3 non-search unit cap')
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--no-rebuild', action='store_true')
+    parser.add_argument('--days', type=int, default=7, help='weekly-topics HN lookback days')
+    parser.add_argument('--no-commit', action='store_true', help='write artifacts but do not commit')
+    parser.add_argument('--no-push', action='store_true', help='commit but do not push')
+    parser.add_argument('--llm-cap', type=int, default=30, help='maximum DeepSeek calls for weekly-topics')
     args = parser.parse_args()
+    if args.command == 'weekly-topics':
+        from . import weekly_topics
+        forwarded = ['--config', args.config, '--days', str(args.days), '--llm-cap', str(args.llm_cap)]
+        if args.dry_run:
+            forwarded.append('--dry-run')
+        if args.no_commit:
+            forwarded.append('--no-commit')
+        if args.no_push:
+            forwarded.append('--no-push')
+        try:
+            return weekly_topics.main(forwarded)
+        except (RuntimeError, ValueError, subprocess.CalledProcessError) as error:
+            parser.exit(1, f'{error}\n')
     if args.command in ('fewgood-r3-fetch','fewgood-r3-select'):
         from . import fewgood_r3
         forwarded=['fetch' if args.command.endswith('fetch') else 'select']

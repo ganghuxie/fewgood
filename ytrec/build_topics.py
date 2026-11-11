@@ -899,6 +899,28 @@ def _added_last_24h(topic_id, editorial, pool, lookup, now=None):
     return count
 
 
+def write_topic_artifacts(payload, lookup, output_dir='site/src/data',
+                          yaml_path='config/topics.yaml'):
+    """Write topics.json, topic_lookup.json, and config/topics.yaml."""
+    out_dir = Path(output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / 'topics.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
+    (out_dir / 'topic_lookup.json').write_text(json.dumps(lookup, ensure_ascii=False, indent=2) + '\n')
+    yaml_lines = ['# Auto-generated from data clustering; do not hand-edit.',
+                  f'generated_at: {payload["generated_at"]}', 'topics:']
+    for topic in payload['topics']:
+        yaml_lines.append(f'- id: {topic["id"]}')
+        yaml_lines.append(f'  name_zh: "{topic["name_zh"]}"')
+        yaml_lines.append(f'  aliases_en: {json.dumps(topic["aliases_en"], ensure_ascii=False)}')
+        yaml_lines.append(f'  keywords: {json.dumps(topic["keywords"], ensure_ascii=False)}')
+        yaml_lines.append(f'  source_channel_ids: {json.dumps(topic["source_channel_ids"], ensure_ascii=False)}')
+        yaml_lines.append(f'  video_ids: {json.dumps(topic["video_ids"], ensure_ascii=False)}')
+        yaml_lines.append(f'  added_last_24h: {topic["added_last_24h"]}')
+    target = Path(yaml_path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text('\n'.join(yaml_lines) + '\n')
+
+
 def build_topics(pool_path='site/src/data/hn_pool.json', output_dir='site/src/data',
                  yaml_path='config/topics.yaml'):
     pool = json.loads(Path(pool_path).read_text())['videos']
@@ -937,20 +959,7 @@ def build_topics(pool_path='site/src/data/hn_pool.json', output_dir='site/src/da
     topics.sort(key=lambda topic: topic['id'])
     generated_at = iso_now()
     payload = {'generated_at': generated_at, 'count': len(topics), 'topics': topics}
-    out_dir = Path(output_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / 'topics.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
-    (out_dir / 'topic_lookup.json').write_text(json.dumps(lookup, ensure_ascii=False, indent=2) + '\n')
-    yaml_lines = ['# Auto-generated from data clustering; do not hand-edit.', f'generated_at: {generated_at}', 'topics:']
-    for topic in topics:
-        yaml_lines.append(f'- id: {topic["id"]}')
-        yaml_lines.append(f'  name_zh: "{topic["name_zh"]}"')
-        yaml_lines.append(f'  aliases_en: {json.dumps(topic["aliases_en"], ensure_ascii=False)}')
-        yaml_lines.append(f'  keywords: {json.dumps(topic["keywords"], ensure_ascii=False)}')
-        yaml_lines.append(f'  source_channel_ids: {json.dumps(topic["source_channel_ids"], ensure_ascii=False)}')
-        yaml_lines.append(f'  video_ids: {json.dumps(topic["video_ids"], ensure_ascii=False)}')
-        yaml_lines.append(f'  added_last_24h: {topic["added_last_24h"]}')
-    Path(yaml_path).write_text('\n'.join(yaml_lines) + '\n')
+    write_topic_artifacts(payload, lookup, output_dir=output_dir, yaml_path=yaml_path)
     print(f'Shipped {len(topics)} topics (clustered {total} total).')
     if merged_topics:
         print('Merged underfilled topics:', ', '.join(f'{source}->{target}' for source, target in merged_topics))
