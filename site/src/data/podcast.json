@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T00:42:08Z",
+  "generated_at": "2026-11-11T02:48:59Z",
   "source": "curated_whitelist",
   "min_duration_seconds": 1500,
   "channels_configured": 11,
@@ -22,7 +22,7 @@
       "default_audio_language": "en-US",
       "default_language": "en-US",
       "duration_seconds": 4113,
-      "view_count": 39035,
+      "view_count": 39055,
       "like_count": 157,
       "why_good": "近 30 天同类长视频播放第 10"
     },
@@ -35,7 +35,7 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 3249,
-      "view_count": 6697,
+      "view_count": 6799,
       "like_count": 92,
       "why_good": "近 30 天同类长视频播放第 13"
     },
@@ -48,8 +48,8 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 5418,
-      "view_count": 1655523,
-      "like_count": 30010,
+      "view_count": 1657486,
+      "like_count": 30035,
       "why_good": "近 30 天同类长视频播放第 1"
     },
     {
@@ -61,8 +61,8 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 12867,
-      "view_count": 1536330,
-      "like_count": 9859,
+      "view_count": 1539525,
+      "like_count": 9867,
       "why_good": "近 30 天同类长视频播放第 2"
     },
     {
@@ -74,8 +74,8 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 4141,
-      "view_count": 327445,
-      "like_count": 3596,
+      "view_count": 327664,
+      "like_count": 3598,
       "why_good": "近 30 天同类长视频播放第 3"
     },
     {
@@ -87,8 +87,8 @@
       "default_audio_language": "en",
       "default_language": "en",
       "duration_seconds": 3670,
-      "view_count": 306363,
-      "like_count": 4248,
+      "view_count": 307037,
+      "like_count": 4254,
       "why_good": "近 30 天同类长视频播放第 4"
     },
     {
@@ -100,7 +100,7 @@
       "default_audio_language": "en-US",
       "default_language": "en-US",
       "duration_seconds": 4406,
-      "view_count": 94593,
+      "view_count": 94871,
       "like_count": 734,
       "why_good": "近 30 天同类长视频播放第 5"
     },
@@ -113,8 +113,8 @@
       "default_audio_language": "en",
       "default_language": "en-US",
       "duration_seconds": 4333,
-      "view_count": 77699,
-      "like_count": 772,
+      "view_count": 77707,
+      "like_count": 773,
       "why_good": "近 30 天同类长视频播放第 6"
     },
     {
@@ -126,7 +126,7 @@
       "default_audio_language": "en",
       "default_language": "en-US",
       "duration_seconds": 5148,
-      "view_count": 74826,
+      "view_count": 74933,
       "like_count": 745,
       "why_good": "近 30 天同类长视频播放第 7"
     },
@@ -139,7 +139,7 @@
       "default_audio_language": "en-US",
       "default_language": "zh",
       "duration_seconds": 10279,
-      "view_count": 50496,
+      "view_count": 50525,
       "like_count": 263,
       "why_good": "近 30 天同类长视频播放第 8"
     },
@@ -152,7 +152,7 @@
       "default_audio_language": "en-US",
       "default_language": "en",
       "duration_seconds": 13819,
-      "view_count": 43698,
+      "view_count": 43793,
       "like_count": 285,
       "why_good": "近 30 天同类长视频播放第 9"
     },
@@ -165,7 +165,7 @@
       "default_audio_language": "en-US",
       "default_language": "zh",
       "duration_seconds": 7192,
-      "view_count": 21366,
+      "view_count": 21371,
       "like_count": 78,
       "why_good": "近 30 天同类长视频播放第 11"
     },
