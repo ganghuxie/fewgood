@@ -1,17 +1,20 @@
 {
-  "generated_at": "2026-11-11T06:53:54Z",
+  "generated_at": "2026-11-11T22:38:21Z",
   "source": "curated_whitelist",
   "min_duration_seconds": 1500,
   "channels_configured": 12,
   "channels_resolved": 12,
   "unresolved": [],
-  "candidates_fetched": 428,
-  "dropped_short": 251,
+  "candidates_fetched": 137,
+  "dropped_short": 84,
   "dropped_language": 0,
   "dropped_channel": 0,
-  "dropped_stale": 132,
-  "final_count": 14,
-  "quota_units_approx": 23,
+  "dropped_stale": 30,
+  "dropped_content_type": 0,
+  "dropped_visible_language": 0,
+  "dropped_official_short": 0,
+  "final_count": 12,
+  "quota_units_approx": 6,
   "videos": [
     {
       "id": "4nKt18AZDsQ",
@@ -25,7 +28,30 @@
       "view_count": 39055,
       "like_count": 157,
       "why_good": "一期节目串起几条科技财经大新闻。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/4nKt18AZDsQ/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
+    },
+    {
+      "id": "KotQbLX8pOw",
+      "title": "Mistral CEO: Why OpenAI & Anthropic Will Come for Your Business | Are Chinese Models Truly Safe?",
+      "channel": "20VC with Harry Stebbings",
+      "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA",
+      "published_at": "2026-11-09T15:00:02Z",
+      "default_audio_language": "en-US",
+      "default_language": "en-US",
+      "duration_seconds": 3017,
+      "view_count": 36647,
+      "like_count": 358,
+      "comment_count": 45,
+      "has_captions": false,
+      "has_chapters": true,
+      "_metadata_fetched_at": "2026-11-11T22:38:21Z",
+      "why_good": "来自策展频道「20VC with Harry Stebbings」",
+      "thumb": "https://i.ytimg.com/vi/KotQbLX8pOw/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "yULk8eNa2mg",
@@ -39,7 +65,10 @@
       "view_count": 6799,
       "like_count": 92,
       "why_good": "CEO 亲述金融科技与 AI 交易结合的方向。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/yULk8eNa2mg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "FGCP2F_7rQk",
@@ -53,7 +82,10 @@
       "view_count": 1657486,
       "like_count": 30035,
       "why_good": "轻松的对谈场景，能看到黄仁勋生活化的一面。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/FGCP2F_7rQk/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "ZAzWPE9CItg",
@@ -67,21 +99,10 @@
       "view_count": 1539525,
       "like_count": 9867,
       "why_good": "把AI与数学前沿难题放在一起聊。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
-    },
-    {
-      "id": "frYSOKvNiiE",
-      "title": "What will computer chips look like in 2045?",
-      "channel": "Dwarkesh Patel",
-      "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
-      "published_at": "2026-10-22T16:00:07Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 4141,
-      "view_count": 327664,
-      "like_count": 3598,
-      "why_good": "对芯片长期走向的一次前瞻讨论。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/ZAzWPE9CItg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "f0J_EeW42Lo",
@@ -95,35 +116,10 @@
       "view_count": 307037,
       "like_count": 4254,
       "why_good": "听资深传记作者讲权力研究的心得。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
-    },
-    {
-      "id": "4UmFfI8CWuA",
-      "title": "Inference Will Be $10TRN Market: What No One Sees | Software Investors are F***ed | Naveen Rao",
-      "channel": "20VC with Harry Stebbings",
-      "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA",
-      "published_at": "2026-10-24T14:00:32Z",
-      "default_audio_language": "en-US",
-      "default_language": "en-US",
-      "duration_seconds": 4406,
-      "view_count": 94871,
-      "like_count": 734,
-      "why_good": "关于AI推理市场与投资判断的直白观点。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
-    },
-    {
-      "id": "JHo-aiePjoM",
-      "title": "Inside the black box of AI: How AI models actually think | Emmanuel Ameisen (Anthropic)",
-      "channel": "Lenny's Podcast",
-      "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
-      "published_at": "2026-10-18T12:30:11Z",
-      "default_audio_language": "en",
-      "default_language": "en-US",
-      "duration_seconds": 4333,
-      "view_count": 77707,
-      "like_count": 773,
-      "why_good": "用通俗方式讲清模型内部机制。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/f0J_EeW42Lo/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "19qrLchbQEc",
@@ -137,7 +133,30 @@
       "view_count": 74933,
       "like_count": 745,
       "why_good": "讲产品市场契合，偏实操而非空谈。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/19qrLchbQEc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
+    },
+    {
+      "id": "KzS5Qs7vSMg",
+      "title": "A UGC masterclass from the 22-year-old who built Wispr Flow’s growth machine | Hector Serrano",
+      "channel": "Lenny's Podcast",
+      "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
+      "published_at": "2026-11-01T13:30:01Z",
+      "default_audio_language": "en",
+      "default_language": "en-US",
+      "duration_seconds": 5267,
+      "view_count": 62564,
+      "like_count": 501,
+      "comment_count": 36,
+      "has_captions": false,
+      "has_chapters": false,
+      "_metadata_fetched_at": "2026-11-11T22:38:21Z",
+      "why_good": "来自策展频道「Lenny's Podcast」",
+      "thumb": "https://i.ytimg.com/vi/KzS5Qs7vSMg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "iDaxRNIddME",
@@ -151,7 +170,10 @@
       "view_count": 50525,
       "like_count": 263,
       "why_good": "机器人创业者的经历与思考，角度个人化。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/iDaxRNIddME/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "hADjbGhsios",
@@ -168,7 +190,10 @@
       "has_captions": true,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:53:54Z",
-      "why_good": "创始人亲述从造飞机到做产品的经历。"
+      "why_good": "创始人亲述从造飞机到做产品的经历。",
+      "thumb": "https://i.ytimg.com/vi/hADjbGhsios/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "86wFCPat2GY",
@@ -182,25 +207,33 @@
       "view_count": 21371,
       "like_count": 78,
       "why_good": "少见地谈家族企业传承与个人意义。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z",
+      "thumb": "https://i.ytimg.com/vi/86wFCPat2GY/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
-      "id": "AwuTTOJGEi0",
-      "title": "The Changing Physics of Cybersecurity and Drug Development with OpenAI President Greg Brockman",
+      "id": "EZcWEsMuLb4",
+      "title": "Taking on ServiceNow: Coding Agents for the Rest of Us with Serval Co-Founder and CEO Jake Stauch",
       "channel": "No Priors: AI, Machine Learning, Tech, & Startups",
       "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
-      "published_at": "2026-10-15T10:00:05Z",
+      "published_at": "2026-10-29T10:00:20Z",
       "default_audio_language": "en",
       "default_language": "en",
-      "duration_seconds": 2363,
-      "view_count": 19322,
-      "like_count": 251,
-      "why_good": "OpenAI总裁谈AI在两个行业的实际影响。",
-      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+      "duration_seconds": 2286,
+      "view_count": 4727,
+      "like_count": 34,
+      "comment_count": 6,
+      "has_captions": false,
+      "has_chapters": true,
+      "_metadata_fetched_at": "2026-11-11T22:38:21Z",
+      "why_good": "来自策展频道「No Priors: AI, Machine Learning」",
+      "thumb": "https://i.ytimg.com/vi/EZcWEsMuLb4/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     }
   ],
-  "dropped_podcast_display_cap": 0,
-  "dropped_content_type": 0,
-  "dropped_visible_language": 0,
-  "dropped_official_short": 0
+  "dropped_missing": 0,
+  "dropped_not_processed": 1,
+  "dropped_podcast_display_cap": 0
 }

@@ -1,17 +1,20 @@
 {
-  "generated_at": "2026-11-11T06:54:15Z",
+  "generated_at": "2026-11-11T22:39:27Z",
   "source": "curated_whitelist",
   "min_duration_seconds": 240,
   "channels_configured": 16,
   "channels_resolved": 16,
   "unresolved": [],
-  "candidates_fetched": 800,
-  "dropped_short": 349,
+  "candidates_fetched": 240,
+  "dropped_short": 118,
   "dropped_language": 0,
   "dropped_channel": 0,
-  "dropped_stale": 266,
-  "final_count": 64,
-  "quota_units_approx": 32,
+  "dropped_stale": 36,
+  "dropped_content_type": 0,
+  "dropped_visible_language": 0,
+  "dropped_official_short": 0,
+  "final_count": 53,
+  "quota_units_approx": 4,
   "videos": [
     {
       "id": "fEjvSbI_PT4",
@@ -28,24 +31,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Kurzgesagt – In a Nutshell」的近期长视频"
-    },
-    {
-      "id": "mh-e78kaQ8o",
-      "title": "Physicists Can’t Explain This, And Now It’s a Problem",
-      "channel": "Sabine Hossenfelder",
-      "channel_id": "UC1yNl2E66ZzKApQdRuTQ4tw",
-      "published_at": "2026-11-04T16:00:46Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 390,
-      "view_count": 440876,
-      "like_count": 9850,
-      "comment_count": 1096,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Kurzgesagt – In a Nutshell」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/fEjvSbI_PT4/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "RG5WhPmwGgk",
@@ -62,7 +51,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「PBS Space Time」的近期长视频"
+      "why_good": "来自频道「PBS Space Time」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/RG5WhPmwGgk/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "f1lBUs3suWM",
@@ -79,7 +71,10 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Hard Fork」的近期长视频"
+      "why_good": "来自频道「Hard Fork」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/f1lBUs3suWM/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "on1L_jblaw8",
@@ -96,7 +91,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
+      "why_good": "来自频道「TED」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/on1L_jblaw8/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "BmBw827GgFA",
@@ -113,7 +111,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computerphile」的近期长视频"
+      "why_good": "来自频道「Computerphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/BmBw827GgFA/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "p2AAz24AzU4",
@@ -130,7 +131,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Numberphile」的近期长视频"
+      "why_good": "来自频道「Numberphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/p2AAz24AzU4/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "jxCTX_AyZVc",
@@ -147,7 +151,50 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Hard Fork」的近期长视频"
+      "why_good": "来自频道「Hard Fork」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/jxCTX_AyZVc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
+    },
+    {
+      "id": "DvOxaT_hCmc",
+      "title": "The Economics of AI Don’t Add Up",
+      "channel": "Sabine Hossenfelder",
+      "channel_id": "UC1yNl2E66ZzKApQdRuTQ4tw",
+      "published_at": "2026-11-11T16:00:36Z",
+      "default_audio_language": "en",
+      "default_language": "en",
+      "duration_seconds": 483,
+      "view_count": 109014,
+      "like_count": 3869,
+      "comment_count": 1355,
+      "has_captions": true,
+      "has_chapters": false,
+      "_metadata_fetched_at": "2026-11-11T22:39:27Z",
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/DvOxaT_hCmc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
+    },
+    {
+      "id": "g3_TqjSLyLk",
+      "title": "AI Brain Fry Is Real. Here’s What Leaders Can Do | Julie Bedard | TED",
+      "channel": "TED",
+      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
+      "published_at": "2026-11-09T16:00:06Z",
+      "default_audio_language": "en",
+      "default_language": "en",
+      "duration_seconds": 543,
+      "view_count": 82778,
+      "like_count": 514,
+      "comment_count": 53,
+      "has_captions": true,
+      "has_chapters": false,
+      "_metadata_fetched_at": "2026-11-11T22:39:27Z",
+      "why_good": "来自频道「TED」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/g3_TqjSLyLk/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "84wVmiEl7Dg",
@@ -164,24 +211,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
-    },
-    {
-      "id": "pTdvsfIMGes",
-      "title": "How People Are Using AI to Grieve, Love and Connect | Jennifer Cearns | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-11-10T16:00:33Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 842,
-      "view_count": 34780,
-      "like_count": 207,
-      "comment_count": 34,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
+      "why_good": "来自频道「TED」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/84wVmiEl7Dg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "pRXMqm5bMFk",
@@ -198,7 +231,10 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「The Knowledge Project Podcas」的近期长视频"
+      "why_good": "来自频道「The Knowledge Project Podcas」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/pRXMqm5bMFk/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "evQcbeOlvWc",
@@ -215,7 +251,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Harvard Business Review」的近期长视频"
+      "why_good": "来自频道「Harvard Business Review」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/evQcbeOlvWc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "IQrFPzh1Uz0",
@@ -232,7 +271,10 @@
       "has_captions": true,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/IQrFPzh1Uz0/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "oaK-LTlADEY",
@@ -249,7 +291,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/oaK-LTlADEY/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "THN2RCI5BPY",
@@ -266,24 +311,10 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computer History Museum」的近期长视频"
-    },
-    {
-      "id": "CpNPzkKy0Fc",
-      "title": "Baratunde Thurston & Blaise Agüera y Arcas | On Interdependence",
-      "channel": "The Long Now Foundation",
-      "channel_id": "UCT1yd7gEOrja_gecmA1lT0Q",
-      "published_at": "2026-11-04T20:00:10Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 4562,
-      "view_count": 1841,
-      "like_count": 25,
-      "comment_count": 0,
-      "has_captions": false,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「The Long Now Foundation」的近期长视频"
+      "why_good": "来自频道「Computer History Museum」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/THN2RCI5BPY/hqdefault.jpg",
+      "thumb_kind": "hqdefault",
+      "thumb_verified": true
     },
     {
       "id": "SzEqq8gFBi0",
@@ -300,7 +331,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「USENIX」的近期长视频"
+      "why_good": "来自频道「USENIX」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/SzEqq8gFBi0/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "b0PKuM6h2Qc",
@@ -317,24 +351,30 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「USENIX」的近期长视频"
+      "why_good": "来自频道「USENIX」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/b0PKuM6h2Qc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
-      "id": "NiCgcUTL9_Q",
-      "title": "Fiber Optics are so much cooler than I thought",
-      "channel": "Veritasium",
-      "channel_id": "UCHnyfMqiRRG1u-2MsSQLbXA",
-      "published_at": "2026-10-12T17:11:45Z",
-      "default_audio_language": "en",
+      "id": "EkGdS7SEE_U",
+      "title": "Meet the Stanford MBA Class of 2028",
+      "channel": "Stanford Graduate School of Business",
+      "channel_id": "UCGwuxdEeCf0TIA2RbPOj-8g",
+      "published_at": "2026-11-11T20:29:19Z",
+      "default_audio_language": "en-US",
       "default_language": "en",
-      "duration_seconds": 2072,
-      "view_count": 15893219,
-      "like_count": 164166,
-      "comment_count": 6430,
-      "has_captions": true,
-      "has_chapters": true,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Veritasium」的近期长视频"
+      "duration_seconds": 258,
+      "view_count": 256,
+      "like_count": null,
+      "comment_count": 1,
+      "has_captions": false,
+      "has_chapters": false,
+      "_metadata_fetched_at": "2026-11-11T22:39:27Z",
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/EkGdS7SEE_U/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "eyZEqSPeMwg",
@@ -351,7 +391,10 @@
       "has_captions": true,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Veritasium」的近期长视频"
+      "why_good": "来自频道「Veritasium」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/eyZEqSPeMwg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "Z-2pTzSZtLU",
@@ -368,7 +411,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Steve Mould」的近期长视频"
+      "why_good": "来自频道「Steve Mould」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/Z-2pTzSZtLU/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "bAnwMdfcMVw",
@@ -385,7 +431,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Numberphile」的近期长视频"
+      "why_good": "来自频道「Numberphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/bAnwMdfcMVw/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "eb8x2tz_pgc",
@@ -402,7 +451,10 @@
       "has_captions": true,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「PBS Space Time」的近期长视频"
+      "why_good": "来自频道「PBS Space Time」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/eb8x2tz_pgc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "LtUCXHxRcas",
@@ -419,7 +471,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/LtUCXHxRcas/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "PUa5i_U8yYE",
@@ -436,24 +491,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
-    },
-    {
-      "id": "zcZ4fSZJFzM",
-      "title": "Why Nathan Fielder's ‘You Can See Everything’ Left Us Reeling | Hard Fork",
-      "channel": "Hard Fork",
-      "channel_id": "UCZcR2SVWaGWNlMqPxvQS3vw",
-      "published_at": "2026-10-16T17:17:45Z",
-      "default_audio_language": "en-US",
-      "default_language": "en",
-      "duration_seconds": 3949,
-      "view_count": 746802,
-      "like_count": 6604,
-      "comment_count": 1945,
-      "has_captions": false,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Hard Fork」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/PUa5i_U8yYE/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "QXXqSh5qAuA",
@@ -470,7 +511,10 @@
       "has_captions": true,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「minutephysics」的近期长视频"
+      "why_good": "来自频道「minutephysics」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/QXXqSh5qAuA/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "JJste2I_sZQ",
@@ -487,7 +531,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/JJste2I_sZQ/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "15PV7qn8Phg",
@@ -504,7 +551,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/15PV7qn8Phg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "PF7wSiG9w8c",
@@ -521,7 +571,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/PF7wSiG9w8c/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "rH79TGultXM",
@@ -538,7 +591,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/rH79TGultXM/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "rFi9b5iQmqs",
@@ -555,7 +611,30 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Hard Fork」的近期长视频"
+      "why_good": "来自频道「Hard Fork」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/rFi9b5iQmqs/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
+    },
+    {
+      "id": "mh-e78kaQ8o",
+      "title": "Physicists Can’t Explain This, And Now It’s a Problem",
+      "channel": "Sabine Hossenfelder",
+      "channel_id": "UC1yNl2E66ZzKApQdRuTQ4tw",
+      "published_at": "2026-11-04T16:00:46Z",
+      "default_audio_language": "en",
+      "default_language": "en",
+      "duration_seconds": 390,
+      "view_count": 440876,
+      "like_count": 9850,
+      "comment_count": 1096,
+      "has_captions": true,
+      "has_chapters": false,
+      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/mh-e78kaQ8o/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "t3CvQRH-mFg",
@@ -572,7 +651,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/t3CvQRH-mFg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "Uvy5Cs9FDLg",
@@ -589,7 +671,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Numberphile」的近期长视频"
+      "why_good": "来自频道「Numberphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/Uvy5Cs9FDLg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "EgnAN0ZUl08",
@@ -606,7 +691,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Numberphile」的近期长视频"
+      "why_good": "来自频道「Numberphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/EgnAN0ZUl08/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "cI8IquVEyVY",
@@ -623,41 +711,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computerphile」的近期长视频"
-    },
-    {
-      "id": "xr7tUPuc7xA",
-      "title": "$1 Billion in 365 Days: The Habits of an Elite Closer",
-      "channel": "The Knowledge Project Podcast",
-      "channel_id": "UCLtTf_uKt0Itd0NG7txrwXA",
-      "published_at": "2026-10-13T10:00:24Z",
-      "default_audio_language": "en-CA",
-      "default_language": "en",
-      "duration_seconds": 3333,
-      "view_count": 277575,
-      "like_count": 5000,
-      "comment_count": 154,
-      "has_captions": false,
-      "has_chapters": true,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「The Knowledge Project Podcas」的近期长视频"
-    },
-    {
-      "id": "UNTZMlgf2To",
-      "title": "The Secret to Lasting Love | Eli J. Finkel | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-10-19T15:00:33Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 754,
-      "view_count": 249822,
-      "like_count": 2768,
-      "comment_count": 61,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
+      "why_good": "来自频道「Computerphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/cI8IquVEyVY/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "NDgS__J1U-M",
@@ -674,7 +731,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computerphile」的近期长视频"
+      "why_good": "来自频道「Computerphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/NDgS__J1U-M/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "Zh86i_azaQw",
@@ -691,24 +751,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Numberphile」的近期长视频"
-    },
-    {
-      "id": "GekGgq6HRuk",
-      "title": "Big Oil’s Plan Is Working Beautifully",
-      "channel": "Sabine Hossenfelder",
-      "channel_id": "UC1yNl2E66ZzKApQdRuTQ4tw",
-      "published_at": "2026-10-14T15:00:37Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 415,
-      "view_count": 221820,
-      "like_count": 5581,
-      "comment_count": 1322,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频"
+      "why_good": "来自频道「Numberphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/Zh86i_azaQw/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "anAmTGcewX8",
@@ -725,7 +771,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/anAmTGcewX8/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "h6j_ixGnpiY",
@@ -742,7 +791,10 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computerphile」的近期长视频"
+      "why_good": "来自频道「Computerphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/h6j_ixGnpiY/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "vCAD3W43lIk",
@@ -759,7 +811,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Numberphile」的近期长视频"
+      "why_good": "来自频道「Numberphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/vCAD3W43lIk/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "w_p-68aRdmc",
@@ -776,58 +831,10 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「The Knowledge Project Podcas」的近期长视频"
-    },
-    {
-      "id": "PpEUTpzWt2M",
-      "title": "How the Wealth Gap Is Reshaping Politics | Xochitl Gonzalez | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-10-13T15:00:17Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 637,
-      "view_count": 157232,
-      "like_count": 1035,
-      "comment_count": 123,
-      "has_captions": false,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
-    },
-    {
-      "id": "TRuu-eZsl1c",
-      "title": "I Thought I Was Lazy. Turns Out I Had a Sleep Disorder | Lindsay Scola | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-10-18T15:00:30Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 534,
-      "view_count": 145133,
-      "like_count": 1046,
-      "comment_count": 56,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
-    },
-    {
-      "id": "j11fPNKe5mY",
-      "title": "Inside the “Play Labs” Helping Refugee Kids Heal | Erum Mariam | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-10-22T15:00:04Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 663,
-      "view_count": 140759,
-      "like_count": 232,
-      "comment_count": 15,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
+      "why_good": "来自频道「The Knowledge Project Podcas」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/w_p-68aRdmc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "SzNTvqvxswM",
@@ -844,7 +851,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
+      "why_good": "来自频道「TED」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/SzNTvqvxswM/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "WqrwAFs-fq0",
@@ -861,75 +871,30 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computerphile」的近期长视频"
+      "why_good": "来自频道「Computerphile」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/WqrwAFs-fq0/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
-      "id": "Pba4OZjn3cY",
-      "title": "Why It’s So Hard to Listen When You Disagree | Emily Kasriel | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-10-26T15:00:25Z",
+      "id": "fwyIBk4V7Ag",
+      "title": "Global Warming Means Fewer Tropical Cyclones, Researchers Find",
+      "channel": "Sabine Hossenfelder",
+      "channel_id": "UC1yNl2E66ZzKApQdRuTQ4tw",
+      "published_at": "2026-10-15T15:00:05Z",
       "default_audio_language": "en",
       "default_language": "en",
-      "duration_seconds": 652,
-      "view_count": 124864,
-      "like_count": 1127,
-      "comment_count": 44,
+      "duration_seconds": 402,
+      "view_count": 118660,
+      "like_count": 3144,
+      "comment_count": 794,
       "has_captions": true,
       "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
-    },
-    {
-      "id": "Gswo90kocHU",
-      "title": "How to Make Parenting Less Lonely | Stacey McLachlan | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-11-02T16:00:39Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 1074,
-      "view_count": 81362,
-      "like_count": 354,
-      "comment_count": null,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
-    },
-    {
-      "id": "3RSEuMA4qbE",
-      "title": "What If You Could Read the DNA of Your Future Child? | Noor Siddiqui | TED",
-      "channel": "TED",
-      "channel_id": "UCAuUUnT6oDeKwE6v1NGQxug",
-      "published_at": "2026-10-29T15:00:37Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 782,
-      "view_count": 76747,
-      "like_count": 391,
-      "comment_count": 65,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「TED」的近期长视频"
-    },
-    {
-      "id": "fpqXvDKhtvQ",
-      "title": "Marc Stad, Founder of Dragoneer: Be Patient, Then Be Bold",
-      "channel": "Stanford Graduate School of Business",
-      "channel_id": "UCGwuxdEeCf0TIA2RbPOj-8g",
-      "published_at": "2026-10-14T19:55:09Z",
-      "default_audio_language": "en-US",
-      "default_language": "en",
-      "duration_seconds": 2880,
-      "view_count": 52404,
-      "like_count": null,
-      "comment_count": 28,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "_metadata_fetched_at": "2026-11-11T22:39:27Z",
+      "why_good": "来自频道「Sabine Hossenfelder」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/fwyIBk4V7Ag/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "EGC7jht_mis",
@@ -946,7 +911,10 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Hard Fork」的近期长视频"
+      "why_good": "来自频道「Hard Fork」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/EGC7jht_mis/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "M6SA3g-8pwQ",
@@ -963,24 +931,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Harvard Business Review」的近期长视频"
-    },
-    {
-      "id": "w4hi6GeC2Pk",
-      "title": "What's Behind Mark Zuckerberg’s Style Transformation?",
-      "channel": "Hard Fork",
-      "channel_id": "UCZcR2SVWaGWNlMqPxvQS3vw",
-      "published_at": "2026-10-14T15:45:07Z",
-      "default_audio_language": "en-US",
-      "default_language": "en",
-      "duration_seconds": 1063,
-      "view_count": 19167,
-      "like_count": 123,
-      "comment_count": 30,
-      "has_captions": false,
-      "has_chapters": true,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Hard Fork」的近期长视频"
+      "why_good": "来自频道「Harvard Business Review」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/M6SA3g-8pwQ/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "YLN930f7RE0",
@@ -997,7 +951,10 @@
       "has_captions": false,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Harvard Business Review」的近期长视频"
+      "why_good": "来自频道「Harvard Business Review」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/YLN930f7RE0/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "zax8Va6mslg",
@@ -1014,7 +971,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/zax8Va6mslg/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "IvsYzc_11DI",
@@ -1031,24 +991,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
-    },
-    {
-      "id": "Vli50ixOy0U",
-      "title": "AI@GSB Dean’s Perspectives: Rick Osterloh, SVP at Google",
-      "channel": "Stanford Graduate School of Business",
-      "channel_id": "UCGwuxdEeCf0TIA2RbPOj-8g",
-      "published_at": "2026-10-13T22:22:04Z",
-      "default_audio_language": "en-US",
-      "default_language": "en",
-      "duration_seconds": 2756,
-      "view_count": 9567,
-      "like_count": null,
-      "comment_count": 5,
-      "has_captions": true,
-      "has_chapters": false,
-      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/IvsYzc_11DI/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "s10fMPJbD3U",
@@ -1065,7 +1011,10 @@
       "has_captions": true,
       "has_chapters": false,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Stanford Graduate School of」的近期长视频"
+      "why_good": "来自频道「Stanford Graduate School of」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/s10fMPJbD3U/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "8pJVoJ9nOag",
@@ -1082,7 +1031,30 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computer History Museum」的近期长视频"
+      "why_good": "来自频道「Computer History Museum」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/8pJVoJ9nOag/hqdefault.jpg",
+      "thumb_kind": "hqdefault",
+      "thumb_verified": true
+    },
+    {
+      "id": "CpNPzkKy0Fc",
+      "title": "Baratunde Thurston & Blaise Agüera y Arcas | On Interdependence",
+      "channel": "The Long Now Foundation",
+      "channel_id": "UCT1yd7gEOrja_gecmA1lT0Q",
+      "published_at": "2026-11-04T20:00:10Z",
+      "default_audio_language": "en",
+      "default_language": "en",
+      "duration_seconds": 4562,
+      "view_count": 1841,
+      "like_count": 25,
+      "comment_count": 0,
+      "has_captions": false,
+      "has_chapters": false,
+      "_metadata_fetched_at": "2026-11-11T06:54:15Z",
+      "why_good": "来自频道「The Long Now Foundation」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/CpNPzkKy0Fc/maxresdefault.jpg",
+      "thumb_kind": "maxresdefault",
+      "thumb_verified": true
     },
     {
       "id": "V_46GYSaFpg",
@@ -1099,10 +1071,12 @@
       "has_captions": false,
       "has_chapters": true,
       "_metadata_fetched_at": "2026-11-11T06:54:15Z",
-      "why_good": "来自频道「Computer History Museum」的近期长视频"
+      "why_good": "来自频道「Computer History Museum」的近期长视频",
+      "thumb": "https://i.ytimg.com/vi/V_46GYSaFpg/hqdefault.jpg",
+      "thumb_kind": "hqdefault",
+      "thumb_verified": true
     }
   ],
-  "dropped_content_type": 0,
-  "dropped_visible_language": 0,
-  "dropped_official_short": 0
+  "dropped_missing": 0,
+  "dropped_not_processed": 2
 }
