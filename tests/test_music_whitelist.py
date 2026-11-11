@@ -51,12 +51,15 @@ def test_curated_music_feed_keeps_only_in_range_tracks(tmp_path, monkeypatch):
         'channels': [{'name': 'Test Channel', 'handle': 'test', 'youtube_channel_id': 'UC1'}],
     }, allow_unicode=True))
 
+    rss_calls = []
+
+    def rss_fetcher(channel_id):
+        rss_calls.append(channel_id)
+        return [{'id': vid, 'published_at': '2026-11-01T00:00:00Z'} for vid in ('short', 'long', 'ok')]
+
     class YT:
         def get(self, url, params, youtube=False):
-            if url.endswith('/channels'):
-                return {'items': [{'id': 'UC1', 'contentDetails': {'relatedPlaylists': {'uploads': 'UU1'}}}]}
-            if url.endswith('/playlistItems'):
-                return {'items': [{'contentDetails': {'videoId': vid}} for vid in ('short', 'long', 'ok')]}
+            assert url.endswith('/videos'), url
             ids = params['id'].split(',')
             raws = {
                 'short': raw_video('short', 'PT2M59S'),   # 179 seconds
@@ -65,9 +68,13 @@ def test_curated_music_feed_keeps_only_in_range_tracks(tmp_path, monkeypatch):
             }
             return {'items': [raws[vid] for vid in ids]}
 
-    result = curated_music_feed(config_path=str(config_path), client=YT(), output=str(tmp_path / 'out'))
+    result = curated_music_feed(
+        config_path=str(config_path), client=YT(), output=str(tmp_path / 'out'),
+        rss_fetcher=rss_fetcher,
+    )
     ids = [v['id'] for v in result['videos']]
     assert ids == ['ok']
+    assert rss_calls == ['UC1']
     assert result['min_duration_seconds'] == 180
     assert result['max_duration_seconds'] == 7200
     assert 'dropped_podcast_display_cap' not in result

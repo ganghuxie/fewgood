@@ -519,6 +519,59 @@ def _load_existing_feeds(exclude, root='site/src/data'):
     return existing
 
 
+def _feed_timestamp(value):
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
+    except (TypeError, ValueError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=UTC)
+    return parsed.astimezone(UTC)
+
+
+def metadata_cache_days(path='config.yaml'):
+    """Read ``metadata.cache_days`` without making feed refreshes depend on it."""
+    try:
+        payload = yaml.safe_load(Path(path).read_text()) or {}
+        return max(0, int((payload.get('metadata') or {}).get('cache_days', 30)))
+    except (OSError, TypeError, ValueError, yaml.YAMLError):
+        return 30
+
+
+def load_fresh_feed_records(feed_name, root='site/src/data', cache_days=None, at=None):
+    """Return cached video records whose metadata is still within ``cache_days``.
+
+    The feed's ``generated_at`` is the fallback timestamp for records written
+    before per-record metadata timestamps were introduced. Records are copied
+    and stamped with ``_metadata_fetched_at`` so later refreshes can age them
+    independently instead of treating every record as freshly fetched.
+    """
+    path = Path(root) / f'{feed_name}.json'
+    try:
+        payload = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return {}
+    fallback = _feed_timestamp(payload.get('generated_at'))
+    reference = at or datetime.now(UTC)
+    if reference.tzinfo is None:
+        reference = reference.replace(tzinfo=UTC)
+    cutoff = reference.astimezone(UTC) - timedelta(days=metadata_cache_days() if cache_days is None else max(0, int(cache_days)))
+    fresh = {}
+    for video in payload.get('videos', []):
+        video_id = video.get('id')
+        if not video_id:
+            continue
+        fetched = _feed_timestamp(video.get('_metadata_fetched_at') or video.get('metadata_fetched_at') or video.get('fetched_at')) or fallback
+        if fetched is None or fetched < cutoff:
+            continue
+        record = dict(video)
+        record['_metadata_fetched_at'] = fetched.isoformat().replace('+00:00', 'Z')
+        fresh[video_id] = record
+    return fresh
+
+
 # why_good + picks ----------------------------------------------------------
 
 def why_good_for(video, section='trending', rank=None):
@@ -803,25 +856,41 @@ def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_c
     print(quota_line(quota_limit))
     return channels
 
-def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data', quota_limit=8000):
+def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data', quota_limit=8000,
+            *, rss_fetcher=None):
+    from .podcast_whitelist import (
+        fetch_channel_rss_video_ids, normalize_rss_entries,
+    )
     key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
+    rss_fetcher = rss_fetcher or fetch_channel_rss_video_ids
     channels = yaml.safe_load(Path(channels_file).read_text()).get('channels', [])
-    cutoff = datetime.now(UTC) - timedelta(days=FRESHNESS_MAX_DAYS); ids, units = [], 0
+    cutoff = datetime.now(UTC) - timedelta(days=FRESHNESS_MAX_DAYS)
+    discovered, units = {}, 0
     for channel in channels:
+        channel_id = channel.get('youtube_channel_id')
+        if not channel_id:
+            continue
         try:
-            response = client.get(YOUTUBE_API + 'channels', dict(part='contentDetails', id=channel['youtube_channel_id'], key=key), youtube=True); units += 1
-            items = response.get('items', [])
-            uploads = items[0]['contentDetails']['relatedPlaylists']['uploads'] if items else None
-            if not uploads: continue
-            response = client.get(YOUTUBE_API + 'playlistItems', dict(part='snippet,contentDetails', playlistId=uploads, maxResults=50, key=key), youtube=True); units += 1
-            for item in response.get('items', []):
-                published = item.get('contentDetails', {}).get('videoPublishedAt') or item.get('snippet', {}).get('publishedAt')
-                vid = item.get('contentDetails', {}).get('videoId')
-                if vid and published and datetime.fromisoformat(published.replace('Z', '+00:00')) >= cutoff: ids.append(vid)
-        except RuntimeError as error:
-            print(f"AI channel skipped: {channel['name']} ({error})")
-    raws = youtube_videos(client, key, list(dict.fromkeys(ids))); units += (len(set(ids)) + 49) // 50
-    videos = [v for v in map(video_record, raws) if v['duration_seconds'] >= 60]
+            entries = rss_fetcher(channel_id)
+        except Exception as error:
+            print(f"AI channel skipped: {channel.get('name', channel_id)} ({error})")
+            continue
+        for entry in normalize_rss_entries(entries):
+            vid = entry.get('id')
+            published = _feed_timestamp(entry.get('published_at'))
+            if vid and (published is None or published >= cutoff):
+                discovered[vid] = entry.get('published_at')
+    ids = list(discovered)
+    cached = load_fresh_feed_records('ai', root=output, cache_days=metadata_cache_days())
+    pending = [vid for vid in ids if vid not in cached]
+    raws = youtube_videos(client, key, pending); units += (len(pending) + 49) // 50 if pending else 0
+    fetched_at = iso_now()
+    videos = [dict(cached[vid]) for vid in ids if vid in cached]
+    for raw in raws:
+        record = video_record(raw)
+        record['_metadata_fetched_at'] = fetched_at
+        videos.append(record)
+    videos = [v for v in videos if int(v.get('duration_seconds') or 0) >= 60]
     dropped_language = sum(1 for v in videos if not language_gate(v))
     videos = [v for v in videos if language_gate(v)]
     videos, dropped_stale = drop_stale_videos(videos)
