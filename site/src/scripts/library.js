@@ -35,6 +35,7 @@ const video = (item, catalog = {}, channels = {}) => {
     published_at: first(source.published_at, source.publishedAt, catalog.published_at, catalog.publishedAt, ''),
     saved_at: first(source.saved_at, source.savedAt, Date.now()),
     ...(source.watchedAt ? { watchedAt: source.watchedAt } : {}),
+    ...(first(source.from_topic_id, source.fromTopicId) ? { from_topic_id: first(source.from_topic_id, source.fromTopicId) } : {}),
   };
   // Watch-later unseen: newly added items are unseen; preserve seen_at when present.
   if (source.seen_at !== undefined) result.seen_at = source.seen_at;
@@ -93,6 +94,24 @@ export function toggleVideo(key, snapshot) {
   }
   return !present;
 }
+export function favoriteCount() { return get(KEYS.favorites).length; }
+
+export function toggleFavorite(snapshot, options = {}) {
+  const item = video(snapshot);
+  const present = has(KEYS.favorites, item.id);
+  if (present) { remove(KEYS.favorites, item.id); return false; }
+  if (options.from_topic_id) item.from_topic_id = options.from_topic_id;
+  set(KEYS.favorites, [item, ...get(KEYS.favorites)]);
+  track('favorite_add', { video_id: item.id, from_topic_id: options.from_topic_id || null });
+  if (options.from_topic_id) {
+    import('./affinity.js').then(({ recordFavoriteFromTopic }) => recordFavoriteFromTopic(options.from_topic_id)).catch(() => {});
+  }
+  import('./prompts.js').then(({ showPrompt }) => {
+    if (favoriteCount() === 3) showPrompt('已收藏 3 个。注册后收藏会永久保存，清缓存也不会丢。', { ttl: 0 });
+  }).catch(() => {});
+  return true;
+}
+
 export function toggle(key, idOrSnapshot) {
   return typeof idOrSnapshot === 'object' ? toggleVideo(key, idOrSnapshot) : toggleVideo(key, { id: idOrSnapshot });
 }
