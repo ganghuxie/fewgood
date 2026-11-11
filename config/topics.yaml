@@ -1,0 +1,178 @@
+# Auto-generated from data clustering; do not hand-edit.
+generated_at: 2026-11-11T01:12:53Z
+topics:
+- id: ai
+  name_zh: "人工智能"
+  aliases_en: ["building", "andrej karpathy", "ben eater", "lex fridman", "zelda history"]
+  keywords: ["building", "karpathy", "andrej", "ben", "worst", "scratch", "eater", "card"]
+  source_channel_ids: ["UCXUPKJO5MZQN11PqgIvyuvQ", "UCHnyfMqiRRG1u-2MsSQLbXA", "UCKS1lbJXYQxwqpFzHMiYinQ", "UCu-3YlvaBS4bsya-1eFi62w", "UCS0N5baNlQWJCUrhCEo8WlA", "UCZHmQk67mSJgfCCTn7xBfew", "UC4dxXZQq-ofAadUWbqhoceQ", "UCXuqSBlHAE6Xw-yeJA0Tunw", "UChTGNMh9Ti6cCi6gMCxhBTg", "UCsXVk37bltHxD1rDPwtNM8Q", "UC7aGoyZAsInFMmlg7KH-1PA", "UC0uVZd8N7FfIZnPu0y7o95A", "UCAnzaHhB0ONtwDkYdc3MFCw", "UCSHZKyawb77ixDdsGog4iWA", "UCR85FcguqcxLQ7XEg1byAtQ", "UCY1kMZp36IQSyNx_9h4mpCg"]
+  video_ids: ["kCc8FmEb1nY", "GVsUOuSjvcg", "zjkBMFhNj_g", "7xTGNNLPyMI", "Gzj723LkRJY", "VMj-3S1tku0", "nJPERZDfyWc", "l7rce6IQDWs", "wdgULBpRoXk", "LnzuMJLZRdU", "efPrtcLdcdM", "ZUvGfuLlZus", "mfv0V1SxbNA", "gtuz5OmOh_M", "Jzfpyo-q-RM", "o_TlE_U_X3c", "ExgxwKnH8y4", "1hs451PfFzQ", "cdiD-9MMpb0", "hx7BXih7zx8", "hFZFjoX2cGg"]
+  added_last_24h: 0
+- id: classic-talks
+  name_zh: "经典演讲"
+  aliases_en: ["lecture", "steve jobs", "stanford commencement", "randy pausch", "pausch lecture"]
+  keywords: ["lecture", "stanford", "university", "right", "now", "states", "jobs", "user"]
+  source_channel_ids: ["UCh6KFtW4a4Ozr81GI1cxaBQ", "UC-EnprmCZ3OXyAoG7vjVNCA", "UCf-COwmdNelXvbj-KaMCuLw", "UC8xkuBKC4fXJHrnXtOwEW8Q", "UCcabW7890RKJzL968QWEykA", "UCzZEwjZEnPFHlMQYIUaByAw", "UCfpfBShvR0rjIN5VgnctG8Q", "UCtXKDgv1AVoG88PLl8nGXmw", "UCl_dlV_7ofr4qeP1drJQ-qg", "UCddem5RlB3bQe99wyY49g0g", "UCLA_DiR1FfKNvjuUpBHmylQ", "UCSh-dNnqe1agUSzPM01LgBA", "UCR85PW_B_7_Aisx5vNS7Gjw", "UCVCldvV9TWPPGM0kRB91G7w", "UCqwxJts-6yF33rupyF_DCsA", "UCbmNph6atAoGfqLoCL_duAg", "UCV62FVLw6MxUvO8XmnhE4Yw", "UCaTznQhurW5AaiYPbhEA-KA", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCML_dO_vGALxxQbmYdLPrhw", "UCYO_jab_esuFRV4b17AJtAw", "UCbGQAz4nL_P2Em5p8KPDFIA", "UCddiUEpeqJcYeBxX1IVBKvQ"]
+  video_ids: ["dBnniua6-oM", "UF8uR6Z6KLc", "ji5_MqicxSo", "NOAgplgTxfc", "eJ3RzGoQC4s", "xFFs9UgOAlE", "NNnIGh9g6fA", "PaKIZ7gJlRU", "D1R-jKKp3NA", "8X69_42Mj-g", "dKx1wnXClcI", "gwf5mAlI7Ug", "21X5lGlDOfg", "8X7Ng75e5gQ", "nM9f0W2KD5s", "UzxYlbK2c7E", "_tpB-B8BXk0", "iGbC5j4pG9w", "oTugjssqOT0", "zJOS0sV2a24", "bRcu-ysocX4", "pgoetgxecw8", "MFEHFsO-XSI", "n8m7lFQ3njk", "0lvMgMrNDlg", "MBnnXbOM5S4", "Z1qyvQsjK5Y", "b9_Vh9h3Ohw"]
+  added_last_24h: 0
+- id: climate
+  name_zh: "气候与环境"
+  aliases_en: ["change", "climate change", "kurzgesagt nutshell", "climate town", "change everything"]
+  keywords: ["change", "climate", "kurzgesagt", "problem", "congress", "before", "nutshell", "testifying"]
+  source_channel_ids: ["UCyNtlmLB73-7gtlBz00XOQQ", "UCaTznQhurW5AaiYPbhEA-KA", "UC9SzG8f9xlz8VquuO4fRZsg", "UCqvaXJ1K3HheTPNjH-KpwXQ", "UCAuUUnT6oDeKwE6v1NGQxug", "UCsXVk37bltHxD1rDPwtNM8Q", "UCEPzS1rYsrkqzSLNp76nrcg", "UC_QIfHvN9auy2CoOdSfMWDw", "UCY1kMZp36IQSyNx_9h4mpCg", "UCorlLn2oZfgOJ-FUcF2eZ1A", "UCWvq4kcdNI1r1jZKFw9TiUA", "UCHnyfMqiRRG1u-2MsSQLbXA", "UCj_MQ17q6pQ6VN6aBRoqRxA", "UCuVLG9pThvBABcYCm7pkNkA", "UCsqs2kEdAJjP_1DdIqU09BA", "UCbmNph6atAoGfqLoCL_duAg", "UCnpDurxReTSpFs5-AhDo8Kg", "UC2TXq_t06Hjdr2g_KdKpHQg", "UCFQMnBA3CS502aghlcr0_aw", "UCqGONXW1ORgz5Y4qK-0JdkQ", "UCjr2bPAyPV7t35MvcgT3W8Q", "UCSpFnDQr88xCZ80N-X7t0nQ"]
+  video_ids: ["YQ_xWvX1n9g", "kZRE7HIO3vk", "HxaD_trXwRE", "xguam0TKMw8", "vpTHi7O66pI", "h6fcK_fRYaI", "Z7Wl2FW2TcA", "biYciU1uiUw", "lJ8ydIuPFeU", "DOWDNBu9DkU", "yiw6_JakZFc", "xsSnOQynTHs", "wrwgIjBUYVc", "ovJcsL7vyrk", "O133ppiVnWY", "hX2aZUav-54", "Wp-WiNXH6hI", "Ik1AK56FtVc", "DovunOxlY1k", "xx7Lfh5SKUQ", "-whuXHSL1Pg", "jAhjPd4uNFY", "cdZZpaB2kDM", "VVJldn_MmMY", "HjHMoNGqQTI", "_9LX9HSQkWo"]
+  added_last_24h: 0
+- id: clojure
+  name_zh: "函数式编程"
+  aliases_en: ["rich hickey", "wendover productions", "strange loop", "simple easy"]
+  keywords: ["rich", "hickey", "clojuretv", "clojure", "productions", "wendover", "programs", "conference"]
+  source_channel_ids: ["UC_QIfHvN9auy2CoOdSfMWDw", "UCaLlzGqiPE2QRj6sSOawJRg", "UChWv6Pn_zP0rI6lgGt3MyfA", "UCWnPjmqvljcafA0z2U1fwKQ", "UC2C_jShtL725hvbm1arSV9w", "UC0intLFzLaudFG-xAvUEO-A", "UCbmNph6atAoGfqLoCL_duAg", "UC9RM-iSvTu1uPJb8X5yp3EQ", "UCkQX1tChV7Z7l1LFF4L9j_g", "UCsT0YIqwnpJCM-mx7-gSA4Q", "UCqwxJts-6yF33rupyF_DCsA", "UCro9rA8-YX-26UVNY8ewAKQ"]
+  video_ids: ["SxdOUGdseq4", "oyLBGkS5ICk", "_Cp-BGQfpHQ", "2V1FtfBDsLU", "rI8tNMsozo0", "oAHbLRjF0vo", "MWsGBRdK2N0", "YR5WdGrpoug", "8Ab3ArE8W3s", "ROor6_NGIWU", "vsMydMDi3rI", "ggUduBmvQ_4", "LKtk3HCgTa8", "dCuZkaaou0Q", "-6BsiVyC1kM", "BzB5xtGGsTc", "6mTbuzafcII", "A9UmdY0E8hU", "mbEfzuCLoAQ", "wfm2xCKOCNk", "Wb_vD3XZYOA"]
+  added_last_24h: 0
+- id: commentary
+  name_zh: "深度评论"
+  aliases_en: ["week tonight", "tonight john", "oliver hbo", "john oliver"]
+  keywords: ["tonight", "oliver", "lastweektonight", "hbo", "john", "week", "thought", "segment"]
+  source_channel_ids: ["UC3XTzVzaHQEd30rQbuvCtTQ", "UC9UHHS9id7KonzYR1fNqFyw", "UCtXKDgv1AVoG88PLl8nGXmw", "UCV5vCi3jPJdURZwAOO_FNfQ", "UC6Om9kAkl32dWlDSNlDS9Iw", "UCCDU1fsmgvWljcW2aodfJsA", "UC__2_0RJ8XnHt2angfw6S1Q", "UC0intLFzLaudFG-xAvUEO-A", "UCWnPjmqvljcafA0z2U1fwKQ", "UC8uT9cgJorJPWu7ITLGo9Ww", "UCQ7dFBzZGlBvtU2hCecsBBg", "UCtQvv0QrY7_W49gtIPSDWdg"]
+  video_ids: ["XEVlyP4_11M", "3kEpZWGgJks", "Pb5oIIPO62g", "AyzOUbkUf3M", "GvtNyOzGogc", "J3FcbFqSoQY", "HKQDSgBHPfY", "izxXGuVL21o", "bpAi70WWBlw", "040ejWnFkj0", "8bZh5LMaSmE", "niKblgZupOc", "Wpv-Qb-dB6g", "9PK-netuhHA", "u9KNtnCZDMI", "wqn3gR1WTcA", "oHf1vD5_b5I", "C7TwBUxxIC0", "fpbOEoRrHyU", "0Rnq1NpHdmw", "1Y1ya-yF35g", "6UsHHOCH4q8"]
+  added_last_24h: 0
+- id: computing-history
+  name_zh: "计算机历史"
+  aliases_en: ["modern", "history museum", "computer history", "growing language", "raymond hettinger"]
+  keywords: ["modern", "engineer", "computer", "links", "museum", "manufacturing", "former", "talk"]
+  source_channel_ids: ["UCvhsiQGy_zcNCiSbeXEjhLg", "UCHDr4RtxwA1KqKGwxgdK4Vg", "UC9--0vzC5OmFeM2WDMyKAFg", "UCLYG3Tn_qNxfLdVV6Gr7PGg", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCrgvg3HpIT-MuwvTDVRm9mA", "UCzoVCacndDCfGDf41P-z0iA", "UCXuqSBlHAE6Xw-yeJA0Tunw", "UCVob1MNHX2wRBPZXRDIlPgQ", "UCrJhliKNQ8g0qoE_zvL8eVg", "UCR1IuLEqb6UEA_zQ81kwXfg", "UCH5Rft7GYM8KZpxA-4Ohihg", "UC51aOZF5nnderbuar5D5ifw", "UCc0j7uOItUDh7vEvPb-TeCg", "UC0IY1BQiMehWMvezqWLyk4g", "UCmEmX_jw_pRp5UbAdzkZq-g", "UCiBgK94oWs_x2wszFD-nlEQ", "UCfX55Sx5hEFjoC3cNs6mCUQ", "UCsXVk37bltHxD1rDPwtNM8Q", "UCdp4_l1vPmpN-gDbUwhaRUQ", "UCt-N6BZ25OHGoWHzfvlPhOg", "UCr_DXJ7ZUAJO_d8CnHYTDMQ", "UCftwRNsjfRo08xYE31tkiyw", "UCrM7B7SL_g1edFOnmj-SDKg"]
+  video_ids: ["u6XAPnuFjJc", "ZTC_RxWN_xo", "_ahvzDzKdB0", "NGFhc8R_uO4", "1OfxlSG6q5Y", "EKWGGDXe5MA", "M3BM9TB-8yA", "OHKKcd3sx2c", "GnBbhXBDmwU", "npw4s1QTmPg", "_bDXXWQxK38", "vYA0f6R5KAI", "p33CVV29OG8", "MO8hZlgK5zc", "GqmsQeSzMdw", "wxL4ElboiuA", "YThelfB2fvg", "uknEhXyZgsg", "uUmIdq0D6-A", "iffTJ1vPCSo", "G-WO-z-QuWI", "B2482h_TNwg", "oCZMoY3q2uM", "RVU62CQTXFI", "lw6TaiXzHAE", "JASUsVY5YJ8", "kgCUn4fQTsc"]
+  added_last_24h: 0
+- id: conferences
+  name_zh: "技术会议"
+  aliases_en: ["introduction", "goto conferences", "strange loop", "loop conference", "wolfram language"]
+  keywords: ["introduction", "conferences", "goto", "martin", "nosql", "advanced", "systems", "database"]
+  source_channel_ids: ["UCYO_jab_esuFRV4b17AJtAw", "UCs_tLP3AiwYKwdUHpltJPuA", "UCDXajZI-pUqVfPpjdXp9zCA", "UCr5AKH-Ooht17f2xxRaX3ag", "UCTdw38Cw6jcm0atBPA39a0Q", "UCfsznjef2zGJnrCRQBXqo6Q", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCJekgf6k62CQHdENWf2NgAQ", "UCd6MoB9NC6uYN2grvUNT-Zg", "UCP7jMXSY2xbc3KCAE0MHQ-A", "UC_QIfHvN9auy2CoOdSfMWDw"]
+  video_ids: ["spUNpyF58BY", "JvBT4XBdoUE", "a-BOSpxYJ9M", "Fy0aCDmgnxg", "ecIWPzGEbFc", "6avJHaC3C2U", "gNRnrn5DE58", "RSTNhvDGbYI", "30jNsCVLpAE", "_P9HqHVPeik", "qI_g07C_Q5I", "HaEPXoXVf2k", "2pWv7GOvuf0", "zt0OQb1DBko", "R2Aa4PivG0g"]
+  added_last_24h: 0
+- id: cpp
+  name_zh: "C++ 与系统编程"
+  aliases_en: ["cppcon", "cppcon chandler", "chandler carruth", "lex fridman", "zero-cost abstractions"]
+  keywords: ["cppcon", "chandler", "carruth", "std", "abstractions", "string", "library", "side"]
+  source_channel_ids: ["UCMlGfpWw-RUdWX_JbLCukXg", "UCSHZKyawb77ixDdsGog4iWA"]
+  video_ids: ["rX0ItVEVjHc", "Nb2tebYAaOA", "rHIkrotSwcc", "zBkNBP00wJE", "ncHmEUmJZf4", "yG1OZ69H_-o", "FJJTYQYB1JQ", "kPR8h4-qZdk", "ELeZAKCN4tY", "YnWhqhNdYyk", "fHNmRkzxHWs", "tISy7EJQPzI"]
+  added_last_24h: 0
+- id: documentary
+  name_zh: "纪录片"
+  aliases_en: ["gear", "full documentary", "top gear", "michael moore", "free speech"]
+  keywords: ["gear", "full", "tutorial", "differential", "rather", "defend", "intro", "called"]
+  source_channel_ids: ["UCTdLvmSFokrAtp1ZtP-HhSw", "UCYmfe5bvRYu-H1rtfc4n7AA", "UCQ5imaHcujp1h98CGpLE9sA", "UC3P6PrEBAVH1UaiPOzZ-u-w", "UCyp1gCHZJU_fGWFf2rtMkCg", "UCU_nlLzlVPFLJxB_iEwtwBw", "UCEnmjE2HBmdB_VUx_MilDTA", "UCsT0YIqwnpJCM-mx7-gSA4Q", "UCRFAE1uHnrhXlSkoaAgKsIQ", "UCaHTNOx_kHc0mvKjhhltceQ", "UCCWeRTgd79JL0ilH0ZywSJA", "UC2TsXNsUiTrPKLHG9KDk1hA", "UCjOl2AUblVmg2rA_cRgZkFg", "UCehSs_T0079U1hwNuw4LXBA", "UCfzlCWGWYyIQ0aLC5w48gBQ", "UCQrJSZqagqHCls2Vkrubkzg", "UCyNtlmLB73-7gtlBz00XOQQ"]
+  video_ids: ["yYAw79386WI", "a1zDuOPkMSw", "SGJ5cZnoodY", "dP1xVpMPn8M", "QNznD9hMEh0", "Zk11vI-7czE", "XetplHcM7aQ", "vuIlsN32WaE", "DmT80OseAGs", "K4JhruinbWc", "2Vrhk5OjBP8", "sG9UMMq2dz4", "xnWKz7Cthkk", "LQRAfJyEsko", "udPY5rQVoW0", "BiqDZlAZygU", "5pYeoZaoWrA"]
+  added_last_24h: 0
+- id: future-programming
+  name_zh: "未来编程"
+  aliases_en: ["space", "tvo docs", "won save", "victor future", "usenix atc"]
+  keywords: ["space", "bret", "stack", "land", "eventually", "efficiency", "water", "simply"]
+  source_channel_ids: ["UCrsAgqP6k_aVMD2cPr1194g", "UC4-GrpQBx6WCGwmwozP744Q", "UCqYPhGiB9tkShZorfgcL2lA", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCP7uZX8WcqhM_KjAyX3v9Mw", "UC0intLFzLaudFG-xAvUEO-A", "UCerKNh8xgFXstLdgVlikaxQ", "UC7_gcs09iThXybpVgjHZ_7g"]
+  video_ids: ["8pTEmbeENF4", "36myc8wQhLo", "sGG-A80Tl5g", "_yMMTVVJI4c", "Jb4prVsXkZU", "rQhzEnWCgHA", "2DIl3Hfh9tY", "msVuCEs8Ydo"]
+  added_last_24h: 0
+- id: game-dev
+  name_zh: "游戏开发"
+  aliases_en: ["american", "gdc festival", "festival gaming", "xoxo festival", "allen holub"]
+  keywords: ["american", "festival", "gdc", "gaming", "security", "public", "hacker", "game"]
+  source_channel_ids: ["UCGINcKuFbysZAslgL46KeOA", "UC0intLFzLaudFG-xAvUEO-A", "UC4-GrpQBx6WCGwmwozP744Q", "UCMm211NGh4Ls5SAMZJF7E8A", "UCoYjwcb3p7DDeE_B1KneGFw", "UC0JB7TSe49lg56u6qH8y_MQ", "UC7JrYS7mUdFSDyfpuZQDwBw", "UCANb8zIwVZzMuot5fhLPDQA", "UCa1LiBedgAciIiHqBAWEo7Q", "UCJ6q9Ie29ajGqKApbLqfBOg", "UCE1jXbVAGJQEORz9nZqb5bQ", "UCO8DQrSp5yEP937qNqTooOw", "UCqMG_BBwxrhLG80Y3yuEu-Q", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCb8YYrrZRsbjGJEitdx697A", "UCshObcm-nLhbu8MY50EZ5Ng", "UC2TXq_t06Hjdr2g_KdKpHQg", "UCrZv07X-hsHqXjM-cxgRBhg", "UCK8sQmJBp8GCxrOtXWBpyEA", "UC0BJVNTIEbG8CLG-xVVWJnA", "UC3BGlwmI-Vk6PWyMt15dKGw", "UCZaT_X_mc0BI-djXOlfhqWQ", "UCOKHwx1VCdgnxwbjyb9Iu1g", "UCMbmqUMqzerMSM48pGYMYsg", "UCaYhcUwRBNscFNUKTjgPFiA", "UCP7jMXSY2xbc3KCAE0MHQ-A", "UCpFrWTaIDAnGzrA3P9OxfhQ", "UChrYe70o7NmDioL02PRVWVg", "UCm1fqkJ-Tq64bQzM6VRMicQ"]
+  video_ids: ["JrMiSQAGOS4", "7Nw6qyyrTeI", "ajGX7odA87k", "7IsMeKl-Sv0", "kpk2tdsPh0A", "U7VwtOrwceo", "W3aieHjyNvw", "7W33HRc1A6c", "vuEQixrBKCc", "DnPmg0R1M04", "BLGFriOKz6U", "uHQ4WCU1WQc", "utfbE3_uAMA", "uxykI30fS54", "l_F9jxsfGCw", "aMcJ1Jvtef0", "Ll6-eGDpimU", "72y2EC5fkcE", "_bP80DEAbuo", "HyzD8pNlpwI", "QVBlnCTu9Ms", "stxVBJem3Rs", "v_UyVmITiYQ", "9XaYdCdwiWU", "vKmQW_Nkfk8", "VscdPA6sUkc", "v7AYyUqrMuQ", "qJEWOTZnFeg", "FACK2knC08E", "aKLntZcp27M", "d95J8yzvjbQ", "vQ5MA685ApE", "5kj5ApnhPAE", "ExwqNreocpg", "hNDgcjVGHIw"]
+  added_last_24h: 0
+- id: games
+  name_zh: "游戏与逆向工程"
+  aliases_en: ["suckerpinch", "jonathan blow", "lex fridman", "young game", "x86 executable"]
+  keywords: ["suckerpinch", "games", "program", "play", "tom7", "nes", "computer", "somewhat"]
+  source_channel_ids: ["UC3FlJFuAHHWehanLCETxCcw", "UCmGSJVG3mCRXVOP4yZrU1Dw", "UC3azLjQuz9s5qk76KEXaTvA", "UCZB6V9fUov0Mx_us3MWWILg", "UC6107grRI4m0o2-emgoDnAA", "UCCuoqzrsHlwv1YyPKLuMDUQ", "UCSHZKyawb77ixDdsGog4iWA", "UCoj4eQh_dZR37lL78ymC6XA", "UCCb9_Kn8F_Opb3UCGm-lILQ", "UC7BL19P9OXPOJgu2DRzozDA", "UCXtSt_iCM8XMy0Z-B2w9LSg", "UC3bosUr3WlKYm4sBaLs-Adw", "UCALPBCryAkPlmukKlQcLG8w", "UCAuUUnT6oDeKwE6v1NGQxug", "UCGNm2vGRTPwbO0Q6u-X7MuA", "UC30jm2WJ03mTCOxzU3mBC1A", "UC6Om9kAkl32dWlDSNlDS9Iw"]
+  video_ids: ["s1i-dnAH9Y4", "SrDEtSlqJC4", "ar9WRwCiSr0", "xOCurBYI_gY", "_gXlauRB1EQ", "JcJSW7Rprio", "OoJsPvmFixU", "TH9VCN6UkyQ", "vTMF6xEiAaY", "I845O57ZSy4", "OyfBQmvr2Hc", "DpXy041BIlA", "F_Riqjdh2oM", "LA_DrBwkiJA", "443UNeGrFoM", "bKGhvKyjgLY", "2KSahAoOLdU", "JjDsP5n2kSM", "5TFDG-y-EHs", "iG9CE55wbtY", "ZWQ0591PAxM", "Y65FRxE7uMc", "EcKxaq1FTac", "jmTwlEh8L7g"]
+  added_last_24h: 0
+- id: ideas
+  name_zh: "人物与思想"
+  aliases_en: ["work", "talks google", "warning fast", "veritasium lamp", "unoptimized terminal"]
+  keywords: ["work", "being", "luck", "success", "veritasium", "either", "later", "understanding"]
+  source_channel_ids: ["UCK8sQmJBp8GCxrOtXWBpyEA", "UCHnyfMqiRRG1u-2MsSQLbXA", "UC51_awyLXl2nxCduuzzmw4w", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCbmNph6atAoGfqLoCL_duAg", "UCYO_jab_esuFRV4b17AJtAw", "UCaTznQhurW5AaiYPbhEA-KA", "UCY7dD6waquGnKTZSumPMTlQ", "UCUR1pFG_3XoZn3JNKjulqZg", "UCv_vLHiWVBh_FR9vbeuiY-A", "UCTdLvmSFokrAtp1ZtP-HhSw", "UC_x5XG1OV2P6uZZ5FSM9Ttw", "UC6107grRI4m0o2-emgoDnAA", "UCJ0-OtVpF0wOKEqT2Z1HEtA"]
+  video_ids: ["4XpnKHJAok8", "3LopI4YeC4I", "xtpgkX588nM", "KtQ9nt2ZeGM", "9cNmUNHSBac", "bmSAYlu0NcY", "bBC-nXj3Ng4", "hxM8QmyZXtg", "f7CW7S0zxv4", "XA2WjJbmmoM", "3nwwKbM_vJc", "hvk_XylEmLo", "JOLtS4VUcvQ", "i6Fr65PFqfk", "o0fG_lnVhHw", "iph500cPK28"]
+  added_last_24h: 0
+- id: language-history
+  name_zh: "编程语言史"
+  aliases_en: ["movie", "sassy justice", "erlang movie", "ars technica", "google deepmind"]
+  keywords: ["movie", "ii", "sequel", "demonstration", "south", "college", "deepmind", "erlang"]
+  source_channel_ids: ["UCM1U1jXHOdCZakAxzzUTyiw", "UCGHa3q15FmqB4D9yNlxrdKQ", "UCdnM1ghLKnB4kYpwHHjAc5Q", "UCP7jMXSY2xbc3KCAE0MHQ-A", "UCcRV5FPxxWFdS4Fjnk9FQvA", "UCjFqcJQXGZ6T6sxyFB-5i6A", "UCCDU1fsmgvWljcW2aodfJsA", "UCi38HMIvRpGgMJ0Tlm1WYdw", "UCiwIPoRbENclRmJcgk5a4UA"]
+  video_ids: ["aXQ2lO3ieBA", "rRbY3TMUcgQ", "xrIjfIjssLE", "WXuK6gekU1Y", "_DTpQ4Kk2wA", "7vfqkvwW2fs", "sw0VfmXKq54", "9WfZuNceFDM", "HhGuXCuDb1U", "cUTMhmVh1qs"]
+  added_last_24h: 0
+- id: maker
+  name_zh: "动手与黑客"
+  aliases_en: ["light", "diy perks", "jonathan blow", "talks google", "molly rocket"]
+  keywords: ["light", "artificial", "only", "sun", "direct", "link", "turning", "realistic"]
+  source_channel_ids: ["UCgoMppmHUHU_3vxMD7oDG7g", "UCtk6dEXdQwusDszRbnheBJw", "UCwBVURsT1hSnFT8vGO6vSqw", "UCaTznQhurW5AaiYPbhEA-KA", "UCOBU1nNlXVzepsKFqxrq56g", "UC6107grRI4m0o2-emgoDnAA", "UC2C_jShtL725hvbm1arSV9w", "UCUQo7nzH1sXVpzL92VesANw", "UCHnyfMqiRRG1u-2MsSQLbXA", "UC5g-f-g4EVRkqL8Xs888BLA", "UCq2d2c_u0Lat0SL9P4LEPlg", "UC_x5XG1OV2P6uZZ5FSM9Ttw", "UCNqNkZ7kKfqimqHkgbWMNYA", "UC1LpsuAUaKoMzzJSEt5WImw", "UC6nSFpj9HTCZ5t-N3Rm3-HA", "UCTrQ7HXWRRxr7OsOtodr2_w", "UCCuoqzrsHlwv1YyPKLuMDUQ", "UC3BGlwmI-Vk6PWyMt15dKGw", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UC_QIfHvN9auy2CoOdSfMWDw", "UCF3UCTZiVg9wrIEzO7Om6jw", "UCnAsiniI4DF7vAAe7omWWFQ", "UCtscFf8VayggrDYjOwDke_Q", "UChIs72whgZI9w6d6FhwGGHA", "UCBGzCVpJFb-MPehbNoK173w", "UCbmNph6atAoGfqLoCL_duAg", "UC4M8BkvloHHCM0_l1-WdNaw", "UC6uKrU_WqJ1R2HMTY3LIx5Q", "UCV0t1y4h_6-2SqEpXBXgwFQ", "UCNzszbnvQeFzObW0ghk0Ckw", "UCSHZKyawb77ixDdsGog4iWA", "UCO1ifHwXHkEyCLFk2b7Z8xA", "UCJLTifh7eOh1IOhIL7lF2HQ", "UCYaJTPUrwOnYiwySPg8qHYQ"]
+  video_ids: ["ZSRHeXYDLko", "pW-SOdj4Kkk", "HUEvRyemKSg", "5IUj1EZwpJY", "F-QA2rkpBSY", "3ZTGwcHQfLY", "JEYh5WACqEk", "6bqBsHSwPgw", "pTn6Ewhb27k", "GC-0tCy4P1U", "RjD1aLm4Thg", "B1J2RMorJXM", "0SARbwvhupQ", "NQFqDKRAROI", "5Ge2RcvDlgw", "s86-Z-CbaHA", "AF8d72mA41M", "aMcjxSThD54", "4t1K66dMhWk", "7jiPeIFXb6U", "GiYO1TObNz8", "zb7Bs98KmnY", "fU9hR3kiOK0", "qsEjV8DdSbs", "vGAqYNFQdZ4", "TwKpj2ISQAc", "6IFVTcM28KA", "Cn4vC80Pv6Q", "CZIINXhGDcs", "UGhfB-NICzg", "2AecAXinars", "cIQ36Kt7UVg", "Ge3aKEmZcqY", "RKT-sKtR970", "xi1Lq79mLeE", "P-2P3MSZrBM", "vPnehDhGa14", "n8Dd5aVXLCc", "45X4VP8CGtk", "gbYXBJOFgeI", "8JrqH2oOTK4"]
+  added_last_24h: 0
+- id: math
+  name_zh: "数学与可视化"
+  aliases_en: ["cgp grey", "inigo quilez", "freya holm", "adult swim"]
+  keywords: ["3blue1brown", "grey", "cgp", "python", "tesla", "explained", "changing", "jim"]
+  source_channel_ids: ["UC2C_jShtL725hvbm1arSV9w", "UCnpDurxReTSpFs5-AhDo8Kg", "UCQ7dFBzZGlBvtU2hCecsBBg", "UCgPClNr5VSYC3syrDUIlzLw", "UCR9sFzaG9Ia_kXJhfxtFMBA", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCi8C7TNs2ohrc6hnRQ5Sn2w", "UC5WjFrtBdufl6CZojX3D8dQ", "UC7M-Wz4zK8oikt6ATcoTwBA", "UC2bkHVIDjXS7sgrgjFtzOXQ", "UCgxzjK6GuOHVKR_08TT4hJQ", "UCvhsiQGy_zcNCiSbeXEjhLg", "UCsGeHtRtIooDGzvLKxz9t3w", "UCHTqhvH0v4iXpxzoNuZbTyw", "UCkhm72fuzkS9fYGlGpEmj7A", "UCUHW94eEFW7hkUMVaZz4eDg", "UCdmAhiG8HQDlz8uyekw4ENw", "UCJ6q9Ie29ajGqKApbLqfBOg", "UC3bosUr3WlKYm4sBaLs-Adw", "UC0intLFzLaudFG-xAvUEO-A", "UCYO_jab_esuFRV4b17AJtAw", "UCAuUUnT6oDeKwE6v1NGQxug", "UCotwjyJnb-4KW7bmsOoLfkg", "UCmb8hO2ilV9vRa8cilis88A", "UCYN8R_LpgxCkeVTO_YdVJoA", "UC7ovkh7vqfOW0MGvPcvlrQA", "UCtM5z2gkrGRuWd0JQMx76qA", "UCnrKkTdBFs2UipU2-Ikjsbg", "UC6nSFpj9HTCZ5t-N3Rm3-HA", "UCd9I8ZkgoR1d7GeSj_wi_LQ", "UCj--iMtToRO_cGG_fpmP5XQ", "UCJIfeSCssxSC_Dhc5s7woww", "UC9V4KS8ggGQe_Hfeg1OQrWw", "UCl_dlV_7ofr4qeP1drJQ-qg", "UC6107grRI4m0o2-emgoDnAA", "UCE1jXbVAGJQEORz9nZqb5bQ", "UCj4OTbKSiCxjGoQhalUvrdg", "UCEE8w-v6Gg4j3ze3oX-urEw", "UCY1kMZp36IQSyNx_9h4mpCg", "UC0fDG3byEcMtbOqPMymDNbw", "UC-k1j7M2-hBfXeECd9YAQ_g", "UCshObcm-nLhbu8MY50EZ5Ng", "UC49y2dyVZ6_V3dJxrFuzinA", "UCj1VqrHhDte54oLgPG4xpuQ", "UCqVEHtQoXHmUCfJ-9smpTSg", "UCESLZhusAkFfsNsApnjF_Cg", "UCiNLr9wX35KksK77mrQgxiw", "UCoxcjq-8xIDTYp3uz647V5A", "UCbmNph6atAoGfqLoCL_duAg", "UClqhvGmHcvWL9w3R48t9QXQ", "UCvAovXWLq8Q6VITKAB_Rjww", "UC4EFgGdLCsUKXO4LzMfypMA", "UCYmfe5bvRYu-H1rtfc4n7AA", "UCkQX1tChV7Z7l1LFF4L9j_g", "UCtXKDgv1AVoG88PLl8nGXmw", "UC-2Y8dQb0S6DtpxNgAKoJKA", "UCSHZKyawb77ixDdsGog4iWA", "UCiDJtJKMICpb9B1qf7qjEOA", "UC4PBNDLlS4d75MP0xxcukGA", "UC3BGlwmI-Vk6PWyMt15dKGw", "UCMFqCWI1HZRNDQIKERXEg3Q", "UC1_uAIS3r8Vu6JjXWvastJg", "UCSju5G2aFaWMqn-_0YBtq5A", "UCNzszbnvQeFzObW0ghk0Ckw", "UCZHmQk67mSJgfCCTn7xBfew"]
+  video_ids: ["rStL7niR7gs", "7Pq-S557XQU", "tc4ROCJYbm0", "8SkdfdXWYaI", "DJklHwoYgBQ", "uD4izuDMUQA", "_rBO8neWw04", "urcL86UpqZc", "Ucp0TTmvqOE", "aVwxzDHniEw", "hUhisi2FBuw", "wf-BqAjZb8M", "cZYNADOHhVY", "zDZFcDGpL4U", "7J52mDjZzto", "o4-YnLpLgtk", "MCs5OvhV9S4", "5SaFTm2bcac", "xAoljeRJ3lU", "zcqZHYo7ONs", "8--5LwHRhjk", "KrksBdWcZgQ", "jvPPXbo87ds", "j0z4FweCy4M", "2XLZ4Z8LpEE", "snAhsXyO3Ck", "XvDZLjaCJuw", "d8RRE2rDw4k", "gxAaO2rsdIs", "hVimVzgtD6w", "YEBfamv-_do", "RNFesa01llk", "oIG9ztQw2Gc", "EK32jo7i5LQ", "thOifuHs6eY", "qCGofLIzX6g", "klaJqofCsu4", "LLCF7vPanrY", "fCn8zs912OE", "sD0NjbwqlYw", "W71BTkUbdqE", "YAtLTLiqNwg", "OSGv2VnC0go", "ipRvjS7q1DI", "eviSykqSUUw", "Eq3bUFgEcb4", "6Af6b_wyiwI", "kUfF2MTnqAw", "roBkg-iPrbw", "BFld4EBO2RE", "HPqGaIMVuLs", "l6DKRf-fAAM", "5IuJGHuIkzY", "_eSAF_qT_FY", "xoxhDk-hwuo", "VAhHkJQ3KgY", "m05abdGSOxY", "Pp9MwZkHiMQ", "yHXx3orN35Y", "jMmUoZh3Hq4", "XheAMrS8Q1c", "pUF5esTscZI", "vsTTXYxydOE", "z6ep308goxQ", "F9cO3-MLHOM", "RcVA8Nj6HEo", "oIkhgagvrjI", "d_zt3kGW1NM", "6RhtiPefVzM", "n02tImce3AE", "5wAo54DHDY0", "qp0HIF3SfI4", "AD4b-52jtos", "m3svKOdZijA", "DleXA5ADG78", "ph8LyNIT9sg", "G4hL5Om4IJ4", "AD5aAd8Oy84", "4bM3Gut1hIk", "yY1FSsUV-8c", "98LdFA-_zfA", "YuIIjLr6vUA", "HZGCoVF3YvM", "v68zYyaEmEA", "etx0k1nLn78", "l6T9xIeZTds", "Ve95Nh690l0", "IQJL3htsDyQ", "YQ2QtKcK2dA"]
+  added_last_24h: 0
+- id: mit
+  name_zh: "MIT 公开课"
+  aliases_en: ["mit", "mit opencourseware", "lecture 1a", "nuclear fusion", "zach hartwig"]
+  keywords: ["mit", "opencourseware", "speak", "patrick", "professor", "fusion", "lectures", "discovered"]
+  source_channel_ids: ["UCaVCxGpbDeDI47HDmPYkFCQ", "UCEBb1b_L6zDS3xTUrIALZOw", "UCu2dehvPe9e_ui_1HN7INxw", "UC1yNl2E66ZzKApQdRuTQ4tw", "UCMFsHceLUJNkXMiCMFNnvkA", "UCl2mFZoRqjw_ELax4Yisf6w", "UCmQaIlWu3u23iXFsk5s8l3g", "UCjSXSHPOU4Dr94ENpf2YAiw", "UCHoBKQDRkJcOY2BO47q5Ruw", "UCASM0cgfkJxQ1ICmRilfHLw", "UCblU02pAw9C5jnDZSGNs_Hw"]
+  video_ids: ["d-7o9xYp7eE", "Unzc731iCUY", "2Op3QLzMgSY", "KkpqA8yG9T4", "LJ4W1g-6JiY", "L0KuAx1COEk", "AUaJ8pDlxi8", "-J_xL4IGhJA", "MShbP3OpASA", "Gk-9Fd2mEnI", "otbnC2zE2rw", "ZK3O402wf1c", "IHD8BDFYyGI", "WwslBPj8GgI"]
+  added_last_24h: 0
+- id: pioneers
+  name_zh: "计算机先驱访谈"
+  aliases_en: ["alan", "alan kay", "rogan experience", "joe rogan", "kenneth friedman"]
+  keywords: ["alan", "kay", "joe", "rogan", "powerfuljre", "experience", "solutions", "interviews"]
+  source_channel_ids: ["UC_QIfHvN9auy2CoOdSfMWDw", "UCSA0xzgKlopUZpIaw6XAsvA", "UC0intLFzLaudFG-xAvUEO-A", "UCKdBVD2wVUkuJQZhxGvVr0Q", "UCNOMqK6psg2Wvl68_9xDyDw", "UCs523RmO5vIVulYpOoAGDyw", "UCOEy0zJHk8d3vwk47b2chZg", "UCr_DXJ7ZUAJO_d8CnHYTDMQ", "UCKrD_GYN3iDpG_uMmADPzJQ", "UCzQUP1qoWDoEbmsQxvdjxgQ", "UCR1IuLEqb6UEA_zQ81kwXfg", "UCI11W4ZZ4k-w0zYWw7sZfIw", "UCqv7gk4p_rB4nRz0j7B5yFA", "UCRLwxeoe37rPV7E9bHBLcHA", "UCbKWv2x9t6u8yZoB3KcPtnw"]
+  video_ids: ["lKXe3HUG2l4", "oKg1hTOQXoY", "CTV-wwszGw8", "EY6q5dv_B-o", "FvmTSpJU-Xc", "5RpPTRcz1no", "NdSD07U5uBs", "AnrlSqtpOkw", "fhOHn9TClXY", "Eco2s3-0zsQ", "pwaWilO_Pig", "mPqWstVnRjQ", "jEbRVNxL44c", "E3URhJx0NSw", "gTAghAJcO1o", "6orsmFndx_o", "p2LZLYcu_JY", "ycPr5-27vSI", "r8RxkpUvxK0", "B1J6Ou4q8vE"]
+  added_last_24h: 0
+- id: programming
+  name_zh: "编程思想"
+  aliases_en: ["javascript", "john carmack", "richard feldman", "carmack keynote", "strange loop"]
+  keywords: ["javascript", "programming", "chapter", "talk", "languages", "early", "3blue1brown", "library"]
+  source_channel_ids: ["UCk9H1u4QMFNbBOj96A9DGHw", "UC-ZA3QN2nDmqOSujn8zvNjw", "UCseUQK4kC3x2x543nHtGpzw", "UCil2G-oUNzJ7Bzfv11kDjNQ", "UC-UC-nE8B33UGnC-NRaSfug", "UCQ7dFBzZGlBvtU2hCecsBBg", "UCtXKDgv1AVoG88PLl8nGXmw", "UCBYAfgpXFaO3yebqf49KAgQ", "UCYO_jab_esuFRV4b17AJtAw", "UC9IuUwwE2xdjQUT_LMLONoA", "UCIxsmRWj3-795FMlrsikd3A", "UCzoVCacndDCfGDf41P-z0iA", "UC1lFJanm5Wp6IpNk-2C1Sxw", "UCeLK5pd6P33uz_ffPFYGwZg", "UCTHcgWOTU6gPje1g_U29tfQ", "UC_QIfHvN9auy2CoOdSfMWDw", "UCq6aw03lNILzV96UvEAASfQ", "UCwBVURsT1hSnFT8vGO6vSqw", "UCCb9_Kn8F_Opb3UCGm-lILQ", "UCOpGiN9AkczVjlpGDaBwQrQ", "UCMOqf8ab-42UUQIdVoKwjlQ", "UC766vkQw0Mz3VtXX5XvXxGQ", "UClJshc6QtMWRqIAwJy85sfA", "UCaLlzGqiPE2QRj6sSOawJRg", "UCELFqc_PYKA9OOA9ppT5nvg", "UCaquFi5JOPWPFNwy11oPx2w", "UCVHICXXtKG7rZgtC5xonNdQ", "UC54xfiDz9E8GK77kha5sBXg", "UCV7Lo0c98cYGuVYpA3Mv_DQ", "UC7y4qaRSb5w2O8cCHOsKZDw"]
+  video_ids: ["yJDv-zdhzMY", "jVkLVRt6c1U", "QM1iUe6IofM", "vtIzMaLkCaM", "qbIk7-JPB2c", "o9pEzgHorH0", "hQVTIJBZook", "XXBxV6-zamM", "aircAruvnKk", "kc9HwsxE1OY", "KXuZi9aeGTw", "x7cQ3mrcKaY", "QyJZzq0v7Z4", "1PhArSujR_A", "-C-JoyNuQJs", "wjZofJX0v4M", "XZ3w_jec1v8", "fNk_zzaMoSs", "xuCn8ux2gbs", "WUvTyaaNkzM", "3kEfedtQVOY", "-4Yp3j_jk8Q", "IcgmSRJHu_8", "HB5TrK7A4pI", "uOSnQM1Zu4w", "ydyztGZnbNs", "hFSPHfZQpIQ", "vK1DazRK_a0", "dEaecUuEqfc", "ShEez0JkOFw", "b0EF0VTs9Dc", "Gv2I7qTux7g", "4zgYG-_ha28", "dljNabciEGg", "IRTfhkiAqPw", "gB9n2gHsHN4", "wt-iVFxgFWk", "YKuRkGkf5HU", "JxAXlJEmNMg", "csyL9EC0S0c", "zwAD6dRSVyI", "db-7J5OaSag", "cCOL7MC4Pl0", "Mz3JeYfBTcY", "vzfy4EKwG_Y"]
+  added_last_24h: 0
+- id: science
+  name_zh: "科技科普"
+  aliases_en: ["veritasium", "web app", "unreasonably effective", "universe hostile", "understand game"]
+  keywords: ["veritasium", "fraud", "minute", "life", "facebook", "universe", "physics", "accidentally"]
+  source_channel_ids: ["UCHnyfMqiRRG1u-2MsSQLbXA", "UCh6KFtW4a4Ozr81GI1cxaBQ", "UC3ltptWa0xfrDweghW94Acg", "UCl2mFZoRqjw_ELax4Yisf6w", "UCAuUUnT6oDeKwE6v1NGQxug", "UCP_lo1MFyx5IXDeD9s_6nUw", "UC6Om9kAkl32dWlDSNlDS9Iw", "UCFQMnBA3CS502aghlcr0_aw"]
+  video_ids: ["oVfHeWTKjag", "S2xHZPH5Sng", "42QuXLucH3Q", "IV3dnLzthDA", "jyQwgBAaBag", "XRr1kaXKBsU", "mScpHTIi-kM", "MiUHjLxm3V0", "zUyH3XhpLTo", "yCsgoLc_fzI", "cUzklzVXJwo", "j5v8D-alAKE", "akVL7QY0S8A", "AaZ_RSt0KP8", "IgF3OX8nT0w", "d6iQrh2TK98", "oI_X2cMHNe0", "5eW6Eagr9XA", "rvLFEh7V18A", "o2_SZ4tfLns", "SC2eSujzrUY", "B8ofWFx525s", "nYkdrAPrdcw", "ZuvK-od647c", "2IT2oAzTcvU", "esQyYGezS7c", "ZMQbHMgK2rw", "48sCx-wBs34", "4o_jPzBZSIo"]
+  added_last_24h: 0
+- id: science-2
+  name_zh: "科技科普"
+  aliases_en: ["veritasium", "open university", "strange loop", "loop conference", "lex fridman"]
+  keywords: ["veritasium", "click", "went", "context", "optimizing", "yt", "algorithm", "actual"]
+  source_channel_ids: ["UC_QIfHvN9auy2CoOdSfMWDw", "UCuvSqzfO_LV_QzHdmEj84SQ", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCYO_jab_esuFRV4b17AJtAw", "UCXsH4hSV_kEdAOsupMMm4Qw", "UCGsaijjOJshS2_ZmMNZgS-g", "UCtJPeNYnAXhB1-_h8xbIX_Q", "UCHnyfMqiRRG1u-2MsSQLbXA", "UCFECM-p3CF81Tp_l2sJsiyg", "UCCb9_Kn8F_Opb3UCGm-lILQ", "UCSHZKyawb77ixDdsGog4iWA", "UCyF-6wI0EoKAe7nZqlIOrOA", "UCSPLhwvj0gBufjDRzSQb3GQ", "UCIb2ti8V0Mhgvxgs80-Lo1w", "UCVT1tPkR-fUVlO652EcO3ow", "UC6107grRI4m0o2-emgoDnAA", "UCoebwHSTvwalADTJhps0emA"]
+  video_ids: ["r-TLSBdHe1A", "t_rzYnXEQlE", "wh4aWZRtTwU", "IOiZatlZtGU", "Kas0tIxDvrg", "gPlpphT7n9s", "5eo8nz_niiM", "p8u_k2LIZyo", "HeQX2HjkcNo", "xoVJKj8lcNQ", "rhgwIhB58PA", "GhsZUZmJvaM", "bHIhgxav9LY", "Dp-mQ3HxgDE", "fHsa9DqmId8", "aB8zcAttP1E", "qd_hEja6bzE", "o_4EX4dPppA", "nfDoml-Db64", "3wfNl2L0Gf8", "ZMByI4s-D-Y", "29co_Hksk6o", "qOTYgcdNrXE", "nmgFG7PUHfo", "-Ln-8QM8KhQ"]
+  added_last_24h: 0
+- id: startups
+  name_zh: "创业与硅谷"
+  aliases_en: ["combinator", "startup school", "start startup", "sam altman", "project code"]
+  keywords: ["combinator", "startup", "school", "sam", "altman", "paul", "yeah", "stage"]
+  source_channel_ids: ["UC4-GrpQBx6WCGwmwozP744Q", "UCqvaXJ1K3HheTPNjH-KpwXQ", "UC0intLFzLaudFG-xAvUEO-A", "UCCRa-wycVfgh1ctaKaD0BeQ", "UCpl3CA98zybDPLjRKYWcAlg", "UC4FrvWBLhbOkpgOHj-jz6Ww", "UCWnPjmqvljcafA0z2U1fwKQ", "UCcefcZRL2oaA_uBNeo5UOWg", "UCGwuxdEeCf0TIA2RbPOj-8g", "UCQ7dFBzZGlBvtU2hCecsBBg", "UCeIJlnFJ9ewahK2ZmOYVOqQ", "UCCjyq_K1Xwfg8Lndy7lKMpA", "UC1d4faRf_bna2UZkiJuJ-Mw", "UCxIJaCMEptJjxmmQgGFsnCg", "UCIsbLox_y9dCIMLd8tdC6qg", "UC_QIfHvN9auy2CoOdSfMWDw", "UCFQMnBA3CS502aghlcr0_aw"]
+  video_ids: ["-zRN7XLCRhc", "PHe0bXAIuk0", "Uhx-26GfCBU", "0fKBhvDjuy0", "0CDXJ6bMkMY", "4Q7FTjhvZ7Y", "FITJMJjASUs", "cOubCHLXT6A", "k2h2lvhzMDc", "TS1lpKBMkgg", "oHlpmxLTxpw", "R9ITLdmfdLI", "u404SLJj7ig", "4NAzQPll7Lo", "t8QEOBgLBQU", "3Fx5Q8xGU8k", "CBYhVcO4WgI", "SqEo107j-uw", "syoqjYLDs48", "gCWtkvDQ2ZI", "C6nAxiym9oc"]
+  added_last_24h: 0
+- id: systems
+  name_zh: "系统与软件设计"
+  aliases_en: ["linux.conf.au", "wayland daniel", "universe nothing", "tragedy systemd", "tech ingredients"]
+  keywords: ["linux.conf.au", "science", "talk", "collins", "today", "robert", "reminded", "daniel"]
+  source_channel_ids: ["UCciKHCG06rnq31toLTfAiyw", "UCtXKDgv1AVoG88PLl8nGXmw", "UC_KrvG48vsb4SYRGlu3rAHg", "UCJ6o36XL0CpYb6U5dNBiXHQ", "UC2D2CMWXMOVWx7giW1n3LIg", "UC8uSLYDanXDnP9Yn8UrTNzQ", "UCVSHXNNBitaPd5lYz48--yg", "UCXZCJLdBC09xxGZ6gcdrc6A", "UCH_zYYXkJpULueOVZTkY4Bw", "UC7jUrsr9985aKVJmpg-dtZg", "UC3BGlwmI-Vk6PWyMt15dKGw", "UCnkp4xDOwqqJD7sSM3xdUiQ", "UCAuUUnT6oDeKwE6v1NGQxug", "UC6Om9kAkl32dWlDSNlDS9Iw"]
+  video_ids: ["o_AIw9bGogo", "aAb7hSCtvGw", "RIctzAQOe44", "UBc7qBS1Ujo", "QmOF0crdyRU", "oSmqbnhHp1c", "dNs_kNilSjk", "outcGtbnMuQ", "7ImvlS8PLIo", "ON0A1dsQOV0", "YX3iRjKj7C0", "sfXn_ecH5Rw", "rrkrvAUbU9Y", "9FdHq3WfJgs", "qbKGw8MQ0i8"]
+  added_last_24h: 0
+- id: tech-life
+  name_zh: "科技与生活"
+  aliases_en: ["go", "go programming", "rob pike", "wim hof", "al jazeera"]
+  keywords: ["go", "quite", "down", "take", "rob", "pike", "all", "please"]
+  source_channel_ids: ["UC0intLFzLaudFG-xAvUEO-A", "UC_QIfHvN9auy2CoOdSfMWDw", "UC6uKrU_WqJ1R2HMTY3LIx5Q", "UCtYw-H_L5D09T9uWeNBUvqg", "UCzoVCacndDCfGDf41P-z0iA", "UCtI0Hodo5o5dUb67FeUjDeA", "UCy0tKL1T7wFoYcxCe0xjN6Q", "UCO3LEtymiLrgvpb59cNsb8A", "UC18R5fEIi0uleFNt3v4KwaQ", "UCYI-TL0LoFRl1gFnnUFwdow", "UCP5tjEmvPItGyLhmjdwP7Ww", "UC0qMEMLBV_4yrRyJm_ugxVw", "UCyNtlmLB73-7gtlBz00XOQQ", "UCSRhwaM00ay0fasnsw6EXKA", "UCaUtAK8xECTkETCYivJegeQ", "UC5GCrYGsm7EHQzQZj65A-5w", "UCNye-wNBqNL5ZzHSJj3l8Bg", "UCGIkFNbztHRaX0GB78SWaZA", "UCvwZ5XRRdZRePAqJ7UZPUyQ", "UCvzMZyJZZ3XYQwbvOACVYrQ", "UCQjlOy1mNc9IockEk5BS5GQ", "UC7Qu6WAXfoGUYc8NxPDZZBg", "UCIQ3KtupJCawXGMyTqpADXg", "UC_x5XG1OV2P6uZZ5FSM9Ttw", "UCaLlzGqiPE2QRj6sSOawJRg", "UCzdaFtpPWb-Pn6oYXQTCnxA", "UCxHTM1FYxeC4F7xDsBVltGg", "UChvithwOECK5g_19TjldMKw", "UCL_f53ZEJxp8TtlOkHwMV9Q", "UCt-TWZubGKT0mkQfFwnzloQ", "UCMOB6uDg7e-h8OuCw8dK2_Q", "UCXuqSBlHAE6Xw-yeJA0Tunw", "UCtXKDgv1AVoG88PLl8nGXmw", "UClaMKdlrBAqj0i8k_b0QC_Q", "UCZZ3MA6ChVTViq8ORmFfCPA", "UCl2mFZoRqjw_ELax4Yisf6w", "UCBBd3JxQl455JkWBeulc-9w", "UCGPIwbu3YyixeLfwar9Eltg", "UCuvWIeAEnRF3O16O9uihnZw", "UCnkp4xDOwqqJD7sSM3xdUiQ", "UCtscFf8VayggrDYjOwDke_Q", "UCfX55Sx5hEFjoC3cNs6mCUQ", "UCwhB8cJTSLxyubnKSS-PLJg", "UCLXo7UDZvByw2ixzpQCufnA", "UCcEDTBdietc2JmgN6TL8wAg", "UCxBws0tpClLXp2Uv2x30OFQ", "UCsT0YIqwnpJCM-mx7-gSA4Q", "UCR1D15p_vdP3HkrH8wgjQRw", "UC6d4S835I5zWy4GSu1ThJog", "UC9PIn6-XuRKZ5HmYeu46AIw", "UCSHZKyawb77ixDdsGog4iWA", "UCbWcXB0PoqOsAvAdfzWMf0w", "UC44lc40rLHVDMxfxNimVRSg"]
+  video_ids: ["ORzNZUeUHAM", "jN7mSXMruEo", "4fFDFbi3toc", "t705r8ICkRw", "cIQ9IXSUzuM", "8aGhZQkoFbQ", "wbSwFU6tY1c", "UiS27feX8o0", "PAAkCSZUG1c", "Pzl1B7nB9Kc", "wo84LFzx5nI", "If61baWF4GE", "aFQFB5YpDZE", "JTfhYyTuT44", "rFejpH_tAHM", "9QMGAtxUlAc", "1sd26pWhfmg", "rvkEpstd9os", "5ESJH1NLMLs", "5rXPrfnU3G0", "EZ05e7EMOLM", "Jib2AmRb_rk", "fE2KDzZaxvE", "xNjI03CGkb4", "f6kdp27TYZs", "2y5Pv4yN0b0", "Sg4U4r_AgJU", "tybOi4hjZFQ", "bpQFCcSI0pU", "SEDuVF7kiPU", "o25I2fzFGoY", "9fa9lVwHHqg", "0506yDSgU7M", "rKnDgT73v8s", "EYPapE-3FRw", "tX4H_ctggYo", "4To-F6W1NT0", "VZQoAKJPbh8", "uRGljemfwUE", "4Z2uzEM0ugY", "Kr3quGh7pJA", "kya_LXa_y1E", "WiPp9YEBV0Q", "vc4yL3YTwWk", "TPpoJGYlW54", "GTQnarzmTOc", "YX40hbAHx3s", "5MgBikgcWnY", "O5BJVO3PDeQ", "VQKMoT-6XSg", "XfcvX0P1b5g", "OX31kZbAXsA", "O9upVbGSBFo", "UCgoxQCf5Jg", "_2NI6t2r_Hs"]
+  added_last_24h: 0
+- id: tech-review
+  name_zh: "科技评论"
+  aliases_en: ["tom", "tom scott", "electronic voting", "vs irving", "voting still"]
+  keywords: ["tom", "scott", "computerphile", "idea", "horrible", "love", "voting", "electronic"]
+  source_channel_ids: ["UC9-y-6csu5WGm29I7JiwpnA", "UCBa659QWEk1AI4Tg--mrJ2A", "UCU-fOxx_kT5OARG0KiksiCA", "UCqT6vUgnUC8VWd2yiHQlHSg", "UCB31oh4SvSvz5LCM84Pov9w", "UC8BtBl8PNgd3vWKtm2yJ7aA", "UCgO8vdeWcywARd99Od-H_8A", "UCYeF244yNGuFefuFKqxIAXw", "UCvpQ-l09fCVxJd3urZbxzHg", "UC47eUBNO8KBH_V8AfowOWOw", "UCfVotMGyD7sVMomr2AzsBtQ", "UCaTznQhurW5AaiYPbhEA-KA", "UC0intLFzLaudFG-xAvUEO-A", "UChfe3zGOtlJoHVl0tRUrGJA"]
+  video_ids: ["-5wpm-gesOY", "w3_0x6oaDmI", "LkH2r-sNjQs", "1Jwo5qc78QU", "2tdiKTSdE9Y", "AdNJ3fydeao", "BxV14h0kFs0", "5PmHRSeA2c8", "ZhuHCtR3xq8", "I8LbkfSSR58", "y4GB_NDU43Q", "_3loq22TxSc", "leX541Dr2rU", "WZskjLq040I", "NTfOnGZUZDk", "mOtKD7ml0NU", "ymaWq5yZIYM", "tD5NrevFtbU", "CCOdQsZa15o", "WO2X3oZEJOA", "MijmeoH9LT4", "15RTC22Z2xI"]
+  added_last_24h: 0
