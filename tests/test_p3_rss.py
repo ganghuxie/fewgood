@@ -105,6 +105,23 @@ def write_music_config(path, channels):
     }, allow_unicode=True))
 
 
+def cached_video(video_id, channel_id='UC1'):
+    return {
+        'id': video_id, 'title': f'Cached {video_id}', 'channel': f'Channel {channel_id}',
+        'channel_id': channel_id, 'published_at': iso_now(),
+        'default_audio_language': 'en', 'default_language': 'en',
+        'duration_seconds': 300, 'view_count': 100, 'like_count': 5,
+    }
+
+
+def write_previous_feed(output, feed_name, videos):
+    output.mkdir(parents=True, exist_ok=True)
+    path = output / f'{feed_name}.json'
+    payload = {'generated_at': iso_now(), 'videos': videos}
+    path.write_text(json.dumps(payload))
+    return path, payload
+
+
 def test_parse_channel_rss_extracts_ids_and_published_times():
     entries = parse_channel_rss(RSS_XML)
     assert entries == [
@@ -368,3 +385,115 @@ def test_failed_rss_fetch_falls_back_and_keeps_other_channels(tmp_path, monkeypa
     assert {video['id'] for video in result['videos']} == {'fallbackTrack', 'workingTrack'}
     assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['playlistItems', 'videos']
     assert result['quota_units_approx'] == 2
+
+
+def test_ai_feed_keeps_previous_payload_when_discovery_and_fallback_are_empty(
+    tmp_path, monkeypatch, capsys,
+):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    channels_path = tmp_path / 'ai_channels.yaml'
+    channels_path.write_text(yaml.safe_dump({'channels': [{
+        'name': 'AI Channel', 'youtube_channel_id': 'UC1',
+    }]}, allow_unicode=True))
+    output = tmp_path / 'out'
+    previous_videos = [cached_video(f'cachedAI{i}', f'UC{i}') for i in range(4)]
+    feed_path, _previous_payload = write_previous_feed(output, 'ai', previous_videos)
+    before = feed_path.read_text()
+    client = FallbackRecordingClient({}, playlists={'UU1': []})
+
+    result = ai_feed(
+        channels_file=str(channels_path), client=client, output=str(output),
+        rss_fetcher=lambda channel_id: [],
+    )
+
+    assert feed_path.read_text() == before
+    assert result['videos'] == previous_videos
+    warning = capsys.readouterr().out
+    assert 'kept previous ai feed' in warning
+    assert 'new_count=0' in warning
+    assert 'prev_count=4' in warning
+
+
+def test_curated_music_feed_keeps_previous_payload_when_refresh_drops_below_half(
+    tmp_path, monkeypatch, capsys,
+):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    channels = [{
+        'name': f'New {i}', 'handle': f'new-{i}', 'youtube_channel_id': f'UCN{i}',
+    } for i in range(4)]
+    config_path = tmp_path / 'music_channels.yaml'
+    write_music_config(config_path, channels)
+    output = tmp_path / 'out'
+    previous_videos = [cached_video(f'cachedTrack{i}', f'UCO{i}') for i in range(10)]
+    feed_path, _previous_payload = write_previous_feed(output, 'music', previous_videos)
+    before = feed_path.read_text()
+    new_ids = [f'newTrack{i}' for i in range(4)]
+    client = RecordingClient({
+        video_id: raw_video(video_id, 'PT5M', channel_id=f'UCN{i}')
+        for i, video_id in enumerate(new_ids)
+    })
+
+    def rss_fetcher(channel_id):
+        index = int(channel_id[-1])
+        return [{'id': new_ids[index], 'published_at': iso_now()}]
+
+    result = curated_music_feed(
+        config_path=str(config_path), client=client, output=str(output),
+        rss_fetcher=rss_fetcher,
+    )
+
+    assert feed_path.read_text() == before
+    assert result['videos'] == previous_videos
+    warning = capsys.readouterr().out
+    assert 'kept previous music feed' in warning
+    assert 'new_count=4' in warning
+    assert 'prev_count=10' in warning
+
+
+def test_curated_music_feed_writes_refresh_at_half_or_more(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    channels = [{
+        'name': f'New {i}', 'handle': f'new-{i}', 'youtube_channel_id': f'UCN{i}',
+    } for i in range(5)]
+    config_path = tmp_path / 'music_channels.yaml'
+    write_music_config(config_path, channels)
+    output = tmp_path / 'out'
+    previous_videos = [cached_video(f'cachedTrack{i}', f'UCO{i}') for i in range(10)]
+    feed_path, _previous_payload = write_previous_feed(output, 'music', previous_videos)
+    new_ids = [f'newTrack{i}' for i in range(5)]
+    client = RecordingClient({
+        video_id: raw_video(video_id, 'PT5M', channel_id=f'UCN{i}')
+        for i, video_id in enumerate(new_ids)
+    })
+
+    def rss_fetcher(channel_id):
+        index = int(channel_id[-1])
+        return [{'id': new_ids[index], 'published_at': iso_now()}]
+
+    result = curated_music_feed(
+        config_path=str(config_path), client=client, output=str(output),
+        rss_fetcher=rss_fetcher,
+    )
+
+    assert {video['id'] for video in result['videos']} == set(new_ids)
+    saved = json.loads(feed_path.read_text())
+    assert {video['id'] for video in saved['videos']} == set(new_ids)
+
+
+def test_curated_music_feed_writes_small_brand_new_feed(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    config_path = tmp_path / 'music_channels.yaml'
+    write_music_config(config_path, [{
+        'name': 'New', 'handle': 'new', 'youtube_channel_id': 'UCN0',
+    }])
+    output = tmp_path / 'out'
+    client = RecordingClient({'newTrack0': raw_video('newTrack0', 'PT5M', channel_id='UCN0')})
+
+    result = curated_music_feed(
+        config_path=str(config_path), client=client, output=str(output),
+        rss_fetcher=lambda channel_id: [{'id': 'newTrack0', 'published_at': iso_now()}],
+    )
+
+    assert [video['id'] for video in result['videos']] == ['newTrack0']
+    saved = json.loads((output / 'music.json').read_text())
+    assert [video['id'] for video in saved['videos']] == ['newTrack0']

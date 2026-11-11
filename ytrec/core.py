@@ -276,6 +276,44 @@ def write_feed(name, payload, root='site/src/data'):
     return target
 
 
+def write_feed_if_not_sharply_smaller(name, payload, root='site/src/data'):
+    """Write a feed unless the refresh would sharply shrink an existing one.
+
+    An empty refresh, or one below 50% of the previously written video count,
+    is treated as a discovery outage. The previous payload is returned without
+    touching the file so callers can keep serving the last complete feed.
+    """
+    target = Path(root) / f'{name}.json'
+    previous = None
+    previous_videos = []
+    try:
+        previous = json.loads(target.read_text())
+        if isinstance(previous, dict) and isinstance(previous.get('videos'), list):
+            previous_videos = previous['videos']
+    except (OSError, json.JSONDecodeError, TypeError):
+        pass
+
+    new_videos = payload.get('videos') if isinstance(payload, dict) else None
+    new_count = len(new_videos) if isinstance(new_videos, list) else 0
+    prev_count = len(previous_videos)
+    if prev_count > 0:
+        if new_count == 0:
+            reason = 'refresh produced no videos'
+        elif new_count < 0.5 * prev_count:
+            reason = 'below 50% of previous feed'
+        else:
+            reason = None
+        if reason:
+            print(
+                f"WARNING: kept previous {name} feed: new_count={new_count}, "
+                f"prev_count={prev_count}, reason={reason}"
+            )
+            return previous
+
+    write_feed(name, payload, root)
+    return payload
+
+
 # Language gate -------------------------------------------------------------
 # Keep only zh + en. A missing/empty/`und`/`zxx` language field falls through
 # to the next signal; any other primary subtag excludes the video. When both
@@ -972,8 +1010,8 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     payload = dict(generated_at=iso_now(), window_days=FRESHNESS_MAX_DAYS, exclude_shorts_under_seconds=60,
                    quota_units_approx=units, channels_used=len(channels), dropped_language=dropped_language,
                    dropped_channel=dropped_channel, dropped_stale=dropped_stale, videos=videos)
-    write_feed('ai', payload, output)
-    print(f"AI: {len(videos)} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
+    payload = write_feed_if_not_sharply_smaller('ai', payload, output)
+    print(f"AI: {len(payload.get('videos', []))} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))
     return payload
 

@@ -13,7 +13,8 @@ import requests
 import yaml
 
 from .core import (
-    Client, youtube_key, youtube_videos, video_record, iso_now, write_feed,
+    Client, youtube_key, youtube_videos, video_record, iso_now,
+    write_feed_if_not_sharply_smaller,
     language_gate, podcast_display_cap, why_good_for, dedupe_channel_caps,
     _load_existing_feeds, freshness_sort_key, drop_stale_videos,
     load_fresh_feed_records, metadata_cache_days,
@@ -332,9 +333,9 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
         out['dropped_long'] = dropped_long
     if display_cap:
         out['dropped_podcast_display_cap'] = dropped_display
-    write_feed(feed_name, out, output)
+    out = write_feed_if_not_sharply_smaller(feed_name, out, output)
     label = feed_name.title()
-    print(f"{label} (curated): {len(kept)} videos from {out['channels_resolved']} channels; unresolved={out['unresolved']}")
+    print(f"{label} (curated): {len(out.get('videos', []))} videos from {out.get('channels_resolved', 0)} channels; unresolved={out.get('unresolved', [])}")
     return out
 
 
