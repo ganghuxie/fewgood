@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-11T02:48:59Z",
+  "generated_at": "2026-11-11T06:53:54Z",
   "source": "curated_whitelist",
   "min_duration_seconds": 1500,
-  "channels_configured": 11,
-  "channels_resolved": 11,
+  "channels_configured": 12,
+  "channels_resolved": 12,
   "unresolved": [],
-  "candidates_fetched": 378,
-  "dropped_short": 221,
+  "candidates_fetched": 428,
+  "dropped_short": 251,
   "dropped_language": 0,
   "dropped_channel": 0,
-  "dropped_stale": 113,
-  "final_count": 13,
-  "quota_units_approx": 40,
+  "dropped_stale": 132,
+  "final_count": 14,
+  "quota_units_approx": 23,
   "videos": [
     {
       "id": "4nKt18AZDsQ",
@@ -24,7 +24,8 @@
       "duration_seconds": 4113,
       "view_count": 39055,
       "like_count": 157,
-      "why_good": "近 30 天同类长视频播放第 10"
+      "why_good": "近 30 天同类长视频播放第 10",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "yULk8eNa2mg",
@@ -37,7 +38,8 @@
       "duration_seconds": 3249,
       "view_count": 6799,
       "like_count": 92,
-      "why_good": "近 30 天同类长视频播放第 13"
+      "why_good": "近 30 天同类长视频播放第 14",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "FGCP2F_7rQk",
@@ -50,7 +52,8 @@
       "duration_seconds": 5418,
       "view_count": 1657486,
       "like_count": 30035,
-      "why_good": "近 30 天同类长视频播放第 1"
+      "why_good": "近 30 天同类长视频播放第 1",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "ZAzWPE9CItg",
@@ -63,7 +66,8 @@
       "duration_seconds": 12867,
       "view_count": 1539525,
       "like_count": 9867,
-      "why_good": "近 30 天同类长视频播放第 2"
+      "why_good": "近 30 天同类长视频播放第 2",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "frYSOKvNiiE",
@@ -76,7 +80,8 @@
       "duration_seconds": 4141,
       "view_count": 327664,
       "like_count": 3598,
-      "why_good": "近 30 天同类长视频播放第 3"
+      "why_good": "近 30 天同类长视频播放第 3",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "f0J_EeW42Lo",
@@ -89,7 +94,8 @@
       "duration_seconds": 3670,
       "view_count": 307037,
       "like_count": 4254,
-      "why_good": "近 30 天同类长视频播放第 4"
+      "why_good": "近 30 天同类长视频播放第 4",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "4UmFfI8CWuA",
@@ -102,7 +108,8 @@
       "duration_seconds": 4406,
       "view_count": 94871,
       "like_count": 734,
-      "why_good": "近 30 天同类长视频播放第 5"
+      "why_good": "近 30 天同类长视频播放第 5",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "JHo-aiePjoM",
@@ -115,7 +122,8 @@
       "duration_seconds": 4333,
       "view_count": 77707,
       "like_count": 773,
-      "why_good": "近 30 天同类长视频播放第 6"
+      "why_good": "近 30 天同类长视频播放第 6",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "19qrLchbQEc",
@@ -128,7 +136,8 @@
       "duration_seconds": 5148,
       "view_count": 74933,
       "like_count": 745,
-      "why_good": "近 30 天同类长视频播放第 7"
+      "why_good": "近 30 天同类长视频播放第 7",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "iDaxRNIddME",
@@ -141,7 +150,8 @@
       "duration_seconds": 10279,
       "view_count": 50525,
       "like_count": 263,
-      "why_good": "近 30 天同类长视频播放第 8"
+      "why_good": "近 30 天同类长视频播放第 8",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "Wm53dMsn5dk",
@@ -154,7 +164,25 @@
       "duration_seconds": 13819,
       "view_count": 43793,
       "like_count": 285,
-      "why_good": "近 30 天同类长视频播放第 9"
+      "why_good": "近 30 天同类长视频播放第 9",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
+    },
+    {
+      "id": "hADjbGhsios",
+      "title": "徕芬科技创始人叶洪新×罗永浩！初中毕业后，我先造飞机去了......｜罗永浩的十字路口",
+      "channel": "罗永浩的十字路口",
+      "channel_id": "UC33VP_gIBzCVcEvaGKBocZA",
+      "published_at": "2026-11-04T04:33:07Z",
+      "default_audio_language": "zh-CN",
+      "default_language": "zh-Hans",
+      "duration_seconds": 11965,
+      "view_count": 31209,
+      "like_count": 117,
+      "comment_count": 29,
+      "has_captions": true,
+      "has_chapters": true,
+      "_metadata_fetched_at": "2026-11-11T06:53:54Z",
+      "why_good": "近 30 天同类长视频播放第 11"
     },
     {
       "id": "86wFCPat2GY",
@@ -167,7 +195,8 @@
       "duration_seconds": 7192,
       "view_count": 21371,
       "like_count": 78,
-      "why_good": "近 30 天同类长视频播放第 11"
+      "why_good": "近 30 天同类长视频播放第 12",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     },
     {
       "id": "AwuTTOJGEi0",
@@ -180,7 +209,8 @@
       "duration_seconds": 2363,
       "view_count": 19322,
       "like_count": 251,
-      "why_good": "近 30 天同类长视频播放第 12"
+      "why_good": "近 30 天同类长视频播放第 13",
+      "_metadata_fetched_at": "2026-11-11T02:48:59Z"
     }
   ],
   "dropped_podcast_display_cap": 0

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T02:49:05Z",
+  "generated_at": "2026-11-11T06:53:59Z",
   "source": "curated_whitelist",
   "min_duration_seconds": 180,
   "channels_configured": 6,
@@ -11,7 +11,7 @@
   "dropped_channel": 0,
   "dropped_stale": 45,
   "final_count": 31,
-  "quota_units_approx": 24,
+  "quota_units_approx": 12,
   "videos": [
     {
       "id": "LtUDeizHqKk",
@@ -24,7 +24,8 @@
       "duration_seconds": 1547,
       "view_count": 1375485,
       "like_count": 28101,
-      "why_good": "近 30 天同类长视频播放第 4"
+      "why_good": "近 30 天同类长视频播放第 4",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "z28UbGAPteA",
@@ -37,7 +38,8 @@
       "duration_seconds": 3561,
       "view_count": 105653,
       "like_count": 2614,
-      "why_good": "近 30 天同类长视频播放第 19"
+      "why_good": "近 30 天同类长视频播放第 19",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "1czUusLWcZg",
@@ -50,7 +52,8 @@
       "duration_seconds": 217,
       "view_count": 86729,
       "like_count": 2273,
-      "why_good": "近 30 天同类长视频播放第 23"
+      "why_good": "近 30 天同类长视频播放第 23",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "TOBmHM6_hGc",
@@ -63,7 +66,8 @@
       "duration_seconds": 180,
       "view_count": 65337,
       "like_count": 2481,
-      "why_good": "近 30 天同类长视频播放第 26"
+      "why_good": "近 30 天同类长视频播放第 26",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "GXVZMiDbtiM",
@@ -76,7 +80,8 @@
       "duration_seconds": 1548,
       "view_count": 50439,
       "like_count": 945,
-      "why_good": "近 30 天同类长视频播放第 27"
+      "why_good": "近 30 天同类长视频播放第 27",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "V8KJ89LFjD8",
@@ -89,7 +94,8 @@
       "duration_seconds": 1471,
       "view_count": 40135,
       "like_count": 631,
-      "why_good": "近 30 天同类长视频播放第 29"
+      "why_good": "近 30 天同类长视频播放第 29",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "XiCdhLJE93Q",
@@ -102,7 +108,8 @@
       "duration_seconds": 198,
       "view_count": 15276,
       "like_count": 169,
-      "why_good": "近 30 天同类长视频播放第 31"
+      "why_good": "近 30 天同类长视频播放第 31",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "HYA9e0XOUGk",
@@ -115,7 +122,8 @@
       "duration_seconds": 1127,
       "view_count": 10887386,
       "like_count": 379157,
-      "why_good": "近 30 天同类长视频播放第 1"
+      "why_good": "近 30 天同类长视频播放第 1",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "ZTcqu224vHw",
@@ -128,7 +136,8 @@
       "duration_seconds": 1302,
       "view_count": 6768773,
       "like_count": 281028,
-      "why_good": "近 30 天同类长视频播放第 2"
+      "why_good": "近 30 天同类长视频播放第 2",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "73wCQRQb7v0",
@@ -141,7 +150,8 @@
       "duration_seconds": 1093,
       "view_count": 2740147,
       "like_count": 68713,
-      "why_good": "近 30 天同类长视频播放第 3"
+      "why_good": "近 30 天同类长视频播放第 3",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "xPIMk4d4ulI",
@@ -154,7 +164,8 @@
       "duration_seconds": 1452,
       "view_count": 1196720,
       "like_count": 25010,
-      "why_good": "近 30 天同类长视频播放第 5"
+      "why_good": "近 30 天同类长视频播放第 5",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "XoH44mH5laY",
@@ -167,7 +178,8 @@
       "duration_seconds": 967,
       "view_count": 961638,
       "like_count": 21870,
-      "why_good": "近 30 天同类长视频播放第 6"
+      "why_good": "近 30 天同类长视频播放第 6",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "TW3Hy5-Z2Pc",
@@ -180,7 +192,8 @@
       "duration_seconds": 181,
       "view_count": 773297,
       "like_count": 21532,
-      "why_good": "近 30 天同类长视频播放第 7"
+      "why_good": "近 30 天同类长视频播放第 7",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "_Mp_bpIZKlI",
@@ -193,7 +206,8 @@
       "duration_seconds": 1196,
       "view_count": 752465,
       "like_count": 14337,
-      "why_good": "近 30 天同类长视频播放第 8"
+      "why_good": "近 30 天同类长视频播放第 8",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "MYdu77oejOs",
@@ -206,7 +220,8 @@
       "duration_seconds": 848,
       "view_count": 677204,
       "like_count": 11732,
-      "why_good": "近 30 天同类长视频播放第 9"
+      "why_good": "近 30 天同类长视频播放第 9",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "DuwDrPcC5fs",
@@ -219,7 +234,8 @@
       "duration_seconds": 243,
       "view_count": 316290,
       "like_count": 14593,
-      "why_good": "近 30 天同类长视频播放第 10"
+      "why_good": "近 30 天同类长视频播放第 10",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "egDlxXlgfH8",
@@ -232,7 +248,8 @@
       "duration_seconds": 2336,
       "view_count": 293013,
       "like_count": 9093,
-      "why_good": "近 30 天同类长视频播放第 11"
+      "why_good": "近 30 天同类长视频播放第 11",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "P7Nb6-bw1Vs",
@@ -245,7 +262,8 @@
       "duration_seconds": 212,
       "view_count": 275889,
       "like_count": 6645,
-      "why_good": "近 30 天同类长视频播放第 12"
+      "why_good": "近 30 天同类长视频播放第 12",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "hCb3oiSH-Bc",
@@ -258,7 +276,8 @@
       "duration_seconds": 200,
       "view_count": 195652,
       "like_count": 7170,
-      "why_good": "近 30 天同类长视频播放第 13"
+      "why_good": "近 30 天同类长视频播放第 13",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "Ark1UNElQlk",
@@ -271,7 +290,8 @@
       "duration_seconds": 696,
       "view_count": 161922,
       "like_count": 2094,
-      "why_good": "近 30 天同类长视频播放第 14"
+      "why_good": "近 30 天同类长视频播放第 14",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "MzpgppYi8dU",
@@ -284,7 +304,8 @@
       "duration_seconds": 675,
       "view_count": 161787,
       "like_count": 1423,
-      "why_good": "近 30 天同类长视频播放第 15"
+      "why_good": "近 30 天同类长视频播放第 15",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "Gevh6u7wkfw",
@@ -297,7 +318,8 @@
       "duration_seconds": 240,
       "view_count": 139205,
       "like_count": 5874,
-      "why_good": "近 30 天同类长视频播放第 16"
+      "why_good": "近 30 天同类长视频播放第 16",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "0DEOtXTQOG4",
@@ -310,7 +332,8 @@
       "duration_seconds": 480,
       "view_count": 127131,
       "like_count": 945,
-      "why_good": "近 30 天同类长视频播放第 17"
+      "why_good": "近 30 天同类长视频播放第 17",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "APe7fhdkp9Q",
@@ -323,7 +346,8 @@
       "duration_seconds": 3630,
       "view_count": 121878,
       "like_count": 3994,
-      "why_good": "近 30 天同类长视频播放第 18"
+      "why_good": "近 30 天同类长视频播放第 18",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "O6mRxDItyWQ",
@@ -336,7 +360,8 @@
       "duration_seconds": 214,
       "view_count": 94020,
       "like_count": 2329,
-      "why_good": "近 30 天同类长视频播放第 20"
+      "why_good": "近 30 天同类长视频播放第 20",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "BWyrhKi-0Ck",
@@ -349,7 +374,8 @@
       "duration_seconds": 1691,
       "view_count": 88554,
       "like_count": 2236,
-      "why_good": "近 30 天同类长视频播放第 21"
+      "why_good": "近 30 天同类长视频播放第 21",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "7fwMSrtNLEo",
@@ -362,7 +388,8 @@
       "duration_seconds": 2756,
       "view_count": 87939,
       "like_count": 3007,
-      "why_good": "近 30 天同类长视频播放第 22"
+      "why_good": "近 30 天同类长视频播放第 22",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "ZkouG0BTQt4",
@@ -375,7 +402,8 @@
       "duration_seconds": 5582,
       "view_count": 77828,
       "like_count": 956,
-      "why_good": "近 30 天同类长视频播放第 24"
+      "why_good": "近 30 天同类长视频播放第 24",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "qC7yjEyom3w",
@@ -388,7 +416,8 @@
       "duration_seconds": 3510,
       "view_count": 66478,
       "like_count": 963,
-      "why_good": "近 30 天同类长视频播放第 25"
+      "why_good": "近 30 天同类长视频播放第 25",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "t4YGJV7wONw",
@@ -401,7 +430,8 @@
       "duration_seconds": 230,
       "view_count": 41904,
       "like_count": 280,
-      "why_good": "近 30 天同类长视频播放第 28"
+      "why_good": "近 30 天同类长视频播放第 28",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     },
     {
       "id": "N-3CblQjwnU",
@@ -414,7 +444,8 @@
       "duration_seconds": 204,
       "view_count": 28032,
       "like_count": 217,
-      "why_good": "近 30 天同类长视频播放第 30"
+      "why_good": "近 30 天同类长视频播放第 30",
+      "_metadata_fetched_at": "2026-11-11T02:49:05Z"
     }
   ],
   "max_duration_seconds": 7200,
