@@ -1,6 +1,7 @@
 import { track } from './analytics.js';
 import { MYSPACE_KEY, MAX_ACTIVE_COLUMNS, defaultState, validateState, topicColumnId, isTopicColumn } from '../lib/myspace-schema.mjs';
 import { MYSPACE_SOURCES } from '../lib/brand.mjs';
+import { templateToColumns, templateColumnsReady } from '../lib/template-columns.mjs';
 import { showPrompt } from './prompts.js';
 
 const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
@@ -180,7 +181,9 @@ if (enabled && shell && explore && space) {
     host.querySelectorAll('[data-template]').forEach(button => button.addEventListener('click', () => {
       const template = templates.find(item => item.id === button.dataset.template);
       if (!template) return;
-      state.columns = template.topic_ids.slice(0, MAX_ACTIVE_COLUMNS).map(topicId => ({ id: topicColumnId(topicId), source: topicId, kind: 'topic', topic_id: topicId, label: topicsById.get(topicId)?.name_zh || topicId, enabled: true }));
+      const columns = templateToColumns(template, MYSPACE_SOURCES, topics).slice(0, MAX_ACTIVE_COLUMNS);
+      if (!columns.length) return;
+      state.columns = columns;
       save(state);
       render();
     }));
@@ -240,7 +243,7 @@ if (enabled && shell && explore && space) {
   });
   document.addEventListener('fewgood:subscribe-topic', event => subscribeTopic(event.detail?.topicId));
 
-  const templatesReady = list => list.length > 0 && list.every(template => template.topic_ids.every(topicId => (topicsById.get(topicId)?.video_ids?.length || 0) >= 6));
+  const templatesReady = list => list.length > 0 && list.every(template => templateColumnsReady(template, MYSPACE_SOURCES, topics, catalog));
 
   (async () => {
     const [topicsPayload, poolPayload, templatesPayload, catalogPayload] = await Promise.all([

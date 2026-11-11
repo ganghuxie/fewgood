@@ -66,10 +66,41 @@ def test_templates_reference_known_topics_with_six_videos():
     templates = _templates()['templates']
     assert len(templates) == 3
     for template in templates:
-        assert 4 <= len(template['topic_ids']) <= 5, template['id']
-        for topic_id in template['topic_ids']:
-            assert topic_id in topics, f"{template['id']} references missing {topic_id}"
-            assert len(topics[topic_id]['video_ids']) >= 6, f"{template['id']} column {topic_id} under 6 videos"
+        columns = template['columns']
+        assert 4 <= len(columns) <= 5, template['id']
+        for column in columns:
+            assert column['kind'] in {'feed', 'topic'}, (template['id'], column)
+            column_id = column.get('source') if column['kind'] == 'feed' else column.get('topic_id')
+            column_id = column_id or column.get('id')
+            assert column_id, (template['id'], column)
+            if column['kind'] != 'topic':
+                continue
+            assert column_id in topics, f"{template['id']} references missing {column_id}"
+            assert len(topics[column_id]['video_ids']) >= 6, f"{template['id']} column {column_id} under 6 videos"
+
+
+def test_ai_practitioner_template_uses_live_ai_feed():
+    templates = {template['id']: template for template in _templates()['templates']}
+    columns = templates['ai-practitioner']['columns']
+    assert len(columns) == 5
+    feeds = [column.get('source') or column.get('id') for column in columns if column['kind'] == 'feed']
+    topic_ids = [column.get('topic_id') or column.get('id') for column in columns if column['kind'] == 'topic']
+    assert feeds == ['ai']
+    assert topic_ids == ['ai', 'programming', 'mit', 'systems']
+
+
+def test_public_templates_match_source():
+    public = json.loads((ROOT / 'site/public/templates.json').read_text())
+    assert _templates() == public
+
+
+def test_hot_topics_strip_is_hidden_when_no_topic_added_today():
+    topics = _topics()['topics']
+    hot = [topic for topic in topics if int(topic.get('added_last_24h') or 0) > 0]
+    assert hot == []
+    script = (ROOT / 'site/src/scripts/myspace.js').read_text()
+    assert 'topics.filter(topic => Number(topic.added_last_24h) > 0)' in script
+    assert 'host.hidden = !hot.length' in script
 
 
 def test_pool_ids_have_a_primary_topic():

@@ -4,17 +4,35 @@
     {
       "id": "ai-practitioner",
       "name_zh": "AI 从业者",
-      "topic_ids": ["ai", "cpp", "programming", "mit", "systems"]
+      "columns": [
+        { "kind": "feed", "source": "ai" },
+        { "kind": "topic", "topic_id": "ai" },
+        { "kind": "topic", "topic_id": "programming" },
+        { "kind": "topic", "topic_id": "mit" },
+        { "kind": "topic", "topic_id": "systems" }
+      ]
     },
     {
       "id": "indie-developer",
       "name_zh": "独立开发者",
-      "topic_ids": ["programming", "startups", "systems", "maker", "cpp"]
+      "columns": [
+        { "kind": "topic", "topic_id": "programming" },
+        { "kind": "topic", "topic_id": "startups" },
+        { "kind": "topic", "topic_id": "systems" },
+        { "kind": "topic", "topic_id": "maker" },
+        { "kind": "topic", "topic_id": "cpp" }
+      ]
     },
     {
       "id": "general-tech-reader",
       "name_zh": "泛科技读者",
-      "topic_ids": ["science", "math", "tech-review", "documentary", "climate"]
+      "columns": [
+        { "kind": "topic", "topic_id": "science" },
+        { "kind": "topic", "topic_id": "math" },
+        { "kind": "topic", "topic_id": "tech-review" },
+        { "kind": "topic", "topic_id": "documentary" },
+        { "kind": "topic", "topic_id": "climate" }
+      ]
     }
   ]
 }
