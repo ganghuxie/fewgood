@@ -595,23 +595,6 @@
     ]
   },
   {
-    "id": "NCxD-qsQcN0",
-    "title": "Design hardware with Astra",
-    "channel": "OpenAI",
-    "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-    "published_at": "2026-11-03T18:30:30Z",
-    "duration_seconds": 82,
-    "view_count": 672005,
-    "like_count": 9027,
-    "why_good": "AI 前沿精选频道 OpenAI 本周新片",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
     "id": "9ZxCOHkfn_8",
     "title": "GPT-Image-2.6: Faster image generation with Flare and Sunburst",
     "channel": "OpenAI",
@@ -655,26 +638,6 @@
     "view_count": 81175,
     "like_count": 584,
     "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai",
-      "picks"
-    ],
-    "source": "ai",
-    "pick_source": "AI前沿"
-  },
-  {
-    "id": "8oB9sf1SKhs",
-    "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
-    "channel": "ElevenLabs",
-    "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
-    "published_at": "2026-11-03T13:00:15Z",
-    "duration_seconds": 579,
-    "view_count": 53206,
-    "like_count": 1106,
-    "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
     "default_audio_language": "en",
     "default_language": "en",
     "section": "ai",
@@ -756,8 +719,11 @@
     "default_language": "en",
     "section": "ai",
     "sections": [
-      "ai"
-    ]
+      "ai",
+      "picks"
+    ],
+    "source": "ai",
+    "pick_source": "AI前沿"
   },
   {
     "id": "784YQBiZArk",
@@ -777,23 +743,6 @@
     ]
   },
   {
-    "id": "LL0YmIyBKSU",
-    "title": "⚡️ The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev",
-    "channel": "Latent Space",
-    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-    "published_at": "2026-11-03T20:16:25Z",
-    "duration_seconds": 2088,
-    "view_count": 23215,
-    "like_count": 153,
-    "why_good": "AI 前沿精选频道 Latent Space 本周新片",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
     "id": "P735f1xlpL0",
     "title": "Why Would Anthropic Go Public Now? — Jamin Ball, Altimeter",
     "channel": "Latent Space",
@@ -804,23 +753,6 @@
     "like_count": 91,
     "why_good": "AI 前沿精选频道 Latent Space 本周新片",
     "default_audio_language": "en-US",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "yLMjEpMio2w",
-    "title": "From AI Infrastructure to the 6G Future",
-    "channel": "NVIDIA",
-    "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
-    "published_at": "2026-11-03T13:00:13Z",
-    "duration_seconds": 2280,
-    "view_count": 18945,
-    "like_count": 199,
-    "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
-    "default_audio_language": "en",
     "default_language": "en",
     "section": "ai",
     "sections": [
@@ -872,23 +804,6 @@
     "like_count": 43,
     "why_good": "AI 前沿精选频道 Latent Space 本周新片",
     "default_audio_language": "en-US",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "bymDXo7FVE8",
-    "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
-    "channel": "The Rundown AI",
-    "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-    "published_at": "2026-11-03T20:31:56Z",
-    "duration_seconds": 66,
-    "view_count": 12454,
-    "like_count": 684,
-    "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-    "default_audio_language": "en",
     "default_language": "en",
     "section": "ai",
     "sections": [
@@ -981,23 +896,6 @@
     ]
   },
   {
-    "id": "SPOGTliV48s",
-    "title": "What does LangChain even do these days?",
-    "channel": "LangChain",
-    "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
-    "published_at": "2026-11-03T19:18:17Z",
-    "duration_seconds": 195,
-    "view_count": 6968,
-    "like_count": 67,
-    "why_good": "AI 前沿精选频道 LangChain 本周新片",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
     "id": "5__Fm2TnPcU",
     "title": "Stop guessing how to fix your agent",
     "channel": "DeepLearningAI",
@@ -1007,23 +905,6 @@
     "view_count": 5072,
     "like_count": 21,
     "why_good": "AI 前沿精选频道 DeepLearningAI 本周新片",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "section": "ai",
-    "sections": [
-      "ai"
-    ]
-  },
-  {
-    "id": "hb8WqJqM4SE",
-    "title": "The Next Industrial Revolution | inside view",
-    "channel": "Runway",
-    "channel_id": "UCUBqu_z5uP0AZhYtuyFZB3g",
-    "published_at": "2026-11-03T14:35:19Z",
-    "duration_seconds": 153,
-    "view_count": 2324,
-    "like_count": 20,
-    "why_good": "AI 前沿精选频道 Runway 本周新片",
     "default_audio_language": "en",
     "default_language": "en",
     "section": "ai",
@@ -1151,56 +1032,209 @@
     ]
   },
   {
-    "id": "qjPH9njnaVU",
-    "title": "Pavel Durov: Telegram, Freedom, Censorship, Money, Power & Human Nature | Lex Fridman Podcast #482",
-    "channel": "Lex Fridman",
-    "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
-    "published_at": "2025-09-30T19:27:11Z",
+    "id": "NCxD-qsQcN0",
+    "title": "Design hardware with Astra",
+    "channel": "OpenAI",
+    "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+    "published_at": "2026-11-03T18:30:30Z",
+    "duration_seconds": 82,
+    "view_count": 672005,
+    "like_count": 9027,
+    "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "8oB9sf1SKhs",
+    "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
+    "channel": "ElevenLabs",
+    "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
+    "published_at": "2026-11-03T13:00:15Z",
+    "duration_seconds": 579,
+    "view_count": 53206,
+    "like_count": 1106,
+    "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "LL0YmIyBKSU",
+    "title": "⚡️ The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev",
+    "channel": "Latent Space",
+    "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+    "published_at": "2026-11-03T20:16:25Z",
+    "duration_seconds": 2088,
+    "view_count": 23215,
+    "like_count": 153,
+    "why_good": "AI 前沿精选频道 Latent Space 本周新片",
     "default_audio_language": "en-US",
     "default_language": "en",
-    "duration_seconds": 16450,
-    "view_count": 3222667,
-    "like_count": 62283,
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "yLMjEpMio2w",
+    "title": "From AI Infrastructure to the 6G Future",
+    "channel": "NVIDIA",
+    "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+    "published_at": "2026-11-03T13:00:13Z",
+    "duration_seconds": 2280,
+    "view_count": 18945,
+    "like_count": 199,
+    "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "bymDXo7FVE8",
+    "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
+    "channel": "The Rundown AI",
+    "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
+    "published_at": "2026-11-03T20:31:56Z",
+    "duration_seconds": 66,
+    "view_count": 12454,
+    "like_count": 684,
+    "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "SPOGTliV48s",
+    "title": "What does LangChain even do these days?",
+    "channel": "LangChain",
+    "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
+    "published_at": "2026-11-03T19:18:17Z",
+    "duration_seconds": 195,
+    "view_count": 6968,
+    "like_count": 67,
+    "why_good": "AI 前沿精选频道 LangChain 本周新片",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "hb8WqJqM4SE",
+    "title": "The Next Industrial Revolution | inside view",
+    "channel": "Runway",
+    "channel_id": "UCUBqu_z5uP0AZhYtuyFZB3g",
+    "published_at": "2026-11-03T14:35:19Z",
+    "duration_seconds": 153,
+    "view_count": 2324,
+    "like_count": 20,
+    "why_good": "AI 前沿精选频道 Runway 本周新片",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "section": "ai",
+    "sections": [
+      "ai"
+    ]
+  },
+  {
+    "id": "4nKt18AZDsQ",
+    "title": "Google Loses $500B in 12 Hours | DoorDash Buys Instacart for $17B | Kalshi Raises $1B",
+    "channel": "20VC with Harry Stebbings",
+    "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA",
+    "published_at": "2026-11-05T15:14:25Z",
+    "default_audio_language": "en-US",
+    "default_language": "en-US",
+    "duration_seconds": 4113,
+    "view_count": 39035,
+    "like_count": 157,
+    "why_good": "近 30 天同类长视频播放第 10",
+    "section": "podcast",
+    "sections": [
+      "podcast",
+      "picks"
+    ],
+    "source": "podcast",
+    "pick_source": "播客"
+  },
+  {
+    "id": "yULk8eNa2mg",
+    "title": "Tokenization, Agentic Trading, Harmonic: Robinhood's Mission to Expand Ownership with CEO Vlad Tenev",
+    "channel": "No Priors: AI, Machine Learning, Tech, & Startups",
+    "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
+    "published_at": "2026-11-05T11:00:22Z",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "duration_seconds": 3249,
+    "view_count": 6697,
+    "like_count": 92,
+    "why_good": "近 30 天同类长视频播放第 13",
+    "section": "podcast",
+    "sections": [
+      "podcast",
+      "picks"
+    ],
+    "source": "podcast",
+    "pick_source": "播客"
+  },
+  {
+    "id": "FGCP2F_7rQk",
+    "title": "Taiwan: The Most Epic Night Market Experience w/ Jensen Huang | Lex Fridman",
+    "channel": "Lex Fridman",
+    "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+    "published_at": "2026-10-13T21:26:16Z",
+    "default_audio_language": "en-US",
+    "default_language": "en",
+    "duration_seconds": 5418,
+    "view_count": 1655523,
+    "like_count": 30010,
     "why_good": "近 30 天同类长视频播放第 1",
     "section": "podcast",
     "sections": [
-      "podcast",
-      "picks"
-    ],
-    "source": "podcast",
-    "pick_source": "播客"
+      "podcast"
+    ]
   },
   {
-    "id": "cp1lprZUQcE",
-    "title": "James Holland: World War II, Hitler, Churchill, Stalin & Biggest Battles | Lex Fridman Podcast #470",
+    "id": "ZAzWPE9CItg",
+    "title": "AI Crisis in Math: Navier-Stokes, Riemann Hypothesis & Complexity Theory | Lex Fridman Podcast #503",
     "channel": "Lex Fridman",
     "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
-    "published_at": "2025-05-24T19:55:21Z",
+    "published_at": "2026-10-26T22:51:51Z",
     "default_audio_language": "en-US",
     "default_language": "en",
-    "duration_seconds": 12276,
-    "view_count": 2599905,
-    "like_count": 23752,
+    "duration_seconds": 12867,
+    "view_count": 1536330,
+    "like_count": 9859,
     "why_good": "近 30 天同类长视频播放第 2",
     "section": "podcast",
     "sections": [
-      "podcast",
-      "picks"
-    ],
-    "source": "podcast",
-    "pick_source": "播客"
+      "podcast"
+    ]
   },
   {
-    "id": "f6cjAEr08qk",
-    "title": "Sarah Paine — Why wars are so difficult to end",
+    "id": "frYSOKvNiiE",
+    "title": "What will computer chips look like in 2045?",
     "channel": "Dwarkesh Patel",
     "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
-    "published_at": "2026-09-25T18:04:31Z",
+    "published_at": "2026-10-22T16:00:07Z",
     "default_audio_language": "en",
     "default_language": "en",
-    "duration_seconds": 3160,
-    "view_count": 1714131,
-    "like_count": 18830,
+    "duration_seconds": 4141,
+    "view_count": 327445,
+    "like_count": 3596,
     "why_good": "近 30 天同类长视频播放第 3",
     "section": "podcast",
     "sections": [
@@ -1208,102 +1242,17 @@
     ]
   },
   {
-    "id": "LwQQ7nBCGSs",
-    "title": "How did a few hundred Spanish soldiers topple two empires? – Si Sheppard",
+    "id": "f0J_EeW42Lo",
+    "title": "What Robert Caro learned about power after studying it for 50 years",
     "channel": "Dwarkesh Patel",
     "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
-    "published_at": "2026-10-01T16:00:01Z",
+    "published_at": "2026-10-30T17:18:35Z",
     "default_audio_language": "en",
     "default_language": "en",
-    "duration_seconds": 5844,
-    "view_count": 866108,
-    "like_count": 9042,
+    "duration_seconds": 3670,
+    "view_count": 306363,
+    "like_count": 4248,
     "why_good": "近 30 天同类长视频播放第 4",
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "AR_1IPhzAtU",
-    "title": "The Jamie Dimon Interview: How JP Morgan Became an $800 Billion Bank",
-    "channel": "Acquired",
-    "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
-    "published_at": "2025-07-16T15:30:05Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 3962,
-    "view_count": 256545,
-    "like_count": 4591,
-    "why_good": "近 30 天同类长视频播放第 5",
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "ttkd0t5qTD4",
-    "title": "Yao Shunyu: Let Me Go a Little Crazy! Training Models at Anthropic & Gemini, Heroism Is Over",
-    "channel": "Zhang Xiaojun Podcast",
-    "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
-    "published_at": "2026-05-11T00:00:51Z",
-    "default_audio_language": "en-US",
-    "default_language": "zh",
-    "duration_seconds": 13681,
-    "view_count": 238500,
-    "like_count": 2751,
-    "why_good": "近 30 天同类长视频播放第 6",
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "MM-C3JqCXBk",
-    "title": "OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux",
-    "channel": "Lenny's Podcast",
-    "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
-    "published_at": "2026-10-04T12:30:30Z",
-    "default_audio_language": "en",
-    "default_language": "en-US",
-    "duration_seconds": 2243,
-    "view_count": 162418,
-    "like_count": 1750,
-    "why_good": "近 30 天同类长视频播放第 7",
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "UqMtkgQe-kI",
-    "title": "Manus' Final Interview Before the Acquisition: Oh, the Surreal Odyssey of 2025…",
-    "channel": "Zhang Xiaojun Podcast",
-    "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
-    "published_at": "2025-12-30T14:08:07Z",
-    "default_audio_language": "zh-Hans",
-    "default_language": "zh",
-    "duration_seconds": 12661,
-    "view_count": 147642,
-    "like_count": 2708,
-    "why_good": "近 30 天同类长视频播放第 8",
-    "section": "podcast",
-    "sections": [
-      "podcast"
-    ]
-  },
-  {
-    "id": "ipiKIgdynZE",
-    "title": "Vanguard: The communist capitalist who saved investors a trillion dollars (Audio)",
-    "channel": "Acquired",
-    "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
-    "published_at": "2026-05-18T20:44:21Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 13686,
-    "view_count": 142905,
-    "like_count": 1172,
-    "why_good": "近 30 天同类长视频播放第 9",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1318,43 +1267,94 @@
     "default_audio_language": "en-US",
     "default_language": "en-US",
     "duration_seconds": 4406,
-    "view_count": 94565,
+    "view_count": 94593,
     "like_count": 734,
-    "why_good": "近 30 天同类长视频播放第 10",
+    "why_good": "近 30 天同类长视频播放第 5",
     "section": "podcast",
     "sections": [
       "podcast"
     ]
   },
   {
-    "id": "3I6QYkccd3o",
-    "title": "Why every company now needs to think and operate like a lab team | Josh Woodward (VP Google Labs)",
+    "id": "JHo-aiePjoM",
+    "title": "Inside the black box of AI: How AI models actually think | Emmanuel Ameisen (Anthropic)",
     "channel": "Lenny's Podcast",
     "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
-    "published_at": "2026-10-11T12:30:34Z",
+    "published_at": "2026-10-18T12:30:11Z",
     "default_audio_language": "en",
     "default_language": "en-US",
-    "duration_seconds": 3732,
-    "view_count": 84347,
-    "like_count": 828,
-    "why_good": "近 30 天同类长视频播放第 11",
+    "duration_seconds": 4333,
+    "view_count": 77699,
+    "like_count": 772,
+    "why_good": "近 30 天同类长视频播放第 6",
     "section": "podcast",
     "sections": [
       "podcast"
     ]
   },
   {
-    "id": "4nKt18AZDsQ",
-    "title": "Google Loses $500B in 12 Hours | DoorDash Buys Instacart for $17B | Kalshi Raises $1B",
-    "channel": "20VC with Harry Stebbings",
-    "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA",
-    "published_at": "2026-11-05T15:14:25Z",
-    "default_audio_language": "en-US",
+    "id": "19qrLchbQEc",
+    "title": "How to find product-market fit (but, actually) | Rob Snyder (Author, The Power of Pull)",
+    "channel": "Lenny's Podcast",
+    "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
+    "published_at": "2026-10-25T12:30:15Z",
+    "default_audio_language": "en",
     "default_language": "en-US",
-    "duration_seconds": 4113,
-    "view_count": 39031,
-    "like_count": 157,
-    "why_good": "近 30 天同类长视频播放第 12",
+    "duration_seconds": 5148,
+    "view_count": 74826,
+    "like_count": 745,
+    "why_good": "近 30 天同类长视频播放第 7",
+    "section": "podcast",
+    "sections": [
+      "podcast"
+    ]
+  },
+  {
+    "id": "iDaxRNIddME",
+    "title": "Lindon Gao / Dyna: Finding Clarity in the Fog of Robotics, Disagreements & Choice, and Wang Yangming",
+    "channel": "Zhang Xiaojun Podcast",
+    "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
+    "published_at": "2026-10-15T00:00:34Z",
+    "default_audio_language": "en-US",
+    "default_language": "zh",
+    "duration_seconds": 10279,
+    "view_count": 50496,
+    "like_count": 263,
+    "why_good": "近 30 天同类长视频播放第 8",
+    "section": "podcast",
+    "sections": [
+      "podcast"
+    ]
+  },
+  {
+    "id": "Wm53dMsn5dk",
+    "title": "Seinfeld - Full Episode (Audio)",
+    "channel": "Acquired",
+    "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
+    "published_at": "2026-10-19T04:22:04Z",
+    "default_audio_language": "en-US",
+    "default_language": "en",
+    "duration_seconds": 13819,
+    "view_count": 43698,
+    "like_count": 285,
+    "why_good": "近 30 天同类长视频播放第 9",
+    "section": "podcast",
+    "sections": [
+      "podcast"
+    ]
+  },
+  {
+    "id": "86wFCPat2GY",
+    "title": "David Qian / ECOVACS: Father & Son, Inside Business Succession, Robotics, and My Search for Meaning",
+    "channel": "Zhang Xiaojun Podcast",
+    "channel_id": "UC3Sv1JuKpbOx3csUO8FAo5g",
+    "published_at": "2026-10-21T00:00:25Z",
+    "default_audio_language": "en-US",
+    "default_language": "zh",
+    "duration_seconds": 7192,
+    "view_count": 21366,
+    "like_count": 78,
+    "why_good": "近 30 天同类长视频播放第 11",
     "section": "podcast",
     "sections": [
       "podcast"
@@ -1371,27 +1371,129 @@
     "duration_seconds": 2363,
     "view_count": 19322,
     "like_count": 251,
-    "why_good": "近 30 天同类长视频播放第 13",
+    "why_good": "近 30 天同类长视频播放第 12",
     "section": "podcast",
     "sections": [
       "podcast"
     ]
   },
   {
-    "id": "N1rjtDs8blY",
-    "title": "Why Diffusion Will Win AI Inference with Inception Co-Founder and CEO Stefano Ermon",
-    "channel": "No Priors: AI, Machine Learning, Tech, & Startups",
-    "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
-    "published_at": "2026-09-18T10:00:10Z",
+    "id": "LtUDeizHqKk",
+    "title": "Fat Joe: Tiny Desk Concert",
+    "channel": "NPR Music",
+    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
+    "published_at": "2026-11-05T10:00:11Z",
+    "default_audio_language": "en-US",
+    "default_language": "en",
+    "duration_seconds": 1547,
+    "view_count": 1366111,
+    "like_count": 28022,
+    "why_good": "近 30 天同类长视频播放第 4",
+    "section": "music",
+    "sections": [
+      "music"
+    ]
+  },
+  {
+    "id": "z28UbGAPteA",
+    "title": "Vieze Asbak | Boiler Room LA: Teletech",
+    "channel": "Boiler Room",
+    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
+    "published_at": "2026-11-06T20:51:11Z",
     "default_audio_language": "en",
     "default_language": "en",
-    "duration_seconds": 2294,
-    "view_count": 11914,
-    "like_count": 76,
-    "why_good": "近 30 天同类长视频播放第 14",
-    "section": "podcast",
+    "duration_seconds": 3561,
+    "view_count": 104401,
+    "like_count": 2588,
+    "why_good": "近 30 天同类长视频播放第 19",
+    "section": "music",
     "sections": [
-      "podcast"
+      "music"
+    ]
+  },
+  {
+    "id": "1czUusLWcZg",
+    "title": "Rex Orange County - Iron Man | A COLORS SHOW",
+    "channel": "COLORS",
+    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
+    "published_at": "2026-11-05T17:00:08Z",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "duration_seconds": 217,
+    "view_count": 86307,
+    "like_count": 2264,
+    "why_good": "近 30 天同类长视频播放第 23",
+    "section": "music",
+    "sections": [
+      "music"
+    ]
+  },
+  {
+    "id": "TOBmHM6_hGc",
+    "title": "Sienna Senate - Do Your Thing | A COLORS SHOW",
+    "channel": "COLORS",
+    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
+    "published_at": "2026-11-09T17:00:09Z",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "duration_seconds": 180,
+    "view_count": 62303,
+    "like_count": 2369,
+    "why_good": "近 30 天同类长视频播放第 26",
+    "section": "music",
+    "sections": [
+      "music"
+    ]
+  },
+  {
+    "id": "GXVZMiDbtiM",
+    "title": "sub:shaman - Full Performance (Live on KEXP)",
+    "channel": "KEXP",
+    "channel_id": "UC3I2GFN_F8WudD_2jUZbojA",
+    "published_at": "2026-11-04T16:00:20Z",
+    "default_audio_language": "en-US",
+    "default_language": "en",
+    "duration_seconds": 1548,
+    "view_count": 50317,
+    "like_count": 943,
+    "why_good": "近 30 天同类长视频播放第 27",
+    "section": "music",
+    "sections": [
+      "music"
+    ]
+  },
+  {
+    "id": "V8KJ89LFjD8",
+    "title": "Shabazz Palaces - Full Performance (Live on KEXP)",
+    "channel": "KEXP",
+    "channel_id": "UC3I2GFN_F8WudD_2jUZbojA",
+    "published_at": "2026-11-06T16:00:24Z",
+    "default_audio_language": "en-US",
+    "default_language": "en",
+    "duration_seconds": 1471,
+    "view_count": 39916,
+    "like_count": 625,
+    "why_good": "近 30 天同类长视频播放第 29",
+    "section": "music",
+    "sections": [
+      "music"
+    ]
+  },
+  {
+    "id": "XiCdhLJE93Q",
+    "title": "Sienna Senate | A COLORS INTERVIEW",
+    "channel": "COLORS",
+    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
+    "published_at": "2026-11-10T14:24:37Z",
+    "default_audio_language": "en",
+    "default_language": "en",
+    "duration_seconds": 198,
+    "view_count": 14035,
+    "like_count": 160,
+    "why_good": "近 30 天同类长视频播放第 31",
+    "section": "music",
+    "sections": [
+      "music"
     ]
   },
   {
@@ -1403,8 +1505,8 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 1127,
-    "view_count": 10873420,
-    "like_count": 378896,
+    "view_count": 10876272,
+    "like_count": 378944,
     "why_good": "近 30 天同类长视频播放第 1",
     "section": "music",
     "sections": [
@@ -1420,60 +1522,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 1302,
-    "view_count": 6765476,
-    "like_count": 280970,
+    "view_count": 6766082,
+    "like_count": 280981,
     "why_good": "近 30 天同类长视频播放第 2",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "AvSxPx25oLc",
-    "title": "Panteón Rococó: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-10-01T14:00:35Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1288,
-    "view_count": 4905511,
-    "like_count": 199553,
-    "why_good": "近 30 天同类长视频播放第 3",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "vIvmDxrTjP4",
-    "title": "Mon Laferte: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-15T16:00:07Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1266,
-    "view_count": 4665930,
-    "like_count": 139202,
-    "why_good": "近 30 天同类长视频播放第 4",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "O8AlOZV0BSI",
-    "title": "Tori Kelly: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-10T09:00:37Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1455,
-    "view_count": 3179805,
-    "like_count": 74614,
-    "why_good": "近 30 天同类长视频播放第 5",
     "section": "music",
     "sections": [
       "music"
@@ -1488,179 +1539,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 1093,
-    "view_count": 2726664,
-    "like_count": 68501,
-    "why_good": "近 30 天同类长视频播放第 6",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "WCh4tfSqXFc",
-    "title": "Los Mirlos: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-17T14:00:09Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1092,
-    "view_count": 2385829,
-    "like_count": 117209,
-    "why_good": "近 30 天同类长视频播放第 7",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "aiGBY5DA398",
-    "title": "The Blaze live at Cercle Odyssey, Mexico City, Mexico",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-07-01T15:00:04Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 5379,
-    "view_count": 2380378,
-    "like_count": 34523,
-    "why_good": "近 30 天同类长视频播放第 8",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "nxuB96ppBLY",
-    "title": "Monolink live at Cercle Odyssey, Paris, France",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-07-17T14:01:28Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 6235,
-    "view_count": 2316811,
-    "like_count": 31686,
-    "why_good": "近 30 天同类长视频播放第 9",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "u_vnA6nlDvs",
-    "title": "Charlie Puth: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-08-04T09:00:30Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1365,
-    "view_count": 2287096,
-    "like_count": 72834,
-    "why_good": "近 30 天同类长视频播放第 10",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "kVzaq0RRYPQ",
-    "title": "Isaiah Rashad: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-08-25T09:00:08Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1425,
-    "view_count": 2265008,
-    "like_count": 70936,
-    "why_good": "近 30 天同类长视频播放第 11",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "4hnJUB_g290",
-    "title": "ARTBAT live at Cercle Odyssey, Paris, France",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-11-12T17:00:15Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 4971,
-    "view_count": 2121453,
-    "like_count": 31323,
-    "why_good": "近 30 天同类长视频播放第 12",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "O5KFoog2N5U",
-    "title": "Rawayana live at Cercle Odyssey, Mexico City, Mexico",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-11-27T17:36:30Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 4710,
-    "view_count": 2040778,
-    "like_count": 19211,
-    "why_good": "近 30 天同类长视频播放第 13",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "KS6KPNusfFQ",
-    "title": "Tame Impala at Parque de Quetzalcóatl, Mexico, for Cercle",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-10-28T17:30:05Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 5422,
-    "view_count": 1494141,
-    "like_count": 33593,
-    "why_good": "近 30 天同类长视频播放第 14",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "LtUDeizHqKk",
-    "title": "Fat Joe: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-11-05T10:00:11Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1547,
-    "view_count": 1363660,
-    "like_count": 28005,
-    "why_good": "近 30 天同类长视频播放第 15",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "o4I-Y8XiBIs",
-    "title": "'Weird Al' Yankovic: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-08-20T09:00:28Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1323,
-    "view_count": 1333982,
-    "like_count": 55061,
-    "why_good": "近 30 天同类长视频播放第 16",
+    "view_count": 2729067,
+    "like_count": 68548,
+    "why_good": "近 30 天同类长视频播放第 3",
     "section": "music",
     "sections": [
       "music"
@@ -1675,60 +1556,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 1452,
-    "view_count": 1192644,
-    "like_count": 24966,
-    "why_good": "近 30 天同类长视频播放第 17",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "VM2dxRnhq7g",
-    "title": "Bonobo Solo live at Cercle Odyssey, Paris, France",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-10-23T14:00:51Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 5010,
-    "view_count": 1021326,
-    "like_count": 19975,
-    "why_good": "近 30 天同类长视频播放第 18",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "_R_5qaYATh0",
-    "title": "Audrey Hobert: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-08-13T09:00:20Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1284,
-    "view_count": 1010937,
-    "like_count": 35643,
-    "why_good": "近 30 天同类长视频播放第 19",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "wMrHilUfnCE",
-    "title": "Ben Böhmer live at Cercle Odyssey, Paris, France",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-10-16T14:01:28Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 863,
-    "view_count": 1007275,
-    "like_count": 13192,
-    "why_good": "近 30 天同类长视频播放第 20",
+    "view_count": 1193511,
+    "like_count": 24970,
+    "why_good": "近 30 天同类长视频播放第 5",
     "section": "music",
     "sections": [
       "music"
@@ -1743,77 +1573,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 967,
-    "view_count": 959540,
-    "like_count": 21836,
-    "why_good": "近 30 天同类长视频播放第 21",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "B4miUq2BY3g",
-    "title": "Stromae - Te Quiero - Paul Kalkbrenner Remix (Live Version) | Cercle Odyssey",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-10-02T14:00:22Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 322,
-    "view_count": 877602,
-    "like_count": 13437,
-    "why_good": "近 30 天同类长视频播放第 22",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "ey7ZHhcv1dE",
-    "title": "Tim Bernardes: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-10-06T11:00:11Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1000,
-    "view_count": 857297,
-    "like_count": 26548,
-    "why_good": "近 30 天同类长视频播放第 23",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "swh0_M0rRPQ",
-    "title": "Death Cab for Cutie: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-08-11T11:47:25Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 966,
-    "view_count": 851948,
-    "like_count": 20172,
-    "why_good": "近 30 天同类长视频播放第 24",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "KFb_rXmh4hA",
-    "title": "Mac Ayres: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-03T09:00:31Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1193,
-    "view_count": 800597,
-    "like_count": 18481,
-    "why_good": "近 30 天同类长视频播放第 25",
+    "view_count": 959974,
+    "like_count": 21843,
+    "why_good": "近 30 天同类长视频播放第 6",
     "section": "music",
     "sections": [
       "music"
@@ -1828,9 +1590,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 181,
-    "view_count": 770781,
-    "like_count": 21479,
-    "why_good": "近 30 天同类长视频播放第 26",
+    "view_count": 771329,
+    "like_count": 21488,
+    "why_good": "近 30 天同类长视频播放第 7",
     "section": "music",
     "sections": [
       "music"
@@ -1845,77 +1607,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 1196,
-    "view_count": 750779,
-    "like_count": 14314,
-    "why_good": "近 30 天同类长视频播放第 27",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "nmhafWX9QNM",
-    "title": "Empire Of The Sun live at Cercle Odyssey, Los Angeles, USA",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-11-20T17:01:24Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 4798,
-    "view_count": 743886,
-    "like_count": 14008,
-    "why_good": "近 30 天同类长视频播放第 28",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "7bTlKxH3CgI",
-    "title": "Max Richter live at Cercle Odyssey, Paris, France",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-12-12T15:00:15Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3730,
-    "view_count": 740928,
-    "like_count": 13033,
-    "why_good": "近 30 天同类长视频播放第 29",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "R2eOU7c7G_4",
-    "title": "Mon Rovîa: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-01T09:00:02Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1017,
-    "view_count": 705229,
-    "like_count": 19099,
-    "why_good": "近 30 天同类长视频播放第 30",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "ApcengSU8A0",
-    "title": "Moby live at Cercle Odyssey, Los Angeles, USA",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-12-10T16:00:23Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 797,
-    "view_count": 703460,
-    "like_count": 11591,
-    "why_good": "近 30 天同类长视频播放第 31",
+    "view_count": 751210,
+    "like_count": 14319,
+    "why_good": "近 30 天同类长视频播放第 8",
     "section": "music",
     "sections": [
       "music"
@@ -1930,162 +1624,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 848,
-    "view_count": 676664,
-    "like_count": 11726,
-    "why_good": "近 30 天同类长视频播放第 32",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "k38hEIoJu8g",
-    "title": "Hania Rani live at Cercle Odyssey, Mexico City, Mexico",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-12-05T14:01:20Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 5774,
-    "view_count": 653006,
-    "like_count": 13801,
-    "why_good": "近 30 天同类长视频播放第 33",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "60ifct5h78Q",
-    "title": "Yung Lean & Bladee | Boiler Room: London",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-09-18T16:00:11Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3662,
-    "view_count": 642808,
-    "like_count": 10351,
-    "why_good": "近 30 天同类长视频播放第 34",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "KmhIx7xNxeg",
-    "title": "AEREA (live) | Boiler Room: Maastricht",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-10-01T13:00:08Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 5372,
-    "view_count": 604866,
-    "like_count": 6209,
-    "why_good": "近 30 天同类长视频播放第 35",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "oRg3Tk3jHno",
-    "title": "Ratboys: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-08T09:00:07Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1168,
-    "view_count": 440322,
-    "like_count": 3779,
-    "why_good": "近 30 天同类长视频播放第 36",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "lPbzlEj3A0U",
-    "title": "YEИDRY: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-22T09:00:11Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1200,
-    "view_count": 430028,
-    "like_count": 8985,
-    "why_good": "近 30 天同类长视频播放第 37",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "zw3iotteJz0",
-    "title": "Alex Ferreira: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-24T14:00:39Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1060,
-    "view_count": 401086,
-    "like_count": 6293,
-    "why_good": "近 30 天同类长视频播放第 38",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "3EWLwZh4HjU",
-    "title": "Melissa Aldana with Gonzalo Rubalcaba: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-09-29T12:00:23Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1286,
-    "view_count": 345179,
-    "like_count": 4496,
-    "why_good": "近 30 天同类长视频播放第 39",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "uP23-YE-T30",
-    "title": "Armand Hammer: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-07-28T09:00:14Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1324,
-    "view_count": 327458,
-    "like_count": 16513,
-    "why_good": "近 30 天同类长视频播放第 40",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "SG0ifZpDswg",
-    "title": "E.U.: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-08-27T09:00:05Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1547,
-    "view_count": 321821,
-    "like_count": 5164,
-    "why_good": "近 30 天同类长视频播放第 41",
+    "view_count": 676774,
+    "like_count": 11729,
+    "why_good": "近 30 天同类长视频播放第 9",
     "section": "music",
     "sections": [
       "music"
@@ -2100,43 +1641,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 243,
-    "view_count": 314287,
-    "like_count": 14526,
-    "why_good": "近 30 天同类长视频播放第 42",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "iyTRz9JpYmE",
-    "title": "Riordan | Boiler Room: London",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-09-03T13:00:06Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3507,
-    "view_count": 311393,
-    "like_count": 2787,
-    "why_good": "近 30 天同类长视频播放第 43",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "cysj4CNoIk4",
-    "title": "Los Texmaniacs: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-10-08T14:00:15Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1077,
-    "view_count": 297759,
-    "like_count": 2923,
-    "why_good": "近 30 天同类长视频播放第 44",
+    "view_count": 314645,
+    "like_count": 14533,
+    "why_good": "近 30 天同类长视频播放第 10",
     "section": "music",
     "sections": [
       "music"
@@ -2151,9 +1658,9 @@
     "default_audio_language": "en-US",
     "default_language": "en",
     "duration_seconds": 2336,
-    "view_count": 292492,
-    "like_count": 9084,
-    "why_good": "近 30 天同类长视频播放第 45",
+    "view_count": 292608,
+    "like_count": 9085,
+    "why_good": "近 30 天同类长视频播放第 11",
     "section": "music",
     "sections": [
       "music"
@@ -2168,26 +1675,9 @@
     "default_audio_language": "en-GB",
     "default_language": "en-GB",
     "duration_seconds": 212,
-    "view_count": 275448,
-    "like_count": 6641,
-    "why_good": "近 30 天同类长视频播放第 46",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "RTC6p6h_8tg",
-    "title": "Renée Fleming & Béla Fleck: Tiny Desk Concert",
-    "channel": "NPR Music",
-    "channel_id": "UC4eYXhJI4-7wSWc8UNRwD4A",
-    "published_at": "2026-07-30T09:00:32Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1225,
-    "view_count": 212871,
-    "like_count": 4922,
-    "why_good": "近 30 天同类长视频播放第 47",
+    "view_count": 275524,
+    "like_count": 6642,
+    "why_good": "近 30 天同类长视频播放第 12",
     "section": "music",
     "sections": [
       "music"
@@ -2202,26 +1692,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 200,
-    "view_count": 195464,
+    "view_count": 195506,
     "like_count": 7163,
-    "why_good": "近 30 天同类长视频播放第 48",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "9WsxwCAvpek",
-    "title": "Lil Texas | Boiler Room: Rotterdam",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-10-09T14:57:06Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3611,
-    "view_count": 182095,
-    "like_count": 3994,
-    "why_good": "近 30 天同类长视频播放第 49",
+    "why_good": "近 30 天同类长视频播放第 13",
     "section": "music",
     "sections": [
       "music"
@@ -2236,9 +1709,9 @@
     "default_audio_language": "en-GB",
     "default_language": "en-GB",
     "duration_seconds": 696,
-    "view_count": 161851,
+    "view_count": 161874,
     "like_count": 2094,
-    "why_good": "近 30 天同类长视频播放第 50",
+    "why_good": "近 30 天同类长视频播放第 14",
     "section": "music",
     "sections": [
       "music"
@@ -2253,9 +1726,9 @@
     "default_audio_language": "en-GB",
     "default_language": "en-GB",
     "duration_seconds": 675,
-    "view_count": 161495,
+    "view_count": 161568,
     "like_count": 1423,
-    "why_good": "近 30 天同类长视频播放第 51",
+    "why_good": "近 30 天同类长视频播放第 15",
     "section": "music",
     "sections": [
       "music"
@@ -2270,60 +1743,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 240,
-    "view_count": 138724,
-    "like_count": 5859,
-    "why_good": "近 30 天同类长视频播放第 52",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "hMmyv0jmoI4",
-    "title": "Judeline live at Cercle Odyssey, Mexico City, Mexico",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-12-08T17:51:57Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 4243,
-    "view_count": 135487,
-    "like_count": 3164,
-    "why_good": "近 30 天同类长视频播放第 53",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "lCpWVli_SCA",
-    "title": "@nickcheo | Boiler Room: Ohio",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-09-17T16:00:08Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 4799,
-    "view_count": 132876,
-    "like_count": 2991,
-    "why_good": "近 30 天同类长视频播放第 54",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "ISQQw4OmPY8",
-    "title": "Natanya - SHOW ME RIGHT! | A COLORS SHOW",
-    "channel": "COLORS",
-    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
-    "published_at": "2026-10-01T16:00:08Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 208,
-    "view_count": 129304,
-    "like_count": 4656,
-    "why_good": "近 30 天同类长视频播放第 55",
+    "view_count": 138823,
+    "like_count": 5861,
+    "why_good": "近 30 天同类长视频播放第 16",
     "section": "music",
     "sections": [
       "music"
@@ -2338,26 +1760,9 @@
     "default_audio_language": "en-GB",
     "default_language": "en-GB",
     "duration_seconds": 480,
-    "view_count": 126467,
+    "view_count": 126605,
     "like_count": 940,
-    "why_good": "近 30 天同类长视频播放第 56",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "mOYf1888G6Q",
-    "title": "Harriet Jaxxon | Boiler Room: London",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-09-04T13:00:06Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3597,
-    "view_count": 121991,
-    "like_count": 1307,
-    "why_good": "近 30 天同类长视频播放第 57",
+    "why_good": "近 30 天同类长视频播放第 17",
     "section": "music",
     "sections": [
       "music"
@@ -2372,43 +1777,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 3630,
-    "view_count": 121580,
-    "like_count": 3985,
-    "why_good": "近 30 天同类长视频播放第 58",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "iGXpNRSSRz0",
-    "title": "The Muffin Man F2F Impulsive Behaviour | Boiler Room: London",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-09-11T13:00:06Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 4424,
-    "view_count": 114773,
-    "like_count": 330,
-    "why_good": "近 30 天同类长视频播放第 59",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "z28UbGAPteA",
-    "title": "Vieze Asbak | Boiler Room LA: Teletech",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-11-06T20:51:11Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3561,
-    "view_count": 104044,
-    "like_count": 2584,
-    "why_good": "近 30 天同类长视频播放第 60",
+    "view_count": 121642,
+    "like_count": 3987,
+    "why_good": "近 30 天同类长视频播放第 18",
     "section": "music",
     "sections": [
       "music"
@@ -2423,9 +1794,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 214,
-    "view_count": 93880,
+    "view_count": 93894,
     "like_count": 2328,
-    "why_good": "近 30 天同类长视频播放第 61",
+    "why_good": "近 30 天同类长视频播放第 20",
     "section": "music",
     "sections": [
       "music"
@@ -2440,9 +1811,9 @@
     "default_audio_language": "en-US",
     "default_language": "id",
     "duration_seconds": 1691,
-    "view_count": 87988,
-    "like_count": 2221,
-    "why_good": "近 30 天同类长视频播放第 62",
+    "view_count": 88121,
+    "like_count": 2222,
+    "why_good": "近 30 天同类长视频播放第 21",
     "section": "music",
     "sections": [
       "music"
@@ -2457,26 +1828,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 2756,
-    "view_count": 87782,
-    "like_count": 3003,
-    "why_good": "近 30 天同类长视频播放第 63",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "1czUusLWcZg",
-    "title": "Rex Orange County - Iron Man | A COLORS SHOW",
-    "channel": "COLORS",
-    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
-    "published_at": "2026-11-05T17:00:08Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 217,
-    "view_count": 86195,
-    "like_count": 2261,
-    "why_good": "近 30 天同类长视频播放第 64",
+    "view_count": 87817,
+    "like_count": 3005,
+    "why_good": "近 30 天同类长视频播放第 22",
     "section": "music",
     "sections": [
       "music"
@@ -2491,43 +1845,9 @@
     "default_audio_language": "en-GB",
     "default_language": "en-GB",
     "duration_seconds": 5582,
-    "view_count": 77585,
-    "like_count": 953,
-    "why_good": "近 30 天同类长视频播放第 65",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "WonilCVG3aE",
-    "title": "Laidlaw | Boiler Room London: Beeyou Records",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-10-02T16:03:08Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 6512,
-    "view_count": 72586,
-    "like_count": 1035,
-    "why_good": "近 30 天同类长视频播放第 66",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "VHlxBJdmmWA",
-    "title": "Behind Cercle Odyssey I Chapter Four: Curtain Up",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-07-31T15:00:51Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 1153,
-    "view_count": 67086,
-    "like_count": 429,
-    "why_good": "近 30 天同类长视频播放第 67",
+    "view_count": 77637,
+    "like_count": 955,
+    "why_good": "近 30 天同类长视频播放第 24",
     "section": "music",
     "sections": [
       "music"
@@ -2542,60 +1862,9 @@
     "default_audio_language": "en",
     "default_language": "en",
     "duration_seconds": 3510,
-    "view_count": 66299,
-    "like_count": 960,
-    "why_good": "近 30 天同类长视频播放第 68",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "TOBmHM6_hGc",
-    "title": "Sienna Senate - Do Your Thing | A COLORS SHOW",
-    "channel": "COLORS",
-    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
-    "published_at": "2026-11-09T17:00:09Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 180,
-    "view_count": 61306,
-    "like_count": 2341,
-    "why_good": "近 30 天同类长视频播放第 69",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "l-VHXfda5J0",
-    "title": "Diffrent | Boiler Room: Rotterdam",
-    "channel": "Boiler Room",
-    "channel_id": "UCGBpxWJr9FNOcFYA5GkKrMg",
-    "published_at": "2026-10-08T14:00:07Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 3669,
-    "view_count": 54787,
-    "like_count": 752,
-    "why_good": "近 30 天同类长视频播放第 70",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "GXVZMiDbtiM",
-    "title": "sub:shaman - Full Performance (Live on KEXP)",
-    "channel": "KEXP",
-    "channel_id": "UC3I2GFN_F8WudD_2jUZbojA",
-    "published_at": "2026-11-04T16:00:20Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1548,
-    "view_count": 50291,
-    "like_count": 941,
-    "why_good": "近 30 天同类长视频播放第 71",
+    "view_count": 66346,
+    "like_count": 962,
+    "why_good": "近 30 天同类长视频播放第 25",
     "section": "music",
     "sections": [
       "music"
@@ -2612,41 +1881,7 @@
     "duration_seconds": 230,
     "view_count": 41701,
     "like_count": 280,
-    "why_good": "近 30 天同类长视频播放第 72",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "OydMEt0TEhA",
-    "title": "Behind Cercle Odyssey I Chapter Three: Prelude",
-    "channel": "Cercle",
-    "channel_id": "UCPKT_csvP72boVX0XrMtagQ",
-    "published_at": "2025-07-04T15:00:53Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 610,
-    "view_count": 40669,
-    "like_count": 464,
-    "why_good": "近 30 天同类长视频播放第 73",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "V8KJ89LFjD8",
-    "title": "Shabazz Palaces - Full Performance (Live on KEXP)",
-    "channel": "KEXP",
-    "channel_id": "UC3I2GFN_F8WudD_2jUZbojA",
-    "published_at": "2026-11-06T16:00:24Z",
-    "default_audio_language": "en-US",
-    "default_language": "en",
-    "duration_seconds": 1471,
-    "view_count": 39852,
-    "like_count": 623,
-    "why_good": "近 30 天同类长视频播放第 74",
+    "why_good": "近 30 天同类长视频播放第 28",
     "section": "music",
     "sections": [
       "music"
@@ -2663,24 +1898,7 @@
     "duration_seconds": 204,
     "view_count": 28030,
     "like_count": 217,
-    "why_good": "近 30 天同类长视频播放第 75",
-    "section": "music",
-    "sections": [
-      "music"
-    ]
-  },
-  {
-    "id": "XiCdhLJE93Q",
-    "title": "Sienna Senate | A COLORS INTERVIEW",
-    "channel": "COLORS",
-    "channel_id": "UC2Qw1dzXDBAZPwS7zm37g8g",
-    "published_at": "2026-11-10T14:24:37Z",
-    "default_audio_language": "en",
-    "default_language": "en",
-    "duration_seconds": 198,
-    "view_count": 13628,
-    "like_count": 160,
-    "why_good": "近 30 天同类长视频播放第 76",
+    "why_good": "近 30 天同类长视频播放第 30",
     "section": "music",
     "sections": [
       "music"
