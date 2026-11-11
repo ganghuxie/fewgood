@@ -6,19 +6,6 @@
   "channels_used": 42,
   "videos": [
     {
-      "id": "NCxD-qsQcN0",
-      "title": "Design hardware with Astra",
-      "channel": "OpenAI",
-      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-      "published_at": "2026-11-03T18:30:30Z",
-      "duration_seconds": 82,
-      "view_count": 672005,
-      "like_count": 9027,
-      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
-      "default_audio_language": "en",
-      "default_language": "en"
-    },
-    {
       "id": "9ZxCOHkfn_8",
       "title": "GPT-Image-2.6: Faster image generation with Flare and Sunburst",
       "channel": "OpenAI",
@@ -54,19 +41,6 @@
       "view_count": 81175,
       "like_count": 584,
       "why_good": "AI 前沿精选频道 AI Engineer 本周新片",
-      "default_audio_language": "en",
-      "default_language": "en"
-    },
-    {
-      "id": "8oB9sf1SKhs",
-      "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
-      "channel": "ElevenLabs",
-      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
-      "published_at": "2026-11-03T13:00:15Z",
-      "duration_seconds": 579,
-      "view_count": 53206,
-      "like_count": 1106,
-      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
       "default_audio_language": "en",
       "default_language": "en"
     },
@@ -136,19 +110,6 @@
       "default_language": "en"
     },
     {
-      "id": "LL0YmIyBKSU",
-      "title": "⚡️ The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev",
-      "channel": "Latent Space",
-      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
-      "published_at": "2026-11-03T20:16:25Z",
-      "duration_seconds": 2088,
-      "view_count": 23215,
-      "like_count": 153,
-      "why_good": "AI 前沿精选频道 Latent Space 本周新片",
-      "default_audio_language": "en-US",
-      "default_language": "en"
-    },
-    {
       "id": "P735f1xlpL0",
       "title": "Why Would Anthropic Go Public Now? — Jamin Ball, Altimeter",
       "channel": "Latent Space",
@@ -159,19 +120,6 @@
       "like_count": 91,
       "why_good": "AI 前沿精选频道 Latent Space 本周新片",
       "default_audio_language": "en-US",
-      "default_language": "en"
-    },
-    {
-      "id": "yLMjEpMio2w",
-      "title": "From AI Infrastructure to the 6G Future",
-      "channel": "NVIDIA",
-      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
-      "published_at": "2026-11-03T13:00:13Z",
-      "duration_seconds": 2280,
-      "view_count": 18945,
-      "like_count": 199,
-      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
-      "default_audio_language": "en",
       "default_language": "en"
     },
     {
@@ -211,19 +159,6 @@
       "like_count": 43,
       "why_good": "AI 前沿精选频道 Latent Space 本周新片",
       "default_audio_language": "en-US",
-      "default_language": "en"
-    },
-    {
-      "id": "bymDXo7FVE8",
-      "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
-      "channel": "The Rundown AI",
-      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
-      "published_at": "2026-11-03T20:31:56Z",
-      "duration_seconds": 66,
-      "view_count": 12454,
-      "like_count": 684,
-      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
-      "default_audio_language": "en",
       "default_language": "en"
     },
     {
@@ -292,19 +227,6 @@
       "default_language": "en"
     },
     {
-      "id": "SPOGTliV48s",
-      "title": "What does LangChain even do these days?",
-      "channel": "LangChain",
-      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
-      "published_at": "2026-11-03T19:18:17Z",
-      "duration_seconds": 195,
-      "view_count": 6968,
-      "like_count": 67,
-      "why_good": "AI 前沿精选频道 LangChain 本周新片",
-      "default_audio_language": "en",
-      "default_language": "en"
-    },
-    {
       "id": "5__Fm2TnPcU",
       "title": "Stop guessing how to fix your agent",
       "channel": "DeepLearningAI",
@@ -314,19 +236,6 @@
       "view_count": 5072,
       "like_count": 21,
       "why_good": "AI 前沿精选频道 DeepLearningAI 本周新片",
-      "default_audio_language": "en",
-      "default_language": "en"
-    },
-    {
-      "id": "hb8WqJqM4SE",
-      "title": "The Next Industrial Revolution | inside view",
-      "channel": "Runway",
-      "channel_id": "UCUBqu_z5uP0AZhYtuyFZB3g",
-      "published_at": "2026-11-03T14:35:19Z",
-      "duration_seconds": 153,
-      "view_count": 2324,
-      "like_count": 20,
-      "why_good": "AI 前沿精选频道 Runway 本周新片",
       "default_audio_language": "en",
       "default_language": "en"
     },
@@ -420,8 +329,100 @@
       "why_good": "AI 前沿精选频道 Together AI 本周新片",
       "default_audio_language": null,
       "default_language": "en"
+    },
+    {
+      "id": "NCxD-qsQcN0",
+      "title": "Design hardware with Astra",
+      "channel": "OpenAI",
+      "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A",
+      "published_at": "2026-11-03T18:30:30Z",
+      "duration_seconds": 82,
+      "view_count": 672005,
+      "like_count": 9027,
+      "why_good": "AI 前沿精选频道 OpenAI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
+    },
+    {
+      "id": "8oB9sf1SKhs",
+      "title": "AI Realism Workflow the Pros Use (Eleven v4 + Seedance 2.5)",
+      "channel": "ElevenLabs",
+      "channel_id": "UC-ew9TfeD887qUSiWWAAj1w",
+      "published_at": "2026-11-03T13:00:15Z",
+      "duration_seconds": 579,
+      "view_count": 53206,
+      "like_count": 1106,
+      "why_good": "AI 前沿精选频道 ElevenLabs 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
+    },
+    {
+      "id": "LL0YmIyBKSU",
+      "title": "⚡️ The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev",
+      "channel": "Latent Space",
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "published_at": "2026-11-03T20:16:25Z",
+      "duration_seconds": 2088,
+      "view_count": 23215,
+      "like_count": 153,
+      "why_good": "AI 前沿精选频道 Latent Space 本周新片",
+      "default_audio_language": "en-US",
+      "default_language": "en"
+    },
+    {
+      "id": "yLMjEpMio2w",
+      "title": "From AI Infrastructure to the 6G Future",
+      "channel": "NVIDIA",
+      "channel_id": "UCHuiy8bXnmK5nisYHUd1J5g",
+      "published_at": "2026-11-03T13:00:13Z",
+      "duration_seconds": 2280,
+      "view_count": 18945,
+      "like_count": 199,
+      "why_good": "AI 前沿精选频道 NVIDIA 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
+    },
+    {
+      "id": "bymDXo7FVE8",
+      "title": "This robot is being designed by former Pixar animators 🤖👀 #trendingshorts #tech #robotics",
+      "channel": "The Rundown AI",
+      "channel_id": "UC8LUzR34nNX8KH3Edd0un1g",
+      "published_at": "2026-11-03T20:31:56Z",
+      "duration_seconds": 66,
+      "view_count": 12454,
+      "like_count": 684,
+      "why_good": "AI 前沿精选频道 The Rundown AI 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
+    },
+    {
+      "id": "SPOGTliV48s",
+      "title": "What does LangChain even do these days?",
+      "channel": "LangChain",
+      "channel_id": "UCC-lyoTfSrcJzA1ab3APAgw",
+      "published_at": "2026-11-03T19:18:17Z",
+      "duration_seconds": 195,
+      "view_count": 6968,
+      "like_count": 67,
+      "why_good": "AI 前沿精选频道 LangChain 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
+    },
+    {
+      "id": "hb8WqJqM4SE",
+      "title": "The Next Industrial Revolution | inside view",
+      "channel": "Runway",
+      "channel_id": "UCUBqu_z5uP0AZhYtuyFZB3g",
+      "published_at": "2026-11-03T14:35:19Z",
+      "duration_seconds": 153,
+      "view_count": 2324,
+      "like_count": 20,
+      "why_good": "AI 前沿精选频道 Runway 本周新片",
+      "default_audio_language": "en",
+      "default_language": "en"
     }
   ],
   "dropped_language": 0,
-  "dropped_channel": 0
+  "dropped_channel": 0,
+  "dropped_stale": 0
 }
