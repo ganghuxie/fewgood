@@ -276,12 +276,22 @@ def write_feed(name, payload, root='site/src/data'):
     return target
 
 
-def write_feed_if_not_sharply_smaller(name, payload, root='site/src/data'):
+def _count_field(value):
+    try:
+        return max(0, int(value))
+    except (TypeError, ValueError):
+        return 0
+
+
+def write_feed_if_not_sharply_smaller(name, payload, root='site/src/data', *, pre_cap_count=None):
     """Write a feed unless the refresh would sharply shrink an existing one.
 
-    An empty refresh, or one below 50% of the previously written video count,
-    is treated as a discovery outage. The previous payload is returned without
-    touching the file so callers can keep serving the last complete feed.
+    An empty refresh, or one below 50% of the previously written candidate
+    count, is treated as a discovery outage. `pre_cap_count` (or a payload's
+    `pre_cap_count` field) lets an intentional display cap shrink the written
+    feed without looking like a failed refresh; the guard compares the
+    pre-cap candidates instead of the capped output. The previous payload is
+    returned without touching the file when the guard trips.
     """
     target = Path(root) / f'{name}.json'
     previous = None
@@ -296,10 +306,17 @@ def write_feed_if_not_sharply_smaller(name, payload, root='site/src/data'):
     new_videos = payload.get('videos') if isinstance(payload, dict) else None
     new_count = len(new_videos) if isinstance(new_videos, list) else 0
     prev_count = len(previous_videos)
+    declared_pre_cap = pre_cap_count
+    if declared_pre_cap is None and isinstance(payload, dict):
+        declared_pre_cap = payload.get('pre_cap_count')
+    new_candidate_count = max(new_count, _count_field(declared_pre_cap))
+    prev_candidate_count = prev_count
+    if isinstance(previous, dict):
+        prev_candidate_count = max(prev_count, _count_field(previous.get('pre_cap_count')))
     if prev_count > 0:
         if new_count == 0:
             reason = 'refresh produced no videos'
-        elif new_count < 0.5 * prev_count:
+        elif new_candidate_count < 0.5 * prev_candidate_count:
             reason = 'below 50% of previous feed'
         else:
             reason = None
@@ -415,6 +432,7 @@ def _published_utc(video):
 
 FRESHNESS_MAX_DAYS = 30
 FRESHNESS_RECENT_DAYS = 7
+AI_FEED_DISPLAY_CAP = 40
 
 
 def published_at_dt(video):
@@ -468,6 +486,37 @@ def drop_stale_videos(videos, now=None):
     """Drop records outside the freshness window and return the dropped count."""
     kept = [video for video in videos if within_freshness_window(video, now=now)]
     return kept, len(videos) - len(kept)
+
+
+def cap_ai_feed_display(videos, *, now=None, sources=None, cap=AI_FEED_DISPLAY_CAP):
+    """Keep the highest-scored AI videos and return ``(kept, dropped)``.
+
+    Candidates must already have passed every AI eligibility gate. Ranking
+    uses the existing v1 scorer with channel medians, then the existing
+    freshness key as a stable tie-break. The returned list is recency-first
+    because the cap decides which videos stay, not the tab's display order.
+    """
+    videos = list(videos)
+    limit = max(0, int(cap))
+    at = _freshness_now(now)
+    if len(videos) <= limit:
+        return sorted(videos, key=lambda video: freshness_sort_key(video, now=at)), 0
+    if limit == 0:
+        return [], len(videos)
+
+    source_rows = load_source_rows(sources)
+    medians = channel_median_views(videos, now=at)
+    ranked = []
+    for video in videos:
+        channel_id = str(video.get('channel_id') or '')
+        result = score_video(
+            video, channel_median_views=medians.get(channel_id),
+            now=at, sources=source_rows, section='ai',
+        )
+        ranked.append(((-float(result),) + freshness_sort_key(video, now=at), video))
+    ranked.sort(key=lambda pair: pair[0])
+    kept = [video for _rank_key, video in ranked[:limit]]
+    return sorted(kept, key=lambda video: freshness_sort_key(video, now=at)), len(videos) - limit
 
 
 class _ChannelBudget:
@@ -1076,11 +1125,15 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds('ai', output), feed_name='ai')
     for video in videos:
         video['why_good'] = why_good_for(video, 'ai')
-    videos.sort(key=freshness_sort_key)
+    pre_cap_count = len(videos)
+    videos, dropped_ai_display_cap = cap_ai_feed_display(
+        videos, sources=load_source_rows(sources_file or 'config/sources.yaml'),
+    )
     payload = dict(generated_at=iso_now(), window_days=FRESHNESS_MAX_DAYS, exclude_shorts_under_seconds=60,
                    quota_units_approx=units, channels_used=len(channels), dropped_language=dropped_language,
                    dropped_ai_topic=dropped_ai_topic, dropped_channel=dropped_channel,
-                   dropped_stale=dropped_stale, videos=videos)
+                   dropped_stale=dropped_stale, dropped_ai_display_cap=dropped_ai_display_cap,
+                   pre_cap_count=pre_cap_count, final_count=len(videos), videos=videos)
     payload = write_feed_if_not_sharply_smaller('ai', payload, output)
     print(f"AI: {len(payload.get('videos', []))} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))

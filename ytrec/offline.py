@@ -21,6 +21,7 @@ from .core import (
     filter_ai_topic_videos,
     freshness_sort_key,
     drop_stale_videos,
+    cap_ai_feed_display,
 )
 
 FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'editorial', 'videos')
@@ -150,6 +151,12 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
             for video in videos:
                 video['why_good'] = why_good_for(video, 'community')
 
+    dropped_ai_display_cap = 0
+    ai_pre_cap_count = 0
+    if 'ai' in final:
+        ai_pre_cap_count = len(final['ai'])
+        final['ai'], dropped_ai_display_cap = cap_ai_feed_display(final['ai'])
+
     pick_payload = build_picks(
         {'community': {'videos': final.get('videos') or []}, 'ai': {'videos': final.get('ai') or []},
          'podcast': {'videos': final.get('podcast') or []}, 'editorial': {'videos': final.get('editorial') or []}},
@@ -168,6 +175,9 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                 payload['dropped_podcast_display_cap'] = dropped_podcast
             if name == 'ai':
                 payload['dropped_ai_topic'] = int(feeds[name].get('dropped_ai_topic') or 0) + dropped_ai_topic
+                payload['dropped_ai_display_cap'] = dropped_ai_display_cap
+                payload['pre_cap_count'] = ai_pre_cap_count
+                payload['final_count'] = len(final.get('ai', []))
             if name in ('ai', 'podcast', 'music', 'editorial'):
                 payload['dropped_stale'] = int(feeds[name].get('dropped_stale') or 0) + dropped_stale.get(name, 0)
             if name == 'videos':
@@ -181,6 +191,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         'generated_at': pick_payload['generated_at'],
         'feeds': {name: {'kept': len(final.get(name, [])), 'dropped_language': dropped_language.get(name, 0), 'dropped_channel': dropped_channel.get(name, 0)} for name in feeds},
         'dropped_ai_topic': dropped_ai_topic,
+        'dropped_ai_display_cap': dropped_ai_display_cap,
         'dropped_stale': dropped_stale,
         'dropped_podcast_display_cap': dropped_podcast,
         'picks': len(pick_payload['videos']),
