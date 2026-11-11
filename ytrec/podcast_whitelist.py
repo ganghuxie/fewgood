@@ -20,6 +20,7 @@ from .core import (
     _load_existing_feeds, freshness_sort_key, drop_stale_videos,
     load_fresh_feed_records, metadata_cache_days,
     visible_language_blocked, content_type_blocked, is_official_short_promo,
+    interleave_by_channel,
 )
 from .playability import playability_reason
 from .sources import channels_for_topic
@@ -339,6 +340,8 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
     for rank, video in enumerate(kept, 1):
         video['why_good'] = why_good_or_existing(video, feed_name, rank=rank)
     kept.sort(key=freshness_sort_key)
+    if feed_name == 'music':
+        kept = interleave_by_channel(kept)
     out = dict(generated_at=iso_now(), source='curated_whitelist',
                min_duration_seconds=minimum,
                channels_configured=len(channels),

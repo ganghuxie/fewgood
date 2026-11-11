@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+from ytrec.build_topics import is_news_recap_title, retag_topic_lookup
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -108,3 +110,29 @@ def test_pool_ids_have_a_primary_topic():
     lookup = json.loads((ROOT / 'site/src/data/topic_lookup.json').read_text())
     missing = [video['id'] for video in pool if video['id'] not in lookup]
     assert not missing
+
+
+def test_news_recap_is_not_retagged_as_classic_talk():
+    lookup = {
+        'news-recap': 'classic-talks',
+        'real-ted': 'classic-talks',
+        'commencement': 'classic-talks',
+    }
+    metadata = {
+        'news-recap': {'title': 'Google Loses $500B in 12 Hours | DoorDash Buys Instacart for $17B | Kalshi Raises $1B'},
+        'real-ted': {'title': 'How Great Leaders Inspire Action | Simon Sinek | TED'},
+        'commencement': {'title': 'Steve Jobs Stanford Commencement Speech 2005'},
+    }
+    retagged, changed = retag_topic_lookup(lookup, metadata)
+    assert is_news_recap_title(metadata['news-recap']['title'])
+    assert not is_news_recap_title(metadata['real-ted']['title'])
+    assert not is_news_recap_title(metadata['commencement']['title'])
+    assert changed == 1
+    assert 'news-recap' not in retagged
+    assert retagged['real-ted'] == 'classic-talks'
+    assert retagged['commencement'] == 'classic-talks'
+
+
+def test_20vc_news_episode_has_no_classic_talk_chip():
+    lookup = json.loads((ROOT / 'site/src/data/topic_lookup.json').read_text())
+    assert lookup.get('4nKt18AZDsQ') != 'classic-talks'

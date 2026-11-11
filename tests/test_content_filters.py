@@ -1,14 +1,17 @@
 import json
 from datetime import datetime, timedelta, timezone
+from itertools import groupby
 
 import pytest
 
 from ytrec.core import (
     AI_MIN_DURATION_SECONDS,
+    cap_same_event,
     channel_display_cap,
     content_type_blocked,
     filter_ai_duration_and_promo_titles,
     filter_trending_quality,
+    interleave_by_channel,
     is_official_brand_clip,
     is_official_short_promo,
     is_community_classic,
@@ -184,6 +187,52 @@ def test_trending_blocks_hindi_song_but_not_english_tech_talk():
     )[0]
 
 
+def test_trending_blocks_brand_collab_but_keeps_science_explainers():
+    blocked, reason = content_type_blocked(
+        video(title='Once upon a time in Mexico City | DHL x Holly Humberstone',
+              channel='Holly Humberstone'),
+        'trending',
+    )
+    assert blocked and reason == 'brand_collab'
+    for channel, title in (
+        ('Veritasium', 'I finally saw quantum mechanics with my own eyes'),
+        ('Mark Rober', 'I Solved Every Board Game'),
+    ):
+        assert not content_type_blocked(video(title=title, channel=channel), 'trending')[0]
+
+
+def test_trending_blocks_entertainment_factories_but_keeps_linus():
+    for channel, title in (
+        ('ZHC', 'MrBeast Trapped My Wife'),
+        ('OG Crew', 'Confession Booth Challenge'),
+        ('Quantastic', 'This fidget toy is impossible'),
+    ):
+        blocked, reason = content_type_blocked(video(title=title, channel=channel), 'trending')
+        assert blocked and reason == 'entertainment'
+    assert not content_type_blocked(
+        video(title='I Let My Staff Upgrade the Office', channel='Linus Tech Tips'),
+        'trending',
+    )[0]
+
+
+def test_trending_blocks_movie_reviews_and_indic_fan_edits():
+    blocked, reason = content_type_blocked(
+        video(title='Ramayana Movie Review | Yogi Bolta Hai', channel='YOGI BOLTA HAI',
+              default_language='zxx'),
+        'trending',
+    )
+    assert blocked and reason == 'movie_review'
+    blocked, reason = content_type_blocked(
+        video(title='Magale | Baththa | Sai Abhyankar | Vijay Sethupathi', channel='Moon editzz'),
+        'trending',
+    )
+    assert blocked and reason == 'indic_romanized'
+    assert not content_type_blocked(
+        video(title='A normal English tech talk about databases', channel='Engineering Talks'),
+        'trending',
+    )[0]
+
+
 def test_podcast_full_episode_audio_is_blocked():
     blocked, reason = content_type_blocked(
         video(title='Seinfeld - Full Episode (Audio)', channel='Acquired',
@@ -199,6 +248,25 @@ def test_music_official_mv_is_not_a_content_filter_drop():
         video(title='Artist - Song (Official Music Video)', channel='Artist'), 'music',
     )
     assert not blocked
+
+
+def test_music_drops_actor_interviews_but_keeps_music_sessions():
+    for title in (
+        'Jenna Ortega and Amy Adams rate & slate Unpopular Opinions',
+        'Olivia Colman and Alexander Skarsgård rate or slate your Unpopular Opinions',
+        '“Pardon my arse!” Wicker’s Olivia Colman & Alexander Skarsgård on bed-breaking scenes & wrap gifts!',
+    ):
+        blocked, reason = content_type_blocked(video(title=title, channel='BBC Radio 1'), 'music')
+        assert blocked and reason == 'non_music_interview'
+    for title in (
+        'A COLORS SHOW',
+        'A COLORS INTERVIEW',
+        'Tiny Desk Concert',
+        'Essential Mix',
+        'Zara Larsson live at Big Weekend',
+        'KEXP full performance',
+    ):
+        assert not content_type_blocked(video(title=title, channel='Music'), 'music')[0]
 
 
 # Visible-title language net ----------------------------------------------
@@ -260,6 +328,72 @@ def test_trending_floor_restores_five_least_bad_items_to_thirty():
     assert {item['id'] for item in kept if item['id'].startswith('blocked-')} == {
         f'blocked-{index}' for index in range(10, 15)
     }
+
+
+def test_same_event_cap_keeps_two_highest_viewed_learjet_videos():
+    learjets = [
+        video(id='pilot', title='Shocking New Details in Deadly Learjet Crash!',
+              channel='Pilot Debrief', channel_id='pilot', view_count=300),
+        video(id='captain', title='Learjet Crash Update: NTSB Finds Tail Debris Miles Away',
+              channel='Captain Steeeve', channel_id='captain', view_count=200),
+        video(id='flying', title='Learjet 60 Crash: What Was She Trying to Tell the Captain?',
+              channel='Flying for Money', channel_id='flying', view_count=100),
+    ]
+    kept, dropped_videos = cap_same_event(learjets)
+    assert [item['id'] for item in kept] == ['pilot', 'captain']
+    assert [item['id'] for item in dropped_videos] == ['flying']
+
+    kept, reasons, restored, restored_reasons = filter_trending_quality(learjets, minimum=0)
+    assert [item['id'] for item in kept] == ['pilot', 'captain']
+    assert reasons['event_cap'] == 1
+    assert restored == 0 and not restored_reasons
+
+
+def test_trending_floor_runs_after_event_and_channel_caps():
+    good = [
+        video(id=f'good-{index}', title=f'Documentary number {index}',
+              channel=f'Channel {index}', channel_id=f'good-{index}', view_count=1000 - index)
+        for index in range(25)
+    ]
+    brand = [
+        video(id=f'brand-{index}', title=f'DHL x Artist film {index}',
+              channel=f'Brand Channel {index}', channel_id=f'brand-{index}', view_count=index)
+        for index in range(6)
+    ]
+    learjets = [
+        video(id=f'jet-{index}', title=f'Learjet crash report {index}',
+              channel=f'News Channel {index}', channel_id=f'jet-{index}', view_count=50 - index)
+        for index in range(3)
+    ]
+    kept, reasons, restored, restored_reasons = filter_trending_quality(
+        good + brand + learjets, per_channel=2,
+    )
+    assert len(kept) == 30
+    assert reasons['event_cap'] == 1
+    assert reasons['brand_collab'] == 6
+    assert restored == 3
+    assert restored_reasons['event_cap'] == 1
+    assert restored_reasons['brand_collab'] == 2
+
+
+def test_interleave_by_channel_keeps_every_item_and_avoids_clumps():
+    channels = [('colors', 9), ('npr', 8), ('kexp', 5)]
+    videos = [
+        video(id=f'{channel}-{index}', channel_id=channel, channel=channel)
+        for channel, count in channels
+        for index in range(count)
+    ]
+    interleaved = interleave_by_channel(videos)
+    assert len(interleaved) == len(videos)
+    assert {item['id'] for item in interleaved} == {item['id'] for item in videos}
+    for channel, _count in channels:
+        expected = [item['id'] for item in videos if item['channel_id'] == channel]
+        actual = [item['id'] for item in interleaved if item['channel_id'] == channel]
+        assert actual == expected
+    runs = [len(list(group)) for _key, group in groupby(
+        interleaved, key=lambda item: item['channel_id'],
+    )]
+    assert max(runs) == 1
 
 
 # Per-tab channel display cap ---------------------------------------------

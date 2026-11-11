@@ -19,7 +19,7 @@ function avatar(video) {
 export function cardMeta(video) {
   const recommenders = Number(video.recommenders);
   if (Number.isFinite(recommenders) && recommenders > 0) {
-    return [`${recommenders} 人推荐`, humanizeRecommendSpan(video.months)].filter(Boolean).join(' · ');
+    return [`${recommenders} 人推荐`, humanizeRecommendSpan(video.span_days)].filter(Boolean).join(' · ');
   }
   const parts = [];
   if (video.view_count !== null && video.view_count !== undefined && video.view_count !== '' && Number.isFinite(Number(video.view_count))) {

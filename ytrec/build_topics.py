@@ -30,6 +30,42 @@ URL_RE = re.compile(r"https?://\S+|www\.\S+|\byoutu\.be\S*")
 MIN_CLUSTER = 8
 MIN_KEYWORDS = 5
 
+CLASSIC_TALKS_TOPIC_ID = 'classic-talks'
+_NEWS_RECAP_TITLE_RE = re.compile(
+    r'\bloses?\b[^|]{0,45}\$?\d+(?:\.\d+)?\s*[bmk]\b|'
+    r'\bbuys?\b[^|]{0,60}\bfor\s+\$\d+(?:\.\d+)?\s*[bmk]\b|'
+    r'\braises?\b[^|]{0,45}\$\d+(?:\.\d+)?\s*[bmk]\b|'
+    r'\bin\s+\d{1,2}\s+hours?\b|'
+    r'\b(?:market|stocks?|wall\s+street)\s+'
+    r'(?:recap|roundup|wrap|today|close|rally|selloff|plunge)\b|'
+    r'\b(?:daily|weekly)\s+(?:news\s+)?(?:recap|roundup)\b|'
+    r'\bnews\s+(?:recap|roundup)\b|\btop\s+stories\b',
+    re.IGNORECASE,
+)
+
+
+def is_news_recap_title(title):
+    """Return True for finance/news recap headlines that are not classic talks."""
+    return bool(title and _NEWS_RECAP_TITLE_RE.search(str(title)))
+
+
+def retag_topic_lookup(lookup, metadata):
+    """Drop 经典演讲 chips from news/market recap headlines.
+
+    Metadata is a mapping of video id to a record containing at least ``title``.
+    Real TED, commencement, and classic lecture titles are left untouched.
+    """
+    retagged = dict(lookup)
+    changed = 0
+    for video_id, topic_id in lookup.items():
+        if topic_id != CLASSIC_TALKS_TOPIC_ID:
+            continue
+        record = metadata.get(video_id) or {}
+        if is_news_recap_title(record.get('title')):
+            retagged.pop(video_id, None)
+            changed += 1
+    return retagged, changed
+
 # Curated display mapping keyed by the dominant English signal a cluster surfaces.
 SIGNAL_META = {
     '3blue1brown': ('math', '数学与可视化'), 'grey': ('math', '数学与可视化'), 'cgp': ('math', '数学与可视化'),
@@ -840,6 +876,9 @@ def _primary_topic_lookup(pool, clusters):
             nearest = max(sorted(centroids), key=lambda topic_id: _cosine(doc, centroids[topic_id]))
             if _cosine(doc, centroids[nearest]) >= 0.1:
                 lookup[video['id']] = nearest
+    metadata = {video['id']: video for video in pool if video.get('id')}
+    metadata.update({video['id']: video for video in editorial if video.get('id')})
+    lookup, _changed = retag_topic_lookup(lookup, metadata)
     return lookup
 
 

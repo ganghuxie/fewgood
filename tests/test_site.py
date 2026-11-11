@@ -34,8 +34,9 @@ assert.equal(videoUrl('community', 'abcdefghijk', '/youtuber/'), '/youtuber/v/ab
 assert.deepEqual(pageNumbers(5, 10), [1, null, 3, 4, 5, 6, 7, null, 10]);
 assert.deepEqual(pageNumbers(1, 1), [1]);
 import {humanizeRecommendSpan} from './site/src/lib/format.mjs';
-assert.equal(humanizeRecommendSpan(116), '9 年前');
-assert.equal(humanizeRecommendSpan(11), '11 个月');
+assert.equal(humanizeRecommendSpan(6144), '跨 17 年');
+assert.equal(humanizeRecommendSpan(180), '跨 6 个月');
+assert.equal(humanizeRecommendSpan(), '');
 
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
 
@@ -52,9 +53,12 @@ const regular = card({ ...base, view_count: 123456, published_at: new Date().toI
 assert.equal((regular.match(/OpenAI/g) || []).length, 1);
 assert.deepEqual(metas(regular), ['OpenAI', '12.3万 次观看 · 今天']);
 
-const community = card({ ...base, recommenders: 5, months: 18, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
+const community = card({ ...base, recommenders: 5, months: 18, span_days: 180, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
 assert.equal((community.match(/OpenAI/g) || []).length, 1);
-assert.deepEqual(metas(community), ['OpenAI', '5 人推荐 · 1 年前']);
+assert.deepEqual(metas(community), ['OpenAI', '5 人推荐 · 跨 6 个月']);
+
+const noSpan = card({ ...base, recommenders: 5, months: 116 }, '/v/abcdefghijk/');
+assert.deepEqual(metas(noSpan), ['OpenAI', '5 人推荐']);
 
 const sparse = card({ ...base }, '/v/abcdefghijk/');
 assert.deepEqual(metas(sparse), ['OpenAI']);
@@ -107,6 +111,35 @@ def test_picks_labels_use_jingxuan_and_related_heading_is_other_jingxuan():
     assert "'其他精选'" in detail
     for source in (brand, catalog, detail):
         assert '今日精选' not in source
+
+
+def test_detail_community_comments_heading_is_shequ_guandian():
+    detail = (Path(__file__).resolve().parents[1] / 'site/src/pages/v/[id].astro').read_text()
+    assert '<h2>社区观点</h2>' in detail
+    assert '精选评论' not in detail
+    assert '其他精选' in detail
+
+
+def test_recommendation_age_uses_span_days_everywhere():
+    root = Path(__file__).resolve().parents[1]
+    video_page = (root / 'site/src/components/VideoPage.astro').read_text()
+    detail = (root / 'site/src/pages/v/[id].astro').read_text()
+    myspace = (root / 'site/src/lib/myspace-card.mjs').read_text()
+    assert 'humanizeRecommendSpan(video.span_days)' in video_page
+    assert 'humanizeRecommendSpan(video.span_days)' in detail
+    assert 'humanizeRecommendSpan(video.span_days)' in myspace
+    for source in (video_page, detail, myspace):
+        assert 'humanizeRecommendSpan(v.months)' not in source
+        assert 'humanizeRecommendSpan(video.months)' not in source
+
+
+def test_library_panel_footer_is_tab_driven_not_static_history_duplicate():
+    header = (Path(__file__).resolve().parents[1] / 'site/src/components/Header.astro').read_text()
+    footer_line = next(line for line in header.splitlines() if 'data-panel-footer' in line)
+    assert '/history/' not in footer_line
+    assert 'href="#"' in footer_line
+    assert "paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' }" in header
+    assert 'footer.href = `${base}${paths[kind]}`' in header
 
 
 def test_myspace_card_shows_community_classic_badge_only_when_flagged():

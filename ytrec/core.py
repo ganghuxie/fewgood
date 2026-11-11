@@ -748,14 +748,21 @@ def channel_display_cap(videos, per_channel=2, order_key=None):
     viewed trending items) are kept first; otherwise the incoming order is
     preserved. Returned videos stay in their incoming order.
     """
+    kept, dropped_videos = _channel_display_cap_split(
+        videos, per_channel=per_channel, order_key=order_key,
+    )
+    return kept, len(dropped_videos)
+
+
+def _channel_display_cap_split(videos, per_channel=2, order_key=None):
     videos = list(videos)
     limit = max(0, int(per_channel))
     if limit == 0:
-        return [], len(videos)
+        return [], videos
     order = list(range(len(videos)))
     if order_key is not None:
         order.sort(key=lambda index: order_key(videos[index]))
-    counts, keep, dropped = {}, set(), 0
+    counts, keep, dropped = {}, set(), []
     for index in order:
         video = videos[index]
         channel = str(video.get('channel_id') or video.get('channel') or '')
@@ -763,11 +770,36 @@ def channel_display_cap(videos, per_channel=2, order_key=None):
             keep.add(index)
             continue
         if counts.get(channel, 0) >= limit:
-            dropped += 1
+            dropped.append(video)
             continue
         counts[channel] = counts.get(channel, 0) + 1
         keep.add(index)
     return [video for index, video in enumerate(videos) if index in keep], dropped
+
+
+def interleave_by_channel(videos, channel_key='channel_id'):
+    """Round-robin videos by channel while preserving each channel's rank order."""
+    buckets, channel_order = {}, []
+    for video in videos:
+        channel = str(video.get(channel_key) or video.get('channel') or '')
+        if channel not in buckets:
+            buckets[channel] = []
+            channel_order.append(channel)
+        buckets[channel].append(video)
+    positions = {channel: 0 for channel in channel_order}
+    interleaved = []
+    while len(interleaved) < len(videos):
+        progressed = False
+        for channel in channel_order:
+            position = positions[channel]
+            if position >= len(buckets[channel]):
+                continue
+            interleaved.append(buckets[channel][position])
+            positions[channel] = position + 1
+            progressed = True
+        if not progressed:
+            break
+    return interleaved
 
 
 def _load_existing_feeds(exclude, root='site/src/data'):
@@ -1067,9 +1099,152 @@ _CONTENT_HINDI_SONG_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Trending brand-collab films use a small documented marker list rather than
+# treating every "x" in a science/tech title as a collaboration.
+_CONTENT_BRAND_COLLAB_X_BRANDS = (
+    r'dhl|fedex|ups|usps|amazon|walmart|target|nike|adidas|puma|'
+    r'coca[- ]?cola|pepsi|mcdonald\'?s|starbucks|spotify|apple|samsung|'
+    r'google|microsoft|meta|sony|nintendo|disney|netflix|airbnb|uber|lyft|'
+    r'doordash|red\s+bull'
+)
+_CONTENT_BRAND_COLLAB_PRESENTED_BRANDS = (
+    r'dhl|fedex|ups|usps|amazon|walmart|target|nike|adidas|puma|'
+    r'coca[- ]?cola|pepsi|mcdonald\'?s|starbucks|spotify|apple|samsung|'
+    r'google|microsoft|meta|sony|nintendo|disney|netflix|airbnb|uber|lyft|'
+    r'doordash'
+)
+_CONTENT_BRAND_COLLAB_RE = re.compile(
+    rf'\b(?:{_CONTENT_BRAND_COLLAB_X_BRANDS})\s*[x×]\s*[A-Z0-9]|'
+    rf'\b(?:presented\s+by|in\s+partnership\s+with)\s+'
+    rf'(?:{_CONTENT_BRAND_COLLAB_PRESENTED_BRANDS})\b|'
+    r'\bbranded\s+content\b|\bbrand\s+collab(?:oration)?\b',
+    re.IGNORECASE,
+)
+
+# Entertainment challenge/fidget/confession factories. Keep this list small
+# and documented; explainers and real documentaries stay outside it.
+_CONTENT_ENTERTAINMENT_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:mr\s*beast|mrbeast|zhc|og\s+crew|quantastic|'
+    r'beast\s+react|airrack|stokes\s+twins|brent\s+rivera|ben\s+azelart|'
+    r'rebecca\s+zamolo|preston|unspeakable)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_ENTERTAINMENT_TITLE_RE = re.compile(
+    r'\btrapped\s+my\s+(?:wife|girlfriend|husband|boyfriend|mom|dad)\b|'
+    r'\bconfession\s+booth\b|\b2\s+truths?\s+(?:and|&)\s+1\s+lie\b|'
+    r'\bfidget\s+toys?\b|\bsquish(?:y|ies)\b',
+    re.IGNORECASE,
+)
+_CONTENT_MOVIE_REVIEW_RE = re.compile(
+    r'\b(?:movie|film)\s+review\b|\breview\s+of\s+(?:the\s+)?(?:movie|film)\b|'
+    r'影评|影評',
+    re.IGNORECASE,
+)
+_CONTENT_INDIC_FAN_EDIT_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:editzz?|fan\s*edits?|fanedit)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_INDIC_ENGLISH_SENTENCE_RE = re.compile(
+    r'\b(?:the|and|how|why|what|when|where|this|that|with|from|for|of|to|in|on|'
+    r'is|are|was|were|you|your|i|we|they)\b',
+    re.IGNORECASE,
+)
+
+# Music keeps performances and music-artist interviews; actor/film promo chats
+# are not tracks and are filtered in the music lane only.
+_MUSIC_KEEP_RE = re.compile(
+    r'\ba\s+colors\s+(?:show|interview)\b|\btiny\s+desk\b|\blive\s+lounge\b|'
+    r'\bessential\s+mix\b|\bbig\s+weekend\b|\bkexp\b|\bboiler\s+room\b|'
+    r'\bfull\s+performance\b|\bconcert\b|\blive\b',
+    re.IGNORECASE,
+)
+_MUSIC_NON_MUSIC_INTERVIEW_RE = re.compile(
+    r'\brate\s*(?:&|and|or)\s*slate\b|\bunpopular\s+opinions\b|'
+    r'\bbed[-\s]?breaking\s+scenes?\b|\bwrap\s+gifts?\b|'
+    r'\b(?:film|movie|tv)\s+(?:promo|press|junket)\b|'
+    r'\b(?:actor|actress)(?:es)?\s+interviews?\b|'
+    r'\b(?:olivia\s+colman|jenna\s+ortega)\b.{0,100}\binterview\b',
+    re.IGNORECASE,
+)
+
 
 TRENDING_MIN_RESULTS = 30
-_TRENDING_SOFT_REASONS = frozenset({'trailer', 'promo', 'brand_promo'})
+_TRENDING_RESTORE_SEVERITY = {
+    'event_cap': 0,
+    'channel_display_cap': 0,
+    'trailer': 1,
+    'promo': 1,
+    'brand_promo': 2,
+    'language': 3,
+    'visible_language': 3,
+    'entertainment': 4,
+    'brand_collab': 4,
+    'movie_review': 4,
+    'indic_romanized': 4,
+    'parody_edit': 5,
+    'prank_vlog': 5,
+    'comedy_skit': 5,
+    'hindi_song': 5,
+    'portuguese': 5,
+    'drama_tv': 6,
+    'full_episode': 6,
+    'kids': 6,
+    'scripted_drama': 6,
+}
+
+_EVENT_TYPE_RE = re.compile(
+    r'\b(?:crash(?:es|ed)?|collision|attack(?:ed|s)?|shooting|explosion|blast|'
+    r'fire|earthquake|hurricane|typhoon|flood|derailment|hostage|rescue|'
+    r'protest|riot|lawsuit|indictment|verdict|election|war|strike|blackout|'
+    r'meltdown|outage|hack)(?:s|ed|ing)?\b',
+    re.IGNORECASE,
+)
+_EVENT_ENTITY_STOPWORDS = frozenset('''
+    about after again before breaking could deadly details every from full how
+    into just live more most new news over should some still such that their
+    there these they this those update video videos watch what when where which
+    while will with would why
+'''.split())
+
+
+def _event_signatures(video):
+    title = str(video.get('title') or '')
+    entities = {
+        match.group(0)
+        for match in re.finditer(r"(?<![A-Za-z0-9])[A-Z][A-Za-z0-9'’-]{4,}(?![A-Za-z0-9])", title)
+        if match.group(0).lower() not in _EVENT_ENTITY_STOPWORDS
+    }
+    event_types = {match.group(0).lower() for match in _EVENT_TYPE_RE.finditer(title)}
+    return {(entity.lower(), event_type) for entity in entities for event_type in event_types}
+
+
+def cap_same_event(videos, per_event=2):
+    """Cap same-entity/same-event-type clusters, keeping the highest-viewed items.
+
+    A cluster requires both a distinctive proper-noun entity (at least five
+    characters) and an explicit event-type word. Generic title words never form
+    a cluster on their own.
+    """
+    videos = list(videos)
+    if len(videos) < 2:
+        return videos, []
+    groups = {}
+    for index, video in enumerate(videos):
+        for signature in _event_signatures(video):
+            groups.setdefault(signature, []).append(index)
+    dropped = set()
+    for signature in sorted(groups):
+        candidates = [index for index in groups[signature] if index not in dropped]
+        if len(candidates) <= max(0, int(per_event)):
+            continue
+        ordered = sorted(
+            candidates,
+            key=lambda index: (-_video_view(videos[index]), str(videos[index].get('id', ''))),
+        )
+        dropped.update(ordered[max(0, int(per_event)):])
+    kept = [video for index, video in enumerate(videos) if index not in dropped]
+    dropped_videos = [video for index, video in enumerate(videos) if index in dropped]
+    return kept, dropped_videos
 
 
 def content_type_blocked(video, section=None):
@@ -1094,6 +1269,10 @@ def content_type_blocked(video, section=None):
 
     if section == 'music':
         # Music keeps tracks/MVs and curated concerts; only clear promos go.
+        if _MUSIC_KEEP_RE.search(title):
+            return False, ''
+        if _MUSIC_NON_MUSIC_INTERVIEW_RE.search(title):
+            return True, 'non_music_interview'
         if _CONTENT_PROMO_TITLE_RE.search(title):
             return True, 'promo'
         return False, ''
@@ -1135,6 +1314,18 @@ def content_type_blocked(video, section=None):
             return True, 'parody_edit'
         if _CONTENT_SKIT_CHANNEL_RE.search(channel) or _CONTENT_SKIT_TITLE_RE.search(title):
             return True, 'comedy_skit'
+        if _CONTENT_MOVIE_REVIEW_RE.search(title):
+            return True, 'movie_review'
+        if (
+            _CONTENT_INDIC_FAN_EDIT_CHANNEL_RE.search(channel)
+            and title.count('|') >= 2
+            and len(_CONTENT_INDIC_ENGLISH_SENTENCE_RE.findall(title)) < 2
+        ):
+            return True, 'indic_romanized'
+        if _CONTENT_ENTERTAINMENT_CHANNEL_RE.search(channel) or _CONTENT_ENTERTAINMENT_TITLE_RE.search(title):
+            return True, 'entertainment'
+        if _CONTENT_BRAND_COLLAB_RE.search(title):
+            return True, 'brand_collab'
         if _CONTENT_HINDI_SONG_RE.search(title):
             return True, 'hindi_song'
         # Official vendor channels' short/mid corporate films (e.g. Hyundai
@@ -1157,11 +1348,11 @@ def trending_quality_reason(video, now=None):
 
 def _trending_restore_key(item):
     reason, video = item
-    severity = 0 if reason in _TRENDING_SOFT_REASONS else 1
+    severity = _TRENDING_RESTORE_SEVERITY.get(reason, 7)
     return (severity, -_video_view(video), str(video.get('id', '')))
 
 
-def filter_trending_quality(videos, *, now=None, minimum=TRENDING_MIN_RESULTS):
+def filter_trending_quality(videos, *, now=None, minimum=TRENDING_MIN_RESULTS, per_channel=None):
     """Apply trending quality rules, then restore the least-bad items to a floor.
 
     Returns ``(kept, dropped_reasons, restored_count, restored_reasons)``. The
@@ -1175,6 +1366,14 @@ def filter_trending_quality(videos, *, now=None, minimum=TRENDING_MIN_RESULTS):
             dropped.append((reason, video))
         else:
             kept.append(video)
+    kept, event_dropped = cap_same_event(kept)
+    dropped.extend(('event_cap', video) for video in event_dropped)
+    if per_channel is not None:
+        kept, channel_dropped = _channel_display_cap_split(
+            kept, per_channel=per_channel,
+            order_key=lambda video: (-_video_view(video), str(video.get('id', ''))),
+        )
+        dropped.extend(('channel_display_cap', video) for video in channel_dropped)
     dropped_reasons = Counter(reason for reason, _video in dropped)
     restored_reasons = Counter()
     if len(kept) < max(0, int(minimum)):
@@ -1436,7 +1635,9 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
                 quality_ready.append(record)
         if name == 'trending':
             (videos, trending_dropped_reasons,
-             trending_restored_for_min, trending_restored_reasons) = filter_trending_quality(quality_ready)
+             trending_restored_for_min, trending_restored_reasons) = filter_trending_quality(
+                quality_ready, per_channel=2,
+            )
             dropped_language = trending_dropped_reasons.get('language', 0)
             dropped_visible_language = (
                 trending_dropped_reasons.get('visible_language', 0)
@@ -1444,7 +1645,10 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
             )
             dropped_content_type = sum(
                 count for reason, count in trending_dropped_reasons.items()
-                if reason not in ('language', 'visible_language', 'portuguese')
+                if reason not in (
+                    'language', 'visible_language', 'portuguese',
+                    'event_cap', 'channel_display_cap',
+                )
             )
         else:
             for record in quality_ready:
@@ -1471,10 +1675,7 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
         videos, dropped_podcast = podcast_display_cap(videos)
     dropped_channel_display_cap = 0
     if name == 'trending':
-        videos, dropped_channel_display_cap = channel_display_cap(
-            videos, per_channel=2,
-            order_key=lambda video: (-_video_view(video), str(video.get('id', ''))),
-        )
+        dropped_channel_display_cap = trending_dropped_reasons.get('channel_display_cap', 0)
     final_videos = videos[:100]
     if name in ('trending', 'podcast', 'music'):
         for rank, video in enumerate(final_videos, 1):

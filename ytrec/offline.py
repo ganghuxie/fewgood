@@ -28,7 +28,9 @@ from .core import (
     is_official_short_promo,
     filter_ai_duration_and_promo_titles,
     channel_display_cap,
+    interleave_by_channel,
 )
+from .build_topics import retag_topic_lookup
 
 FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'editorial', 'videos')
 
@@ -81,6 +83,41 @@ def load_feeds(root='site/src/data'):
 
 def sort_by_view(videos):
     return sorted(videos, key=lambda video: (-_video_view(video), str(video.get('id', ''))))
+
+
+def _topic_metadata(root, extra_videos=()):
+    metadata = {}
+    for name in ('picks',) + FEED_NAMES + ('hn_pool', 'catalog'):
+        path = Path(root) / f'{name}.json'
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        videos = payload if isinstance(payload, list) else payload.get('videos', [])
+        for video in videos:
+            if isinstance(video, dict) and video.get('id'):
+                metadata.setdefault(video['id'], video)
+    for video in extra_videos:
+        if isinstance(video, dict) and video.get('id'):
+            metadata[video['id']] = video
+    return metadata
+
+
+def _retag_topics_file(root, extra_videos=(), write=True):
+    path = Path(root) / 'topic_lookup.json'
+    if not path.exists():
+        return 0
+    try:
+        lookup = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return 0
+    metadata = _topic_metadata(root, extra_videos)
+    retagged, changed = retag_topic_lookup(lookup, metadata)
+    if write and changed:
+        path.write_text(json.dumps(retagged, ensure_ascii=False, indent=2) + '\n')
+    return changed
 
 
 def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=True):
@@ -138,7 +175,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     if 'trending' in lang_kept:
         (lang_kept['trending'], trending_dropped_reasons,
          trending_restored_for_min, trending_restored_reasons) = filter_trending_quality(
-            lang_kept['trending'],
+            lang_kept['trending'], per_channel=2,
         )
         dropped_language['trending'] = trending_dropped_reasons.get('language', 0)
         dropped_visible_language['trending'] = (
@@ -147,7 +184,10 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         )
         dropped_content_type['trending'] = sum(
             count for reason, count in trending_dropped_reasons.items()
-            if reason not in ('language', 'visible_language', 'portuguese')
+            if reason not in (
+                'language', 'visible_language', 'portuguese',
+                'event_cap', 'channel_display_cap',
+            )
         )
 
     dropped_ai_topic = 0
@@ -180,13 +220,12 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
             continue
         if name == 'trending':
             ordered = sort_by_view(cap_kept[name])
-            ordered, dropped_channel_display_cap[name] = channel_display_cap(
-                ordered, per_channel=2,
-                order_key=lambda video: (-_video_view(video), str(video.get('id', ''))),
-            )
+            dropped_channel_display_cap[name] = trending_dropped_reasons.get('channel_display_cap', 0)
             final[name] = ordered
         elif name in ('ai', 'podcast', 'music', 'editorial'):
             final[name] = sorted(cap_kept[name], key=freshness_sort_key)
+            if name == 'music':
+                final[name] = interleave_by_channel(final[name])
         else:
             final[name] = cap_kept[name]
 
@@ -229,6 +268,11 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         {'community': {'videos': final.get('videos') or []}, 'ai': {'videos': final.get('ai') or []},
          'podcast': {'videos': final.get('podcast') or []}, 'editorial': {'videos': final.get('editorial') or []}},
         generated_at=generated_at or iso_now(),
+    )
+    retagged_topics = _retag_topics_file(
+        root,
+        [video for videos in final.values() for video in videos] + pick_payload['videos'],
+        write=write,
     )
 
     updated = {}
@@ -287,6 +331,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         'dropped_quality_reasons': {'trending': dict(sorted(trending_dropped_reasons.items()))},
         'restored_for_min': {'trending': trending_restored_for_min},
         'restored_for_min_reasons': {'trending': dict(sorted(trending_restored_reasons.items()))},
+        'retagged_topics': retagged_topics,
         'picks': len(pick_payload['videos']),
     }
     return summary, updated
