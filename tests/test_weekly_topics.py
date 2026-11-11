@@ -264,6 +264,8 @@ def test_llm_cap_invalid_topic_and_missing_key(monkeypatch):
     monkeypatch.setenv('DEEPSEEK_API_KEY', 'test-key')
     assignments, stats = wt.llm_assignments(videos, topics, cap=1, post=post)
     assert len(calls) == 1
+    assert calls[0]['model'] == 'deepseek-flash'
+    assert calls[0].get('thinking') == {'type': 'disabled'}
     assert stats['calls'] == 1
     assert assignments == {'llmvideo000': 'ai'}
     assert stats['invalid_topic_ids'] == 1

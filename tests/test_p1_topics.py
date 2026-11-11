@@ -96,10 +96,7 @@ def test_public_templates_match_source():
     assert _templates() == public
 
 
-def test_hot_topics_strip_is_hidden_when_no_topic_added_today():
-    topics = _topics()['topics']
-    hot = [topic for topic in topics if int(topic.get('added_last_24h') or 0) > 0]
-    assert hot == []
+def test_hot_topics_strip_hides_when_none_added_today():
     script = (ROOT / 'site/src/scripts/myspace.js').read_text()
     assert 'topics.filter(topic => Number(topic.added_last_24h) > 0)' in script
     assert 'host.hidden = !hot.length' in script

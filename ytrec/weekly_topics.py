@@ -53,7 +53,7 @@ from .thumbnails import (
     load_cache as load_thumbnail_cache,
     probe_thumbnail,
 )
-from .zh import request_deepseek
+from .zh import parse_json_response
 
 UTC = timezone.utc
 DEFAULT_DB = 'data/weekly_topics.sqlite'
@@ -288,6 +288,36 @@ def _empty_llm_stats(cap):
     }
 
 
+
+def _request_topic_llm(prompt, post):
+    """Call deepseek-flash in non-thinking mode; keys stay in the environment."""
+    key = os.environ.get('DEEPSEEK_API_KEY')
+    if not key:
+        raise RuntimeError('Set DEEPSEEK_API_KEY to assign topics with DeepSeek')
+    payload = {
+        'model': DEEPSEEK_MODEL,
+        'temperature': 0.2,
+        'response_format': {'type': 'json_object'},
+        'thinking': {'type': 'disabled'},
+        'messages': [{'role': 'user', 'content': prompt}],
+    }
+    response = post('https://api.deepseek.com/chat/completions', headers={
+        'Authorization': f'Bearer {key}', 'Content-Type': 'application/json',
+    }, json=payload, timeout=90)
+    response.raise_for_status()
+    body = response.json()
+    content = body.get('choices', [{}])[0].get('message', {}).get('content', '')
+    usage = body.get('usage') or {}
+    return parse_json_response(content), {
+        'prompt_tokens': int(usage.get('prompt_tokens', 0) or 0),
+        'completion_tokens': int(usage.get('completion_tokens', 0) or 0),
+        'total_tokens': int(usage.get('total_tokens', 0) or 0),
+        'prompt_cache_hit_tokens': int(usage.get('prompt_cache_hit_tokens', 0) or 0),
+        'prompt_cache_miss_tokens': int(usage.get('prompt_cache_miss_tokens', 0) or 0)
+            if usage.get('prompt_cache_miss_tokens') is not None else None,
+    }
+
+
 def llm_assignments(videos, topics, cap=30, post=None):
     """Return ``{video_id: topic_id}`` and token/cost stats for unmatched videos."""
     cap = max(0, int(cap))
@@ -310,9 +340,7 @@ def llm_assignments(videos, topics, cap=30, post=None):
         batch_ids = {video['id'] for video in batch}
         stats['calls'] += 1
         try:
-            result, usage, _model = request_deepseek(
-                _llm_prompt(batch, topics), model=DEEPSEEK_MODEL, post=post,
-            )
+            result, usage = _request_topic_llm(_llm_prompt(batch, topics), post)
         except Exception as error:
             stats['errors'].append(type(error).__name__)
             break
@@ -506,6 +534,7 @@ def _commit_paths():
         'site/public/topic_lookup.json',
         'site/public/catalog.json',
         'site/public/search-index.json',
+        'site/src/data/catalog.json',
         'config/topics.yaml',
         'data/playability.json',
         'data/thumbnails.json',

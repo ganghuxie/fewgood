@@ -15,3 +15,6 @@ node_modules/
 site/dist/
 site/.astro/
 logs/
+
+# symlink in local worktrees
+site/node_modules
