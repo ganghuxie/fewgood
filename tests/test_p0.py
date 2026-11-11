@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timezone, timedelta
 from ytrec.core import (
     language_ok,
     language_gate,
@@ -10,6 +11,11 @@ from ytrec.core import (
     PICKS_MIN_DURATION_SECONDS,
     PICKS_OFFICIAL_MIN_DURATION_SECONDS,
     is_official_brand_clip,
+    published_at_dt,
+    within_freshness_window,
+    freshness_bucket,
+    freshness_sort_key,
+    drop_stale_videos,
 )
 
 
@@ -19,6 +25,11 @@ def video(**overrides):
                 view_count=100, like_count=1)
     base.update(overrides)
     return base
+
+
+def _days_ago_iso(days, now=None):
+    now = now or datetime.now(timezone.utc)
+    return (now - timedelta(days=days)).isoformat().replace('+00:00', 'Z')
 
 
 # P0-1 language gate --------------------------------------------------------
@@ -176,6 +187,78 @@ def test_official_brand_clip_detection():
     assert is_official_brand_clip(video(title='官方 MV'))
     assert is_official_brand_clip(video(channel='Artist Official'))
     assert not is_official_brand_clip(video(title='A normal talk', channel='Lectures'))
+
+
+# P0-6 freshness gate ------------------------------------------------------
+
+def test_freshness_window_and_bucket():
+    now = datetime(2026, 11, 11, tzinfo=timezone.utc)
+    recent = video(published_at=_days_ago_iso(3, now))
+    middle = video(published_at=_days_ago_iso(20, now))
+    stale = video(published_at=_days_ago_iso(31, now))
+    missing = video()
+    missing.pop('published_at')
+    assert within_freshness_window(recent, now=now)
+    assert within_freshness_window(middle, now=now)
+    assert not within_freshness_window(stale, now=now)
+    assert not within_freshness_window(missing, now=now)
+    assert freshness_bucket(recent, now=now) == 0
+    assert freshness_bucket(middle, now=now) == 1
+    assert freshness_bucket(stale, now=now) == 2
+    assert freshness_bucket(missing, now=now) == 2
+
+
+def test_drop_stale_videos_counts_excluded():
+    now = datetime.now(timezone.utc)
+    videos = [
+        video(id='fresh', published_at=_days_ago_iso(6, now)),
+        video(id='stale', published_at=_days_ago_iso(31, now)),
+        video(id='missing'),
+    ]
+    videos[2].pop('published_at')
+    kept, dropped = drop_stale_videos(videos, now=now)
+    assert [v['id'] for v in kept] == ['fresh']
+    assert dropped == 2
+
+
+def test_build_picks_drops_stale_ai_and_podcast_but_keeps_fresh():
+    ai = [
+        video(id='ai-stale', channel_id='a1', published_at=_days_ago_iso(31), view_count=999),
+        video(id='ai-fresh', channel_id='a2', published_at=_days_ago_iso(6), view_count=1),
+    ]
+    podcast = [
+        video(id='pod-stale', channel_id='p1', published_at=_days_ago_iso(31), view_count=999,
+              why_good='近 30 天同类长视频播放第 1'),
+        video(id='pod-fresh', channel_id='p2', published_at=_days_ago_iso(6), view_count=1,
+              why_good='近 30 天同类长视频播放第 2'),
+    ]
+    picks = build_picks({'community': {'videos': []}, 'ai': {'videos': ai}, 'podcast': {'videos': podcast}})
+    ids = [v['id'] for v in picks['videos']]
+    assert 'ai-stale' not in ids
+    assert 'pod-stale' not in ids
+    assert 'ai-fresh' in ids
+    assert 'pod-fresh' in ids
+
+
+def test_build_picks_keeps_old_community_classics():
+    classic = video(id='sugar', channel_id='c1', published_at=_days_ago_iso(6000),
+                    recommenders=99, months=60, span_days=5000)
+    picks = build_picks({'community': {'videos': [classic]}, 'ai': {'videos': []}, 'podcast': {'videos': []}})
+    assert [v['id'] for v in picks['videos']] == ['sugar']
+
+
+def test_freshness_sort_prefers_recent_over_higher_views():
+    now = datetime.now(timezone.utc)
+    older = video(id='older', channel_id='a1', published_at=_days_ago_iso(20, now), view_count=999)
+    recent = video(id='recent', channel_id='a2', published_at=_days_ago_iso(3, now), view_count=1)
+    ordered = sorted([older, recent], key=lambda v: freshness_sort_key(v, now=now))
+    assert [v['id'] for v in ordered] == ['recent', 'older']
+
+
+def test_published_at_dt_parses_and_rejects_bad_dates():
+    assert published_at_dt(video(published_at='2026-11-01T00:00:00Z')).tzinfo is not None
+    bad = video(published_at='not-a-date')
+    assert published_at_dt(bad) is None
 
 
 def test_enrich_records_merges_videos_list_fields():

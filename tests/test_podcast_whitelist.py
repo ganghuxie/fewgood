@@ -12,3 +12,13 @@ def test_short_episode_would_be_dropped():
     short = dict(title='x', default_audio_language='en', duration_seconds=1499)
     assert language_gate(short)
     assert short['duration_seconds'] < MIN_DURATION
+
+
+def test_no_unresolved_zhang_stub_and_xiaoxi_kept():
+    payload, channels, minimum = load_podcast_channels()
+    names = {channel['name'] for channel in channels}
+    assert '张小珺' not in names
+    xiaoxi = next(channel for channel in channels if channel['name'] == '张小玺')
+    assert xiaoxi['handle'] == 'xiaojunpodcast'
+    assert xiaoxi['youtube_channel_id'] == 'UC3Sv1JuKpbOx3csUO8FAo5g'
+    assert xiaoxi['youtube_title'] == 'Zhang Xiaojun Podcast'

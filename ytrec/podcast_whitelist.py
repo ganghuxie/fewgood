@@ -10,7 +10,7 @@ import yaml
 from .core import (
     Client, youtube_key, youtube_videos, video_record, iso_now, write_feed,
     language_gate, podcast_display_cap, why_good_for, dedupe_channel_caps,
-    _load_existing_feeds,
+    _load_existing_feeds, freshness_sort_key, drop_stale_videos,
 )
 
 MIN_DURATION = 1500
@@ -141,12 +141,14 @@ def curated_channel_feed(config_path, client=None, output='site/src/data', quota
         videos.append(record)
     existing = _load_existing_feeds(feed_name, output)
     kept, dropped_channel = dedupe_channel_caps(videos, existing=existing, feed_name=feed_name)
+    kept, dropped_stale = drop_stale_videos(kept)
     dropped_display = 0
     if display_cap:
         kept, dropped_display = podcast_display_cap(kept)
     kept.sort(key=lambda video: (-int(video.get('view_count') or 0), str(video.get('id', ''))))
     for rank, video in enumerate(kept, 1):
         video['why_good'] = why_good_for(video, feed_name, rank=rank)
+    kept.sort(key=freshness_sort_key)
     out = dict(generated_at=iso_now(), source='curated_whitelist',
                min_duration_seconds=minimum,
                channels_configured=len(channels),
@@ -154,6 +156,7 @@ def curated_channel_feed(config_path, client=None, output='site/src/data', quota
                unresolved=[name for name in unresolved if name],
                candidates_fetched=len(unique), dropped_short=dropped_short,
                dropped_language=dropped_language, dropped_channel=dropped_channel,
+               dropped_stale=dropped_stale,
                final_count=len(kept), quota_units_approx=units + len(channels),
                videos=kept)
     if maximum is not None:

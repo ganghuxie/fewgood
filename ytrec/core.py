@@ -352,6 +352,68 @@ def _published_utc(video):
     return parsed.astimezone(UTC)
 
 
+# Freshness gate -----------------------------------------------------------
+# Editorial feeds that curate "new" content (AI, podcast, music) keep only
+# items published within 30 days and rank the last 7 days above 7-30 day
+# items. Community classics (e.g. Sugar, 2009) never pass through this gate.
+
+FRESHNESS_MAX_DAYS = 30
+FRESHNESS_RECENT_DAYS = 7
+
+
+def published_at_dt(video):
+    """Parse a record's `published_at` as an aware UTC datetime, else None."""
+    value = video.get('published_at')
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
+    except (TypeError, ValueError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=UTC)
+    return parsed.astimezone(UTC)
+
+
+def _freshness_now(now=None):
+    reference = now or datetime.now(UTC)
+    if reference.tzinfo is None:
+        reference = reference.replace(tzinfo=UTC)
+    return reference.astimezone(UTC)
+
+
+def within_freshness_window(video, now=None, max_days=FRESHNESS_MAX_DAYS):
+    """Return True when a video is no older than `max_days`; missing dates fail."""
+    published = published_at_dt(video)
+    if published is None:
+        return False
+    return (_freshness_now(now) - published).total_seconds() <= max_days * 86400
+
+
+def freshness_bucket(video, now=None):
+    """0 = published in the last 7 days, 1 = 7-30 days, 2 = older or missing."""
+    published = published_at_dt(video)
+    if published is None:
+        return 2
+    age_days = (_freshness_now(now) - published).total_seconds() / 86400
+    if age_days <= FRESHNESS_RECENT_DAYS:
+        return 0
+    if age_days <= FRESHNESS_MAX_DAYS:
+        return 1
+    return 2
+
+
+def freshness_sort_key(video, now=None):
+    """Recency-first ordering, then view count and id tiebreaks."""
+    return (freshness_bucket(video, now=now), -_video_view(video), str(video.get('id', '')))
+
+
+def drop_stale_videos(videos, now=None):
+    """Drop records outside the freshness window and return the dropped count."""
+    kept = [video for video in videos if within_freshness_window(video, now=now)]
+    return kept, len(videos) - len(kept)
+
+
 class _ChannelBudget:
     def __init__(self):
         self.dates = {}
@@ -534,7 +596,8 @@ def build_picks(feeds, generated_at=None, limit=10):
         if key == 'community':
             videos.sort(key=lambda item: (-int(item.get('recommenders') or 0), -int(item.get('months') or 0)))
         else:
-            videos.sort(key=lambda item: (-_video_view(item), str(item.get('id', ''))))
+            videos, _dropped = drop_stale_videos(videos)
+            videos.sort(key=freshness_sort_key)
         groups[key] = (videos, source_label)
     quotas = {'community': 4, 'ai': 4, 'podcast': 2}
     picked = []
@@ -743,7 +806,7 @@ def resolve_ai_channels(seed='config/ai_accounts_seed.yaml', output='config/ai_c
 def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/src/data', quota_limit=8000):
     key = youtube_key(); client = client or Client(interval=.05, db=None, quota_limit=quota_limit)
     channels = yaml.safe_load(Path(channels_file).read_text()).get('channels', [])
-    cutoff = datetime.now(UTC) - timedelta(days=7); ids, units = [], 0
+    cutoff = datetime.now(UTC) - timedelta(days=FRESHNESS_MAX_DAYS); ids, units = [], 0
     for channel in channels:
         try:
             response = client.get(YOUTUBE_API + 'channels', dict(part='contentDetails', id=channel['youtube_channel_id'], key=key), youtube=True); units += 1
@@ -761,13 +824,14 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     videos = [v for v in map(video_record, raws) if v['duration_seconds'] >= 60]
     dropped_language = sum(1 for v in videos if not language_gate(v))
     videos = [v for v in videos if language_gate(v)]
+    videos, dropped_stale = drop_stale_videos(videos)
     videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds('ai', output), feed_name='ai')
-    videos.sort(key=lambda v: (-v['view_count'], v['id']))
     for video in videos:
         video['why_good'] = why_good_for(video, 'ai')
-    payload = dict(generated_at=iso_now(), window_days=7, exclude_shorts_under_seconds=60,
+    videos.sort(key=freshness_sort_key)
+    payload = dict(generated_at=iso_now(), window_days=FRESHNESS_MAX_DAYS, exclude_shorts_under_seconds=60,
                    quota_units_approx=units, channels_used=len(channels), dropped_language=dropped_language,
-                   dropped_channel=dropped_channel, videos=videos)
+                   dropped_channel=dropped_channel, dropped_stale=dropped_stale, videos=videos)
     write_feed('ai', payload, output)
     print(f"AI: {len(videos)} videos from {len(channels)} channels; approximate YouTube quota units: {units}")
     print(quota_line(quota_limit))

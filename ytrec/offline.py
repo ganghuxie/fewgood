@@ -17,6 +17,8 @@ from .core import (
     build_picks,
     write_feed,
     _video_view,
+    freshness_sort_key,
+    drop_stale_videos,
 )
 
 FEED_NAMES = ('trending', 'ai', 'podcast', 'music', 'videos')
@@ -94,6 +96,11 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
 
     cap_kept, dropped_channel = apply_channel_caps_pool(lang_kept)
 
+    dropped_stale = {}
+    for name in ('ai', 'podcast', 'music'):
+        if name in cap_kept:
+            cap_kept[name], dropped_stale[name] = drop_stale_videos(cap_kept[name])
+
     dropped_podcast = 0
     if 'podcast' in cap_kept:
         cap_kept['podcast'], dropped_podcast = podcast_display_cap(cap_kept['podcast'])
@@ -102,14 +109,16 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     for name in FEED_NAMES:
         if name not in cap_kept:
             continue
-        if name in ('trending', 'ai', 'podcast', 'music'):
+        if name == 'trending':
             final[name] = sort_by_view(cap_kept[name])
+        elif name in ('ai', 'podcast', 'music'):
+            final[name] = sorted(cap_kept[name], key=freshness_sort_key)
         else:
             final[name] = cap_kept[name]
 
     for name, videos in final.items():
         if name in ('trending', 'podcast', 'music'):
-            for rank, video in enumerate(videos, 1):
+            for rank, video in enumerate(sort_by_view(videos), 1):
                 video['why_good'] = why_good_for(video, name, rank=rank)
         elif name == 'ai':
             for video in videos:
@@ -133,6 +142,8 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                            dropped_channel=dropped_channel.get(name, 0))
             if name == 'podcast':
                 payload['dropped_podcast_display_cap'] = dropped_podcast
+            if name in ('ai', 'podcast', 'music'):
+                payload['dropped_stale'] = int(feeds[name].get('dropped_stale') or 0) + dropped_stale.get(name, 0)
             if name == 'videos':
                 payload['feed'] = 'community'
             write_feed(name, payload, root)
@@ -143,6 +154,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     summary = {
         'generated_at': pick_payload['generated_at'],
         'feeds': {name: {'kept': len(final.get(name, [])), 'dropped_language': dropped_language.get(name, 0), 'dropped_channel': dropped_channel.get(name, 0)} for name in feeds},
+        'dropped_stale': dropped_stale,
         'dropped_podcast_display_cap': dropped_podcast,
         'picks': len(pick_payload['videos']),
     }
