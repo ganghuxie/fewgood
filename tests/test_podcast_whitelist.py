@@ -14,11 +14,11 @@ def test_short_episode_would_be_dropped():
     assert short['duration_seconds'] < MIN_DURATION
 
 
-def test_no_unresolved_zhang_stub_and_xiaoxi_kept():
+def test_zhang_xiaojun_label_is_correct():
     payload, channels, minimum = load_podcast_channels()
     names = {channel['name'] for channel in channels}
-    assert '张小珺' not in names
-    xiaoxi = next(channel for channel in channels if channel['name'] == '张小玺')
-    assert xiaoxi['handle'] == 'xiaojunpodcast'
-    assert xiaoxi['youtube_channel_id'] == 'UC3Sv1JuKpbOx3csUO8FAo5g'
-    assert xiaoxi['youtube_title'] == 'Zhang Xiaojun Podcast'
+    assert '张小玺' not in names
+    xiaojun = next(channel for channel in channels if channel['name'] == '张小珺')
+    assert xiaojun['handle'] == 'xiaojunpodcast'
+    assert xiaojun['youtube_channel_id'] == 'UC3Sv1JuKpbOx3csUO8FAo5g'
+    assert xiaojun['youtube_title'] == 'Zhang Xiaojun Podcast'
