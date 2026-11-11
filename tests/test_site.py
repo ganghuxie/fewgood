@@ -95,3 +95,36 @@ def test_video_page_heading_keeps_last_updated_outside_h1():
     source = (Path(__file__).resolve().parents[1] / 'site/src/components/VideoPage.astro').read_text()
     assert '<h1>{label}</h1>' in source
     assert '<h1>{label}{feed' not in source
+
+
+def test_picks_labels_use_jingxuan_and_related_heading_is_other_jingxuan():
+    root = Path(__file__).resolve().parents[1]
+    brand = (root / 'site/src/lib/brand.mjs').read_text()
+    catalog = (root / 'site/scripts/build-catalog.mjs').read_text()
+    detail = (root / 'site/src/pages/v/[id].astro').read_text()
+    assert "picks: '精选'" in brand
+    assert "picks: '精选'" in catalog
+    assert "'其他精选'" in detail
+    for source in (brand, catalog, detail):
+        assert '今日精选' not in source
+
+
+def test_myspace_card_shows_community_classic_badge_only_when_flagged():
+    subprocess.run(['node', '--input-type=module', '-e', '''
+import assert from 'node:assert/strict';
+import { card } from './site/src/lib/myspace-card.mjs';
+
+const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
+const classic = card({ ...base, community_classic: true }, '/v/abcdefghijk/');
+assert.ok(classic.includes('<span class="community-classic-badge">社区经典</span>'));
+assert.ok(classic.indexOf('社区经典') < classic.indexOf('class="duration"'));
+assert.ok(!card(base, '/v/abcdefghijk/').includes('社区经典'));
+'''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
+def test_layout_keeps_global_styles_and_classic_badge():
+    source = (Path(__file__).resolve().parents[1] / 'site/src/components/Layout.astro').read_text()
+    assert ':root{' in source
+    assert '.site-header' in source
+    assert '.community-classic-badge' in source
+    assert '.video-grid' in source

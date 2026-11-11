@@ -10,7 +10,7 @@ const [picks, trending, ai, podcast, music, editorial, community, channels, zh, 
 const index = new Map();
 const topicById = new Map((topics.topics || []).map(topic => [topic.id, topic]));
 const channelLabels = new Map();
-const sectionLabels = { picks: '今日精选', trending: '趋势', ai: 'AI前沿', podcast: '播客', music: '音乐', editorial: '科学教育', community: '社区推荐' };
+const sectionLabels = { picks: '精选', trending: '趋势', ai: 'AI前沿', podcast: '播客', music: '音乐', editorial: '科学教育', community: '社区推荐' };
 const sectionCodes = { trending: 0, ai: 1, podcast: 2, music: 3, community: 4, picks: 5, editorial: 6 };
 const addLabel = (map, id, section) => { if (!id) return; const labels = map.get(id) || new Set(); labels.add(sectionLabels[section]); map.set(id, labels); };
 const addVideo = (video, section, channelId = video.channel_id, external = false) => {

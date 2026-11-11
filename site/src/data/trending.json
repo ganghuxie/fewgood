@@ -14,7 +14,7 @@
     "medium",
     "long"
   ],
-  "final_count": 100,
+  "final_count": 44,
   "quota_units_approx": 1010,
   "videos": [
     {
@@ -161,32 +161,6 @@
       "why_good": "反诈题材，过程有戏剧性。"
     },
     {
-      "id": "q6tFekbtzNw",
-      "title": "I BOUGHT MY DREAM CAR!! (2027 Rolls Royce)",
-      "channel": "FaZe Rug",
-      "channel_id": "UCilwZiBBfI9X6yiZRzWty8Q",
-      "published_at": "2026-11-04T22:03:19Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 1660,
-      "view_count": 4575323,
-      "like_count": 98423,
-      "why_good": "圆梦提车内容，粉丝向的轻松看点。"
-    },
-    {
-      "id": "F1inSnWGaLk",
-      "title": "BLUEY - Best TRY NOT TO LAUGH - COMPILATION 🤣 TOTAL GOOFY MAYHEM [YTP]",
-      "channel": "PAW YTP",
-      "channel_id": "UCHUcU1A9KhO9Sf4-8E5-ArA",
-      "published_at": "2026-10-20T14:45:01Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 2014,
-      "view_count": 4507775,
-      "like_count": 18514,
-      "why_good": "纯娱乐混剪，适合放松时看。"
-    },
-    {
       "id": "N-ZdH5kQQ1I",
       "title": "Magale | Baththa | Sai Abhyankar | Vijay Sethupathi",
       "channel": "Moon editzz",
@@ -250,19 +224,6 @@
       "view_count": 3331449,
       "like_count": 9495,
       "why_good": "手工教程合集，适合想找居家动手项目的观众。"
-    },
-    {
-      "id": "fZh4mYDxixQ",
-      "title": "AFRICAN HOME: HALLOWEEN ZOMBIE",
-      "channel": "SamSpedy",
-      "channel_id": "UCUocOQtoaHPuT0K8lME559A",
-      "published_at": "2026-11-02T19:07:50Z",
-      "default_audio_language": "en",
-      "default_language": "en",
-      "duration_seconds": 2646,
-      "view_count": 3146342,
-      "like_count": 50100,
-      "why_good": "系列喜剧短剧，风格夸张搞笑，轻松解压。"
     },
     {
       "id": "NdoymvcC8LY",
@@ -330,19 +291,6 @@
       "why_good": "气象分析视角，帮观众重新理解冬季天气预期。"
     },
     {
-      "id": "C_2wWuYomjo",
-      "title": "Perguntando a Profissão dos Passageiros da Primeira Classe (passagem de 70 mil)",
-      "channel": "Joao Curry",
-      "channel_id": "UCDxCpvLK9Uqtrfcdf_YvU4A",
-      "published_at": "2026-10-28T21:14:48Z",
-      "default_audio_language": "en",
-      "default_language": "pt-BR",
-      "duration_seconds": 2758,
-      "view_count": 2619474,
-      "like_count": 60724,
-      "why_good": "街头采访形式，满足对头等舱乘客身份的好奇。"
-    },
-    {
       "id": "zKtbu_O484k",
       "title": "MrBeast Trapped My Wife",
       "channel": "ZHC",
@@ -406,19 +354,6 @@
       "view_count": 2377190,
       "like_count": 21592,
       "why_good": "经典车型重生，车迷可看 4K 细节。"
-    },
-    {
-      "id": "nMLeGbEsSBM",
-      "title": "New Song 2026 | New Hindi Song | Teri Yaadon Ka Silsila | Emran Hashmi | Kriti Sanon| New Song",
-      "channel": "Prakash Jojawar",
-      "channel_id": "UCigy0uZUtH6V2PAYHftQ4Qg",
-      "published_at": "2026-11-05T02:10:38Z",
-      "default_audio_language": null,
-      "default_language": "en",
-      "duration_seconds": 289,
-      "view_count": 2353558,
-      "like_count": 6221,
-      "why_good": "宝莱坞风格新歌，适合喜欢印地语音乐的人。"
     },
     {
       "id": "YLrpvo1YJM0",
@@ -659,8 +594,21 @@
     "min": "2026-10-12T15:38:02Z",
     "max": "2026-11-08T16:56:01Z"
   },
-  "dropped_content_type": 1,
-  "dropped_visible_language": 0,
+  "dropped_content_type": 4,
+  "dropped_visible_language": 1,
   "dropped_official_short": 0,
-  "dropped_channel_display_cap": 0
+  "dropped_channel_display_cap": 0,
+  "dropped_quality_reasons": {
+    "comedy_skit": 1,
+    "hindi_song": 1,
+    "parody_edit": 1,
+    "portuguese": 1,
+    "prank_vlog": 1
+  },
+  "dropped_prank_vlog": 1,
+  "dropped_parody_edit": 1,
+  "dropped_comedy_skit": 1,
+  "dropped_portuguese": 1,
+  "dropped_hindi_song": 1,
+  "restored_for_min": 0
 }

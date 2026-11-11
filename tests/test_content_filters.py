@@ -8,8 +8,10 @@ from ytrec.core import (
     channel_display_cap,
     content_type_blocked,
     filter_ai_duration_and_promo_titles,
+    filter_trending_quality,
     is_official_brand_clip,
     is_official_short_promo,
+    is_community_classic,
     visible_language_blocked,
 )
 from ytrec.offline import rebuild_offline
@@ -136,6 +138,52 @@ def test_trending_keeps_science_tech_and_documentary_talks():
         assert not content_type_blocked(item, 'trending')[0]
 
 
+def test_trending_blocks_faze_rug_vlog_but_keeps_veritasium():
+    faze = video(title='I BOUGHT MY DREAM CAR!!', channel='FaZe Rug')
+    veritasium = video(title='I finally saw quantum mechanics with my own eyes', channel='Veritasium')
+    assert content_type_blocked(faze, 'trending') == (True, 'prank_vlog')
+    assert not content_type_blocked(veritasium, 'trending')[0]
+
+    # A title that only says "vlog" is not enough; Jason asked for vlog-prank /
+    # flex content, not every travel or lab diary.
+    assert not content_type_blocked(
+        video(title='A week in the lab (vlog)', channel='Veritasium'),
+        'trending',
+    )[0]
+    assert content_type_blocked(
+        video(title='Epic prank vlog at the mall', channel='Unknown'),
+        'trending',
+    ) == (True, 'prank_vlog')
+
+
+def test_trending_blocks_ytp_and_parody_edits():
+    blocked, reason = content_type_blocked(
+        video(title='BLUEY FLOOR TIME [YTP]', channel='Parody Uploads'),
+        'trending',
+    )
+    assert blocked and reason == 'parody_edit'
+
+
+def test_trending_blocks_samspedy_style_comedy_skit():
+    blocked, reason = content_type_blocked(
+        video(title='AFRICAN HOME: HALLOWEEN ZOMBIE', channel='SamSpedy'),
+        'trending',
+    )
+    assert blocked and reason == 'comedy_skit'
+
+
+def test_trending_blocks_hindi_song_but_not_english_tech_talk():
+    blocked, reason = content_type_blocked(
+        video(title='New Hindi Song | Prakash Jojawar', channel='Prakash Jojawar'),
+        'trending',
+    )
+    assert blocked and reason == 'hindi_song'
+    assert not content_type_blocked(
+        video(title='A normal English tech talk about databases', channel='Engineering Talks'),
+        'trending',
+    )[0]
+
+
 def test_podcast_full_episode_audio_is_blocked():
     blocked, reason = content_type_blocked(
         video(title='Seinfeld - Full Episode (Audio)', channel='Acquired',
@@ -172,6 +220,46 @@ def test_visible_language_keeps_english_chinese_and_rare_borrowed_chars():
     assert not visible_language_blocked(video(title='中文标题（特别版）'))
     assert not visible_language_blocked(video(title='中文标题 ا'))
     assert not visible_language_blocked(video(title='English title with one ă'))
+
+
+def test_visible_language_blocks_portuguese_without_treating_cedilla_as_portuguese():
+    assert visible_language_blocked(video(title='Perguntando a Profissão dos Passageiros…'))
+    assert visible_language_blocked(video(title='Não deixe de assistir'))
+    assert visible_language_blocked(video(title='A normal English title', default_language='pt-BR'))
+    assert not visible_language_blocked(video(title='François présente un film'))
+    assert not visible_language_blocked(video(title='The façade of a normal English video'))
+
+
+def test_community_classic_requires_community_source_and_more_than_two_years():
+    old = (NOW - timedelta(days=3 * 365)).isoformat().replace('+00:00', 'Z')
+    recent = (NOW - timedelta(days=6)).isoformat().replace('+00:00', 'Z')
+    assert is_community_classic(video(source='community', published_at=old), now=NOW)
+    assert is_community_classic(video(pick_source='社区推荐', published_at=old), now=NOW)
+    assert not is_community_classic(video(source='ai', published_at=old), now=NOW)
+    assert not is_community_classic(video(source='podcast', published_at=old), now=NOW)
+    assert not is_community_classic(video(source='community', published_at=recent), now=NOW)
+    assert not is_community_classic(video(source='community', published_at='not-a-date'), now=NOW)
+
+
+def test_trending_floor_restores_five_least_bad_items_to_thirty():
+    good = [
+        video(id=f'good-{index}', title=f'Documentary number {index}', channel=f'Channel {index}',
+              view_count=1000 - index)
+        for index in range(25)
+    ]
+    blocked = [
+        video(id=f'blocked-{index}', title=f'BLUEY [YTP] part {index}', channel='Parody Uploads',
+              view_count=index)
+        for index in range(15)
+    ]
+    kept, dropped, restored, restored_reasons = filter_trending_quality(good + blocked)
+    assert len(kept) == 30
+    assert dropped['parody_edit'] == 15
+    assert restored == 5
+    assert restored_reasons['parody_edit'] == 5
+    assert {item['id'] for item in kept if item['id'].startswith('blocked-')} == {
+        f'blocked-{index}' for index in range(10, 15)
+    }
 
 
 # Per-tab channel display cap ---------------------------------------------
@@ -224,8 +312,9 @@ def test_rebuild_offline_applies_ai_duration_and_trending_drama_gate(tmp_path):
 
     assert summary['feeds']['ai']['kept'] == 1
     assert summary['dropped_ai_short'] == 1
-    assert summary['feeds']['trending']['kept'] == 1
+    assert summary['feeds']['trending']['kept'] == 2
     assert summary['dropped_content_type']['trending'] == 1
+    assert summary['restored_for_min']['trending'] == 1
     assert summary['feeds']['music']['kept'] == 1
 
 

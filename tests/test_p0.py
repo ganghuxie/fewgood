@@ -290,6 +290,7 @@ def test_build_picks_keeps_old_community_classics():
                     recommenders=99, months=60, span_days=5000)
     picks = build_picks({'community': {'videos': [classic]}, 'ai': {'videos': []}, 'podcast': {'videos': []}})
     assert [v['id'] for v in picks['videos']] == ['sugar']
+    assert picks['videos'][0]['community_classic'] is True
 
 
 def test_freshness_sort_prefers_recent_over_higher_views():

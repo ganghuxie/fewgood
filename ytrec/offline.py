@@ -24,6 +24,7 @@ from .core import (
     cap_ai_feed_display,
     visible_language_blocked,
     content_type_blocked,
+    filter_trending_quality,
     is_official_short_promo,
     filter_ai_duration_and_promo_titles,
     channel_display_cap,
@@ -97,16 +98,27 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     dropped_visible_language = {}
     dropped_content_type = {}
     dropped_official_short = {}
+    trending_dropped_reasons = {}
+    trending_restored_for_min = 0
+    trending_restored_reasons = {}
     for name, feed in feeds.items():
         kept = []
         d_language = d_visible = d_content = d_official = 0
         editorial = name in editorial_feeds
         for video in feed.get('videos', []):
+            if name == 'trending':
+                # Trending quality (including its 30-item floor) is applied
+                # once below, through the same helper used by the daily feed.
+                if is_official_short_promo(video, name):
+                    d_official += 1
+                else:
+                    kept.append(video)
+                continue
             if not language_gate(video):
                 d_language += 1
                 continue
             if editorial:
-                if visible_language_blocked(video):
+                if visible_language_blocked(video, name):
                     d_visible += 1
                     continue
                 blocked, _reason = content_type_blocked(video, name)
@@ -122,6 +134,21 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         dropped_visible_language[name] = d_visible
         dropped_content_type[name] = d_content
         dropped_official_short[name] = d_official
+
+    if 'trending' in lang_kept:
+        (lang_kept['trending'], trending_dropped_reasons,
+         trending_restored_for_min, trending_restored_reasons) = filter_trending_quality(
+            lang_kept['trending'],
+        )
+        dropped_language['trending'] = trending_dropped_reasons.get('language', 0)
+        dropped_visible_language['trending'] = (
+            trending_dropped_reasons.get('visible_language', 0)
+            + trending_dropped_reasons.get('portuguese', 0)
+        )
+        dropped_content_type['trending'] = sum(
+            count for reason, count in trending_dropped_reasons.items()
+            if reason not in ('language', 'visible_language', 'portuguese')
+        )
 
     dropped_ai_topic = 0
     if 'ai' in lang_kept:
@@ -227,6 +254,13 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
                 payload['final_count'] = len(final.get('ai', []))
             if name == 'trending':
                 payload['dropped_channel_display_cap'] = dropped_channel_display_cap.get(name, 0)
+                payload['final_count'] = len(final.get(name, []))
+                payload['dropped_quality_reasons'] = dict(sorted(trending_dropped_reasons.items()))
+                for reason, count in trending_dropped_reasons.items():
+                    payload[f'dropped_{reason}'] = count
+                payload['restored_for_min'] = trending_restored_for_min
+                if trending_restored_reasons:
+                    payload['restored_for_min_reasons'] = dict(sorted(trending_restored_reasons.items()))
             if name in ('ai', 'podcast', 'music', 'editorial'):
                 payload['dropped_stale'] = int(feeds[name].get('dropped_stale') or 0) + dropped_stale.get(name, 0)
             if name == 'videos':
@@ -250,6 +284,9 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
         'dropped_official_short': dropped_official_short,
         'dropped_stale': dropped_stale,
         'dropped_podcast_display_cap': dropped_podcast,
+        'dropped_quality_reasons': {'trending': dict(sorted(trending_dropped_reasons.items()))},
+        'restored_for_min': {'trending': trending_restored_for_min},
+        'restored_for_min_reasons': {'trending': dict(sorted(trending_restored_reasons.items()))},
         'picks': len(pick_payload['videos']),
     }
     return summary, updated

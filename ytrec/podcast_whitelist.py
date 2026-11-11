@@ -317,7 +317,7 @@ def _curated_feed_from_channels(channels, *, feed_name, minimum, maximum=None, d
         if not language_gate(record):
             dropped_language += 1
             continue
-        if visible_language_blocked(record):
+        if visible_language_blocked(record, feed_name):
             dropped_visible_language += 1
             continue
         blocked, _reason = content_type_blocked(record, feed_name)

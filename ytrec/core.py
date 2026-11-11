@@ -373,6 +373,13 @@ _VISIBLE_LANGUAGE_SCRIPT_RE = re.compile(
 _VIETNAMESE_LETTERS = frozenset('ăâêôơưđĂÂÊÔƠƯĐ')
 _VIETNAMESE_MIN_CHARS = 2
 _VISIBLE_SCRIPT_MIN_CHARS = 3
+_PORTUGUESE_ACCENT_RE = re.compile(r'[ãõÃÕ]')
+_PORTUGUESE_FUNCTION_RE = re.compile(
+    r'\b(?:não|nao|uma|dos|das|para|com|você|voce|porque|sobre|isso|'
+    r'aqui|mais|muito|muita|pelo|pela|pelos|pelas|nós|nos|é|são|sao|'
+    r'está|esta|estão|estao|tem|têm|foi|vai|seu|sua|seus|suas)\b',
+    re.IGNORECASE,
+)
 
 
 def _title_uses_foreign_script(title):
@@ -401,10 +408,42 @@ def _title_uses_visible_foreign_language(title):
     return vietnamese >= _VIETNAMESE_MIN_CHARS
 
 
-def visible_language_blocked(video):
-    """Visible-title language net; accepts a video dict or a title string."""
+def _uses_portuguese(video):
+    """Conservative Portuguese detection for visible titles and metadata."""
+    if not isinstance(video, dict):
+        title = str(video or '')
+    else:
+        title = str(video.get('title') or '')
+        for key in ('default_audio_language', 'default_language'):
+            value = str(video.get(key) or '').strip().lower()
+            if value.startswith('pt'):
+                return True
+    # A lone ç is shared with French and is intentionally not enough.
+    if _PORTUGUESE_ACCENT_RE.search(title):
+        return True
+    words = {
+        match.group(0).lower()
+        for match in _PORTUGUESE_FUNCTION_RE.finditer(title)
+    }
+    return len(words) >= 2
+
+
+def visible_language_reason(video, section=None):
+    """Return why a visible title fails the language net, or an empty string."""
     title = video.get('title', '') if isinstance(video, dict) else str(video or '')
-    return _title_uses_visible_foreign_language(title)
+    if _title_uses_visible_foreign_language(title):
+        return 'visible_language'
+    # Music has its own curated lane; leave its current filter behavior intact.
+    if str(section or '').lower() == 'music':
+        return ''
+    if _uses_portuguese(video):
+        return 'portuguese'
+    return ''
+
+
+def visible_language_blocked(video, section=None):
+    """Visible-title language net; accepts a video dict or a title string."""
+    return bool(visible_language_reason(video, section))
 
 
 def visible_language_gate(video):
@@ -531,6 +570,24 @@ def _freshness_now(now=None):
     if reference.tzinfo is None:
         reference = reference.replace(tzinfo=UTC)
     return reference.astimezone(UTC)
+
+
+COMMUNITY_CLASSIC_DAYS = 730
+
+
+def is_community_classic(video, now=None):
+    """Return whether a community/HN pick predates the two-year cutoff."""
+    if not isinstance(video, dict):
+        return False
+    source = str(video.get('source') or '')
+    pick_source = str(video.get('pick_source') or '')
+    if source != 'community' and pick_source != '社区推荐':
+        return False
+    published = published_at_dt(video)
+    if published is None:
+        return False
+    age_seconds = (_freshness_now(now) - published).total_seconds()
+    return age_seconds > COMMUNITY_CLASSIC_DAYS * 86400
 
 
 def within_freshness_window(video, now=None, max_days=FRESHNESS_MAX_DAYS):
@@ -972,6 +1029,48 @@ _CONTENT_OFFICIAL_MV_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Trending-only entertainment cleanup. These are title/channel rules, never
+# video ids. The science/tech allow-list above runs first so explainers and
+# talks are not caught by broad words such as "sketch" or "flex".
+_CONTENT_PRANK_VLOG_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])(?:faze\s+(?:rug|kay|adapt|sway|teeqo)|jake\s+paul|'
+    r'logan\s+paul|bryce\s+hall|david\s+dobrik)(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_PRANK_VLOG_TITLE_RE = re.compile(
+    r'\bprank(?:s|ed|ing)?\b|'
+    r'\b(?:vlog|vlogging)\s*[-:]?\s*prank\b|\bprank\s*[-:]?\s*(?:vlog|vlogging)\b|'
+    r'\bi\s+(?:bought|got)\s+(?:my|a)\s+dream\s+(?:car|house)\b|'
+    r'\b(?:car|house)\s+flex\b|\bdream\s+(?:car|house)\s+(?:tour|reveal)\b',
+    re.IGNORECASE,
+)
+_CONTENT_PARODY_TITLE_RE = re.compile(
+    r'\bYTP\b|\byoutube\s+poop\b|\btry\s+not\s+to\s+laugh\b|'
+    r'\bparody\s+(?:edit|compilation|video|dub)\b|\bedit(?:ed)?\s+parody\b',
+    re.IGNORECASE,
+)
+_CONTENT_SKIT_CHANNEL_RE = re.compile(
+    r'(?<![A-Za-z0-9])samspedy(?![A-Za-z0-9])',
+    re.IGNORECASE,
+)
+_CONTENT_SKIT_TITLE_RE = re.compile(
+    r'\bskit\b|\bsketch\b|\bshort[\s-]+drama\b|\bmini[\s-]?drama\b|'
+    r'\bcomedy\s+(?:skit|sketch|short|video)\b',
+    re.IGNORECASE,
+)
+_CONTENT_HINDI_SONG_RE = re.compile(
+    r'\bbollywood\b|'
+    r'\b(?:hindi|tamil|telugu|punjabi|marathi|malayalam|kannada|bengali|'
+    r'gujarati|urdu|bhojpuri|rajasthani)\s+(?:[A-Za-z]+\s+){0,3}songs?\b|'
+    r'\bsongs?\b.{0,30}\b(?:hindi|tamil|telugu|punjabi|marathi|malayalam|'
+    r'kannada|bengali|gujarati|urdu|bhojpuri|rajasthani)\b',
+    re.IGNORECASE,
+)
+
+
+TRENDING_MIN_RESULTS = 30
+_TRENDING_SOFT_REASONS = frozenset({'trailer', 'promo', 'brand_promo'})
+
 
 def content_type_blocked(video, section=None):
     """Return ``(blocked, reason)`` for non-editorial content types.
@@ -1030,11 +1129,60 @@ def content_type_blocked(video, section=None):
             return True, 'official_mv'
         if _CONTENT_POLITICS_RE.search(title):
             return True, 'news'
+        if _CONTENT_PRANK_VLOG_CHANNEL_RE.search(channel) or _CONTENT_PRANK_VLOG_TITLE_RE.search(title):
+            return True, 'prank_vlog'
+        if _CONTENT_PARODY_TITLE_RE.search(title):
+            return True, 'parody_edit'
+        if _CONTENT_SKIT_CHANNEL_RE.search(channel) or _CONTENT_SKIT_TITLE_RE.search(title):
+            return True, 'comedy_skit'
+        if _CONTENT_HINDI_SONG_RE.search(title):
+            return True, 'hindi_song'
         # Official vendor channels' short/mid corporate films (e.g. Hyundai
         # "30 Years of Scale, Trust and Progress") are ads, even if >3 minutes.
         if _PICKS_OFFICIAL_VENDOR_RE.search(channel) and int(video.get('duration_seconds') or 0) < 15 * 60:
             return True, 'brand_promo'
     return False, ''
+
+
+def trending_quality_reason(video, now=None):
+    """Return the first trending quality-filter reason for a video."""
+    visible_reason = visible_language_reason(video, section='trending')
+    if visible_reason:
+        return visible_reason
+    if not language_gate(video):
+        return 'language'
+    blocked, reason = content_type_blocked(video, 'trending')
+    return reason if blocked else ''
+
+
+def _trending_restore_key(item):
+    reason, video = item
+    severity = 0 if reason in _TRENDING_SOFT_REASONS else 1
+    return (severity, -_video_view(video), str(video.get('id', '')))
+
+
+def filter_trending_quality(videos, *, now=None, minimum=TRENDING_MIN_RESULTS):
+    """Apply trending quality rules, then restore the least-bad items to a floor.
+
+    Returns ``(kept, dropped_reasons, restored_count, restored_reasons)``. The
+    dropped counts describe the original filter result; restored items are
+    counted separately so callers can report both numbers honestly.
+    """
+    kept, dropped = [], []
+    for video in videos:
+        reason = trending_quality_reason(video, now=now)
+        if reason:
+            dropped.append((reason, video))
+        else:
+            kept.append(video)
+    dropped_reasons = Counter(reason for reason, _video in dropped)
+    restored_reasons = Counter()
+    if len(kept) < max(0, int(minimum)):
+        need = max(0, int(minimum)) - len(kept)
+        for reason, video in sorted(dropped, key=_trending_restore_key)[:need]:
+            kept.append(video)
+            restored_reasons[reason] += 1
+    return kept, dropped_reasons, sum(restored_reasons.values()), restored_reasons
 
 
 # Same-id channels listed under both AI and podcast use a topic-fit gate for
@@ -1120,7 +1268,7 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
                 continue
             if not language_gate(video):
                 continue
-            if key != 'community' and visible_language_blocked(video):
+            if key != 'community' and visible_language_blocked(video, key):
                 continue
             if key != 'community':
                 blocked, _reason = content_type_blocked(video, key)
@@ -1174,8 +1322,10 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
         seen.add(candidate.get('id'))
         if channel_id:
             channel_picks[channel_id] = channel_picks.get(channel_id, 0) + 1
-        picked.append(dict(candidate, pick_source=labels[key], score=float(result),
-                           score_parts=dict(result.parts)))
+        accepted = dict(candidate, pick_source=labels[key], score=float(result),
+                        score_parts=dict(result.parts))
+        accepted['community_classic'] = is_community_classic(accepted, now=at)
+        picked.append(accepted)
 
     def select_best(key):
         best = None
@@ -1260,11 +1410,16 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
     found_ids = {item.get('id') for item in records if item.get('id')}
     dropped_playability = Counter()
     dropped_playability['missing'] += len(candidate_ids - found_ids)
+    trending_dropped_reasons = Counter()
+    trending_restored_for_min = 0
+    trending_restored_reasons = Counter()
 
     def accepted():
+        nonlocal trending_dropped_reasons, trending_restored_for_min, trending_restored_reasons
         videos = []
         dropped_short = dropped_vertical = dropped_language = 0
         dropped_content_type = dropped_visible_language = dropped_official_short = 0
+        quality_ready = []
         for item in records:
             reason = playability_reason(item)
             if reason:
@@ -1275,18 +1430,33 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
                 dropped_vertical += 1
             else:
                 record = video_record(item)
+                if is_official_short_promo(record, name):
+                    dropped_official_short += 1
+                    continue
+                quality_ready.append(record)
+        if name == 'trending':
+            (videos, trending_dropped_reasons,
+             trending_restored_for_min, trending_restored_reasons) = filter_trending_quality(quality_ready)
+            dropped_language = trending_dropped_reasons.get('language', 0)
+            dropped_visible_language = (
+                trending_dropped_reasons.get('visible_language', 0)
+                + trending_dropped_reasons.get('portuguese', 0)
+            )
+            dropped_content_type = sum(
+                count for reason, count in trending_dropped_reasons.items()
+                if reason not in ('language', 'visible_language', 'portuguese')
+            )
+        else:
+            for record in quality_ready:
                 if not language_gate(record):
                     dropped_language += 1
                     continue
-                if visible_language_blocked(record):
+                if visible_language_blocked(record, name):
                     dropped_visible_language += 1
                     continue
                 blocked, _reason = content_type_blocked(record, name)
                 if blocked:
                     dropped_content_type += 1
-                    continue
-                if is_official_short_promo(record, name):
-                    dropped_official_short += 1
                     continue
                 videos.append(record)
         videos, dropped_channel = dedupe_channel_caps(videos, _load_existing_feeds(name, output), feed_name=name)
@@ -1327,6 +1497,13 @@ def windowed_viewcount_feed(name, client=None, output='site/src/data', *, query=
         payload['dropped_podcast_display_cap'] = dropped_podcast
     if dropped_channel_display_cap:
         payload['dropped_channel_display_cap'] = dropped_channel_display_cap
+    if name == 'trending':
+        payload['dropped_quality_reasons'] = dict(sorted(trending_dropped_reasons.items()))
+        for reason, count in trending_dropped_reasons.items():
+            payload[f'dropped_{reason}'] = count
+        payload['restored_for_min'] = trending_restored_for_min
+        if trending_restored_reasons:
+            payload['restored_for_min_reasons'] = dict(sorted(trending_restored_reasons.items()))
     if published:
         payload['publish_date_span'] = {'min': min(published), 'max': max(published)}
     if query:
@@ -1484,7 +1661,7 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
     dropped_content_type = dropped_visible_language = dropped_official_short = 0
     filtered = []
     for video in videos:
-        if visible_language_blocked(video):
+        if visible_language_blocked(video, 'ai'):
             dropped_visible_language += 1
             continue
         blocked, _reason = content_type_blocked(video, 'ai')
