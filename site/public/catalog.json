@@ -337,7 +337,9 @@
     "section": "trending",
     "sections": [
       "trending"
-    ]
+    ],
+    "topic_id": "commentary",
+    "topic_name": "深度评论"
   },
   {
     "id": "DPu5RyE1BKQ",
@@ -405,7 +407,9 @@
     "section": "trending",
     "sections": [
       "trending"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "kbsvMYFmgD0",
@@ -1731,7 +1735,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "vug73goPJaM",
@@ -1768,7 +1774,9 @@
       "picks"
     ],
     "source": "ai",
-    "pick_source": "AI前沿"
+    "pick_source": "AI前沿",
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "nKjPBAw_N_0",
@@ -1788,7 +1796,9 @@
       "picks"
     ],
     "source": "ai",
-    "pick_source": "AI前沿"
+    "pick_source": "AI前沿",
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "XgC1QTs6A2U",
@@ -1808,7 +1818,9 @@
       "picks"
     ],
     "source": "ai",
-    "pick_source": "AI前沿"
+    "pick_source": "AI前沿",
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "hJOwOkLHRN0",
@@ -1825,7 +1837,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "21tuT-e4NVo",
@@ -1845,7 +1859,9 @@
       "picks"
     ],
     "source": "ai",
-    "pick_source": "AI前沿"
+    "pick_source": "AI前沿",
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "784YQBiZArk",
@@ -1862,7 +1878,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "P735f1xlpL0",
@@ -1913,7 +1931,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "2hJkprFnzhY",
@@ -2015,7 +2035,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "g-xa75k3ILg",
@@ -2049,7 +2071,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "5YXlrzC_RYE",
@@ -2270,7 +2294,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "v-NGxyPjcrE",
@@ -2780,7 +2806,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "vIAHgDA5GQk",
@@ -2967,7 +2995,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "yJxZef1Ylok",
@@ -3171,7 +3201,9 @@
     "section": "ai",
     "sections": [
       "ai"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "ndtnt5kWT5A",
@@ -3735,7 +3767,9 @@
       "picks"
     ],
     "source": "podcast",
-    "pick_source": "播客"
+    "pick_source": "播客",
+    "topic_id": "classic-talks",
+    "topic_name": "经典演讲"
   },
   {
     "id": "yULk8eNa2mg",
@@ -3755,7 +3789,9 @@
       "picks"
     ],
     "source": "podcast",
-    "pick_source": "播客"
+    "pick_source": "播客",
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "FGCP2F_7rQk",
@@ -3772,7 +3808,9 @@
     "section": "podcast",
     "sections": [
       "podcast"
-    ]
+    ],
+    "topic_id": "ideas",
+    "topic_name": "人物与思想"
   },
   {
     "id": "ZAzWPE9CItg",
@@ -3789,7 +3827,9 @@
     "section": "podcast",
     "sections": [
       "podcast"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "frYSOKvNiiE",
@@ -3806,7 +3846,9 @@
     "section": "podcast",
     "sections": [
       "podcast"
-    ]
+    ],
+    "topic_id": "computing-history",
+    "topic_name": "计算机历史"
   },
   {
     "id": "f0J_EeW42Lo",
@@ -3857,7 +3899,9 @@
     "section": "podcast",
     "sections": [
       "podcast"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "19qrLchbQEc",
@@ -3942,7 +3986,9 @@
     "section": "podcast",
     "sections": [
       "podcast"
-    ]
+    ],
+    "topic_id": "ai",
+    "topic_name": "人工智能"
   },
   {
     "id": "LtUDeizHqKk",
@@ -4513,7 +4559,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "UF8uR6Z6KLc",
@@ -4555,7 +4603,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "ZTC_RxWN_xo",
@@ -4597,7 +4647,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "computing-history",
+    "topic_name": "计算机历史"
   },
   {
     "id": "NOAgplgTxfc",
@@ -4641,7 +4693,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "dBnniua6-oM",
@@ -4686,7 +4740,9 @@
       "picks"
     ],
     "source": "community",
-    "pick_source": "社区推荐"
+    "pick_source": "社区推荐",
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "0CDXJ6bMkMY",
@@ -4728,7 +4784,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "startups",
+    "topic_name": "创业与硅谷"
   },
   {
     "id": "2Op3QLzMgSY",
@@ -4771,7 +4829,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "NNnIGh9g6fA",
@@ -4813,7 +4873,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "rI8tNMsozo0",
@@ -4856,7 +4918,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "conferences",
+    "topic_name": "技术会议"
   },
   {
     "id": "_ahvzDzKdB0",
@@ -4898,7 +4962,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "computing-history",
+    "topic_name": "计算机历史"
   },
   {
     "id": "a1zDuOPkMSw",
@@ -4941,7 +5007,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "conferences",
+    "topic_name": "技术会议"
   },
   {
     "id": "EKWGGDXe5MA",
@@ -4984,7 +5052,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "science",
+    "topic_name": "科技科普"
   },
   {
     "id": "yJDv-zdhzMY",
@@ -5031,7 +5101,9 @@
       "picks"
     ],
     "source": "community",
-    "pick_source": "社区推荐"
+    "pick_source": "社区推荐",
+    "topic_id": "computing-history",
+    "topic_name": "计算机历史"
   },
   {
     "id": "oKg1hTOQXoY",
@@ -5073,7 +5145,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "pioneers",
+    "topic_name": "计算机先驱访谈"
   },
   {
     "id": "8pTEmbeENF4",
@@ -5115,7 +5189,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "programming",
+    "topic_name": "编程思想"
   },
   {
     "id": "lKXe3HUG2l4",
@@ -5157,7 +5233,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "conferences",
+    "topic_name": "技术会议"
   },
   {
     "id": "rX0ItVEVjHc",
@@ -5202,7 +5280,9 @@
       "picks"
     ],
     "source": "community",
-    "pick_source": "社区推荐"
+    "pick_source": "社区推荐",
+    "topic_id": "cpp",
+    "topic_name": "C++ 与系统编程"
   },
   {
     "id": "DJklHwoYgBQ",
@@ -5241,7 +5321,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "commentary",
+    "topic_name": "深度评论"
   },
   {
     "id": "w3_0x6oaDmI",
@@ -5280,7 +5362,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "tech-review",
+    "topic_name": "科技评论"
   },
   {
     "id": "rE3j_RHkqJc",
@@ -5319,7 +5403,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "commentary",
+    "topic_name": "深度评论"
   },
   {
     "id": "MFzDaBzBlL0",
@@ -5358,7 +5444,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "science",
+    "topic_name": "科技科普"
   },
   {
     "id": "IOiZatlZtGU",
@@ -5397,7 +5485,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "conferences",
+    "topic_name": "技术会议"
   },
   {
     "id": "QM1iUe6IofM",
@@ -5436,7 +5526,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "programming",
+    "topic_name": "编程思想"
   },
   {
     "id": "eJ3RzGoQC4s",
@@ -5475,7 +5567,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "documentary",
+    "topic_name": "纪录片"
   },
   {
     "id": "KkpqA8yG9T4",
@@ -5514,7 +5608,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "YJg02ivYzSs",
@@ -5595,7 +5691,9 @@
       "picks"
     ],
     "source": "community",
-    "pick_source": "社区推荐"
+    "pick_source": "社区推荐",
+    "topic_id": "commentary",
+    "topic_name": "深度评论"
   },
   {
     "id": "oyLBGkS5ICk",
@@ -5634,7 +5732,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "clojure",
+    "topic_name": "函数式编程"
   },
   {
     "id": "Pb5oIIPO62g",
@@ -5673,7 +5773,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "classic-talks",
+    "topic_name": "经典演讲"
   },
   {
     "id": "9CO6M2HsoIA",
@@ -5751,7 +5853,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "programming",
+    "topic_name": "编程思想"
   },
   {
     "id": "vtIzMaLkCaM",
@@ -5793,7 +5897,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "ideas",
+    "topic_name": "人物与思想"
   },
   {
     "id": "uD4izuDMUQA",
@@ -5832,7 +5938,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "science",
+    "topic_name": "科技科普"
   },
   {
     "id": "JvBT4XBdoUE",
@@ -5871,7 +5979,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "conferences",
+    "topic_name": "技术会议"
   },
   {
     "id": "Unzc731iCUY",
@@ -5910,7 +6020,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "mit",
+    "topic_name": "高校公开课"
   },
   {
     "id": "ZSRHeXYDLko",
@@ -5949,7 +6061,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "game-dev",
+    "topic_name": "游戏开发"
   },
   {
     "id": "oeqPrUmVz-o",
@@ -6027,7 +6141,9 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "commentary",
+    "topic_name": "深度评论"
   },
   {
     "id": "SxdOUGdseq4",
@@ -6066,6 +6182,8 @@
     "section": "community",
     "sections": [
       "community"
-    ]
+    ],
+    "topic_id": "conferences",
+    "topic_name": "技术会议"
   }
 ]

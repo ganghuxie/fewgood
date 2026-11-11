@@ -1,5 +1,6 @@
 import { KEYS, set, updateBadges } from './library.js';
 import { getSupabase, supabaseEnabled } from './supabase.js';
+import { MYSPACE_KEY, mergeColumns } from '../lib/myspace-schema.mjs';
 
 const kinds = ['history', 'favorites', 'watchLater', 'following', 'channelSeen'];
 const keyForKind = Object.fromEntries(kinds.filter(kind => kind !== 'channelSeen').map(kind => [kind, KEYS[kind]]));
@@ -52,6 +53,33 @@ async function pushKind(user, kind) {
   for (const row of rows) remote.set(row.item_id, Date.now());
 }
 
+function readLocalColumns() {
+  try {
+    const state = JSON.parse(localStorage.getItem(MYSPACE_KEY) || 'null');
+    return state && Array.isArray(state.columns) ? state.columns.map(column => ({ ...column })) : null;
+  } catch { return null; }
+}
+
+async function syncMySpaceColumns(user) {
+  // Merge 我的空间 columns only when a fitting cloud table already exists.
+  // No DDL here: if user_topics is absent we keep localStorage-only behavior.
+  if (!user || syncDisabled) return;
+  const db = getSupabase();
+  const local = readLocalColumns();
+  const { data: rows, error } = await db.from('user_topics')
+    .select('column_id,source,kind,topic_id,label,enabled,position')
+    .eq('user_id', user.id).order('position');
+  if (error) return; // table not available in this environment
+  const cloud = (rows || []).map(row => ({ id: row.column_id, source: row.source, kind: row.kind, topic_id: row.topic_id, label: row.label, enabled: row.enabled }));
+  if (!local && !cloud.length) return;
+  const merged = mergeColumns(local, cloud);
+  const payload = merged.map((column, index) => ({ user_id: user.id, column_id: column.id, source: column.source, kind: column.kind, topic_id: column.topic_id || null, label: column.label || null, enabled: column.enabled, position: index }));
+  const { error: upsertError } = await db.from('user_topics').upsert(payload, { onConflict: 'user_id,column_id' });
+  if (upsertError) return warn(upsertError);
+  localStorage.removeItem(MYSPACE_KEY);
+  document.dispatchEvent(new CustomEvent('fewgood:myspace-merged'));
+}
+
 async function pullAndMerge(user) {
   const db = getSupabase();
   const { data: rows, error } = await db.from('library_items').select('kind,item_id,snapshot,updated_at,deleted').eq('user_id', user.id);
@@ -83,7 +111,7 @@ export function startSync() {
   const begin = async session => {
     if (!session?.user || syncDisabled) return;
     syncing = true;
-    try { await pullAndMerge(session.user); } catch (error) { warn(error); } finally { syncing = false; }
+    try { await pullAndMerge(session.user); await syncMySpaceColumns(session.user); } catch (error) { warn(error); } finally { syncing = false; }
   };
   db.auth.getSession().then(({ data, error }) => { if (error) warn(error); else begin(data.session); }).catch(warn);
   db.auth.onAuthStateChange((event, session) => { if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN') begin(session); });

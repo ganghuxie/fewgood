@@ -2,8 +2,13 @@ import { mkdir, readFile, writeFile, access } from 'node:fs/promises';
 
 const dataDir = new URL('../src/data/', import.meta.url);
 const read = async (name, fallback = { videos: [] }) => { try { return JSON.parse(await readFile(new URL(name, dataDir), 'utf8')); } catch (error) { if (error.code === 'ENOENT') return fallback; throw error; } };
-const [picks, trending, ai, podcast, music, community, channels, zh] = await Promise.all([read('picks.json'), read('trending.json'), read('ai.json'), read('podcast.json'), read('music.json'), read('videos.json'), read('channels.json', { channels: [] }), read('zh.json', { videos: {} })]);
+const [picks, trending, ai, podcast, music, community, channels, zh, topics, topicLookup, templates, hnPool] = await Promise.all([
+  read('picks.json'), read('trending.json'), read('ai.json'), read('podcast.json'), read('music.json'), read('videos.json'),
+  read('channels.json', { channels: [] }), read('zh.json', { videos: {} }),
+  read('topics.json', { topics: [] }), read('topic_lookup.json', {}), read('templates.json', { templates: [] }), read('hn_pool.json', { videos: [] }),
+]);
 const index = new Map();
+const topicById = new Map((topics.topics || []).map(topic => [topic.id, topic]));
 const channelLabels = new Map();
 const sectionLabels = { picks: '今日精选', trending: '趋势', ai: 'AI前沿', podcast: '播客', music: '音乐', community: '社区推荐' };
 const sectionCodes = { trending: 0, ai: 1, podcast: 2, music: 3, community: 4, picks: 5 };
@@ -29,6 +34,13 @@ const recentChannelVideos = channel => [...(channel.videos || [])]
   .concat((channel.videos || []).filter(video => video.title === 'Taylor Swift at the 2026 MTV Video Music Awards'));
 
 // Keep the catalog limited to editorial feeds. Channel videos are search-only data.
+for (const video of index.values()) {
+  const topicId = topicLookup[video.id];
+  if (topicId) {
+    video.topic_id = topicId;
+    video.topic_name = topicById.get(topicId)?.name_zh || null;
+  }
+}
 const output = JSON.stringify([...index.values()], null, 2) + '\n';
 
 const normalizeVideoId = value => {
@@ -82,6 +94,14 @@ const searchOutput = JSON.stringify({ videos: searchVideos, channels: searchChan
 await mkdir(dataDir, { recursive: true });
 await mkdir(new URL('../public/', import.meta.url), { recursive: true });
 const channelSource = new URL('channels.json', dataDir);
-const writes = [writeFile(new URL('catalog.json', dataDir), output), writeFile(new URL('../public/catalog.json', import.meta.url), output), writeFile(new URL('../public/search-index.json', import.meta.url), searchOutput)];
+const writes = [
+  writeFile(new URL('catalog.json', dataDir), output),
+  writeFile(new URL('../public/catalog.json', import.meta.url), output),
+  writeFile(new URL('../public/search-index.json', import.meta.url), searchOutput),
+  writeFile(new URL('../public/topics.json', import.meta.url), JSON.stringify(topics, null, 2) + '\n'),
+  writeFile(new URL('../public/topic_lookup.json', import.meta.url), JSON.stringify(topicLookup, null, 2) + '\n'),
+  writeFile(new URL('../public/templates.json', import.meta.url), JSON.stringify(templates, null, 2) + '\n'),
+  writeFile(new URL('../public/hn_pool.json', import.meta.url), JSON.stringify(hnPool, null, 2) + '\n'),
+];
 try { await access(channelSource); writes.push(writeFile(new URL('../public/channels.json', import.meta.url), channelOutput)); } catch { /* channel refresh has not run yet */ }
 await Promise.all(writes);
