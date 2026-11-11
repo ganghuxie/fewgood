@@ -95,7 +95,7 @@ def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
     for banned in ('Reddit', '可能', '计划', '大概', 'sync.js', 'end-to-end', '端到端', '今日精选', '服务器不收集任何痕迹'):
         assert banned not in about
     assert '前往精选' in about
-    assert 'youtuber/issues' in about
+    assert 'fewgood/issues' in about
     assert '通过加密连接同步' in about
     assert 'mailto:' in about
     assert 'localStorage' in about

@@ -44,7 +44,7 @@ cd ..
 python -m http.server 8000 --directory site/dist
 ```
 
-Open http://localhost:8000. A normal `npm run build` uses root-relative URLs (`/`); the intended production URL is https://fewgood.io (www also works once configured). The old https://ganghuxie.github.io/youtuber/ URL will redirect once the custom domain is configured on GitHub Pages. Nothing is deployed by these local commands. The full crawl defaults to 2007-01-01 through the current UTC time and can take many hours. No fabricated seed videos are provided; a small smoke crawl will usually select zero videos.
+Open http://localhost:8000. A normal `npm run build` uses root-relative URLs (`/`); the intended production URL is https://fewgood.io (www also works). The repository is https://github.com/ganghuxie/fewgood. Nothing is deployed by these local commands. The full crawl defaults to 2007-01-01 through the current UTC time and can take many hours. No fabricated seed videos are provided; a small smoke crawl will usually select zero videos.
 
 Individual stages / explicit date range:
 

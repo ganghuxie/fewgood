@@ -49,7 +49,7 @@
 - box 上的本地预览地址 `http://localhost:4391/youtuber/demo/fewgood/` 只能在 box 内部访问，**你的电脑打不开**。
 - 在你自己的电脑上预览：
   ```bash
-  git clone https://github.com/ganghuxie/youtuber && cd youtuber   # 已有仓库就 git fetch
+  git clone https://github.com/ganghuxie/fewgood && cd fewgood   # 已有仓库就 git fetch
   git checkout mvp-fewgood
   cd site && npm ci && npx astro dev
   # 打开 http://localhost:4321/youtuber/demo/fewgood/
