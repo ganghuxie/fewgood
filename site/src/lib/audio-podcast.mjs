@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -47,11 +48,26 @@ export function episodeIndex(episodes, episode) {
     || (!id && episode?.title && candidate.title === episode.title));
 }
 
+export function episodeRouteId(episode) {
+  const raw = String(episode?.guid || episode?.episode_id || '');
+  if (!raw) throw new Error('Episode identity is required');
+  // Reserve ep- for hashes so literal GUIDs cannot collide with hashed GUIDs.
+  if (/^[A-Za-z0-9._-]{1,96}$/.test(raw) && !['.', '..', 'page'].includes(raw) && !raw.startsWith('ep-')) return raw;
+  return `ep-${createHash('sha256').update(raw, 'utf8').digest('hex')}`;
+}
+
 export function episodePath(show, episode, base = '') {
-  const index = episodeIndex(latestFirst(show?.episodes), episode);
-  if (index < 0) return showPath(show?.slug, 1, base);
-  const page = Math.floor(index / PAGE_SIZE) + 1;
-  return `${showPath(show.slug, page, base)}#${episodeAnchor(episode, index)}`;
+  return `${showPath(show.slug, 1, base)}${episodeRouteId(episode)}/`;
+}
+
+export function episodeEntries(show) {
+  const seen = new Set();
+  return latestFirst(show.episodes).map((episode, index) => {
+    const id = episodeRouteId(episode);
+    if (seen.has(id)) throw new Error(`Duplicate episode route: ${show.slug}/${id}`);
+    seen.add(id);
+    return { episode, id, page: Math.floor(index / PAGE_SIZE) + 1 };
+  });
 }
 
 export function pageCount(total, pageSize = PAGE_SIZE) {

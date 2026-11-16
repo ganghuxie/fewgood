@@ -731,3 +731,38 @@ def test_committed_snapshot_fallback_without_local_cache(tmp_path, monkeypatch):
     assert second['shows'][1]['fetch_status'] == 'fresh'
     assert second['shows'][1]['episodes'][0]['episode_id'] == 'two-new'
     assert '\n  ' not in output.read_text()
+
+
+def test_publisher_cover_https_only_and_episode_fallback():
+    from ytrec.audio_podcast import parse_feed
+    xml = '''<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"><channel>
+    <itunes:image href="https://publisher.test/show.jpg"/>
+    <item><guid>a</guid><enclosure url="https://publisher.test/a.mp3"/><itunes:image href="https://publisher.test/episode.jpg"/></item>
+    <item><guid>b</guid><enclosure url="https://publisher.test/b.mp3"/><itunes:image href="http://publisher.test/insecure.jpg"/></item>
+    </channel></rss>'''
+    result = parse_feed(xml.encode())
+    assert result['feed']['cover_url'] == 'https://publisher.test/show.jpg'
+    covers = {e['guid']: e['cover_url'] for e in result['episodes']}
+    assert covers == {'a': 'https://publisher.test/episode.jpg', 'b': 'https://publisher.test/show.jpg'}
+    for unsafe in ['http://publisher.test/show.jpg', 'javascript:alert(1)', '//publisher.test/show.jpg', 'data:image/png;base64,xx']:
+        result = parse_feed(xml.replace('https://publisher.test/show.jpg', unsafe).encode())
+        assert result['feed']['cover_url'] is None
+    result = parse_feed(b'<rss><channel><image><url>https://publisher.test/real.jpg</url></image></channel></rss>')
+    assert result['feed']['cover_url'] == 'https://publisher.test/real.jpg'
+    assert parse_feed(b'<rss><channel/></rss>')['feed']['cover_url'] is None
+
+
+def test_no_network_reparses_old_cached_xml_for_covers(tmp_path):
+    import json
+    from ytrec.audio_podcast import _process_show
+    show = {'slug': 'cached', 'name': 'cached', 'display_name': 'cached', 'publisher': 'publisher',
+            'host_kind': 'storyfm', 'rss_url': 'https://publisher.test/rss', 'source_page': 'https://publisher.test/'}
+    (tmp_path / 'cached.json').write_text(json.dumps({'cache_version': 1, 'show_slug': 'cached', 'result': {'feed': {}, 'episodes': []}}))
+    (tmp_path / 'cached.xml').write_bytes(b'<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"><channel><itunes:image href="https://publisher.test/cover.jpg"/></channel></rss>')
+    class NoNetwork:
+        def get(self, *args, **kwargs):
+            raise AssertionError('offline cache reparsing must not fetch')
+    record = _process_show(show, cache_dir=tmp_path, no_network=True, dry_run=True,
+                           session=NoNetwork(), sleep_fn=lambda _: None, fetched_at='2026-11-16T00:00:00Z')
+    assert record['feed']['cover_url'] == 'https://publisher.test/cover.jpg'
+    assert record['fetch_status'] == 'cache_only'

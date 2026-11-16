@@ -53,7 +53,7 @@ assert.equal(third[4].episode_id, 'episode-0');
 const show = { slug: 'story-fm', episodes };
 assert.equal(
   episodePath(show, episodes[20]),
-  `/audio-podcast/story-fm/page/2/#${episodeAnchor(episodes[20], 20)}`,
+  `/audio-podcast/story-fm/episode-20/`,
 );
 console.log('audio preview helper checks ok');
 '''
@@ -90,7 +90,7 @@ def test_existing_nav_labels_and_chipbar_remain_unchanged():
 
 
 def test_audio_player_markup_keeps_click_only_playback_and_no_download():
-    component = (ROOT / 'site/src/components/AudioPodcastShowPage.astro').read_text(encoding='utf8')
+    component = (ROOT / 'site/src/components/AudioPodcastEpisodePage.astro').read_text(encoding='utf8')
     assert 'preload="none"' in component
     assert 'controlsList="nodownload"' in component
     assert 'autoplay' not in component.lower()
@@ -348,3 +348,42 @@ def test_refresh_audio_hook_failure_is_nonfatal(monkeypatch):
     cli.refresh_audio_podcasts()
     source = inspect.getsource(cli.refresh)
     assert source.index('refresh_audio_podcasts()') < source.index("['npm', 'run', 'build']")
+
+
+def test_stable_route_ids_are_safe_unique_and_escape_unsafe_guids():
+    subprocess.run([NODE, '--input-type=module', '-e', r'''
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {episodeRouteId, episodeEntries, episodePath, loadAudioPodcastData} from './site/src/lib/audio-podcast.mjs';
+for (const guid of ['https://a.test/路径?a=1&b=2', '../', '.', '..', 'page', '罕见龘', 'a'.repeat(500), 'ep-abc']) {
+ const id = episodeRouteId({guid});
+ assert.match(id, /^[A-Za-z0-9._-]{1,96}$/);
+ assert.equal(id, 'ep-' + createHash('sha256').update(guid).digest('hex'));
+ assert.equal(id, episodeRouteId({guid, episode_id:'different'}));
+ assert.equal(decodeURIComponent(encodeURIComponent(id)), id);
+}
+assert.equal(episodeRouteId({episode_id:'xmly_track_123'}), 'xmly_track_123');
+assert.notEqual(episodeRouteId({guid:'https://a/b'}), episodeRouteId({guid:'https://a:b'}));
+assert.throws(() => episodeEntries({slug:'s',episodes:[{guid:'a'},{guid:'a'}]}), /Duplicate/);
+for (const show of loadAudioPodcastData().shows) {
+ const entries = episodeEntries(show);
+ assert.equal(new Set(entries.map(e=>e.id)).size, show.episodes.length);
+ for (const {episode,id} of entries) assert.equal(episodePath(show,episode), `/audio-podcast/${show.slug}/${id}/`);
+}
+'''], cwd=ROOT, check=True)
+
+
+def test_list_detail_and_index_information_architecture():
+    show = (ROOT / 'site/src/components/AudioPodcastShowPage.astro').read_text()
+    detail = (ROOT / 'site/src/components/AudioPodcastEpisodePage.astro').read_text()
+    index = (ROOT / 'site/src/components/AudioPodcastIndex.astro').read_text()
+    assert 'data-audio-player' not in show
+    assert 'description_html' not in show
+    assert 'episodePath(show, episode, base)' in show
+    assert detail.count('data-audio-player data-audio-url') == 1
+    assert 'set:html={episode.description_html}' in detail
+    assert 'description_missing' in detail and 'description_truncated' in detail
+    assert 'showPath(show.slug, page, base)' in detail
+    assert 'episodePath(show, episode, base)' in index
+    assert 'description_text' not in index and 'description_html' not in index
+    assert '<details' in index

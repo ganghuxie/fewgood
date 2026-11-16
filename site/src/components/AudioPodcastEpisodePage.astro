@@ -1,0 +1,50 @@
+---
+import AudioPodcastLayout from './AudioPodcastLayout.astro';
+import { showPath } from '../lib/audio-podcast.mjs';
+const { show, episode, page } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const safeHttps = value => typeof value === 'string' && value.startsWith('https://') ? value : '';
+const audioUrl = safeHttps(episode.audio_url);
+const sourcePage = safeHttps(show.source_page);
+const episodeLink = safeHttps(episode.episode_link);
+const alternateLink = episodeLink || sourcePage;
+---
+<AudioPodcastLayout title={`${episode.title} · ${show.display_name}`}>
+  <a class="audio-back" href={showPath(show.slug, page, base)}>← {show.display_name} · 第 {page} 页</a>
+  <article class="audio-detail">
+    <header>
+      <p class="audio-preview-kicker"><a href={showPath(show.slug, 1, base)}>{show.display_name}</a></p>
+      <h1>{episode.title || '未命名单集'}</h1>
+      <p class="audio-episode-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span></p>
+    </header>
+              {audioUrl ? (
+                <div class="audio-player" data-audio-player data-audio-url={audioUrl}>
+                  <button class="audio-play-button" type="button" data-audio-play>播放官方音频</button>
+                  <audio controls preload="none" controlsList="nodownload" data-audio hidden></audio>
+                  <p class="audio-player-note">点击后才会加载发布者官方 enclosure；播放时浏览器直接访问来源地址，本站不下载、不转存、不代理音频。官方音频可能需要较长时间完成重定向；显示“加载中”时请等待，不要立即认为失败。</p>
+                  <div class="audio-playback-error" data-audio-error role="alert" hidden>
+                    <strong>官方音频播放失败</strong>
+                    <p>本站只播放发布者的官方 enclosure。网络、格式或发布者限制都可能导致无法播放，并不代表音频在本地可下载或可在所有地区播放。</p>
+                    {alternateLink && <a data-audio-source href={alternateLink} target="_blank" rel="noopener noreferrer">{episodeLink ? '打开官方单集页' : '打开节目来源页'} ↗</a>}
+                  </div>
+                </div>
+              ) : (
+                <p class="audio-episode-note">当前公开 RSS 未提供可用的 HTTPS 音频地址；请通过官方单集页或节目来源页收听。</p>
+              )}
+    <section class="audio-notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">发布者单集说明</h2>
+      {episode.description_missing && <p class="audio-episode-note">暂无简介：发布者未在公开 RSS 中提供单集说明。</p>}
+      {episode.description_truncated && <p class="audio-episode-note">公开 RSS 中的单集说明可能被截断或不完整，请到官方来源查看。</p>}
+      {!episode.description_missing && (episode.description_html
+        ? <div class="audio-episode-description" set:html={episode.description_html} />
+        : <p class="audio-episode-description">{episode.description_text}</p>)}
+      {alternateLink && <p><a href={alternateLink} target="_blank" rel="noopener noreferrer">官方来源 ↗</a></p>}
+      <p class="audio-source-note">以上为发布者提供的单集说明，并非逐字稿。内容与音频版权归原发布者所有。</p>
+    </section>
+  </article>
+</AudioPodcastLayout>
+<script>
+  import { initAudioPodcastPlayers } from '../lib/audio-podcast-player.mjs';
+
+  initAudioPodcastPlayers(document.querySelectorAll('[data-audio-player]'));
+</script>

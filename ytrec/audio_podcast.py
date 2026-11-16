@@ -31,7 +31,7 @@ DEFAULT_OUTPUT_PATH = Path("site/src/data/audio_podcast.json")
 DEFAULT_CACHE_DIR = Path("data/audio_podcast_cache")
 
 SCHEMA_VERSION = 1
-CACHE_VERSION = 1
+CACHE_VERSION = 2
 FETCH_TIMEOUT_SECONDS = 45
 FETCH_RETRIES = 2
 MAX_RESPONSE_BYTES = 14 * 1024 * 1024
@@ -385,6 +385,21 @@ def dedupe_episodes(episodes: list[dict[str, Any]]) -> tuple[list[dict[str, Any]
     return unique, duplicate_count
 
 
+def _cover_url(element: ET.Element) -> str | None:
+    """Use only artwork explicitly supplied by the publisher's RSS."""
+    for child in element:
+        if child.tag == "{http://www.itunes.com/dtds/podcast-1.0.dtd}image":
+            url = _safe_url(child.get("href"), {"https"})
+            if url:
+                return url
+    for child in element:
+        if _local_name(child.tag) == "image":
+            url = _safe_url(_first_text(child, "url"), {"https"})
+            if url:
+                return url
+    return None
+
+
 def _parse_episode(item: ET.Element) -> dict[str, Any] | None:
     enclosure = _find_direct(item, "enclosure")
     enclosure_url = enclosure.get("url") if enclosure is not None else None
@@ -415,6 +430,7 @@ def _parse_episode(item: ET.Element) -> dict[str, Any] | None:
 
     episode: dict[str, Any] = {
         "episode_id": episode_id,
+        "cover_url": _cover_url(item),
         "guid": guid or None,
         "dedup_key_kind": dedup_key_kind,
         "title": title,
@@ -466,6 +482,7 @@ def parse_feed(xml_bytes: bytes, show: dict[str, Any] | None = None) -> dict[str
     feed_description_raw = _first_content(channel, "description", "subtitle")
     feed_description_html = sanitize_html(feed_description_raw)
     feed = {
+        "cover_url": _cover_url(channel),
         "title": plain_text(_first_content(channel, "title")) or None,
         "link": _safe_url(_first_text(channel, "link"), {"http", "https"}),
         "description_html": feed_description_html,
@@ -485,6 +502,7 @@ def parse_feed(xml_bytes: bytes, show: dict[str, Any] | None = None) -> dict[str
         if episode is None:
             invalid_media_count += 1
             continue
+        episode["cover_url"] = episode["cover_url"] or feed["cover_url"]
         parsed_episodes.append(episode)
 
     unique_episodes, duplicate_count = dedupe_episodes(parsed_episodes)
@@ -772,6 +790,12 @@ def _process_show(
     fetched_at: str,
 ) -> dict[str, Any]:
     cached = load_cached_result(cache_dir, show["slug"])
+    if cached is None:
+        raw_path = _cache_path(cache_dir, show["slug"], "xml")
+        try:
+            cached = parse_feed(raw_path.read_bytes(), show)
+        except (OSError, FeedParseError):
+            pass
     if no_network:
         if cached is None:
             return _show_record(

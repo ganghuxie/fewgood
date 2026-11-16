@@ -1,0 +1,11 @@
+---
+import AudioPodcastEpisodePage from '../../../components/AudioPodcastEpisodePage.astro';
+import { loadAudioPodcastData, episodeEntries } from '../../../lib/audio-podcast.mjs';
+export function getStaticPaths() {
+  return loadAudioPodcastData().shows.flatMap(show => episodeEntries(show).map(({episode, id, page}) => ({
+    params: { slug: show.slug, episode: id }, props: { show, episode, page },
+  })));
+}
+const { show, episode, page } = Astro.props;
+---
+<AudioPodcastEpisodePage show={show} episode={episode} page={page} />
