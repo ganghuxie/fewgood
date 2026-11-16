@@ -381,7 +381,7 @@ def test_list_detail_and_index_information_architecture():
     assert 'description_html' not in show
     assert 'episodePath(show, episode, base)' in show
     assert detail.count('data-audio-player data-audio-url') == 1
-    assert 'set:html={episode.description_html}' in detail
+    assert 'set:html={displayNotes(episode.description_html, episode.description_text)}' in detail
     assert 'description_missing' in detail and 'description_truncated' in detail
     assert 'showPath(show.slug, page, base)' in detail
     assert 'episodePath(show, episode, base)' in index

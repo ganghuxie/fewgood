@@ -71,3 +71,50 @@ artwork by region, redirect behavior, browser codec support or publisher policy.
 The authorized public preview URL remains
 `https://ganghuxie.github.io/fewgood-audio-podcast-preview/audio-podcast-preview/`;
 it will only reflect this design after a separate authorized deployment.
+
+### t211u display revision (2026-11-16)
+
+This remains an isolated design preview. No publishing or pushing is part of this revision.
+
+`audio-podcast-display.mjs` parses the existing sanitized RSS HTML with parse5,
+then filters siblings at display time. Raw RSS and `audio_podcast.json` are unchanged.
+Only a block whose complete visible text is a recognized appendix heading
+(相关播客、相关节目、推荐播客、节目推荐、相关推荐、我们还有这些播客,
+with emoji/bracket/colon variants), or a new block beginning `相关播客：` /
+`我们还有这些播客：` (optionally a bullet marker), starts filtering. Multi-block
+wrappers never qualify as headings. Following empty blocks, numbered episode
+rows, lists composed of episode titles/links, and standalone episode links are
+omitted until the first unrecognized sibling or genuine HTML heading. That
+boundary and all subsequent actual content remain. The same transform supplies
+plain list excerpts, capped at 150 characters and visually clamped to two lines.
+
+Intro prose, timestamps, credits, topic reading/book lists, mid-sentence mentions,
+and uncertain social CTAs stay. No generic phrase replacement or blanket bullet
+removal is used. Tests use verbatim stored HTML fixtures for 独树375、知行E257、
+声动早咖啡, plus boundary and heading variants. Official original-notes links
+remain on detail pages. Residual risk: publishers may introduce unknown headings
+or unusual mixed blocks; these are deliberately retained. A numbered paragraph
+immediately inside an explicit related-episode appendix may be interpreted as an
+episode row. Official notes remain the complete reference.
+
+The show masthead keeps official art and publisher; tabs switch between paginated
+rows and RSS show introduction. Rows navigate to stable detail URLs, never inline
+players. Detail pages retain one official HTTPS click-only player, native controls,
+loading, retry and cancellation, with concise failure copy and secondary attribution.
+The audio-only inline navigation adjustment scrolls the chipbar horizontally,
+without changing shared Header markup or navigation labels.
+
+Validation: 48 audio/whitelist/packager tests; isolated build with restored dotenv
+checksums; full dist link crawl; packager graph and privacy audit (4,879 detail
+players); browser checks at 390 and 1440 in light/dark preferences, tabs, active
+chip bounds, no horizontal page overflow, and no audio src before click. External
+requests were blocked during browser inspection; official image failures correctly
+hide covers. Live publisher audio availability is not established by these checks.
+The five supplied attachment filenames were absent at the requested locations.
+
+Example artifact routes (under `/fewgood-audio-podcast-preview`):
+- `/audio-podcast-preview/du-shu-bu-cheng-lin/`
+- `/audio-podcast-preview/du-shu-bu-cheng-lin/page/2/`
+- `/audio-podcast-preview/du-shu-bu-cheng-lin/6af8cc9a14d01a26f8a9e2ce/`
+
+Packaged artifact: `/tmp/fewgood-audio-design-artifact`.

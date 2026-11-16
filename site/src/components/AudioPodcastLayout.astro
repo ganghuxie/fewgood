@@ -2,7 +2,7 @@
 import Layout from './Layout.astro';
 
 const { title, description = '官方发布者 RSS 音频播客、近期精选与单集历史。' } = Astro.props;
-const policy = '仅播放发布者官方 HTTPS enclosure；本站不托管、不代理、不转存、不转码音频，也不提供下载。';
+const policy = '音频来自发布者官方来源，本站不提供下载。';
 ---
 <Layout
   title={title}
@@ -33,6 +33,21 @@ const policy = '仅播放发布者官方 HTTPS enclosure；本站不托管、不
 @media(max-width:420px){.audio-preview{padding:26px 16px}.audio-directory{padding:18px 14px}.audio-local-nav{gap:18px}.audio-preview h3{font-size:17px}}
 /* Clear the shell's absolutely positioned mobile search on audio pages only. */
 @media(max-width:599px){body:has(.audio-preview) .site-header{padding-bottom:0}body:has(.audio-preview) .site-header .chipbar{margin-top:48px}}
-/* Deliberately muted, section-only dark surfaces leave the shared light shell intact. */
-@media(prefers-color-scheme:dark){.audio-preview{--paper:#202823;--surface:#29312b;--ink:#f0f2e9;--muted:#b9c2b8;--line:#465047;--accent:#80d6a8;color-scheme:dark}}
+/* Audio pages retain a warm, light reading surface. */
+
+.audio-show-head{background:#fff;padding:24px;border:0;border-radius:10px}.audio-show-byline{margin-bottom:0}.audio-tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-top:24px}.audio-tabs button{border:0;background:none;padding:14px 0;color:var(--muted);font:inherit;cursor:pointer}.audio-tabs [aria-selected="true"]{color:var(--ink);font-weight:700;border-bottom:3px solid #49C987}.audio-tab-panel[hidden]{display:none}.audio-row-cover{width:64px;height:64px;border-radius:8px;object-fit:cover;flex:none}.audio-row-copy{flex:1;min-width:0}.audio-excerpt{font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:10px}.audio-player{padding:0;background:none;border:0;border-radius:0;margin:24px 0}.audio-playback-error{border:0;padding:0;background:none}.audio-playback-error a{font-size:12px;margin-left:12px}.audio-show-details{padding:24px 0;max-width:720px;white-space:pre-line;font-size:15px}.audio-episode-row{align-items:flex-start;gap:16px}.audio-detail{max-width:780px}.audio-preview{max-width:1040px;padding-top:32px}.audio-show-head h1{margin-bottom:8px}
+@media(max-width:420px){.audio-show-head{padding:18px 14px}.audio-row-cover{width:52px;height:52px}.audio-episode-row{gap:12px}.audio-preview{padding:24px 16px}.audio-show-head h1{font-size:26px}}
 </style>
+<script is:inline>
+  // Scope the horizontal scroll to audio pages; never move the page vertically.
+  const revealAudioChip = () => {
+    if (!document.querySelector('.audio-preview')) return;
+    const bar = document.querySelector('.site-header .chipbar');
+    const active = bar?.querySelector('a.active');
+    if (!bar || !active) return;
+    const box = bar.getBoundingClientRect();
+    const chip = active.getBoundingClientRect();
+    if (chip.left < box.left || chip.right > box.right) bar.scrollLeft += chip.left - box.left - (box.width - chip.width) / 2;
+  };
+  requestAnimationFrame(revealAudioChip);
+</script>

@@ -49,6 +49,7 @@ def test_built_catalog_ia_and_all_episode_pages():
             assert len(re.findall(r'<audio\b', markup)) == 1
             assert 'preload="none"' in markup
             assert not re.search(r'<audio[^>]*\ssrc=', markup)
-            assert '发布者单集说明' in markup
+            assert '官方原文' in markup
+            assert '不要立即认为失败' not in markup
             assert 'audio-back' in markup and '页</a>' in markup
     assert count == sum(len(s['episodes']) for s in catalog['shows'])

@@ -1,4 +1,5 @@
 ---
+import { episodeExcerpt } from '../lib/audio-podcast-display.mjs';
 import AudioPodcastLayout from './AudioPodcastLayout.astro';
 import { pageNumbers } from '../lib/pagination.mjs';
 import { EPISODE_COUNT_LABEL, PAGE_SIZE, episodePath, pageCount, previewPath, showPath, sliceEpisodePage } from '../lib/audio-podcast.mjs';
@@ -13,15 +14,20 @@ const pageLink = number => showPath(show.slug, number, base);
   <a class="audio-back" href={previewPath(base)}>← 音频播客</a>
   <header class="audio-show-head">
     {show.feed?.cover_url && <img onerror="this.hidden=true" class="audio-cover audio-cover-large" src={show.feed.cover_url} alt={`${show.display_name} 官方封面`} width="96" height="96" />}
-    <div><p class="audio-preview-kicker">节目目录</p><h1>{show.display_name || show.name}</h1>
+    <div><h1>{show.display_name || show.name}</h1>
     <p class="audio-show-byline">{show.publisher} · {EPISODE_COUNT_LABEL} {episodes.length} 集</p>
-    {show.feed?.description_text && <p class="audio-show-description">{show.feed.description_text.slice(0, 160)}{show.feed.description_text.length > 160 ? '…' : ''}</p>}</div>
+    </div>
   </header>
-  <section class="audio-preview-section" aria-labelledby="episodes-heading">
-    <div class="audio-preview-section-head"><h2 id="episodes-heading">全部单集</h2><p>最新在前 · 第 {page} / {pages} 页 · 每页 {PAGE_SIZE} 集</p></div>
+  <div class="audio-tabs" role="tablist" aria-label="节目内容">
+    <button id="updates-tab" role="tab" aria-selected="true" aria-controls="updates-panel">单集更新</button>
+    <button id="about-tab" role="tab" aria-selected="false" aria-controls="about-panel" tabindex="-1">节目详情</button>
+  </div>
+  <section id="updates-panel" class="audio-tab-panel audio-preview-section" role="tabpanel" aria-labelledby="updates-tab">
+    <div class="audio-preview-section-head"><h2 id="episodes-heading">单集更新</h2><p>最新在前 · 第 {page} / {pages} 页 · 每页 {PAGE_SIZE} 集</p></div>
     <ol class="audio-episode-list">
       {pageEpisodes.map(episode => <li class="audio-episode"><a class="audio-episode-row" href={episodePath(show, episode, base)}>
-        <div><h3>{episode.title || '未命名单集'}</h3><p class="audio-episode-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span>{episode.description_truncated && <span>说明可能不完整</span>}</p></div><span aria-hidden="true">↗</span>
+        {(episode.cover_url || show.feed?.cover_url) && <img class="audio-row-cover" src={episode.cover_url || show.feed.cover_url} alt="" width="64" height="64" loading="lazy" onerror="this.hidden=true" />}
+        <div class="audio-row-copy"><h3>{episode.title || '未命名单集'}</h3><p class="audio-excerpt">{episodeExcerpt(episode)}</p><p class="audio-episode-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span>{episode.description_truncated && <span>说明可能不完整</span>}</p></div><span aria-hidden="true">↗</span>
       </a></li>)}
     </ol>
     <nav class="audio-pagination" aria-label="单集分页">
@@ -35,4 +41,27 @@ const pageLink = number => showPath(show.slug, number, base);
     </nav>
     <p class="audio-page-note">共 {episodes.length} 集 · {show.episode_count_label || EPISODE_COUNT_LABEL} · 分页只展示当前公开 RSS 中的快照</p>
   </section>
+  <section id="about-panel" class="audio-tab-panel audio-show-details" role="tabpanel" aria-labelledby="about-tab" hidden>
+    <p>{show.feed?.description_text || '发布者暂未在 RSS 中提供节目介绍。'}</p>
+  </section>
 </AudioPodcastLayout>
+<script is:inline>
+  const tabs = [...document.querySelectorAll('.audio-tabs [role="tab"]')];
+  function selectTab(selected) {
+    tabs.forEach(tab => {
+      const active = tab === selected;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+    });
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = tabs[event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + 1) % tabs.length];
+      selectTab(next); next.focus();
+    });
+  });
+</script>
