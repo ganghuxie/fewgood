@@ -87,7 +87,7 @@ for (const channel of channels.channels || []) for (const video of recentChannel
 const channelOutput = JSON.stringify(channels, null, 2) + '\n';
 const searchVideos = [...searchIndex.values()].map(video => {
   const enrichment = zh.videos?.[video.id] || {};
-  return [video.id, compact(video.title), channelIndex.get(video.channel_id) ?? '', description(video.description || video.summary || video.blurb || video.tags), compact(enrichment.title_zh), Number(video.duration_seconds) || 0, sectionCodes[video.section] ?? 0, !!video.external];
+  return [video.id, compact(video.title), channelIndex.get(video.channel_id) ?? '', description(video.description || video.summary || video.blurb || video.tags), compact(enrichment.title_zh), Number(video.duration_seconds) || 0, sectionCodes[video.section] ?? 0, !!video.external, compact(enrichment.blurb_zh)];
 });
 const searchChannels = (channels.channels || []).map(channel => [channel.id, compact(channel.title), channel.thumbnail || '', Number(channel.subscriber_count) || 0, description(channel.description || channel.about || channel.summary), [...(channelLabels.get(channel.id) || [])].join(' ')]);
 const searchOutput = JSON.stringify({ videos: searchVideos, channels: searchChannels }) + '\n';

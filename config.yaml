@@ -81,3 +81,6 @@ zh:
   gemini_model: gemini-3.5-flash
   gemini_fallback_model: gemini-3.5-flash-lite
   deepseek_model: deepseek-chat
+  # Topic-column and weekly zh enrichment (not the community enrich-zh default).
+  topic_provider: deepseek
+  topic_deepseek_model: deepseek-flash

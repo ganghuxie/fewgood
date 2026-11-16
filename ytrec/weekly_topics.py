@@ -55,7 +55,7 @@ from .thumbnails import (
     load_cache as load_thumbnail_cache,
     probe_thumbnail,
 )
-from .zh import parse_json_response
+from .zh import enrich_zh, parse_json_response
 
 UTC = timezone.utc
 DEFAULT_DB = 'data/weekly_topics.sqlite'
@@ -690,9 +690,11 @@ def _commit_paths():
         'site/src/data/hn_pool.json',
         'site/src/data/topics.json',
         'site/src/data/topic_lookup.json',
+        'site/src/data/zh.json',
         'site/public/hn_pool.json',
         'site/public/topics.json',
         'site/public/topic_lookup.json',
+        'site/public/zh.json',
         'site/public/catalog.json',
         'site/public/search-index.json',
         'site/src/data/catalog.json',
@@ -731,13 +733,17 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
                       algolia_client=None, youtube_client=None, deepseek_post=None,
                       playability_cache_path=PLAYABILITY_CACHE_PATH,
                       thumbnail_cache_path=THUMBNAIL_CACHE_PATH,
-                      build=True, now_dt=None):
+                      zh_cache_path=None, zh_public_path=None,
+                      zh_config_path='config.yaml', build=True, now_dt=None):
     """Run the incremental weekly pipeline and return a serializable summary."""
     if write is False:
         dry_run = True
     now_dt = now_dt or datetime.now(UTC)
     topic_cap = _resolve_topic_cap(config, topic_cap)
     root = Path(root)
+    zh_cache_path = Path(zh_cache_path) if zh_cache_path else root / 'zh.json'
+    zh_public_path = (Path(zh_public_path) if zh_public_path
+                      else root.parent.parent / 'public' / 'zh.json')
     pool_path = root / 'hn_pool.json'
     topics_path = root / 'topics.json'
     lookup_path = root / 'topic_lookup.json'
@@ -797,6 +803,8 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
         'curation_skipped': topic_diagnostics['curation_skipped'],
         'retag_dropped': topic_diagnostics['retag_dropped'],
         'thumbnails': thumbnail_stats,
+        'zh': {'attempted': 0, 'succeeded': 0, 'skipped': 0, 'tokens': 0,
+               'units': 0, 'providers': {}},
         'dry_run': bool(dry_run),
         'wrote': False,
         'commit': {'committed': False, 'pushed': False, 'reason': 'dry_run' if dry_run else None},
@@ -814,6 +822,35 @@ def run_weekly_topics(config, *, days=7, dry_run=False, write=None, no_commit=Fa
     write_topic_artifacts(topics_payload, lookup, output_dir=str(root), yaml_path=yaml_path)
     record_playability(candidates, raw_by_id, cache_path=playability_cache_path)
     summary['wrote'] = True
+
+    try:
+        # Do not pass weekly assignment's deepseek_post (it is None in
+        # production, which would override requests.post, and its payload
+        # shape is topic-id assignment rather than title_zh/blurb_zh).
+        zh_kwargs = dict(
+            feed='topics', videos=new_videos, mode='light',
+            cache_path=zh_cache_path, public_path=zh_public_path,
+            topics_path=topics_path, pool_path=pool_path,
+            config_path=zh_config_path,
+        )
+        zh_stats = enrich_zh(None, **zh_kwargs)
+    except Exception as error:
+        print(f'weekly zh enrichment failed: {type(error).__name__}: {error}', flush=True)
+        zh_stats = {'attempted': 0, 'succeeded': 0, 'skipped': len(new_videos),
+                    'tokens': 0, 'units': 0, 'providers': {},
+                    'error': f'{type(error).__name__}: {error}'}
+    summary['zh'] = {
+        'attempted': int(zh_stats.get('attempted', 0) or 0),
+        'succeeded': int(zh_stats.get('succeeded', 0) or 0),
+        'skipped': int(zh_stats.get('skipped', 0) or 0),
+        'tokens': int(zh_stats.get('tokens', 0) or 0),
+        'units': int(zh_stats.get('units', 0) or 0),
+        'providers': zh_stats.get('providers') or {},
+    }
+    if zh_stats.get('missing_key'):
+        summary['zh']['missing_key'] = True
+    if zh_stats.get('error'):
+        summary['zh']['error'] = zh_stats['error']
 
     if build:
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True)
@@ -842,6 +879,13 @@ def format_summary(summary):
         (f"videos.list batches={summary['fetched_batches']} "
          f"fetched={summary['fetched_ids']} cached={summary['cached_ids']}"),
         summary['quota_line'],
+        (f"Chinese enrichment: attempted={summary.get('zh', {}).get('attempted', 0)} "
+         f"succeeded={summary.get('zh', {}).get('succeeded', 0)} "
+         f"skipped={summary.get('zh', {}).get('skipped', 0)} "
+         f"tokens={summary.get('zh', {}).get('tokens', 0)} "
+         f"units={summary.get('zh', {}).get('units', 0)}"
+         + (" missing_key" if summary.get('zh', {}).get('missing_key') else '')
+         + (f" error={summary['zh']['error']}" if summary.get('zh', {}).get('error') else '')),
         (f"DeepSeek: calls={deepseek.get('calls', 0)} "
          f"tokens={deepseek.get('total_tokens', 0)} "
          f"(prompt={deepseek.get('prompt_tokens', 0)}, "
@@ -917,6 +961,7 @@ def main(argv=None):
         summary = run_weekly_topics(
             config, days=args.days, dry_run=True, no_commit=True, no_push=True,
             llm_cap=args.llm_cap, topic_cap=args.topic_cap,
+            zh_config_path=args.config,
         )
         print(format_summary(summary))
         return 0
@@ -930,7 +975,7 @@ def main(argv=None):
             summary = run_weekly_topics(
                 config, days=args.days, no_commit=args.no_commit,
                 no_push=args.no_push, llm_cap=args.llm_cap,
-                topic_cap=args.topic_cap,
+                topic_cap=args.topic_cap, zh_config_path=args.config,
             )
             print(format_summary(summary))
     except Exception:

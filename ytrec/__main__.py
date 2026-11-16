@@ -53,6 +53,12 @@ def refresh():
             print(f"Thumbnails: checked={thumb_summary['checked']} cached={thumb_summary['from_cache']} updated={thumb_summary['updated']} network_failures={thumb_summary['network_failures']}")
         except Exception as error:
             print(f'WARNING: thumbnail probe skipped: {error}')
+        from .zh import enrich_before_export
+        try:
+            zh_summary = enrich_before_export()
+            print(f"enrich-zh visible: {zh_summary}")
+        except Exception as error:
+            print(f'WARNING: zh enrichment skipped: {error}')
         rebuild_offline()
         print(quota_line(limit))
         refresh_audio_podcasts()
@@ -68,7 +74,8 @@ def refresh():
             'site/src/data', 'site/public/catalog.json', 'site/public/channels.json',
             'site/public/search-index.json', 'site/public/topics.json',
             'site/public/topic_lookup.json', 'site/public/templates.json',
-            'site/public/hn_pool.json', 'data/playability.json', 'data/thumbnails.json',
+            'site/public/hn_pool.json', 'site/public/zh.json',
+            'data/playability.json', 'data/thumbnails.json',
         ]
         paths = [path for path in paths if Path(path).exists()]
         changed = subprocess.run(['git', 'status', '--porcelain', '--', *paths], text=True, stdout=subprocess.PIPE, check=True).stdout
@@ -88,10 +95,15 @@ def main():
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
     parser.add_argument('--refresh-metadata', action='store_true')
-    parser.add_argument('--feed', default='community')
+    parser.add_argument('--feed', default='community',
+                        help="enrich-zh source: community, topics, visible, catalog, search, channels, all")
     parser.add_argument('--limit', type=int)
     parser.add_argument('--force', action='store_true')
     parser.add_argument('--provider', choices=['gemini','deepseek'])
+    parser.add_argument('--mode', choices=['light', 'full'],
+                        help='enrich-zh mode: light (title+description) or full (legacy transcript/comments)')
+    parser.add_argument('--cost-cap', type=float, dest='cost_cap',
+                        help='Stop further DeepSeek calls before exceeding this CNY cap')
     parser.add_argument('--estimate', action='store_true', help='R3 fetch plan only')
     parser.add_argument('--unit-cap', type=int, default=250, help='R3 non-search unit cap')
     parser.add_argument('--dry-run', action='store_true')
@@ -211,7 +223,8 @@ def main():
     db = connect(config['database'])
     try:
         if args.command == 'enrich-zh':
-            enrich_zh(db, feed=args.feed, limit=args.limit, force=args.force, provider=args.provider)
+            enrich_zh(db, feed=args.feed, limit=args.limit, force=args.force,
+                      provider=args.provider, mode=args.mode, cost_cap_cny=args.cost_cap)
             return
         if args.command in ('crawl','all'):
             crawl(db, config, stamp(args.start or config['crawl']['start']), stamp(args.end) if args.end else now())

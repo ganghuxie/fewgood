@@ -129,6 +129,8 @@ def _fixture_root(tmp_path):
 
 
 def _run(root, config, tmp_path, hits, items, **kwargs):
+    kwargs.setdefault('zh_cache_path', tmp_path / 'zh.json')
+    kwargs.setdefault('zh_public_path', tmp_path / 'public' / 'zh.json')
     return wt.run_weekly_topics(
         config, root=root, yaml_path=tmp_path / 'config/topics.yaml',
         db_path=tmp_path / 'weekly.sqlite', algolia_client=FakeAlgolia(hits),
@@ -549,3 +551,112 @@ def test_weekly_topics_command_is_in_help():
     assert '--llm-cap' in result.stdout
     assert '--topic-cap' in result.stdout
     assert '--no-commit' in result.stdout
+
+
+def test_weekly_enriches_only_newly_kept_videos(monkeypatch, tmp_path):
+    root, _old_pool, _old_topics, _old_lookup, config = _fixture_root(tmp_path)
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-key')
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    monkeypatch.setattr(wt, 'probe_thumbnail',
+                        lambda video_id: {'kind': 'maxresdefault', 'url': f'https://img/{video_id}.jpg'})
+    ids = {
+        'capvideo001': _raw('capvideo001', 'AI agents ranked first', view_count=1000, like_count=40),
+        'capvideo002': _raw('capvideo002', 'AI agents ranked second', view_count=1000, like_count=30),
+        'capvideo003': _raw('capvideo003', 'AI agents ranked third', view_count=1000, like_count=20),
+        'capvideo004': _raw('capvideo004', 'AI agents ranked fourth', view_count=1000, like_count=10),
+        'weak0000001': _raw('weak0000001', 'Zebra umbrella', channel_id='chan-weak'),
+    }
+    hits = [_hit(f'item-{video_id}', video_id) for video_id in ids]
+    captured = {}
+
+    def fake_enrich(db, **kwargs):
+        captured['db'] = db
+        captured.update(kwargs)
+        pool = json.loads((root / 'hn_pool.json').read_text())
+        topics = json.loads((root / 'topics.json').read_text())
+        captured['pool_ids'] = [video['id'] for video in pool['videos']]
+        captured['topic_ids'] = [
+            video_id for topic in topics['topics'] for video_id in topic.get('video_ids') or []
+        ]
+        return {'attempted': 3, 'succeeded': 3, 'skipped': 0, 'tokens': 30,
+                'units': 3, 'providers': {'deepseek': 3}}
+
+    monkeypatch.setattr(wt, 'enrich_zh', fake_enrich)
+    summary = _run(root, config, tmp_path, hits, ids)
+
+    assert summary['new_videos'] == 3
+    assert summary['skipped_over_cap'] == ['capvideo004']
+    assert summary['skipped_low_confidence'] == ['weak0000001']
+    passed_ids = [video['id'] for video in captured['videos']]
+    assert passed_ids == ['capvideo001', 'capvideo002', 'capvideo003']
+    assert captured['feed'] == 'topics'
+    assert captured['mode'] == 'light'
+    assert captured['db'] is None
+    assert captured['cache_path'] == tmp_path / 'zh.json'
+    for excluded in ('oldvideo001', 'oldvideo002', 'capvideo004', 'weak0000001'):
+        assert excluded not in passed_ids
+    assert set(passed_ids) <= set(captured['pool_ids'])
+    assert set(passed_ids) <= set(captured['topic_ids'])
+    assert summary['zh'] == {
+        'attempted': 3,
+        'succeeded': 3,
+        'skipped': 0,
+        'tokens': 30,
+        'units': 3,
+        'providers': {'deepseek': 3},
+    }
+    report = wt.format_summary(summary)
+    assert 'Chinese enrichment: attempted=3 succeeded=3 skipped=0 tokens=30 units=3' in report
+
+
+def test_weekly_dry_run_does_not_invoke_zh_enrichment(monkeypatch, tmp_path):
+    root, _old_pool, _old_topics, _old_lookup, config = _fixture_root(tmp_path)
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-key')
+    monkeypatch.setattr(wt, 'probe_thumbnail',
+                        lambda video_id: {'kind': 'hqdefault', 'url': f'https://img/{video_id}.jpg'})
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError('dry run must not invoke zh enrichment')
+
+    monkeypatch.setattr(wt, 'enrich_zh', forbidden)
+    summary = _run(
+        root, config, tmp_path,
+        [_hit('item-good', 'goodvideo01')],
+        {'goodvideo01': _raw('goodvideo01', 'AI agents in production')},
+        dry_run=True,
+    )
+    assert summary['new_videos'] == 1
+    assert summary['zh']['attempted'] == 0
+
+
+def test_weekly_missing_deepseek_key_records_zh_skip(monkeypatch, tmp_path):
+    root, _old_pool, _old_topics, _old_lookup, config = _fixture_root(tmp_path)
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-key')
+    monkeypatch.delenv('DEEPSEEK_API_KEY', raising=False)
+    monkeypatch.delenv('GEMINI_API_KEY', raising=False)
+    monkeypatch.setattr(wt, 'probe_thumbnail',
+                        lambda video_id: {'kind': 'hqdefault', 'url': f'https://img/{video_id}.jpg'})
+    zh_cache_path = tmp_path / 'zh.json'
+    zh_public_path = tmp_path / 'public' / 'zh.json'
+
+    summary = _run(
+        root, config, tmp_path,
+        [_hit('item-good', 'goodvideo01')],
+        {'goodvideo01': _raw('goodvideo01', 'AI agents in production')},
+        zh_cache_path=zh_cache_path, zh_public_path=zh_public_path,
+    )
+
+    assert summary['zh']['missing_key'] is True
+    assert summary['zh']['attempted'] == 0
+    assert summary['zh']['skipped'] == 1
+    assert not zh_cache_path.exists()
+    assert not zh_public_path.exists()
+    assert 'Chinese enrichment:' in wt.format_summary(summary)
+    assert 'missing_key' in wt.format_summary(summary)
+
+
+def test_weekly_commit_paths_include_changed_zh_files():
+    paths = wt._commit_paths()
+    assert 'site/src/data/zh.json' in paths
+    assert 'site/public/zh.json' in paths
+    assert 'data/quota.json' not in paths

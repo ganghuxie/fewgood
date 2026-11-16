@@ -27,14 +27,29 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
    }, { threshold: 0.6 });
    list.querySelectorAll('article[data-id]').forEach(node => seenObserver.observe(node));
  };
+ let zhMap = {};
  const render = snapshots => {
    empty.hidden = snapshots.length > 0;
-   list.innerHTML = snapshots.map(video => `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(thumbFor(video))}" ${thumbFallbackAttr(video.id)} alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(video.title || video.id)}</h2><p class="video-meta">${esc(video.channel)}</p></div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`).join('');
+   list.innerHTML = snapshots.map(video => {
+     const z = zhMap[video.id] || {};
+     const title = z.title_zh || video.title || video.id;
+     const original = z.title_zh ? `<p class="zh-title">${esc(video.title || '')}</p>` : '';
+     const blurb = z.blurb_zh ? `<p class="zh-blurb">${esc(z.blurb_zh)}</p>` : '';
+     return `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(thumbFor(video))}" ${thumbFallbackAttr(video.id)} alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2>${original}<p class="video-meta">${esc(video.channel)}</p>${blurb}</div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`;
+   }).join('');
    list.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); event.stopPropagation(); remove(key, button.dataset.remove); render(libraryList(key)); });
    observeSeen();
    updateBadges();
  };
- Promise.all([fetch(`${base}/catalog.json`).then(response => response.json()), fetch(`${base}/channels.json`).then(response => response.json())]).then(([catalog, channelData]) => { migrate(key, catalog, channelData); render(libraryList(key)); }).catch(() => render(libraryList(key)));
+ Promise.all([
+   fetch(`${base}/catalog.json`).then(response => response.json()),
+   fetch(`${base}/channels.json`).then(response => response.json()),
+   fetch(`${base}/zh.json`).then(response => response.ok ? response.json() : {videos: {}}).catch(() => ({videos: {}})),
+ ]).then(([catalog, channelData, zhData]) => {
+   zhMap = zhData.videos || {};
+   migrate(key, catalog, channelData);
+   render(libraryList(key));
+ }).catch(() => render(libraryList(key)));
  root.querySelector('[data-clear]')?.addEventListener('click', () => { set(key, []); render([]); });
 </script>
 <style>
