@@ -65,8 +65,20 @@ import assert from 'node:assert/strict';
 const chip = {getBoundingClientRect:()=>({left:350,right:438,width:88})};
 const bar = {scrollLeft:0,getBoundingClientRect:()=>({left:0,right:390,width:390}),querySelector:()=>chip};
 globalThis.document = {querySelector:s=>s === '.audio-preview' ? {} : bar};
-globalThis.requestAnimationFrame = fn => fn();
+const frames = [];
+const events = {};
+globalThis.requestAnimationFrame = fn => frames.push(fn);
+globalThis.window = {addEventListener:(name, fn) => {events[name] = fn;}};
+const flush = () => {while (frames.length) frames.shift()();};
 ''' + script + '''
+assert.equal(bar.scrollLeft, 0);
+flush();
+assert.equal(bar.scrollLeft, 199);
+// A later stylesheet/layout shift can clip the chip again before load.
+bar.scrollLeft=0;
+events.load();
+assert.equal(bar.scrollLeft, 0);
+flush();
 assert.equal(bar.scrollLeft, 199);
 bar.scrollLeft=0;
 document.querySelector=()=>null;

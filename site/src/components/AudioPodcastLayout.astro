@@ -49,5 +49,8 @@ const policy = '音频来自发布者官方来源，本站不提供下载。';
     const chip = active.getBoundingClientRect();
     if (chip.left < box.left || chip.right > box.right) bar.scrollLeft += chip.left - box.left - (box.width - chip.width) / 2;
   };
-  requestAnimationFrame(revealAudioChip);
+  const revealAfterLayout = () => requestAnimationFrame(() => requestAnimationFrame(revealAudioChip));
+  revealAfterLayout();
+  window.addEventListener('load', revealAfterLayout, { once: true });
+  document.fonts?.ready.then(revealAfterLayout);
 </script>

@@ -717,7 +717,7 @@ def test_committed_snapshot_fallback_without_local_cache(tmp_path, monkeypatch):
     output = tmp_path / 'audio.json'
     def initial_fetch(url, **kwargs):
         slug = 'one' if '/one.' in url else 'two'
-        return rss_doc([rss_item(slug, guid=slug, pub_date='2026-11-14T12:00:00Z')])
+        return rss_doc([rss_item(slug, guid=slug, pub_date='2026-11-14T12:00:00Z')]).replace(b'<channel>', b'<channel><itunes:image href="https://publisher.test/cover.jpg"/>')
     monkeypatch.setattr(ap, 'fetch_rss', initial_fetch)
     first = ap.ingest(config_path=config, output_path=output, cache_dir=tmp_path / 'old-cache', now=NOW)
     def mixed_fetch(url, **kwargs):
@@ -728,6 +728,8 @@ def test_committed_snapshot_fallback_without_local_cache(tmp_path, monkeypatch):
     second = ap.ingest(config_path=config, output_path=output, cache_dir=tmp_path / 'empty-cache', now=NOW)
     assert second['shows'][0]['fetch_status'] == 'snapshot_fallback'
     assert second['shows'][0]['episodes'] == first['shows'][0]['episodes']
+    assert second['shows'][0]['feed']['cover_url'] == first['shows'][0]['feed']['cover_url'] == 'https://publisher.test/cover.jpg'
+    assert json.loads(output.read_text())['shows'][0]['feed']['cover_url'] == 'https://publisher.test/cover.jpg'
     assert second['shows'][1]['fetch_status'] == 'fresh'
     assert second['shows'][1]['episodes'][0]['episode_id'] == 'two-new'
     assert '\n  ' not in output.read_text()
@@ -766,3 +768,46 @@ def test_no_network_reparses_old_cached_xml_for_covers(tmp_path):
                            session=NoNetwork(), sleep_fn=lambda _: None, fetched_at='2026-11-16T00:00:00Z')
     assert record['feed']['cover_url'] == 'https://publisher.test/cover.jpg'
     assert record['fetch_status'] == 'cache_only'
+
+
+@pytest.mark.parametrize('cover_tag', [
+    '<itunes:image href="https://publisher.test/show.jpg"/>',
+    '<image><url>https://publisher.test/show.jpg</url></image>',
+])
+def test_live_ingest_exports_official_covers_without_prior_cache(tmp_path, cover_tag):
+    config = write_config(tmp_path, [show_config('live')])
+    output = tmp_path / 'audio.json'
+    cache = tmp_path / 'cache'
+    item = rss_item('Live', guid='live', pub_date='2026-11-14T12:00:00Z')
+    item = item.replace('</item>', '<itunes:image href="https://publisher.test/episode.jpg"/></item>')
+    payload = rss_doc([item, rss_item('Inherited', guid='inherited', pub_date='2026-11-13T12:00:00Z')])
+    payload = payload.replace(b'<channel>', ('<channel>' + cover_tag).encode())
+    calls = []
+
+    class Response:
+        status_code = 200
+        headers = {'Content-Type': 'application/rss+xml'}
+
+        def iter_content(self, chunk_size):
+            yield payload
+
+        def close(self):
+            pass
+
+    class Session:
+        def get(self, url, **kwargs):
+            assert url == 'https://feeds.example.test/live.xml'
+            calls.append(url)
+            return Response()
+
+    assert not cache.exists() and not output.exists()
+    ap.ingest(config_path=config, output_path=output, cache_dir=cache,
+              session=Session(), sleep_fn=lambda _: None, now=NOW)
+    show = json.loads(output.read_text())['shows'][0]
+    assert calls == ['https://feeds.example.test/live.xml']
+    assert show['fetch_status'] == 'fresh'
+    assert show['feed']['cover_url'] == 'https://publisher.test/show.jpg'
+    assert {e['guid']: e['cover_url'] for e in show['episodes']} == {
+        'live': 'https://publisher.test/episode.jpg',
+        'inherited': 'https://publisher.test/show.jpg',
+    }

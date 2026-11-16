@@ -4,7 +4,8 @@ const textOf = node => node.nodeName === '#text' ? node.value : (node.childNodes
 const visible = node => textOf(node).replace(/\s+/g, ' ').trim();
 const normalized = text => text.replace(/^[\s\p{Extended_Pictographic}\uFE0F🎧【「\[]+/u, '').replace(/[\s】」\]:：]+$/u, '');
 const labels = /^(?:相关播客|相关节目|推荐播客|节目推荐|相关推荐|我们还有这些播客)$/;
-const episodeTitle = text => /^(?:E\s*)?\d+\s*[-.、：: ]\s*\S/i.test(text);
+// Decimal list markers also introduce books; only explicit episode separators qualify.
+const episodeTitle = text => /^(?:E\s*)?\d+\s*[-：:]\s*\S/i.test(text) || /^E\s*\d+\s+\S/i.test(text);
 const links = node => (node.tagName === 'a' ? [node] : []).concat((node.childNodes || []).flatMap(links));
 const episodeLink = node => links(node).some(a => a.attrs?.some(({name,value}) => name === 'href' && /\/(?:episode|sound|track)\//i.test(value)));
 const timestamp = text => /\b\d{1,2}:\d{2}\b/.test(text);
