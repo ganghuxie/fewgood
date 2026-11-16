@@ -1,0 +1,166 @@
+# Official publisher RSS audio.
+# `shows` are fetched and exported. `planned_shows` remains available for attribution-only metadata.
+shows:
+  - name: 岩中花述
+    display_name: 岩中花述
+    slug: yan-zhong-hua-shu
+    publisher: GIADA
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/hwen8wf69c6g
+    source_page: https://www.xiaoyuzhoufm.com/podcast/625635587bfca4e73e990703
+    optional_spotify: https://open.spotify.com/show/6JukZBKKuvslkEUmfmlZTh
+    apple: https://podcasts.apple.com/cn/podcast/岩中花述/id1582119137
+    status: enabled
+
+  - name: 知行小酒馆
+    display_name: 知行小酒馆
+    slug: zhi-xing-xiao-jiu-guan
+    publisher: 有知有行
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/j8yp8gxkmgqr
+    source_page: https://www.xiaoyuzhoufm.com/podcast/6013f9f58e2f7ee375cf4216
+    optional_spotify: https://open.spotify.com/show/2XeU495v6CZvBuRcVEbfQI
+    apple: https://podcasts.apple.com/cn/podcast/知行小酒馆/id1559695855
+    status: enabled
+
+  - name: 无人知晓
+    display_name: 无人知晓
+    slug: wu-ren-zhi-xiao
+    publisher: 孟岩
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/ypn9dydpbxpc
+    source_page: https://www.xiaoyuzhoufm.com/podcast/611719d3cb0b82e1df0ad29e
+    optional_spotify: https://open.spotify.com/show/4TY2xLrxqaOEffz4B8eXpi
+    apple: https://podcasts.apple.com/cn/podcast/无人知晓/id1581271335
+    status: enabled
+
+  - name: 面基
+    display_name: 面基
+    slug: mian-ji
+    publisher: 面基
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/6hpdgggtxpxb
+    source_page: https://www.xiaoyuzhoufm.com/podcast/6388760f22567e8ea6ad070f
+    optional_spotify: https://open.spotify.com/show/65XM7rQOU05IRxFX0jVjsH
+    apple: https://podcasts.apple.com/cn/podcast/面基/id1686741064
+    status: enabled
+
+  - name: 谭立人
+    display_name: 谭立人
+    slug: tan-li-ren
+    publisher: 谭立人
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/nh9mphjxn8u7
+    source_page: https://www.xiaoyuzhoufm.com/podcast/65a2d0f07242f9fc1c1df60a
+    optional_spotify: https://open.spotify.com/show/61RHBnuUh4CVLqvWFsaLOk
+    apple: https://podcasts.apple.com/cn/podcast/谭立人/id1771401634
+    status: enabled
+
+  - name: 自我进化论
+    display_name: 自我进化论
+    slug: zi-wo-jin-hua-lun
+    publisher: 颜晓静Athena
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/artr8kfmlmxh
+    source_page: https://www.xiaoyuzhoufm.com/podcast/5e5de5cb418a84a0467beb90
+    optional_spotify: https://open.spotify.com/show/4esvXRFo24ukSH01RwDCy9
+    apple: https://podcasts.apple.com/cn/podcast/自我进化论/id1498170617
+    status: enabled
+
+  - name: 忽左忽右
+    display_name: 忽左忽右
+    slug: hu-zuo-hu-you
+    publisher: JustPod
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/cv4bkgpuglwp
+    source_page: https://www.xiaoyuzhoufm.com/podcast/5e4ee557418a84a0466737b7
+    optional_spotify: https://open.spotify.com/show/1Fm6RmlyY9YsqoOLMBQpxJ
+    apple: https://podcasts.apple.com/cn/podcast/忽左忽右/id1493503146
+    status: enabled
+
+  - name: 独树不成林
+    display_name: 独树不成林
+    slug: du-shu-bu-cheng-lin
+    publisher: 鬼鬼祟祟的树
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/y9qnpfdrctnx
+    source_page: https://www.xiaoyuzhoufm.com/podcast/64acd33c7a3d479103fbd32d
+    optional_spotify: https://open.spotify.com/show/054BlO7x8pvcblbzxq8BxU
+    apple: https://podcasts.apple.com/cn/podcast/独树不成林/id1711052890
+    status: enabled
+
+  - name: 正经叭叭
+    display_name: 正经叭叭
+    slug: zheng-jing-ba-ba
+    publisher: 惊讶喜剧
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/t7hdrqbuxmqr
+    source_page: https://www.xiaoyuzhoufm.com/podcast/60e43cecc4e7c8188c2f92a4
+    optional_spotify: https://open.spotify.com/show/39TlHlfNXzhYe59G7ETdv8
+    apple: https://podcasts.apple.com/cn/podcast/正经叭叭/id1575323064
+    status: enabled
+
+  - name: 张小珺商业访谈录
+    display_name: 张小珺Jùn｜商业访谈录
+    slug: zhang-xiao-jun
+    publisher: 张小珺
+    host_kind: xiaoyuzhou
+    rss_url: https://feed.xyzfm.space/dk4yh3pkpjp3
+    source_page: https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962
+    optional_spotify: https://open.spotify.com/show/2g0V13H8ZqZao5uqpJJkZs
+    apple: https://podcasts.apple.com/cn/podcast/张小珺Jùn｜商业访谈录/id1634356920
+    status: enabled
+
+  - name: 故事FM
+    display_name: 故事FM
+    slug: story-fm
+    publisher: 寇爱哲
+    host_kind: storyfm
+    rss_url: https://feeds.storyfm.cn/storyfm.xml
+    source_page: https://storyfm.cn/
+    optional_spotify: https://open.spotify.com/show/3ROMNljvYu6nHCTpklrOS6
+    apple: https://podcasts.apple.com/cn/podcast/故事FM/id1256399960
+    status: enabled
+
+  - name: 纵横四海
+    display_name: 纵横四海
+    slug: zong-heng-si-hai
+    publisher: 携隐Melody
+    host_kind: ximalaya
+    rss_url: https://www.ximalaya.com/album/67531569.xml
+    source_page: https://www.ximalaya.com/album/67531569
+    apple: https://podcasts.apple.com/cn/podcast/纵横四海/id1671490972
+    status: enabled
+
+  - name: 文化有限
+    display_name: 文化有限
+    slug: wen-hua-you-xian
+    publisher: 文化有限
+    host_kind: wavpub
+    rss_url: https://s1.proxy.wavpub.com/weknownothing.xml
+    source_page: https://www.ximalaya.com/album/29887212
+    apple: https://podcasts.apple.com/cn/podcast/文化有限/id1482731836
+    status: enabled
+
+  - name: 声动早咖啡
+    display_name: 声动早咖啡
+    slug: sheng-dong-zao-ka-fei
+    publisher: 声动活泼
+    host_kind: ximalaya
+    rss_url: https://www.ximalaya.com/album/51076156.xml
+    source_page: https://www.ximalaya.com/album/51076156
+    apple: https://podcasts.apple.com/cn/podcast/声动早咖啡/id1573189055
+    status: enabled
+
+  - name: 谐星聊天会
+    display_name: 谐星聊天会
+    slug: xie-xing-liao-tian-hui
+    publisher: 单立人喜剧
+    host_kind: danlirencomedy
+    rss_url: https://feeds.danlirencomedy.com/xxlth.xml
+    source_page: https://www.danlirencomedy.cn/
+    apple: https://podcasts.apple.com/cn/podcast/谐星聊天会/id1488080680
+    status: enabled
+    note: tracker host can be slow
+
+planned_shows: []

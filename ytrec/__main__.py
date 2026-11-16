@@ -14,6 +14,15 @@ from .zh import enrich_zh
 def daily_limit(config):
     return config.get('metadata', {}).get('daily_quota_limit', config.get('youtube', {}).get('daily_quota_limit', 8000))
 
+def refresh_audio_podcasts():
+    """Keep RSS failures from blocking the other production sections."""
+    from .audio_podcast import ingest
+    try:
+        ingest()
+    except Exception as error:
+        print(f'WARNING: audio RSS ingest skipped ({type(error).__name__}); retaining existing snapshot')
+
+
 def refresh():
     """Refresh deployable feeds, build the site, and publish only changed snapshots."""
     log = Path('logs') / f"refresh-{datetime.now(timezone.utc):%Y%m%d}.log"
@@ -46,6 +55,7 @@ def refresh():
             print(f'WARNING: thumbnail probe skipped: {error}')
         rebuild_offline()
         print(quota_line(limit))
+        refresh_audio_podcasts()
         subprocess.run(['npm', 'run', 'build'], cwd='site', check=True, stdout=handle, stderr=handle)
         from .crawl_links import crawl_dist
         broken = crawl_dist('site/dist')
@@ -73,7 +83,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','weekly-topics','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','weekly-topics','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability','ingest-audio-podcasts'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -92,6 +102,16 @@ def main():
     parser.add_argument('--llm-cap', type=int, default=30, help='maximum DeepSeek calls for weekly-topics')
     parser.add_argument('--topic-cap', type=int,
                         help='maximum new videos per topic for weekly-topics')
+    parser.add_argument('--podcast-config', default='config/audio_podcasts.yaml',
+                        help='audio podcast ingress config (ingest-audio-podcasts only)')
+    parser.add_argument('--output', default='site/src/data/audio_podcast.json',
+                        help='audio podcast JSON export path')
+    parser.add_argument('--cache-dir', default='data/audio_podcast_cache',
+                        help='audio podcast raw/parsed cache directory')
+    parser.add_argument('--show', help='only ingest one enabled audio podcast slug')
+    parser.add_argument('--now', help='UTC ISO timestamp for deterministic podcast selection')
+    parser.add_argument('--no-network', action='store_true',
+                        help='audio podcast: read only the parsed cache')
     args = parser.parse_args()
     if args.command == 'weekly-topics':
         from . import weekly_topics
@@ -108,6 +128,25 @@ def main():
             return weekly_topics.main(forwarded)
         except (RuntimeError, ValueError, subprocess.CalledProcessError) as error:
             parser.exit(1, f'{error}\n')
+    if args.command == 'ingest-audio-podcasts':
+        from . import audio_podcast
+        podcast_config = args.podcast_config
+        if args.config != 'config.yaml' and podcast_config == 'config/audio_podcasts.yaml':
+            podcast_config = args.config
+        forwarded = [
+            '--config', podcast_config,
+            '--output', args.output,
+            '--cache-dir', args.cache_dir,
+        ]
+        if args.show:
+            forwarded += ['--show', args.show]
+        if args.now:
+            forwarded += ['--now', args.now]
+        if args.no_network:
+            forwarded.append('--no-network')
+        if args.dry_run:
+            forwarded.append('--dry-run')
+        return audio_podcast.main(forwarded)
     if args.command in ('fewgood-r3-fetch','fewgood-r3-select'):
         from . import fewgood_r3
         forwarded=['fetch' if args.command.endswith('fetch') else 'select']

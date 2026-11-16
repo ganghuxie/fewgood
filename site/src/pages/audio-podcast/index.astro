@@ -1,0 +1,7 @@
+---
+import AudioPodcastIndex from '../../components/AudioPodcastIndex.astro';
+import { loadAudioPodcastData } from '../../lib/audio-podcast.mjs';
+
+const data = loadAudioPodcastData();
+---
+<AudioPodcastIndex data={data} />

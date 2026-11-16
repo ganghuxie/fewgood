@@ -1,0 +1,28 @@
+---
+import AudioPodcastShowPage from '../../../../components/AudioPodcastShowPage.astro';
+import { loadAudioPodcastData, pageCount } from '../../../../lib/audio-podcast.mjs';
+
+export function getStaticPaths() {
+  const data = loadAudioPodcastData();
+  return data.shows.flatMap(show => {
+    const pages = pageCount(show.episodes?.length || 0);
+    return Array.from({ length: Math.max(0, pages - 1) }, (_, index) => {
+      const page = index + 2;
+      return {
+        params: { slug: show.slug, page: String(page) },
+        props: { slug: show.slug, page },
+      };
+    });
+  });
+}
+
+const data = loadAudioPodcastData();
+const show = data.shows.find(candidate => candidate.slug === Astro.props.slug);
+if (!show) throw new Error(`音频播客找不到节目：${Astro.props.slug}`);
+const pages = pageCount(show.episodes?.length || 0);
+const page = Number(Astro.props.page);
+if (!Number.isInteger(page) || page < 2 || page > pages) {
+  throw new Error(`音频播客分页无效：${Astro.props.slug} / ${Astro.props.page}`);
+}
+---
+<AudioPodcastShowPage show={show} page={page} data={data} />

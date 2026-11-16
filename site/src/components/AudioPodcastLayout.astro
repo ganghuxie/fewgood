@@ -1,0 +1,105 @@
+---
+import Layout from './Layout.astro';
+
+const { title, description = '官方发布者 RSS 音频播客、近期精选与单集历史。' } = Astro.props;
+const policy = '仅播放发布者官方 HTTPS enclosure；本站不托管、不代理、不转存、不转码音频，也不提供下载。';
+---
+<Layout
+  title={title}
+  active="audio-podcast"
+  description={description}
+  ogTitle={title}
+  ogDescription={description}
+>
+  <div class="audio-preview">
+    <slot />
+
+    <p class="audio-preview-policy">{policy}</p>
+  </div>
+</Layout>
+
+<style is:global>
+.audio-preview{max-width:1120px;margin:0 auto;color:#0f0f0f}
+.audio-preview-kicker{margin:0 0 8px;color:#606060;font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.audio-preview h1{margin:0;font-size:32px;line-height:1.2}
+.audio-preview-lede{max-width:760px;margin:12px 0 0;color:#606060;font-size:15px;line-height:1.7}
+.audio-preview-section{margin-top:42px;padding-top:26px;border-top:1px solid #e5e5e5}
+.audio-preview-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:14px}
+.audio-preview-section-head h2{margin:0;font-size:24px;line-height:1.3}
+.audio-preview-section-head p{margin:0;color:#606060;font-size:13px}
+.audio-preview-rules{margin:0 0 20px;padding:13px 15px;border-left:4px solid #0f0f0f;background:#f8f8f8;color:#444;font-size:14px;line-height:1.65}
+.audio-preview-rules strong{color:#0f0f0f}
+.audio-recent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.audio-recent-card{display:flex;flex-direction:column;min-width:0;border:1px solid #e5e5e5;border-radius:12px;padding:16px 17px;background:#fff}
+.audio-recent-eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:#606060;font-size:12px;line-height:1.5}
+.audio-recent-eyebrow a{color:#0f0f0f;font-weight:700;text-decoration:none}
+.audio-recent-eyebrow a:hover{text-decoration:underline}
+.audio-recent-card h3{margin:9px 0 7px;font-size:17px;line-height:1.45;font-weight:600;overflow-wrap:anywhere}
+.audio-recent-card h3 a{color:#0f0f0f;text-decoration:none}
+.audio-recent-card h3 a:hover{text-decoration:underline}
+.audio-recent-meta{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0;color:#606060;font-size:13px;line-height:1.5}
+.audio-recent-reason{display:inline-flex;align-self:flex-start;margin:10px 0 0;padding:4px 8px;border-radius:999px;background:#f2f2f2;color:#4d4d4d;font-size:12px;line-height:1.4}
+.audio-recent-excerpt{margin:10px 0 0;color:#555;font-size:13px;line-height:1.65}
+.audio-recent-footer{margin-top:auto;padding-top:13px}
+.audio-recent-footer a{color:#0f0f0f;font-size:13px;font-weight:600;text-decoration:none}
+.audio-recent-footer a:hover{text-decoration:underline}
+.audio-empty{padding:26px 18px;border:1px solid #e5e5e5;border-radius:10px;color:#606060;background:#fafafa;text-align:center}
+.audio-show-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.audio-show-card{display:flex;flex-direction:column;min-width:0;border:1px solid #e5e5e5;border-radius:12px;padding:16px;color:#0f0f0f;text-decoration:none;background:#fff}
+.audio-show-card:hover{border-color:#bdbdbd;box-shadow:0 3px 14px #00000012}
+.audio-show-name{margin:0;font-size:18px;line-height:1.35;font-weight:600;overflow-wrap:anywhere}
+.audio-show-publisher{margin:7px 0 0;color:#444;font-size:13px;line-height:1.5}
+.audio-show-source{margin:3px 0 0;color:#606060;font-size:12px;line-height:1.5}
+.audio-show-count{margin:11px 0 0;font-size:13px;line-height:1.5;color:#0f0f0f}
+.audio-show-recent{margin:3px 0 0;color:#606060;font-size:12px;line-height:1.5}
+.audio-show-link{margin-top:auto;padding-top:13px;color:#0f0f0f;font-size:13px;font-weight:600}
+.audio-planned-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.audio-planned-item{border:1px dashed #cfcfcf;border-radius:10px;padding:13px 14px;background:#fafafa}
+.audio-planned-item strong{display:block;font-size:15px;line-height:1.4}
+.audio-planned-item span{display:block;margin-top:4px;color:#606060;font-size:12px;line-height:1.5}
+.audio-planned-item .audio-status{color:#7a4b00;font-weight:600}
+.audio-back{display:inline-block;margin:0 0 18px;color:#0f0f0f;font-size:13px;font-weight:600;text-decoration:none}
+.audio-back:hover{text-decoration:underline}
+.audio-show-head{padding-bottom:24px;border-bottom:1px solid #e5e5e5}
+.audio-show-head h1{margin:0;font-size:34px;line-height:1.22;overflow-wrap:anywhere}
+.audio-show-byline{margin:10px 0 0;color:#444;font-size:15px;line-height:1.6}
+.audio-show-byline span+span:before{content:'·';margin:0 7px;color:#999}
+.audio-show-description{max-width:820px;margin:16px 0 0;color:#444;font-size:14px;line-height:1.75}
+.audio-show-description a{color:#0f0f0f}
+.audio-show-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.audio-show-links a{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border:1px solid #ddd;border-radius:999px;color:#0f0f0f;text-decoration:none;font-size:13px;font-weight:500;background:#fff}
+.audio-show-links a:hover{background:#f2f2f2}
+.audio-source-note{margin:12px 0 0;color:#606060;font-size:12px;line-height:1.6}
+.audio-episode-list{margin:0;padding:0;list-style:none}
+.audio-episode{padding:26px 0 28px;border-bottom:1px solid #e5e5e5;scroll-margin-top:18px}
+.audio-episode:target{background:#fffdf5;box-shadow:-12px 0 0 #fffdf5,12px 0 0 #fffdf5}
+.audio-episode h2{margin:0;font-size:20px;line-height:1.45;font-weight:600;overflow-wrap:anywhere}
+.audio-episode-meta{display:flex;flex-wrap:wrap;gap:7px 14px;margin:8px 0 0;color:#606060;font-size:13px;line-height:1.5}
+.audio-episode-description{margin:14px 0 0;color:#333;font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+.audio-episode-description a{color:#0f0f0f;text-decoration:underline;text-underline-offset:2px}
+.audio-episode-description img{max-width:100%;height:auto}
+.audio-episode-missing{margin:13px 0 0;color:#606060;font-size:14px}
+.audio-episode-note{margin:12px 0 0;padding:9px 11px;border-radius:8px;background:#f8f8f8;color:#555;font-size:12px;line-height:1.6}
+.audio-episode-note a{color:#0f0f0f;font-weight:600}
+.audio-episode-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-size:13px}
+.audio-episode-actions a{color:#0f0f0f;text-decoration:underline;text-underline-offset:2px}
+.audio-player{margin-top:16px;padding:13px 14px;border:1px solid #e5e5e5;border-radius:10px;background:#fafafa}
+.audio-player audio{display:block;width:100%;max-width:620px;margin-top:10px}
+.audio-play-button{min-height:38px;padding:0 15px;border:0;border-radius:19px;background:#0f0f0f;color:#fff;font:600 14px inherit;cursor:pointer}
+.audio-play-button:hover{background:#333}
+.audio-play-button:focus-visible{outline:2px solid #065fd4;outline-offset:2px}
+.audio-player-note{margin:9px 0 0;color:#606060;font-size:12px;line-height:1.55}
+.audio-playback-error{margin-top:11px;padding:11px 12px;border:1px solid #d7b38a;border-radius:8px;background:#fff8ee;color:#4d2d00;font-size:13px;line-height:1.6}
+.audio-playback-error strong{display:block;margin-bottom:3px}
+.audio-playback-error p{margin:0 0 7px}
+.audio-playback-error a{color:#0f0f0f;font-weight:600}
+.audio-pagination{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;margin:30px 0 4px}
+.audio-pagination a,.audio-pagination span{min-width:34px;padding:7px 9px;border:1px solid #ddd;border-radius:7px;color:#0f0f0f;text-align:center;text-decoration:none;font-size:13px;line-height:1.2}
+.audio-pagination a:hover{background:#f2f2f2}
+.audio-pagination [aria-current="page"]{background:#0f0f0f;border-color:#0f0f0f;color:#fff;font-weight:600}
+.audio-pagination .audio-gap{border-color:transparent;color:#777}
+.audio-page-note{margin:14px 0 0;text-align:center;color:#606060;font-size:12px}
+.audio-preview-policy{margin:46px 0 0;padding-top:18px;border-top:1px solid #e5e5e5;color:#606060;font-size:12px;line-height:1.65}
+@media(max-width:899px){.audio-show-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.audio-recent-grid,.audio-show-grid,.audio-planned-list{grid-template-columns:1fr}.audio-preview h1,.audio-show-head h1{font-size:27px}.audio-preview-section-head{display:block}.audio-preview-section-head p{margin-top:5px}}
+</style>

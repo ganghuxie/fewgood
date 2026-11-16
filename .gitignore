@@ -18,3 +18,6 @@ logs/
 
 # symlink in local worktrees
 site/node_modules
+
+# Official RSS caches stay local; the JSON export is tracked.
+data/audio_podcast_cache/

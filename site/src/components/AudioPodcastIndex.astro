@@ -1,0 +1,123 @@
+---
+import AudioPodcastLayout from './AudioPodcastLayout.astro';
+import {
+  EPISODE_COUNT_LABEL,
+  episodePath,
+  hostKindLabel,
+  previewPath,
+  showPath,
+  sortRecentSelection,
+} from '../lib/audio-podcast.mjs';
+
+const { data } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const shows = data.shows || [];
+const plannedShows = data.planned_shows || [];
+const recentSelection = data.recent_selection || {};
+const recentItems = sortRecentSelection(recentSelection.items || []);
+const showsBySlug = Object.fromEntries(shows.map(show => [show.slug, show]));
+const selectedCounts = recentItems.reduce((counts, item) => {
+  counts[item.show_slug] = (counts[item.show_slug] || 0) + 1;
+  return counts;
+}, {});
+const totalRecent = recentItems.length;
+
+const excerpt = value => {
+  const text = typeof value === 'string' ? value.replace(/\s+/g, ' ').trim() : '';
+  return text.length > 170 ? `${text.slice(0, 170)}…` : text;
+};
+---
+<AudioPodcastLayout
+  title="音频播客 · fewgood."
+  description="官方发布者 RSS 音频；包含近期精选、整档节目目录与分页单集历史。"
+  data={data}
+>
+  {data.available === false && <p class="audio-empty" role="status">{data.unavailable_message}</p>}
+  <header>
+    <p class="audio-preview-kicker">发布者官方 RSS 音频</p>
+    <h1>音频播客</h1>
+    <p class="audio-preview-lede">这里用官方发布者 RSS 中的中文标题、简介与 HTTPS enclosure 地址提供收听与浏览。近期精选只收录最近 {recentSelection.window_days || 30} 天内的更新；更新较慢的节目保留在目录中，不会用旧单集回填。</p>
+  </header>
+
+  <section class="audio-preview-section" aria-labelledby="recent-heading">
+    <div class="audio-preview-section-head">
+      <h2 id="recent-heading">{recentSelection.title || '近期精选'}</h2>
+      <p>共 {totalRecent} 条 · 按发布时间从新到旧</p>
+    </div>
+    <p class="audio-preview-rules"><strong>筛选规则：</strong>{recentSelection.selection_rules || '仅展示发布者公开 RSS 中最近 30 天内的更新。'}</p>
+    {recentItems.length ? (
+      <div class="audio-recent-grid">
+        {recentItems.map(item => {
+          const show = showsBySlug[item.show_slug];
+          const episode = item.episode || {};
+          const target = show ? episodePath(show, episode, base) : previewPath(base);
+          const description = excerpt(episode.description_text);
+          return (
+            <article class="audio-recent-card">
+              <p class="audio-recent-eyebrow">
+                <a href={show ? showPath(show.slug, 1, base) : previewPath(base)}>{item.show_name || show?.display_name || item.show_slug}</a>
+                <span>{item.publisher || show?.publisher || ''}</span>
+                <span>{hostKindLabel(item.host_kind || show?.host_kind)}</span>
+              </p>
+              <h3><a href={target}>{episode.title || '未命名单集'}</a></h3>
+              <p class="audio-recent-meta">
+                {episode.published_display && <time datetime={episode.published_at_asia_shanghai || episode.published_at}>{episode.published_display}</time>}
+                {episode.duration_display && <span>{episode.duration_display}</span>}
+              </p>
+              <p class="audio-recent-reason">{item.reason || '按公开 RSS 更新时间入选'}</p>
+              {episode.description_missing ? (
+                <p class="audio-recent-excerpt">暂无简介</p>
+              ) : description ? (
+                <p class="audio-recent-excerpt">{description}</p>
+              ) : null}
+              <p class="audio-recent-footer"><a href={target}>在节目页查看并播放官方音频 →</a></p>
+            </article>
+          );
+        })}
+      </div>
+    ) : (
+      <p class="audio-empty">最近 30 天内没有符合规则的公开 RSS 更新。整档节目目录仍保留在下方。</p>
+    )}
+  </section>
+
+  <section class="audio-preview-section" aria-labelledby="shows-heading">
+    <div class="audio-preview-section-head">
+      <h2 id="shows-heading">整档节目目录</h2>
+      <p>{shows.length} 个已启用节目 · 计数均为「{EPISODE_COUNT_LABEL}」，不是完整档案</p>
+    </div>
+    <div class="audio-show-grid">
+      {shows.map(show => {
+        const selected = selectedCounts[show.slug] || 0;
+        return (
+          <a class="audio-show-card" href={showPath(show.slug, 1, base)}>
+            <h3 class="audio-show-name">{show.display_name || show.name}</h3>
+            <p class="audio-show-publisher">发布者：{show.publisher || '未注明'}</p>
+            <p class="audio-show-source">来源类型：{hostKindLabel(show.host_kind)}</p>
+            <p class="audio-show-count">{show.episode_count ?? show.episodes?.length ?? 0} 集 · {show.episode_count_label || EPISODE_COUNT_LABEL}</p>
+            <p class="audio-show-recent">{selected ? `近期精选 ${selected} 条` : '近 30 天无入选单集'}</p>
+            <span class="audio-show-link">查看分页单集历史 →</span>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  {plannedShows.length > 0 && (
+    <section class="audio-preview-section" aria-labelledby="planned-heading">
+      <div class="audio-preview-section-head">
+        <h2 id="planned-heading">规划中</h2>
+        <p>仅保留归属元数据，尚未收录</p>
+      </div>
+      <ul class="audio-planned-list">
+        {plannedShows.map(show => (
+          <li class="audio-planned-item">
+            <strong>{show.name}</strong>
+            <span>发布者：{show.publisher || '未注明'}</span>
+            <span>来源类型：{hostKindLabel(show.host_kind)}</span>
+            <span class="audio-status">规划中 / 尚未收录</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</AudioPodcastLayout>

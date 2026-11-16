@@ -1,0 +1,17 @@
+---
+import AudioPodcastShowPage from '../../../components/AudioPodcastShowPage.astro';
+import { loadAudioPodcastData } from '../../../lib/audio-podcast.mjs';
+
+export function getStaticPaths() {
+  const data = loadAudioPodcastData();
+  return data.shows.map(show => ({
+    params: { slug: show.slug },
+    props: { slug: show.slug, page: 1 },
+  }));
+}
+
+const data = loadAudioPodcastData();
+const show = data.shows.find(candidate => candidate.slug === Astro.props.slug);
+if (!show) throw new Error(`音频播客找不到节目：${Astro.props.slug}`);
+---
+<AudioPodcastShowPage show={show} page={1} data={data} />

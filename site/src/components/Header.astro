@@ -24,7 +24,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
       </div>
     </div>
   </div>
-  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'picks' }} href={link('/')}>{SECTION_LABELS.picks}</a><a class:list={{ active: active === 'trending' }} href={link('/trending/')}>{SECTION_LABELS.trending}</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>{SECTION_LABELS.ai}</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>{SECTION_LABELS.podcast}</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>{SECTION_LABELS.music}</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>{SECTION_LABELS.community}</a></nav></div>
+  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'picks' }} href={link('/')}>{SECTION_LABELS.picks}</a><a class:list={{ active: active === 'trending' }} href={link('/trending/')}>{SECTION_LABELS.trending}</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>{SECTION_LABELS.ai}</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>{SECTION_LABELS.podcast}</a><a class:list={{ active: active === 'audio-podcast' }} href={link('/audio-podcast/')}>音频播客</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>{SECTION_LABELS.music}</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>{SECTION_LABELS.community}</a></nav></div>
 </header>
 <style>
 .library-cluster{position:relative;display:flex;align-items:center}

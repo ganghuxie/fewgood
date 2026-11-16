@@ -1,0 +1,141 @@
+---
+import AudioPodcastLayout from './AudioPodcastLayout.astro';
+import { pageNumbers } from '../lib/pagination.mjs';
+import {
+  EPISODE_COUNT_LABEL,
+  PAGE_SIZE,
+  episodeAnchor,
+  hostKindLabel,
+  pageCount,
+  previewPath,
+  showPath,
+  sliceEpisodePage,
+} from '../lib/audio-podcast.mjs';
+
+const { show, page = 1, data } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const episodes = show.episodes || [];
+const pages = pageCount(episodes.length);
+const pageEpisodes = sliceEpisodePage(episodes, page);
+const pageLink = number => showPath(show.slug, number, base);
+const safeHttps = value => (typeof value === 'string' && value.startsWith('https://') ? value : '');
+const sourcePage = safeHttps(show.source_page);
+const rssUrl = safeHttps(show.rss_url);
+const spotifyUrl = safeHttps(show.optional_spotify);
+const appleUrl = safeHttps(show.apple);
+const feedHtml = typeof show.feed?.description_html === 'string' ? show.feed.description_html : '';
+const feedText = typeof show.feed?.description_text === 'string' ? show.feed.description_text : '';
+---
+<AudioPodcastLayout
+  title={`${show.display_name || show.name} · 音频播客`}
+  description={`${show.display_name || show.name} 的公开 RSS 单集历史，共 ${episodes.length} 集。`}
+  data={data}
+>
+  <a class="audio-back" href={previewPath(base)}>← 返回音频播客</a>
+
+  <header class="audio-show-head">
+    <p class="audio-preview-kicker">单集历史 · 官方发布者 RSS 元数据</p>
+    <h1>{show.display_name || show.name}</h1>
+    <p class="audio-show-byline">
+      <span>发布者：{show.publisher || '未注明'}</span>
+      <span>来源类型：{hostKindLabel(show.host_kind)}</span>
+      <span>{show.episode_count ?? episodes.length} 集 · {show.episode_count_label || EPISODE_COUNT_LABEL}</span>
+    </p>
+
+    {feedHtml ? (
+      <div class="audio-show-description" set:html={feedHtml} />
+    ) : feedText ? (
+      <p class="audio-show-description">{feedText}</p>
+    ) : null}
+
+    <nav class="audio-show-links" aria-label="节目官方来源">
+      {sourcePage && <a href={sourcePage} target="_blank" rel="noopener noreferrer">官方来源页 ↗</a>}
+      {rssUrl && <a href={rssUrl} target="_blank" rel="noopener noreferrer">官方 RSS 源 ↗</a>}
+      {spotifyUrl && <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">Spotify 节目页 ↗</a>}
+      {appleUrl && <a href={appleUrl} target="_blank" rel="noopener noreferrer">Apple Podcasts 节目页 ↗</a>}
+    </nav>
+    <p class="audio-source-note">RSS 链接仅用于标注元数据来源。音频由发布者的官方 enclosure 提供；本站不托管、不代理、不转存，也不提供音频下载。</p>
+    {show.note ? (
+      <p class="audio-source-note">该节目的官方音频跳转可能较慢。出现「加载中」时请等待，不要因为短暂无声就判断失败。</p>
+    ) : null}
+  </header>
+
+  <section class="audio-preview-section" aria-labelledby="episodes-heading">
+    <div class="audio-preview-section-head">
+      <h2 id="episodes-heading">单集历史</h2>
+      <p>按发布时间从新到旧 · 第 {page} / {pages} 页 · 每页 {PAGE_SIZE} 集</p>
+    </div>
+
+    <ol class="audio-episode-list">
+      {pageEpisodes.map((episode, index) => {
+        const absoluteIndex = (page - 1) * PAGE_SIZE + index;
+        const anchor = episodeAnchor(episode, absoluteIndex);
+        const episodeLink = safeHttps(episode.episode_link);
+        const alternateLink = episodeLink || sourcePage;
+        const audioUrl = safeHttps(episode.audio_url);
+        return (
+          <li class="audio-episode" id={anchor}>
+            <article>
+              <h2>{episode.title || '未命名单集'}</h2>
+              <p class="audio-episode-meta">
+                {episode.published_display && <time datetime={episode.published_at_asia_shanghai || episode.published_at}>{episode.published_display}</time>}
+                {episode.duration_display && <span>时长 {episode.duration_display}</span>}
+              </p>
+
+              {episode.description_missing ? (
+                <p class="audio-episode-missing">暂无简介</p>
+              ) : episode.description_html ? (
+                <div class="audio-episode-description" set:html={episode.description_html} />
+              ) : episode.description_text ? (
+                <p class="audio-episode-description">{episode.description_text}</p>
+              ) : (
+                <p class="audio-episode-missing">暂无简介</p>
+              )}
+
+              {episode.description_truncated && (
+                <p class="audio-episode-note">公开 RSS 中的单集简介可能被截断或不完整；完整内容请到来源页或单集原链接查看。{alternateLink && <a href={alternateLink} target="_blank" rel="noopener noreferrer"> 打开来源 ↗</a>}</p>
+              )}
+
+              <div class="audio-episode-actions">
+                {episodeLink && <a href={episodeLink} target="_blank" rel="noopener noreferrer">官方单集页 ↗</a>}
+                {sourcePage && <a href={sourcePage} target="_blank" rel="noopener noreferrer">节目来源页 ↗</a>}
+              </div>
+
+              {audioUrl ? (
+                <div class="audio-player" data-audio-player data-audio-url={audioUrl}>
+                  <button class="audio-play-button" type="button" data-audio-play>播放官方音频</button>
+                  <audio controls preload="none" controlsList="nodownload" data-audio hidden></audio>
+                  <p class="audio-player-note">点击后才会加载发布者官方 enclosure；播放时浏览器直接访问来源地址，本站不下载、不转存、不代理音频。官方音频可能需要较长时间完成重定向；显示“加载中”时请等待，不要立即认为失败。</p>
+                  <div class="audio-playback-error" data-audio-error role="alert" hidden>
+                    <strong>官方音频播放失败</strong>
+                    <p>本站只播放发布者的官方 enclosure。网络、格式或发布者限制都可能导致无法播放，并不代表音频在本地可下载或可在所有地区播放。</p>
+                    {alternateLink && <a data-audio-source href={alternateLink} target="_blank" rel="noopener noreferrer">{episodeLink ? '打开官方单集页' : '打开节目来源页'} ↗</a>}
+                  </div>
+                </div>
+              ) : (
+                <p class="audio-episode-note">当前公开 RSS 未提供可用的 HTTPS 音频地址；请通过官方单集页或节目来源页收听。</p>
+              )}
+            </article>
+          </li>
+        );
+      })}
+    </ol>
+
+    <nav class="audio-pagination" aria-label="单集分页">
+      {page > 1 && <a href={pageLink(page - 1)} rel="prev">上一页</a>}
+      {pageNumbers(page, pages).map(number => number === null
+        ? <span class="audio-gap" aria-hidden="true">…</span>
+        : number === page
+          ? <span aria-current="page">{number}</span>
+          : <a href={pageLink(number)}>{number}</a>)}
+      {page < pages && <a href={pageLink(page + 1)} rel="next">下一页</a>}
+    </nav>
+    <p class="audio-page-note">共 {episodes.length} 集 · {show.episode_count_label || EPISODE_COUNT_LABEL} · 分页只展示当前公开 RSS 中的快照</p>
+  </section>
+</AudioPodcastLayout>
+
+<script>
+  import { initAudioPodcastPlayers } from '../lib/audio-podcast-player.mjs';
+
+  initAudioPodcastPlayers(document.querySelectorAll('[data-audio-player]'));
+</script>
