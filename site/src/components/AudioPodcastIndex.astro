@@ -8,24 +8,34 @@ const recent = sortRecentSelection(data.recent_selection?.items || []);
 const bySlug = Object.fromEntries(shows.map(show => [show.slug, show]));
 ---
 <AudioPodcastLayout title="音频播客 · fewgood.">
-  <header class="audio-index-head"><p class="audio-preview-kicker">FEWGOOD / AUDIO</p><h1>好节目，慢慢听。</h1><p class="audio-preview-lede">音频播客 · 从最近的更新开始，找到下一段值得听的声音。</p><nav class="audio-local-nav" aria-label="音频目录"><a href="#recent-heading">近期精选 ↓</a><a href="#shows-heading">节目目录 · {shows.length} 档 ↓</a></nav></header>
+  <header class="audio-index-head"><div><h1>音频播客</h1><p>官方发布者 RSS · 近期更新与节目目录</p></div><span>{shows.length} 档</span></header>
   {data.available === false && <p class="audio-empty" role="status">{data.unavailable_message}</p>}
-  <section class="audio-preview-section" aria-labelledby="recent-heading">
-    <div class="audio-preview-section-head"><h2 id="recent-heading">近期精选<span class="audio-heading-number">{recent.length.toString().padStart(2, '0')}</span></h2><p>近 30 天 · 每档最多 2 集</p></div>
+  <section class="audio-preview-section audio-index-section" aria-labelledby="recent-heading">
+    <div class="audio-preview-section-head"><h2 id="recent-heading">近期精选</h2><p>近 30 天 · 每档最多 2 集</p></div>
     {recent.length ? <div class="audio-recent-grid">{recent.map(({show_slug, episode, show_name}) => {
       const show = bySlug[show_slug];
       return show && <article class="audio-recent-card">
-        <div class="audio-recent-top">{(episode.cover_url || show.feed?.cover_url) && <img onerror="this.hidden=true" class="audio-cover" src={episode.cover_url || show.feed.cover_url} alt={`${show_name} 官方封面`} width="40" height="40" loading="lazy" />}<a href={showPath(show_slug, 1, base)}>{show_name}</a></div>
-        <h3><a href={episodePath(show, episode, base)}>{episode.title}</a></h3>
-        <p class="audio-recent-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span><a class="audio-recent-arrow" href={episodePath(show, episode, base)} aria-label={`查看单集：${episode.title}`}>↗</a></p>
+        <a class="audio-card-link" href={episodePath(show, episode, base)}>
+          <div class="audio-card-media">
+            {(episode.cover_url || show.feed?.cover_url) && <img onerror="this.hidden=true" class="audio-card-cover" src={episode.cover_url || show.feed.cover_url} alt={`${show_name} 官方封面`} loading="lazy" />}
+            {episode.duration_display && <span class="audio-card-duration">{episode.duration_display}</span>}
+          </div>
+          <div class="audio-card-copy">
+            <h3 class="audio-card-title">{episode.title}</h3>
+            <p class="audio-card-show">{show_name}</p>
+            <p class="audio-card-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time></p>
+          </div>
+        </a>
       </article>;
     })}</div> : <p class="audio-empty">最近 30 天内没有符合条件的更新。可以从下方节目目录浏览。</p>}
   </section>
-  <section class="audio-preview-section audio-directory" aria-labelledby="shows-heading">
-    <div class="audio-preview-section-head"><h2 id="shows-heading">节目目录<span class="audio-heading-number">{shows.length}</span></h2><p>熟悉的声音，随时回来听</p></div>
+  <section class="audio-preview-section audio-index-section audio-directory" aria-labelledby="shows-heading">
+    <div class="audio-preview-section-head"><h2 id="shows-heading">节目目录</h2><p>{shows.length} 档 · 官方发布者 RSS</p></div>
     <div class="audio-show-grid">{shows.map(show => <a class="audio-show-card" href={showPath(show.slug, 1, base)}>
-      {show.feed?.cover_url && <img onerror="this.hidden=true" class="audio-cover audio-cover-directory" src={show.feed.cover_url} alt={`${show.display_name} 官方封面`} width="64" height="64" loading="lazy" />}
-      <div><h3>{show.display_name}</h3><p class="audio-show-publisher">{show.publisher}</p><p class="audio-show-count">{EPISODE_COUNT_LABEL} {show.episodes.length} 集</p>{!recent.some(item => item.show_slug === show.slug) && <p class="audio-show-recent">近 30 天无入选</p>}</div>
+      <div class="audio-card-media">
+        {show.feed?.cover_url && <img onerror="this.hidden=true" class="audio-card-cover" src={show.feed.cover_url} alt={`${show.display_name} 官方封面`} loading="lazy" />}
+      </div>
+      <div class="audio-card-copy"><h3 class="audio-card-title">{show.display_name}</h3><p class="audio-card-show audio-show-publisher">{show.publisher}</p><p class="audio-card-meta audio-show-count">{EPISODE_COUNT_LABEL} {show.episodes.length} 集</p>{!recent.some(item => item.show_slug === show.slug) && <p class="audio-card-meta audio-show-recent">近 30 天无入选</p>}</div>
     </a>)}</div>
   </section>
   <details class="audio-method"><summary>关于收录与来源</summary><p>元数据和单集说明来自发布者官方 RSS。近期精选仅展示最近 30 天内的更新，每档最多 2 集，按发布时间排序，不会用旧单集回填。目录数量指「当前公开RSS收录」，并非节目全部历史。音频使用官方 HTTPS enclosure，版权归原发布者所有。</p></details>
