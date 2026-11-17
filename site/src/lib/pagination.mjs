@@ -27,7 +27,7 @@ export function pageNumbers(page, pages) {
 
 export function sortVideos(videos, section, sort = 'people') {
   return [...videos].sort((a, b) => {
-    if (section === 'picks') return 0;
+    if (section === 'picks' || section === 'music') return 0;
     if (section === 'community') return (sort === 'newest'
       ? b.selected_at - a.selected_at || b.last - a.last
       : b.recommenders - a.recommenders || b.months - a.months) || a.id.localeCompare(b.id);

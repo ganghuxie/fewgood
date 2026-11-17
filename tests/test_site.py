@@ -42,6 +42,63 @@ assert.equal(humanizeRecommendSpan(), '');
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
 
 
+def test_music_preserves_curated_order_in_helpers_and_page_paths():
+    subprocess.run(['node', '--input-type=module', '-e', r'''
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { paginate, pageUrl, sortVideos } from './site/src/lib/pagination.mjs';
+
+const videos = [
+  { id: 'npr-1', channel: 'NPR', view_count: 1000 },
+  { id: 'kexp', channel: 'KEXP', view_count: 100 },
+  { id: 'bbc', channel: 'BBC', view_count: 200 },
+  { id: 'colors', channel: 'COLORS', view_count: 300 },
+  { id: 'npr-2', channel: 'NPR', view_count: 100000 },
+  { id: 'npr-3', channel: 'NPR', view_count: 200000 },
+  { id: 'npr-4', channel: 'NPR', view_count: 300000 },
+];
+const original = structuredClone(videos);
+assert.deepEqual(sortVideos(videos, 'music'), original);
+assert.notEqual(sortVideos(videos, 'music'), videos);
+assert.deepEqual(paginate(videos, 'music')[0].videos, original);
+assert.equal(new Set(paginate(videos, 'music')[0].videos.slice(0, 4).map(v => v.channel)).size, 4);
+const byViews = [...videos].sort((a, b) => b.view_count - a.view_count);
+assert.deepEqual(byViews.slice(0, 4).map(v => v.channel), ['NPR', 'NPR', 'NPR', 'NPR']);
+assert.deepEqual(sortVideos(videos, 'trending'), byViews);
+assert.deepEqual(sortVideos(videos, 'picks'), original);
+assert.deepEqual(videos, original);
+
+const music = JSON.parse(readFileSync('./site/src/data/music.json', 'utf8'));
+const firstIds = items => items.slice(0, 8).map(v => v.id);
+const expected = ['R39hGT1iM7w', 'z2bJQRhZze0', 'c-B5ERue43Q', 'IGFDCqNjmCE',
+  'tSUZezgpHoU', 'DZ4-X4T7qyw', 'Qws6-I8IDQE', 'JMv8L9DOyfo'];
+assert.deepEqual(firstIds(music.videos), expected);
+assert.deepEqual(firstIds(paginate(music.videos, 'music')[0].videos), expected);
+const viewSortedIds = firstIds(sortVideos(music.videos, 'trending'));
+assert.deepEqual(viewSortedIds.slice(0, 4), ['HYA9e0XOUGk', '73wCQRQb7v0', 'LtUDeizHqKk', 'xPIMk4d4ulI']);
+assert.notDeepEqual(firstIds(paginate(music.videos, 'music')[0].videos), viewSortedIds);
+
+// Execute the actual Astro path builder with local feeds and its real helpers.
+const source = readFileSync('./site/src/pages/[...path].astro', 'utf8');
+assert.ok(source.includes("import music from '../data/music.json'"));
+assert.ok(source.includes('paginate(feeds[section].videos, section, sort)'));
+assert.ok(source.includes('allVideos: sortVideos(feeds[section].videos, section, sort)'));
+assert.ok(source.includes('<VideoPage {...pageProps} />'));
+const builder = source.split('export function getStaticPaths() {')[1].split('const { redirectTo, ...pageProps }')[0];
+assert.ok(builder, 'Astro must expose getStaticPaths');
+const empty = { videos: [] };
+const paths = new Function('picks', 'trending', 'ai', 'podcast', 'music', 'community',
+  'paginate', 'pageUrl', 'sortVideos', 'return (function() {' + builder + ')();')(
+    empty, empty, empty, empty, music, empty, paginate, pageUrl, sortVideos);
+const page = paths.find(p => p.params.path === 'music');
+assert.ok(page, 'getStaticPaths must build /music/');
+assert.equal(page.props.section, 'music');
+assert.deepEqual(firstIds(page.props.videos), expected);
+assert.deepEqual(firstIds(page.props.allVideos), expected);
+assert.deepEqual(page.props.feed, music);
+'''], cwd=Path(__file__).resolve().parents[1], check=True)
+
+
 def test_myspace_card_does_not_repeat_channel_name():
     subprocess.run(['node', '--input-type=module', '-e', '''
 import assert from 'node:assert/strict';
