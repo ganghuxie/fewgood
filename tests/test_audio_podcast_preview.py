@@ -66,7 +66,7 @@ console.log('audio preview helper checks ok');
     )
 
 
-def test_existing_nav_labels_and_chipbar_remain_unchanged():
+def test_video_podcast_nav_label_preserves_audio_label_and_routes():
     brand = (ROOT / 'site/src/lib/brand.mjs').read_text(encoding='utf8')
     match = re.search(r'export const SECTION_LABELS = \{([^}]*)\};', brand, re.S)
     assert match, 'SECTION_LABELS declaration not found'
@@ -75,7 +75,7 @@ def test_existing_nav_labels_and_chipbar_remain_unchanged():
         'picks': '精选',
         'trending': '趋势',
         'ai': 'AI前沿',
-        'podcast': '播客',
+        'podcast': '视频播客',
         'music': '音乐',
         'community': '社区推荐',
     }
@@ -83,6 +83,7 @@ def test_existing_nav_labels_and_chipbar_remain_unchanged():
     header = (ROOT / 'site/src/components/Header.astro').read_text(encoding='utf8')
     for route in ("'/'", "'/trending/'", "'/ai/'", "'/podcast/'", "'/music/'", "'/community/'"):
         assert route in header
+    assert "href={link('/podcast/')}>{SECTION_LABELS.podcast}</a>" in header
     assert "href={link('/audio-podcast/')}" in header
     assert '>音频播客</a>' in header
     assert "active === 'audio-podcast'" in header

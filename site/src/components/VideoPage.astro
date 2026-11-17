@@ -22,7 +22,7 @@ const zhFor = (video) => (zhData.videos || {})[video.id] || null;
 const isCommunityVideo = video => community || (picks && video.source === 'community');
 const recommendSpan = video => humanizeRecommendSpan(video.span_days);
 const lastUpdated = value => { if (!value) return ''; const nowParts = new Date(Date.now()).toLocaleString('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }); const parts = new Date(value).toLocaleString('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }); const hm = new Date(value).toLocaleTimeString('zh-CN', { timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit', hour12: false }); if (parts === nowParts) return `最后更新：今天 ${hm}`; const [year, month, day] = parts.split('-'); return `最后更新：${Number(month)}月${Number(day)}日 ${hm}`; };
-const subtitle = picks ? '每天从社区与 AI 前沿里挑几条值得看的好视频' : community ? '来自 Hacker News 社区长期推荐的视频' : section === 'ai' ? '值得一看的 AI 视频' : section === 'podcast' ? '正在被观看的播客' : section === 'music' ? '正在被观看的音乐' : '发现正在被观看的好视频';
+const subtitle = picks ? '每天从社区与 AI 前沿里挑几条值得看的好视频' : community ? '来自 Hacker News 社区长期推荐的视频' : section === 'ai' ? '值得一看的 AI 视频' : section === 'podcast' ? '正在被观看的视频播客' : section === 'music' ? '正在被观看的音乐' : '发现正在被观看的好视频';
 const topicById = Object.fromEntries((topicData.topics || []).map(topic => [topic.id, topic]));
 const aiTopicName = topicById.ai?.name_zh || null;
 const inAiSection = v => section === 'ai' || (picks && v.source === 'ai');

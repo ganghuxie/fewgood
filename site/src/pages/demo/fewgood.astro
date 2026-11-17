@@ -2,7 +2,7 @@
 const aiModules = import.meta.glob('../../data/fewgood-mvp.json', { eager: true });
 const podcastModules = import.meta.glob('../../data/fewgood-podcast.json', { eager: true });
 const unwrap = (m:any) => { const x=Object.values(m)[0] as any; return x?.default || x || null; };
-const themes=[{id:'ai',name:'AI 前沿',data:unwrap(aiModules)},{id:'podcast',name:'播客',data:unwrap(podcastModules)}];
+const themes=[{id:'ai',name:'AI 前沿',data:unwrap(aiModules)},{id:'podcast',name:'视频播客',data:unwrap(podcastModules)}];
 const fmt=(n:number)=>n>=3600?`${Math.floor(n/3600)}:${String(Math.floor(n%3600/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`:`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;
 const beijing=(d:any)=>d?.data_refreshed_at?new Intl.DateTimeFormat('zh-CN',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Shanghai'}).format(new Date(d.data_refreshed_at)):'';
 const sourceLabel=(s:string)=>s.startsWith('podcast_uploads:')?'频道上传':s.startsWith('channel_uploads:')?'频道上传':s.startsWith('search:')?`搜索「${s.slice(7)}」`:s;

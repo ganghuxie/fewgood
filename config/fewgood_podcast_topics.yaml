@@ -1,6 +1,6 @@
 theme:
   id: podcast
-  name_zh: 播客
+  name_zh: 视频播客
   creator_pool_gate: "订阅数至少 1000（官方/节目品牌可豁免）、180 天内有上传、且须有来源依据；不满足则不入池。"
   search_call_cap: 0
   other_unit_cap: 400
