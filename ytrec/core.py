@@ -1483,6 +1483,19 @@ def _keyword_pattern(keyword):
 
 
 AI_TOPIC_RE = re.compile('|'.join(_keyword_pattern(keyword) for keyword in AI_TOPIC_KEYWORDS), re.IGNORECASE)
+AI_TOPIC_SPONSOR_RE = re.compile(
+    r'check out our sponsors|thank you to our sponsors|'
+    r'this episode is brought to you by|\bSPONSORS\s*\*?\s*:|'
+    r'https://lexfridman\.com/s/',
+    re.IGNORECASE,
+)
+
+
+def _ai_topic_description(description):
+    """Keep episode context before the first explicit sponsor/ad marker."""
+    text = str(description or '')
+    marker = AI_TOPIC_SPONSOR_RE.search(text)
+    return text[:marker.start()] if marker else text
 
 
 def dual_topic_channel_ids(sources=None):
@@ -1501,11 +1514,12 @@ def dual_topic_channel_ids(sources=None):
 
 
 def matches_ai_topic_keywords(video):
-    """Return whether a video title or description matches the AI topic list."""
+    """Match episode titles and description context, excluding trailing ads."""
     snippet = video.get('snippet') or {}
     text = '\n'.join(str(value or '') for value in (
         video.get('title'), snippet.get('title'),
-        video.get('description'), snippet.get('description'),
+        _ai_topic_description(video.get('description')),
+        _ai_topic_description(snippet.get('description')),
     ))
     return bool(AI_TOPIC_RE.search(text))
 

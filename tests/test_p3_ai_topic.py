@@ -1,10 +1,12 @@
 import json
 
+import pytest
 import yaml
 
 from ytrec.core import (
     ai_feed,
     build_picks,
+    filter_ai_topic_videos,
     is_ai_topic_video,
     iso_now,
     matches_ai_topic_keywords,
@@ -14,8 +16,15 @@ from ytrec.offline import rebuild_offline
 
 LEX_ID = 'UCSHZKyawb77ixDdsGog4iWA'
 UKRAINE_TITLE = (
-    'Russia-Ukraine War: Putin, Zelenskyy, Drones and the Future of Warfare '
+    'Ukraine War: Putin, Zelenskyy, Trump, Drones and the Future of Warfare '
     '| Lex Fridman Podcast #504'
+)
+UKRAINE_DESCRIPTION = (
+    'A conversation about the Ukraine war, Putin, Zelenskyy, Trump, drones, '
+    'and the future of warfare.\n\n'
+    '*SPONSORS:*\nCheck out our sponsors:\n'
+    'Go to https://lexfridman.com/s/ for an AI agent for customer service,\n'
+    'AI-powered voice dictation, and an AI-powered answer engine.'
 )
 AI_TITLE = 'OpenAI, Anthropic, and the Future of AGI | Lex Fridman Podcast'
 
@@ -70,9 +79,11 @@ def write_feed(root, name, videos):
 
 
 def test_lex_ukraine_episode_is_not_ai_topic_or_an_ai_pick():
-    ukraine = record('lex-ukraine', UKRAINE_TITLE)
+    ukraine = record('2hJkprFnzhY', UKRAINE_TITLE, description=UKRAINE_DESCRIPTION)
 
+    assert not matches_ai_topic_keywords(ukraine)
     assert not is_ai_topic_video(ukraine)
+    assert filter_ai_topic_videos([ukraine]) == ([], 1)
     picks = build_picks({
         'community': {'videos': []},
         'ai': {'videos': [ukraine]},
@@ -115,14 +126,14 @@ def test_ai_feed_drops_cached_non_ai_lex_episode_before_channel_caps(tmp_path, m
     }]}, allow_unicode=True))
     output = tmp_path / 'out'
     client = RecordingClient({
-        'lex-ukraine': raw_video('lex-ukraine', UKRAINE_TITLE),
+        '2hJkprFnzhY': raw_video('2hJkprFnzhY', UKRAINE_TITLE, description=UKRAINE_DESCRIPTION),
         'lex-ai': raw_video('lex-ai', AI_TITLE),
     })
 
     result = ai_feed(
         channels_file=str(channels_path), client=client, output=str(output),
         rss_fetcher=lambda channel_id: [
-            {'id': 'lex-ukraine', 'published_at': iso_now()},
+            {'id': '2hJkprFnzhY', 'published_at': iso_now()},
             {'id': 'lex-ai', 'published_at': iso_now()},
         ],
     )
@@ -132,7 +143,7 @@ def test_ai_feed_drops_cached_non_ai_lex_episode_before_channel_caps(tmp_path, m
 
 
 def test_rebuild_offline_removes_non_ai_lex_from_ai_but_keeps_podcast(tmp_path):
-    ukraine = record('lex-ukraine', UKRAINE_TITLE)
+    ukraine = record('2hJkprFnzhY', UKRAINE_TITLE, description=UKRAINE_DESCRIPTION)
     write_feed(tmp_path, 'ai', [ukraine])
     write_feed(tmp_path, 'podcast', [ukraine])
 
@@ -140,8 +151,56 @@ def test_rebuild_offline_removes_non_ai_lex_from_ai_but_keeps_podcast(tmp_path):
 
     assert updated['ai']['videos'] == []
     assert updated['ai']['dropped_ai_topic'] == 1
-    assert [video['id'] for video in updated['podcast']['videos']] == ['lex-ukraine']
+    assert [video['id'] for video in updated['podcast']['videos']] == ['2hJkprFnzhY']
     assert summary['dropped_ai_topic'] == 1
     assert all(video.get('pick_source') != 'AI前沿' for video in updated['picks']['videos'])
-    assert any(video['id'] == 'lex-ukraine' and video.get('pick_source') == '播客'
+    assert any(video['id'] == '2hJkprFnzhY' and video.get('pick_source') == '播客'
                for video in updated['picks']['videos'])
+
+
+@pytest.mark.parametrize('marker', [
+    'Check out our sponsors',
+    'Thank you to our sponsors',
+    'This episode is brought to you by',
+    '*SPONSORS:*',
+    'SPONSORS:',
+    'Go to https://lexfridman.com/s/',
+])
+@pytest.mark.parametrize('raw', [False, True])
+def test_sponsor_markers_exclude_ad_keywords(marker, raw):
+    factory = raw_video if raw else record
+    episode = factory('2hJkprFnzhY', UKRAINE_TITLE,
+                      description=f'A discussion of the Ukraine war.\n{marker} AI-powered tools.')
+    assert not matches_ai_topic_keywords(episode)
+    assert not is_ai_topic_video(episode)
+
+
+def test_topic_matches_before_sponsors_and_in_title():
+    assert matches_ai_topic_keywords(record(
+        'description-ai', 'A conversation about the future',
+        description='Meet our guest.\nWe discuss OpenAI and AGI in depth.\n'
+                    '*SPONSORS:*\nOther products.',
+    ))
+    assert is_ai_topic_video(record('title-ai', AI_TITLE, description=UKRAINE_DESCRIPTION))
+
+
+def test_dedicated_ai_channel_does_not_require_topic_keyword():
+    episode = record('hugging-face', 'Pi Durable EXPLAINED: Build Always-On Agents with Local Models')
+    episode['channel_id'] = 'dedicated-ai-channel'
+    assert not matches_ai_topic_keywords(episode)
+    assert is_ai_topic_video(episode, dual_channel_ids={LEX_ID})
+    assert filter_ai_topic_videos([episode], dual_channel_ids={LEX_ID}) == ([episode], 0)
+
+
+def test_rebuild_offline_does_not_move_rejected_ai_episode_to_other_feeds(tmp_path):
+    ukraine = record('2hJkprFnzhY', UKRAINE_TITLE, description=UKRAINE_DESCRIPTION)
+    write_feed(tmp_path, 'ai', [ukraine])
+    write_feed(tmp_path, 'podcast', [])
+
+    summary, updated = rebuild_offline(root=tmp_path)
+
+    assert updated['ai']['videos'] == []
+    assert updated['ai']['dropped_ai_topic'] == 1
+    assert summary['dropped_ai_topic'] == 1
+    assert updated['podcast']['videos'] == []
+    assert updated['picks']['videos'] == []
