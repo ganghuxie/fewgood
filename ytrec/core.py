@@ -1462,8 +1462,8 @@ def filter_trending_quality(videos, *, now=None, minimum=TRENDING_MIN_RESULTS, p
     return kept, dropped_reasons, sum(restored_reasons.values()), restored_reasons
 
 
-# Same-id channels listed under both AI and podcast use a topic-fit gate for
-# the AI column. Keep this explicit list in one place so it can be extended.
+# Dual-listed and explicitly opted-in channels use a topic-fit gate for
+# the AI column; dedicated AI channels remain ungated.
 # Matching is case-insensitive and uses ASCII alphanumeric word-ish edges, so
 # short tokens such as "AI" do not match inside "said" or "maintain".
 AI_TOPIC_KEYWORDS = (
@@ -1513,6 +1513,25 @@ def dual_topic_channel_ids(sources=None):
     return ids
 
 
+def ai_topic_gate_channel_ids(sources=None):
+    """Union AI+podcast channels with channels explicitly opting into the gate."""
+    rows = load_source_rows(sources)
+    ids = dual_topic_channel_ids(rows)
+    for row in rows:
+        if (not isinstance(row, dict) or row.get('type') not in (None, 'channel')
+                or row.get('ai_topic_gate') is not True):
+            continue
+        channel_id = str(row.get('external_id') or row.get('youtube_channel_id') or '')
+        if channel_id:
+            ids.add(channel_id)
+    return ids
+
+
+AI_TOPIC_URL_RE = re.compile(r'(?:https?://|www\.)[^\s<>]+', re.IGNORECASE)
+AI_TOPIC_INFERENCE_RE = re.compile(_keyword_pattern('inference'), re.IGNORECASE)
+AI_TOPIC_TRAINING_RE = re.compile(_keyword_pattern('training'), re.IGNORECASE)
+
+
 def matches_ai_topic_keywords(video):
     """Match episode titles and description context, excluding trailing ads."""
     snippet = video.get('snippet') or {}
@@ -1521,21 +1540,24 @@ def matches_ai_topic_keywords(video):
         _ai_topic_description(video.get('description')),
         _ai_topic_description(snippet.get('description')),
     ))
-    return bool(AI_TOPIC_RE.search(text))
+    text = AI_TOPIC_URL_RE.sub(" ", text)
+    return bool(AI_TOPIC_RE.search(text) or (
+        AI_TOPIC_INFERENCE_RE.search(text) and AI_TOPIC_TRAINING_RE.search(text)
+    ))
 
 
 def is_ai_topic_video(video, dual_channel_ids=None):
-    """Apply the AI-topic gate only to channels that are AI+podcast dual-listed."""
+    """Apply topic matching only to dual-listed or explicitly gated channels."""
     channel_id = str(video.get('channel_id') or (video.get('snippet') or {}).get('channelId') or '')
-    ids = dual_topic_channel_ids() if dual_channel_ids is None else dual_channel_ids
+    ids = ai_topic_gate_channel_ids() if dual_channel_ids is None else dual_channel_ids
     if channel_id not in ids:
         return True
     return matches_ai_topic_keywords(video)
 
 
 def filter_ai_topic_videos(videos, dual_channel_ids=None):
-    """Drop non-AI items from dual-listed channels and return the dropped count."""
-    ids = dual_topic_channel_ids() if dual_channel_ids is None else dual_channel_ids
+    """Drop non-AI items from gated channels and return the dropped count."""
+    ids = ai_topic_gate_channel_ids() if dual_channel_ids is None else dual_channel_ids
     kept = [video for video in videos if is_ai_topic_video(video, ids)]
     return kept, len(videos) - len(kept)
 
@@ -1548,7 +1570,7 @@ def build_picks(feeds, generated_at=None, limit=10, now=None, sources=None):
         at = at.replace(tzinfo=UTC)
     at = at.astimezone(UTC)
     source_rows = load_source_rows(sources)
-    dual_channel_ids = dual_topic_channel_ids(source_rows)
+    dual_channel_ids = ai_topic_gate_channel_ids(source_rows)
     labels = {'community': '社区推荐', 'ai': 'AI前沿', 'podcast': '播客', 'editorial': '科学教育'}
     groups = {}
 
@@ -1905,7 +1927,7 @@ def ai_feed(channels_file='config/ai_channels.yaml', client=None, output='site/s
         sources_file = 'config/sources.yaml'
     if sources_file:
         channels = channels_for_topic('ai', channels, path=sources_file)
-    dual_channel_ids = dual_topic_channel_ids(sources_file or 'config/sources.yaml')
+    dual_channel_ids = ai_topic_gate_channel_ids(sources_file or 'config/sources.yaml')
     cutoff = datetime.now(UTC) - timedelta(days=FRESHNESS_MAX_DAYS)
     discovered, units = {}, 0
     for channel in channels:

@@ -695,6 +695,7 @@ sources:
   type: channel
   external_id: UCcefcZRL2oaA_uBNeo5UOWg
   handle: ycombinator
+  ai_topic_gate: true
   display_name: Y Combinator
   tier: 2
   daily_cap: 1

@@ -186,8 +186,10 @@ def test_topic_matches_before_sponsors_and_in_title():
 
 def test_dedicated_ai_channel_does_not_require_topic_keyword():
     episode = record('hugging-face', 'Pi Durable EXPLAINED: Build Always-On Agents with Local Models')
-    episode['channel_id'] = 'dedicated-ai-channel'
+    episode['channel_id'] = 'UCHlNU7kIZhRgSbhHvFoy72w'
     assert not matches_ai_topic_keywords(episode)
+    assert is_ai_topic_video(episode)
+    assert filter_ai_topic_videos([episode]) == ([episode], 0)
     assert is_ai_topic_video(episode, dual_channel_ids={LEX_ID})
     assert filter_ai_topic_videos([episode], dual_channel_ids={LEX_ID}) == ([episode], 0)
 
@@ -204,3 +206,91 @@ def test_rebuild_offline_does_not_move_rejected_ai_episode_to_other_feeds(tmp_pa
     assert summary['dropped_ai_topic'] == 1
     assert updated['podcast']['videos'] == []
     assert updated['picks']['videos'] == []
+
+
+YC_ID = 'UCcefcZRL2oaA_uBNeo5UOWg'
+
+
+def yc_record(video_id, title, **kwargs):
+    episode = record(video_id, title, **kwargs)
+    episode.update(channel='Y Combinator', channel_id=YC_ID)
+    return episode
+
+
+def test_yc_theranos_is_removed_without_other_feed_placement(tmp_path):
+    episode = yc_record(
+        'iXWSYlAX5Lg', 'Inside Theranos with ex-Employee Tyler Shultz',
+        description='Tyler Shultz discusses Elizabeth Holmes, whistleblowing, '
+                    'and the failed blood tests at Theranos.',
+    )
+    assert not matches_ai_topic_keywords(episode)
+    assert not is_ai_topic_video(episode)
+    assert filter_ai_topic_videos([episode]) == ([], 1)
+    assert build_picks({'ai': {'videos': [episode]}})['videos'] == []
+    write_feed(tmp_path, 'ai', [episode])
+    write_feed(tmp_path, 'podcast', [])
+    summary, updated = rebuild_offline(root=tmp_path)
+    assert updated['ai']['videos'] == []
+    assert summary['dropped_ai_topic'] == 1
+    assert updated['podcast']['videos'] == []
+    assert updated['picks']['videos'] == []
+
+
+@pytest.mark.parametrize('title,description', [
+    ('The Rise Of AI Coworkers', 'Building and deploying Grok Bot.'),
+    ('', 'We discuss frontier AI labs.\nSPONSORS: Other products.'),
+    ('Building the future', 'A discussion of ChatGPT.\nSPONSORS: Other products.'),
+])
+def test_yc_ai_title_or_pre_sponsor_body_is_kept(title, description):
+    episode = yc_record('y1-9yeYLJUo', title, description=description)
+    assert matches_ai_topic_keywords(episode)
+    assert is_ai_topic_video(episode)
+    assert filter_ai_topic_videos([episode]) == ([episode], 0)
+
+
+@pytest.mark.parametrize('url', [
+    'https://www.transformernews.ai/p/x',
+    'https://example.com/affair-ai.html',
+    'https://bfl.ai/blog',
+    'www.transformernews.ai/p/x',
+])
+@pytest.mark.parametrize('raw', [False, True])
+def test_url_tokens_do_not_supply_ai_topic_keywords(url, raw):
+    episode = (raw_video if raw else yc_record)(
+        'url-only', f'Company history {url}', description=f'Read more: {url}',
+    )
+    assert not matches_ai_topic_keywords(episode)
+    assert not is_ai_topic_video(episode)
+
+
+def test_inference_and_training_pair_is_a_narrow_ml_signal():
+    title = 'Why Inference Matters 12x More Than Training | YC Paper Club'
+    assert matches_ai_topic_keywords(yc_record('paper', title))
+    assert is_ai_topic_video(yc_record(
+        'paper', title, description='We discuss compute costs during inference and training.',
+    ))
+    for title in ('10 Habits PhDs Must Unlearn To Build a Startup',
+                  'Sales training for founders', 'Causal inference in market research'):
+        assert not matches_ai_topic_keywords(yc_record('non-ai', title))
+
+
+def test_ai_feed_uses_explicit_yc_gate(tmp_path, monkeypatch):
+    monkeypatch.setenv('YOUTUBE_API_KEY', 'test-only')
+    channels_path = tmp_path / 'channels.yaml'
+    channels_path.write_text(yaml.safe_dump({'channels': [{
+        'name': 'Y Combinator', 'youtube_channel_id': YC_ID,
+    }]}))
+    raws = {}
+    for video_id, title in [('iXWSYlAX5Lg', 'Inside Theranos with ex-Employee Tyler Shultz'),
+                            ('y1-9yeYLJUo', 'The Rise Of AI Coworkers')]:
+        raw = raw_video(video_id, title)
+        raw['snippet'].update(channelId=YC_ID, channelTitle='Y Combinator')
+        raws[video_id] = raw
+    result = ai_feed(
+        channels_file=str(channels_path), client=RecordingClient(raws),
+        output=str(tmp_path / 'out'),
+        rss_fetcher=lambda channel_id: [{'id': video_id, 'published_at': iso_now()}
+                                       for video_id in raws],
+    )
+    assert [v['id'] for v in result['videos']] == ['y1-9yeYLJUo']
+    assert result['dropped_ai_topic'] == 1

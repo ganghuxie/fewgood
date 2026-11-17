@@ -229,3 +229,16 @@ def test_curated_editorial_feed_reads_sources_yaml_and_writes_editorial_json(tmp
     assert [video['id'] for video in result['videos']] == ['editorial1']
     assert json.loads((tmp_path / 'out' / 'editorial.json').read_text())['videos'][0]['id'] == 'editorial1'
     assert [url.rsplit('/', 1)[-1] for url, _params in client.calls] == ['videos']
+
+
+def test_only_yc_explicitly_opts_into_ai_topic_gate():
+    from ytrec.core import ai_topic_gate_channel_ids, dual_topic_channel_ids
+
+    sources = load_sources(ROOT / 'config' / 'sources.yaml')
+    yc = source_by_id(sources, 'ycombinator')
+    assert yc['topics'] == ['ai']
+    assert yc['ai_topic_gate'] is True
+    assert 'Startup/AI speaker series.' in yc['notes']
+    assert [s['id'] for s in sources if s.get('ai_topic_gate')] == ['ycombinator']
+    assert dual_topic_channel_ids(sources) == {LEX_ID}
+    assert ai_topic_gate_channel_ids(sources) == {LEX_ID, yc['external_id']}

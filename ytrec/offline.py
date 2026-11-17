@@ -17,7 +17,7 @@ from .core import (
     build_picks,
     write_feed,
     _video_view,
-    dual_topic_channel_ids,
+    ai_topic_gate_channel_ids,
     filter_ai_topic_videos,
     freshness_sort_key,
     drop_stale_videos,
@@ -193,7 +193,7 @@ def rebuild_offline(root='site/src/data', feeds=None, generated_at=None, write=T
     dropped_ai_topic = 0
     if 'ai' in lang_kept:
         lang_kept['ai'], dropped_ai_topic = filter_ai_topic_videos(
-            lang_kept['ai'], dual_topic_channel_ids(),
+            lang_kept['ai'], ai_topic_gate_channel_ids(),
         )
 
     cap_kept, dropped_channel = apply_channel_caps_pool(lang_kept)
