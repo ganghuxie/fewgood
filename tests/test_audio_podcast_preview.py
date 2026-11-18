@@ -96,12 +96,17 @@ def test_audio_player_markup_keeps_click_only_playback_and_no_download():
     assert 'controlsList="nodownload"' in component
     assert 'autoplay' not in component.lower()
     assert 'data-audio-source' in component
-    assert 'initAudioPodcastPlayers' in component
+    assert 'initAudioPodcastPlayers(roots, initAudioPodcastDebug(roots))' in component
+    assert '诊断模式' not in component
+    assert '复制诊断结果' not in component
+    debug = (ROOT / 'site/src/lib/audio-podcast-debug.mjs').read_text(encoding='utf8')
+    for forbidden in ('fetch(', 'sendBeacon', 'posthog', '.capture(', 'track(', 'WebSocket', 'readText('):
+        assert forbidden not in debug
+    analytics = (ROOT / 'site/src/scripts/analytics.js').read_text()
+    assert 'if (shouldInitPostHog({ key, dnt, localHost, search: window.location.search }))' in analytics
 
 
-@pytest.mark.skipif(NODE is None, reason='node is required for the audio player tests')
-def test_audio_player_pending_error_retry_and_pause_others_are_hermetic():
-    script = r'''
+AUDIO_PLAYER_FAKES = r'''
 import assert from 'node:assert/strict';
 import {
   PLAYER_LOADING_TEXT,
@@ -109,6 +114,8 @@ import {
   PLAYER_RETRY_TEXT,
   initAudioPodcastPlayers,
 } from './site/src/lib/audio-podcast-player.mjs';
+import { initAudioPodcastDebug } from './site/src/lib/audio-podcast-debug.mjs';
+import { shouldInitPostHog } from './site/src/scripts/analytics-policy.mjs';
 
 class FakeTarget {
   constructor() {
@@ -139,6 +146,11 @@ class FakeElement extends FakeTarget {
     this.disabled = false;
     this.textContent = '';
     this.src = null;
+    this.style = {};
+  }
+
+  append(...children) {
+    this.children = children;
   }
 
   setAttribute(name, value) {
@@ -179,6 +191,13 @@ class FakeAudio extends FakeElement {
 
   load() {
     this.loadCalls += 1;
+    this.error = null;
+    this.networkState = 0;
+    this.readyState = 0;
+  }
+
+  canPlayType(type) {
+    return type.startsWith('audio/mp4') ? 'maybe' : '';
   }
 }
 
@@ -213,7 +232,12 @@ const succeed = audio => {
 };
 const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 const wait = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+'''
 
+
+@pytest.mark.skipif(NODE is None, reason='node is required for the audio player tests')
+def test_audio_player_pending_error_retry_and_pause_others_are_hermetic():
+    run_audio_player_checks(r'''
 {
   const player = makePlayer(never, 'https://tk.wavpub.com/official.mp3?token=abc');
   const [controller] = initAudioPodcastPlayers([player.root]);
@@ -296,10 +320,138 @@ for (const [label, playImpl, fail] of [
   assert.equal(first.audio.playCalls, 1, 'cancelled pending player must not auto-retry');
 }
 
-console.log('audio player checks ok');
-'''
+''')
+
+
+@pytest.mark.skipif(NODE is None, reason='node is required for the audio player tests')
+def test_audio_debug_query_failure_snapshots_and_copy_are_hermetic():
+    run_audio_player_checks(r'''
+function makeDebugPlayer(search, playImpl = never) {
+  const url = 'https://cdn.example.test/private/audio.m4a?token=secret-enclosure';
+  const player = makePlayer(playImpl, url);
+  const panels = [];
+  const clipboard = [];
+  let clock = 100;
+  const browser = {
+    userAgent: 'Chrome/140.0.0.0',
+    platform: 'Win32',
+    onLine: true,
+    clipboard: { writeText: async text => { clipboard.push(text); } },
+  };
+  player.root.after = panel => panels.push(panel);
+  const options = initAudioPodcastDebug([player.root], {
+    search, browser, now: () => clock,
+    document: { createElement: tag => Object.assign(new FakeElement(), { tag }) },
+  });
+  initAudioPodcastPlayers([player.root], options);
+  return { ...player, options, panels, clipboard, browser, advance: ms => { clock += ms; } };
+}
+
+const production = { key: 'production-key', dnt: false, localHost: false };
+for (const search of ['', '?audio_debug', '?audio_debug=', '?audio_debug=0',
+  '?audio_debug=true', '?audio_debug=01', '?audio_debug=0&audio_debug=1']) {
+  const player = makeDebugPlayer(search);
+  assert.equal(player.options, undefined);
+  assert.equal(player.panels.length, 0);
+  assert.equal(shouldInitPostHog({ ...production, search }), true);
+}
+for (const search of ['?audio_debug=1', '?x=y&audio_debug=1', '?audio_debug=1&audio_debug=0']) {
+  assert.equal(makeDebugPlayer(search).panels.length, 1);
+  assert.equal(shouldInitPostHog({ ...production, search }), false);
+}
+assert.equal(shouldInitPostHog(production), true);
+for (const overrides of [{ key: '' }, { dnt: true }, { localHost: true }]) {
+  assert.equal(shouldInitPostHog({ ...production, ...overrides }), false);
+}
+
+{
+  let rejectFirst;
+  const player = makeDebugPlayer('?audio_debug=1', audio => audio.playCalls === 1
+    ? new Promise((_, reject) => { rejectFirst = reject; })
+    : never());
+  const { audio, button, browser, panels, clipboard, advance, url } = player;
+  const [heading, note, copy, status, output] = panels[0].children;
+  assert.equal(heading.textContent, '诊断模式');
+  assert.match(note.textContent, /不会自动上传/);
+  assert.equal(copy.textContent, '复制诊断结果');
+  assert.equal(output.tag, 'pre');
+  assert.equal(audio.playCalls, 0);
+  assert.equal(audio.hasAttribute('src'), false);
+  button.emit('click');
+  assert.equal(audio.src, url);
+  advance(3);
+  audio.emit('loadstart');
+  audio.networkState = 2;
+  audio.readyState = 1;
+  advance(7);
+  rejectFirst(Object.assign(new Error('Unsupported ' + url + ' ' + 'x'.repeat(250)), {
+    name: 'NotSupportedError',
+  }));
+  await tick();
+  assert.equal(audio.src, null);
+  assert.equal(audio.networkState, 0);
+  assert.equal(button.textContent, PLAYER_RETRY_TEXT);
+  const first = JSON.parse(output.textContent);
+  assert.equal(first.sourceHostname, 'cdn.example.test');
+  assert.equal(first.userAgent, browser.userAgent);
+  assert.equal(first.platform, browser.platform);
+  assert.equal(first.online, true);
+  assert.deepEqual(first.canPlayType, {
+    'audio/mp4': 'maybe', 'audio/mp4; codecs="mp4a.40.2"': 'maybe',
+    'audio/aac': '', 'audio/x-m4a': '', 'audio/mpeg': '',
+  });
+  assert.deepEqual(first.events.map(({ type, ms }) => [type, ms]),
+    [['click', 0], ['loadstart', 3], ['play-rejection', 10]]);
+  const rejection = first.events.at(-1);
+  assert.equal(rejection.networkState, 2);
+  assert.equal(rejection.readyState, 1);
+  assert.equal(rejection.playRejection.name, 'NotSupportedError');
+  assert.match(rejection.playRejection.message, /^Unsupported /);
+  assert.equal(rejection.playRejection.message.length, 200);
+  assert.doesNotMatch(output.textContent, /https:|private\/audio|token=|secret-enclosure/);
+  assert.deepEqual(clipboard, []);
+
+  advance(45);
+  button.emit('click');
+  advance(12);
+  browser.onLine = false;
+  audio.networkState = 3;
+  audio.readyState = 2;
+  for (let index = 0; index < 30; index++) audio.emit('waiting');
+  audio.error = { code: 4, message: 'Format failure at ' + url + ' secret-enclosure ' + 'x'.repeat(250) };
+  audio.emit('error');
+  assert.equal(audio.src, null);
+  assert.equal(audio.error, null);
+  const second = JSON.parse(output.textContent);
+  assert.equal(second.online, false);
+  assert.equal(second.events.length, 20);
+  const failure = second.events.at(-1);
+  assert.equal(failure.type, 'error');
+  assert.equal(failure.attempt, 2);
+  assert.equal(failure.ms, 12);
+  assert.equal(failure.networkState, 3);
+  assert.equal(failure.readyState, 2);
+  assert.equal(failure.mediaError.code, 4);
+  assert.match(failure.mediaError.message, /^Format failure/);
+  assert.equal(failure.mediaError.message.length, 200);
+  assert.doesNotMatch(output.textContent, /https:|private\/audio|token=|secret-enclosure/);
+  assert.equal(clipboard.length, 0);
+  copy.emit('click');
+  await tick();
+  assert.deepEqual(clipboard, [output.textContent]);
+  assert.match(status.textContent, /已复制/);
+  browser.clipboard = { writeText: async () => { throw new Error('denied'); } };
+  copy.emit('click');
+  await tick();
+  assert.match(status.textContent, /手动复制/);
+  assert.deepEqual(JSON.parse(output.textContent), second);
+}
+''')
+
+
+def run_audio_player_checks(script):
     subprocess.run(
-        [NODE, '--input-type=module', '-e', script],
+        [NODE, '--input-type=module', '-e', AUDIO_PLAYER_FAKES + script],
         cwd=ROOT,
         check=True,
         capture_output=True,

@@ -1,4 +1,5 @@
 import posthog from 'posthog-js';
+import { shouldInitPostHog } from './analytics-policy.mjs';
 
 const key = import.meta.env.PUBLIC_POSTHOG_KEY?.trim();
 const host = import.meta.env.PUBLIC_POSTHOG_HOST?.trim() || 'https://us.i.posthog.com';
@@ -9,7 +10,7 @@ let inited = false;
 
 // Never initialize the production client on a local browser. A test can safely
 // install window.posthog.capture after page load without enabling network I/O.
-if (key && !dnt && !localHost) {
+if (shouldInitPostHog({ key, dnt, localHost, search: window.location.search })) {
   posthog.init(key, {
     api_host: host,
     autocapture: true,

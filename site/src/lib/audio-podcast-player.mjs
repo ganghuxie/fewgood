@@ -2,7 +2,7 @@ export const PLAYER_LOADING_TEXT = '加载中…';
 export const PLAYER_PLAY_TEXT = '播放官方音频';
 export const PLAYER_RETRY_TEXT = '重试播放官方音频';
 
-export function initAudioPodcastPlayers(roots) {
+export function initAudioPodcastPlayers(roots, options = {}) {
   const playerRoots = Array.from(roots || []);
   const audios = playerRoots
     .map(root => root.querySelector('[data-audio]'))
@@ -34,10 +34,10 @@ export function initAudioPodcastPlayers(roots) {
       button.textContent = PLAYER_PLAY_TEXT;
       audio.hidden = true;
       if (audio.hasAttribute('src')) {
-        audio.removeEventListener('error', showError);
+        audio.removeEventListener('error', onMediaError);
         audio.removeAttribute('src');
         if (typeof audio.load === 'function') audio.load();
-        audio.addEventListener('error', showError);
+        audio.addEventListener('error', onMediaError);
       }
     };
 
@@ -77,17 +77,18 @@ export function initAudioPodcastPlayers(roots) {
       currentAudio = audio;
     };
 
-    const showError = () => {
+    const showError = (failure) => {
       if (!audio.hasAttribute('src')) return;
+      options.onBeforeShowError?.({ audio, ...failure });
       failed = true;
       pending = false;
       if (currentAudio === audio) currentAudio = null;
       audio.pause();
       audio.hidden = true;
-      audio.removeEventListener('error', showError);
+      audio.removeEventListener('error', onMediaError);
       audio.removeAttribute('src');
       if (typeof audio.load === 'function') audio.load();
-      audio.addEventListener('error', showError);
+      audio.addEventListener('error', onMediaError);
       button.hidden = false;
       button.disabled = false;
       button.removeAttribute?.('aria-busy');
@@ -97,9 +98,12 @@ export function initAudioPodcastPlayers(roots) {
       if (sourceLink) sourceLink.hidden = false;
     };
 
+    const onMediaError = () => showError({ type: 'error' });
+
     button.addEventListener('click', async () => {
       if (pending) return;
       const currentAttempt = ++attemptId;
+      options.onPlayAttempt?.(audio);
       clearError();
       pauseOthers();
       setLoading();
@@ -111,9 +115,9 @@ export function initAudioPodcastPlayers(roots) {
           return;
         }
         setPlaying();
-      } catch {
+      } catch (playRejection) {
         if (currentAttempt !== attemptId) return;
-        showError();
+        showError({ type: 'play-rejection', playRejection });
       }
     });
 
@@ -121,7 +125,7 @@ export function initAudioPodcastPlayers(roots) {
       pauseOthers();
       if (!pending) currentAudio = audio;
     });
-    audio.addEventListener('error', showError);
+    audio.addEventListener('error', onMediaError);
 
     controllers.push({
       audio,

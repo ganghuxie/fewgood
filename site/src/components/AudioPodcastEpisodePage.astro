@@ -41,6 +41,8 @@ const alternateLink = episodeLink || sourcePage;
 </AudioPodcastLayout>
 <script>
   import { initAudioPodcastPlayers } from '../lib/audio-podcast-player.mjs';
+  import { initAudioPodcastDebug } from '../lib/audio-podcast-debug.mjs';
 
-  initAudioPodcastPlayers(document.querySelectorAll('[data-audio-player]'));
+  const roots = document.querySelectorAll('[data-audio-player]');
+  initAudioPodcastPlayers(roots, initAudioPodcastDebug(roots));
 </script>
