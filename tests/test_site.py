@@ -70,13 +70,12 @@ assert.deepEqual(videos, original);
 
 const music = JSON.parse(readFileSync('./site/src/data/music.json', 'utf8'));
 const firstIds = items => items.slice(0, 8).map(v => v.id);
-const expected = ['R39hGT1iM7w', 'z2bJQRhZze0', 'c-B5ERue43Q', 'IGFDCqNjmCE',
-  'tSUZezgpHoU', 'DZ4-X4T7qyw', 'Qws6-I8IDQE', 'JMv8L9DOyfo'];
-assert.deepEqual(firstIds(music.videos), expected);
-assert.deepEqual(firstIds(paginate(music.videos, 'music')[0].videos), expected);
+const feedIds = firstIds(music.videos);
+assert.equal(feedIds.length, 8, 'music feed should have at least 8 videos');
+// Compare against the live feed order, not a daily-refresh snapshot of IDs.
+assert.deepEqual(firstIds(paginate(music.videos, 'music')[0].videos), feedIds);
 const viewSortedIds = firstIds(sortVideos(music.videos, 'trending'));
-assert.deepEqual(viewSortedIds.slice(0, 4), ['HYA9e0XOUGk', '73wCQRQb7v0', 'LtUDeizHqKk', 'xPIMk4d4ulI']);
-assert.notDeepEqual(firstIds(paginate(music.videos, 'music')[0].videos), viewSortedIds);
+assert.notDeepEqual(feedIds, viewSortedIds);
 
 // Execute the actual Astro path builder with local feeds and its real helpers.
 const source = readFileSync('./site/src/pages/[...path].astro', 'utf8');
@@ -93,8 +92,8 @@ const paths = new Function('picks', 'trending', 'ai', 'podcast', 'music', 'commu
 const page = paths.find(p => p.params.path === 'music');
 assert.ok(page, 'getStaticPaths must build /music/');
 assert.equal(page.props.section, 'music');
-assert.deepEqual(firstIds(page.props.videos), expected);
-assert.deepEqual(firstIds(page.props.allVideos), expected);
+assert.deepEqual(firstIds(page.props.videos), feedIds);
+assert.deepEqual(firstIds(page.props.allVideos), feedIds);
 assert.deepEqual(page.props.feed, music);
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
 
