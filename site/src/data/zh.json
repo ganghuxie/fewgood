@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T23:33:46Z",
+  "generated_at": "2026-11-22T23:34:32Z",
   "feed": "visible",
   "videos": {
     "d-7o9xYp7eE": {
@@ -30872,16 +30872,1264 @@
       "youtube_comment_units": 0,
       "updated_at": "2026-11-21T23:33:46Z",
       "source_basis": "title+description"
+    },
+    "Vyk_6bNm7lo": {
+      "title_zh": "2026年拉斯维加斯大奖赛精彩集锦",
+      "blurb_zh": "回顾拉斯维加斯大奖赛从发车到冲线的全程激烈角逐。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 276,
+        "completion_tokens": 41,
+        "total_tokens": 317,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 276
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 276,
+        "completion_tokens": 41,
+        "total_tokens": 317,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 276
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:39Z",
+      "source_basis": "title+description"
+    },
+    "1mDHHi398ig": {
+      "title_zh": "俄罗斯性间谍：我受训用性控制男人的心智！| 约翰·基里亚库与阿莉娅·罗扎",
+      "blurb_zh": "前中情局官员与俄前特工谈间谍、美人计与心理操控手段。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 60,
+        "total_tokens": 478,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 418
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 60,
+        "total_tokens": 478,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 418
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:40Z",
+      "source_basis": "title+description"
+    },
+    "ZCMIlZ2-eIU": {
+      "title_zh": "当虎式坦克与约瑟夫·斯大林交锋",
+      "blurb_zh": "1944年7月，德军虎式坦克与苏军在拉脱维亚马利纳瓦村展开战斗。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 484,
+        "completion_tokens": 46,
+        "total_tokens": 530,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 484
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 484,
+        "completion_tokens": 46,
+        "total_tokens": 530,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 484
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:41Z",
+      "source_basis": "title+description"
+    },
+    "Me5HLxRiSeA": {
+      "title_zh": "我用加油站咖啡骗过了咖啡行家",
+      "blurb_zh": "我用加油站咖啡冒充精品咖啡，骗过了咖啡行家。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 251,
+        "completion_tokens": 33,
+        "total_tokens": 284,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 251
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 251,
+        "completion_tokens": 33,
+        "total_tokens": 284,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 251
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:42Z",
+      "source_basis": "title+description"
+    },
+    "PnMzjeoYrJk": {
+      "title_zh": "如果你能听懂他，你的英语就完美了",
+      "blurb_zh": "用清晰自然的现代RP英式口音讲短故事，测试你的英式英语听力水平。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 43,
+        "total_tokens": 400,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 229
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 43,
+        "total_tokens": 400,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 229
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:43Z",
+      "source_basis": "title+description"
+    },
+    "gAlBLoPni_A": {
+      "title_zh": "鸣人 VS 路飞 | 生死决斗！",
+      "blurb_zh": "《生死决斗》中鸣人与路飞展开忍者对海盗的对决。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 520,
+        "completion_tokens": 41,
+        "total_tokens": 561,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 392
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 520,
+        "completion_tokens": 41,
+        "total_tokens": 561,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 392
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:44Z",
+      "source_basis": "title+description"
+    },
+    "3pkkFlH7-pU": {
+      "title_zh": "沃尔玛打烊后被困一年（完整故事）",
+      "blurb_zh": "沃尔玛打烊后灯光熄灭、门被锁上，外面有东西模仿声音，你和一个叫妮娜的女孩靠一条规",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 397,
+        "completion_tokens": 58,
+        "total_tokens": 455,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 269
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 397,
+        "completion_tokens": 58,
+        "total_tokens": 455,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 269
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:46Z",
+      "source_basis": "title+description"
+    },
+    "bqEz0JMZhOA": {
+      "title_zh": "旧金山49人队对阵达拉斯牛仔队集锦 | NFL 2026赛季第10周",
+      "blurb_zh": "旧金山49人队对阵达拉斯牛仔队的NFL 2026赛季第10周比赛集锦。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 337,
+        "completion_tokens": 56,
+        "total_tokens": 393,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 209
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 337,
+        "completion_tokens": 56,
+        "total_tokens": 393,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 209
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:47Z",
+      "source_basis": "title+description"
+    },
+    "2gnGA3FqW3Q": {
+      "title_zh": "我尝试像格鲁特一样训练（馊主意）| NFL R2EZ 由 Verizon 呈现",
+      "blurb_zh": "Greg Rousseau教Mack传球冲击技巧，随后两人比拼水瓶翻转和Madd",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 486,
+        "completion_tokens": 54,
+        "total_tokens": 540,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 358
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 486,
+        "completion_tokens": 54,
+        "total_tokens": 540,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 358
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:48Z",
+      "source_basis": "title+description"
+    },
+    "5LKOoqiQGDQ": {
+      "title_zh": "我尝遍了全美国的牛排",
+      "blurb_zh": "作者品尝并评比全美各地牛排，从快餐连锁店到高档牛排馆，寻找最佳牛排。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 459,
+        "completion_tokens": 40,
+        "total_tokens": 499,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 331
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 459,
+        "completion_tokens": 40,
+        "total_tokens": 499,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 331
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:49Z",
+      "source_basis": "title+description"
+    },
+    "WXV9emaUeo0": {
+      "title_zh": "为什么中国的AI泡沫破裂了……而我们的还没有……",
+      "blurb_zh": "视频讨论中国AI泡沫破裂而其他市场泡沫尚未破裂的现象。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 502,
+        "completion_tokens": 37,
+        "total_tokens": 539,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 374
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 502,
+        "completion_tokens": 37,
+        "total_tokens": 539,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 374
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:50Z",
+      "source_basis": "title+description"
+    },
+    "u8CB8gOUhQc": {
+      "title_zh": "亲族之地：隐秘之血 | 奇幻冒险",
+      "blurb_zh": "被咒语隐藏一生的罗文，在咒语失效后随奥伦进山，逐渐接近家族与自身魔法的真相。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 440,
+        "completion_tokens": 51,
+        "total_tokens": 491,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 312
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 440,
+        "completion_tokens": 51,
+        "total_tokens": 491,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 312
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:51Z",
+      "source_basis": "title+description"
+    },
+    "z_Wzl55tQus": {
+      "title_zh": "我受够了。",
+      "blurb_zh": "视频标题为“我受够了”，描述称这是一个时代的终结。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 160,
+        "completion_tokens": 30,
+        "total_tokens": 190,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 160
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 160,
+        "completion_tokens": 30,
+        "total_tokens": 190,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 160
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:53Z",
+      "source_basis": "title+description"
+    },
+    "5k3mkOIwNE4": {
+      "title_zh": "为什么使用类固醇的人衰老得这么快",
+      "blurb_zh": "跟随类固醇在体内的作用路径，探讨青少年使用类固醇后为何显老。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 38,
+        "total_tokens": 501,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 335
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 38,
+        "total_tokens": 501,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 335
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:53Z",
+      "source_basis": "title+description"
+    },
+    "Hyf4l8GAQtc": {
+      "title_zh": "两位船长，同一片海岸——传奇之战",
+      "blurb_zh": "两位宿敌船长在阳光海滩上展开一整天的技艺与自尊较量，入夜后 rivalry 化为",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 49,
+        "total_tokens": 356,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 179
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 307,
+        "completion_tokens": 49,
+        "total_tokens": 356,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 179
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:54Z",
+      "source_basis": "title+description"
+    },
+    "41T5Oi8Oq_U": {
+      "title_zh": "地球上最危险的边界！克什米尔：世界屋脊上的战争",
+      "blurb_zh": "探讨喜马拉雅地区克什米尔在印度、巴基斯坦和中国之间的冲突历史与影响。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 45,
+        "total_tokens": 395,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 222
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 350,
+        "completion_tokens": 45,
+        "total_tokens": 395,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 222
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:55Z",
+      "source_basis": "title+description"
+    },
+    "3sDzlv-VI2U": {
+      "title_zh": "数据中心、债务与AI财务风险：Ed Zitron做客Jon Stewart的The Weekly Show",
+      "blurb_zh": "Jon Stewart与Ed Zitron讨论支撑AI热潮的融资结构、循环交易与",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 485,
+        "completion_tokens": 58,
+        "total_tokens": 543,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 357
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 485,
+        "completion_tokens": 58,
+        "total_tokens": 543,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 357
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:57Z",
+      "source_basis": "title+description"
+    },
+    "QrivrNgLyR0": {
+      "title_zh": "我从1美元到100万美元的海洋动物捕获挑战",
+      "blurb_zh": "从1美元海生物到稀有龙虾，捕捉并烹饪海洋动物，直至百万美元级别。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 43,
+        "total_tokens": 377,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 206
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 334,
+        "completion_tokens": 43,
+        "total_tokens": 377,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 206
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:58Z",
+      "source_basis": "title+description"
+    },
+    "Dv-l99BQljM": {
+      "title_zh": "驾驶随机车辆挑战疯狂障碍赛道",
+      "blurb_zh": "哈德森和爸爸一起挑战高难度障碍赛道，途中不断摔倒、撞车，努力闯关。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 42,
+        "total_tokens": 275,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 233
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 42,
+        "total_tokens": 275,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 233
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:33:59Z",
+      "source_basis": "title+description"
+    },
+    "R97EoVD1nr4": {
+      "title_zh": "《GTA 6》完整游戏流程攻略 [4K PS5 PRO] - 无解说",
+      "blurb_zh": "《GTA 6》在PS5 Pro上的4K 60FPS完整游戏流程，无解说。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 422,
+        "completion_tokens": 57,
+        "total_tokens": 479,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 294
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 422,
+        "completion_tokens": 57,
+        "total_tokens": 479,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 294
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:00Z",
+      "source_basis": "title+description"
+    },
+    "4vUZRPsFCdo": {
+      "title_zh": "你永远无法参观的宫殿——白厅宫（伊丽莎白一世女王Vlog）",
+      "blurb_zh": "伊丽莎白一世带观众参观1588年的白厅宫，这座欧洲最大宫殿如今已无法参观。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 54,
+        "total_tokens": 517,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 335
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 54,
+        "total_tokens": 517,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 335
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:01Z",
+      "source_basis": "title+description"
+    },
+    "IuEuiEMwBLU": {
+      "title_zh": "“怪物午餐盒”挑战从未被打破……连帕迪·巴迪也失败了！| BeardMeatsFood",
+      "blurb_zh": "在利物浦Crosby的Hole In The Wall餐厅挑战20分钟内吃完的午",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 339,
+        "completion_tokens": 64,
+        "total_tokens": 403,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 211
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 339,
+        "completion_tokens": 64,
+        "total_tokens": 403,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 211
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:02Z",
+      "source_basis": "title+description"
+    },
+    "RxVy3Ik3SNk": {
+      "title_zh": "停水时如何使用马桶",
+      "blurb_zh": "本视频教你用家中现有廉价用品，把现有马桶改造成临时应急马桶。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 421,
+        "completion_tokens": 35,
+        "total_tokens": 456,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 293
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 421,
+        "completion_tokens": 35,
+        "total_tokens": 456,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 293
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:04Z",
+      "source_basis": "title+description"
+    },
+    "nZtyzvLZWBE": {
+      "title_zh": "肩部肌肉结总是不消？这里有解决办法！",
+      "blurb_zh": "讲解肩胛骨错位如何引发肩部肌肉结与颈部不适，并演示针对性练习。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 45,
+        "total_tokens": 469,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 296
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 424,
+        "completion_tokens": 45,
+        "total_tokens": 469,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 296
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:05Z",
+      "source_basis": "title+description"
+    },
+    "gxpsEyfuuVA": {
+      "title_zh": "年轻女子在旧匡西特小屋中度过寒冬的故事",
+      "blurb_zh": "21岁的萨迪买下一座废弃的40美元匡西特小屋，在明尼苏达寒冬来临前努力把它变成自",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 54,
+        "total_tokens": 464,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 282
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 410,
+        "completion_tokens": 54,
+        "total_tokens": 464,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 282
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:06Z",
+      "source_basis": "title+description"
+    },
+    "Mm-DoM5Fieg": {
+      "title_zh": "🌈☁️⭐ 沙画彩虹与星星，还有困倦的月亮 🌙 认识自然与太空",
+      "blurb_zh": "用沙画和绘画为小朋友呈现彩虹与星星两片天空，并一起探索彩虹、云朵和彗尾的由来。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 342,
+        "completion_tokens": 65,
+        "total_tokens": 407,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 214
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 342,
+        "completion_tokens": 65,
+        "total_tokens": 407,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 214
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:08Z",
+      "source_basis": "title+description"
+    },
+    "PHSsdHu2Er0": {
+      "title_zh": "我和尤塞恩·博尔特赛跑！",
+      "blurb_zh": "Speed向史上最快的人博尔特证明自己的速度实力。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 329,
+        "completion_tokens": 34,
+        "total_tokens": 363,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 201
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 329,
+        "completion_tokens": 34,
+        "total_tokens": 363,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 201
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:09Z",
+      "source_basis": "title+description"
+    },
+    "p9dKDdd402E": {
+      "title_zh": "被困在世界上最致命的岛屿",
+      "blurb_zh": "讲述被困在世界上最致命岛屿上的故事，内容可能基于真实事件改编。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 33,
+        "total_tokens": 251,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 218
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 33,
+        "total_tokens": 251,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 218
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:09Z",
+      "source_basis": "title+description"
+    },
+    "grBaH7LMnEY": {
+      "title_zh": "iPhone电池阴谋",
+      "blurb_zh": "探讨大型科技公司如何通过手机电池维持利润，以及维修权之争。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 527,
+        "completion_tokens": 31,
+        "total_tokens": 558,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 399
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 527,
+        "completion_tokens": 31,
+        "total_tokens": 558,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 399
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:10Z",
+      "source_basis": "title+description"
+    },
+    "qSIriWYu1kU": {
+      "title_zh": "速成甜点食谱 / 5分钟甜点 / 用苏吉做的简易甜点 - 排灯节特辑 - 玫瑰蜜球",
+      "blurb_zh": "用牛奶和粗糖两种食材制作的简易印度甜点，适合排灯节等节日。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 437,
+        "completion_tokens": 64,
+        "total_tokens": 501,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 309
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 437,
+        "completion_tokens": 64,
+        "total_tokens": 501,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 309
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:11Z",
+      "source_basis": "title+description"
+    },
+    "jxvZesLWIJc": {
+      "title_zh": "千万别让judelow训练你",
+      "blurb_zh": "视频记录在Minecraft SMP“strength trials”中与jud",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 375,
+        "completion_tokens": 39,
+        "total_tokens": 414,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 247
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 375,
+        "completion_tokens": 39,
+        "total_tokens": 414,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 247
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:13Z",
+      "source_basis": "title+description"
+    },
+    "1GwOuudxHkI": {
+      "title_zh": "山村盛宴｜打猎与馕坑烤鸡",
+      "blurb_zh": "雾天在山间牧场打猎，回小屋用核桃和石榴填料，在馕坑烤鸡并配石榴面包与茶。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 368,
+        "completion_tokens": 52,
+        "total_tokens": 420,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 240
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 368,
+        "completion_tokens": 52,
+        "total_tokens": 420,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 240
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:14Z",
+      "source_basis": "title+description"
+    },
+    "fJNEm8XgTQc": {
+      "title_zh": "探访亚洲最致命的水族馆与水下动物园！（私人导览）",
+      "blurb_zh": "私人导览探访亚洲最致命的水族馆与水下动物园。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 615,
+        "completion_tokens": 43,
+        "total_tokens": 658,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 487
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 615,
+        "completion_tokens": 43,
+        "total_tokens": 658,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 487
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:15Z",
+      "source_basis": "title+description"
+    },
+    "f1mBSTzVKmM": {
+      "title_zh": "这一次并非不同……",
+      "blurb_zh": "该视频介绍Bravos Research的新黄金策略，并列出其常用平台与社交媒体",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 390,
+        "completion_tokens": 36,
+        "total_tokens": 426,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 262
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 390,
+        "completion_tokens": 36,
+        "total_tokens": 426,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 262
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:16Z",
+      "source_basis": "title+description"
+    },
+    "fj-FoLO_dKQ": {
+      "title_zh": "连AI都未能击败的编程传奇",
+      "blurb_zh": "介绍白俄罗斯程序员tourist在Codeforces等竞赛平台的统治级表现与成",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 464,
+        "completion_tokens": 38,
+        "total_tokens": 502,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 336
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 464,
+        "completion_tokens": 38,
+        "total_tokens": 502,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 336
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:17Z",
+      "source_basis": "title+description"
+    },
+    "TSJPycaRrmE": {
+      "title_zh": "曼德拉效应正在逆转！",
+      "blurb_zh": "视频讨论曼德拉效应正在逆转，并包含多个赞助商推广与创作者致谢。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 582,
+        "completion_tokens": 37,
+        "total_tokens": 619,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 454
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 582,
+        "completion_tokens": 37,
+        "total_tokens": 619,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 454
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:18Z",
+      "source_basis": "title+description"
+    },
+    "zSdvOjEJzGs": {
+      "title_zh": "我又偷偷建了一个不可能的水上乐园！",
+      "blurb_zh": "我又偷偷建造了一个不可能的水上乐园。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 213,
+        "completion_tokens": 30,
+        "total_tokens": 243,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 213
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 213,
+        "completion_tokens": 30,
+        "total_tokens": 243,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 213
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:19Z",
+      "source_basis": "title+description"
+    },
+    "95sk6T_da_I": {
+      "title_zh": "一旦有了钱，立即升级这7样东西",
+      "blurb_zh": "介绍如何把钱花在提升生活质量、促进个人成长和增加时间自由上的实用升级方式。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 42,
+        "total_tokens": 301,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 259
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 42,
+        "total_tokens": 301,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 259
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:21Z",
+      "source_basis": "title+description"
+    },
+    "JYuSCGmvVKw": {
+      "title_zh": "伊萨卡巴归来（新片）——祖比·迈克尔、萨姆·德德、诺萨·雷克斯最新尼日利亚动作电影",
+      "blurb_zh": "祖比·迈克尔、萨姆·德德、诺萨·雷克斯主演的尼日利亚动作新片《伊萨卡巴归来》。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 630,
+        "completion_tokens": 75,
+        "total_tokens": 705,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 502
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 630,
+        "completion_tokens": 75,
+        "total_tokens": 705,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 502
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:22Z",
+      "source_basis": "title+description"
+    },
+    "aD0EwehMSXc": {
+      "title_zh": "Costco 十一月购物指南：你需要知道的一切！",
+      "blurb_zh": "介绍Costco十一月优惠券商品、各地新品、感恩节食材及酸面包填料做法。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 483,
+        "completion_tokens": 43,
+        "total_tokens": 526,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 355
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 483,
+        "completion_tokens": 43,
+        "total_tokens": 526,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 355
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:23Z",
+      "source_basis": "title+description"
+    },
+    "y5f3HOkbKCo": {
+      "title_zh": "为什么你总在凌晨3点醒来（背后的奇怪心理学）",
+      "blurb_zh": "从睡眠周期、皮质醇到夜间焦虑，解析凌晨3点醒来的心理原因及应对方法。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 517,
+        "completion_tokens": 47,
+        "total_tokens": 564,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 389
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 517,
+        "completion_tokens": 47,
+        "total_tokens": 564,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 389
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:24Z",
+      "source_basis": "title+description"
+    },
+    "7uK9v_u2Jng": {
+      "title_zh": "凌晨3点千万别在Roblox里开门……",
+      "blurb_zh": "我在Roblox打造梦想公寓，但邻居不是人类，夜里会敲门要求进来。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 555,
+        "completion_tokens": 40,
+        "total_tokens": 595,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 427
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 555,
+        "completion_tokens": 40,
+        "total_tokens": 595,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 427
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:25Z",
+      "source_basis": "title+description"
+    },
+    "3dkXX_9QdCc": {
+      "title_zh": "为什么你不该服用胶原蛋白",
+      "blurb_zh": "讲解胶原蛋白补充剂在体内的真实科学过程与消化吸收机制。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 33,
+        "total_tokens": 445,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 284
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 33,
+        "total_tokens": 445,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 284
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:27Z",
+      "source_basis": "title+description"
+    },
+    "ZrQU_eIBKvw": {
+      "title_zh": "伊斯兰主义者万万没想到迪尔伯恩会发生这件事！",
+      "blurb_zh": "迪尔伯恩一名女居民将该市及市长告上联邦法院，指控其将基督徒和犹太人视为二等公民。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 295,
+        "completion_tokens": 49,
+        "total_tokens": 344,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 167
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 295,
+        "completion_tokens": 49,
+        "total_tokens": 344,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 167
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:28Z",
+      "source_basis": "title+description"
+    },
+    "0SCSOaEv-_o": {
+      "title_zh": "Nasya展示新智能手机，Surya立刻好奇！| ARISAN (26/10/26)",
+      "blurb_zh": "Nasya展示新手机，Surya好奇，介绍其电池、性能和搜索功能。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 54,
+        "total_tokens": 411,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 229
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 357,
+        "completion_tokens": 54,
+        "total_tokens": 411,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 229
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:29Z",
+      "source_basis": "title+description"
+    },
+    "zqzk43bSdDI": {
+      "title_zh": "自去年起我们一直在问：“如果AI解决了黎曼猜想会怎样？”",
+      "blurb_zh": "视频提到关于黎曼猜想的假设性设想，并附有Levent Alpöge与Alessa",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 504,
+        "completion_tokens": 58,
+        "total_tokens": 562,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 376
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 504,
+        "completion_tokens": 58,
+        "total_tokens": 562,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 376
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:30Z",
+      "source_basis": "title+description"
+    },
+    "op8nY2UvwwQ": {
+      "title_zh": "薛定谔的秘密日记浮出水面，里面写了什么",
+      "blurb_zh": "历史学家研读了封存数十年的日记，讲述关于薛定谔的一段不同以往的说法。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 513,
+        "completion_tokens": 46,
+        "total_tokens": 559,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 385
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 513,
+        "completion_tokens": 46,
+        "total_tokens": 559,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 385
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:31Z",
+      "source_basis": "title+description"
+    },
+    "AJIKyn24Upc": {
+      "title_zh": "巧妙！寻找外星生命的新方法",
+      "blurb_zh": "介绍“组装理论”及其在寻找外星生命问题上的应用，并讨论其是否靠谱。",
+      "highlights": [],
+      "comments_zh": [],
+      "has_transcript": false,
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-flash",
+      "llm_usage": {
+        "prompt_tokens": 507,
+        "completion_tokens": 39,
+        "total_tokens": 546,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 379
+      },
+      "deepseek_usage": {
+        "prompt_tokens": 507,
+        "completion_tokens": 39,
+        "total_tokens": 546,
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 379
+      },
+      "youtube_comment_units": 0,
+      "updated_at": "2026-11-22T23:34:32Z",
+      "source_basis": "title+description"
     }
   },
   "stats": {
-    "processed": 1305,
+    "processed": 1353,
     "with_transcript": 10,
-    "llm_tokens": 539175,
-    "deepseek_tokens": 539175,
+    "llm_tokens": 561007,
+    "deepseek_tokens": 561007,
     "youtube_units": 10,
     "providers": {
-      "deepseek": 111
+      "deepseek": 48
     }
   }
 }
