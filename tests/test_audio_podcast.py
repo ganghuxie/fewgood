@@ -199,17 +199,20 @@ def test_config_contains_exact_enabled_shows_and_empty_planned_shows():
             "https://podcasts.apple.com/cn/podcast/谐星聊天会/id1488080680",
         ),
     ]
-    assert [
-        (
-            show["name"], show["display_name"], show["slug"], show["publisher"],
-            show["host_kind"], show["rss_url"], show["source_page"],
-            show.get("optional_spotify"), show["apple"],
-        )
-        for show in config["shows"]
-    ] == expected
+    assert len(config["shows"]) == 40
+    assert config["catalog"]["categories"] == ["认知", "商业", "心理", "人文", "搞笑", "生活"]
+    assert {show["category"] for show in config["shows"]} == set(config["catalog"]["categories"])
+    assert {show["name"] for show in config["shows"]}.isdisjoint({"张小珺商业访谈录", "悬而未决"})
+    assert next(show for show in config["shows"] if show["name"] == "声动早咖啡")["daily_update"] is True
+    xuan = next(show for show in config["shows"] if show["slug"] == "xuan-er-wei-jue")
+    assert xuan["name"] == "玄而未决"
+    assert xuan["category"] == "心理"
+    assert xuan["apple_collection_id"] == "1639994222"
+    assert xuan["source_status"] == "identity_verified_feed_unavailable"
+    assert xuan["source_page"] == "https://www.xiaoyuzhoufm.com/podcast/62d8ea30977d5e2e1bfc534a"
+    assert config["catalog"]["missing_shows"] == []
     assert config["planned_shows"] == []
-    assert all("optional_spotify" not in show for show in config["shows"][-4:])
-    assert config["shows"][-1]["note"] == "tracker host can be slow"
+    assert all(show["apple_collection_id"].isdigit() for show in config["shows"])
 
 
 def test_real_config_has_no_planned_shows_and_no_network_never_fetches(tmp_path, monkeypatch):
@@ -227,10 +230,56 @@ def test_real_config_has_no_planned_shows_and_no_network_never_fetches(tmp_path,
         now=NOW,
         no_network=True,
     )
-    assert len(export["shows"]) == 15
-    assert export["show_count"] == 15
+    assert len(export["shows"]) == 40
+    assert export["show_count"] == 40
     assert all(show["status"] == "enabled" for show in export["shows"])
     assert export["planned_shows"] == []
+
+
+def test_full_real_config_visits_every_show_and_imports_steve_rss_fixture(tmp_path, monkeypatch):
+    """A first import must not silently retain the old 15-show snapshot."""
+    config = ap.load_config(ROOT / "config/audio_podcasts.yaml")
+    steve = next(show for show in config["shows"] if show["slug"] == "steve-shuo")
+    seen = []
+
+    def fixture_fetch(url, **kwargs):
+        seen.append(url)
+        if url == steve["rss_url"]:
+            return rss_doc([
+                rss_item("Steve fixture episode", guid="steve-fixture-1", pub_date="2026-11-20T00:00:00Z"),
+            ], title="史蒂夫说")
+        raise OSError("fixture has no publisher response")
+
+    monkeypatch.setattr(ap, "fetch_rss", fixture_fetch)
+    export = ap.ingest(
+        config_path=ROOT / "config/audio_podcasts.yaml",
+        output_path=tmp_path / "audio_podcast.json",
+        cache_dir=tmp_path / "cache",
+        now=NOW,
+    )
+
+    assert len(export["shows"]) == 40
+    assert set(seen) == {show["rss_url"] for show in config["shows"]}
+    imported = next(show for show in export["shows"] if show["slug"] == "steve-shuo")
+    assert imported["fetch_status"] == "fresh"
+    assert imported["episode_count"] == 1
+    assert imported["episodes"][0]["episode_id"] == "steve-fixture-1"
+
+
+def test_html_response_is_not_a_successful_rss_import(tmp_path, monkeypatch):
+    config = ap.load_config(ROOT / "config/audio_podcasts.yaml")
+    monkeypatch.setattr(ap, "fetch_rss", lambda *_args, **_kwargs: b"<!doctype html><title>challenge</title>")
+    export = ap.ingest(
+        config_path=ROOT / "config/audio_podcasts.yaml",
+        output_path=tmp_path / "audio_podcast.json",
+        cache_dir=tmp_path / "cache",
+        now=NOW,
+        only_show="xuan-er-wei-jue",
+    )
+    record = export["shows"][0]
+    assert record["fetch_status"] == "unavailable"
+    assert record["episode_count"] == 0
+    assert "FeedParseError" in record["fetch_error"]
 
 
 def test_fetch_rss_is_bounded_polite_and_never_requests_audio(monkeypatch):
@@ -280,6 +329,87 @@ def test_fetch_rss_rejects_oversize_payload():
 
     with pytest.raises(ap.RSSFetchError, match="size limit"):
         ap.fetch_rss("https://feeds.example.test/show.xml", session=Session(), max_bytes=10)
+
+
+def test_fetch_rss_rejects_html_response_before_parsing():
+    class Response:
+        status_code = 200
+        headers = {"Content-Type": "text/html; charset=utf-8"}
+
+        def iter_content(self, _chunk_size):
+            yield b"<!doctype html><title>challenge</title>"
+
+        def close(self):
+            pass
+
+    class Session:
+        def get(self, _url, **_kwargs):
+            return Response()
+
+    with pytest.raises(ap.RSSFetchError, match="non-XML"):
+        ap.fetch_rss("https://feeds.example.test/show.xml", session=Session())
+
+
+def test_vistopia_official_http_enclosures_upgrade_to_https_and_keep_every_item():
+    items = [
+        rss_item(
+            f"Vistopia {index}",
+            guid=f"vistopia-{index}",
+            pub_date=f"2026-11-{10 + index:02d}T00:00:00Z",
+            audio_url=f"http://cdn5.vistopia.com.cn/{index}.mp3",
+        )
+        for index in range(1, 4)
+    ]
+    result = ap.parse_feed(rss_doc(items), {"host_kind": "vistopia"})
+    assert result["stats"]["item_count"] == len(items)
+    assert result["stats"]["episode_count"] == len(items)
+    assert result["stats"]["invalid_media_count"] == 0
+    assert [episode["audio_url"] for episode in result["episodes"]] == [
+        "https://cdn5.vistopia.com.cn/3.mp3",
+        "https://cdn5.vistopia.com.cn/2.mp3",
+        "https://cdn5.vistopia.com.cn/1.mp3",
+    ]
+
+
+def test_http_enclosure_from_non_allowlisted_host_is_still_rejected():
+    result = ap.parse_feed(rss_doc([
+        rss_item("Untrusted", guid="untrusted", audio_url="http://cdn.example.test/untrusted.mp3"),
+    ]))
+    assert result["stats"]["item_count"] == 1
+    assert result["stats"]["episode_count"] == 0
+    assert result["stats"]["invalid_media_count"] == 1
+
+
+def test_only_show_merges_into_existing_export_without_dropping_other_shows(tmp_path, monkeypatch):
+    config_path = write_config(tmp_path, [show_config("vistopia", host_kind="vistopia"), show_config("other")])
+    feeds = {
+        "https://feeds.example.test/vistopia.xml": rss_doc([
+            rss_item("Vistopia", guid="vistopia-one", audio_url="http://cdn5.vistopia.com.cn/vistopia-one.mp3"),
+        ]),
+        "https://feeds.example.test/other.xml": rss_doc([
+            rss_item("Other", guid="other-one"),
+        ]),
+    }
+    monkeypatch.setattr(ap, "fetch_rss", lambda url, **_kwargs: feeds[url])
+    output = tmp_path / "audio_podcast.json"
+    cache = tmp_path / "cache"
+    first = ap.ingest(config_path=config_path, output_path=output, cache_dir=cache, now=NOW)
+    assert {show["slug"] for show in first["shows"]} == {"vistopia", "other"}
+
+    monkeypatch.setattr(ap, "fetch_rss", lambda *_args, **_kwargs: (_ for _ in ()).throw(AssertionError("no network")))
+    merged = ap.ingest(
+        config_path=config_path,
+        output_path=output,
+        cache_dir=cache,
+        now=NOW,
+        no_network=True,
+        only_show="vistopia",
+    )
+    by_slug = {show["slug"]: show for show in merged["shows"]}
+    assert set(by_slug) == {"vistopia", "other"}
+    assert by_slug["vistopia"]["fetch_status"] == "cache_only"
+    assert by_slug["vistopia"]["episodes"][0]["audio_url"] == "https://cdn5.vistopia.com.cn/vistopia-one.mp3"
+    assert by_slug["other"]["episodes"][0]["episode_id"] == "other-one"
 
 
 def test_parser_strips_malicious_html_and_sanitizes_title():
@@ -607,7 +737,7 @@ def test_recent_selection_caps_per_show_and_does_not_backfill(tmp_path, monkeypa
 
     by_slug = {show["slug"]: show for show in export["shows"]}
     assert by_slug["stale"]["episode_count"] == 2
-    assert by_slug["stale"]["episode_count_label"] == "当前公开RSS收录"
+    assert by_slug["stale"]["episode_count_label"] == "本站已收录单集"
     assert by_slug["quiet"]["episode_count"] == 0
     assert "stale-1" not in [item["episode"]["episode_id"] for item in selection["items"]]
 
@@ -619,6 +749,20 @@ def test_recent_selection_caps_per_show_and_does_not_backfill(tmp_path, monkeypa
         now=NOW,
     )
     assert (tmp_path / "out" / "audio_podcast.json").read_bytes() == first_bytes
+
+
+def test_recent_selection_excludes_daily_update_shows():
+    daily = {
+        "slug": "daily", "display_name": "Daily", "publisher": "Publisher", "host_kind": "ximalaya",
+        "daily_update": True,
+        "episodes": [{"episode_id": "daily-1", "audio_url": "https://cdn.example.test/daily.mp3", "published_at_utc": "2026-11-15T11:00:00+00:00"}],
+    }
+    weekly = {
+        "slug": "weekly", "display_name": "Weekly", "publisher": "Publisher", "host_kind": "rss",
+        "episodes": [{"episode_id": "weekly-1", "audio_url": "https://cdn.example.test/weekly.mp3", "published_at_utc": "2026-11-15T10:00:00+00:00"}],
+    }
+    selection = ap.select_recent([daily, weekly], NOW)
+    assert [item["show_slug"] for item in selection["items"]] == ["weekly"]
 
 
 def test_transient_failure_uses_cache_without_wiping_other_shows(tmp_path, monkeypatch):

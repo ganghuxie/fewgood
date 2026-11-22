@@ -1,42 +1,108 @@
 ---
 import AudioPodcastLayout from './AudioPodcastLayout.astro';
 import { EPISODE_COUNT_LABEL, episodePath, showPath, sortRecentSelection } from '../lib/audio-podcast.mjs';
+import { latestEpisodeMarker } from '../lib/audio-podcast-newness.mjs';
+import { CARD_COVER_SIZES, CARD_COVER_WIDTHS, coverDisplayUrl, coverSrcset } from '../lib/audio-podcast-covers.mjs';
+import weeklyPicks from '../data/audio_weekly_picks.json';
 const { data } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const shows = data.shows || [];
+const categories = data.catalog?.categories || [...new Set(shows.map(show => show.category).filter(Boolean))];
 const recent = sortRecentSelection(data.recent_selection?.items || []);
 const bySlug = Object.fromEntries(shows.map(show => [show.slug, show]));
+const missingShows = data.catalog?.missing_shows || [];
+const confirmedCount = data.catalog?.confirmed_show_count || shows.length;
+const requestedCount = data.catalog?.requested_show_count || confirmedCount;
 ---
-<AudioPodcastLayout title="音频播客 · fewgood.">
-  <header class="audio-index-head"><div><h1>音频播客</h1><p>官方发布者 RSS · 近期更新与节目目录</p></div><span>{shows.length} 档</span></header>
+<AudioPodcastLayout title="音频播客 · fewgood." description="发现最值得听的播客。">
+  <header class="audio-index-head"><div><h1>音频播客</h1><p>发现最值得听的播客</p></div><span>{confirmedCount} 个已确认节目 / {requestedCount} 档目标</span></header>
   {data.available === false && <p class="audio-empty" role="status">{data.unavailable_message}</p>}
-  <section class="audio-preview-section audio-index-section" aria-labelledby="recent-heading">
-    <div class="audio-preview-section-head"><h2 id="recent-heading">近期精选</h2><p>近 30 天 · 每档最多 2 集</p></div>
-    {recent.length ? <div class="audio-recent-grid">{recent.map(({show_slug, episode, show_name}) => {
+  <div class="audio-index-tabs" role="tablist" aria-label="音频播客内容">
+    <button id="recent-tab" type="button" role="tab" aria-selected="true" aria-controls="recent-panel">近期精选</button>
+    <button id="directory-tab" type="button" role="tab" aria-selected="false" aria-controls="directory-panel" tabindex="-1">节目目录</button>
+  </div>
+  <section id="recent-panel" class="audio-tab-panel audio-preview-section audio-index-section" role="tabpanel" aria-labelledby="recent-tab">
+    <div class="audio-preview-section-head"><h2>近期精选</h2><p>近 30 天更新 · 非热度排序 · 排除日更节目</p></div>
+    <div class="audio-category-filters" data-category-filters="recent" aria-label="筛选近期精选类别">
+      <button type="button" class="active" data-audio-category="all" aria-pressed="true">全部</button>{categories.map(category => <button type="button" data-audio-category={category} aria-pressed="false">{category}</button>)}
+    </div>
+    {weeklyPicks.status === 'skipped' && <p class="audio-picks-status" role="status">周热度精选待可靠单集热度源：{weeklyPicks.reason}</p>}
+    {recent.length ? <div class="audio-recent-grid" data-audio-grid="recent">{recent.map(({show_slug, episode, show_name}, index) => {
       const show = bySlug[show_slug];
-      return show && <article class="audio-recent-card">
+      const coverUrl = episode.cover_url || show?.feed?.cover_url;
+      return show && <article class="audio-recent-card" data-audio-card-category={show.category || ''}>
         <a class="audio-card-link" href={episodePath(show, episode, base)}>
           <div class="audio-card-media">
-            {(episode.cover_url || show.feed?.cover_url) && <img onerror="this.hidden=true" class="audio-card-cover" src={episode.cover_url || show.feed.cover_url} alt={`${show_name} 官方封面`} loading="lazy" />}
+            {coverUrl && <img onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" data-cover-original={coverUrl} class="audio-card-cover" src={coverDisplayUrl(coverUrl, { width: 640 })} srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)} sizes={CARD_COVER_SIZES} alt={`${show_name} 官方封面`} width="320" height="320" decoding="async" loading={index < 4 ? 'eager' : 'lazy'} fetchpriority={index < 4 ? 'high' : undefined} />}
             {episode.duration_display && <span class="audio-card-duration">{episode.duration_display}</span>}
           </div>
-          <div class="audio-card-copy">
-            <h3 class="audio-card-title">{episode.title}</h3>
-            <p class="audio-card-show">{show_name}</p>
-            <p class="audio-card-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time></p>
-          </div>
+          <div class="audio-card-copy"><h3 class="audio-card-title">{episode.title}</h3><p class="audio-card-show">{show_name} · {show.category}</p><p class="audio-card-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time></p></div>
         </a>
       </article>;
-    })}</div> : <p class="audio-empty">最近 30 天内没有符合条件的更新。可以从下方节目目录浏览。</p>}
+    })}</div> : <p class="audio-empty">最近 30 天内没有符合条件的非日更更新。可以从节目目录浏览。</p>}
+    <p class="audio-filter-empty" data-audio-empty="recent" hidden>这个类别暂时没有近期更新。</p>
   </section>
-  <section class="audio-preview-section audio-index-section audio-directory" aria-labelledby="shows-heading">
-    <div class="audio-preview-section-head"><h2 id="shows-heading">节目目录</h2><p>{shows.length} 档 · 官方发布者 RSS</p></div>
-    <div class="audio-show-grid">{shows.map(show => <a class="audio-show-card" href={showPath(show.slug, 1, base)}>
-      <div class="audio-card-media">
-        {show.feed?.cover_url && <img onerror="this.hidden=true" class="audio-card-cover" src={show.feed.cover_url} alt={`${show.display_name} 官方封面`} loading="lazy" />}
-      </div>
-      <div class="audio-card-copy"><h3 class="audio-card-title">{show.display_name}</h3><p class="audio-card-show audio-show-publisher">{show.publisher}</p><p class="audio-card-meta audio-show-count">{EPISODE_COUNT_LABEL} {show.episodes.length} 集</p>{!recent.some(item => item.show_slug === show.slug) && <p class="audio-card-meta audio-show-recent">近 30 天无入选</p>}</div>
-    </a>)}</div>
+  <section id="directory-panel" class="audio-tab-panel audio-preview-section audio-index-section audio-directory" role="tabpanel" aria-labelledby="directory-tab" hidden>
+    <div class="audio-preview-section-head"><h2>节目目录</h2><p>{confirmedCount} 个已确认节目 · 按 6 类查找</p></div>
+    <div class="audio-category-filters" data-category-filters="directory" aria-label="筛选节目目录类别">
+      <button type="button" class="active" data-audio-category="all" aria-pressed="true">全部</button>{categories.map(category => <button type="button" data-audio-category={category} aria-pressed="false">{category}</button>)}
+    </div>
+    <div class="audio-show-grid" data-audio-grid="directory">{shows.map(show => {
+      const latest = latestEpisodeMarker(show);
+      const coverUrl = show.feed?.cover_url;
+      return <a class="audio-show-card" data-audio-newness-card data-audio-show={latest?.slug} data-audio-latest-id={latest?.episodeId} data-audio-latest-published-at={latest?.publishedAt} data-audio-card-category={show.category || ''} href={showPath(show.slug, 1, base)}>
+      <div class="audio-card-media">{coverUrl && <img onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" data-cover-original={coverUrl} class="audio-card-cover" src={coverDisplayUrl(coverUrl, { width: 640 })} srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)} sizes={CARD_COVER_SIZES} alt={`${show.display_name} 官方封面`} width="320" height="320" decoding="async" loading="lazy" />}</div>
+      <div class="audio-card-copy"><h3 class="audio-card-title">{show.display_name}{latest && <span class="audio-newness-dot" data-audio-newness-dot role="img" aria-label="有新单集" hidden></span>}</h3><p class="audio-card-show audio-show-publisher">{show.category} · {show.publisher}</p><p class="audio-card-meta audio-show-count">{EPISODE_COUNT_LABEL} {show.episodes.length} 集</p>{show.episodes.length === 0 ? <p class="audio-card-meta audio-show-status">{show.source_status === 'identity_verified_feed_unavailable' ? '内容暂不可用' : '暂未获取到单集'}</p> : show.daily_update ? <p class="audio-card-meta audio-show-recent">日更节目 · 不进入近期精选</p> : !recent.some(item => item.show_slug === show.slug) && <p class="audio-card-meta audio-show-recent">近 30 天无入选</p>}</div>
+    </a>;
+    })}</div>
+    <p class="audio-filter-empty" data-audio-empty="directory" hidden>这个类别暂时没有节目。</p>
+    {missingShows.map(show => <article class="audio-missing-show"><h3>{show.name}</h3><p>{show.category} · 核验缺口</p><p>{show.reason}</p></article>)}
   </section>
-  <details class="audio-method"><summary>关于收录与来源</summary><p>元数据和单集说明来自发布者官方 RSS。近期精选仅展示最近 30 天内的更新，每档最多 2 集，按发布时间排序，不会用旧单集回填。目录数量指「当前公开RSS收录」，并非节目全部历史。音频使用官方 HTTPS enclosure，版权归原发布者所有。</p></details>
+  <details class="audio-method"><summary>关于收录与来源</summary><p>元数据和单集说明来自发布者官方 RSS。近期精选仅展示最近 30 天的非日更更新，每档最多 2 集，按发布时间排序，不是热度榜单。目录数量指本站已收录单集，并非节目全部官方历史，身份已确认也不等于已经收录成功；音频使用官方 HTTPS enclosure，版权归原发布者所有。</p></details>
 </AudioPodcastLayout>
+<script is:inline>
+  const audioTabs = [...document.querySelectorAll('.audio-index-tabs [role="tab"]')];
+  const chooseAudioTab = selected => {
+    audioTabs.forEach(tab => {
+      const active = tab === selected;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+    });
+  };
+  audioTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => chooseAudioTab(tab));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = audioTabs[event.key === 'Home' ? 0 : event.key === 'End' ? audioTabs.length - 1 : (index + 1) % audioTabs.length];
+      chooseAudioTab(next); next.focus();
+    });
+  });
+  document.querySelectorAll('[data-category-filters]').forEach(filters => {
+    const view = filters.dataset.categoryFilters;
+    const cards = [...document.querySelectorAll(`[data-audio-grid="${view}"] [data-audio-card-category]`)];
+    const empty = document.querySelector(`[data-audio-empty="${view}"]`);
+    filters.addEventListener('click', event => {
+      const button = event.target.closest('[data-audio-category]');
+      if (!button) return;
+      const category = button.dataset.audioCategory;
+      filters.querySelectorAll('[data-audio-category]').forEach(candidate => {
+        const active = candidate === button;
+        candidate.classList.toggle('active', active);
+        candidate.setAttribute('aria-pressed', String(active));
+      });
+      let visible = 0;
+      cards.forEach(card => {
+        const matches = category === 'all' || card.dataset.audioCardCategory === category;
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      });
+      if (empty) empty.hidden = visible > 0;
+    });
+  });
+</script>
+<script>
+  import { applyAudioNewnessDots } from '../lib/audio-podcast-newness.mjs';
+  applyAudioNewnessDots();
+</script>

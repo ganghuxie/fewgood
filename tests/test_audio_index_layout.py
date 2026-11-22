@@ -2,6 +2,7 @@
 
 import re
 from dataclasses import dataclass
+import json
 from pathlib import Path
 
 
@@ -143,8 +144,9 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
 
     assert 'episodePath(show, episode, base)' in index
     assert 'showPath(show.slug, 1, base)' in index
-    assert 'episode.cover_url || show.feed?.cover_url' in index
-    assert 'show.feed.cover_url' in index
+    assert 'const coverUrl = episode.cover_url || show?.feed?.cover_url;' in index
+    assert 'const coverUrl = show.feed?.cover_url;' in index
+    assert 'srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)}' in index
     assert '{episode.title}' in index
     assert '{show.display_name}' in index
     assert '{show_name}' in index
@@ -166,3 +168,37 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
     assert _resolved(rules, '.audio-card-title', '-webkit-line-clamp', 1280) == '2'
     assert _resolved(rules, '.audio-recent-card', 'min-width', 1280) == '0'
     assert _resolved(rules, '.audio-show-card', 'min-width', 1280) == '0'
+
+
+def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
+    index = _read(INDEX_PATH)
+    layout = _read(LAYOUT_PATH)
+
+    catalog = json.loads((ROOT / 'site/src/data/audio_podcast_catalog.json').read_text(encoding='utf-8'))
+    categories = catalog['catalog']['categories']
+    assert categories == ['认知', '商业', '心理', '人文', '搞笑', '生活']
+    assert catalog['catalog']['requested_show_count'] == 40
+    assert catalog['catalog']['confirmed_show_count'] == 40
+    assert catalog['catalog']['missing_shows'] == []
+    xuan = next(show for show in catalog['shows'] if show['slug'] == 'xuan-er-wei-jue')
+    assert xuan['name'] == '玄而未决'
+    assert xuan['category'] == '心理'
+    assert xuan['source_status'] == 'identity_verified_feed_unavailable'
+    assert "data.catalog?.categories" in index
+    assert "data-audio-category={category}" in index
+    assert 'role="tablist"' in index
+    assert 'recent-tab' in index and 'directory-tab' in index
+    assert 'data-category-filters="recent"' in index
+    assert 'data-category-filters="directory"' in index
+    assert 'data-audio-card-category={show.category' in index
+    assert '非热度排序 · 排除日更节目' in index
+    assert '周热度精选待可靠单集热度源' in index
+    assert '日更节目 · 不进入近期精选' in index
+    assert '悬而未决' not in index
+    assert '张小珺' not in index
+    assert "identity_verified_feed_unavailable" in index
+    assert "show.episodes.length === 0" in index
+    assert '暂未获取到单集' in index
+    assert '内容暂不可用' in index
+    assert "show.episodes.length === 0 &&" in _read(ROOT / 'site/src/components/AudioPodcastShowPage.astro')
+    assert 'min-height:40px' in layout  # the show-page return link remains a usable target

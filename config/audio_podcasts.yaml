@@ -1,166 +1,65 @@
-# Official publisher RSS audio.
-# `shows` are fetched and exported. `planned_shows` remains available for attribution-only metadata.
+# 官方/发布者 RSS 音频播客目录。只读取 RSS 元数据及其 HTTPS enclosure，绝不转存音频。
+# `catalog` 保留本轮人工核验结论；40 个节目身份均已确认；不可解析的 feed 不伪造单集。
+catalog:
+  requested_show_count: 40
+  confirmed_show_count: 40
+  categories: [认知, 商业, 心理, 人文, 搞笑, 生活]
+  weekly_picks:
+    status: unavailable
+    reason: 未找到合规、稳定且公开文档化的单集热度来源；RSS 与 iTunes 仅提供节目或发布时间信息，不能据此伪造热度精选。
+  missing_shows: []
+
 shows:
-  - name: 岩中花述
-    display_name: 岩中花述
-    slug: yan-zhong-hua-shu
-    publisher: GIADA
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/hwen8wf69c6g
-    source_page: https://www.xiaoyuzhoufm.com/podcast/625635587bfca4e73e990703
-    optional_spotify: https://open.spotify.com/show/6JukZBKKuvslkEUmfmlZTh
-    apple: https://podcasts.apple.com/cn/podcast/岩中花述/id1582119137
-    status: enabled
+  # 认知
+  - {name: 纵横四海, display_name: 纵横四海, slug: zong-heng-si-hai, category: 认知, publisher: 携隐Melody, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/67531569.xml, source_page: https://www.ximalaya.com/album/67531569, apple: https://podcasts.apple.com/cn/podcast/纵横四海/id1671490972, apple_collection_id: '1671490972', source_status: verified_feed, status: enabled}
+  - {name: 史蒂夫说, display_name: 史蒂夫说, slug: steve-shuo, category: 认知, publisher: 史蒂夫, host_kind: fireside, rss_url: https://feeds.fireside.fm/steve/rss, source_page: https://steveshuo.com/rss, apple: https://podcasts.apple.com/cn/podcast/史蒂夫说/id1073852728, apple_collection_id: '1073852728', source_status: verified_feed, status: enabled}
+  - {name: 无人知晓, display_name: 无人知晓, slug: wu-ren-zhi-xiao, category: 认知, publisher: 孟岩, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/ypn9dydpbxpc, source_page: https://podcasts.apple.com/cn/podcast/无人知晓/id1581271335, apple: https://podcasts.apple.com/cn/podcast/无人知晓/id1581271335, apple_collection_id: '1581271335', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 自我进化论, display_name: 自我进化论, slug: zi-wo-jin-hua-lun, category: 认知, publisher: 颜晓静Athena, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/artr8kfmlmxh, source_page: https://podcasts.apple.com/cn/podcast/自我进化论/id1498170617, apple: https://podcasts.apple.com/cn/podcast/自我进化论/id1498170617, apple_collection_id: '1498170617', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 忽左忽右, display_name: 忽左忽右, slug: hu-zuo-hu-you, category: 认知, publisher: JustPod, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/cv4bkgpuglwp, source_page: https://justpodmedia.com/rss/left-right.xml, apple: https://podcasts.apple.com/cn/podcast/忽左忽右/id1493503146, apple_collection_id: '1493503146', source_status: identity_verified_feed_blocked, note: 第一方 RSS 本机证书校验失败；未关闭校验抓取。, status: enabled}
+  - {name: 独树不成林, display_name: 独树不成林, slug: du-shu-bu-cheng-lin, category: 认知, publisher: 鬼鬼祟祟的树, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/y9qnpfdrctnx, source_page: https://podcasts.apple.com/cn/podcast/独树不成林/id1711052890, apple: https://podcasts.apple.com/cn/podcast/独树不成林/id1711052890, apple_collection_id: '1711052890', source_status: identity_verified_feed_blocked, status: enabled}
 
-  - name: 知行小酒馆
-    display_name: 知行小酒馆
-    slug: zhi-xing-xiao-jiu-guan
-    publisher: 有知有行
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/j8yp8gxkmgqr
-    source_page: https://www.xiaoyuzhoufm.com/podcast/6013f9f58e2f7ee375cf4216
-    optional_spotify: https://open.spotify.com/show/2XeU495v6CZvBuRcVEbfQI
-    apple: https://podcasts.apple.com/cn/podcast/知行小酒馆/id1559695855
-    status: enabled
+  # 商业
+  - {name: 知行小酒馆, display_name: 知行小酒馆, slug: zhi-xing-xiao-jiu-guan, category: 商业, publisher: 有知有行, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/j8yp8gxkmgqr, source_page: https://podcasts.apple.com/cn/podcast/知行小酒馆/id1559695855, apple: https://podcasts.apple.com/cn/podcast/知行小酒馆/id1559695855, apple_collection_id: '1559695855', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 半拿铁, display_name: '半拿铁｜商业沉浮录', slug: ban-na-tie, category: 商业, publisher: 潇磊&刘飞, host_kind: wavpub, rss_url: https://proxy.wavpub.com/caffebreve.xml, source_page: https://podcasts.apple.com/cn/podcast/半拿铁/id1615939013, apple: https://podcasts.apple.com/cn/podcast/半拿铁/id1615939013, apple_collection_id: '1615939013', source_status: verified_feed, status: enabled}
+  - {name: 声动早咖啡, display_name: 声动早咖啡, slug: sheng-dong-zao-ka-fei, category: 商业, publisher: 声动活泼, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/51076156.xml, source_page: https://www.ximalaya.com/album/51076156, apple: https://podcasts.apple.com/cn/podcast/声动早咖啡/id1573189055, apple_collection_id: '1573189055', daily_update: true, source_status: verified_feed, status: enabled}
+  - {name: 商业就是这样, display_name: 商业就是这样, slug: that-is-biz, category: 商业, publisher: 第一财经杂志, host_kind: fireside, rss_url: https://thatisbiz.fireside.fm/rss, source_page: https://thatisbiz.fireside.fm/, apple: https://podcasts.apple.com/cn/podcast/商业就是这样/id1552904790, apple_collection_id: '1552904790', source_status: verified_feed, status: enabled}
+  - {name: 搞钱女孩, display_name: 搞钱女孩, slug: gao-qian-nu-hai, category: 商业, publisher: 搞钱女孩小辉, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/74797134.xml, source_page: https://podcasts.apple.com/cn/podcast/搞钱女孩/id1676099257, apple: https://podcasts.apple.com/cn/podcast/搞钱女孩/id1676099257, apple_collection_id: '1676099257', source_status: verified_feed, status: enabled}
+  - {name: 给女孩的商业第一课, display_name: 给女孩的商业第一课, slug: business-for-girls, category: 商业, publisher: 闪光少女斯斯, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/51407695.xml, source_page: https://podcasts.apple.com/cn/podcast/给女孩的商业第一课/id1581376691, apple: https://podcasts.apple.com/cn/podcast/给女孩的商业第一课/id1581376691, apple_collection_id: '1581376691', source_status: verified_feed, status: enabled}
 
-  - name: 无人知晓
-    display_name: 无人知晓
-    slug: wu-ren-zhi-xiao
-    publisher: 孟岩
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/ypn9dydpbxpc
-    source_page: https://www.xiaoyuzhoufm.com/podcast/611719d3cb0b82e1df0ad29e
-    optional_spotify: https://open.spotify.com/show/4TY2xLrxqaOEffz4B8eXpi
-    apple: https://podcasts.apple.com/cn/podcast/无人知晓/id1581271335
-    status: enabled
+  # 心理
+  - {name: 岩中花述, display_name: 岩中花述, slug: yan-zhong-hua-shu, category: 心理, publisher: GIADA / 鲁豫, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/hwen8wf69c6g, source_page: https://podcasts.apple.com/cn/podcast/岩中花述/id1582119137, apple: https://podcasts.apple.com/cn/podcast/岩中花述/id1582119137, apple_collection_id: '1582119137', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 天真不天真, display_name: 天真不天真, slug: tian-zhen-bu-tian-zhen, category: 心理, publisher: 杨天真本真, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/mcklbwxjdvfu, source_page: https://podcasts.apple.com/cn/podcast/天真不天真/id1731784296, apple: https://podcasts.apple.com/cn/podcast/天真不天真/id1731784296, apple_collection_id: '1731784296', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: '思文，败类', display_name: '思文，败类', slug: si-wen-bai-lei, category: 心理, publisher: 思文败类, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/7bjvvcn8bwlq, source_page: https://podcasts.apple.com/cn/podcast/思文-败类/id1682160500, apple: https://podcasts.apple.com/cn/podcast/思文-败类/id1682160500, apple_collection_id: '1682160500', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 沈奕斐的播客, display_name: 沈奕斐的播客, slug: shen-yi-fei, category: 心理, publisher: 沈奕斐, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/99b3wkblwf9c, source_page: https://podcasts.apple.com/cn/podcast/沈奕斐的播客/id1620301781, apple: https://podcasts.apple.com/cn/podcast/沈奕斐的播客/id1620301781, apple_collection_id: '1620301781', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 燕外之意, display_name: 燕外之意, slug: yan-wai-zhi-yi, category: 心理, publisher: 燕外之意, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/54855197.xml, source_page: https://podcasts.apple.com/cn/podcast/燕外之意/id1620123449, apple: https://podcasts.apple.com/cn/podcast/燕外之意/id1620123449, apple_collection_id: '1620123449', source_status: verified_feed, status: enabled}
+  - {name: 没理想编辑部, display_name: 没理想编辑部, slug: mei-li-xiang-bian-ji-bu, category: 心理, publisher: 看理想新媒体部, host_kind: vistopia, rss_url: https://api.vistopia.com.cn/rss/program/116.xml, source_page: https://podcasts.apple.com/cn/podcast/没理想编辑部/id1494093522, apple: https://podcasts.apple.com/cn/podcast/没理想编辑部/id1494093522, apple_collection_id: '1494093522', source_status: verified_feed, status: enabled}
+  - {name: 玄而未决, display_name: 玄而未决, slug: xuan-er-wei-jue, category: 心理, publisher: 韋自章, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/wg6cwhklnalt, source_page: https://www.xiaoyuzhoufm.com/podcast/62d8ea30977d5e2e1bfc534a, apple: https://podcasts.apple.com/cn/podcast/玄而未决/id1639994222, apple_collection_id: '1639994222', source_status: identity_verified_feed_unavailable, note: iTunes feedUrl 当前重定向至 HTML，未作为 RSS 解析, status: enabled}
 
-  - name: 面基
-    display_name: 面基
-    slug: mian-ji
-    publisher: 面基
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/6hpdgggtxpxb
-    source_page: https://www.xiaoyuzhoufm.com/podcast/6388760f22567e8ea6ad070f
-    optional_spotify: https://open.spotify.com/show/65XM7rQOU05IRxFX0jVjsH
-    apple: https://podcasts.apple.com/cn/podcast/面基/id1686741064
-    status: enabled
+  # 人文
+  - {name: 文化有限, display_name: 文化有限, slug: wen-hua-you-xian, category: 人文, publisher: 文化有限, host_kind: wavpub, rss_url: https://s1.proxy.wavpub.com/weknownothing.xml, source_page: https://podcasts.apple.com/cn/podcast/文化有限/id1482731836, apple: https://podcasts.apple.com/cn/podcast/文化有限/id1482731836, apple_collection_id: '1482731836', source_status: verified_feed, status: enabled}
+  - {name: 故事FM, display_name: 故事FM, slug: story-fm, category: 人文, publisher: 寇爱哲, host_kind: storyfm, rss_url: https://feeds.storyfm.cn/storyfm.xml, source_page: https://storyfm.cn/, apple: https://podcasts.apple.com/cn/podcast/故事FM/id1256399960, apple_collection_id: '1256399960', source_status: verified_feed, status: enabled}
+  - {name: 西西弗高速, display_name: 西西弗高速, slug: sisyphus-express, category: 人文, publisher: 西西弗高速, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/76evp7fxkeu8, source_page: https://podcasts.apple.com/cn/podcast/西西弗高速/id1770713549, apple: https://podcasts.apple.com/cn/podcast/西西弗高速/id1770713549, apple_collection_id: '1770713549', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 东腔西调, display_name: 东腔西调, slug: dong-qiang-xi-diao, category: 人文, publisher: 大观天下志, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/41153937.xml, source_page: https://podcasts.apple.com/cn/podcast/东腔西调/id1533768416, apple: https://podcasts.apple.com/cn/podcast/东腔西调/id1533768416, apple_collection_id: '1533768416', source_status: verified_feed, status: enabled}
+  - {name: 声东击西, display_name: 声东击西, slug: sheng-dong-ji-xi, category: 人文, publisher: ETW Studio, host_kind: fireside, rss_url: https://feeds.fireside.fm/shengdongjixi/rss, source_page: https://podcasts.apple.com/cn/podcast/声东击西/id1183662640, apple: https://podcasts.apple.com/cn/podcast/声东击西/id1183662640, apple_collection_id: '1183662640', source_status: verified_feed, status: enabled}
+  - {name: 灰度纪年, display_name: 灰度纪年, slug: hui-du-ji-nian, category: 人文, publisher: 冬石不语, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/6keeqnqy6vrr, source_page: https://podcasts.apple.com/cn/podcast/灰度纪年/id1791081576, apple: https://podcasts.apple.com/cn/podcast/灰度纪年/id1791081576, apple_collection_id: '1791081576', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 随机波动, display_name: 随机波动, slug: sui-ji-bo-dong, category: 人文, publisher: 随机波动, host_kind: fireside, rss_url: https://feeds.fireside.fm/stovol/rss, source_page: https://www.stovol.com/subscribe, apple: https://podcasts.apple.com/us/podcast/stochastic-volatility/id1504681387, apple_collection_id: '1504681387', source_status: verified_feed, status: enabled}
+  - {name: 面基, display_name: 面基, slug: mian-ji, category: 人文, publisher: 厚望 / 老钱, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/6hpdgggtxpxb, source_page: https://podcasts.apple.com/cn/podcast/面基/id1686741064, apple: https://podcasts.apple.com/cn/podcast/面基/id1686741064, apple_collection_id: '1686741064', source_status: identity_verified_feed_blocked, status: enabled}
 
-  - name: 谭立人
-    display_name: 谭立人
-    slug: tan-li-ren
-    publisher: 谭立人
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/nh9mphjxn8u7
-    source_page: https://www.xiaoyuzhoufm.com/podcast/65a2d0f07242f9fc1c1df60a
-    optional_spotify: https://open.spotify.com/show/61RHBnuUh4CVLqvWFsaLOk
-    apple: https://podcasts.apple.com/cn/podcast/谭立人/id1771401634
-    status: enabled
+  # 搞笑
+  - {name: 谐星聊天会, display_name: 谐星聊天会, slug: xie-xing-liao-tian-hui, category: 搞笑, publisher: 单立人喜剧, host_kind: danlirencomedy, rss_url: https://feeds.danlirencomedy.com/xxlth.xml, source_page: https://www.danlirencomedy.cn/, apple: https://podcasts.apple.com/cn/podcast/谐星聊天会/id1488080680, apple_collection_id: '1488080680', source_status: verified_feed, status: enabled}
+  - {name: 无聊斋, display_name: 无聊斋, slug: wu-liao-zhai, category: 搞笑, publisher: 教主_单口喜剧, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/njwyhpcjqn9t, source_page: https://podcasts.apple.com/cn/podcast/无聊斋/id1433530822, apple: https://podcasts.apple.com/cn/podcast/无聊斋/id1433530822, apple_collection_id: '1433530822', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 凹凸电波, display_name: 凹凸电波, slug: ao-tu-dian-bo, category: 搞笑, publisher: 凹凸电波, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/19206382.xml, source_page: https://podcasts.apple.com/cn/podcast/凹凸电波/id1455784513, apple: https://podcasts.apple.com/cn/podcast/凹凸电波/id1455784513, apple_collection_id: '1455784513', source_status: verified_feed, status: enabled}
+  - {name: 不开玩笑, display_name: 不开玩笑, slug: jokes-aside, category: 搞笑, publisher: 不开玩笑 Jokes Aside, host_kind: wavpub, rss_url: https://proxy.wavpub.com/jokes-aside.xml, source_page: https://podcasts.apple.com/cn/podcast/不开玩笑/id1592646595, apple: https://podcasts.apple.com/cn/podcast/不开玩笑/id1592646595, apple_collection_id: '1592646595', source_status: verified_feed, status: enabled}
+  - {name: 正经叭叭, display_name: 正经叭叭, slug: zheng-jing-ba-ba, category: 搞笑, publisher: 惊讶喜剧, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/t7hdrqbuxmqr, source_page: https://podcasts.apple.com/cn/podcast/正经叭叭/id1575323064, apple: https://podcasts.apple.com/cn/podcast/正经叭叭/id1575323064, apple_collection_id: '1575323064', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 三好坏男孩, display_name: 三好坏男孩, slug: san-hao-huai-nan-hai, category: 搞笑, publisher: 三好坏男孩, host_kind: wavpub, rss_url: https://s1.proxy.wavpub.com/sanhaoradio.xml, source_page: https://podcasts.apple.com/cn/podcast/三好坏男孩/id1448447486, apple: https://podcasts.apple.com/cn/podcast/三好坏男孩/id1448447486, apple_collection_id: '1448447486', source_status: verified_feed, status: enabled}
+  - {name: 肥话连篇, display_name: 肥话连篇, slug: fei-hua-lian-pian, category: 搞笑, publisher: 肥杰, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/56109512.xml, source_page: https://podcasts.apple.com/cn/podcast/肥话连篇/id1603580035, apple: https://podcasts.apple.com/cn/podcast/肥话连篇/id1603580035, apple_collection_id: '1603580035', source_status: verified_feed, status: enabled}
+  - {name: 日谈公园, display_name: 日谈公园, slug: ri-tan-gong-yuan, category: 搞笑, publisher: 日谈公园, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/5574153.xml, source_page: https://podcasts.apple.com/cn/podcast/日谈公园/id1166949390, apple: https://podcasts.apple.com/cn/podcast/日谈公园/id1166949390, apple_collection_id: '1166949390', source_status: verified_feed, status: enabled}
 
-  - name: 自我进化论
-    display_name: 自我进化论
-    slug: zi-wo-jin-hua-lun
-    publisher: 颜晓静Athena
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/artr8kfmlmxh
-    source_page: https://www.xiaoyuzhoufm.com/podcast/5e5de5cb418a84a0467beb90
-    optional_spotify: https://open.spotify.com/show/4esvXRFo24ukSH01RwDCy9
-    apple: https://podcasts.apple.com/cn/podcast/自我进化论/id1498170617
-    status: enabled
-
-  - name: 忽左忽右
-    display_name: 忽左忽右
-    slug: hu-zuo-hu-you
-    publisher: JustPod
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/cv4bkgpuglwp
-    source_page: https://www.xiaoyuzhoufm.com/podcast/5e4ee557418a84a0466737b7
-    optional_spotify: https://open.spotify.com/show/1Fm6RmlyY9YsqoOLMBQpxJ
-    apple: https://podcasts.apple.com/cn/podcast/忽左忽右/id1493503146
-    status: enabled
-
-  - name: 独树不成林
-    display_name: 独树不成林
-    slug: du-shu-bu-cheng-lin
-    publisher: 鬼鬼祟祟的树
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/y9qnpfdrctnx
-    source_page: https://www.xiaoyuzhoufm.com/podcast/64acd33c7a3d479103fbd32d
-    optional_spotify: https://open.spotify.com/show/054BlO7x8pvcblbzxq8BxU
-    apple: https://podcasts.apple.com/cn/podcast/独树不成林/id1711052890
-    status: enabled
-
-  - name: 正经叭叭
-    display_name: 正经叭叭
-    slug: zheng-jing-ba-ba
-    publisher: 惊讶喜剧
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/t7hdrqbuxmqr
-    source_page: https://www.xiaoyuzhoufm.com/podcast/60e43cecc4e7c8188c2f92a4
-    optional_spotify: https://open.spotify.com/show/39TlHlfNXzhYe59G7ETdv8
-    apple: https://podcasts.apple.com/cn/podcast/正经叭叭/id1575323064
-    status: enabled
-
-  - name: 张小珺商业访谈录
-    display_name: 张小珺Jùn｜商业访谈录
-    slug: zhang-xiao-jun
-    publisher: 张小珺
-    host_kind: xiaoyuzhou
-    rss_url: https://feed.xyzfm.space/dk4yh3pkpjp3
-    source_page: https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962
-    optional_spotify: https://open.spotify.com/show/2g0V13H8ZqZao5uqpJJkZs
-    apple: https://podcasts.apple.com/cn/podcast/张小珺Jùn｜商业访谈录/id1634356920
-    status: enabled
-
-  - name: 故事FM
-    display_name: 故事FM
-    slug: story-fm
-    publisher: 寇爱哲
-    host_kind: storyfm
-    rss_url: https://feeds.storyfm.cn/storyfm.xml
-    source_page: https://storyfm.cn/
-    optional_spotify: https://open.spotify.com/show/3ROMNljvYu6nHCTpklrOS6
-    apple: https://podcasts.apple.com/cn/podcast/故事FM/id1256399960
-    status: enabled
-
-  - name: 纵横四海
-    display_name: 纵横四海
-    slug: zong-heng-si-hai
-    publisher: 携隐Melody
-    host_kind: ximalaya
-    rss_url: https://www.ximalaya.com/album/67531569.xml
-    source_page: https://www.ximalaya.com/album/67531569
-    apple: https://podcasts.apple.com/cn/podcast/纵横四海/id1671490972
-    status: enabled
-
-  - name: 文化有限
-    display_name: 文化有限
-    slug: wen-hua-you-xian
-    publisher: 文化有限
-    host_kind: wavpub
-    rss_url: https://s1.proxy.wavpub.com/weknownothing.xml
-    source_page: https://www.ximalaya.com/album/29887212
-    apple: https://podcasts.apple.com/cn/podcast/文化有限/id1482731836
-    status: enabled
-
-  - name: 声动早咖啡
-    display_name: 声动早咖啡
-    slug: sheng-dong-zao-ka-fei
-    publisher: 声动活泼
-    host_kind: ximalaya
-    rss_url: https://www.ximalaya.com/album/51076156.xml
-    source_page: https://www.ximalaya.com/album/51076156
-    apple: https://podcasts.apple.com/cn/podcast/声动早咖啡/id1573189055
-    status: enabled
-
-  - name: 谐星聊天会
-    display_name: 谐星聊天会
-    slug: xie-xing-liao-tian-hui
-    publisher: 单立人喜剧
-    host_kind: danlirencomedy
-    rss_url: https://feeds.danlirencomedy.com/xxlth.xml
-    source_page: https://www.danlirencomedy.cn/
-    apple: https://podcasts.apple.com/cn/podcast/谐星聊天会/id1488080680
-    status: enabled
-    note: tracker host can be slow
+  # 生活
+  - {name: 宁浪别野, display_name: 宁浪别野, slug: ning-lang-bie-ye, category: 生活, publisher: 赵依侬等, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/69655759.xml, source_page: https://podcasts.apple.com/cn/podcast/宁浪别野/id1635488001, apple: https://podcasts.apple.com/cn/podcast/宁浪别野/id1635488001, apple_collection_id: '1635488001', source_status: verified_feed, status: enabled}
+  - {name: 宇宙乘客, display_name: 宇宙乘客, slug: yu-zhou-cheng-ke, category: 生活, publisher: 宇宙乘客, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/33643029.xml, source_page: https://podcasts.apple.com/cn/podcast/宇宙乘客/id1540709743, apple: https://podcasts.apple.com/cn/podcast/宇宙乘客/id1540709743, apple_collection_id: '1540709743', source_status: verified_feed, status: enabled}
+  - {name: 谭立人, display_name: 谭立人, slug: tan-li-ren, category: 生活, publisher: 谭立人, host_kind: xiaoyuzhou, rss_url: https://feed.xyzfm.space/nh9mphjxn8u7, source_page: https://podcasts.apple.com/cn/podcast/谭立人/id1771401634, apple: https://podcasts.apple.com/cn/podcast/谭立人/id1771401634, apple_collection_id: '1771401634', source_status: identity_verified_feed_blocked, status: enabled}
+  - {name: 来都来了, display_name: '来都来了｜听了再走', slug: lai-dou-lai-le, category: 生活, publisher: 来都来了_, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/31677988.xml, source_page: https://podcasts.apple.com/cn/podcast/来都来了-听了再走/id1512932915, apple: https://podcasts.apple.com/cn/podcast/来都来了-听了再走/id1512932915, apple_collection_id: '1512932915', source_status: verified_feed, status: enabled}
+  - {name: 自习室 STUDY ROOM, display_name: 自习室 STUDY ROOM, slug: study-room, category: 生活, publisher: 不好惹的娃娃脸, host_kind: ximalaya, rss_url: https://www.ximalaya.com/album/80074602.xml, source_page: https://www.xiaoyuzhoufm.com/podcast/65a5fb7540d4ef949c0140ac, apple: https://podcasts.apple.com/cn/podcast/自习室-study-room/id1726135306, apple_collection_id: '1726135306', source_status: verified_feed, editorial_note: 官方节目简介为铁三、读书和创业的自我突破记录；未采用未经核验的安静陪伴描述。, status: enabled}
 
 planned_shows: []

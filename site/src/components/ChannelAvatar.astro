@@ -5,7 +5,7 @@ const letter = [...title.trim()][0] || '频';
 let hash = 0;
 for (const character of title) hash = (hash * 31 + character.codePointAt(0)) >>> 0;
 const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7];
-const thumbnail = channel?.thumbnail?.replace(/=s(\d+)/, (_, value) => `=s${Math.max(Number(value), 240)}`);
+const thumbnail = channel?.thumbnail?.replace(/=s\d+/, size === 'sm' ? '=s88' : '$&');
 const avatarClass = `channel-avatar${size === 'lg' ? ' channel-avatar--lg' : ''}`;
 ---
-{thumbnail ? <img class={avatarClass} src={thumbnail} alt="" /> : <span class={`${avatarClass} channel-avatar-letter`} style={`background-color:${color}`} aria-hidden="true">{letter}</span>}
+{thumbnail ? <img class={avatarClass} src={thumbnail} alt="" loading={size === 'sm' ? 'lazy' : undefined} /> : <span class={`${avatarClass} channel-avatar-letter`} style={`background-color:${color}`} aria-hidden="true">{letter}</span>}

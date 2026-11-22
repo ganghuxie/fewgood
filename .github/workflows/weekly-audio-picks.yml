@@ -1,0 +1,32 @@
+name: Weekly audio picks status
+
+on:
+  schedule:
+    # Saturday 05:00 Asia/Shanghai. This workflow writes a truthful skipped
+    # state until a compliant public episode-level heat source is approved.
+    - cron: '0 21 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-audio-picks
+  cancel-in-progress: false
+
+jobs:
+  assess:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Write weekly audio-pick status
+        run: python -m ytrec weekly-audio-picks
+      - name: Show result without publishing it
+        run: cat site/src/data/audio_weekly_picks.json

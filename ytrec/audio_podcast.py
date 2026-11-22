@@ -1,7 +1,8 @@
 """Official publisher ingestion for official publisher podcast RSS feeds.
 
-The ingest reads feed metadata only, keeps the publisher's HTTPS enclosure
-URL unchanged, and never downloads, proxies, transcodes, or stores audio.
+The ingest reads feed metadata only and never downloads, proxies, transcodes,
+or stores audio. A narrowly allowlisted official CDN HTTP enclosure may be
+upgraded to the same HTTPS URL before normal HTTPS validation.
 """
 
 from __future__ import annotations
@@ -19,7 +20,7 @@ from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urlunsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import requests
@@ -30,15 +31,15 @@ DEFAULT_CONFIG_PATH = Path("config/audio_podcasts.yaml")
 DEFAULT_OUTPUT_PATH = Path("site/src/data/audio_podcast.json")
 DEFAULT_CACHE_DIR = Path("data/audio_podcast_cache")
 
-SCHEMA_VERSION = 1
-CACHE_VERSION = 2
+SCHEMA_VERSION = 2
+CACHE_VERSION = 3
 FETCH_TIMEOUT_SECONDS = 45
 FETCH_RETRIES = 2
 MAX_RESPONSE_BYTES = 14 * 1024 * 1024
 USER_AGENT = "fewgood-audio/0.1 (+https://fewgood.io; RSS metadata)"
 SELECTION_WINDOW_DAYS = 30
 SELECTION_MAX_PER_SHOW = 2
-EPISODE_COUNT_LABEL = "当前公开RSS收录"
+EPISODE_COUNT_LABEL = "本站已收录单集"
 TRUNCATION_MARKERS = (
     "去小宇宙查看完整单集简介",
     "查看完整单集简介",
@@ -63,6 +64,7 @@ _TEXT_BOUNDARY_TAGS = frozenset({
 })
 _DATE_ONLY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _RETRYABLE_STATUSES = frozenset({408, 425, 429, 500, 502, 503, 504})
+_HTTPS_UPGRADE_ENCLOSURE_HOSTS = frozenset({"cdn5.vistopia.com.cn"})
 
 
 class RSSFetchError(RuntimeError):
@@ -170,6 +172,32 @@ def _safe_url(value: Any, schemes: set[str] | frozenset[str]) -> str | None:
     if parts.scheme.lower() not in schemes or not parts.netloc:
         return None
     return candidate
+
+
+def _official_https_enclosure_url(value: Any) -> str | None:
+    """Allow only an exact same-host/path HTTPS upgrade for verified official CDNs."""
+    if not isinstance(value, str):
+        return None
+    candidate = value.strip()
+    try:
+        parts = urlsplit(candidate)
+        hostname = (parts.hostname or "").lower()
+        port = parts.port
+    except ValueError:
+        return None
+    if parts.scheme.lower() == "https":
+        return _safe_url(candidate, {"https"})
+    if (
+        parts.scheme.lower() != "http"
+        or hostname not in _HTTPS_UPGRADE_ENCLOSURE_HOSTS
+        or not parts.path
+        or parts.username is not None
+        or parts.password is not None
+        or port is not None
+    ):
+        return None
+    upgraded = urlunsplit(("https", parts.netloc, parts.path, parts.query, parts.fragment))
+    return _safe_url(upgraded, {"https"})
 
 
 def sanitize_html(value: Any) -> str:
@@ -314,9 +342,9 @@ def _element_content(element: ET.Element | None) -> str:
     """Return text or inner markup without losing child tags for sanitization."""
     if element is None:
         return ""
-    if len(element) == 0:
-        return (element.text or "").strip()
-    return ET.tostring(element, encoding="unicode").strip()
+    return ((element.text or "") + "".join(
+        ET.tostring(child, encoding="unicode") for child in element
+    )).strip()
 
 
 def _first_text(element: ET.Element, *names: str) -> str:
@@ -403,7 +431,7 @@ def _cover_url(element: ET.Element) -> str | None:
 def _parse_episode(item: ET.Element) -> dict[str, Any] | None:
     enclosure = _find_direct(item, "enclosure")
     enclosure_url = enclosure.get("url") if enclosure is not None else None
-    audio_url = _safe_url(enclosure_url, {"https"})
+    audio_url = _official_https_enclosure_url(enclosure_url)
     if not audio_url:
         return None
 
@@ -585,7 +613,7 @@ def fetch_rss(
             raise RSSFetchError(last_error)
 
         content_type = str(getattr(response, "headers", {}).get("Content-Type", "")).lower()
-        if content_type.startswith(("audio/", "video/", "image/")):
+        if content_type.startswith(("audio/", "video/", "image/", "text/html", "application/xhtml+xml")):
             raise RSSFetchError(f"redirected to non-XML content: {content_type}")
         content_length = getattr(response, "headers", {}).get("Content-Length")
         if content_length:
@@ -653,6 +681,29 @@ def load_config(path: str | Path = DEFAULT_CONFIG_PATH) -> dict[str, Any]:
     if not isinstance(shows, list) or not isinstance(planned_shows, list):
         raise ValueError("podcast config needs `shows` and `planned_shows` lists")
 
+    catalog = payload.get("catalog")
+    if catalog is not None:
+        if not isinstance(catalog, dict):
+            raise ValueError("podcast catalog must be a mapping")
+        categories = catalog.get("categories")
+        if not isinstance(categories, list) or not categories or not all(
+            isinstance(category, str) and category.strip() for category in categories
+        ):
+            raise ValueError("podcast catalog needs non-empty `categories`")
+        if catalog.get("confirmed_show_count") != len(shows):
+            raise ValueError("catalog confirmed_show_count must equal enabled shows")
+        missing = catalog.get("missing_shows")
+        if not isinstance(missing, list):
+            raise ValueError("podcast catalog missing_shows must be a list")
+        if catalog.get("requested_show_count") != len(shows) + len(missing):
+            raise ValueError("catalog requested_show_count must equal enabled plus documented missing shows")
+        for missing_show in missing:
+            if not isinstance(missing_show, dict) or missing_show.get("status") != "missing":
+                raise ValueError("each catalog missing show must have status=missing")
+            if not all(isinstance(missing_show.get(field), str) and missing_show[field].strip()
+                       for field in ("name", "category", "reason")):
+                raise ValueError("each catalog missing show needs name, category and reason")
+
     seen_slugs: set[str] = set()
     for show in shows:
         if not isinstance(show, dict):
@@ -660,6 +711,10 @@ def load_config(path: str | Path = DEFAULT_CONFIG_PATH) -> dict[str, Any]:
         for field in ("name", "display_name", "slug", "publisher", "host_kind", "rss_url", "source_page"):
             if not isinstance(show.get(field), str) or not show[field].strip():
                 raise ValueError(f"enabled show is missing `{field}`")
+        if catalog is not None and show.get("category") not in catalog["categories"]:
+            raise ValueError(f"enabled show {show['slug']} needs a catalog category")
+        if show.get("daily_update") not in (None, True, False):
+            raise ValueError(f"daily_update must be boolean for {show['slug']}")
         if show.get("status") != "enabled":
             raise ValueError(f"enabled show {show['slug']} must have status=enabled")
         if show["slug"] in seen_slugs:
@@ -758,12 +813,16 @@ def _show_record(
         "name": show_config["name"],
         "display_name": show_config["display_name"],
         "publisher": show_config["publisher"],
+        "category": show_config.get("category"),
+        "daily_update": bool(show_config.get("daily_update")),
         "host_kind": show_config["host_kind"],
         "status": "enabled",
         "rss_url": show_config["rss_url"],
         "source_page": show_config["source_page"],
         "optional_spotify": show_config.get("optional_spotify"),
         "apple": show_config.get("apple"),
+        "apple_collection_id": show_config.get("apple_collection_id"),
+        "source_status": show_config.get("source_status"),
         "fetch_status": fetch_status,
         "cache_used": fetch_status in {"cache_fallback", "cache_only"},
         "episode_count": len(episodes),
@@ -776,6 +835,9 @@ def _show_record(
         record["fetch_error"] = fetch_error
     if cache_error:
         record["cache_error"] = cache_error
+    for field in ("note", "editorial_note"):
+        if show_config.get(field):
+            record[field] = show_config[field]
     return record
 
 
@@ -852,6 +914,8 @@ def select_recent(
     window_start = now_utc - timedelta(days=window_days)
     within_window: list[tuple[dict[str, Any], dict[str, Any], datetime]] = []
     for show in shows:
+        if show.get("daily_update"):
+            continue
         for episode in show.get("episodes", []):
             published = _episode_datetime(episode)
             if published is not None and window_start <= published <= now_utc:
@@ -938,6 +1002,7 @@ def build_export(
         ),
         "episode_count_label": EPISODE_COUNT_LABEL,
         "show_count": len(shows),
+        "catalog": dict(config.get("catalog") or {}),
         "recent_selection": select_recent(shows, now_utc),
         "shows": shows,
         "planned_shows": [_planned_record(show) for show in config["planned_shows"]],
@@ -990,6 +1055,14 @@ def ingest(
         if record["fetch_status"] == "unavailable" and old and old.get("episodes"):
             record.update({key: old[key] for key in ("episodes", "episode_count", "feed", "parse_stats") if key in old})
             record["fetch_status"] = "snapshot_fallback"
+    if only_show:
+        records_by_slug = {record["slug"]: record for record in records}
+        records = [
+            records_by_slug[show["slug"]] if show["slug"] in records_by_slug
+            else previous_shows[show["slug"]]
+            for show in config["shows"]
+            if show["slug"] in records_by_slug or show["slug"] in previous_shows
+        ]
     export = build_export(config, records, now_utc)
     if not dry_run:
         _write_json_atomic(Path(output_path), export)

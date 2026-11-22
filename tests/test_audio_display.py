@@ -57,7 +57,11 @@ def test_player_copy_tabs_and_scoped_390_chip_scroll():
     assert '单集更新' in show and '节目详情' in show
     assert 'show.feed?.description_text' in show
     assert 'aria-selected="true"' in show and 'about-panel' in show
-    assert 'onerror="this.hidden=true"' in show
+    assert 'data-cover-original={showCoverUrl}' in show
+    assert 'data-cover-original={coverUrl}' in show
+    assert "this.removeAttribute('srcset')" in show
+    assert 'this.src=original' in show
+    assert 'else{this.hidden=true;}' in show
     # Execute the actual inline layout script with clipped 390px geometry.
     script = layout.split('<script is:inline>')[1].split('</script>')[0]
     subprocess.run(['node', '--input-type=module', '-e', '''

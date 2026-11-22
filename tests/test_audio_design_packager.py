@@ -34,8 +34,13 @@ def test_built_catalog_ia_and_all_episode_pages():
         pytest.skip('requires local build')
     import json
     catalog = json.loads((ROOT / 'site/src/data/audio_podcast.json').read_text())
+    overlay = json.loads((ROOT / 'site/src/data/audio_podcast_catalog.json').read_text())
+    confirmed = {show['slug'] for show in overlay['shows']}
+    assert 'zhang-xiao-jun' not in confirmed
     count = 0
     for show in catalog['shows']:
+        if show['slug'] not in confirmed:
+            continue
         directory = dist / show['slug']
         for listing in [directory / 'index.html', *directory.glob('page/*/index.html')]:
             markup = listing.read_text()
@@ -52,4 +57,4 @@ def test_built_catalog_ia_and_all_episode_pages():
             assert '官方原文' in markup
             assert '不要立即认为失败' not in markup
             assert 'audio-back' in markup and '页</a>' in markup
-    assert count == sum(len(s['episodes']) for s in catalog['shows'])
+    assert count == sum(len(s['episodes']) for s in catalog['shows'] if s['slug'] in confirmed)

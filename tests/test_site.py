@@ -169,6 +169,7 @@ def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
     assert '关于视频广告的诚实说明：视频通过 YouTube 官方播放器嵌入展示' in about
     assert '隐私与数据承诺' in about
     assert '你的个人数据属于你，我们不做用户画像追踪：' in about
+    assert '站内点击播放后会通过 YouTube 官方标准播放器加载，播放体验与 Cookie 受 YouTube 服务及其政策影响。' in about
     assert '稍后看 100%' in about
     assert '不会同步到我们的数据库' in about
     assert 'PostHog 会尊重「请勿追踪」设置' in about
@@ -311,7 +312,7 @@ assert.equal(
 );
 assert.equal(
   thumbFor({ id: 'aAb7hSCtvGw', thumb: 'https://i.ytimg.com/vi/aAb7hSCtvGw/maxresdefault.jpg', thumb_verified: true }),
-  'https://i.ytimg.com/vi/aAb7hSCtvGw/maxresdefault.jpg',
+  thumbUrl('aAb7hSCtvGw', 'hqdefault'),
 );
 assert.deepEqual(thumbCandidates('hQVTIJBZook'), [
   thumbUrl('hQVTIJBZook', 'hqdefault'),
@@ -403,6 +404,34 @@ for (const intent of intents) {
 assert.ok(intents.find(item => item.key === 'email').href.startsWith('mailto:?subject='));
 assert.ok(!JSON.stringify(intents).includes('localhost'));
 '''], cwd=root, check=True)
+
+
+def test_detail_click_to_play_uses_standard_embed_only_after_user_action():
+    detail = (Path(__file__).resolve().parents[1] / 'site/src/pages/v/[id].astro').read_text()
+    initial_html = detail.split('</Layout>', 1)[0]
+    assert '<iframe' not in initial_html
+    assert 'youtube-nocookie.com/embed' not in detail
+    assert 'data-player-load' in detail
+    assert '>播放</button>' in detail
+    assert "const STANDARD_EMBED_HOST = 'www.youtube.com';" in detail
+    assert 'const embedSrc = (videoId, { start, autoplay } = {})' in detail
+    assert "params.set('autoplay', '1')" in detail
+    assert "document.querySelectorAll('[data-player-load]')" in detail
+    assert "loadEmbed(detail, button.dataset.videoId, { autoplay: true })" in detail
+    assert 'https://www.youtube.com/watch?v=${video.id}' in detail
+    assert '在 YouTube 打开' in detail
+    assert 'localStorage' not in detail
+    for removed in ('data-player-host-toggle', 'player-host-choice', '隐私增强', '普通播放器', '确认你不是聊天机器人'):
+        assert removed not in detail
+
+
+def test_detail_seek_loads_or_controls_the_standard_embed_without_host_switching():
+    detail = (Path(__file__).resolve().parents[1] / 'site/src/pages/v/[id].astro').read_text()
+    assert 'const loadEmbed = (detail, videoId, { start, autoplay } = {})' in detail
+    assert 'frame.src = embedSrc(videoId, { start, autoplay });' in detail
+    assert "else loadEmbed(detail, button.dataset.videoId, { start: seconds, autoplay: true });" in detail
+    assert 'if (player && player.seekTo)' in detail
+    assert 'youtube-nocookie.com' not in detail
 
 
 def test_topic_subscribe_copy_and_chip_is_on_thumbnail():

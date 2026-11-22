@@ -1,7 +1,9 @@
 # 音频播客 production integration
 
-The 15 enabled official-publisher feeds in `config/audio_podcasts.yaml` appear at
-`/audio-podcast/`, `/audio-podcast/<slug>/`, and
+The catalog configuration currently documents 40 confirmed official programs in
+six categories. `玄而未决` is a confirmed psychology program, but its documented
+feed URL currently redirects to HTML rather than a parseable RSS feed; it remains
+directory-only until a valid public RSS feed is available. They appear at `/audio-podcast/`, `/audio-podcast/<slug>/`, and
 `/audio-podcast/<slug>/page/<n>/`. Existing YouTube categories remain unchanged.
 
 `python3 -m ytrec ingest-audio-podcasts` updates the compact, tracked
@@ -16,8 +18,17 @@ export. Missing, invalid, or malformed exports render an explicit unavailable
 catalog and produce no show routes; other sections can still build.
 
 Recent selection uses the export generation time: last 30 days, at most two
-items per show, newest first, without stale backfill. It is refreshed with the
-existing daily pipeline; upstream failures can leave a show's snapshot stale.
+items per non-daily show, newest first, without stale backfill. It is refreshed
+with the existing daily pipeline; upstream failures can leave a show's snapshot
+stale. It is a time-window view, not an episode heat ranking.
+
+`python3 -m ytrec weekly-audio-picks` writes the separate
+`site/src/data/audio_weekly_picks.json` status artifact. It intentionally writes
+`skipped` with a reason while there is no compliant, stable, documented public
+episode-level popularity source; it never substitutes show charts, subscriptions,
+or recency for heat. `.github/workflows/weekly-audio-picks.yml` is a separate
+Saturday 05:00 Asia/Shanghai configuration and does not commit, deploy, or claim
+that a production schedule has been authorized.
 
 Playback starts only on user action and uses the official HTTPS enclosure URL
 verbatim. Audio is never downloaded, rehosted, proxied, or transcoded by this

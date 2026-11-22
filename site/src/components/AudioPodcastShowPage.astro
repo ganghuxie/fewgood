@@ -3,17 +3,22 @@ import { episodeExcerpt } from '../lib/audio-podcast-display.mjs';
 import AudioPodcastLayout from './AudioPodcastLayout.astro';
 import { pageNumbers } from '../lib/pagination.mjs';
 import { EPISODE_COUNT_LABEL, PAGE_SIZE, episodePath, pageCount, previewPath, showPath, sliceEpisodePage } from '../lib/audio-podcast.mjs';
+import { latestEpisodeMarker } from '../lib/audio-podcast-newness.mjs';
+import { SMALL_COVER_WIDTH, coverDisplayUrl } from '../lib/audio-podcast-covers.mjs';
 const { show, page = 1 } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const episodes = show.episodes || [];
 const pages = pageCount(episodes.length);
 const pageEpisodes = sliceEpisodePage(episodes, page);
 const pageLink = number => showPath(show.slug, number, base);
+const latest = latestEpisodeMarker(show);
+const showCoverUrl = show.feed?.cover_url;
 ---
 <AudioPodcastLayout title={`${show.display_name} · 音频播客`}>
+  <div data-audio-show-seen data-audio-show={latest?.slug} data-audio-latest-id={latest?.episodeId} data-audio-latest-published-at={latest?.publishedAt}>
   <a class="audio-back" href={previewPath(base)}>← 音频播客</a>
   <header class="audio-show-head">
-    {show.feed?.cover_url && <img onerror="this.hidden=true" class="audio-cover audio-cover-large" src={show.feed.cover_url} alt={`${show.display_name} 官方封面`} width="96" height="96" />}
+    {showCoverUrl && <img onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" data-cover-original={showCoverUrl} class="audio-cover audio-cover-large" src={coverDisplayUrl(showCoverUrl, { width: SMALL_COVER_WIDTH })} alt={`${show.display_name} 官方封面`} width="96" height="96" decoding="async" />}
     <div><h1>{show.display_name || show.name}</h1>
     <p class="audio-show-byline">{show.publisher} · {EPISODE_COUNT_LABEL} {episodes.length} 集</p>
     </div>
@@ -24,11 +29,14 @@ const pageLink = number => showPath(show.slug, number, base);
   </div>
   <section id="updates-panel" class="audio-tab-panel audio-preview-section" role="tabpanel" aria-labelledby="updates-tab">
     <div class="audio-preview-section-head"><h2 id="episodes-heading">单集更新</h2><p>最新在前 · 第 {page} / {pages} 页 · 每页 {PAGE_SIZE} 集</p></div>
+    {show.episodes.length === 0 && <p class="audio-source-status">{show.source_status === 'identity_verified_feed_unavailable' ? '内容暂不可用；节目身份已核验，暂未提供可解析的公开 RSS 单集。' : '暂未获取到单集；可通过节目官方入口查看。'}</p>}
     <ol class="audio-episode-list">
-      {pageEpisodes.map(episode => <li class="audio-episode"><a class="audio-episode-row" href={episodePath(show, episode, base)}>
-        {(episode.cover_url || show.feed?.cover_url) && <img class="audio-row-cover" src={episode.cover_url || show.feed.cover_url} alt="" width="64" height="64" loading="lazy" onerror="this.hidden=true" />}
+      {pageEpisodes.map(episode => {
+        const coverUrl = episode.cover_url || showCoverUrl;
+        return <li class="audio-episode"><a class="audio-episode-row" href={episodePath(show, episode, base)}>
+        {coverUrl && <img class="audio-row-cover" src={coverDisplayUrl(coverUrl, { width: SMALL_COVER_WIDTH })} data-cover-original={coverUrl} alt="" width="64" height="64" decoding="async" loading="lazy" onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" />}
         <div class="audio-row-copy"><h3>{episode.title || '未命名单集'}</h3><p class="audio-excerpt">{episodeExcerpt(episode)}</p><p class="audio-episode-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span>{episode.description_truncated && <span>说明可能不完整</span>}</p></div><span aria-hidden="true">↗</span>
-      </a></li>)}
+      </a></li>})}
     </ol>
     <nav class="audio-pagination" aria-label="单集分页">
       {page > 1 && <a href={pageLink(page - 1)} rel="prev">上一页</a>}
@@ -44,6 +52,7 @@ const pageLink = number => showPath(show.slug, number, base);
   <section id="about-panel" class="audio-tab-panel audio-show-details" role="tabpanel" aria-labelledby="about-tab" hidden>
     <p>{show.feed?.description_text || '发布者暂未在 RSS 中提供节目介绍。'}</p>
   </section>
+  </div>
 </AudioPodcastLayout>
 <script is:inline>
   const tabs = [...document.querySelectorAll('.audio-tabs [role="tab"]')];
@@ -64,4 +73,9 @@ const pageLink = number => showPath(show.slug, number, base);
       selectTab(next); next.focus();
     });
   });
+</script>
+<script>
+  import { markAudioShowSeen, markerFromDataset } from '../lib/audio-podcast-newness.mjs';
+  const currentShow = document.querySelector('[data-audio-show-seen]');
+  markAudioShowSeen(markerFromDataset(currentShow?.dataset));
 </script>

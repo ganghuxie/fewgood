@@ -90,7 +90,7 @@ def refresh():
 
 def main():
     parser = argparse.ArgumentParser(description='HN → repeated YouTube recommendations')
-    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','weekly-topics','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability','ingest-audio-podcasts'])
+    parser.add_argument('command', choices=['crawl','extract','aggregate','enrich','enrich-zh','report','build-site','all','trending','ai','podcast','music','channels','refresh','weekly-topics','weekly-audio-picks','resolve-ai-channels','fewgood-r3-fetch','fewgood-r3-select','fewgood-zh-fetch','fewgood-zh-select','fewgood-podcast-estimate','fewgood-podcast-resolve','fewgood-podcast-fetch','fewgood-podcast-select','hn-backfill','build-topics','backfill-playability','ingest-audio-podcasts'])
     parser.add_argument('--config', default='config.yaml')
     parser.add_argument('--start', help='Inclusive UTC ISO date')
     parser.add_argument('--end', help='Exclusive UTC ISO date (default now)')
@@ -124,6 +124,8 @@ def main():
     parser.add_argument('--now', help='UTC ISO timestamp for deterministic podcast selection')
     parser.add_argument('--no-network', action='store_true',
                         help='audio podcast: read only the parsed cache')
+    parser.add_argument('--weekly-audio-output', default='site/src/data/audio_weekly_picks.json',
+                        help='independent weekly audio-pick status output')
     args = parser.parse_args()
     if args.command == 'weekly-topics':
         from . import weekly_topics
@@ -159,6 +161,12 @@ def main():
         if args.dry_run:
             forwarded.append('--dry-run')
         return audio_podcast.main(forwarded)
+    if args.command == 'weekly-audio-picks':
+        from . import weekly_audio_picks
+        forwarded = ['--config', args.podcast_config, '--output', args.weekly_audio_output]
+        if args.now:
+            forwarded += ['--now', args.now]
+        return weekly_audio_picks.main(forwarded)
     if args.command in ('fewgood-r3-fetch','fewgood-r3-select'):
         from . import fewgood_r3
         forwarded=['fetch' if args.command.endswith('fetch') else 'select']

@@ -7,12 +7,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <Layout title={`${title} · ${SITE_NAME}`}><section class="library-page" data-kind={kind} data-base={base}><div class="library-heading"><h1>{title}</h1>{kind === 'history' && <button class="clear" data-clear>清空历史</button>}</div><p class="empty" data-empty>{empty}</p><div class="video-grid library-list" data-list></div></section></Layout>
 <script>
  import { KEYS, list as libraryList, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
- import { thumbFallbackAttr, thumbFor } from '../lib/format.mjs';
+ import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
  const root = document.querySelector('[data-kind]'), kind = root.dataset.kind, key = KEYS[kind], base = root.dataset.base;
  const list = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]');
  const duration = n => `${Math.floor((n || 0) / 60)}:${String((n || 0) % 60).padStart(2, '0')}`;
  const esc = value => String(value || '').replace(/[&<>"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[char]));
- const avatar = (channel, name) => { const title = channel?.title || name || '频道'; const letter = [...title.trim()][0] || '频'; let hash = 0; for (const character of title) hash = (hash * 31 + character.codePointAt(0)) >>> 0; const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7]; return channel?.thumbnail ? `<img class="channel-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; };
+ const avatar = (channel, name) => { const title = channel?.title || name || '频道'; const letter = [...title.trim()][0] || '频'; let hash = 0; for (const character of title) hash = (hash * 31 + character.codePointAt(0)) >>> 0; const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7]; const thumbnail = String(channel?.thumbnail || '').replace(/=s\d+/, '=s88'); return thumbnail ? `<img class="channel-avatar" loading="lazy" src="${esc(thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; };
  let seenObserver;
  const observeSeen = () => {
    if (kind !== 'watchLater') return;
@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
      const title = z.title_zh || video.title || video.id;
      const original = z.title_zh ? `<p class="zh-title">${esc(video.title || '')}</p>` : '';
      const blurb = z.blurb_zh ? `<p class="zh-blurb">${esc(z.blurb_zh)}</p>` : '';
-     return `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img src="${esc(thumbFor(video))}" ${thumbFallbackAttr(video.id)} alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2>${original}<p class="video-meta">${esc(video.channel)}</p>${blurb}</div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`;
+     return `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt=""><span class="duration">${duration(video.duration)}</span></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2>${original}<p class="video-meta">${esc(video.channel)}</p>${blurb}</div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`;
    }).join('');
    list.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); event.stopPropagation(); remove(key, button.dataset.remove); render(libraryList(key)); });
    observeSeen();

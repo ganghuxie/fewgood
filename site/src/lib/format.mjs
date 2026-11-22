@@ -7,6 +7,7 @@ export function humanizeRecommendSpan(spanDays) {
 
 const SAFE_YT_THUMB_KINDS = new Set(['default', 'mqdefault', 'hqdefault', 'medium', 'high']);
 const YT_THUMB_PATH = /\/vi\/[^/]+\/([^/?#]+)\.(?:jpe?g|webp)(?:[?#].*)?$/i;
+export const CARD_THUMB_SIZES = '(min-width: 1600px) 20vw, (min-width: 1300px) 25vw, (min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw';
 
 export function thumbUrl(id, kind = 'hqdefault') {
   return id ? `https://i.ytimg.com/vi/${id}/${kind}.jpg` : '';
@@ -21,9 +22,29 @@ export function thumbFor(video, kind = 'hqdefault') {
   const stored = typeof video === 'object' ? (video.thumb || video.thumbnail || '') : '';
   if (stored) {
     const match = String(stored).match(YT_THUMB_PATH);
-    if (!match || SAFE_YT_THUMB_KINDS.has(match[1]) || video.thumb_verified === true) return stored;
+    if (!match || SAFE_YT_THUMB_KINDS.has(match[1])) return stored;
   }
   return thumbUrl(id, kind);
+}
+
+export function heroThumbFor(video) {
+  const id = typeof video === 'string' ? video : video?.id;
+  const stored = typeof video === 'object' ? (video.thumb || video.thumbnail || '') : '';
+  const match = String(stored).match(YT_THUMB_PATH);
+  if (video?.thumb_verified === true) {
+    if (match && ['maxresdefault', 'hq720'].includes(match[1])) return stored;
+    return thumbUrl(id, 'maxresdefault');
+  }
+  return thumbFor(video);
+}
+
+export function thumbSrcset(video) {
+  const id = typeof video === 'string' ? video : video?.id;
+  return id ? [
+    `${thumbUrl(id, 'mqdefault')} 320w`,
+    `${thumbUrl(id, 'hqdefault')} 480w`,
+    `${thumbUrl(id, 'sddefault')} 640w`,
+  ].join(', ') : '';
 }
 
 export function thumbFallbackAttr(id) {

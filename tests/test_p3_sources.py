@@ -192,10 +192,17 @@ def test_refresh_calls_editorial_feed_before_rebuild_and_adds_no_cron():
     assert 'curated_editorial_feed(quota_limit=limit)' in source
     assert source.index('curated_editorial_feed') > source.index('curated_music_feed')
     assert source.index('curated_editorial_feed') < source.index('rebuild_offline()')
-    cron_lines = []
+    daily = (ROOT / '.github' / 'workflows' / 'daily-refresh.yml').read_text()
+    weekly = (ROOT / '.github' / 'workflows' / 'weekly-audio-picks.yml').read_text()
+    assert len(re.findall(r'^\s*- cron:', daily, re.M)) == 1
+    assert len(re.findall(r'^\s*- cron:', weekly, re.M)) == 1
+    assert '0 21 * * 5' in weekly
+    other_crons = []
     for workflow in (ROOT / '.github' / 'workflows').glob('*.yml'):
-        cron_lines.extend(re.findall(r'^\s*- cron:', workflow.read_text(), re.M))
-    assert len(cron_lines) == 1
+        if workflow.name in {'daily-refresh.yml', 'weekly-audio-picks.yml'}:
+            continue
+        other_crons.extend(re.findall(r'^\s*- cron:', workflow.read_text(), re.M))
+    assert other_crons == []
 
 
 class RecordingClient:

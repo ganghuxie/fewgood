@@ -1,11 +1,13 @@
 ---
 import { displayNotes } from '../lib/audio-podcast-display.mjs';
+import { playbackAudioUrl } from '../lib/audio-podcast-media.mjs';
 import AudioPodcastLayout from './AudioPodcastLayout.astro';
 import { showPath } from '../lib/audio-podcast.mjs';
 const { show, episode, page } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const safeHttps = value => typeof value === 'string' && value.startsWith('https://') ? value : '';
 const audioUrl = safeHttps(episode.audio_url);
+const playbackUrl = playbackAudioUrl(audioUrl);
 const sourcePage = safeHttps(show.source_page);
 const episodeLink = safeHttps(episode.episode_link);
 const alternateLink = episodeLink || sourcePage;
@@ -19,7 +21,7 @@ const alternateLink = episodeLink || sourcePage;
       <p class="audio-episode-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span></p>
     </header>
               {audioUrl ? (
-                <div class="audio-player" data-audio-player data-audio-url={audioUrl}>
+                <div class="audio-player" data-audio-player data-audio-url={playbackUrl}>
                   <button class="audio-play-button" type="button" data-audio-play>播放官方音频</button>
                   <audio controls preload="none" controlsList="nodownload" data-audio hidden></audio>
                   <div class="audio-playback-error" data-audio-error role="alert" hidden>
