@@ -40,6 +40,6 @@
     {"slug":"tan-li-ren","name":"谭立人","display_name":"谭立人","publisher":"谭立人","category":"生活"},
     {"slug":"lai-dou-lai-le","name":"来都来了","display_name":"来都来了｜听了再走","publisher":"来都来了_","category":"生活"},
     {"slug":"study-room","name":"自习室 STUDY ROOM","display_name":"自习室 STUDY ROOM","publisher":"不好惹的娃娃脸","category":"生活","source_page":"https://www.xiaoyuzhoufm.com/podcast/65a5fb7540d4ef949c0140ac"},
-    {"slug":"xuan-er-wei-jue","name":"玄而未决","display_name":"玄而未决","publisher":"韋自章","category":"心理","rss_url":"https://feed.xyzfm.space/wg6cwhklnalt","source_status":"identity_verified_feed_unavailable","source_page":"https://www.xiaoyuzhoufm.com/podcast/62d8ea30977d5e2e1bfc534a","apple_collection_id":"1639994222"}
+    {"slug":"xuan-er-wei-jue","name":"玄而未决","display_name":"玄而未决","publisher":"韋自章","category":"心理","rss_url":"https://feed.xyzfm.space/wg6cwhklnalt","source_status":"rss_unavailable_limited_public_page","source_page":"https://www.xiaoyuzhoufm.com/podcast/62d8ea30977d5e2e1bfc534a","apple_collection_id":"1639994222"}
   ]
 }

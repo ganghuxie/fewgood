@@ -183,7 +183,7 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
     xuan = next(show for show in catalog['shows'] if show['slug'] == 'xuan-er-wei-jue')
     assert xuan['name'] == '玄而未决'
     assert xuan['category'] == '心理'
-    assert xuan['source_status'] == 'identity_verified_feed_unavailable'
+    assert xuan['source_status'] == 'rss_unavailable_limited_public_page'
     assert "data.catalog?.categories" in index
     assert "data-audio-category={category}" in index
     assert 'role="tablist"' in index
@@ -200,5 +200,10 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
     assert "show.episodes.length === 0" in index
     assert '暂未获取到单集' in index
     assert '内容暂不可用' in index
-    assert "show.episodes.length === 0 &&" in _read(ROOT / 'site/src/components/AudioPodcastShowPage.astro')
+    show_page = _read(ROOT / 'site/src/components/AudioPodcastShowPage.astro')
+    assert '仅收录近期公开免费单集，非完整历史' in index
+    assert 'show.limited_public_page_fallback' in index
+    assert '!show.limited_public_page_fallback && !recent.some' in index
+    assert '仅收录近期公开免费单集，非完整历史' in show_page
+    assert "show.episodes.length === 0 &&" in show_page
     assert 'min-height:40px' in layout  # the show-page return link remains a usable target

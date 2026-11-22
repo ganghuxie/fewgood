@@ -23,6 +23,7 @@ const showCoverUrl = show.feed?.cover_url;
     <p class="audio-show-byline">{show.publisher} · {EPISODE_COUNT_LABEL} {episodes.length} 集</p>
     </div>
   </header>
+    {show.limited_public_page_fallback && <p class="audio-source-status">仅收录近期公开免费单集，非完整历史</p>}
   <div class="audio-tabs" role="tablist" aria-label="节目内容">
     <button id="updates-tab" role="tab" aria-selected="true" aria-controls="updates-panel">单集更新</button>
     <button id="about-tab" role="tab" aria-selected="false" aria-controls="about-panel" tabindex="-1">节目详情</button>

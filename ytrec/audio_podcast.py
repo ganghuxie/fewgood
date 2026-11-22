@@ -8,6 +8,7 @@ upgraded to the same HTTPS URL before normal HTTPS validation.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import html as html_module
 import json
@@ -36,6 +37,7 @@ CACHE_VERSION = 3
 FETCH_TIMEOUT_SECONDS = 45
 FETCH_RETRIES = 2
 MAX_RESPONSE_BYTES = 14 * 1024 * 1024
+MAX_PUBLIC_PAGE_BYTES = 4 * 1024 * 1024
 USER_AGENT = "fewgood-audio/0.1 (+https://fewgood.io; RSS metadata)"
 SELECTION_WINDOW_DAYS = 30
 SELECTION_MAX_PER_SHOW = 2
@@ -65,6 +67,9 @@ _TEXT_BOUNDARY_TAGS = frozenset({
 _DATE_ONLY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _RETRYABLE_STATUSES = frozenset({408, 425, 429, 500, 502, 503, 504})
 _HTTPS_UPGRADE_ENCLOSURE_HOSTS = frozenset({"cdn5.vistopia.com.cn"})
+_XIAOYUZHOU_COVER_HOSTS = frozenset({"image.xyzcdn.net"})
+_XIAOYUZHOU_BTS_IMAGE_HOST = "bts-image.xyzcdn.net"
+_XIAOYUZHOU_IMAGE_SUFFIXES = (".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif")
 
 
 class RSSFetchError(RuntimeError):
@@ -73,6 +78,10 @@ class RSSFetchError(RuntimeError):
 
 class FeedParseError(RuntimeError):
     """An RSS document is malformed or cannot be parsed safely."""
+
+
+class PublicPageParseError(RuntimeError):
+    """An allowlisted public podcast page did not have usable embedded data."""
 
 
 class _HTMLSanitizer(HTMLParser):
@@ -198,6 +207,139 @@ def _official_https_enclosure_url(value: Any) -> str | None:
         return None
     upgraded = urlunsplit(("https", parts.netloc, parts.path, parts.query, parts.fragment))
     return _safe_url(upgraded, {"https"})
+
+
+def _xiaoyuzhou_page_settings(show: dict[str, Any]) -> tuple[str, str] | None:
+    """Return the single explicitly configured official page and podcast id.
+
+    This is deliberately opt-in per show.  It is not a fallback for arbitrary
+    Xiaoyuzhou pages or a discovery mechanism.
+    """
+    if show.get("xiaoyuzhou_page_fallback") is not True:
+        return None
+    page_url = show.get("source_page")
+    podcast_id = show.get("xiaoyuzhou_podcast_id")
+    if not isinstance(page_url, str) or not isinstance(podcast_id, str) or not podcast_id:
+        return None
+    try:
+        parts = urlsplit(page_url)
+        port = parts.port
+    except ValueError:
+        return None
+    if (
+        parts.scheme.lower() != "https"
+        or (parts.hostname or "").lower() != "www.xiaoyuzhoufm.com"
+        or parts.username is not None
+        or parts.password is not None
+        or port is not None
+        or parts.query
+        or parts.fragment
+        or parts.path != f"/podcast/{podcast_id}"
+    ):
+        return None
+    return page_url, podcast_id
+
+
+def _xiaoyuzhou_enclosure_url(value: Any, podcast_id: str) -> str | None:
+    """Accept only public media URLs scoped to the configured podcast id."""
+    if not isinstance(value, str):
+        return None
+    candidate = value.strip()
+    try:
+        parts = urlsplit(candidate)
+        port = parts.port
+    except ValueError:
+        return None
+    if (
+        parts.scheme.lower() != "https"
+        or (parts.hostname or "").lower() != "media.xyzcdn.net"
+        or parts.username is not None
+        or parts.password is not None
+        or port is not None
+        or not parts.path.startswith(f"/{podcast_id}/")
+    ):
+        return None
+    return _safe_url(candidate, {"https"})
+
+
+def _xiaoyuzhou_cover_url(value: Any) -> str | None:
+    """Accept only cover-specific fields served by Xiaoyuzhou's image CDN."""
+    candidates: list[Any]
+    if isinstance(value, dict):
+        candidates = [
+            value.get("picUrl"), value.get("largePicUrl"),
+            value.get("middlePicUrl"), value.get("smallPicUrl"),
+        ]
+    else:
+        candidates = [value]
+    for candidate in candidates:
+        if not isinstance(candidate, str):
+            continue
+        direct = _xiaoyuzhou_image_cdn_url(candidate)
+        if direct:
+            return direct
+        decoded = _decode_xiaoyuzhou_bts_image_url(candidate)
+        if decoded:
+            return decoded
+    return None
+
+
+def _xiaoyuzhou_image_cdn_url(value: Any) -> str | None:
+    """Validate a direct official image-CDN URL, never media/enclosure URLs."""
+    if not isinstance(value, str):
+        return None
+    candidate = value.strip()
+    try:
+        parts = urlsplit(candidate)
+        port = parts.port
+    except ValueError:
+        return None
+    if (
+        parts.scheme.lower() != "https"
+        or (parts.hostname or "").lower() not in _XIAOYUZHOU_COVER_HOSTS
+        or parts.username is not None
+        or parts.password is not None
+        or port is not None
+        or not parts.path
+    ):
+        return None
+    return _safe_url(candidate, {"https"})
+
+
+def _decode_xiaoyuzhou_bts_image_url(value: Any) -> str | None:
+    """Decode the documented BTS cover wrapper only when it resolves to the image CDN."""
+    if not isinstance(value, str):
+        return None
+    candidate = value.strip()
+    try:
+        parts = urlsplit(candidate)
+        port = parts.port
+    except ValueError:
+        return None
+    if (
+        parts.scheme.lower() != "https"
+        or (parts.hostname or "").lower() != _XIAOYUZHOU_BTS_IMAGE_HOST
+        or parts.username is not None
+        or parts.password is not None
+        or port is not None
+        or not parts.path
+    ):
+        return None
+    encoded = parts.path.lstrip("/")
+    if not encoded or "/" in encoded:
+        return None
+    lowered = encoded.lower()
+    suffix = next((item for item in _XIAOYUZHOU_IMAGE_SUFFIXES if lowered.endswith(item)), None)
+    if suffix is not None:
+        encoded = encoded[:-len(suffix)]
+    if not encoded or len(encoded) > 4096:
+        return None
+    try:
+        padded = encoded + "=" * (-len(encoded) % 4)
+        target = base64.b64decode(padded.encode("ascii"), validate=True).decode("utf-8")
+    except (UnicodeDecodeError, ValueError):
+        return None
+    return _xiaoyuzhou_image_cdn_url(target)
 
 
 def sanitize_html(value: Any) -> str:
@@ -547,6 +689,168 @@ def parse_feed(xml_bytes: bytes, show: dict[str, Any] | None = None) -> dict[str
     }
 
 
+def _xiaoyuzhou_public_entries(podcast: dict[str, Any]) -> list[dict[str, Any]]:
+    """Extract the already embedded homepage entries from one podcast object."""
+    found: list[dict[str, Any]] = []
+    seen_objects: set[int] = set()
+
+    def visit(value: Any, depth: int = 0) -> None:
+        if depth > 30:
+            return
+        if isinstance(value, dict):
+            marker = id(value)
+            if marker in seen_objects:
+                return
+            seen_objects.add(marker)
+            if isinstance(value.get("eid"), str):
+                found.append(value)
+            for nested in value.values():
+                visit(nested, depth + 1)
+        elif isinstance(value, list):
+            for nested in value:
+                visit(nested, depth + 1)
+
+    visit(podcast)
+    unique: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    for entry in found:
+        eid = entry.get("eid")
+        if isinstance(eid, str) and eid and eid not in seen_ids:
+            seen_ids.add(eid)
+            unique.append(entry)
+    return unique
+
+
+def _xiaoyuzhou_episode(entry: dict[str, Any], podcast_id: str) -> dict[str, Any] | None:
+    """Parse one public homepage entry without trusting JSON-LD subscription data."""
+    if entry.get("payType") != "FREE" or entry.get("isPrivateMedia") is True:
+        return None
+    enclosure = entry.get("enclosure")
+    enclosure = enclosure if isinstance(enclosure, dict) else {}
+    audio_url = _xiaoyuzhou_enclosure_url(enclosure.get("url"), podcast_id)
+    eid = entry.get("eid")
+    if not audio_url or not isinstance(eid, str) or not eid:
+        return None
+    title = plain_text(entry.get("title"))
+    raw_description = entry.get("shownotes")
+    if not isinstance(raw_description, str):
+        raw_description = entry.get("description")
+    if not isinstance(raw_description, str):
+        raw_description = ""
+    description_html = sanitize_html(raw_description)
+    description_text = plain_text(description_html)
+    duration_seconds = parse_duration(entry.get("duration"))
+    episode: dict[str, Any] = {
+        "episode_id": eid,
+        "cover_url": (
+            _xiaoyuzhou_cover_url(entry.get("image"))
+            or _xiaoyuzhou_cover_url(entry.get("coverUrl"))
+            or _xiaoyuzhou_cover_url(entry.get("cover"))
+        ),
+        "guid": eid,
+        "dedup_key_kind": "guid",
+        "title": title,
+        "description_html": description_html,
+        "description_text": description_text,
+        "description_missing": not bool(description_text),
+        "description_truncated": _is_truncated(raw_description, description_text),
+        "description_source": "shownotes" if isinstance(entry.get("shownotes"), str) else "description",
+        "episode_link": _safe_url(entry.get("link") or entry.get("url"), {"https"}),
+        "audio_url": audio_url,
+        "audio_type": enclosure.get("type") if isinstance(enclosure.get("type"), str) else None,
+        "audio_length_bytes": None,
+        "duration_seconds": duration_seconds,
+        "duration_display": format_duration(duration_seconds),
+        "author": None,
+        "_dedup_key": f"guid:{eid}",
+    }
+    episode.update(_published_fields(entry.get("pubDate")))
+    return episode
+
+
+def parse_xiaoyuzhou_public_page(html_bytes: bytes, show: dict[str, Any]) -> dict[str, Any]:
+    """Parse only the public __NEXT_DATA__ embedded on an allowlisted show page."""
+    settings = _xiaoyuzhou_page_settings(show)
+    if settings is None:
+        raise PublicPageParseError("public page fallback is not explicitly configured")
+    if not isinstance(html_bytes, (bytes, bytearray)) or not html_bytes:
+        raise PublicPageParseError("empty public page")
+    if len(html_bytes) > MAX_PUBLIC_PAGE_BYTES:
+        raise PublicPageParseError("public page exceeds the size limit")
+    try:
+        html_text = bytes(html_bytes).decode("utf-8")
+    except UnicodeDecodeError as error:
+        raise PublicPageParseError("public page is not UTF-8") from error
+    opening_tag = re.search(
+        r"<script\b(?=[^>]*\bid\s*=\s*[\"']__NEXT_DATA__[\"'])[^>]*>",
+        html_text,
+        flags=re.IGNORECASE,
+    )
+    if opening_tag is None:
+        raise PublicPageParseError("public page has no embedded __NEXT_DATA__")
+    json_start = opening_tag.end()
+    while json_start < len(html_text) and html_text[json_start].isspace():
+        json_start += 1
+    try:
+        # JSON can legally contain literal </script> inside a quoted shownote.
+        # Decode one complete JSON value from the opening tag rather than looking
+        # for the first closing-script text sequence.
+        payload, json_end = json.JSONDecoder().raw_decode(html_text, json_start)
+    except json.JSONDecodeError as error:
+        raise PublicPageParseError("public page has invalid embedded JSON") from error
+    if not re.match(r"\s*</script\b", html_text[json_end:], flags=re.IGNORECASE):
+        raise PublicPageParseError("public page embedded JSON is not a standalone script value")
+    try:
+        podcast = payload["props"]["pageProps"]["podcast"]
+    except (KeyError, TypeError) as error:
+        raise PublicPageParseError("public page has no podcast object") from error
+    if not isinstance(podcast, dict):
+        raise PublicPageParseError("public page podcast is not an object")
+    _page_url, podcast_id = settings
+    entries = _xiaoyuzhou_public_entries(podcast)
+    parsed: list[dict[str, Any]] = []
+    invalid_media_count = 0
+    for entry in entries:
+        episode = _xiaoyuzhou_episode(entry, podcast_id)
+        if episode is None:
+            invalid_media_count += 1
+            continue
+        parsed.append(episode)
+    episodes, duplicate_count = dedupe_episodes(parsed)
+    description_raw = podcast.get("description") or podcast.get("shownotes") or ""
+    description_html = sanitize_html(description_raw)
+    feed = {
+        "cover_url": (
+            _xiaoyuzhou_cover_url(podcast.get("image"))
+            or _xiaoyuzhou_cover_url(podcast.get("coverUrl"))
+            or _xiaoyuzhou_cover_url(podcast.get("cover"))
+        ),
+        "title": plain_text(podcast.get("title") or podcast.get("name")) or None,
+        "link": show["source_page"],
+        "description_html": description_html,
+        "description_text": plain_text(description_html),
+        "copyright": None,
+        "author": plain_text(podcast.get("author") or podcast.get("podcaster")) or None,
+        "managing_editor": None,
+        "language": None,
+        "last_build_date_raw": None,
+    }
+    for episode in episodes:
+        episode["cover_url"] = episode.get("cover_url") or feed["cover_url"]
+    return {
+        "feed": feed,
+        "episodes": sort_episodes(episodes),
+        "stats": {
+            "item_count": len(entries),
+            "episode_count": len(episodes),
+            "duplicate_count": duplicate_count,
+            "invalid_media_count": invalid_media_count,
+        },
+        "content_source": "xiaoyuzhou_public_page",
+        "limited_public_page_fallback": True,
+    }
+
+
 def _empty_result() -> dict[str, Any]:
     return {
         "feed": {
@@ -646,6 +950,64 @@ def fetch_rss(
     raise RSSFetchError(last_error)
 
 
+def fetch_xiaoyuzhou_public_page(
+    show: dict[str, Any],
+    *,
+    session: requests.Session | None = None,
+    timeout: int = FETCH_TIMEOUT_SECONDS,
+    max_bytes: int = MAX_PUBLIC_PAGE_BYTES,
+) -> bytes:
+    """Fetch one explicitly configured official page; it never follows redirects."""
+    settings = _xiaoyuzhou_page_settings(show)
+    if settings is None:
+        raise RSSFetchError("public page fallback is not explicitly configured")
+    page_url, _podcast_id = settings
+    client = session or requests.Session()
+    try:
+        response = client.get(
+            page_url,
+            headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml"},
+            timeout=timeout,
+            allow_redirects=False,
+            stream=True,
+        )
+    except requests.RequestException as error:
+        raise RSSFetchError(f"{type(error).__name__}: {error}") from error
+    try:
+        status = int(getattr(response, "status_code", 200))
+        if status >= 300:
+            raise RSSFetchError(f"HTTP {status}")
+        content_type = str(getattr(response, "headers", {}).get("Content-Type", "")).lower()
+        if not content_type.startswith("text/html"):
+            raise RSSFetchError(f"public page is not HTML: {content_type or 'missing content type'}")
+        content_length = getattr(response, "headers", {}).get("Content-Length")
+        if content_length:
+            try:
+                if int(content_length) > max_bytes:
+                    raise RSSFetchError("public page exceeds the size limit")
+            except ValueError:
+                pass
+        chunks: list[bytes] = []
+        total = 0
+        iterator = response.iter_content(chunk_size=65536) if hasattr(response, "iter_content") \
+            else [getattr(response, "content", b"")]
+        for chunk in iterator:
+            if not chunk:
+                continue
+            total += len(chunk)
+            if total > max_bytes:
+                raise RSSFetchError("public page exceeds the size limit")
+            chunks.append(chunk)
+        payload = b"".join(chunks)
+        if not payload:
+            raise RSSFetchError("empty public page")
+        return payload
+    finally:
+        close = getattr(response, "close", None)
+        if callable(close):
+            close()
+
+
 def _coerce_now(value: str | datetime | None) -> datetime:
     if value is None:
         return datetime.now(timezone.utc).replace(microsecond=0)
@@ -724,6 +1086,13 @@ def load_config(path: str | Path = DEFAULT_CONFIG_PATH) -> dict[str, Any]:
             raise ValueError(f"RSS URL must be HTTPS for {show['slug']}")
         if not _safe_url(show["source_page"], {"http", "https"}):
             raise ValueError(f"invalid source page for {show['slug']}")
+        if show.get("xiaoyuzhou_page_fallback") is not None \
+                and show.get("xiaoyuzhou_page_fallback") is not True:
+            raise ValueError(f"xiaoyuzhou_page_fallback must be true when present for {show['slug']}")
+        if show.get("xiaoyuzhou_page_fallback") is True and _xiaoyuzhou_page_settings(show) is None:
+            raise ValueError(f"invalid explicit Xiaoyuzhou public page fallback for {show['slug']}")
+        if show.get("xiaoyuzhou_podcast_id") is not None and not show.get("xiaoyuzhou_page_fallback"):
+            raise ValueError(f"xiaoyuzhou_podcast_id needs an explicit page fallback for {show['slug']}")
         for field in ("optional_spotify", "apple"):
             if show.get(field) is not None and not _safe_url(show[field], {"https"}):
                 raise ValueError(f"invalid {field} URL for {show['slug']}")
@@ -798,6 +1167,59 @@ def write_cached_result(
     })
 
 
+def write_cached_public_page_result(
+    cache_dir: str | Path,
+    slug: str,
+    result: dict[str, Any],
+    *,
+    fetched_at: str,
+) -> None:
+    """Cache parsed public-page metadata without treating HTML as an RSS feed."""
+    parsed_path = _cache_path(Path(cache_dir), slug, "json")
+    _write_json_atomic(parsed_path, {
+        "cache_version": CACHE_VERSION,
+        "show_slug": slug,
+        "fetched_at": fetched_at,
+        "result": result,
+    })
+
+
+def _episode_identity(episode: dict[str, Any]) -> str | None:
+    for field in ("episode_id", "guid", "audio_url"):
+        value = episode.get(field)
+        if isinstance(value, str) and value:
+            return f"{field}:{value}"
+    return None
+
+
+def _merge_result_episodes(primary: dict[str, Any], cached: dict[str, Any] | None) -> dict[str, Any]:
+    """Prefer newly visible entries while retaining an already collected history."""
+    merged = dict(primary)
+    episodes: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for result in (primary, cached or {}):
+        for episode in result.get("episodes", []):
+            if not isinstance(episode, dict):
+                continue
+            identity = _episode_identity(episode)
+            if identity and identity in seen:
+                continue
+            if identity:
+                seen.add(identity)
+            episodes.append(dict(episode))
+    merged["episodes"] = sort_episodes(episodes)
+    stats = dict(primary.get("stats") or {})
+    stats["episode_count"] = len(episodes)
+    merged["stats"] = stats
+    if not merged.get("feed", {}).get("cover_url") and cached is not None:
+        merged_feed = dict(merged.get("feed") or {})
+        cached_feed = cached.get("feed") or {}
+        if isinstance(cached_feed, dict):
+            merged_feed["cover_url"] = cached_feed.get("cover_url")
+        merged["feed"] = merged_feed
+    return merged
+
+
 def _show_record(
     show_config: dict[str, Any],
     result: dict[str, Any],
@@ -823,6 +1245,7 @@ def _show_record(
         "apple": show_config.get("apple"),
         "apple_collection_id": show_config.get("apple_collection_id"),
         "source_status": show_config.get("source_status"),
+        "limited_public_page_fallback": bool(result.get("limited_public_page_fallback")),
         "fetch_status": fetch_status,
         "cache_used": fetch_status in {"cache_fallback", "cache_only"},
         "episode_count": len(episodes),
@@ -874,6 +1297,28 @@ def _process_show(
         result = parse_feed(raw, show)
     except Exception as error:  # one bad publisher must not stop the whole catalog
         message = f"{type(error).__name__}: {error}"
+        if _xiaoyuzhou_page_settings(show) is not None:
+            try:
+                page = fetch_xiaoyuzhou_public_page(show, session=session)
+                result = parse_xiaoyuzhou_public_page(page, show)
+                result = _merge_result_episodes(result, cached)
+                cache_error = None
+                if not dry_run:
+                    try:
+                        write_cached_public_page_result(
+                            cache_dir, show["slug"], result, fetched_at=fetched_at
+                        )
+                    except OSError as cache_write_error:
+                        cache_error = f"{type(cache_write_error).__name__}: {cache_write_error}"
+                return _show_record(
+                    show,
+                    result,
+                    fetch_status="public_page_fallback",
+                    fetch_error=message,
+                    cache_error=cache_error,
+                )
+            except Exception as page_error:
+                message = f"{message}; public page fallback: {type(page_error).__name__}: {page_error}"
         if cached is not None:
             return _show_record(
                 show,
@@ -1052,6 +1497,21 @@ def ingest(
         previous_shows = {}
     for record in records:
         old = previous_shows.get(record["slug"])
+        if record["fetch_status"] == "public_page_fallback" and old and old.get("episodes"):
+            # A homepage exposes only a recent slice.  It must supplement, never
+            # replace, history previously collected for this show in the export.
+            merged = _merge_result_episodes(
+                {
+                    "feed": record.get("feed"),
+                    "episodes": record.get("episodes"),
+                    "stats": record.get("parse_stats"),
+                },
+                {"feed": old.get("feed"), "episodes": old.get("episodes")},
+            )
+            record["feed"] = merged["feed"]
+            record["episodes"] = merged["episodes"]
+            record["episode_count"] = len(merged["episodes"])
+            record["parse_stats"] = merged["stats"]
         if record["fetch_status"] == "unavailable" and old and old.get("episodes"):
             record.update({key: old[key] for key in ("episodes", "episode_count", "feed", "parse_stats") if key in old})
             record["fetch_status"] = "snapshot_fallback"

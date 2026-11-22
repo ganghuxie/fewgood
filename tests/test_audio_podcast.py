@@ -208,8 +208,29 @@ def test_config_contains_exact_enabled_shows_and_empty_planned_shows():
     assert xuan["name"] == "玄而未决"
     assert xuan["category"] == "心理"
     assert xuan["apple_collection_id"] == "1639994222"
-    assert xuan["source_status"] == "identity_verified_feed_unavailable"
+    assert xuan["source_status"] == "rss_unavailable_limited_public_page"
     assert xuan["source_page"] == "https://www.xiaoyuzhoufm.com/podcast/62d8ea30977d5e2e1bfc534a"
+    fallback_slugs = {
+        "xuan-er-wei-jue", "tian-zhen-bu-tian-zhen", "si-wen-bai-lei", "shen-yi-fei",
+        "sisyphus-express", "hui-du-ji-nian", "wu-liao-zhai",
+    }
+    assert {show["slug"] for show in config["shows"] if show.get("xiaoyuzhou_page_fallback")} == fallback_slugs
+    assert all(
+        show["source_page"] == f"https://www.xiaoyuzhoufm.com/podcast/{show['xiaoyuzhou_podcast_id']}"
+        for show in config["shows"] if show.get("xiaoyuzhou_page_fallback")
+    )
+    assert {
+        show["slug"]: show["source_page"] for show in config["shows"]
+        if show.get("xiaoyuzhou_page_fallback")
+    } == {
+        "xuan-er-wei-jue": "https://www.xiaoyuzhoufm.com/podcast/62d8ea30977d5e2e1bfc534a",
+        "tian-zhen-bu-tian-zhen": "https://www.xiaoyuzhoufm.com/podcast/65cef9e3cace72dff8d98de3",
+        "si-wen-bai-lei": "https://www.xiaoyuzhoufm.com/podcast/64228877179eec53318a7182",
+        "shen-yi-fei": "https://www.xiaoyuzhoufm.com/podcast/5f4e170c9504bbdb77566a19",
+        "sisyphus-express": "https://www.xiaoyuzhoufm.com/podcast/665c17db078f60650296f455",
+        "hui-du-ji-nian": "https://www.xiaoyuzhoufm.com/podcast/6772652715a5fd520eb5f758",
+        "wu-liao-zhai": "https://www.xiaoyuzhoufm.com/podcast/5e280fac418a84a0461fb129",
+    }
     assert config["catalog"]["missing_shows"] == []
     assert config["planned_shows"] == []
     assert all(show["apple_collection_id"].isdigit() for show in config["shows"])
@@ -251,6 +272,10 @@ def test_full_real_config_visits_every_show_and_imports_steve_rss_fixture(tmp_pa
         raise OSError("fixture has no publisher response")
 
     monkeypatch.setattr(ap, "fetch_rss", fixture_fetch)
+    monkeypatch.setattr(
+        ap, "fetch_xiaoyuzhou_public_page",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(ap.RSSFetchError("fixture has no public page response")),
+    )
     export = ap.ingest(
         config_path=ROOT / "config/audio_podcasts.yaml",
         output_path=tmp_path / "audio_podcast.json",
@@ -269,6 +294,10 @@ def test_full_real_config_visits_every_show_and_imports_steve_rss_fixture(tmp_pa
 def test_html_response_is_not_a_successful_rss_import(tmp_path, monkeypatch):
     config = ap.load_config(ROOT / "config/audio_podcasts.yaml")
     monkeypatch.setattr(ap, "fetch_rss", lambda *_args, **_kwargs: b"<!doctype html><title>challenge</title>")
+    monkeypatch.setattr(
+        ap, "fetch_xiaoyuzhou_public_page",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(ap.RSSFetchError("fixture has no public page response")),
+    )
     export = ap.ingest(
         config_path=ROOT / "config/audio_podcasts.yaml",
         output_path=tmp_path / "audio_podcast.json",
