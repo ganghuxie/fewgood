@@ -5,6 +5,7 @@ const closeButton = document.querySelector('[data-pwa-install-close]');
 const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 const isNarrow = () => window.matchMedia('(max-width: 700px)').matches;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const isInApp = /MicroMessenger|QQ\/|Weibo|; wv\)|\bGSA\/|Instagram|FBAN|FBAV|Line\//i.test(navigator.userAgent);
 
 let deferredPrompt;
 const dismissed = () => {
@@ -36,7 +37,10 @@ if (androidButton) androidButton.addEventListener('click', async () => {
 });
 
 if (!isStandalone() && !dismissed()) {
-  if (isIOS) {
+  if (isInApp) {
+    if (promptBar) promptBar.dataset.pwaMode = 'inapp';
+    show();
+  } else if (isIOS) {
     if (promptBar) promptBar.dataset.pwaMode = 'ios';
     show();
   } else {

@@ -57,3 +57,18 @@ def test_install_prompt_covers_android_ios_dismissal_and_mobile_only_behavior():
     assert 'navigator.standalone' in prompt
     assert 'max-width:700px' in layout
     assert 'fewgood-pwa-install-dismissed' in prompt
+
+
+def test_install_prompt_handles_in_app_browsers_and_hidden_state():
+    prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
+    layout = (ROOT / 'site/src/components/Layout.astro').read_text()
+    media_blocks = layout.split('@media(max-width:700px){')[1:]
+    assert media_blocks
+    assert any('.pwa-install[hidden]{display:none}' in block for block in media_blocks)
+    assert layout.index('.pwa-install[hidden]{display:none}') > layout.index('.pwa-install{display:flex')
+    assert 'data-pwa-mode="inapp"' in layout
+    assert '.pwa-install[data-pwa-mode="inapp"] .pwa-install-action{display:none}' in layout
+    assert '点右上角 … 用系统浏览器打开，即可添加到桌面' in layout
+    assert 'MicroMessenger' in prompt
+    assert 'isInApp' in prompt
+    assert "pwaMode = 'inapp'" in prompt
