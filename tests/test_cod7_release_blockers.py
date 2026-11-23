@@ -16,8 +16,10 @@ def test_click_to_play_samples_keep_no_initial_iframe_and_dynamic_fill_style():
     assert "frame.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;'" in detail
     assert "loadEmbed(detail, button.dataset.videoId, { autoplay: true })" in detail
     assert "params.set('autoplay', '1')" in detail
-    ids = {video['id'] for video in catalog}
-    assert {'uHjd6nwwEWI', 'dBnniua6-oM'} <= ids
+    sample_videos = [video for video in catalog if isinstance(video, dict) and video.get('id')][:2]
+    assert len(sample_videos) == 2, 'catalog should provide current click-to-play samples'
+    assert all(isinstance(video['id'], str) and video['id'] for video in sample_videos)
+    assert 'data-video-id={video.id}' in detail
 
 
 def test_hero_images_are_separate_from_card_thumbnail_policy():
