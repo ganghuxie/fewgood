@@ -106,8 +106,9 @@ def test_android_manual_install_fallback_and_browser_detection_regressions():
     layout = (ROOT / 'site/src/components/Layout.astro').read_text()
     assert '点浏览器菜单 → 添加到桌面，像 App 一样打开' in layout
     assert 'data-pwa-mode="manual"' in layout
-    assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-action{display:none}' in layout
+    assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-action{display:none}' not in layout
     assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-manual{display:block}' in layout
+    assert 'data-pwa-install-action type="button">添加到桌面</button>' in layout
     assert "isIOS ? 'ios' : 'manual'" in prompt
     assert 'isNarrow' not in prompt
     assert 'manualTimer' not in prompt

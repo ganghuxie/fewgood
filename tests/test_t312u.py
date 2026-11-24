@@ -185,6 +185,8 @@ def test_first_visit_install_prompt_is_visible_without_bip_and_uses_honest_fallb
     assert prompt.index('show(manualMode());') < prompt.index("addEventListener('beforeinstallprompt'")
     assert "isInApp ? 'inapp' : isIOS ? 'ios' : 'manual'" in prompt
     assert 'isNarrow' not in prompt and 'manualTimer' not in prompt
+    assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-action{display:none}' not in layout
+    assert 'data-pwa-install-action type="button">添加到桌面</button>' in layout
     assert 'deferredPrompt.prompt()' in prompt
     assert "localStorage.setItem(DISMISSED_KEY, '1')" in prompt
     assert 'if (!deferredPrompt) { show(manualMode()); return; }' in prompt
