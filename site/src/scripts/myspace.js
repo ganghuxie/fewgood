@@ -19,7 +19,7 @@ const space = document.querySelector('[data-myspace-view]');
 if (enabled && shell && explore && space) {
   const header = document.querySelector('.site-header');
   const chipbar = header?.querySelector('.chipbar');
-  if (header && chipbar && shell.parentElement !== header.querySelector('.header-row')) { header.classList.add('alpha-video-header'); header.insertBefore(shell, chipbar); }
+  if (header && chipbar && shell.parentElement !== header) { header.classList.add('alpha-video-header'); header.insertBefore(shell, chipbar); }
   shell.hidden = false;
   const base = (document.querySelector('main')?.dataset.base || '').replace(/\/$/, '');
   const fetchJSON = path => fetch(`${base}${path}`).then(response => response.ok ? response.json() : Promise.reject(new Error(path))).catch(() => null);

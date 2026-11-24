@@ -221,9 +221,9 @@ def test_recommendation_age_uses_span_days_everywhere():
 def test_library_panel_footer_is_tab_driven_not_static_history_duplicate():
     header = (Path(__file__).resolve().parents[1] / 'site/src/components/Header.astro').read_text()
     footer_line = next(line for line in header.splitlines() if 'data-panel-footer' in line)
-    assert "href={link('/library/?tab=history')}" in footer_line
+    assert "href={link('/history/')}" in footer_line
     assert 'href="#"' not in footer_line
-    assert "paths = { history: '/library/?tab=history', favorites: '/library/?tab=favorites', watchLater: '/library/?tab=watchLater' }" in header
+    assert "paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' }" in header
     assert 'footer.href = `${base}${paths[kind]}`' in header
     assert "document.querySelector('.library-cluster')" in header
     nav = re.search(r'<nav class="libraries"[^>]*>(.*?)</nav>', header, re.S)

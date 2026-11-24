@@ -13,6 +13,15 @@ export function getSupabase() {
   return client;
 }
 
+export function safeRedirect(value, fallback = `${location.pathname}${location.search}`) {
+  if (typeof value !== 'string' || !value.startsWith('/') || value.startsWith('//') || value.startsWith('/\\') || value.includes('\\')) return fallback;
+  return value;
+}
 export function emailRedirectTo() {
-  return new URL(import.meta.env.BASE_URL, window.location.origin).href;
+  const current = new URL(location.href);
+  current.searchParams.delete('redirect');
+  const redirect = safeRedirect(`${current.pathname}${current.search}`, new URL(import.meta.env.BASE_URL, location.origin).pathname);
+  const callback = new URL(import.meta.env.BASE_URL, location.origin);
+  callback.searchParams.set('redirect', redirect);
+  return callback.href;
 }

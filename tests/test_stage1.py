@@ -20,16 +20,17 @@ def test_stage1_header_has_stable_two_row_navigation_contract():
     assert '.lib-item[data-lib-kind="history"]' in header
 
 
-def test_stage1_library_tabs_use_existing_storage_and_keep_legacy_routes():
+def test_stage1_library_tabs_use_existing_storage_and_independent_routes():
     tabs = read('site/src/components/LibraryTabs.astro')
     assert 'KEYS[kind]' in tabs
     assert 'migrate(KEYS[kind]' in tabs
     assert '稍后观看是空的' in tabs
     assert '还没有收藏视频' in tabs
     assert '还没有观看历史' in tabs
-    for path in ('site/src/pages/library/index.astro', 'site/src/pages/history.astro',
-                 'site/src/pages/favorites.astro', 'site/src/pages/watch-later.astro'):
-        assert 'LibraryTabs' in read(path)
+    assert 'LibraryTabs' in read('site/src/pages/library/index.astro')
+    for path, title in (('site/src/pages/history.astro', '历史'), ('site/src/pages/favorites.astro', '收藏'), ('site/src/pages/watch-later.astro', '稍后观看')):
+        page = read(path)
+        assert 'LibraryPage' in page and f'title="{title}"' in page
 
 
 def test_stage1_space_copy_and_avatar_shortcuts_are_present():
@@ -38,7 +39,7 @@ def test_stage1_space_copy_and_avatar_shortcuts_are_present():
     about = read('site/src/pages/about.astro')
     assert '我的空间' not in myspace.split('space.innerHTML =', 1)[1].split(';', 1)[0]
     assert 'data-myspace-new' in myspace
-    assert '/library/?tab=watchLater' in auth
+    assert 'href="/watch-later/"' in auth
     assert '本设备' in auth and '订阅' in about
 
 
