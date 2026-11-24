@@ -28,6 +28,19 @@ export function playCountMeta(value) {
   return `<span class="video-meta-separator">·</span><span class="video-meta-views">${count.toLocaleString('zh-CN')} 次播放</span>`;
 }
 
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+
+export function videoMetaHtml({ channel, views, publishedAt, relative } = {}) {
+  const name = String(channel ?? '').trim();
+  const count = Number(views);
+  const time = relative === undefined ? relativePublishedTime(publishedAt) : String(relative || '');
+  const parts = [];
+  if (name) parts.push(`<span class="video-meta-channel">${escapeHtml(name)}</span>`);
+  if (Number.isFinite(count) && count > 0) parts.push(`<span class="video-meta-views">${count.toLocaleString('zh-CN')} 次播放</span>`);
+  if (time) parts.push(`<span class="video-meta-time">${escapeHtml(time)}</span>`);
+  return parts.join('<span class="video-meta-separator" aria-hidden="true">·</span>');
+}
+
 export function shouldShowWhy(video) {
   const why = String(video?.why_good || '').trim();
   if (!why || /来自.*频道|近期长视频|播放第/.test(why)) return false;

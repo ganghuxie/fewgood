@@ -409,9 +409,10 @@ def test_desktop_library_panel_wins_as_a_viewport_right_aligned_fixed_panel():
         assert left >= 0
 
 
-def test_library_flyout_starts_below_channel_chips_so_it_cannot_capture_chip_clicks():
+def test_library_flyout_is_positioned_below_the_measured_chipbar_so_it_cannot_capture_chip_clicks():
     header = read('site/src/components/Header.astro')
-    assert ':global(.lib-panel){position:fixed;top:104px;' in header
+    assert ':global(.lib-panel){position:fixed;top:var(--lib-panel-top,112px);' in header
+    assert "chipbar?.getBoundingClientRect().bottom" in header
 
 
 def test_watch_later_control_expands_left_inside_its_own_bar():

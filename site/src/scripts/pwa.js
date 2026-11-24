@@ -3,7 +3,6 @@ const promptBar = document.querySelector('[data-pwa-install]');
 const androidButton = document.querySelector('[data-pwa-install-action]');
 const closeButton = document.querySelector('[data-pwa-install-close]');
 const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
-const isNarrow = () => window.matchMedia('(max-width: 700px)').matches;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 // Keep standalone mobile browsers such as MQQBrowser and HuaweiBrowser out of this list.
 const isInApp = /MicroMessenger|QQ\/|Weibo|; wv\)|\bGSA\/|Instagram|FBAN|FBAV|Line\//i.test(navigator.userAgent);
@@ -13,35 +12,41 @@ const isSplashPreview = new URLSearchParams(window.location.search).get('preview
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const splashWasShown = () => { try { return sessionStorage.getItem(SPLASH_KEY) === '1'; } catch { return false; } };
 const markSplashShown = () => { try { sessionStorage.setItem(SPLASH_KEY, '1'); } catch {} };
+const clearSplashFirstPaint = () => document.documentElement.removeAttribute('data-pwa-splash-first');
 const hideSplash = immediate => {
   if (!splash || splash.hidden) return;
-  markSplashShown();
+  if (!isSplashPreview) markSplashShown();
+  clearSplashFirstPaint();
   if (immediate || reducedMotion) { splash.hidden = true; return; }
   splash.classList.add('is-leaving');
-  setTimeout(() => { splash.hidden = true; }, 340);
+  setTimeout(() => { splash.hidden = true; splash.classList.remove('is-leaving'); }, 340);
 };
 const showSplash = () => {
-  if (!splash || (!isStandalone() && !isSplashPreview) || (!isSplashPreview && splashWasShown())) return;
+  if (!splash || (!isStandalone() && !isSplashPreview) || (!isSplashPreview && splashWasShown())) { clearSplashFirstPaint(); return; }
   splash.hidden = false;
+  splash.removeAttribute('aria-hidden');
+  if (!isSplashPreview) markSplashShown();
   splash.addEventListener('click', () => hideSplash(true), { once: true });
-  if (!isSplashPreview && !reducedMotion) setTimeout(() => hideSplash(false), 1100);
-  else if (!isSplashPreview) hideSplash(true);
+  if (reducedMotion) hideSplash(true);
+  else setTimeout(() => hideSplash(false), 1100);
 };
 showSplash();
 
 let deferredPrompt;
-let manualTimer;
 const dismissed = () => {
   try { return localStorage.getItem(DISMISSED_KEY) === '1'; } catch { return false; }
 };
 const hide = () => { if (promptBar) promptBar.hidden = true; };
 const dismiss = () => {
-  clearTimeout(manualTimer);
   try { localStorage.setItem(DISMISSED_KEY, '1'); } catch {}
   hide();
 };
-const show = () => {
-  if (promptBar && !isStandalone() && !dismissed()) promptBar.hidden = false;
+const manualMode = () => isInApp ? 'inapp' : isIOS ? 'ios' : 'manual';
+const show = mode => {
+  if (!promptBar || isStandalone() || dismissed()) return;
+  if (mode) promptBar.dataset.pwaMode = mode;
+  else delete promptBar.dataset.pwaMode;
+  promptBar.hidden = false;
 };
 
 if ('serviceWorker' in navigator) {
@@ -53,45 +58,22 @@ if ('serviceWorker' in navigator) {
 
 if (closeButton) closeButton.addEventListener('click', dismiss);
 if (androidButton) androidButton.addEventListener('click', async () => {
-  if (!deferredPrompt) return;
+  if (!deferredPrompt) { show(manualMode()); return; }
   deferredPrompt.prompt();
-  const choice = await deferredPrompt.userChoice;
+  await deferredPrompt.userChoice;
   deferredPrompt = null;
-  if (choice?.outcome !== 'accepted') dismiss();
-  hide();
+  dismiss();
 });
 
 if (!isStandalone() && !dismissed()) {
-  if (isInApp) {
-    if (promptBar) promptBar.dataset.pwaMode = 'inapp';
+  show(manualMode());
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+    deferredPrompt = event;
     show();
-  } else if (isIOS) {
-    if (promptBar) promptBar.dataset.pwaMode = 'ios';
-    show();
-  } else if (/Android/i.test(navigator.userAgent)) {
-    window.addEventListener('beforeinstallprompt', event => {
-      event.preventDefault();
-      deferredPrompt = event;
-      clearTimeout(manualTimer);
-      if (promptBar) delete promptBar.dataset.pwaMode;
-      show();
-    });
-    window.addEventListener('appinstalled', () => {
-      clearTimeout(manualTimer);
-      deferredPrompt = null;
-      hide();
-    });
-    manualTimer = setTimeout(() => {
-      if (!deferredPrompt && !isStandalone() && !dismissed() && isNarrow()) {
-        if (promptBar) promptBar.dataset.pwaMode = 'manual';
-        show();
-      }
-    }, 2500);
-  } else {
-    window.addEventListener('beforeinstallprompt', event => {
-      event.preventDefault();
-      deferredPrompt = event;
-      show();
-    });
-  }
+  });
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    hide();
+  });
 }

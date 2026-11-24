@@ -14,7 +14,8 @@ def test_stage1_header_has_desktop_single_row_and_mobile_top_row_search_contract
     assert '我的空间' in header and '探索世界' in header
     assert 'placeholder="搜索精选池"' in header
     assert 'href={link(\'/watch-later/\')}' in header
-    assert '更新于 {updated}' in header
+    assert 'data-updated-at={updated || undefined}' in header
+    assert 'chipbar-status' not in header
     assert 'contain:layout' in layout or 'contain:layout' in header
     assert '.header-row{height:56px;padding:0 24px;display:flex;align-items:center;gap:18px}' in layout
     for source in (header, layout):

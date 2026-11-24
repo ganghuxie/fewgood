@@ -150,8 +150,12 @@ export function channelHasNew(channelId, latestPublishedAt) {
 export function isWatchLaterUnseen(item) {
   return !item?.seen_at;
 }
+const hasRenderableId = item => item?.id !== undefined && item?.id !== null && String(item.id).trim() !== '';
+export function watchLaterItems() {
+  return get(KEYS.watchLater).filter(hasRenderableId);
+}
 export function unseenWatchLaterCount() {
-  return get(KEYS.watchLater).filter(isWatchLaterUnseen).length;
+  return watchLaterItems().filter(isWatchLaterUnseen).length;
 }
 export function markWatchLaterSeen(id) {
   if (!id) return false;

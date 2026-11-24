@@ -1,4 +1,4 @@
-import { CARD_THUMB_SIZES, relativePublishedTime, thumbFallbackAttr, thumbFor, thumbSrcset } from './format.mjs';
+import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset, videoMetaHtml } from './format.mjs';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const duration = seconds => `${Math.floor((Number(seconds) || 0) / 60)}:${String((Number(seconds) || 0) % 60).padStart(2, '0')}`;
@@ -15,7 +15,6 @@ export function card(video, href = '', zh = null) {
   const zhTitle = zh?.title_zh || video.title_zh || '';
   const title = zhTitle || video.title;
   const classic = video.community_classic ? `<span class="community-classic-badge">${Number(video.recommenders) > 0 ? `HN ${Number(video.recommenders)} 人推荐` : '社区精选'}</span>` : '';
-  const published = relativePublishedTime(video.published_at);
-  const views = Number(video.view_count) > 0 ? `<span class="video-meta-separator">·</span><span class="video-meta-views">${Number(video.view_count).toLocaleString('zh-CN')} 次播放</span>` : '';
-  return `<article class="video-card"><a class="card-link" href="${esc(href)}"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt="">${classic}<span class="duration">${duration(video.duration_seconds)}</span><button class="watch-later-action" type="button" data-watch-later data-id="${esc(video.id)}" data-title="${esc(title)}" data-channel="${esc(video.channel)}" data-duration="${Number(video.duration_seconds) || 0}" data-published-at="${esc(video.published_at || '')}" aria-label="添加到稍后观看" aria-pressed="false"></button></div><div class="video-info">${avatar(video)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2><p class="video-meta"><span class="video-meta-channel">${esc(video.channel)}</span>${views}${published ? `<span class="video-meta-separator">·</span><span class="video-meta-time">${published}</span>` : ''}</p></div></div></a></article>`;
+  const meta = videoMetaHtml({ channel: video.channel, views: video.view_count, publishedAt: video.published_at });
+  return `<article class="video-card"><a class="card-link" href="${esc(href)}"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt="">${classic}<span class="duration">${duration(video.duration_seconds)}</span><button class="watch-later-action" type="button" data-watch-later data-id="${esc(video.id)}" data-title="${esc(title)}" data-channel="${esc(video.channel)}" data-duration="${Number(video.duration_seconds) || 0}" data-published-at="${esc(video.published_at || '')}" aria-label="添加到稍后观看" aria-pressed="false"></button></div><div class="video-info">${avatar(video)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2><p class="video-meta">${meta}</p></div></div></a></article>`;
 }

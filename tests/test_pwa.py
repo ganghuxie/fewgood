@@ -55,20 +55,26 @@ def test_layout_has_pwa_head_registration_and_safe_area_styles():
 def test_pwa_cold_start_splash_is_standalone_only_session_once_and_previewable():
     layout = (ROOT / 'site/src/components/Layout.astro').read_text()
     prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
+    head = layout.split('<body>', 1)[0]
     for phrase in ('data-pwa-splash', 'logo-mark.svg', 'fewgood</strong>', 'a few good videos', '告别无尽刷屏，只看好内容', '#F7F9F8', 'z-index:1000'):
         assert phrase in layout
+    assert 'data-pwa-splash-first' in head
+    assert 'html[data-pwa-splash-first] .pwa-splash[hidden]{display:grid!important}' in head
+    assert head.index('data-pwa-splash-first') < layout.index('<body>')
     for phrase in ('fewgood-splash-shown', 'sessionStorage', 'display-mode: standalone', 'navigator.standalone', 'preview_splash', 'URLSearchParams', 'prefers-reduced-motion', 'setTimeout(() => hideSplash(false), 1100)', 'splash.addEventListener'):
         assert phrase in prompt
     assert "if (!splash || (!isStandalone() && !isSplashPreview)" in prompt
-    assert 'if (!isSplashPreview && !reducedMotion)' in prompt
-    assert 'else if (!isSplashPreview) hideSplash(true);' in prompt
+    assert 'if (reducedMotion) hideSplash(true);' in prompt
+    assert 'else setTimeout(() => hideSplash(false), 1100);' in prompt
+    assert 'if (!isSplashPreview) markSplashShown();' in prompt
 
 
-def test_install_prompt_covers_android_ios_dismissal_and_mobile_only_behavior():
+def test_install_prompt_covers_native_fallback_and_persistent_dismissal():
     prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
     layout = (ROOT / 'site/src/components/Layout.astro').read_text()
     assert 'beforeinstallprompt' in prompt
     assert 'deferredPrompt.prompt()' in prompt
+    assert 'show(manualMode())' in prompt
     assert '点底部分享 → 添加到主屏幕，像 App 一样打开' in layout
     assert 'localStorage.setItem(DISMISSED_KEY, \'1\')' in prompt
     assert "display-mode: standalone" in prompt
@@ -92,7 +98,7 @@ def test_install_prompt_handles_in_app_browsers_and_hidden_state():
     assert '点右上角 … 用系统浏览器打开，即可添加到桌面' in layout
     assert 'MicroMessenger' in prompt
     assert 'isInApp' in prompt
-    assert "pwaMode = 'inapp'" in prompt
+    assert "isInApp ? 'inapp'" in prompt
 
 
 def test_android_manual_install_fallback_and_browser_detection_regressions():
@@ -102,9 +108,9 @@ def test_android_manual_install_fallback_and_browser_detection_regressions():
     assert 'data-pwa-mode="manual"' in layout
     assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-action{display:none}' in layout
     assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-manual{display:block}' in layout
-    assert '}, 2500);' in prompt
-    assert "pwaMode = 'manual'" in prompt
-    assert 'clearTimeout(manualTimer)' in prompt
+    assert "isIOS ? 'ios' : 'manual'" in prompt
+    assert 'isNarrow' not in prompt
+    assert 'manualTimer' not in prompt
     assert 'delete promptBar.dataset.pwaMode' in prompt
     assert "addEventListener('appinstalled'" in prompt
     assert 'localStorage.setItem(DISMISSED_KEY, \'1\')' in prompt

@@ -89,8 +89,8 @@ def test_list_cards_keep_duration_on_thumbnail_and_use_expanding_watch_later_con
     assert "'已添加'" in action
     assert 'setTimeout' not in action
     assert 'duration">' in read('site/src/components/VideoPage.astro')
-    assert 'relativePublishedTime(video.published_at)' in read('site/src/components/LibraryPage.astro')
-    assert 'relativePublishedTime(item.video.published_at)' in read('site/src/pages/following.astro')
+    assert 'videoMetaHtml({ channel: video.channel' in read('site/src/components/LibraryPage.astro')
+    assert 'videoMetaHtml({ channel: item.channel.title' in read('site/src/pages/following.astro')
 
 
 def test_watch_later_card_controls_are_thumbnail_scoped_hover_controls():
@@ -124,8 +124,8 @@ def test_card_title_and_meta_rules_and_community_sort_row_are_explicit():
     search = read('site/src/pages/search.astro')
     assert '.video-title{min-height:44px}' not in layout
     assert '-webkit-line-clamp:2' in layout
-    assert '.video-meta-channel{max-width:11em' in layout
-    assert '.video-meta-time{flex-shrink:0' in layout
+    assert '.video-meta-channel{flex:0 1 auto;max-width:11em' in layout
+    assert '.video-meta-time{flex:none;white-space:nowrap}' in layout
     assert '.sr-video-title' in search and '-webkit-line-clamp:2' in search
     assert 'min-height:44px' not in search
     assert '.sr-video-title{min-height:0}' in layout
@@ -139,7 +139,7 @@ def test_search_unpacks_publication_time_and_library_keeps_watch_later_navigatio
     search = read('site/src/pages/search.astro')
     tabs = read('site/src/components/LibraryTabs.astro')
     assert '([i, t, h, d, z, u, s, e, b, published_at])' in search
-    assert 'relativePublishedTime(v.published_at)' in search
+    assert 'videoMetaHtml({ channel: name' in search
     assert 'data-published-at="' in search
     assert 'data-tab="watchLater">稍后观看' in tabs
     assert '稍后观看是空的' in tabs
@@ -164,12 +164,10 @@ assert.ok(playCountMeta('7').includes('7 次播放'));
     library_tabs = read('site/src/components/LibraryTabs.astro')
     search = read('site/src/pages/search.astro')
     for source in (library_page, library_tabs):
-        assert 'playCountMeta(video.views)' in source
-        assert source.index('video-meta-channel') < source.index('playCountMeta(video.views)') < source.index('video-meta-time')
+        assert 'videoMetaHtml({ channel: video.channel, views: video.views, publishedAt: video.published_at })' in source
     assert "fetch(base + '/catalog.json')" in search
     assert 'Number(item.view_count ?? item.views)' in search
-    assert 'playCountMeta(catalogViews.get(normalizeVideoId(v.i)))' in search
-    assert search.index('video-meta-channel') < search.index('playCountMeta(catalogViews') < search.index('video-meta-time')
+    assert 'videoMetaHtml({ channel: name, views: catalogViews.get(normalizeVideoId(v.i)), publishedAt: v.published_at })' in search
 
 
 def test_drawer_empty_cta_color_beats_generic_sidebar_link_color():

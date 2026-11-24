@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <Layout title={SITE_NAME + ' · 搜索'}><section class="search-page" data-base={base}><h1>搜索</h1><p class="search-note">只搜索 fewgood 精选池</p><p class="search-summary" data-summary>输入关键词，搜索视频标题和频道。只搜索 fewgood 精选池。</p><section class="video-section" data-video-section hidden><h2>视频</h2><div class="sr-video-grid" data-results></div></section><section class="channel-section" data-channel-section hidden><h2>频道</h2><div class="sr-channel-results" data-channels></div><button class="show-more" data-channel-more type="button" hidden>更多频道</button></section></section></Layout>
 <script>
  import { track } from '../scripts/analytics.js';
- import { CARD_THUMB_SIZES, playCountMeta, relativePublishedTime, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
+ import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset, videoMetaHtml } from '../lib/format.mjs';
  const root = document.querySelector('[data-base]'), base = root.dataset.base, query = new URLSearchParams(location.search).get('q')?.trim() || '';
  const results = root.querySelector('[data-results]'), channelsEl = root.querySelector('[data-channels]'), summary = root.querySelector('[data-summary]'), channelSection = root.querySelector('[data-channel-section]'), videoSection = root.querySelector('[data-video-section]'), moreButton = root.querySelector('[data-channel-more]');
  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[char]));
@@ -50,8 +50,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
        const name = channel?.t || '';
        const badge = Number(v.u) > 0 ? '<span class="sr-duration">' + duration(Number(v.u)) + '</span>' : '';
        const displayTitle = v.z || v.t;
-       const published = relativePublishedTime(v.published_at);
-       const meta = '<span class="video-meta-channel">' + esc(name) + '</span>' + playCountMeta(catalogViews.get(normalizeVideoId(v.i))) + (published ? '<span class="video-meta-separator">·</span><span class="video-meta-time">' + published + '</span>' : '');
+       const meta = videoMetaHtml({ channel: name, views: catalogViews.get(normalizeVideoId(v.i)), publishedAt: v.published_at });
        const action = '<button class="watch-later-action" type="button" data-watch-later data-id="' + esc(v.i) + '" data-title="' + esc(displayTitle) + '" data-channel="' + esc(name) + '" data-duration="' + (Number(v.u) || 0) + '" data-published-at="' + esc(v.published_at || '') + '" data-tooltip="稍后再看" aria-label="稍后再看" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></button>';
        return '<a class="sr-video-card" href="' + (v.e ? 'https://www.youtube.com/watch?v=' + encodeURIComponent(v.i) : base + '/v/' + encodeURIComponent(v.i) + '/') + '"' + (v.e ? ' target="_blank" rel="noopener noreferrer"' : '') + '><div class="sr-thumbnail"><img loading="lazy" src="' + esc(thumbFor({ id: v.i })) + '" srcset="' + esc(thumbSrcset(v.i)) + '" sizes="' + CARD_THUMB_SIZES + '" ' + thumbFallbackAttr(v.i) + ' alt="">' + badge + action + '</div><div class="sr-video-info">' + avatar(channel, name) + '<div class="video-copy"><h2 class="sr-video-title">' + esc(displayTitle) + '</h2><p class="sr-video-meta">' + meta + '</p></div></div></a>';
      }).join('');

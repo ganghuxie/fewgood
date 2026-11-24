@@ -18,11 +18,11 @@ def test_shared_mobile_header_has_real_rows_at_all_narrow_breakpoints():
     assert '.header-row{position:static!important}' in layout
 
 
-def test_install_prompt_uses_native_prompt_and_persists_a_refusal():
+def test_install_prompt_uses_native_prompt_and_persists_dismissal():
     source = read('site/src/scripts/pwa.js')
     shell = read('site/src/components/Layout.astro')
     assert 'deferredPrompt.prompt()' in source
-    assert "choice?.outcome !== 'accepted'" in source
+    assert 'await deferredPrompt.userChoice;' in source
     assert "localStorage.setItem(DISMISSED_KEY, '1')" in source
     assert '添加到桌面' in shell and '添加到主屏幕' in shell
 
@@ -36,7 +36,7 @@ def test_video_detail_hides_curatorial_attribution_but_keeps_owner_controls():
 def test_play_count_and_titles_share_compact_content_driven_rules():
     layout = read('site/src/components/Layout.astro')
     audio = read('site/src/components/AudioPodcastLayout.astro')
-    assert '.video-meta-views{word-spacing:-.12em}' in layout
+    assert '.video-meta-views{flex:none;white-space:nowrap;word-spacing:-.12em}' in layout
     assert '.audio-card-title{font-size:16px;line-height:22px;font-weight:500' in audio
     title_rule = audio.split('.audio-card-title{', 1)[1].split('}', 1)[0]
     assert 'min-height' not in title_rule

@@ -7,7 +7,7 @@ const updated = updatedAt ? new Date(updatedDate).toLocaleTimeString('zh-CN', { 
 const base = import.meta.env.BASE_URL;
 const link = path => `${base.replace(/\/$/, '')}${path}`;
 ---
-<header class="site-header">
+<header class="site-header" data-updated-at={updated || undefined}>
   <div class="header-row">
     <button class="menu-toggle" type="button" aria-label="导览" aria-controls="site-sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`} title="a few good videos · 无广告 · 只看好视频"><img class="logo-mark" src={`${base}logo-mark.svg`} alt=""/><span>{SITE_NAME}</span></a>
@@ -24,22 +24,22 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     </div>
     <AuthMenu />
   </div>
-  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'picks' }} href={link('/')}>{SECTION_LABELS.picks}</a><a class:list={{ active: active === 'trending' }} href={link('/trending/')}>{SECTION_LABELS.trending}</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>{SECTION_LABELS.ai}</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>{SECTION_LABELS.podcast}</a><a class:list={{ active: active === 'audio-podcast' }} href={link('/audio-podcast/')}>音频播客</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>{SECTION_LABELS.music}</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>{SECTION_LABELS.community}</a></nav>{updated && <span class="chipbar-status">更新于 {updated}</span>}<button class="myspace-new" type="button" data-myspace-new>+ 新建栏目</button></div>
+  <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'picks' }} href={link('/')}>{SECTION_LABELS.picks}</a><a class:list={{ active: active === 'trending' }} href={link('/trending/')}>{SECTION_LABELS.trending}</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>{SECTION_LABELS.ai}</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>{SECTION_LABELS.podcast}</a><a class:list={{ active: active === 'audio-podcast' }} href={link('/audio-podcast/')}>音频播客</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>{SECTION_LABELS.music}</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>{SECTION_LABELS.community}</a></nav><button class="myspace-new" type="button" data-myspace-new>+ 新建栏目</button></div>
 </header>
 <style>
 .library-cluster{position:relative;display:flex;align-items:center}
 .lib-item[data-lib-kind="watchLater"]{display:block}
 .libraries{display:flex;gap:8px;align-items:center}
 .header-row{contain:layout}
-.mode-switch{display:flex;gap:2px;padding:2px;border-radius:8px;background:#f2f2f2;flex:none}.mode-switch button{height:30px;border:0;border-radius:6px;padding:0 11px;background:transparent;font:600 13px inherit;cursor:pointer;color:#606060;white-space:nowrap}.mode-switch button[aria-pressed="true"]{background:#fff;color:#0f0f0f;box-shadow:0 1px 3px #0000001c}.chipbar-status{margin-left:auto;color:#8a8a8a;font-size:12px;white-space:nowrap}.myspace-new{display:none;margin-left:12px;border:0;background:none;color:#0f0f0f;font:500 13px inherit;white-space:nowrap;cursor:pointer}.myspace-new.visible{display:block}
-:global(.site-header .mode-switch){margin-left:4px;width:max-content}
+.mode-switch{display:flex;gap:2px;padding:2px;border-radius:8px;background:#f2f2f2;flex:none}.mode-switch button{height:36px;border:0;border-radius:6px;padding:0 14px;background:transparent;font:600 15px inherit;cursor:pointer;color:#606060;white-space:nowrap}.mode-switch button[aria-pressed="true"]{background:#fff;color:#0f0f0f;box-shadow:0 1px 3px #0000001c}.myspace-new{display:none;margin-left:12px;border:0;background:none;color:#0f0f0f;font:500 13px inherit;white-space:nowrap;cursor:pointer}.myspace-new.visible{display:block}
+:global(.site-header .mode-switch){margin-left:0;width:max-content}
 :global(.site-header .search){min-width:180px;max-width:640px;flex:1}
 .lib-item{position:relative}
 .lib-item[data-lib-kind="watchLater"]{min-width:30px}
 .lib-trigger{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:13px;white-space:nowrap;padding:4px 8px;border-radius:10px;color:#0f0f0f;text-decoration:none}
 .lib-trigger:hover{background:#f2f2f2}
 :global(.lib-trigger b){position:absolute;top:-2px;right:0;min-width:17px;padding:1px 4px;border-radius:9px;background:#cc0000;color:#fff;font-size:10px;text-align:center}
-:global(.lib-panel){position:fixed;top:104px;right:0;left:auto;z-index:40;width:400px;max-width:min(400px,calc(100vw - 16px));background:#fff;border:1px solid #e5e5e5;border-radius:12px;box-shadow:0 8px 28px #00000026;overflow:hidden;pointer-events:auto}
+:global(.lib-panel){position:fixed;top:var(--lib-panel-top,112px);right:0;left:auto;z-index:40;width:400px;max-width:min(400px,calc(100vw - 16px));background:#fff;border:1px solid #e5e5e5;border-radius:12px;box-shadow:0 8px 28px #00000026;overflow:hidden;pointer-events:auto}
 :global(.lib-panel[hidden]){display:none!important;pointer-events:none!important}
 :global(.lib-panel-scroll){max-height:70vh;overflow-y:auto;overflow-x:hidden;padding:8px 0}
 :global(.lib-panel-footer){display:block;text-align:center;padding:12px;border-top:1px solid #eee;color:#0f0f0f;text-decoration:none;font-size:14px;font-weight:500;background:#fafafa}
@@ -61,7 +61,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 html[data-theme="pale-green"]{color:#17221F;background:#D6F1E2}html[data-theme="pale-green"] body{background:#D6F1E2;color:#17221F}html[data-theme="pale-green"] main{background:transparent;color:#17221F}html[data-theme="pale-green"] .site-header,html[data-theme="pale-green"] .header-row,html[data-theme="pale-green"] .chipbar{background:#CDEDDB;color:#17221F;border-color:#A9D9BD}html[data-theme="pale-green"] .chipbar a,html[data-theme="pale-green"] .chipbar button,html[data-theme="pale-green"] .mode-switch{background:#C2E8D2;color:#17221F;border-color:#A9D9BD}html[data-theme="pale-green"] .chipbar a.active,html[data-theme="pale-green"] .chipbar button.active,html[data-theme="pale-green"] .mode-switch button[aria-pressed="true"],html[data-theme="pale-green"] .pagination [aria-current="page"],html[data-theme="pale-green"] .audio-pagination [aria-current]{background:#49C987;color:#17221F;border-color:#49C987}html[data-theme="pale-green"] .site-sidebar,html[data-theme="pale-green"] .lib-panel,html[data-theme="pale-green"] .auth-dialog,html[data-theme="pale-green"] .share-modal,html[data-theme="pale-green"] .audio-show-head,html[data-theme="pale-green"] .audio-back,html[data-theme="pale-green"] .audio-player,html[data-theme="pale-green"] .audio-playback-error,html[data-theme="pale-green"] .audio-picks-status,html[data-theme="pale-green"] .audio-empty,html[data-theme="pale-green"] .audio-missing-show,html[data-theme="pale-green"] .myspace-editor,html[data-theme="pale-green"] .myspace-editor-inner,html[data-theme="pale-green"] .auth-dropdown{background:#EAF8F0;color:#17221F;border-color:#A9D9BD}html[data-theme="pale-green"] .audio-preview{--paper:#EAF8F0;--surface:#EAF8F0;--ink:#17221F;--muted:#3E5D4D;--line:#A9D9BD;--accent:#23744E;background:#D6F1E2;color:#17221F}html[data-theme="pale-green"] .search input,html[data-theme="pale-green"] .search button,html[data-theme="pale-green"] .show-more,html[data-theme="pale-green"] .actions button,html[data-theme="pale-green"] .auth-login,html[data-theme="pale-green"] .auth-secondary,html[data-theme="pale-green"] .auth-dialog input,html[data-theme="pale-green"] .auth-google svg,html[data-theme="pale-green"] .myspace-manage,html[data-theme="pale-green"] .myspace-editor-close,html[data-theme="pale-green"] .myspace-row button,html[data-theme="pale-green"] .myspace-add select,html[data-theme="pale-green"] .share-scroll,html[data-theme="pale-green"] .share-qr,html[data-theme="pale-green"] .share-link,html[data-theme="pale-green"] .auth-dropdown button,html[data-theme="pale-green"] .lib-panel-footer{background:#EAF8F0;border-color:#A9D9BD;color:#17221F}html[data-theme="pale-green"] .site-header a,html[data-theme="pale-green"] .video-card .card-link,html[data-theme="pale-green"] .site-sidebar a,html[data-theme="pale-green"] .audio-card-link,html[data-theme="pale-green"] .audio-show-card,html[data-theme="pale-green"] .owner-name,html[data-theme="pale-green"] .owner-avatar,html[data-theme="pale-green"] .library-back{color:#17221F}html[data-theme="pale-green"] .site-footer,html[data-theme="pale-green"] .video-meta,html[data-theme="pale-green"] .search-note,html[data-theme="pale-green"] .search-summary,html[data-theme="pale-green"] .site-footer a,html[data-theme="pale-green"] .channel p,html[data-theme="pale-green"] .original-title,html[data-theme="pale-green"] .meta,html[data-theme="pale-green"] .yt-open,html[data-theme="pale-green"] .audio-card-show,html[data-theme="pale-green"] .audio-card-meta{color:#3E5D4D}html[data-theme="pale-green"] .site-footer{border-color:#A9D9BD}html[data-theme="pale-green"] .chipbar a:not(.active):hover,html[data-theme="pale-green"] .chipbar button:not(.active):hover,html[data-theme="pale-green"] .mode-switch button:not([aria-pressed="true"]):hover,html[data-theme="pale-green"] .site-sidebar .side-home:hover,html[data-theme="pale-green"] .site-sidebar .side-section:hover,html[data-theme="pale-green"] .site-sidebar .followed-item:hover,html[data-theme="pale-green"] .lib-row:hover,html[data-theme="pale-green"] .lib-trigger:hover,html[data-theme="pale-green"] .auth-login:hover,html[data-theme="pale-green"] .share-scroll:hover,html[data-theme="pale-green"] .myspace-manage:hover{background:#BEE6D0}html[data-theme="pale-green"] .site-sidebar .side-home.active,html[data-theme="pale-green"] .community-classic-badge,html[data-theme="pale-green"] .subscribe-btn.is-following,html[data-theme="pale-green"] .youtube{background:#C2E8D2;color:#17221F;border-color:#A9D9BD}html[data-theme="pale-green"] .subscribe-btn{background:#17221F;color:#EAF8F0}html[data-theme="pale-green"] .auth-primary,html[data-theme="pale-green"] .share-copy.is-copied{background:#49C987;color:#17221F}html[data-theme="pale-green"] .auth-forgot,html[data-theme="pale-green"] .seek,html[data-theme="pale-green"] .why-good,html[data-theme="pale-green"] .yt-open:hover{color:#23744E}html[data-theme="pale-green"] .auth-fields{border-color:#A9D9BD}html[data-theme="pale-green"] .auth-other-divider::before,html[data-theme="pale-green"] .auth-other-divider::after{background:#A9D9BD}html[data-theme="pale-green"] .new-dot{background:#23744E}html[data-theme="pale-green"] .thumbnail,html[data-theme="pale-green"] .sr-thumbnail,html[data-theme="pale-green"] .audio-card-media{background:#C2E8D2}
 </style>
 <script>
-  import { KEYS, list, updateBadges, markWatchLaterSeen } from '../scripts/library.js';
+  import { KEYS, list, watchLaterItems, updateBadges, markWatchLaterSeen } from '../scripts/library.js';
   import { track } from '../scripts/analytics.js';
   import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
   updateBadges();
@@ -96,7 +96,7 @@ html[data-theme="pale-green"]{color:#17221F;background:#D6F1E2}html[data-theme="
     return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img loading="lazy" src="${esc(thumbFor(item))}" srcset="${esc(thumbSrcset(item))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(item.id)} alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
   };
   const renderPanel = (kind) => {
-    const items = list(KEYS[kind]);
+    const items = kind === 'watchLater' ? watchLaterItems() : list(KEYS[kind]);
     const box = panel.querySelector('[data-panel-list]');
     if (!items.length) { box.innerHTML = `<p class="lib-empty">${emptyText[kind]}</p>`; return; }
     box.innerHTML = items.slice(0, 30).map(i => rowHtml(i, kind)).join('');
@@ -113,11 +113,17 @@ html[data-theme="pale-green"]{color:#17221F;background:#D6F1E2}html[data-theme="
   const libraries = document.querySelector('.library-cluster');
   const panel = libraries?.querySelector('[data-panel]');
   const footer = panel?.querySelector('[data-panel-footer]');
+  const chipbar = document.querySelector('.site-header .chipbar');
   const mobile = () => matchMedia('(max-width: 767px)').matches;
   const paths = { watchLater: '/watch-later/' };
   let activeKind = 'watchLater'; let openTimer; let closeTimer;
   const setKind = kind => { activeKind = kind; footer.href = `${base}${paths[kind]}`; renderPanel(kind); };
-  const open = kind => { clearTimeout(closeTimer); setKind(kind); panel.hidden = false; };
+  const positionPanel = () => {
+    if (!libraries || !panel) return;
+    const anchor = Math.max(libraries.getBoundingClientRect().bottom, chipbar?.getBoundingClientRect().bottom || 0);
+    panel.style.setProperty('--lib-panel-top', `${Math.max(0, Math.round(anchor + 8))}px`);
+  };
+  const open = kind => { clearTimeout(closeTimer); positionPanel(); setKind(kind); panel.hidden = false; };
   const close = () => { clearTimeout(openTimer); panel.hidden = true; };
   const scheduleOpen = kind => { clearTimeout(closeTimer); clearTimeout(openTimer); openTimer = setTimeout(() => open(kind), 120); };
   const scheduleClose = () => { clearTimeout(openTimer); closeTimer = setTimeout(close, 220); };
@@ -125,8 +131,16 @@ html[data-theme="pale-green"]{color:#17221F;background:#D6F1E2}html[data-theme="
   if (!mobile()) {
     libraries?.addEventListener('mouseenter', () => scheduleOpen('watchLater'));
   }
+  window.addEventListener('resize', positionPanel);
+  window.addEventListener('scroll', () => { if (!panel?.hidden) positionPanel(); }, { passive: true });
   panel?.addEventListener('mouseenter', () => clearTimeout(closeTimer));
   panel?.addEventListener('mouseleave', scheduleClose);
   libraries?.addEventListener('mouseleave', scheduleClose);
   document.addEventListener('click', event => { if (!panel?.hidden && libraries && !libraries.contains(event.target)) close(); });
+
+  const searchInput = document.querySelector('.site-header .search input');
+  const compactSearch = matchMedia('(max-width: 767px)');
+  const paintSearchPlaceholder = () => { if (searchInput) searchInput.placeholder = compactSearch.matches ? '搜索' : '搜索精选池'; };
+  paintSearchPlaceholder();
+  compactSearch.addEventListener('change', paintSearchPlaceholder);
 </script>

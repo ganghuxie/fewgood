@@ -6,12 +6,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Layout title={`${title} · ${SITE_NAME}`}><section class="library-page" data-kind={kind} data-base={base}><div class="library-heading"><a class="library-back" href={base || '/'} aria-label="返回">‹ 返回</a><h1>{title}</h1>{kind === 'history' && <button class="clear" data-clear>清空历史</button>}</div><p class="empty" data-empty>{empty}</p><div class="video-grid library-list" data-list></div></section></Layout>
 <script>
- import { KEYS, list as libraryList, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
- import { CARD_THUMB_SIZES, playCountMeta, relativePublishedTime, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
+ import { KEYS, list as libraryList, migrate, remove, set, markWatchLaterSeen, updateBadges, watchLaterItems } from '../scripts/library.js';
+ import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset, videoMetaHtml } from '../lib/format.mjs';
  const root = document.querySelector('[data-kind]'), kind = root.dataset.kind, key = KEYS[kind], base = root.dataset.base;
  const list = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]');
  const duration = n => `${Math.floor((n || 0) / 60)}:${String((n || 0) % 60).padStart(2, '0')}`;
  const esc = value => String(value || '').replace(/[&<>"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[char]));
+ const readItems = () => kind === 'watchLater' ? watchLaterItems() : libraryList(key);
  const avatar = (channel, name) => { const title = channel?.title || name || '频道'; const letter = [...title.trim()][0] || '频'; let hash = 0; for (const character of title) hash = (hash * 31 + character.codePointAt(0)) >>> 0; const color = ['#d14b4b', '#b06b2f', '#8a6d1d', '#4f8a3d', '#357a8a', '#5367a6', '#7a5795'][hash % 7]; const thumbnail = String(channel?.thumbnail || '').replace(/=s\d+/, '=s88'); return thumbnail ? `<img class="channel-avatar" loading="lazy" src="${esc(thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background-color:${color}" aria-hidden="true">${esc(letter)}</span>`; };
  let seenObserver;
  const observeSeen = () => {
@@ -33,11 +34,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
    list.innerHTML = snapshots.map(video => {
      const z = zhMap[video.id] || {};
      const title = z.title_zh || video.title || video.id;
-     const published = relativePublishedTime(video.published_at);
-     const meta = `<span class="video-meta-channel">${esc(video.channel)}</span>${playCountMeta(video.views)}${published ? `<span class="video-meta-separator">·</span><span class="video-meta-time">${published}</span>` : ''}`;
+     const meta = videoMetaHtml({ channel: video.channel, views: video.views, publishedAt: video.published_at });
      return `<article class="video-card" data-id="${esc(video.id)}"><a class="card-link" href="${base}/v/${video.id}/"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt=""><span class="duration">${duration(video.duration)}</span><button class="watch-later-action" type="button" data-watch-later data-id="${esc(video.id)}" data-title="${esc(title)}" data-channel="${esc(video.channel || '')}" data-duration="${Number(video.duration) || 0}" data-published-at="${esc(video.published_at || '')}" data-tooltip="稍后再看" aria-label="稍后再看" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></button></div><div class="video-info">${avatar({thumbnail: video.avatar}, video.channel)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2><p class="video-meta">${meta}</p></div></div></a><button class="remove" aria-label="移除" data-remove="${esc(video.id)}" type="button">×</button></article>`;
    }).join('');
-   list.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); event.stopPropagation(); remove(key, button.dataset.remove); render(libraryList(key)); });
+   list.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); event.stopPropagation(); remove(key, button.dataset.remove); render(readItems()); });
    document.dispatchEvent(new Event('youtuber:library-change'));
    observeSeen();
    updateBadges();
@@ -49,8 +49,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
  ]).then(([catalog, channelData, zhData]) => {
    zhMap = zhData.videos || {};
    migrate(key, catalog, channelData);
-   render(libraryList(key));
- }).catch(() => render(libraryList(key)));
+   render(readItems());
+ }).catch(() => render(readItems()));
  root.querySelector('[data-clear]')?.addEventListener('click', () => { set(key, []); render([]); });
 </script>
 <style>
