@@ -41,7 +41,7 @@ const dismiss = () => {
   hide();
 };
 const show = () => {
-  if (promptBar && !isStandalone() && !dismissed() && isNarrow()) promptBar.hidden = false;
+  if (promptBar && !isStandalone() && !dismissed()) promptBar.hidden = false;
 };
 
 if ('serviceWorker' in navigator) {
@@ -55,8 +55,9 @@ if (closeButton) closeButton.addEventListener('click', dismiss);
 if (androidButton) androidButton.addEventListener('click', async () => {
   if (!deferredPrompt) return;
   deferredPrompt.prompt();
-  await deferredPrompt.userChoice;
+  const choice = await deferredPrompt.userChoice;
   deferredPrompt = null;
+  if (choice?.outcome !== 'accepted') dismiss();
   hide();
 });
 

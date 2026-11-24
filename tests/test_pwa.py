@@ -80,6 +80,9 @@ def test_install_prompt_covers_android_ios_dismissal_and_mobile_only_behavior():
 def test_install_prompt_handles_in_app_browsers_and_hidden_state():
     prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
     layout = (ROOT / 'site/src/components/Layout.astro').read_text()
+    mobile_styles = layout.index('@media(max-width:700px){')
+    assert layout.index('.pwa-install{display:flex') < mobile_styles
+    assert '.pwa-install[hidden]{display:none}' in layout[:mobile_styles]
     media_blocks = layout.split('@media(max-width:700px){')[1:]
     assert media_blocks
     assert any('.pwa-install[hidden]{display:none}' in block for block in media_blocks)

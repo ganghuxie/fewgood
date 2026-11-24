@@ -7,7 +7,7 @@ def read(path):
     return (ROOT / path).read_text(encoding='utf-8')
 
 
-def test_stage1_header_has_desktop_single_row_and_mobile_four_item_contract():
+def test_stage1_header_has_desktop_single_row_and_mobile_top_row_search_contract():
     header = read('site/src/components/Header.astro')
     layout = read('site/src/components/Layout.astro')
     assert 'data-header-mode-switch' in header
@@ -16,7 +16,16 @@ def test_stage1_header_has_desktop_single_row_and_mobile_four_item_contract():
     assert 'href={link(\'/watch-later/\')}' in header
     assert '更新于 {updated}' in header
     assert 'contain:layout' in layout or 'contain:layout' in header
-    assert 'grid-template-areas:"menu logo library auth"' in header
+    assert '.header-row{height:56px;padding:0 24px;display:flex;align-items:center;gap:18px}' in layout
+    for source in (header, layout):
+        assert 'grid-template-columns:auto auto minmax(72px,1fr) auto auto' in source
+        assert 'grid-template-areas:"menu logo search library auth" "mode mode mode mode mode"' in source
+        assert 'grid-area:search;grid-column:auto;width:100%;max-width:none;margin:0;position:static!important' in source
+        assert 'grid-area:mode;display:flex' in source
+    assert 'grid-template-areas:"menu logo library auth"' not in header
+    assert 'grid-template-areas:"menu logo library auth"' not in layout
+    assert 'order:3;position:absolute' not in layout
+    assert 'padding-bottom:48px' not in layout
 
 
 def test_stage1_library_tabs_use_existing_storage_and_independent_routes():

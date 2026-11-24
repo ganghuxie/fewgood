@@ -153,11 +153,12 @@ def test_mobile_header_has_one_four_item_sticky_row_and_nonsticky_controls():
     layout = read('site/src/components/Layout.astro')
     row, after_row = header.split('</div>', 1)
     assert 'chipbar' not in row
-    assert 'grid-template-areas:"menu logo library auth"' in header
-    assert '.site-header .mode-switch){display:none}' in header
+    assert '"menu logo search library auth" "mode mode mode mode mode"' in header
+    assert '.site-header .mode-switch){grid-area:mode;display:flex' in header
     assert 'href={link(\'/watch-later/\')}' in header
-    assert '.site-header .search input){height:36px}' in header
+    assert '.site-header .search input){height:34px' in header
     assert '.header-row{position:sticky!important' in layout
+    assert '@media(max-width:767px){.header-row{position:static!important}' in layout
     assert '.site-header{position:static!important}' in layout
 
 
@@ -209,6 +210,11 @@ def test_desktop_library_panel_wins_as_a_viewport_right_aligned_fixed_panel():
         left = viewport - panel_width
         assert panel_width == 400
         assert left >= 0
+
+
+def test_library_flyout_starts_below_channel_chips_so_it_cannot_capture_chip_clicks():
+    header = read('site/src/components/Header.astro')
+    assert ':global(.lib-panel){position:fixed;top:104px;' in header
 
 
 def test_watch_later_control_expands_left_inside_its_own_bar():

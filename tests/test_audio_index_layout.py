@@ -154,7 +154,7 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
     assert _resolved(rules, '.audio-card-title', 'font-size', 1280) == '16px'
     assert _resolved(rules, '.audio-card-title', 'font-weight', 1280) == '500'
     assert _resolved(rules, '.audio-card-title', '-webkit-line-clamp', 1280) == '2'
-    assert _resolved(rules, '.audio-card-title', 'min-height', 1280) == '44px'
+    assert _resolved(rules, '.audio-card-title', 'min-height', 1280) in (None, '')
     assert _resolved(rules, '.audio-recent-card', 'min-width', 1280) == '0'
     assert _resolved(rules, '.audio-show-card', 'min-width', 1280) == '0'
 

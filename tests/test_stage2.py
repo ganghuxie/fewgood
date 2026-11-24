@@ -102,7 +102,9 @@ def test_watch_later_card_controls_are_thumbnail_scoped_hover_controls():
     assert '.thumbnail .watch-later-action:focus' in action
     assert '@media(max-width:375px)' in action
     assert '@media(max-width:375px),(hover:none)' in action
-    assert 'opacity:1!important' not in action
+    assert 'responsiveStyle' in action
+    assert '@media (max-width:767px),(hover:none)' in action
+    assert 'opacity:1!important' in action
     assert 'new MutationObserver' in action
     assert "document.addEventListener('youtuber:library-change'" in action
 
@@ -120,12 +122,14 @@ def test_card_title_and_meta_rules_and_community_sort_row_are_explicit():
     layout = read('site/src/components/Layout.astro')
     page = read('site/src/components/VideoPage.astro')
     search = read('site/src/pages/search.astro')
-    assert '.video-title{min-height:44px}' in layout
+    assert '.video-title{min-height:44px}' not in layout
     assert '-webkit-line-clamp:2' in layout
     assert '.video-meta-channel{max-width:11em' in layout
     assert '.video-meta-time{flex-shrink:0' in layout
-    assert '.sr-video-title' in search and 'min-height:44px' in search and '-webkit-line-clamp:2' in search
-    assert '.sort-row{justify-content:flex-end;align-items:center;gap:16px' in page
+    assert '.sr-video-title' in search and '-webkit-line-clamp:2' in search
+    assert 'min-height:44px' not in search
+    assert '.sr-video-title{min-height:0}' in layout
+    assert '.sort-row{gap:28px}' in page
     assert '.sort-row i{width:1px;height:12px' in page
     assert '.sort-row a[aria-current="page"]{color:#0f0f0f;font-weight:700}' in page
     assert '.sort-row a{color:#606060}' in page
