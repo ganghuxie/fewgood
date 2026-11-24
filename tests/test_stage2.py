@@ -139,3 +139,30 @@ def test_search_unpacks_publication_time_and_library_keeps_watch_later_navigatio
     assert 'data-published-at="' in search
     assert 'data-tab="watchLater">稍后观看' in tabs
     assert '稍后观看是空的' in tabs
+
+
+def test_search_and_library_cards_render_only_positive_real_play_counts():
+    script = """
+import assert from 'node:assert/strict';
+import { playCountMeta } from './site/src/lib/format.mjs';
+for (const value of [undefined, null, '', 0, -1, '0', 'n/a', Number.NaN]) {
+  assert.equal(playCountMeta(value), '');
+}
+assert.equal(
+  playCountMeta(123456),
+  '<span class="video-meta-separator">·</span><span class="video-meta-views">123,456 次播放</span>',
+);
+assert.ok(playCountMeta('7').includes('7 次播放'));
+"""
+    subprocess.run(['node', '--input-type=module', '-e', script], cwd=ROOT, check=True)
+
+    library_page = read('site/src/components/LibraryPage.astro')
+    library_tabs = read('site/src/components/LibraryTabs.astro')
+    search = read('site/src/pages/search.astro')
+    for source in (library_page, library_tabs):
+        assert 'playCountMeta(video.views)' in source
+        assert source.index('video-meta-channel') < source.index('playCountMeta(video.views)') < source.index('video-meta-time')
+    assert "fetch(base + '/catalog.json')" in search
+    assert 'Number(item.view_count ?? item.views)' in search
+    assert 'playCountMeta(catalogViews.get(normalizeVideoId(v.i)))' in search
+    assert search.index('video-meta-channel') < search.index('playCountMeta(catalogViews') < search.index('video-meta-time')

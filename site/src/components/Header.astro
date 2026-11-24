@@ -15,7 +15,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索精选池" aria-label="搜索精选池"/><button aria-label="搜索">⌕</button></form>
     <div class="library-cluster">
       <nav class="libraries" aria-label="个人视频库">
-        <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后观看</span><b data-library-count="watchLater" hidden></b></a></div>
+        <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger aria-label="稍后观看" title="稍后观看"><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><b data-library-count="watchLater" hidden></b></a></div>
       </nav>
       <div class="lib-panel" data-panel hidden>
         <div class="lib-panel-scroll" data-panel-list></div>

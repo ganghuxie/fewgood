@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 </Layout>
 <script>
  import { KEYS, has, list, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
- import { CARD_THUMB_SIZES, relativePublishedTime, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
+ import { CARD_THUMB_SIZES, playCountMeta, relativePublishedTime, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
  const root = document.querySelector('[data-library-tabs]'), base = root.dataset.base;
  const labels = { watchLater: '稍后观看是空的。把想看的内容先放在这里。', favorites: '还没有收藏视频。遇到真正喜欢的内容，再把它留下。', history: '还没有观看历史。看过的视频会显示在这里。' };
  const query = new URLSearchParams(location.search).get('tab');
@@ -28,7 +28,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
    listHost.innerHTML = items.map(video => {
      const title = zhMap[video.id]?.title_zh || video.title || video.id;
      const published = relativePublishedTime(video.published_at);
-     const meta = '<span class="video-meta-channel">' + esc(video.channel || '') + '</span>' + (published ? '<span class="video-meta-separator">·</span><span class="video-meta-time">' + published + '</span>' : '');
+     const meta = '<span class="video-meta-channel">' + esc(video.channel || '') + '</span>' + playCountMeta(video.views) + (published ? '<span class="video-meta-separator">·</span><span class="video-meta-time">' + published + '</span>' : '');
      return '<article class="video-card" data-id="' + esc(video.id) + '"><a class="card-link" href="' + base + '/v/' + esc(video.id) + '/"><div class="thumbnail"><img loading="lazy" src="' + esc(thumbFor(video)) + '" srcset="' + esc(thumbSrcset(video)) + '" sizes="' + CARD_THUMB_SIZES + '" ' + thumbFallbackAttr(video.id) + ' alt=""><span class="duration">' + duration(video.duration) + '</span><button class="watch-later-action" type="button" data-watch-later data-id="' + esc(video.id) + '" data-title="' + esc(title) + '" data-channel="' + esc(video.channel || '') + '" data-duration="' + (Number(video.duration) || 0) + '" data-published-at="' + esc(video.published_at || '') + '" data-tooltip="稍后再看" aria-label="稍后再看" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></button></div><div class="video-info"><div class="channel-avatar channel-avatar-letter" aria-hidden="true">' + esc([...(video.channel || '频')][0]) + '</div><div class="video-copy"><h2 class="video-title">' + esc(title) + '</h2><p class="video-meta">' + meta + '</p></div></div></a></article>';
    }).join('');
    if (kind === 'watchLater') listHost.querySelectorAll('[data-id]').forEach(node => node.addEventListener('click', () => markWatchLaterSeen(node.dataset.id) && updateBadges(), { once: true }));

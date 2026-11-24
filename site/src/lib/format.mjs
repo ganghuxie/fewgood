@@ -22,6 +22,12 @@ export function relativePublishedTime(value, now = Date.now()) {
   return `${Math.floor(days / 365)}年前`;
 }
 
+export function playCountMeta(value) {
+  const count = Number(value);
+  if (!Number.isFinite(count) || count <= 0) return '';
+  return `<span class="video-meta-separator">·</span><span class="video-meta-views">${count.toLocaleString('zh-CN')} 次播放</span>`;
+}
+
 export function shouldShowWhy(video) {
   const why = String(video?.why_good || '').trim();
   if (!why || /来自.*频道|近期长视频|播放第/.test(why)) return false;

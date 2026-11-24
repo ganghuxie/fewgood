@@ -175,6 +175,28 @@ def test_mobile_watch_later_wins_the_actual_css_cascade_at_375_and_767():
     )
 
 
+def test_header_watch_later_trigger_is_icon_only_at_desktop_and_mobile_breakpoints():
+    header = read('site/src/components/Header.astro')
+    trigger = re.search(
+        r"<a class=\"lib-trigger\"[^>]*href=\{link\('/watch-later/'\)\}[^>]*>(.*?)</a>",
+        header,
+        flags=re.DOTALL,
+    )
+    assert trigger, 'watch-later trigger should retain its /watch-later/ href'
+    open_tag, body = trigger.group(0).split('>', 1)[0], trigger.group(1)
+    assert 'aria-label="稍后观看"' in open_tag
+    assert 'title="稍后观看"' in open_tag
+    assert 'data-library-count="watchLater"' in body
+    assert '<svg class="library-icon"' in body
+    assert '<span' not in body
+    assert not re.sub(r'<[^>]+>', '', body).strip(), 'trigger must not render visible caption text'
+    assert not re.search(r'\.lib-trigger[^{}]*::(?:before|after)', header)
+    for viewport in (375, 767, 1280):
+        assert _computed_css('watch-later', viewport)['display'] in {
+            'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'grid', 'inline-grid'
+        }
+
+
 def test_desktop_library_panel_wins_as_a_viewport_right_aligned_fixed_panel():
     for viewport in (768, 1280):
         panel = _computed_css('panel', viewport)
