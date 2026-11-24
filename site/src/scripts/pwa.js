@@ -5,14 +5,17 @@ const closeButton = document.querySelector('[data-pwa-install-close]');
 const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 const isNarrow = () => window.matchMedia('(max-width: 700px)').matches;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+// Keep standalone mobile browsers such as MQQBrowser and HuaweiBrowser out of this list.
 const isInApp = /MicroMessenger|QQ\/|Weibo|; wv\)|\bGSA\/|Instagram|FBAN|FBAV|Line\//i.test(navigator.userAgent);
 
 let deferredPrompt;
+let manualTimer;
 const dismissed = () => {
   try { return localStorage.getItem(DISMISSED_KEY) === '1'; } catch { return false; }
 };
 const hide = () => { if (promptBar) promptBar.hidden = true; };
 const dismiss = () => {
+  clearTimeout(manualTimer);
   try { localStorage.setItem(DISMISSED_KEY, '1'); } catch {}
   hide();
 };
@@ -43,6 +46,25 @@ if (!isStandalone() && !dismissed()) {
   } else if (isIOS) {
     if (promptBar) promptBar.dataset.pwaMode = 'ios';
     show();
+  } else if (/Android/i.test(navigator.userAgent)) {
+    window.addEventListener('beforeinstallprompt', event => {
+      event.preventDefault();
+      deferredPrompt = event;
+      clearTimeout(manualTimer);
+      if (promptBar) delete promptBar.dataset.pwaMode;
+      show();
+    });
+    window.addEventListener('appinstalled', () => {
+      clearTimeout(manualTimer);
+      deferredPrompt = null;
+      hide();
+    });
+    manualTimer = setTimeout(() => {
+      if (!deferredPrompt && !isStandalone() && !dismissed() && isNarrow()) {
+        if (promptBar) promptBar.dataset.pwaMode = 'manual';
+        show();
+      }
+    }, 2500);
   } else {
     window.addEventListener('beforeinstallprompt', event => {
       event.preventDefault();

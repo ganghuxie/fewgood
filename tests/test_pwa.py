@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 
@@ -37,9 +38,10 @@ def test_layout_has_pwa_head_registration_and_safe_area_styles():
     assert 'width=device-width, initial-scale=1, viewport-fit=cover' in layout
     for tag in (
         'theme-color', 'mobile-web-app-capable', 'apple-mobile-web-app-capable',
-        'apple-mobile-web-app-status-bar-style', 'apple-mobile-web-app-title',
+        'application-name', 'apple-mobile-web-app-status-bar-style', 'apple-mobile-web-app-title',
     ):
         assert f'name="{tag}"' in layout
+    assert '<link rel="apple-touch-icon"' in layout
     assert 'site.webmanifest' in layout
     assert "import '../scripts/pwa.js'" in layout
     assert 'safe-area-inset-top' in layout
@@ -72,3 +74,23 @@ def test_install_prompt_handles_in_app_browsers_and_hidden_state():
     assert 'MicroMessenger' in prompt
     assert 'isInApp' in prompt
     assert "pwaMode = 'inapp'" in prompt
+
+
+def test_android_manual_install_fallback_and_browser_detection_regressions():
+    prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
+    layout = (ROOT / 'site/src/components/Layout.astro').read_text()
+    assert '点浏览器菜单 → 添加到桌面，像 App 一样打开' in layout
+    assert 'data-pwa-mode="manual"' in layout
+    assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-action{display:none}' in layout
+    assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-manual{display:block}' in layout
+    assert '}, 2500);' in prompt
+    assert "pwaMode = 'manual'" in prompt
+    assert 'clearTimeout(manualTimer)' in prompt
+    assert 'delete promptBar.dataset.pwaMode' in prompt
+    assert "addEventListener('appinstalled'" in prompt
+    assert 'localStorage.setItem(DISMISSED_KEY, \'1\')' in prompt
+    assert 'MicroMessenger|QQ\\/' in prompt
+    in_app = re.search(r'const isInApp = (/(?:\\.|[^/])+/i)\.test', prompt).group(1)
+    for ua in ('MicroMessenger', 'QQ/'): assert re.search(in_app[1:in_app.rfind('/')], ua, re.I)
+    for ua in ('MQQBrowser', 'HuaweiBrowser', 'MiuiBrowser', 'HeyTapBrowser', 'OPPOBrowser', 'VivoBrowser', 'HonorBrowser', 'Quark', 'UCBrowser'):
+        assert not re.search(in_app[1:in_app.rfind('/')], ua, re.I)
