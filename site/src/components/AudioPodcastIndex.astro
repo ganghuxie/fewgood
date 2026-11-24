@@ -13,6 +13,8 @@ const bySlug = Object.fromEntries(shows.map(show => [show.slug, show]));
 const missingShows = data.catalog?.missing_shows || [];
 const confirmedCount = data.catalog?.confirmed_show_count || shows.length;
 const requestedCount = data.catalog?.requested_show_count || confirmedCount;
+const coverageDenominator = Math.max(0, Number(requestedCount) || 0);
+const coveragePercent = coverageDenominator ? Math.min(100, Math.round((Number(confirmedCount) / coverageDenominator) * 100)) : 0;
 ---
 <AudioPodcastLayout title="音频播客 · fewgood." description="发现最值得听的播客。" updatedAt={data.generated_at || ''}>
   {data.available === false && <p class="audio-empty" role="status">{data.unavailable_message}</p>}
@@ -20,8 +22,11 @@ const requestedCount = data.catalog?.requested_show_count || confirmedCount;
     <button id="recent-tab" type="button" role="tab" aria-selected="true" aria-controls="recent-panel">近期精选</button>
     <button id="directory-tab" type="button" role="tab" aria-selected="false" aria-controls="directory-panel" tabindex="-1">节目目录</button>
   </div>
+  <div class="audio-coverage" data-confirmed-shows={confirmedCount} data-requested-shows={coverageDenominator} aria-label={`节目覆盖 ${confirmedCount}${coverageDenominator ? `/${coverageDenominator}` : ''} 档`}>
+    <div class="audio-coverage-label"><span>节目覆盖</span><strong>{confirmedCount}{coverageDenominator ? ` / ${coverageDenominator}` : ' 档已确认'}</strong></div>
+    <div class="audio-coverage-track" role="progressbar" aria-valuemin="0" aria-valuemax={coverageDenominator || 1} aria-valuenow={confirmedCount} aria-label="已确认节目数量"><span style={`width:${coveragePercent}%`}></span></div>
+  </div>
   <section id="recent-panel" class="audio-tab-panel audio-preview-section audio-index-section" role="tabpanel" aria-labelledby="recent-tab">
-    <div class="audio-preview-section-head"><h2>近期精选</h2></div>
     <div class="audio-category-filters" data-category-filters="recent" aria-label="筛选近期精选类别">
       <button type="button" class="active" data-audio-category="all" aria-pressed="true">全部</button>{categories.map(category => <button type="button" data-audio-category={category} aria-pressed="false">{category}</button>)}
     </div>
@@ -32,7 +37,7 @@ const requestedCount = data.catalog?.requested_show_count || confirmedCount;
       return show && <article class="audio-recent-card" data-audio-card-category={show.category || ''}>
         <a class="audio-card-link" href={episodePath(show, episode, base)}>
           <div class="audio-card-media">
-            {coverUrl && <img onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" data-cover-original={coverUrl} class="audio-card-cover" src={coverDisplayUrl(coverUrl, { width: 640 })} srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)} sizes={CARD_COVER_SIZES} alt={`${show_name} 官方封面`} width="320" height="320" decoding="async" loading={index < 4 ? 'eager' : 'lazy'} fetchpriority={index < 4 ? 'high' : undefined} />}
+            {coverUrl && <img onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" data-cover-original={coverUrl} class="audio-card-cover" src={coverDisplayUrl(coverUrl, { width: 640 })} srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)} sizes={CARD_COVER_SIZES} alt={`${show_name} 官方封面`} width="320" height="320" decoding="async" loading="lazy" />}
             {episode.duration_display && <span class="audio-card-duration">{episode.duration_display}</span>}
           </div>
           <div class="audio-card-copy"><h3 class="audio-card-title">{episode.title}</h3><p class="audio-card-show">{show_name} · {show.category}</p><p class="audio-card-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time></p></div>
@@ -51,13 +56,13 @@ const requestedCount = data.catalog?.requested_show_count || confirmedCount;
       const coverUrl = show.feed?.cover_url;
       return <a class="audio-show-card" data-audio-newness-card data-audio-show={latest?.slug} data-audio-latest-id={latest?.episodeId} data-audio-latest-published-at={latest?.publishedAt} data-audio-card-category={show.category || ''} href={showPath(show.slug, 1, base)}>
       <div class="audio-card-media">{coverUrl && <img onerror="const original=this.dataset.coverOriginal;if(original && this.getAttribute('src') !== original){this.removeAttribute('srcset');this.src=original;}else{this.hidden=true;}" data-cover-original={coverUrl} class="audio-card-cover" src={coverDisplayUrl(coverUrl, { width: 640 })} srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)} sizes={CARD_COVER_SIZES} alt={`${show.display_name} 官方封面`} width="320" height="320" decoding="async" loading="lazy" />}</div>
-        <div class="audio-card-copy"><h3 class="audio-card-title">{show.display_name}{latest && <span class="audio-newness-dot" data-audio-newness-dot role="img" aria-label="有新单集" hidden></span>}</h3><p class="audio-card-show audio-show-publisher">{show.category} · {show.publisher}</p><p class="audio-card-meta audio-show-count">{EPISODE_COUNT_LABEL} {show.episodes.length} 集</p>{show.limited_public_page_fallback && <p class="audio-card-meta audio-show-status">仅收录近期公开免费单集，非完整历史</p>}{show.episodes.length === 0 ? <p class="audio-card-meta audio-show-status">{show.source_status === 'identity_verified_feed_unavailable' ? '内容暂不可用' : '暂未获取到单集'}</p> : show.daily_update ? <p class="audio-card-meta audio-show-recent">日更节目 · 不进入近期精选</p> : !show.limited_public_page_fallback && !recent.some(item => item.show_slug === show.slug) && <p class="audio-card-meta audio-show-recent">近 30 天无入选</p>}</div>
+        <div class="audio-card-copy"><h3 class="audio-card-title">{show.display_name}{latest && <span class="audio-newness-dot" data-audio-newness-dot role="img" aria-label="有新单集" hidden></span>}</h3><p class="audio-card-show audio-show-publisher">{show.category} · {show.publisher}</p><p class="audio-card-meta audio-show-count">{EPISODE_COUNT_LABEL} {show.episodes.length} 集</p>{show.limited_public_page_fallback && <p class="audio-card-meta audio-show-status">仅收录近期公开免费单集，非完整历史</p>}{show.episodes.length === 0 ? <p class="audio-card-meta audio-show-status">{show.source_status === 'identity_verified_feed_unavailable' ? '内容暂不可用' : '暂未获取到单集'}</p> : show.daily_update ? <p class="audio-card-meta audio-show-recent">日更节目 · 不进入近期精选</p> : null}</div>
     </a>;
     })}</div>
     <p class="audio-filter-empty" data-audio-empty="directory" hidden>这个类别暂时没有节目。</p>
     {missingShows.map(show => <article class="audio-missing-show"><h3>{show.name}</h3><p>{show.category} · 核验缺口</p><p>{show.reason}</p></article>)}
   </section>
-  <details class="audio-method"><summary>关于收录与来源</summary><p>元数据和单集说明来自发布者官方 RSS。近期精选仅展示最近 30 天的非日更更新，每档最多 2 集，按发布时间排序，不是热度榜单。目录数量指本站已收录单集，并非节目全部官方历史，身份已确认也不等于已经收录成功；音频使用官方 HTTPS enclosure，版权归原发布者所有。</p></details>
+  <details class="audio-method"><summary>关于收录与来源</summary><p>节目与单集元数据来自发布者官方 RSS；目录数量是本站已收录单集，不代表节目全部历史。音频使用官方 HTTPS enclosure，版权归原发布者所有。</p></details>
 </AudioPodcastLayout>
 <script is:inline>
   const audioTabs = [...document.querySelectorAll('.audio-index-tabs [role="tab"]')];

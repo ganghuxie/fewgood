@@ -26,11 +26,11 @@ assert.ok(!html.includes('maxresdefault'));
 '''], cwd=ROOT, check=True)
 
 
-def test_initial_grid_prioritizes_only_first_eight_and_later_cards_stay_lazy():
+def test_all_feed_card_thumbnails_stay_lazy_to_avoid_media_layout_shifts():
     source = (ROOT / 'site/src/components/VideoPage.astro').read_text(encoding='utf-8')
-    assert 'pageVideos.map((v, index)' in source
-    assert "loading={index < 8 ? 'eager' : 'lazy'}" in source
-    assert "fetchpriority={index < 8 ? 'high' : undefined}" in source
+    assert 'pageVideos.map(v =>' in source
+    assert 'loading="lazy"' in source
+    assert 'fetchpriority={index < 8 ?' not in source
     assert 'srcset={thumbSrcset(v)}' in source
     assert 'sizes={CARD_THUMB_SIZES}' in source
     assert 'loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}"' in source

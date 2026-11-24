@@ -153,7 +153,7 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
     assert '<time datetime={episode.published_at_utc}>{episode.published_display}</time>' in index
     assert '{episode.duration_display}' in index
     assert '{EPISODE_COUNT_LABEL} {show.episodes.length} 集' in index
-    assert '近 30 天无入选' in index
+    assert '近 30 天无入选' not in index
     assert 'description_text' not in index and 'description_html' not in index
 
     for token in ('rating', 'subscriber', 'review_count', '评分', '订阅数', '收听数'):
@@ -202,7 +202,20 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
     show_page = _read(ROOT / 'site/src/components/AudioPodcastShowPage.astro')
     assert '仅收录近期公开免费单集，非完整历史' in index
     assert 'show.limited_public_page_fallback' in index
-    assert '!show.limited_public_page_fallback && !recent.some' in index
+    assert '!show.limited_public_page_fallback && !recent.some' not in index
     assert '仅收录近期公开免费单集，非完整历史' in show_page
     assert "show.episodes.length === 0 &&" in show_page
     assert 'min-height:40px' in layout  # the show-page return link remains a usable target
+
+
+def test_audio_index_uses_compact_source_backed_coverage_and_text_filters():
+    index = _read(INDEX_PATH)
+    layout = _read(LAYOUT_PATH)
+    assert 'data-confirmed-shows={confirmedCount}' in index
+    assert 'data-requested-shows={coverageDenominator}' in index
+    assert 'audio-coverage-track' in index
+    assert 'audio-coverage' in layout
+    assert 'loading="lazy"' in index
+    assert 'loading={index < 4 ?' not in index
+    filter_css = layout.split('.audio-category-filters', 1)[1].split('.audio-picks-status', 1)[0]
+    assert 'border-radius:18px' not in filter_css

@@ -51,10 +51,11 @@ assert.equal(playbackAudioUrl('https://cdn.fireside.fm/file/example.mp3'), 'http
     assert 'data-audio-url={playbackUrl}' in page
 
 
-def test_audio_cover_loading_preserves_official_sources_and_prioritizes_only_recent_cards():
+def test_audio_cover_loading_preserves_official_sources_and_keeps_all_cards_lazy():
     index = (ROOT / 'site/src/components/AudioPodcastIndex.astro').read_text(encoding='utf-8')
-    assert "loading={index < 4 ? 'eager' : 'lazy'}" in index
-    assert "fetchpriority={index < 4 ? 'high' : undefined}" in index
+    assert 'loading="lazy"' in index
+    assert "loading={index < 4 ? 'eager' : 'lazy'}" not in index
+    assert "fetchpriority={index < 4 ? 'high' : undefined}" not in index
     assert 'width="320" height="320" decoding="async"' in index
     assert 'src={coverDisplayUrl(coverUrl, { width: 640 })}' in index
     assert 'srcset={coverSrcset(coverUrl, CARD_COVER_WIDTHS)}' in index
