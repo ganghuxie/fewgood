@@ -69,7 +69,7 @@ for (const value of ['', 'not-a-date', '2026-11-25T00:00:00Z']) assert.equal(rel
     subprocess.run(['node', '--input-type=module', '-e', script], cwd=ROOT, check=True)
 
 
-def test_list_cards_keep_duration_on_thumbnail_and_use_icon_only_relative_meta():
+def test_list_cards_keep_duration_on_thumbnail_and_use_expanding_watch_later_control():
     files = [
         'site/src/components/VideoPage.astro',
         'site/src/lib/myspace-card.mjs',
@@ -80,13 +80,14 @@ def test_list_cards_keep_duration_on_thumbnail_and_use_icon_only_relative_meta()
     ]
     for path in files:
         source = read(path)
-        assert 'aria-label="稍后再看"' in source
-        assert 'data-tooltip="稍后再看"' in source
-        assert '<svg viewBox="0 0 24 24"' in source
-    assert '◷ 稍后观看</button>' not in '\n'.join(read(path) for path in files)
+        assert 'data-watch-later' in source
+    assert '稍后观看</button>' not in '\n'.join(read(path) for path in files)
     action = read('site/src/scripts/search-watch-later.js')
-    for token in ('width:26px', 'height:26px', 'right:8px', 'top:8px', 'svg{width:14px'):
+    for token in ('width:28px', 'height:28px', 'right:8px', 'top:8px', 'watch-later-label'):
         assert token in action
+    assert '::after' not in action
+    assert "'已添加'" in action
+    assert 'setTimeout' not in action
     assert 'duration">' in read('site/src/components/VideoPage.astro')
     assert 'relativePublishedTime(video.published_at)' in read('site/src/components/LibraryPage.astro')
     assert 'relativePublishedTime(item.video.published_at)' in read('site/src/pages/following.astro')
@@ -100,12 +101,10 @@ def test_watch_later_card_controls_are_thumbnail_scoped_hover_controls():
     assert '.video-card:hover .thumbnail .watch-later-action' in action
     assert '.thumbnail .watch-later-action:focus' in action
     assert '@media(max-width:375px)' in action
-    assert '@media(hover:none){.thumbnail .watch-later-action,.sr-thumbnail .watch-later-action{opacity:1;pointer-events:auto}' in action
-    assert '@media(hover:none)' in action
+    assert '@media(max-width:375px),(hover:none)' in action
     assert 'opacity:1!important' not in action
-    assert 'watchAddedButtons = new MutationObserver' in action
-    assert 'buttons.forEach(paint)' in action
-    assert 'requestAnimationFrame(placeTooltips)' in action
+    assert 'new MutationObserver' in action
+    assert "document.addEventListener('youtuber:library-change'" in action
 
 
 def test_detail_watch_later_remains_a_text_pill_with_detail_copy():

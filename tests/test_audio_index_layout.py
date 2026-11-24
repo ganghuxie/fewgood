@@ -135,11 +135,13 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
     assert '{episode.title}' in index
     assert '{show.display_name}' in index
     assert '{show_name}' in index
-    assert '{show.publisher}' in index
+    assert '{show.publisher}' not in index
     assert '<time datetime={episode.published_at_utc}>{published}</time>' in index
     assert 'relativePublishedTime(episode.published_at_utc)' in index
     assert '{episode.duration_display}' in index
     assert '{EPISODE_COUNT_LABEL} {show.episodes.length} 集' in index
+    assert 'latestTime = relativePublishedTime(latest?.publishedAt)' in index
+    assert 'episode.play_count' in index
     assert '近 30 天无入选' not in index
     assert 'description_text' not in index and 'description_html' not in index
 
@@ -180,7 +182,7 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
     assert 'data-audio-card-category={show.category' in index
     assert '非热度排序 · 排除日更节目' not in index
     assert '周热度精选待可靠单集热度源' in index
-    assert '日更节目 · 不进入近期精选' in index
+    assert '日更节目 · 不进入近期精选' not in index
     assert '悬而未决' not in index
     assert '张小珺' not in index
     assert "identity_verified_feed_unavailable" in index
@@ -188,8 +190,8 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
     assert '暂未获取到单集' in index
     assert '内容暂不可用' in index
     show_page = _read(ROOT / 'site/src/components/AudioPodcastShowPage.astro')
-    assert '仅收录近期公开免费单集，非完整历史' in index
-    assert 'show.limited_public_page_fallback' in index
+    assert '仅收录近期公开免费单集，非完整历史' not in index
+    assert 'show.limited_public_page_fallback' not in index
     assert '!show.limited_public_page_fallback && !recent.some' not in index
     assert '仅收录近期公开免费单集，非完整历史' in show_page
     assert "show.episodes.length === 0 &&" in show_page

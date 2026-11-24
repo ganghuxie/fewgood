@@ -139,13 +139,12 @@ def test_library_routes_use_dedicated_page_with_back_link_and_titles():
         assert 'LibraryPage' in source and f'title="{title}"' in source
 
 
-def test_drawer_links_and_auth_hook_use_shared_session_ui():
+def test_drawer_keeps_library_links_without_account_actions():
     source = read('site/src/components/Sidebar.astro')
-    for href in ('/favorites/', '/history/', '/about/', '/about/#feedback'):
+    for href in ('/favorites/', '/history/', '/following/'):
         assert f"link('{href}')" in source
-    assert 'data-sidebar-auth' in source
-    assert "document.querySelector('[data-auth-open]')?.click()" in source
-    assert "document.querySelector('[data-auth-signout]')?.click()" in source
+    for removed in ('/about/', '/about/#feedback', 'data-sidebar-auth', '退出登录'):
+        assert removed not in source
     assert 'width:80vw' in source
 
 
@@ -153,9 +152,9 @@ def test_mobile_header_has_one_four_item_sticky_row_and_nonsticky_controls():
     header = read('site/src/components/Header.astro')
     layout = read('site/src/components/Layout.astro')
     row, after_row = header.split('</div>', 1)
-    assert 'mode-switch' not in row and 'class="search"' not in row and 'chipbar' not in row
+    assert 'chipbar' not in row
     assert 'grid-template-areas:"menu logo library auth"' in header
-    assert '.libraries .lib-item:not([data-lib-kind="watchLater"])' in header
+    assert '.site-header .mode-switch){display:none}' in header
     assert 'href={link(\'/watch-later/\')}' in header
     assert '.site-header .search input){height:36px}' in header
     assert '.header-row{position:sticky!important' in layout
@@ -190,13 +189,11 @@ def test_desktop_library_panel_wins_as_a_viewport_right_aligned_fixed_panel():
         assert left >= 0
 
 
-def test_watch_later_tooltip_has_left_placement_timing_and_unclipped_icon():
+def test_watch_later_control_expands_left_inside_its_own_bar():
     source = read('site/src/scripts/search-watch-later.js')
-    assert 'right:calc(100% + 8px)' in source
-    assert 'top:50%;transform:translateY(-50%)' in source
-    assert 'transition-delay:150ms' in source
-    assert 'visibility 0s linear .05s' in source
-    assert 'background:rgba(255,255,255,.9)!important' in source
-    assert 'border-radius:6px!important' in source
-    assert '.thumbnail,.sr-thumbnail{overflow:visible}' in source
-    assert 'data-tooltip-side="below"' in source
+    assert 'right:8px!important;top:8px!important' in source
+    assert 'width:92px!important' in source
+    assert 'watch-later-label' in source
+    assert 'background:rgb(15 15 15 / .82)!important' in source
+    assert '::after' not in source
+    assert 'data-tooltip-side' not in source

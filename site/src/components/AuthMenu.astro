@@ -5,7 +5,7 @@ import { DIALOG_BRAND } from '../lib/brand.mjs';
   <button class="auth-login" type="button" data-auth-open><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg><span>登录/注册</span></button>
   <div class="auth-user" hidden>
     <button class="auth-avatar" type="button" aria-label="账户菜单" aria-expanded="false"><b data-library-count="watchLater" hidden></b></button>
-    <div class="auth-dropdown" hidden><small data-auth-email></small><a href="/watch-later/">稍后观看</a><a href="/favorites/">收藏</a><a href="/history/">历史</a><small class="auth-local-note">我的空间订阅默认仅保存在本设备</small><button type="button" data-auth-signout>退出登录</button></div>
+    <div class="auth-dropdown" hidden><small data-auth-email></small><button type="button" data-auth-signout>退出登录</button></div>
   </div>
   <div class="auth-backdrop" data-auth-close hidden></div>
   <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title" hidden>

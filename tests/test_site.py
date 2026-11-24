@@ -218,12 +218,12 @@ def test_recommendation_age_uses_span_days_everywhere():
         assert 'humanizeRecommendSpan(video.months)' not in source
 
 
-def test_library_panel_footer_is_tab_driven_not_static_history_duplicate():
+def test_library_panel_footer_is_watch_later_only():
     header = (Path(__file__).resolve().parents[1] / 'site/src/components/Header.astro').read_text()
     footer_line = next(line for line in header.splitlines() if 'data-panel-footer' in line)
-    assert "href={link('/history/')}" in footer_line
+    assert "href={link('/watch-later/')}" in footer_line
     assert 'href="#"' not in footer_line
-    assert "paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' }" in header
+    assert "paths = { watchLater: '/watch-later/' }" in header
     assert 'footer.href = `${base}${paths[kind]}`' in header
     assert "document.querySelector('.library-cluster')" in header
     nav = re.search(r'<nav class="libraries"[^>]*>(.*?)</nav>', header, re.S)
@@ -231,7 +231,7 @@ def test_library_panel_footer_is_tab_driven_not_static_history_duplicate():
     nav_body = nav.group(1)
     assert 'lib-panel' not in nav_body
     assert '查看全部' not in nav_body
-    assert nav_body.count('data-lib-kind=') == 3
+    assert nav_body.count('data-lib-kind=') == 1
 
 
 def test_myspace_card_shows_community_classic_badge_only_when_flagged():
