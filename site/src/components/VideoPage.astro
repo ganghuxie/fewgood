@@ -7,7 +7,7 @@ import channelData from '../data/channels.json';
 import zhData from '../data/zh.json';
 import topicData from '../data/topics.json';
 import topicLookup from '../data/topic_lookup.json';
-import { SITE_NAME, SECTION_LABELS, MODE_LABELS, COMMUNITY_SUBSOURCES } from '../lib/brand.mjs';
+import { SITE_NAME, SECTION_LABELS, COMMUNITY_SUBSOURCES } from '../lib/brand.mjs';
 import { topicSubscribeLabel, topicSubscribeTitle } from '../lib/topic-labels.mjs';
 const { videos, total, page, section, sort, feed, allVideos = videos } = Astro.props;
 const channels = Object.fromEntries((channelData.channels || []).map(channel => [channel.id, channel]));
@@ -30,8 +30,7 @@ const enrich = v => { const knownTopicId = v.topic_id || topicLookup[v.id] || nu
 const feedData = allVideos.map(enrich);
 const pageVideos = videos.map(enrich);
 ---
-<Layout title={`${label} · ${SITE_NAME}`} active={section}>
-  <section class="mode-switch" data-alpha-myspace hidden aria-label="内容模式"><button type="button" data-mode="myspace" aria-pressed="false">{MODE_LABELS.myspace}</button><button type="button" data-mode="explore" aria-pressed="true">{MODE_LABELS.explore}</button></section>
+<Layout title={`${label} · ${SITE_NAME}`} active={section} updatedAt={feed?.generated_at || feed?.summary?.generated_at || ''}>
   <div data-explore-view>
   <section class="page-heading"><div><h1>{label}</h1>{feed?.generated_at && <p class="page-meta">{lastUpdated(feed.generated_at)}</p>}<p>{subtitle}</p></div><span>{total} 个视频</span></section>
   {community && <section class="sort-row"><span>来自 {feed.summary.criteria.recommendation.min_recommenders}+ 位 HN 用户的长期推荐，跨越 {feed.summary.criteria.recommendation.min_months} 个月</span><nav><a href={pageUrl('community', 1, base, 'people')} aria-current={sort === 'people' ? 'page' : undefined}>{COMMUNITY_SUBSOURCES.people}</a><a href={pageUrl('community', 1, base, 'newest')} aria-current={sort === 'newest' ? 'page' : undefined}>{COMMUNITY_SUBSOURCES.newest}</a></nav></section>}

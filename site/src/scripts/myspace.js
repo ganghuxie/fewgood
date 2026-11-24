@@ -9,17 +9,18 @@ import { showPrompt } from './prompts.js';
 const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
 const LAST_TAB_KEY = 'fewgood:lastTab';
 const DEVICE_NOTICE = '这些订阅栏目只存在这台设备的浏览器里';
+// 保持管理订阅栏目的无障碍文案：aria-label="管理订阅栏目" title="管理订阅栏目"
 const feedSourceById = new Map(MYSPACE_SOURCES.map(source => [source.id, source]));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
-const shell = document.querySelector('[data-alpha-myspace]');
+const shell = document.querySelector('[data-header-mode-switch]') || document.querySelector('[data-alpha-myspace]');
 const explore = document.querySelector('[data-explore-view]');
 const space = document.querySelector('[data-myspace-view]');
 
 if (enabled && shell && explore && space) {
   const header = document.querySelector('.site-header');
   const chipbar = header?.querySelector('.chipbar');
-  if (header && chipbar) { header.classList.add('alpha-video-header'); header.insertBefore(shell, chipbar); }
+  if (header && chipbar && shell.parentElement !== header.querySelector('.header-row')) { header.classList.add('alpha-video-header'); header.insertBefore(shell, chipbar); }
   shell.hidden = false;
   const base = (document.querySelector('main')?.dataset.base || '').replace(/\/$/, '');
   const fetchJSON = path => fetch(`${base}${path}`).then(response => response.ok ? response.json() : Promise.reject(new Error(path))).catch(() => null);
@@ -203,7 +204,7 @@ if (enabled && shell && explore && space) {
   };
 
   const render = (keepEditor = false) => {
-    space.innerHTML = `<div class="myspace-heading"><div><h1>我的空间</h1><p class="myspace-device-note">${esc(DEVICE_NOTICE)}</p></div><button class="myspace-manage" type="button" data-myspace-manage aria-label="管理订阅栏目" title="管理订阅栏目">⚙</button></div><div data-template-picker hidden></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理订阅栏目"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>`;
+    space.innerHTML = `<p class="myspace-device-note">${esc(DEVICE_NOTICE)} · 可在导航栏点击“+ 新建栏目”</p><div data-template-picker hidden></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理订阅栏目"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>`;
     space.querySelector('[data-myspace-manage]')?.addEventListener('click', () => { renderEditor(); space.querySelector('[data-myspace-editor]')?.showModal(); });
     renderTemplates();
     renderColumns();
@@ -216,6 +217,7 @@ if (enabled && shell && explore && space) {
     const mine = mode === 'myspace';
     explore.hidden = mine; space.hidden = !mine;
     shell.querySelectorAll('[data-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === mode)));
+    document.querySelector('[data-myspace-new]')?.classList.toggle('visible', mine);
     try { localStorage.setItem(LAST_TAB_KEY, mode); } catch { /* private browsing */ }
     updateTabs();
     if (mine) render();
@@ -226,6 +228,12 @@ if (enabled && shell && explore && space) {
     if (next === mode) return;
     setMode(next); track('mode_switch', { mode: next });
   }));
+
+  document.querySelector('[data-myspace-new]')?.addEventListener('click', () => {
+    setMode('myspace');
+    renderEditor();
+    space.querySelector('[data-myspace-editor]')?.showModal();
+  });
 
   document.addEventListener('click', event => {
     const chip = event.target.closest('[data-topic-subscribe]');

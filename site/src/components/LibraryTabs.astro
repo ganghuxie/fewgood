@@ -1,0 +1,41 @@
+---
+import Layout from './Layout.astro';
+import { SITE_NAME } from '../lib/brand.mjs';
+const { initial = 'watchLater' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title={SITE_NAME} active="trending">
+  <section class="library-page library-tabs-page" data-library-tabs data-initial={initial} data-base={base}>
+    <div class="library-heading"><h1>视频库</h1><button class="clear" data-clear hidden>清空历史</button></div>
+    <nav class="library-tabs" role="tablist" aria-label="个人视频库"><a href={base + '/library/?tab=watchLater'} data-tab="watchLater">稍后再看</a><a href={base + '/library/?tab=favorites'} data-tab="favorites">收藏</a><a href={base + '/library/?tab=history'} data-tab="history">历史</a></nav>
+    <p class="empty" data-empty></p><div class="video-grid library-list" data-list></div>
+  </section>
+</Layout>
+<script>
+ import { KEYS, list, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
+ import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
+ const root = document.querySelector('[data-library-tabs]'), base = root.dataset.base;
+ const labels = { watchLater: '稍后再看是空的。把想看的内容先放在这里。', favorites: '还没有收藏视频。遇到真正喜欢的内容，再把它留下。', history: '还没有观看历史。看过的视频会显示在这里。' };
+ const query = new URLSearchParams(location.search).get('tab');
+ const kind = ['watchLater', 'favorites', 'history'].includes(query) ? query : (root.dataset.initial || 'watchLater');
+ const listHost = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]'), clear = root.querySelector('[data-clear]');
+ root.querySelectorAll('[data-tab]').forEach(tab => { tab.setAttribute('aria-selected', String(tab.dataset.tab === kind)); tab.classList.toggle('active', tab.dataset.tab === kind); });
+ const esc = value => String(value || '').replace(/[&<>"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[char]));
+ const duration = n => Math.floor((n || 0) / 60) + ':' + String((n || 0) % 60).padStart(2, '0');
+ let zhMap = {};
+ const render = items => {
+   empty.textContent = labels[kind]; empty.hidden = items.length > 0; clear.hidden = kind !== 'history' || !items.length;
+   listHost.innerHTML = items.map(video => {
+     const title = zhMap[video.id]?.title_zh || video.title || video.id;
+     return '<article class="video-card" data-id="' + esc(video.id) + '"><a class="card-link" href="' + base + '/v/' + esc(video.id) + '/"><div class="thumbnail"><img loading="lazy" src="' + esc(thumbFor(video)) + '" srcset="' + esc(thumbSrcset(video)) + '" sizes="' + CARD_THUMB_SIZES + '" ' + thumbFallbackAttr(video.id) + ' alt=""><span class="duration">' + duration(video.duration) + '</span></div><div class="video-info"><div class="channel-avatar channel-avatar-letter" aria-hidden="true">' + esc([...(video.channel || '频')][0]) + '</div><div class="video-copy"><h2 class="video-title">' + esc(title) + '</h2><p class="video-meta">' + esc(video.channel || '') + '</p></div></div></a><button class="remove" aria-label="移除" data-remove="' + esc(video.id) + '" type="button">×</button></article>';
+   }).join('');
+   listHost.querySelectorAll('[data-remove]').forEach(button => button.onclick = event => { event.preventDefault(); remove(KEYS[kind], button.dataset.remove); render(list(KEYS[kind])); });
+   if (kind === 'watchLater') listHost.querySelectorAll('[data-id]').forEach(node => node.addEventListener('click', () => markWatchLaterSeen(node.dataset.id) && updateBadges(), { once: true }));
+   updateBadges();
+ };
+ Promise.all([fetch(base + '/catalog.json').then(r => r.json()), fetch(base + '/channels.json').then(r => r.json()), fetch(base + '/zh.json').then(r => r.json()).catch(() => ({ videos: {} }))]).then(([catalog, channels, zh]) => { zhMap = zh.videos || {}; migrate(KEYS[kind], catalog, channels); render(list(KEYS[kind])); }).catch(() => render(list(KEYS[kind])));
+ clear.addEventListener('click', () => { set(KEYS.history, []); render([]); });
+</script>
+<style>
+.library-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.library-heading h1{font-size:26px;margin:0}.library-tabs{display:flex;gap:8px;border-bottom:1px solid #e5e5e5;margin-bottom:22px}.library-tabs a{padding:10px 14px;color:#606060;text-decoration:none;border-bottom:2px solid transparent}.library-tabs a.active,.library-tabs a[aria-selected="true"]{color:#0f0f0f;border-color:#49C987;font-weight:600}.empty{color:#606060;padding:36px 0;text-align:center}.library-list article{position:relative}.library-list .card-link{display:block;color:#0f0f0f;text-decoration:none}.library-list .remove{position:absolute;right:8px;top:8px;border:0;background:#0f0f0fcc;color:#fff;width:32px;height:32px;border-radius:50%;font-size:22px;line-height:28px;cursor:pointer;opacity:0}.library-list article:hover .remove{opacity:1}
+</style>
