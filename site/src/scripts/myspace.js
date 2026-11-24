@@ -8,7 +8,6 @@ import { showPrompt } from './prompts.js';
 
 const enabled = String(import.meta.env.PUBLIC_ALPHA_MYSPACE ?? 'true').toLowerCase() !== 'false';
 const LAST_TAB_KEY = 'fewgood:lastTab';
-const DEVICE_NOTICE = '这些订阅栏目只存在这台设备的浏览器里';
 // 保持管理订阅栏目的无障碍文案：aria-label="管理订阅栏目" title="管理订阅栏目"
 const feedSourceById = new Map(MYSPACE_SOURCES.map(source => [source.id, source]));
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -204,7 +203,7 @@ if (enabled && shell && explore && space) {
   };
 
   const render = (keepEditor = false) => {
-    space.innerHTML = `<p class="myspace-device-note">${esc(DEVICE_NOTICE)} · 可在导航栏点击“+ 新建栏目”</p><div data-template-picker hidden></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理订阅栏目"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>`;
+    space.innerHTML = `<div data-template-picker hidden></div><dialog class="myspace-editor" data-myspace-editor aria-label="管理订阅栏目"></dialog><div class="myspace-columns" data-myspace-columns><p class="myspace-loading">正在读取现有内容池…</p></div>`;
     space.querySelector('[data-myspace-manage]')?.addEventListener('click', () => { renderEditor(); space.querySelector('[data-myspace-editor]')?.showModal(); });
     renderTemplates();
     renderColumns();

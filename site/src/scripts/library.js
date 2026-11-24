@@ -168,7 +168,7 @@ export function markWatchLaterSeen(id) {
 export function updateBadges() {
   document.querySelectorAll('[data-library-count]').forEach(node => {
     const kind = node.dataset.libraryCount;
-    // Only 稍后再看 shows a badge, and only for unseen items.
+    // Only 稍后观看 shows a badge, and only for unseen items.
     if (kind !== 'watchLater') {
       node.textContent = '';
       node.hidden = true;

@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <Layout title={SITE_NAME} active="trending">
   <section class="library-page library-tabs-page" data-library-tabs data-initial={initial} data-base={base}>
     <div class="library-heading"><h1>视频库</h1><button class="clear" data-clear hidden>清空历史</button></div>
-    <nav class="library-tabs" role="tablist" aria-label="个人视频库"><a href={base + '/library/?tab=watchLater'} data-tab="watchLater">稍后再看</a><a href={base + '/library/?tab=favorites'} data-tab="favorites">收藏</a><a href={base + '/library/?tab=history'} data-tab="history">历史</a></nav>
+    <nav class="library-tabs" role="tablist" aria-label="个人视频库"><a href={base + '/library/?tab=watchLater'} data-tab="watchLater">稍后观看</a><a href={base + '/library/?tab=favorites'} data-tab="favorites">收藏</a><a href={base + '/library/?tab=history'} data-tab="history">历史</a></nav>
     <p class="empty" data-empty></p><div class="video-grid library-list" data-list></div>
   </section>
 </Layout>
@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
  import { KEYS, has, list, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
  import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
  const root = document.querySelector('[data-library-tabs]'), base = root.dataset.base;
- const labels = { watchLater: '稍后再看是空的。把想看的内容先放在这里。', favorites: '还没有收藏视频。遇到真正喜欢的内容，再把它留下。', history: '还没有观看历史。看过的视频会显示在这里。' };
+ const labels = { watchLater: '稍后观看是空的。把想看的内容先放在这里。', favorites: '还没有收藏视频。遇到真正喜欢的内容，再把它留下。', history: '还没有观看历史。看过的视频会显示在这里。' };
  const query = new URLSearchParams(location.search).get('tab');
  const kind = ['watchLater', 'favorites', 'history'].includes(query) ? query : (root.dataset.initial || 'watchLater');
  const listHost = root.querySelector('[data-list]'), empty = root.querySelector('[data-empty]'), clear = root.querySelector('[data-clear]');
@@ -27,12 +27,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
    empty.textContent = labels[kind]; empty.hidden = items.length > 0; clear.hidden = kind !== 'history' || !items.length;
    listHost.innerHTML = items.map(video => {
      const title = zhMap[video.id]?.title_zh || video.title || video.id;
-     return '<article class="video-card" data-id="' + esc(video.id) + '"><a class="card-link" href="' + base + '/v/' + esc(video.id) + '/"><div class="thumbnail"><img loading="lazy" src="' + esc(thumbFor(video)) + '" srcset="' + esc(thumbSrcset(video)) + '" sizes="' + CARD_THUMB_SIZES + '" ' + thumbFallbackAttr(video.id) + ' alt=""><span class="duration">' + duration(video.duration) + '</span></div><div class="video-info"><div class="channel-avatar channel-avatar-letter" aria-hidden="true">' + esc([...(video.channel || '频')][0]) + '</div><div class="video-copy"><h2 class="video-title">' + esc(title) + '</h2><p class="video-meta">' + esc(video.channel || '') + ' · ' + duration(video.duration) + '</p></div></div></a><button class="watch-later-action" type="button" data-watch-later data-id="' + esc(video.id) + '" data-title="' + esc(title) + '" data-channel="' + esc(video.channel || '') + '" data-duration="' + (Number(video.duration) || 0) + '" aria-pressed="false">◷ 稍后再看</button></article>';
+     return '<article class="video-card" data-id="' + esc(video.id) + '"><a class="card-link" href="' + base + '/v/' + esc(video.id) + '/"><div class="thumbnail"><img loading="lazy" src="' + esc(thumbFor(video)) + '" srcset="' + esc(thumbSrcset(video)) + '" sizes="' + CARD_THUMB_SIZES + '" ' + thumbFallbackAttr(video.id) + ' alt=""><span class="duration">' + duration(video.duration) + '</span><button class="watch-later-action" type="button" data-watch-later data-id="' + esc(video.id) + '" data-title="' + esc(title) + '" data-channel="' + esc(video.channel || '') + '" data-duration="' + (Number(video.duration) || 0) + '" aria-pressed="false">◷ 稍后观看</button></div><div class="video-info"><div class="channel-avatar channel-avatar-letter" aria-hidden="true">' + esc([...(video.channel || '频')][0]) + '</div><div class="video-copy"><h2 class="video-title">' + esc(title) + '</h2><p class="video-meta">' + esc(video.channel || '') + ' · ' + duration(video.duration) + '</p></div></div></a></article>';
    }).join('');
    if (kind === 'watchLater') listHost.querySelectorAll('[data-id]').forEach(node => node.addEventListener('click', () => markWatchLaterSeen(node.dataset.id) && updateBadges(), { once: true }));
    listHost.querySelectorAll('[data-watch-later]').forEach(button => {
      const active = has(KEYS.watchLater, button.dataset.id);
-     button.classList.toggle('is-added', active); button.textContent = active ? '✓ 已加入' : '◷ 稍后再看'; button.setAttribute('aria-pressed', String(active));
+     button.classList.toggle('is-added', active); button.textContent = active ? '✓ 已添加' : '◷ 稍后观看'; button.setAttribute('aria-pressed', String(active));
    });
    updateBadges();
  };
@@ -41,7 +41,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 </script>
 <script>
  import { has, toggleVideo, KEYS } from '../scripts/library.js';
- const paint = button => { const active = has(KEYS.watchLater, button.dataset.id); button.classList.toggle('is-added', active); button.textContent = active ? '✓ 已加入' : '◷ 稍后再看'; button.setAttribute('aria-pressed', String(active)); };
+ const paint = button => { const active = has(KEYS.watchLater, button.dataset.id); button.classList.toggle('is-added', active); button.textContent = active ? '✓ 已添加' : '◷ 稍后观看'; button.setAttribute('aria-pressed', String(active)); };
  document.addEventListener('click', event => { const button = event.target.closest('[data-watch-later]'); if (!button) return; event.preventDefault(); event.stopPropagation(); toggleVideo(KEYS.watchLater, { id: button.dataset.id, title: button.dataset.title, channel: button.dataset.channel, duration: Number(button.dataset.duration) || 0 }); paint(button); });
  document.addEventListener('youtuber:library-change', () => document.querySelectorAll('[data-watch-later]').forEach(paint));
 </script>

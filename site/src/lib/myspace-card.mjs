@@ -1,4 +1,4 @@
-import { CARD_THUMB_SIZES, shouldShowWhy, thumbFallbackAttr, thumbFor, thumbSrcset } from './format.mjs';
+import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from './format.mjs';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const duration = seconds => `${Math.floor((Number(seconds) || 0) / 60)}:${String((Number(seconds) || 0) % 60).padStart(2, '0')}`;
@@ -14,7 +14,6 @@ function avatar(video) {
 export function card(video, href = '', zh = null) {
   const zhTitle = zh?.title_zh || video.title_zh || '';
   const title = zhTitle || video.title;
-  const why = shouldShowWhy(video) ? `<p class="why-good">${esc(video.why_good)}</p>` : '';
   const classic = video.community_classic ? `<span class="community-classic-badge">${Number(video.recommenders) > 0 ? `HN ${Number(video.recommenders)} 人推荐` : '社区精选'}</span>` : '';
-  return `<article class="video-card"><a class="card-link" href="${esc(href)}"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt="">${classic}<span class="duration">${duration(video.duration_seconds)}</span></div><div class="video-info">${avatar(video)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2>${why}<p class="video-meta">${esc(video.channel)} · ${duration(video.duration_seconds)}</p></div></div></a><button class="watch-later-action" type="button" data-watch-later data-id="${esc(video.id)}" data-title="${esc(title)}" data-channel="${esc(video.channel)}" data-duration="${Number(video.duration_seconds) || 0}" aria-pressed="false">◷ 稍后再看</button></article>`;
+  return `<article class="video-card"><a class="card-link" href="${esc(href)}"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt="">${classic}<span class="duration">${duration(video.duration_seconds)}</span><button class="watch-later-action" type="button" data-watch-later data-id="${esc(video.id)}" data-title="${esc(title)}" data-channel="${esc(video.channel)}" data-duration="${Number(video.duration_seconds) || 0}" aria-pressed="false">◷ 稍后观看</button></div><div class="video-info">${avatar(video)}<div class="video-copy"><h2 class="video-title">${esc(title)}</h2><p class="video-meta">${esc(video.channel)} · ${duration(video.duration_seconds)}</p></div></div></a></article>`;
 }

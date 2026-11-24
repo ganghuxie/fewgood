@@ -151,7 +151,7 @@ def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
     for banned in (
         'Reddit', '可能', '计划', '大概', 'sync.js', 'end-to-end', '端到端',
         '今日精选', '服务器不收集任何痕迹', '安全加密同步', '为什么有 fewgood',
-        '内容从哪里来', '数据与隐私', '联系我们', '第三方播放器', '稍后再看',
+        '内容从哪里来', '数据与隐私', '联系我们', '第三方播放器', '稍后观看',
     ):
         assert banned not in about
     assert '前往精选' in about
@@ -220,9 +220,9 @@ def test_recommendation_age_uses_span_days_everywhere():
 def test_library_panel_footer_is_tab_driven_not_static_history_duplicate():
     header = (Path(__file__).resolve().parents[1] / 'site/src/components/Header.astro').read_text()
     footer_line = next(line for line in header.splitlines() if 'data-panel-footer' in line)
-    assert "href={link('/history/')}" in footer_line
+    assert "href={link('/library/?tab=history')}" in footer_line
     assert 'href="#"' not in footer_line
-    assert "paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' }" in header
+    assert "paths = { history: '/library/?tab=history', favorites: '/library/?tab=favorites', watchLater: '/library/?tab=watchLater' }" in header
     assert 'footer.href = `${base}${paths[kind]}`' in header
     assert "document.querySelector('.library-cluster')" in header
     nav = re.search(r'<nav class="libraries"[^>]*>(.*?)</nav>', header, re.S)

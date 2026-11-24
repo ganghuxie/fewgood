@@ -24,7 +24,7 @@ def test_stage1_library_tabs_use_existing_storage_and_keep_legacy_routes():
     tabs = read('site/src/components/LibraryTabs.astro')
     assert 'KEYS[kind]' in tabs
     assert 'migrate(KEYS[kind]' in tabs
-    assert '稍后再看是空的' in tabs
+    assert '稍后观看是空的' in tabs
     assert '还没有收藏视频' in tabs
     assert '还没有观看历史' in tabs
     for path in ('site/src/pages/library/index.astro', 'site/src/pages/history.astro',
@@ -40,4 +40,21 @@ def test_stage1_space_copy_and_avatar_shortcuts_are_present():
     assert 'data-myspace-new' in myspace
     assert '/library/?tab=watchLater' in auth
     assert '本设备' in auth and '订阅' in about
+
+
+def test_stage1_header_library_is_one_icon_with_three_tab_flyout():
+    header = read('site/src/components/Header.astro')
+    assert header.count('<div class="lib-item" data-lib-kind="library">') == 1
+    assert 'data-panel-tab="history">历史' in header
+    assert 'data-panel-tab="favorites">收藏' in header
+    assert 'data-panel-tab="watchLater">稍后观看' in header
+    assert 'data-panel-footer' in header and "'/library/'" in header
+
+
+def test_stage1_auth_dialog_escapes_header_and_has_safe_viewport_bounds():
+    auth = read('site/src/components/AuthMenu.astro')
+    assert 'document.body.append(backdrop, dialog)' in auth
+    assert 'max-height:calc(100dvh - 32px)' in auth
+    assert 'overflow-y:auto' in auth
+    assert 'position:fixed' in auth
 

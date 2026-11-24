@@ -419,14 +419,14 @@ def test_refresh_enriches_visible_light_before_rebuild():
     assert "'site/public/zh.json'" in source
 
 
-def test_search_and_library_templates_read_blurb_when_present():
+def test_search_and_library_templates_keep_blurb_data_out_of_video_cards():
     root = Path(__file__).resolve().parents[1]
     catalog = (root / 'site/scripts/build-catalog.mjs').read_text()
     assert 'enrichment.blurb_zh' in catalog
     search = (root / 'site/src/pages/search.astro').read_text()
-    assert 'v.b' in search and 'zh-blurb' in search
+    assert 'v.b' not in search and 'zh-blurb' not in search
     library = (root / 'site/src/components/LibraryPage.astro').read_text()
     assert "fetch(`${base}/zh.json`)" in library
-    assert 'z.blurb_zh' in library
+    assert 'z.blurb_zh' not in library and 'zh-blurb' not in library
     myspace = (root / 'site/src/lib/myspace-card.mjs').read_text()
     assert 'blurb_zh' not in myspace

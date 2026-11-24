@@ -84,31 +84,17 @@ def _resolved(rules: list[CssRule], selector: str, prop: str, width: int) -> str
     return value
 
 
-def _column_count(value: str | None) -> int:
-    assert value, 'grid-template-columns is missing'
-    if value == '1fr':
-        return 1
-    match = re.fullmatch(r'repeat\(\s*(\d+)\s*,\s*minmax\(\s*0\s*,\s*1fr\s*\)\s*\)', value)
-    assert match, f'unexpected grid-template-columns: {value}'
-    return int(match.group(1))
-
-
 def _rules() -> list[CssRule]:
     return _parse_css(_style_text(_read(LAYOUT_PATH)))
 
 
-def test_audio_index_grids_are_four_two_and_one_columns():
+def test_audio_index_grids_auto_fill_with_comfortable_cards():
     rules = _rules()
     for selector in ('.audio-recent-grid', '.audio-show-grid'):
-        for width in (1280, 1366, 1600):
-            assert _column_count(_resolved(rules, selector, 'grid-template-columns', width)) == 4
-        for width in (600, 768, 1024, 1279):
-            assert _column_count(_resolved(rules, selector, 'grid-template-columns', width)) == 2
-        for width in (390, 480, 599):
-            assert _column_count(_resolved(rules, selector, 'grid-template-columns', width)) == 1
-        assert _resolved(rules, selector, 'gap', 1280) == '28px 16px'
-        assert _resolved(rules, selector, 'gap', 480) == '20px'
-        assert 'minmax(0,1fr)' in _resolved(rules, selector, 'grid-template-columns', 1280)
+        columns = _resolved(rules, selector, 'grid-template-columns', 1280)
+        assert columns == 'repeat(auto-fill,minmax(190px,1fr))'
+        assert _resolved(rules, selector, 'gap', 1280) == '20px'
+        assert _resolved(rules, selector, 'gap', 390) == '16px'
 
 
 def test_audio_index_is_plain_white_page_without_magazine_tokens():
@@ -211,10 +197,6 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
 def test_audio_index_uses_compact_source_backed_coverage_and_text_filters():
     index = _read(INDEX_PATH)
     layout = _read(LAYOUT_PATH)
-    assert 'data-confirmed-shows={confirmedCount}' in index
-    assert 'data-requested-shows={coverageDenominator}' in index
-    assert 'audio-coverage-track' in index
-    assert 'audio-coverage' in layout
     assert 'loading="lazy"' in index
     assert 'loading={index < 4 ?' not in index
     filter_css = layout.split('.audio-category-filters', 1)[1].split('.audio-picks-status', 1)[0]

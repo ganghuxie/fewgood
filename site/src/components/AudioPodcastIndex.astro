@@ -13,8 +13,6 @@ const bySlug = Object.fromEntries(shows.map(show => [show.slug, show]));
 const missingShows = data.catalog?.missing_shows || [];
 const confirmedCount = data.catalog?.confirmed_show_count || shows.length;
 const requestedCount = data.catalog?.requested_show_count || confirmedCount;
-const coverageDenominator = Math.max(0, Number(requestedCount) || 0);
-const coveragePercent = coverageDenominator ? Math.min(100, Math.round((Number(confirmedCount) / coverageDenominator) * 100)) : 0;
 // 周热度精选待可靠单集热度源：仅在“关于收录与来源”中低强调说明，不作为主内容提示。
 ---
 <AudioPodcastLayout title="音频播客 · fewgood." description="发现最值得听的播客。" updatedAt={data.generated_at || ''}>
@@ -22,10 +20,6 @@ const coveragePercent = coverageDenominator ? Math.min(100, Math.round((Number(c
   <div class="audio-index-tabs" role="tablist" aria-label="音频播客内容">
     <button id="recent-tab" type="button" role="tab" aria-selected="true" aria-controls="recent-panel">近期精选</button>
     <button id="directory-tab" type="button" role="tab" aria-selected="false" aria-controls="directory-panel" tabindex="-1">节目目录</button>
-  </div>
-  <div class="audio-coverage" data-confirmed-shows={confirmedCount} data-requested-shows={coverageDenominator} aria-label={`节目覆盖 ${confirmedCount}${coverageDenominator ? `/${coverageDenominator}` : ''} 档`}>
-    <div class="audio-coverage-label"><span>节目覆盖</span><strong>{confirmedCount}{coverageDenominator ? ` / ${coverageDenominator}` : ' 档已确认'}</strong></div>
-    <div class="audio-coverage-track" role="progressbar" aria-valuemin="0" aria-valuemax={coverageDenominator || 1} aria-valuenow={confirmedCount} aria-label="已确认节目数量"><span style={`width:${coveragePercent}%`}></span></div>
   </div>
   <section id="recent-panel" class="audio-tab-panel audio-preview-section audio-index-section" role="tabpanel" aria-labelledby="recent-tab">
     <div class="audio-category-filters" data-category-filters="recent" aria-label="筛选近期精选类别">

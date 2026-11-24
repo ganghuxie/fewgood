@@ -5,7 +5,7 @@ import { DIALOG_BRAND } from '../lib/brand.mjs';
   <button class="auth-login" type="button" data-auth-open><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg><span>登录/注册</span></button>
   <div class="auth-user" hidden>
     <button class="auth-avatar" type="button" aria-label="账户菜单" aria-expanded="false"><b data-library-count="watchLater" hidden></b></button>
-    <div class="auth-dropdown" hidden><small data-auth-email></small><a href="/library/?tab=watchLater">稍后再看</a><a href="/library/?tab=favorites">收藏</a><a href="/library/?tab=history">历史</a><small class="auth-local-note">我的空间订阅默认仅保存在本设备</small><button type="button" data-auth-signout>退出登录</button></div>
+    <div class="auth-dropdown" hidden><small data-auth-email></small><a href="/library/?tab=watchLater">稍后观看</a><a href="/library/?tab=favorites">收藏</a><a href="/library/?tab=history">历史</a><small class="auth-local-note">我的空间订阅默认仅保存在本设备</small><button type="button" data-auth-signout>退出登录</button></div>
   </div>
   <div class="auth-backdrop" data-auth-close hidden></div>
   <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title" hidden>
@@ -26,6 +26,9 @@ import { DIALOG_BRAND } from '../lib/brand.mjs';
 <style>
 .auth-avatar{position:relative}.auth-avatar [data-library-count]{position:absolute;top:-5px;right:-7px;min-width:17px;padding:1px 4px;border-radius:9px;background:#cc0000;color:#fff;font-size:10px;line-height:14px;text-align:center}
 </style>
+<style is:global>
+.auth-dialog{max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
+</style>
 <script>
   import { emailRedirectTo, getSupabase, supabaseEnabled } from '../scripts/supabase.js';
   import { startSync } from '../scripts/sync.js';
@@ -34,7 +37,8 @@ import { DIALOG_BRAND } from '../lib/brand.mjs';
   if (supabaseEnabled && root) {
     root.hidden = false;
     const dialogBrand = root.dataset.dialogBrand || 'fewgood.';
-    const db = getSupabase(), login = root.querySelector('[data-auth-open]'), user = root.querySelector('.auth-user'), avatar = user.querySelector('.auth-avatar'), dropdown = user.querySelector('.auth-dropdown'), dialog = root.querySelector('.auth-dialog'), backdrop = root.querySelector('.auth-backdrop'), message = root.querySelector('.auth-message'), form = root.querySelector('[data-auth-form]'), recoveryForm = root.querySelector('[data-auth-recovery-form]'), title = root.querySelector('#auth-title');
+    const db = getSupabase(), login = root.querySelector('[data-auth-open]'), user = root.querySelector('.auth-user'), avatar = user.querySelector('.auth-avatar'), dropdown = user.querySelector('.auth-dropdown'), dialog = root.querySelector('.auth-dialog'), backdrop = root.querySelector('.auth-backdrop'), closeButtons = root.querySelectorAll('[data-auth-close]'), message = root.querySelector('.auth-message'), form = root.querySelector('[data-auth-form]'), recoveryForm = root.querySelector('[data-auth-recovery-form]'), title = root.querySelector('#auth-title');
+    document.body.append(backdrop, dialog);
     let pendingOAuthMethod = null;
     let recoveryMode = false;
     const show = (open, recovery = false) => { recoveryMode = open && recovery; dialog.hidden = !open; backdrop.hidden = !open; form.hidden = recoveryMode; recoveryForm.hidden = !recoveryMode; title.textContent = recoveryMode ? '设置新密码' : `登录 ${dialogBrand}`; if (open) (recoveryMode ? recoveryForm : form).querySelector('input')?.focus(); };
@@ -42,7 +46,7 @@ import { DIALOG_BRAND } from '../lib/brand.mjs';
     const friendlyError = error => { const original = error?.message || ''; const text = original.toLowerCase(); if (text.includes('invalid login credentials')) return '邮箱或密码不对；如果之前用 Google 登录过，请用 Google 登录或点“忘记密码”设置密码'; if (text.includes('user already registered')) return '这个邮箱已注册，请直接登录或点“忘记密码”'; if (text.includes('password') && (text.includes('6') || text.includes('short') || text.includes('weak'))) return '密码至少 6 位'; if (text.includes('email') && (text.includes('invalid') || text.includes('valid'))) return '邮箱格式不正确'; if (text.includes('rate limit') || text.includes('too many')) return '发信太频繁，请稍后再试'; return original; };
     const closeDropdown = () => { dropdown.hidden = true; avatar.setAttribute('aria-expanded', 'false'); };
     const paint = session => { const email = session?.user?.email; closeDropdown(); login.hidden = !!email; user.hidden = !email; if (email) { avatar.textContent = email[0].toUpperCase(); user.querySelector('[data-auth-email]').textContent = email; } };
-    login.addEventListener('click', () => show(true)); root.querySelectorAll('[data-auth-close]').forEach(button => button.addEventListener('click', () => show(false)));
+    login.addEventListener('click', () => show(true)); closeButtons.forEach(button => button.addEventListener('click', () => show(false)));
     document.addEventListener('keydown', event => { if (event.key !== 'Escape' || dropdown.hidden) return; closeDropdown(); avatar.focus(); event.preventDefault(); event.stopPropagation(); });
     document.addEventListener('click', event => { if (!dropdown.hidden && !dropdown.contains(event.target) && !avatar.contains(event.target)) closeDropdown(); });
     form.addEventListener('submit', async event => { event.preventDefault(); const values = new FormData(event.currentTarget), email = values.get('email'), password = values.get('password'), mode = event.submitter?.dataset.authAction || 'login'; setMessage(''); const result = mode === 'login' ? await db.auth.signInWithPassword({ email, password }) : await db.auth.signUp({ email, password, options: { emailRedirectTo: emailRedirectTo() } }); if (result.error) { setMessage(friendlyError(result.error)); return; } if (mode === 'signup' && result.data?.user?.identities && result.data.user.identities.length === 0) { setMessage('这个邮箱已注册，请直接登录或点“忘记密码”'); return; } track(mode === 'login' ? 'login' : 'signup', { method: 'password' }); if (result.data?.session) { setMessage(mode === 'login' ? '登录成功' : '注册成功', true); show(false); } else if (mode === 'signup') setMessage('注册成功，请查收确认邮件', true); else { setMessage('登录成功', true); show(false); } });

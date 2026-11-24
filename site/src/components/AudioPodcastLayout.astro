@@ -48,10 +48,8 @@ const policy = '音频来自发布者官方来源，本站不提供下载。';
 .audio-index-section .audio-preview-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:16px}
 .audio-index-section .audio-preview-section-head h2{font-size:20px;line-height:1.4;font-weight:700;margin:0}
 .audio-index-section .audio-preview-section-head p{color:var(--muted);font-size:13px;margin:0}
-.audio-recent-grid,.audio-show-grid{display:grid;gap:28px 16px;align-items:start}.audio-recent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.audio-show-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(min-width:1280px){.audio-recent-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.audio-show-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(min-width:600px) and (max-width:1279px){.audio-recent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.audio-show-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:599px){.audio-recent-grid{grid-template-columns:1fr}.audio-show-grid{grid-template-columns:1fr}.audio-recent-grid,.audio-show-grid{gap:20px}.audio-index-head{align-items:flex-start}.audio-index-section .audio-preview-section-head{display:block}.audio-index-section .audio-preview-section-head p{margin-top:6px}.audio-index-section{margin-top:30px}}
+.audio-recent-grid,.audio-show-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:20px;align-items:start}
+@media(max-width:599px){.audio-recent-grid,.audio-show-grid{gap:16px}.audio-index-head{align-items:flex-start}.audio-index-section .audio-preview-section-head{display:block}.audio-index-section .audio-preview-section-head p{margin-top:6px}.audio-index-section{margin-top:30px}}
 .audio-recent-card,.audio-show-card{min-width:0}
 .audio-show-card{display:block;padding:0;border-top:0;color:inherit;text-decoration:none}
 .audio-card-link,.audio-show-card{display:block;min-width:0;color:var(--ink);text-decoration:none}
@@ -75,13 +73,15 @@ const policy = '音频来自发布者官方来源，本站不提供下载。';
 .audio-preview-policy{border-top:1px solid var(--line);margin:28px 0 0;padding-top:18px;font-size:11px;color:var(--muted)}
 </style>
 <style is:global>
-.audio-index-section .audio-card-media{width:min(100%,140px)}
-.audio-index-section .audio-recent-grid,.audio-index-section .audio-show-grid{grid-template-columns:repeat(4,140px);justify-content:space-between;row-gap:18px}
+.audio-index-section .audio-card-media{width:100%;aspect-ratio:1/1}
 .audio-index-section .audio-card-copy{padding:6px 2px 0}
 .audio-index-section .audio-card-title{font-size:14px;line-height:20px}
 .audio-index-section .audio-card-show{font-size:12px;line-height:16px;margin-top:2px}
 .audio-index-section .audio-card-meta{font-size:12px;line-height:16px;margin-top:1px}
 .audio-method .audio-picks-status{margin:0;padding:0;border:0;color:var(--muted);font-size:12px;line-height:1.55}
+</style>
+<style is:global>
+.audio-show-details{max-width:min(100%,960px);font-size:16px;line-height:1.9}
 </style>
 <script is:inline>
   // Scope the horizontal scroll to audio pages; never move the page vertically.

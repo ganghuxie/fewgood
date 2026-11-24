@@ -15,15 +15,15 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索精选池" aria-label="搜索精选池"/><button aria-label="搜索">⌕</button></form>
     <div class="library-cluster">
       <nav class="libraries" aria-label="个人视频库">
-        <div class="lib-item" data-library-link><a class="lib-trigger" href={link('/library/')} data-lib-trigger aria-label="个人视频库"><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v16H7.5A2.5 2.5 0 0 0 5 21.5m0-16v16M8 7h8M8 11h8"/></svg><span>视频库</span><b data-library-count="watchLater" hidden></b></a></div>
-        <div class="lib-item" data-lib-kind="history"><a class="lib-trigger" href={link('/history/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/><path d="M4.9 10a8 8 0 1 1 .1 4"/><path d="M4 5v5h5"/></svg><span>历史</span></a></div>
+        <div class="lib-item" data-lib-kind="library"><a class="lib-trigger" href={link('/library/')} data-lib-trigger aria-label="个人视频库" title="个人视频库"><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v16H7.5A2.5 2.5 0 0 0 5 21.5m0-16v16M8 7h8M8 11h8"/></svg><b data-library-count="watchLater" hidden></b></a></div>
+        
         <div class="lib-item" data-lib-kind="favorites"><a class="lib-trigger" href={link('/favorites/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.5 5.1 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 4Z"/></svg><span>收藏</span></a></div>
-        <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后再看</span><b data-library-count="watchLater" hidden></b></a></div>
+        <div class="lib-item" data-lib-kind="watchLater"><a class="lib-trigger" href={link('/watch-later/')} data-lib-trigger><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l3.5 2"/><path d="M5.2 8.5A8 8 0 1 1 4 13"/><path d="M4 5v4h4"/></svg><span>稍后观看</span><b data-library-count="watchLater" hidden></b></a></div>
       </nav>
       <div class="lib-panel" data-panel hidden>
-        <div class="lib-panel-tabs" role="tablist" aria-label="视频库"><button type="button" data-panel-tab="history">历史</button><button type="button" data-panel-tab="favorites">收藏</button><button type="button" data-panel-tab="watchLater">稍后再看</button></div>
+        <div class="lib-panel-tabs" role="tablist" aria-label="视频库"><button type="button" data-panel-tab="history">历史</button><button type="button" data-panel-tab="favorites">收藏</button><button type="button" data-panel-tab="watchLater">稍后观看</button></div>
         <div class="lib-panel-scroll" data-panel-list></div>
-        <a class="lib-panel-footer" data-panel-footer href={link('/history/')}>查看全部</a>
+        <a class="lib-panel-footer" data-panel-footer href={link('/library/?tab=history')}>查看全部</a>
       </div>
     </div>
     <AuthMenu />
@@ -32,6 +32,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 </header>
 <style>
 .library-cluster{position:relative;display:flex;align-items:center}
+.libraries .lib-item:not([data-lib-kind="library"]){display:none}
 .lib-item[data-lib-kind="history"],.lib-item[data-lib-kind="favorites"],.lib-item[data-lib-kind="watchLater"]{display:none}
 .libraries{display:flex;gap:8px;align-items:center}
 .header-row{contain:layout}
@@ -93,7 +94,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     if (sameDay) return `今天 ${hh}:${mm}`;
     return `${date.getMonth() + 1}-${String(date.getDate()).padStart(2, '0')} ${hh}:${mm}`;
   };
-  const emptyText = { history: '还没有观看记录', favorites: '还没有收藏视频', watchLater: '稍后再看是空的' };
+  const emptyText = { history: '还没有观看记录', favorites: '还没有收藏视频', watchLater: '稍后观看是空的' };
   const rowHtml = (item, kind) => {
     const bar = kind === 'history' ? '<span class="bar" aria-hidden="true"><i></i></span>' : '';
     return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img loading="lazy" src="${esc(thumbFor(item))}" srcset="${esc(thumbSrcset(item))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(item.id)} alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
@@ -127,19 +128,22 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
   const panel = libraries?.querySelector('[data-panel]');
   const footer = panel?.querySelector('[data-panel-footer]');
   const touch = matchMedia('(pointer: coarse)').matches && !matchMedia('(hover: hover)').matches;
-  const paths = { history: '/history/', favorites: '/favorites/', watchLater: '/watch-later/' };
+  const paths = { history: '/library/?tab=history', favorites: '/library/?tab=favorites', watchLater: '/library/?tab=watchLater' };
   let activeKind = 'history'; let openTimer; let closeTimer;
   const setKind = kind => { activeKind = kind; panel.querySelectorAll('[data-panel-tab]').forEach(tab => tab.setAttribute('aria-selected', String(tab.dataset.panelTab === kind))); footer.href = `${base}${paths[kind]}`; renderPanel(kind); };
   const open = kind => { clearTimeout(closeTimer); setKind(kind); panel.hidden = false; };
   const close = () => { clearTimeout(openTimer); panel.hidden = true; };
   const scheduleOpen = kind => { clearTimeout(closeTimer); clearTimeout(openTimer); openTimer = setTimeout(() => open(kind), 120); };
   const scheduleClose = () => { clearTimeout(openTimer); closeTimer = setTimeout(close, 220); };
-  document.querySelectorAll('[data-lib-kind]').forEach(item => {
-    const kind = item.dataset.libKind; const trigger = item.querySelector('[data-lib-trigger]');
-    if (kind === 'library') return;
-    if (!touch) { item.addEventListener('mouseenter', () => scheduleOpen(kind)); }
-    else trigger.addEventListener('click', event => { if (panel.hidden || activeKind !== kind) { event.preventDefault(); open(kind); } });
-  });
+  const libraryTrigger = libraries?.querySelector('[data-lib-trigger]');
+  if (!touch) {
+    libraries?.addEventListener('mouseenter', () => scheduleOpen('history'));
+  } else {
+    libraryTrigger?.addEventListener('click', event => {
+      event.preventDefault();
+      if (panel.hidden) open('history'); else close();
+    });
+  }
   panel?.addEventListener('mouseenter', () => clearTimeout(closeTimer));
   panel?.addEventListener('mouseleave', scheduleClose);
   libraries?.addEventListener('mouseleave', scheduleClose);
