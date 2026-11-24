@@ -99,6 +99,9 @@ def test_audio_player_markup_keeps_click_only_playback_and_no_download():
     assert 'initAudioPodcastPlayers(roots, initAudioPodcastDebug(roots))' in component
     assert '诊断模式' not in component
     assert '复制诊断结果' not in component
+    assert '← {show.display_name}</a>' in component
+    assert '第 {page} 页' not in component
+    assert '<p class="audio-preview-kicker"><a href={showPath(show.slug, 1, base)}>{show.display_name}</a></p>' not in component
     debug = (ROOT / 'site/src/lib/audio-podcast-debug.mjs').read_text(encoding='utf8')
     for forbidden in ('fetch(', 'sendBeacon', 'posthog', '.capture(', 'track(', 'WebSocket', 'readText('):
         assert forbidden not in debug

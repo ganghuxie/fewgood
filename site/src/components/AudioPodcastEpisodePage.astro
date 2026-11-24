@@ -13,10 +13,9 @@ const episodeLink = safeHttps(episode.episode_link);
 const alternateLink = episodeLink || sourcePage;
 ---
 <AudioPodcastLayout title={`${episode.title} · ${show.display_name}`}>
-  <a class="audio-back" href={showPath(show.slug, page, base)}>← {show.display_name} · 第 {page} 页</a>
+  <a class="audio-back" href={showPath(show.slug, page, base)}>← {show.display_name}</a>
   <article class="audio-detail">
     <header>
-      <p class="audio-preview-kicker"><a href={showPath(show.slug, 1, base)}>{show.display_name}</a></p>
       <h1>{episode.title || '未命名单集'}</h1>
       <p class="audio-episode-meta"><time datetime={episode.published_at_utc}>{episode.published_display}</time><span>{episode.duration_display}</span></p>
     </header>

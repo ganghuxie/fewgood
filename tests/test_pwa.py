@@ -12,6 +12,8 @@ def test_manifest_has_install_identity_and_icons():
     assert manifest['start_url'] == '/'
     assert manifest['scope'] == '/'
     assert manifest['display'] == 'standalone'
+    assert manifest['name'] == 'fewgood'
+    assert manifest['short_name'] == 'fewgood'
     assert manifest['theme_color'] == '#49C987'
     assert manifest['background_color'] == '#F7F9F8'
     assert {icon['src'] for icon in manifest['icons']} == {'icon-192.png', 'icon-512.png', 'maskable-512.png'}
@@ -46,6 +48,20 @@ def test_layout_has_pwa_head_registration_and_safe_area_styles():
     assert "import '../scripts/pwa.js'" in layout
     assert 'safe-area-inset-top' in layout
     assert 'safe-area-inset-bottom' in layout
+    assert 'application-name" content="fewgood"' in layout
+    assert 'apple-mobile-web-app-title" content="fewgood"' in layout
+
+
+def test_pwa_cold_start_splash_is_standalone_only_session_once_and_previewable():
+    layout = (ROOT / 'site/src/components/Layout.astro').read_text()
+    prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
+    for phrase in ('data-pwa-splash', 'logo-mark.svg', 'fewgood</strong>', 'a few good videos', '告别无尽刷屏，只看好内容', '#F7F9F8', 'z-index:1000'):
+        assert phrase in layout
+    for phrase in ('fewgood-splash-shown', 'sessionStorage', 'display-mode: standalone', 'navigator.standalone', 'preview_splash', 'URLSearchParams', 'prefers-reduced-motion', 'setTimeout(() => hideSplash(false), 1100)', 'splash.addEventListener'):
+        assert phrase in prompt
+    assert "if (!splash || (!isStandalone() && !isSplashPreview)" in prompt
+    assert 'if (!isSplashPreview && !reducedMotion)' in prompt
+    assert 'else if (!isSplashPreview) hideSplash(true);' in prompt
 
 
 def test_install_prompt_covers_android_ios_dismissal_and_mobile_only_behavior():

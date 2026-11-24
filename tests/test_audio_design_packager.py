@@ -56,5 +56,7 @@ def test_built_catalog_ia_and_all_episode_pages():
             assert not re.search(r'<audio[^>]*\ssrc=', markup)
             assert '官方原文' in markup
             assert '不要立即认为失败' not in markup
-            assert 'audio-back' in markup and '页</a>' in markup
+            back = re.search(r'<a class="audio-back"[^>]*>.*?</a>', markup)
+            assert back and '第 ' not in back.group(0) and '页</a>' not in back.group(0)
+            assert 'audio-preview-kicker' not in markup
     assert count == sum(len(s['episodes']) for s in catalog['shows'] if s['slug'] in confirmed)

@@ -7,6 +7,27 @@ const isNarrow = () => window.matchMedia('(max-width: 700px)').matches;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 // Keep standalone mobile browsers such as MQQBrowser and HuaweiBrowser out of this list.
 const isInApp = /MicroMessenger|QQ\/|Weibo|; wv\)|\bGSA\/|Instagram|FBAN|FBAV|Line\//i.test(navigator.userAgent);
+const SPLASH_KEY = 'fewgood-splash-shown';
+const splash = document.querySelector('[data-pwa-splash]');
+const isSplashPreview = new URLSearchParams(window.location.search).get('preview_splash') === '1';
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const splashWasShown = () => { try { return sessionStorage.getItem(SPLASH_KEY) === '1'; } catch { return false; } };
+const markSplashShown = () => { try { sessionStorage.setItem(SPLASH_KEY, '1'); } catch {} };
+const hideSplash = immediate => {
+  if (!splash || splash.hidden) return;
+  markSplashShown();
+  if (immediate || reducedMotion) { splash.hidden = true; return; }
+  splash.classList.add('is-leaving');
+  setTimeout(() => { splash.hidden = true; }, 340);
+};
+const showSplash = () => {
+  if (!splash || (!isStandalone() && !isSplashPreview) || (!isSplashPreview && splashWasShown())) return;
+  splash.hidden = false;
+  splash.addEventListener('click', () => hideSplash(true), { once: true });
+  if (!isSplashPreview && !reducedMotion) setTimeout(() => hideSplash(false), 1100);
+  else if (!isSplashPreview) hideSplash(true);
+};
+showSplash();
 
 let deferredPrompt;
 let manualTimer;
