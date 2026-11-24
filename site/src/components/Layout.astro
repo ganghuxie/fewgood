@@ -15,37 +15,72 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <script is:inline>
   (() => {
     const prefetched = new Set();
+    const wiredCategoryLinks = new WeakSet();
+    const categoryPaths = ['/', '/trending/', '/ai/', '/podcast/', '/audio-podcast/', '/music/', '/community/'];
+    let categoryIdleScheduled = false;
     const canPrefetch = () => !navigator.connection?.saveData && navigator.connection?.effectiveType !== 'slow-2g';
+    const normalizePath = pathname => pathname.endsWith('/') ? pathname : `${pathname}/`;
+    const categoryUrl = href => {
+      try {
+        const url = new URL(href, location.href);
+        const base = normalizePath(new URL(document.querySelector('main')?.dataset.base || '/', location.origin).pathname);
+        const path = normalizePath(url.pathname);
+        return url.origin === location.origin && categoryPaths.some(route => normalizePath(`${base}${route}`.replace(/\/+/g, '/')) === path) ? url.href : '';
+      } catch { return ''; }
+    };
     const channelUrl = href => { try { const url = new URL(href, location.href); return url.origin === location.origin && /\/channel\/[^/]+\/?$/.test(url.pathname) ? url.href : ''; } catch { return ''; } };
-    const prefetch = href => {
-      const url = channelUrl(href);
+    const prefetch = (href, scope = 'channel') => {
+      const url = scope === 'category' ? categoryUrl(href) : channelUrl(href);
       if (!url || url === location.href || prefetched.has(url) || !canPrefetch()) return;
       prefetched.add(url);
       window.__fewgoodPrefetch = window.__fewgoodPrefetch || { requested: [] };
       window.__fewgoodPrefetch.requested.push(url);
       fetch(url, { credentials: 'same-origin', cache: 'force-cache' }).catch(() => {});
     };
+    const categoryLinks = () => [...document.querySelectorAll('.chipbar nav a')].filter(link => categoryUrl(link.href));
+    const idle = window.requestIdleCallback || (callback => setTimeout(callback, 200));
+    const idleCategoryNeighbors = () => {
+      if (categoryIdleScheduled) return;
+      const links = categoryLinks();
+      if (!links.length) return;
+      categoryIdleScheduled = true;
+      idle(() => {
+        const current = normalizePath(location.pathname);
+        const index = links.findIndex(link => normalizePath(new URL(link.href).pathname) === current);
+        const neighbors = index <= 0 ? links.slice(1, 3) : [links[index - 1], links[index + 1]].filter(Boolean);
+        neighbors.forEach(link => prefetch(link.href, 'category'));
+      }, { timeout: 1200 });
+    };
     const wire = () => {
-      const links = [...document.querySelectorAll('a[href*="/channel/"]')].filter(link => channelUrl(link.href));
-      links.forEach(link => {
+      categoryLinks().forEach(link => {
+        if (wiredCategoryLinks.has(link)) return;
+        wiredCategoryLinks.add(link);
+        const request = () => prefetch(link.href, 'category');
+        link.addEventListener('pointerenter', request);
+        link.addEventListener('focus', request);
+      });
+      const channelLinks = [...document.querySelectorAll('a[href*="/channel/"]')].filter(link => channelUrl(link.href));
+      channelLinks.forEach(link => {
         if (link.dataset.prefetchWired) return;
         link.dataset.prefetchWired = '1';
         link.addEventListener('pointerenter', () => prefetch(link.href), { once: true });
         link.addEventListener('focus', () => prefetch(link.href), { once: true });
       });
-      const idle = window.requestIdleCallback || (callback => setTimeout(callback, 200));
-      idle(() => links.slice(0, 3).forEach(link => prefetch(link.href)), { timeout: 1200 });
+      idleCategoryNeighbors();
     };
     wire();
     new MutationObserver(wire).observe(document.body, { childList: true, subtree: true });
     document.addEventListener('click', event => {
-      const link = event.target.closest?.('a[href*="/channel/"]');
+      const link = event.target.closest?.('a');
       if (!link || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      document.querySelector('main')?.setAttribute('data-channel-transition', '');
+      const isChannel = channelUrl(link.href);
+      const isCategory = categoryUrl(link.href) && link.closest('.chipbar nav');
+      if (isChannel) document.querySelector('main')?.setAttribute('data-channel-transition', '');
+      if (isCategory) document.querySelector('main')?.setAttribute('data-category-transition', '');
     }, true);
   })();
 </script>
-<style is:global>main[data-channel-transition]{min-height:620px;contain:layout}</style>
+<style is:global>main[data-channel-transition],main[data-category-transition]{min-height:620px;contain:layout}</style>
 <style is:global>
 @media(max-width:599px){
   .site-header{padding-bottom:0}
