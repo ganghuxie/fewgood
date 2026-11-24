@@ -1,4 +1,5 @@
 from pathlib import Path
+import colorsys
 import re
 
 
@@ -10,9 +11,15 @@ def read(path):
 
 
 def _style_sources_in_page_order():
-    """Return Header then Layout styles, matching their rendered page order."""
+    """Return component styles in the order needed to evaluate shared the shell."""
     sources = []
-    for path in ('site/src/components/Header.astro', 'site/src/components/Layout.astro'):
+    for path in (
+        'site/src/components/AuthMenu.astro',
+        'site/src/components/Header.astro',
+        'site/src/components/Layout.astro',
+        'site/src/components/VideoPage.astro',
+        'site/src/components/AudioPodcastLayout.astro',
+    ):
         sources.extend(re.findall(r'<style[^>]*>(.*?)</style>', read(path), flags=re.DOTALL))
     return sources
 
@@ -55,15 +62,42 @@ def _css_rules(css, viewport):
 
 
 def _matches_target(selector, target):
-    selector = selector.replace(':global(', '')
+    selector = re.sub(r':global\(([^)]*)\)', r'\1', selector).strip()
     if target == 'panel':
         return bool(re.search(r'\.lib-panel(?![\w-])', selector))
-    if not re.search(r'\.lib-item(?![\w-])', selector):
-        return False
-    if ':not([data-lib-kind="watchLater"])' in selector:
-        return False
-    kinds = re.findall(r'\[data-lib-kind="([^"]+)"\]', selector)
-    return not kinds or 'watchLater' in kinds
+    if target == 'watch-later':
+        if not re.search(r'\.lib-item(?![\w-])', selector):
+            return False
+        if ':not([data-lib-kind="watchLater"])' in selector:
+            return False
+        kinds = re.findall(r'\[data-lib-kind="([^"]+)"\]', selector)
+        return not kinds or 'watchLater' in kinds
+    if target == 'html':
+        return selector in {':root', 'html'} or bool(re.fullmatch(r'html\[data-theme="[^"]+"\]', selector))
+    if target == 'body':
+        return selector == 'body' or selector.endswith(' body')
+    if target == 'mode-switch-selected':
+        return selector.endswith('.mode-switch button[aria-pressed="true"]')
+    suffixes = {
+        'site-header': '.site-header',
+        'header-row': '.header-row',
+        'search-form': '.search',
+        'search-input': '.search input',
+        'search-button': '.search button',
+        'menu-toggle': '.menu-toggle',
+        'logo': '.logo',
+        'logo-mark': '.logo-mark',
+        'watch-trigger': '.lib-trigger',
+        'library-icon': '.library-icon',
+        'auth-login': '.auth-login',
+        'auth-login-icon': '.auth-login svg',
+        'site-sidebar': '.site-sidebar',
+        'auth-dialog': '.auth-dialog',
+        'audio-preview': '.audio-preview',
+        'sort-row': '.sort-row',
+    }
+    suffix = suffixes.get(target)
+    return bool(suffix and selector.endswith(suffix))
 
 
 def _specificity(selector):
@@ -74,13 +108,18 @@ def _specificity(selector):
     )
 
 
-def _computed_css(target, viewport):
-    """A deliberately small cascade evaluator for Header/Layout source CSS."""
+def _theme_matches(selector, theme):
+    themed = re.search(r'html\[data-theme="([^"]+)"\]', selector)
+    return not themed or themed.group(1) == theme
+
+
+def _computed_css(target, viewport, theme='light'):
+    """A deliberately small cascade evaluator for the shared shell CSS."""
     winning = {}
     order = 0
     for source in _style_sources_in_page_order():
         for selector, declarations in _css_rules(source, viewport):
-            if not _matches_target(selector, target):
+            if not _theme_matches(selector, theme) or not _matches_target(selector, target):
                 order += 1
                 continue
             specificity = _specificity(selector)
@@ -90,6 +129,97 @@ def _computed_css(target, viewport):
                     winning[name] = candidate
             order += 1
     return {name: value for name, (*_, value) in winning.items()}
+
+
+def _number(value, default=0.0):
+    match = re.search(r'-?\d+(?:\.\d+)?', value or '')
+    return float(match.group()) if match else default
+
+
+def _horizontal_padding(value):
+    values = [_number(part) for part in re.findall(r'-?\d+(?:\.\d+)?(?:px)?', value or '')]
+    if not values:
+        return 0.0
+    if len(values) == 1:
+        return 2 * values[0]
+    if len(values) == 2:
+        return 2 * values[1]
+    if len(values) >= 4:
+        return values[1] + values[3]
+    return values[0] + values[-1]
+
+
+def _box(left, right):
+    return {'left': left, 'right': right, 'width': right - left}
+
+
+def _header_hit_boxes(viewport, theme):
+    """Resolve the mobile grid to on-screen boxes from the winning cascade."""
+    row = _computed_css('header-row', viewport, theme)
+    search = _computed_css('search-form', viewport, theme)
+    search_input = _computed_css('search-input', viewport, theme)
+    search_button = _computed_css('search-button', viewport, theme)
+    menu = _computed_css('menu-toggle', viewport, theme)
+    mark = _computed_css('logo-mark', viewport, theme)
+    watch = _computed_css('watch-later', viewport, theme)
+    trigger = _computed_css('watch-trigger', viewport, theme)
+    icon = _computed_css('library-icon', viewport, theme)
+    auth = _computed_css('auth-login', viewport, theme)
+    auth_icon = _computed_css('auth-login-icon', viewport, theme)
+
+    assert row['display'] == 'grid'
+    assert row['grid-template-columns'] == 'auto auto minmax(72px,1fr) auto auto'
+    assert row['grid-template-areas'] == '"menu logo search library auth" "mode mode mode mode mode"'
+
+    padding = _horizontal_padding(row['padding'])
+    gap = _number(row['gap'])
+    menu_width = _number(menu['width'])
+    logo_width = _number(mark['width'])
+    watch_width = max(_number(watch['min-width']), _number(icon['width']) + _horizontal_padding(trigger['padding']))
+    auth_width = (
+        _horizontal_padding(auth['padding'])
+        + _number(auth['gap'])
+        + _number(auth_icon['width'])
+        + 2 * _number(auth['border'])
+        + 72  # worst-case visible 13px label: 登录/注册
+    )
+    content_width = viewport - padding
+    search_track = content_width - menu_width - logo_width - watch_width - auth_width - 4 * gap
+    assert search_track >= 72, (viewport, theme, search_track)
+
+    cursor = padding / 2
+    menu_box = _box(cursor, cursor + menu_width)
+    cursor = menu_box['right'] + gap
+    logo_box = _box(cursor, cursor + logo_width)
+    cursor = logo_box['right'] + gap
+    search_width = max(search_track, _number(search['min-width']))
+    search_box = _box(cursor, cursor + search_width)
+    button_width = _number(search_button['width'])
+    button_box = _box(search_box['right'] - button_width, search_box['right'])
+    input_box = _box(search_box['left'], button_box['left'])
+    watch_start = cursor + search_track + gap
+    watch_box = _box(watch_start, watch_start + watch_width)
+    auth_box = _box(watch_box['right'] + gap, watch_box['right'] + gap + auth_width)
+    return {
+        'menu': menu_box,
+        'logo': logo_box,
+        'search': search_box,
+        'search_input': input_box,
+        'search_button': button_box,
+        'watch_later': watch_box,
+        'account': auth_box,
+    }
+
+
+def _rgb(hex_color):
+    value = hex_color.strip().lstrip('#')
+    assert re.fullmatch(r'[0-9a-fA-F]{6}', value), hex_color
+    return tuple(int(value[index:index + 2], 16) / 255 for index in (0, 2, 4))
+
+
+def _hsl(hex_color):
+    hue, lightness, saturation = colorsys.rgb_to_hls(*_rgb(hex_color))
+    return hue * 360, saturation, lightness
 
 
 def test_safe_redirect_allows_single_slash_paths_and_rejects_redirect_forms():
@@ -162,6 +292,27 @@ def test_mobile_header_has_one_four_item_sticky_row_and_nonsticky_controls():
     assert '.site-header{position:static!important}' in layout
 
 
+def test_mobile_header_hit_boxes_do_not_overlap_at_375_390_767_in_both_themes():
+    """The search column may shrink, but the watch-later and account hit areas may not."""
+    for viewport in (375, 390, 767):
+        for theme in ('light', 'pale-green'):
+            boxes = _header_hit_boxes(viewport, theme)
+            assert boxes['menu']['right'] <= boxes['logo']['left'], (viewport, theme, boxes)
+            assert boxes['logo']['right'] <= boxes['search']['left'], (viewport, theme, boxes)
+            assert boxes['search_input']['right'] <= boxes['search_button']['left'], (viewport, theme, boxes)
+            assert boxes['search']['right'] <= boxes['watch_later']['left'], (viewport, theme, boxes)
+            assert boxes['search_button']['right'] <= boxes['watch_later']['left'], (viewport, theme, boxes)
+            assert boxes['watch_later']['right'] <= boxes['account']['left'], (viewport, theme, boxes)
+            assert boxes['account']['right'] <= viewport, (viewport, theme, boxes)
+            search = _computed_css('search-form', viewport, theme)
+            search_input = _computed_css('search-input', viewport, theme)
+            search_button = _computed_css('search-button', viewport, theme)
+            assert _number(search['min-width']) == 0, (viewport, theme, search)
+            assert search_input['min-width'] == '0', (viewport, theme, search_input)
+            assert search_button['flex'] == '0 0 34px', (viewport, theme, search_button)
+            assert search_button['min-width'] == '34px', (viewport, theme, search_button)
+
+
 def test_mobile_watch_later_wins_the_actual_css_cascade_at_375_and_767():
     """Guard the desktop hide rules against a later mobile-cascade regression."""
     header = read('site/src/components/Header.astro')
@@ -174,6 +325,52 @@ def test_mobile_watch_later_wins_the_actual_css_cascade_at_375_and_767():
         r'<div class="lib-item" data-lib-kind="watchLater"><a[^>]+href=\{link\(\'/watch-later/\'\)\}',
         header,
     )
+
+
+def test_community_sort_row_has_real_direct_children_and_a_visible_gap_at_mobile_and_desktop():
+    page = read('site/src/components/VideoPage.astro')
+    match = re.search(r'<nav class="sort-row"[^>]*>(.*?)</nav>', page, flags=re.DOTALL)
+    assert match, 'community page should render the real .sort-row nav'
+    children = re.findall(r'<(a|i)\b[^>]*>.*?</\1>', match.group(1), flags=re.DOTALL)
+    assert children == ['a', 'i', 'a']
+    assert '<nav' not in match.group(1)
+    for viewport in (375, 390, 767, 1280):
+        sort_row = _computed_css('sort-row', viewport)
+        assert sort_row['display'] in {'flex', 'grid'}, (viewport, sort_row)
+        assert _number(sort_row['gap']) >= 16, (viewport, sort_row)
+
+
+def test_pale_green_page_uses_visible_logo_family_green_while_light_stays_original():
+    light_html = _computed_css('html', 375, 'light')
+    assert light_html['background'] == '#fff'
+    assert light_html['color'] == '#0f0f0f'
+    for target in ('site-header', 'header-row'):
+        assert _computed_css(target, 375, 'light')['background'] == '#fff'
+    assert _computed_css('search-button', 375, 'light')['background'] == '#f8f8f8'
+    assert _computed_css('mode-switch-selected', 375, 'light')['background'] == '#fff'
+    assert _computed_css('audio-preview', 375, 'light')['background'] == '#fff'
+
+    pale_html = _computed_css('html', 375, 'pale-green')
+    page_background = pale_html['background']
+    assert page_background.upper() not in {'#FFF', '#FFFFFF', '#F5FAF7'}
+    assert pale_html['color'] == '#17221F'
+    assert _computed_css('body', 375, 'pale-green')['background'] == page_background
+
+    background_hue, background_saturation, background_lightness = _hsl(page_background)
+    logo_hue, logo_saturation, logo_lightness = _hsl('#49C987')
+    assert abs(background_hue - logo_hue) <= 6
+    assert background_saturation >= 0.30
+    assert 0.80 <= background_lightness <= 0.93
+    assert logo_saturation > background_saturation and logo_lightness < background_lightness
+
+    assert _computed_css('site-header', 375, 'pale-green')['background'] == '#CDEDDB'
+    assert _computed_css('header-row', 375, 'pale-green')['background'] == '#CDEDDB'
+    assert _computed_css('audio-preview', 375, 'pale-green')['background'] == page_background
+    assert _computed_css('search-input', 375, 'pale-green')['background'] == '#EAF8F0'
+    assert _computed_css('site-sidebar', 375, 'pale-green')['background'] == '#EAF8F0'
+    assert _computed_css('auth-dialog', 375, 'pale-green')['background'] == '#EAF8F0'
+    selected = _computed_css('mode-switch-selected', 375, 'pale-green')
+    assert selected['background'] == '#49C987' and selected['color'] == '#17221F'
 
 
 def test_header_watch_later_trigger_is_icon_only_at_desktop_and_mobile_breakpoints():

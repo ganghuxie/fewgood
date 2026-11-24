@@ -20,7 +20,7 @@ def test_stage1_header_has_desktop_single_row_and_mobile_top_row_search_contract
     for source in (header, layout):
         assert 'grid-template-columns:auto auto minmax(72px,1fr) auto auto' in source
         assert 'grid-template-areas:"menu logo search library auth" "mode mode mode mode mode"' in source
-        assert 'grid-area:search;grid-column:auto;width:100%;max-width:none;margin:0;position:static!important' in source
+        assert 'grid-area:search;grid-column:auto;min-width:0;width:100%;max-width:none;margin:0;position:static!important' in source
         assert 'grid-area:mode;display:flex' in source
     assert 'grid-template-areas:"menu logo library auth"' not in header
     assert 'grid-template-areas:"menu logo library auth"' not in layout

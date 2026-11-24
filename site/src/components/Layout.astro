@@ -90,9 +90,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .site-header .logo{grid-area:logo;min-width:0}
   .site-header .logo>span:last-child{display:none}
   .site-header .mode-switch{grid-area:mode;display:flex;margin:0;justify-self:start}
-  .site-header .search{grid-area:search;grid-column:auto;width:100%;max-width:none;margin:0;position:static!important;left:auto!important;right:auto!important;top:auto!important}
-  .site-header .search input{height:34px;padding:0 9px;font-size:14px}
-  .site-header .search button{width:34px;font-size:20px}
+  .site-header .search{grid-area:search;grid-column:auto;min-width:0;width:100%;max-width:none;margin:0;position:static!important;left:auto!important;right:auto!important;top:auto!important}
+  .site-header .search input{height:34px;min-width:0;flex:1 1 auto;padding:0 9px;font-size:14px}
+  .site-header .search button{flex:0 0 34px;width:34px;min-width:34px;font-size:20px}
   .site-header .library-cluster{grid-area:library;margin:0;flex:none}
   .site-header .libraries{gap:0}.site-header .libraries .lib-item:not([data-lib-kind="watchLater"]){display:none}
   .site-header .libraries .lib-trigger{padding:4px 3px}

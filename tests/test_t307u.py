@@ -50,6 +50,6 @@ def test_drawer_theme_has_two_persistent_logo_color_choices_and_early_bootstrap(
     assert 'data-theme-choice="light"' in sidebar and 'data-theme-choice="pale-green"' in sidebar
     assert 'aria-expanded' in sidebar and 'aria-pressed' in sidebar and "event.key === 'Escape'" in sidebar
     assert 'localStorage.getItem(\'fewgood-theme\')' in layout
-    for color in ('#49C987', '#F5FAF7', '#17221F'):
+    for color in ('#49C987', '#D6F1E2', '#17221F'):
         assert color in header or color in layout
     assert 'dark' not in sidebar and 'system' not in sidebar
