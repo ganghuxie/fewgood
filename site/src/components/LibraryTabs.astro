@@ -12,7 +12,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   </section>
 </Layout>
 <script>
- import { KEYS, list, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
+ import { KEYS, has, list, migrate, remove, set, markWatchLaterSeen, updateBadges } from '../scripts/library.js';
  import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
  const root = document.querySelector('[data-library-tabs]'), base = root.dataset.base;
  const labels = { watchLater: '稍后再看是空的。把想看的内容先放在这里。', favorites: '还没有收藏视频。遇到真正喜欢的内容，再把它留下。', history: '还没有观看历史。看过的视频会显示在这里。' };
@@ -30,6 +30,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
      return '<article class="video-card" data-id="' + esc(video.id) + '"><a class="card-link" href="' + base + '/v/' + esc(video.id) + '/"><div class="thumbnail"><img loading="lazy" src="' + esc(thumbFor(video)) + '" srcset="' + esc(thumbSrcset(video)) + '" sizes="' + CARD_THUMB_SIZES + '" ' + thumbFallbackAttr(video.id) + ' alt=""><span class="duration">' + duration(video.duration) + '</span></div><div class="video-info"><div class="channel-avatar channel-avatar-letter" aria-hidden="true">' + esc([...(video.channel || '频')][0]) + '</div><div class="video-copy"><h2 class="video-title">' + esc(title) + '</h2><p class="video-meta">' + esc(video.channel || '') + ' · ' + duration(video.duration) + '</p></div></div></a><button class="watch-later-action" type="button" data-watch-later data-id="' + esc(video.id) + '" data-title="' + esc(title) + '" data-channel="' + esc(video.channel || '') + '" data-duration="' + (Number(video.duration) || 0) + '" aria-pressed="false">◷ 稍后再看</button></article>';
    }).join('');
    if (kind === 'watchLater') listHost.querySelectorAll('[data-id]').forEach(node => node.addEventListener('click', () => markWatchLaterSeen(node.dataset.id) && updateBadges(), { once: true }));
+   listHost.querySelectorAll('[data-watch-later]').forEach(button => {
+     const active = has(KEYS.watchLater, button.dataset.id);
+     button.classList.toggle('is-added', active); button.textContent = active ? '✓ 已加入' : '◷ 稍后再看'; button.setAttribute('aria-pressed', String(active));
+   });
    updateBadges();
  };
  Promise.all([fetch(base + '/catalog.json').then(r => r.json()), fetch(base + '/channels.json').then(r => r.json()), fetch(base + '/zh.json').then(r => r.json()).catch(() => ({ videos: {} }))]).then(([catalog, channels, zh]) => { zhMap = zh.videos || {}; migrate(KEYS[kind], catalog, channels); render(list(KEYS[kind])); }).catch(() => render(list(KEYS[kind])));

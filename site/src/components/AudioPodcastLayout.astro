@@ -74,6 +74,15 @@ const policy = '音频来自发布者官方来源，本站不提供下载。';
 .audio-method p{max-width:760px;margin:10px 0 0}
 .audio-preview-policy{border-top:1px solid var(--line);margin:28px 0 0;padding-top:18px;font-size:11px;color:var(--muted)}
 </style>
+<style is:global>
+.audio-index-section .audio-card-media{width:min(100%,140px)}
+.audio-index-section .audio-recent-grid,.audio-index-section .audio-show-grid{grid-template-columns:repeat(4,140px);justify-content:space-between;row-gap:18px}
+.audio-index-section .audio-card-copy{padding:6px 2px 0}
+.audio-index-section .audio-card-title{font-size:14px;line-height:20px}
+.audio-index-section .audio-card-show{font-size:12px;line-height:16px;margin-top:2px}
+.audio-index-section .audio-card-meta{font-size:12px;line-height:16px;margin-top:1px}
+.audio-method .audio-picks-status{margin:0;padding:0;border:0;color:var(--muted);font-size:12px;line-height:1.55}
+</style>
 <script is:inline>
   // Scope the horizontal scroll to audio pages; never move the page vertically.
   const revealAudioChip = () => {

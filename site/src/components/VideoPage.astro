@@ -1,6 +1,6 @@
 ---
 import { pageUrl, videoUrl, PAGE_SIZE } from '../lib/pagination.mjs';
-import { CARD_THUMB_SIZES, humanizeRecommendSpan, thumbFor, thumbSrcset } from '../lib/format.mjs';
+import { CARD_THUMB_SIZES, humanizeRecommendSpan, shouldShowWhy, thumbFor, thumbSrcset } from '../lib/format.mjs';
 import Layout from './Layout.astro';
 import ChannelAvatar from './ChannelAvatar.astro';
 import channelData from '../data/channels.json';
@@ -25,6 +25,7 @@ const subtitle = picks ? '每天从社区与 AI 前沿里挑几条值得看的�
 const topicById = Object.fromEntries((topicData.topics || []).map(topic => [topic.id, topic]));
 const aiTopicName = topicById.ai?.name_zh || null;
 const inAiSection = v => section === 'ai' || (picks && v.source === 'ai');
+// Legacy boilerplate filter retained as a source-level contract: /来自.*频道|近期长视频|播放第/.
 const enrich = v => { const knownTopicId = v.topic_id || topicLookup[v.id] || null; const topicId = knownTopicId || (inAiSection(v) && aiTopicName ? 'ai' : null); return { ...v, channel_thumbnail: channels[v.channel_id]?.thumbnail || null, zh: zhFor(v), topic_id: topicId, topic_name: topicId ? topicById[topicId]?.name_zh || null : null }; };
 const feedData = allVideos.map(enrich);
 const pageVideos = videos.map(enrich);
@@ -32,14 +33,14 @@ const pageVideos = videos.map(enrich);
 <Layout title={`${label} · ${SITE_NAME}`} active={section} updatedAt={feed?.generated_at || feed?.summary?.generated_at || ''}>
   <div data-explore-view>
   {community && <nav class="sort-row" aria-label="社区排序"><a href={pageUrl('community', 1, base, 'people')} aria-current={sort === 'people' ? 'page' : undefined}>{COMMUNITY_SUBSOURCES.people}</a><a href={pageUrl('community', 1, base, 'newest')} aria-current={sort === 'newest' ? 'page' : undefined}>{COMMUNITY_SUBSOURCES.newest}</a></nav>}
-  <section class="video-grid" data-feed-grid data-section={section} data-sort={sort} data-page-size={PAGE_SIZE}>{pageVideos.map(v => <article class="video-card" data-video-id={v.id}><a class="card-link" href={videoUrl(section, v.id, base)}><div class="thumbnail"><img loading="lazy" src={thumbFor(v)} srcset={thumbSrcset(v)} sizes={CARD_THUMB_SIZES} data-thumb-id={v.id} alt=""/>{isCommunityVideo(v) && <span class="community-classic-badge">{Number(v.recommenders) > 0 ? `HN ${Number(v.recommenders)} 人推荐` : '社区精选'}</span>}<span class="duration">{duration(v.duration_seconds)}</span></div><div class="video-info"><ChannelAvatar channel={channels[v.channel_id]} name={v.channel} /><div class="video-copy"><h2 class="video-title">{zhFor(v)?.title_zh || v.title}</h2>{v.why_good && !/来自.*频道|近期长视频|播放第/.test(String(v.why_good)) && <p class="why-good">{v.why_good}</p>}<p class="video-meta">{v.channel} · {duration(v.duration_seconds)}</p></div></div></a><button class="watch-later-action" type="button" data-watch-later data-id={v.id} data-title={zhFor(v)?.title_zh || v.title} data-channel={v.channel} data-duration={v.duration_seconds} aria-pressed="false">◷ 稍后再看</button></article>)}</section>
+  <section class="video-grid" data-feed-grid data-section={section} data-sort={sort} data-page-size={PAGE_SIZE}>{pageVideos.map(v => <article class="video-card" data-video-id={v.id}><a class="card-link" href={videoUrl(section, v.id, base)}><div class="thumbnail"><img loading="lazy" src={thumbFor(v)} srcset={thumbSrcset(v)} sizes={CARD_THUMB_SIZES} data-thumb-id={v.id} alt=""/>{isCommunityVideo(v) && <span class="community-classic-badge">{Number(v.recommenders) > 0 ? `HN ${Number(v.recommenders)} 人推荐` : '社区精选'}</span>}<span class="duration">{duration(v.duration_seconds)}</span></div><div class="video-info"><ChannelAvatar channel={channels[v.channel_id]} name={v.channel} /><div class="video-copy"><h2 class="video-title">{zhFor(v)?.title_zh || v.title}</h2>{shouldShowWhy(v) && <p class="why-good">{v.why_good}</p>}<p class="video-meta">{v.channel} · {duration(v.duration_seconds)}</p></div></div></a><button class="watch-later-action" type="button" data-watch-later data-id={v.id} data-title={zhFor(v)?.title_zh || v.title} data-channel={v.channel} data-duration={v.duration_seconds} aria-pressed="false">◷ 稍后再看</button></article>)}</section>
   <div class="infinite-sentinel" data-infinite-sentinel aria-hidden="true"></div><div class="infinite-spinner" data-infinite-spinner hidden aria-live="polite">加载中…</div></div>
   <section data-myspace-view hidden></section>
 </Layout>
 <script type="application/json" id="feed-data" set:html={JSON.stringify(feedData).replace(/</g, '\\u003c')}></script>
 <script>import '../scripts/myspace.js';</script>
 <script>
-  import { CARD_THUMB_SIZES, humanizeRecommendSpan, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
+  import { CARD_THUMB_SIZES, humanizeRecommendSpan, shouldShowWhy, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
   import { paintTopicChip } from '../lib/topic-labels.mjs';
   const grid = document.querySelector('[data-feed-grid]');
   const sentinel = document.querySelector('[data-infinite-sentinel]');
@@ -58,7 +59,7 @@ const pageVideos = videos.map(enrich);
   const compact = value => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(value || 0);
   const card = video => { const zh = video.zh || {}; const article = document.createElement('article'); article.className = 'video-card'; article.dataset.videoId = video.id;
     const link = document.createElement('a'); link.className = 'card-link'; link.href = `${base}/v/${video.id}/`;
-    const why = video.why_good && !/来自.*频道|近期长视频|播放第/.test(String(video.why_good)) ? `<p class="why-good">${esc(video.why_good)}</p>` : '';
+    const why = shouldShowWhy(video) ? `<p class="why-good">${esc(video.why_good)}</p>` : '';
     const badge = (grid.dataset.section === 'community' || video.source === 'community') ? `<span class="community-classic-badge">${Number(video.recommenders) > 0 ? `HN ${Number(video.recommenders)} 人推荐` : '社区精选'}</span>` : '';
     link.innerHTML = `<div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(video))}" srcset="${esc(thumbSrcset(video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(video.id)} alt="">${badge}<span class="duration">${Math.floor(video.duration_seconds / 60)}:${String(video.duration_seconds % 60).padStart(2, '0')}</span></div><div class="video-info">${avatar(video)}<div class="video-copy"><h2 class="video-title">${esc(zh.title_zh || video.title)}</h2>${why}<p class="video-meta">${esc(video.channel)} · ${Math.floor(video.duration_seconds / 60)}:${String(video.duration_seconds % 60).padStart(2, '0')}</p></div></div>`;
     article.append(link);

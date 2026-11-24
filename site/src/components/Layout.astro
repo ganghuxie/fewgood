@@ -46,6 +46,23 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   })();
 </script>
 <style is:global>main[data-channel-transition]{min-height:620px;contain:layout}</style>
+<style is:global>
+@media(max-width:599px){
+  .site-header{padding-bottom:0}
+  .site-header .header-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;grid-template-areas:"menu logo library auth" "mode mode mode mode" "search search search search";height:auto;padding:8px;gap:6px;align-items:center;min-width:0}
+  .site-header .menu-toggle{grid-area:menu;width:36px}
+  .site-header .logo{grid-area:logo;min-width:0}
+  .site-header .logo>span:last-child{display:none}
+  .site-header .mode-switch{grid-area:mode;justify-self:start;margin:2px 0 0}
+  .site-header .search{grid-area:search;width:100%;max-width:none;margin:2px 0 0;position:static;left:auto;right:auto;top:auto}
+  .site-header .library-cluster{grid-area:library;margin:0;flex:none}
+  .site-header .libraries{gap:0}
+  .site-header .libraries .lib-trigger{padding:4px 3px}
+  .site-header .auth-menu{grid-area:auth}
+  .site-header .auth-login{height:34px;padding:0 7px;gap:4px;font-size:13px;white-space:nowrap}
+  .site-header .auth-login svg{width:18px;height:18px}
+}
+</style>
 {cfBeaconToken && <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}></script>}
 <style is:global>
 .community-classic-badge{display:inline-flex;align-items:center;border:1px solid #ddd4c3;border-radius:999px;background:#f8f4ea;color:#5f5138;padding:1px 7px;font-size:11px;line-height:18px;font-weight:600;letter-spacing:.02em;white-space:nowrap}.thumbnail>.community-classic-badge{position:absolute;top:7px;left:7px;z-index:2;background:#f8f4eaeb;border-color:#00000014;box-shadow:0 1px 3px #0000001f}

@@ -5,6 +5,13 @@ export function humanizeRecommendSpan(spanDays) {
   return `跨 ${Math.max(1, Math.round(days / 30.4375))} 个月`;
 }
 
+export function shouldShowWhy(video) {
+  const why = String(video?.why_good || '').trim();
+  if (!why || /来自.*频道|近期长视频|播放第/.test(why)) return false;
+  if (Number(video?.recommenders) > 0 && /(HN|用户|人推荐|推荐|跨\s*\d+\s*年|跨\s*\d+\s*个月)/i.test(why)) return false;
+  return true;
+}
+
 const SAFE_YT_THUMB_KINDS = new Set(['default', 'mqdefault', 'hqdefault', 'medium', 'high']);
 const YT_THUMB_PATH = /\/vi\/[^/]+\/([^/?#]+)\.(?:jpe?g|webp)(?:[?#].*)?$/i;
 export const CARD_THUMB_SIZES = '(min-width: 1600px) 20vw, (min-width: 1300px) 25vw, (min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw';

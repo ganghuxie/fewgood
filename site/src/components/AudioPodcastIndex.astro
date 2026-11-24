@@ -15,6 +15,7 @@ const confirmedCount = data.catalog?.confirmed_show_count || shows.length;
 const requestedCount = data.catalog?.requested_show_count || confirmedCount;
 const coverageDenominator = Math.max(0, Number(requestedCount) || 0);
 const coveragePercent = coverageDenominator ? Math.min(100, Math.round((Number(confirmedCount) / coverageDenominator) * 100)) : 0;
+// 周热度精选待可靠单集热度源：仅在“关于收录与来源”中低强调说明，不作为主内容提示。
 ---
 <AudioPodcastLayout title="音频播客 · fewgood." description="发现最值得听的播客。" updatedAt={data.generated_at || ''}>
   {data.available === false && <p class="audio-empty" role="status">{data.unavailable_message}</p>}
@@ -30,7 +31,6 @@ const coveragePercent = coverageDenominator ? Math.min(100, Math.round((Number(c
     <div class="audio-category-filters" data-category-filters="recent" aria-label="筛选近期精选类别">
       <button type="button" class="active" data-audio-category="all" aria-pressed="true">全部</button>{categories.map(category => <button type="button" data-audio-category={category} aria-pressed="false">{category}</button>)}
     </div>
-    {weeklyPicks.status === 'skipped' && <p class="audio-picks-status" role="status">周热度精选待可靠单集热度源：{weeklyPicks.reason}</p>}
     {recent.length ? <div class="audio-recent-grid" data-audio-grid="recent">{recent.map(({show_slug, episode, show_name}, index) => {
       const show = bySlug[show_slug];
       const coverUrl = episode.cover_url || show?.feed?.cover_url;
@@ -62,7 +62,7 @@ const coveragePercent = coverageDenominator ? Math.min(100, Math.round((Number(c
     <p class="audio-filter-empty" data-audio-empty="directory" hidden>这个类别暂时没有节目。</p>
     {missingShows.map(show => <article class="audio-missing-show"><h3>{show.name}</h3><p>{show.category} · 核验缺口</p><p>{show.reason}</p></article>)}
   </section>
-  <details class="audio-method"><summary>关于收录与来源</summary><p>节目与单集元数据来自发布者官方 RSS；目录数量是本站已收录单集，不代表节目全部历史。音频使用官方 HTTPS enclosure，版权归原发布者所有。</p></details>
+  <details class="audio-method"><summary>关于收录与来源</summary><p>节目与单集元数据来自发布者官方 RSS；目录数量是本站已收录单集，不代表节目全部历史。音频使用官方 HTTPS enclosure，版权归原发布者所有。</p>{weeklyPicks.status === 'skipped' && <p class="audio-picks-status" role="status">周热度精选暂未启用：{weeklyPicks.reason}</p>}</details>
 </AudioPodcastLayout>
 <script is:inline>
   const audioTabs = [...document.querySelectorAll('.audio-index-tabs [role="tab"]')];

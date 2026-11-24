@@ -13,7 +13,6 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
     <a class="logo" href={link('/')} aria-label={`${SITE_NAME} 首页`} title="a few good videos · 无广告 · 只看好视频"><img class="logo-mark" src={`${base}logo-mark.svg`} alt=""/><span>{SITE_NAME}</span></a>
     <section class="mode-switch" data-header-mode-switch aria-label="内容模式"><button type="button" data-mode="myspace" aria-pressed="false">我的空间</button><button type="button" data-mode="explore" aria-pressed="true">探索世界</button></section>
     <form class="search" action={link('/search/')} role="search"><input name="q" type="search" placeholder="搜索精选池" aria-label="搜索精选池"/><button aria-label="搜索">⌕</button></form>
-    <AuthMenu />
     <div class="library-cluster">
       <nav class="libraries" aria-label="个人视频库">
         <div class="lib-item" data-library-link><a class="lib-trigger" href={link('/library/')} data-lib-trigger aria-label="个人视频库"><svg class="library-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H20v16H7.5A2.5 2.5 0 0 0 5 21.5m0-16v16M8 7h8M8 11h8"/></svg><span>视频库</span><b data-library-count="watchLater" hidden></b></a></div>
@@ -27,6 +26,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
         <a class="lib-panel-footer" data-panel-footer href={link('/history/')}>查看全部</a>
       </div>
     </div>
+    <AuthMenu />
   </div>
   <div class="chipbar"><nav aria-label="视频分类"><a class:list={{ active: active === 'picks' }} href={link('/')}>{SECTION_LABELS.picks}</a><a class:list={{ active: active === 'trending' }} href={link('/trending/')}>{SECTION_LABELS.trending}</a><a class:list={{ active: active === 'ai' }} href={link('/ai/')}>{SECTION_LABELS.ai}</a><a class:list={{ active: active === 'podcast' }} href={link('/podcast/')}>{SECTION_LABELS.podcast}</a><a class:list={{ active: active === 'audio-podcast' }} href={link('/audio-podcast/')}>音频播客</a><a class:list={{ active: active === 'music' }} href={link('/music/')}>{SECTION_LABELS.music}</a><a class:list={{ active: active === 'community' }} href={link('/community/')}>{SECTION_LABELS.community}</a></nav>{updated && <span class="chipbar-status">更新于 {updated}</span>}<button class="myspace-new" type="button" data-myspace-new>+ 新建栏目</button></div>
 </header>
@@ -61,7 +61,7 @@ const link = path => `${base.replace(/\/$/, '')}${path}`;
 :global(.lib-row b){font-size:13px;line-height:18px;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0 0 6px;color:#0f0f0f;background:none;position:static;min-width:0;padding:0;border-radius:0;text-align:left}
 :global(.lib-row small){display:block;color:#606060;font-size:12px;line-height:16px}
 @media(max-width:899px){:global(.lib-panel){right:-20px}}
-@media(max-width:599px){:global(.site-header .header-row){padding:0 8px;gap:6px;flex-wrap:nowrap;min-width:0}:global(.site-header .menu-toggle){width:36px}:global(.site-header .logo > span:last-child){display:none}:global(.site-header .library-cluster){margin-left:auto;flex:none}:global(.site-header .libraries){gap:0}:global(.site-header .libraries .lib-trigger){padding:4px 3px}:global(.site-header .auth-login){height:34px;padding:0 7px;gap:4px;font-size:13px;white-space:nowrap}:global(.site-header .auth-login svg){width:18px;height:18px}:global(.site-header .search){width:auto;flex:1;max-width:none}}
+@media(max-width:599px){:global(.site-header){padding-bottom:0}:global(.site-header .header-row){display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;grid-template-areas:"menu logo library auth" "mode mode mode mode" "search search search search";height:auto;padding:8px;gap:6px;align-items:center;min-width:0}:global(.site-header .menu-toggle){grid-area:menu;width:36px}:global(.site-header .logo){grid-area:logo;min-width:0}:global(.site-header .logo > span:last-child){display:none}:global(.site-header .mode-switch){grid-area:mode;justify-self:start;margin:2px 0 0}:global(.site-header .search){grid-area:search;width:100%;max-width:none;margin:2px 0 0;position:static;order:initial;left:auto;right:auto;top:auto}:global(.site-header .library-cluster){grid-area:library;margin:0;flex:none}:global(.site-header .libraries){gap:0}:global(.site-header .libraries .lib-trigger){padding:4px 3px}:global(.site-header .auth-menu){grid-area:auth}:global(.site-header .auth-login){height:34px;padding:0 7px;gap:4px;font-size:13px;white-space:nowrap}:global(.site-header .auth-login svg){width:18px;height:18px}}
 </style>
 <script>
   import { KEYS, list, updateBadges, markWatchLaterSeen } from '../scripts/library.js';

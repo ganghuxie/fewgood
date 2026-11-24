@@ -240,9 +240,11 @@ import { card } from './site/src/lib/myspace-card.mjs';
 
 const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
 const classic = card({ ...base, community_classic: true }, '/v/abcdefghijk/');
-assert.ok(classic.includes('<span class="community-classic-badge">社区经典</span>'));
-assert.ok(classic.indexOf('社区经典') < classic.indexOf('class="duration"'));
-assert.ok(!card(base, '/v/abcdefghijk/').includes('社区经典'));
+    assert.ok(classic.includes('<span class="community-classic-badge">社区精选</span>'));
+    assert.ok(classic.indexOf('社区精选') < classic.indexOf('class="duration"'));
+    const hn = card({ ...base, community_classic: true, recommenders: 198 }, '/v/abcdefghijk/');
+    assert.ok(hn.includes('HN 198 人推荐'));
+    assert.ok(!card(base, '/v/abcdefghijk/').includes('社区精选'));
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
 
 
