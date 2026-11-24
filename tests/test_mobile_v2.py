@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -6,6 +7,89 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def read(path):
     return (ROOT / path).read_text(encoding='utf-8')
+
+
+def _style_sources_in_page_order():
+    """Return Header then Layout styles, matching their rendered page order."""
+    sources = []
+    for path in ('site/src/components/Header.astro', 'site/src/components/Layout.astro'):
+        sources.extend(re.findall(r'<style[^>]*>(.*?)</style>', read(path), flags=re.DOTALL))
+    return sources
+
+
+def _media_matches(condition, viewport):
+    max_widths = re.findall(r'max-width\s*:\s*(\d+)px', condition)
+    min_widths = re.findall(r'min-width\s*:\s*(\d+)px', condition)
+    return (not max_widths or viewport <= min(map(int, max_widths))) and (
+        not min_widths or viewport >= max(map(int, min_widths))
+    )
+
+
+def _css_rules(css, viewport):
+    """Yield (selector, declarations) in CSS source order for this viewport."""
+    cursor = 0
+    while cursor < len(css):
+        brace = css.find('{', cursor)
+        if brace < 0:
+            return
+        head = css[cursor:brace].strip()
+        depth, end = 1, brace + 1
+        while end < len(css) and depth:
+            depth += (css[end] == '{') - (css[end] == '}')
+            end += 1
+        body = css[brace + 1:end - 1]
+        cursor = end
+        if head.startswith('@media'):
+            if _media_matches(head, viewport):
+                yield from _css_rules(body, viewport)
+            continue
+        if head.startswith('@'):
+            continue
+        declarations = {}
+        for name, value in re.findall(r'([\w-]+)\s*:\s*([^;{}]+)', body):
+            value = value.strip()
+            important = value.endswith('!important')
+            declarations[name] = (value.removesuffix('!important').strip(), important)
+        for selector in head.split(','):
+            yield selector.strip(), declarations
+
+
+def _matches_target(selector, target):
+    selector = selector.replace(':global(', '')
+    if target == 'panel':
+        return bool(re.search(r'\.lib-panel(?![\w-])', selector))
+    if not re.search(r'\.lib-item(?![\w-])', selector):
+        return False
+    if ':not([data-lib-kind="watchLater"])' in selector:
+        return False
+    kinds = re.findall(r'\[data-lib-kind="([^"]+)"\]', selector)
+    return not kinds or 'watchLater' in kinds
+
+
+def _specificity(selector):
+    return (
+        len(re.findall(r'#[\w-]+', selector)),
+        len(re.findall(r'\.[\w-]+|\[[^]]+\]|:(?!:)[\w-]+', selector)),
+        len(re.findall(r'(?<![.#:\w-])[a-z][\w-]*', selector)),
+    )
+
+
+def _computed_css(target, viewport):
+    """A deliberately small cascade evaluator for Header/Layout source CSS."""
+    winning = {}
+    order = 0
+    for source in _style_sources_in_page_order():
+        for selector, declarations in _css_rules(source, viewport):
+            if not _matches_target(selector, target):
+                order += 1
+                continue
+            specificity = _specificity(selector)
+            for name, (value, important) in declarations.items():
+                candidate = (important, specificity, order, value)
+                if name not in winning or candidate[:3] >= winning[name][:3]:
+                    winning[name] = candidate
+            order += 1
+    return {name: value for name, (*_, value) in winning.items()}
 
 
 def test_safe_redirect_allows_single_slash_paths_and_rejects_redirect_forms():
@@ -76,6 +160,34 @@ def test_mobile_header_has_one_four_item_sticky_row_and_nonsticky_controls():
     assert '.site-header .search input){height:36px}' in header
     assert '.header-row{position:sticky!important' in layout
     assert '.site-header{position:static!important}' in layout
+
+
+def test_mobile_watch_later_wins_the_actual_css_cascade_at_375_and_767():
+    """Guard the desktop hide rules against a later mobile-cascade regression."""
+    header = read('site/src/components/Header.astro')
+    for viewport in (375, 767):
+        watch_later = _computed_css('watch-later', viewport)
+        assert watch_later['display'] in {'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'grid', 'inline-grid'}
+        assert int(re.search(r'\d+', watch_later['min-width']).group()) > 0
+        assert _computed_css('panel', viewport)['display'] == 'none'
+    assert re.search(
+        r'<div class="lib-item" data-lib-kind="watchLater"><a[^>]+href=\{link\(\'/watch-later/\'\)\}',
+        header,
+    )
+
+
+def test_desktop_library_panel_wins_as_a_viewport_right_aligned_fixed_panel():
+    for viewport in (768, 1280):
+        panel = _computed_css('panel', viewport)
+        assert panel['position'] == 'fixed'
+        assert panel['width'] == '400px'
+        assert panel['right'] == '0'
+        assert panel.get('left') in (None, 'auto')
+        assert panel['max-width'] == 'min(400px,calc(100vw - 16px))'
+        panel_width = min(400, viewport - 16)
+        left = viewport - panel_width
+        assert panel_width == 400
+        assert left >= 0
 
 
 def test_watch_later_tooltip_has_left_placement_timing_and_unclipped_icon():
