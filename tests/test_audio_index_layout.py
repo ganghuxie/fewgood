@@ -133,8 +133,7 @@ def test_audio_index_is_plain_white_page_without_magazine_tokens():
     assert '--ink:#0f0f0f' in layout
     assert '--muted:#606060' in layout
     assert '--line:#e5e5e5' in layout
-    assert '<h1>音频播客</h1>' in index
-    assert _resolved(_rules(), '.audio-index-head h1', 'font-size', 1280) == '28px'
+    assert '<h1>音频播客</h1>' not in index
     assert _resolved(_rules(), '.audio-preview', 'background', 1280) == '#fff'
 
 
@@ -191,7 +190,7 @@ def test_audio_catalog_tabs_filter_each_view_and_keep_heat_claims_honest():
     assert 'data-category-filters="recent"' in index
     assert 'data-category-filters="directory"' in index
     assert 'data-audio-card-category={show.category' in index
-    assert '非热度排序 · 排除日更节目' in index
+    assert '非热度排序 · 排除日更节目' not in index
     assert '周热度精选待可靠单集热度源' in index
     assert '日更节目 · 不进入近期精选' in index
     assert '悬而未决' not in index

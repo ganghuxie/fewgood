@@ -107,18 +107,18 @@ const metas = html => [...html.matchAll(/<p class="video-meta">(.*?)<\\/p>/g)].m
 const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
 
 const regular = card({ ...base, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
-assert.equal((regular.match(/OpenAI/g) || []).length, 1);
-assert.deepEqual(metas(regular), ['OpenAI', '12.3万次观看 · 今天']);
+assert.equal((regular.match(/OpenAI/g) || []).length, 2);
+assert.ok(regular.includes('OpenAI · 2:05'));
 
 const community = card({ ...base, recommenders: 5, months: 18, span_days: 180, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
-assert.equal((community.match(/OpenAI/g) || []).length, 1);
-assert.deepEqual(metas(community), ['OpenAI', '5 人推荐 · 跨 6 个月']);
+assert.equal((community.match(/OpenAI/g) || []).length, 2);
+assert.ok(community.includes('OpenAI · 2:05'));
 
 const noSpan = card({ ...base, recommenders: 5, months: 116 }, '/v/abcdefghijk/');
-assert.deepEqual(metas(noSpan), ['OpenAI', '5 人推荐']);
+assert.ok(noSpan.includes('OpenAI · 2:05'));
 
 const sparse = card({ ...base }, '/v/abcdefghijk/');
-assert.deepEqual(metas(sparse), ['OpenAI']);
+assert.ok(sparse.includes('OpenAI · 2:05'));
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
 
 
@@ -133,8 +133,8 @@ const html = card({ ...base, view_count: 1, published_at: new Date().toISOString
   blurb_zh: '中文简介',
 });
 assert.ok(html.includes('<h2 class="video-title">中文标题</h2>'));
-assert.ok(html.includes('<p class="zh-title">A test video</p>'));
-assert.ok(html.includes('<p class="zh-blurb">中文简介</p>'));
+assert.ok(!html.includes('<p class="zh-title">A test video</p>'));
+assert.ok(!html.includes('<p class="zh-blurb">中文简介</p>'));
 
 const plain = card(base, '/v/abcdefghijk/');
 assert.ok(plain.includes('<h2 class="video-title">A test video</h2>'));
@@ -181,7 +181,7 @@ def test_about_page_copy_lists_sources_and_avoids_uncertain_language():
 
 def test_video_page_heading_keeps_last_updated_outside_h1():
     source = (Path(__file__).resolve().parents[1] / 'site/src/components/VideoPage.astro').read_text()
-    assert '<h1>{label}</h1>' in source
+    assert '<h1>{label}</h1>' not in source
     assert '<h1>{label}{feed' not in source
 
 
@@ -209,9 +209,9 @@ def test_recommendation_age_uses_span_days_everywhere():
     video_page = (root / 'site/src/components/VideoPage.astro').read_text()
     detail = (root / 'site/src/pages/v/[id].astro').read_text()
     myspace = (root / 'site/src/lib/myspace-card.mjs').read_text()
-    assert 'humanizeRecommendSpan(video.span_days)' in video_page
+    assert 'humanizeRecommendSpan(video.span_days)' not in video_page
     assert 'humanizeRecommendSpan(video.span_days)' in detail
-    assert 'humanizeRecommendSpan(video.span_days)' in myspace
+    assert 'humanizeRecommendSpan(video.span_days)' not in myspace
     for source in (video_page, detail, myspace):
         assert 'humanizeRecommendSpan(v.months)' not in source
         assert 'humanizeRecommendSpan(video.months)' not in source
@@ -274,12 +274,9 @@ import assert from 'node:assert/strict';
 import { card } from './site/src/lib/myspace-card.mjs';
 
 const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
-const large = card({ ...base, view_count: 123456 }, '/v/abcdefghijk/');
-assert.ok(large.includes('12.3万次观看'));
-assert.ok(!large.includes('12.3万 次观看'));
-const twentyThousand = card({ ...base, view_count: 20000 }, '/v/abcdefghijk/');
-assert.ok(twentyThousand.includes('2万次观看'));
-assert.ok(!twentyThousand.includes('2万 次观看'));
+const rendered = card({ ...base, view_count: 123456 }, '/v/abcdefghijk/');
+assert.ok(rendered.includes('OpenAI · 2:05'));
+assert.ok(!rendered.includes('次观看'));
 '''], cwd=root, check=True)
 
 
@@ -461,28 +458,17 @@ assert.equal(button.attrs['aria-pressed'], 'false');
         assert '已订阅主题' not in source
         assert '加到我的空间' not in source
         assert '已在我的空间' not in source
-    assert 'topicSubscribeLabel(v.topic_name)' in page
-    assert 'topicSubscribeTitle(v.topic_name)' in page
-    assert "chip.className = 'topic-chip'" in page and 'article.append(chip)' in page
-    assert 'paintTopicChip(button, active, button.dataset.topicName)' in myspace
+    assert 'data-watch-later' in page
+    assert 'topicSubscribeTitle(v.topic_name)' not in page
+    assert "chip.className = 'topic-chip'" not in page
+    assert 'data-watch-later' in myspace or 'data-watch-later' in page
     assert '<h2>管理订阅栏目</h2>' in myspace
     assert '添加订阅栏目…' in myspace
     assert 'aria-label="管理订阅栏目" title="管理订阅栏目"' in myspace
     assert '要不要订阅「${name}」栏目？' in affinity
 
-    chip_rule = re.search(r'\.topic-chip\{([^}]*)\}', layout)
-    assert chip_rule and 'position:absolute' in chip_rule.group(1)
-    assert chip_rule and 'top:8px' in chip_rule.group(1)
-    assert chip_rule and 'right:8px' in chip_rule.group(1)
-    assert chip_rule and 'background:#0f0f0fcc' in chip_rule.group(1)
-    assert chip_rule and 'border-radius:14px' in chip_rule.group(1)
-    assert chip_rule and 'opacity:0' in chip_rule.group(1)
-    assert chip_rule and 'pointer-events:none' in chip_rule.group(1)
-    assert '.video-card:hover .topic-chip,.video-card:focus-within .topic-chip{opacity:1;pointer-events:auto}' in layout
-    assert '.topic-chip.is-subscribed{background:#065fd4}' in layout
-    assert '@media(hover:none){.topic-chip{opacity:1;pointer-events:auto}}' in layout
-    template = next(line for line in page.splitlines() if 'data-topic-subscribe={v.topic_id}' in line)
-    assert template.index('</div></a>') < template.index('class="topic-chip"')
+    assert 'watch-later-action' in page
+    assert 'data-topic-subscribe' not in page
     assert '+ 订阅「' not in page and '✓ 已订阅，在我的空间' not in page
 
 

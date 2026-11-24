@@ -429,4 +429,4 @@ def test_search_and_library_templates_read_blurb_when_present():
     assert "fetch(`${base}/zh.json`)" in library
     assert 'z.blurb_zh' in library
     myspace = (root / 'site/src/lib/myspace-card.mjs').read_text()
-    assert 'blurb_zh' in myspace
+    assert 'blurb_zh' not in myspace

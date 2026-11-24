@@ -1,13 +1,14 @@
 ---
 import Layout from './Layout.astro';
 
-const { title, description = '官方发布者 RSS 音频播客、近期精选与单集历史。' } = Astro.props;
+const { title, description = '官方发布者 RSS 音频播客、近期精选与单集历史。', updatedAt = '' } = Astro.props;
 const policy = '音频来自发布者官方来源，本站不提供下载。';
 ---
 <Layout
   title={title}
   active="audio-podcast"
   description={description}
+  updatedAt={updatedAt}
   ogTitle={title}
   ogDescription={description}
 >

@@ -14,15 +14,14 @@ const missingShows = data.catalog?.missing_shows || [];
 const confirmedCount = data.catalog?.confirmed_show_count || shows.length;
 const requestedCount = data.catalog?.requested_show_count || confirmedCount;
 ---
-<AudioPodcastLayout title="音频播客 · fewgood." description="发现最值得听的播客。">
-  <header class="audio-index-head"><div><h1>音频播客</h1><p>发现最值得听的播客</p></div><span>{confirmedCount} 个已确认节目 / {requestedCount} 档目标</span></header>
+<AudioPodcastLayout title="音频播客 · fewgood." description="发现最值得听的播客。" updatedAt={data.generated_at || ''}>
   {data.available === false && <p class="audio-empty" role="status">{data.unavailable_message}</p>}
   <div class="audio-index-tabs" role="tablist" aria-label="音频播客内容">
     <button id="recent-tab" type="button" role="tab" aria-selected="true" aria-controls="recent-panel">近期精选</button>
     <button id="directory-tab" type="button" role="tab" aria-selected="false" aria-controls="directory-panel" tabindex="-1">节目目录</button>
   </div>
   <section id="recent-panel" class="audio-tab-panel audio-preview-section audio-index-section" role="tabpanel" aria-labelledby="recent-tab">
-    <div class="audio-preview-section-head"><h2>近期精选</h2><p>近 30 天更新 · 非热度排序 · 排除日更节目</p></div>
+    <div class="audio-preview-section-head"><h2>近期精选</h2></div>
     <div class="audio-category-filters" data-category-filters="recent" aria-label="筛选近期精选类别">
       <button type="button" class="active" data-audio-category="all" aria-pressed="true">全部</button>{categories.map(category => <button type="button" data-audio-category={category} aria-pressed="false">{category}</button>)}
     </div>
@@ -43,7 +42,7 @@ const requestedCount = data.catalog?.requested_show_count || confirmedCount;
     <p class="audio-filter-empty" data-audio-empty="recent" hidden>这个类别暂时没有近期更新。</p>
   </section>
   <section id="directory-panel" class="audio-tab-panel audio-preview-section audio-index-section audio-directory" role="tabpanel" aria-labelledby="directory-tab" hidden>
-    <div class="audio-preview-section-head"><h2>节目目录</h2><p>{confirmedCount} 个已确认节目 · 按 6 类查找</p></div>
+    <div class="audio-preview-section-head"><h2>节目目录</h2></div>
     <div class="audio-category-filters" data-category-filters="directory" aria-label="筛选节目目录类别">
       <button type="button" class="active" data-audio-category="all" aria-pressed="true">全部</button>{categories.map(category => <button type="button" data-audio-category={category} aria-pressed="false">{category}</button>)}
     </div>
