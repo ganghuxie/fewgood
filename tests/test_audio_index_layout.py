@@ -136,7 +136,8 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
     assert '{show.display_name}' in index
     assert '{show_name}' in index
     assert '{show.publisher}' in index
-    assert '<time datetime={episode.published_at_utc}>{episode.published_display}</time>' in index
+    assert '<time datetime={episode.published_at_utc}>{published}</time>' in index
+    assert 'relativePublishedTime(episode.published_at_utc)' in index
     assert '{episode.duration_display}' in index
     assert '{EPISODE_COUNT_LABEL} {show.episodes.length} 集' in index
     assert '近 30 天无入选' not in index
@@ -151,6 +152,7 @@ def test_audio_index_cards_use_real_square_cover_metadata_only():
     assert _resolved(rules, '.audio-card-title', 'font-size', 1280) == '16px'
     assert _resolved(rules, '.audio-card-title', 'font-weight', 1280) == '500'
     assert _resolved(rules, '.audio-card-title', '-webkit-line-clamp', 1280) == '2'
+    assert _resolved(rules, '.audio-card-title', 'min-height', 1280) == '44px'
     assert _resolved(rules, '.audio-recent-card', 'min-width', 1280) == '0'
     assert _resolved(rules, '.audio-show-card', 'min-width', 1280) == '0'
 

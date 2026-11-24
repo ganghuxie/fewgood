@@ -108,17 +108,18 @@ const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', dura
 
 const regular = card({ ...base, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
 assert.equal((regular.match(/OpenAI/g) || []).length, 2);
-assert.ok(regular.includes('OpenAI · 2:05'));
+assert.ok(regular.includes('video-meta-channel">OpenAI'));
+assert.ok(regular.includes('video-meta-time">今天'));
 
 const community = card({ ...base, recommenders: 5, months: 18, span_days: 180, view_count: 123456, published_at: new Date().toISOString() }, '/v/abcdefghijk/');
 assert.equal((community.match(/OpenAI/g) || []).length, 2);
-assert.ok(community.includes('OpenAI · 2:05'));
+assert.ok(community.includes('video-meta-channel">OpenAI'));
 
 const noSpan = card({ ...base, recommenders: 5, months: 116 }, '/v/abcdefghijk/');
-assert.ok(noSpan.includes('OpenAI · 2:05'));
+assert.ok(noSpan.includes('video-meta-channel">OpenAI'));
 
 const sparse = card({ ...base }, '/v/abcdefghijk/');
-assert.ok(sparse.includes('OpenAI · 2:05'));
+assert.ok(sparse.includes('video-meta-channel">OpenAI'));
 '''], cwd=Path(__file__).resolve().parents[1], check=True)
 
 
@@ -277,7 +278,7 @@ import { card } from './site/src/lib/myspace-card.mjs';
 
 const base = { id: 'abcdefghijk', title: 'A test video', channel: 'OpenAI', duration_seconds: 125 };
 const rendered = card({ ...base, view_count: 123456 }, '/v/abcdefghijk/');
-assert.ok(rendered.includes('OpenAI · 2:05'));
+assert.ok(rendered.includes('video-meta-channel">OpenAI'));
 assert.ok(!rendered.includes('次观看'));
 '''], cwd=root, check=True)
 

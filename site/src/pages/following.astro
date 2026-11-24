@@ -13,7 +13,7 @@ import { SITE_NAME } from '../lib/brand.mjs';
 </Layout>
 <script>
   import { KEYS, list as libraryList, migrate } from '../scripts/library.js';
-  import { CARD_THUMB_SIZES, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
+  import { CARD_THUMB_SIZES, relativePublishedTime, thumbFallbackAttr, thumbFor, thumbSrcset } from '../lib/format.mjs';
 
   const root = document.querySelector('.following');
   const base = root.dataset.base;
@@ -26,10 +26,10 @@ import { SITE_NAME } from '../lib/brand.mjs';
   const duration = value => { const seconds = Number(value) || 0; return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`; };
   const cardAvatar = channel => channel.thumbnail ? `<img class="channel-avatar" src="${esc(channel.thumbnail)}" alt="">` : `<span class="channel-avatar channel-avatar-letter" style="background:#607d8b">${esc([... (channel.title || '')][0] || '频')}</span>`;
   const views = value => Number(value) ? ` · ${Number(value).toLocaleString('zh-CN')}次观看` : '';
- const card = item => `<article class="video-card"><a class="card-link" href="https://www.youtube.com/watch?v=${esc(item.video.id)}" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(item.video))}" srcset="${esc(thumbSrcset(item.video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(item.video.id)} alt=""><button class="watch-later-action" type="button" data-watch-later data-id="${esc(item.video.id)}" data-title="${esc(item.video.title || item.video.id)}" data-channel="${esc(item.channel.title)}" data-duration="${Number(item.video.duration_seconds) || 0}" aria-pressed="false">◷ 稍后观看</button></div><div class="video-info">${cardAvatar(item.channel)}<div class="video-copy"><h2 class="video-title">${esc(item.video.title || item.video.id)}</h2><p class="video-meta">${esc(item.channel.title)} · ${duration(item.video.duration_seconds)}</p></div></div></a></article>`;
+ const card = item => { const published = relativePublishedTime(item.video.published_at); return `<article class="video-card"><a class="card-link" href="https://www.youtube.com/watch?v=${esc(item.video.id)}" target="_blank" rel="noopener noreferrer"><div class="thumbnail"><img loading="lazy" src="${esc(thumbFor(item.video))}" srcset="${esc(thumbSrcset(item.video))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(item.video.id)} alt=""><span class="duration">${duration(item.video.duration_seconds)}</span><button class="watch-later-action" type="button" data-watch-later data-id="${esc(item.video.id)}" data-title="${esc(item.video.title || item.video.id)}" data-channel="${esc(item.channel.title)}" data-duration="${Number(item.video.duration_seconds) || 0}" data-published-at="${esc(item.video.published_at || '')}" data-tooltip="稍后再看" aria-label="稍后再看" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></button></div><div class="video-info">${cardAvatar(item.channel)}<div class="video-copy"><h2 class="video-title">${esc(item.video.title || item.video.id)}</h2><p class="video-meta"><span class="video-meta-channel">${esc(item.channel.title)}</span>${published ? `<span class="video-meta-separator">·</span><span class="video-meta-time">${published}</span>` : ''}</p></div></div></a></article>`; };
   let all = [];
   let shown = 0;
-  const renderMore = () => { const next = all.slice(shown, shown + 20); if (!next.length) return; feed.insertAdjacentHTML('beforeend', next.map(card).join('')); shown += next.length; };
+  const renderMore = () => { const next = all.slice(shown, shown + 20); if (!next.length) return; feed.insertAdjacentHTML('beforeend', next.map(card).join('')); shown += next.length; document.dispatchEvent(new Event('youtuber:library-change')); };
   const render = channels => {
     const map = Object.fromEntries(channels.map(channel => [channel.id, channel]));
     const followed = libraryList(KEYS.following).map(saved => ({ ...map[saved.id], ...saved })).filter(channel => channel.id);

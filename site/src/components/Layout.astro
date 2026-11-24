@@ -98,6 +98,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .site-header .auth-login svg{width:18px;height:18px}
 }
 </style>
+<style is:global>
+.video-title{min-height:44px}.video-meta{display:flex;gap:4px;align-items:baseline;min-width:0;text-overflow:clip}.video-meta-channel{max-width:11em;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.video-meta-separator{flex:none}.video-meta-time{flex-shrink:0;white-space:nowrap}
+</style>
 {cfBeaconToken && <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}></script>}
 <style is:global>
 .community-classic-badge{display:inline-flex;align-items:center;border:1px solid #ddd4c3;border-radius:999px;background:#f8f4ea;color:#5f5138;padding:1px 7px;font-size:11px;line-height:18px;font-weight:600;letter-spacing:.02em;white-space:nowrap}.thumbnail>.community-classic-badge{position:absolute;top:7px;left:7px;z-index:2;background:#f8f4eaeb;border-color:#00000014;box-shadow:0 1px 3px #0000001f}

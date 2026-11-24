@@ -5,6 +5,23 @@ export function humanizeRecommendSpan(spanDays) {
   return `跨 ${Math.max(1, Math.round(days / 30.4375))} 个月`;
 }
 
+export function relativePublishedTime(value, now = Date.now()) {
+  const published = Date.parse(value || '');
+  if (!Number.isFinite(published) || !Number.isFinite(now) || published > now) return '';
+  const day = stamp => {
+    const parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date(stamp));
+    const get = type => Number(parts.find(part => part.type === type)?.value);
+    return Date.UTC(get('year'), get('month') - 1, get('day'));
+  };
+  const days = Math.floor((day(now) - day(published)) / 86400000);
+  if (days < 0) return '';
+  if (days === 0) return '今天';
+  if (days === 1) return '昨天';
+  if (days < 30) return `${days}天前`;
+  if (days < 365) return `${Math.floor(days / 30)}个月前`;
+  return `${Math.floor(days / 365)}年前`;
+}
+
 export function shouldShowWhy(video) {
   const why = String(video?.why_good || '').trim();
   if (!why || /来自.*频道|近期长视频|播放第/.test(why)) return false;
