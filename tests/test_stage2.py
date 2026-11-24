@@ -166,3 +166,13 @@ assert.ok(playCountMeta('7').includes('7 次播放'));
     assert 'Number(item.view_count ?? item.views)' in search
     assert 'playCountMeta(catalogViews.get(normalizeVideoId(v.i)))' in search
     assert search.index('video-meta-channel') < search.index('playCountMeta(catalogViews') < search.index('video-meta-time')
+
+
+def test_drawer_empty_cta_color_beats_generic_sidebar_link_color():
+    sidebar = read('site/src/components/Sidebar.astro')
+    assert '<a class="empty-cta" href=' in sidebar
+    assert '.site-sidebar a{color:#0f0f0f;text-decoration:none}' in sidebar
+    assert '.site-sidebar a.empty-cta{' in sidebar
+    cta_rule = sidebar.split('.site-sidebar a.empty-cta{', 1)[1].split('}', 1)[0]
+    assert 'background:#0f0f0f' in cta_rule
+    assert 'color:#fff' in cta_rule
