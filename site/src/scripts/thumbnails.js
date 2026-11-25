@@ -20,6 +20,7 @@ const tryNext = image => {
     if (!url || tried.has(url)) continue;
     tried.add(url);
     delete image.dataset.thumbUnavailable;
+    image.removeAttribute('srcset');
     image.src = candidate;
     return true;
   }

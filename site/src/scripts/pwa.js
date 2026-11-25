@@ -2,6 +2,7 @@ const DISMISSED_KEY = 'fewgood-pwa-install-dismissed';
 const promptBar = document.querySelector('[data-pwa-install]');
 const androidButton = document.querySelector('[data-pwa-install-action]');
 const closeButton = document.querySelector('[data-pwa-install-close]');
+const guide = document.querySelector('[data-pwa-install-guide]');
 const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 // Keep standalone mobile browsers such as MQQBrowser and HuaweiBrowser out of this list.
@@ -42,11 +43,17 @@ const dismiss = () => {
   hide();
 };
 const manualMode = () => isInApp ? 'inapp' : isIOS ? 'ios' : 'manual';
-const show = mode => {
-  if (!promptBar || isStandalone() || dismissed()) return;
+const guideText = () => isInApp
+  ? '请先点右上角 …，用系统浏览器打开；再从浏览器菜单选择“添加到桌面”。'
+  : isIOS
+    ? '请点 Safari 底部分享按钮，再选择“添加到主屏幕”。'
+    : '请从浏览器菜单选择“安装应用”或“添加到桌面”。';
+const show = (mode, { force = false, expandGuide = false } = {}) => {
+  if (!promptBar || isStandalone() || (!force && dismissed())) return;
   if (mode) promptBar.dataset.pwaMode = mode;
   else delete promptBar.dataset.pwaMode;
   promptBar.hidden = false;
+  if (guide) { guide.hidden = !expandGuide; if (expandGuide) guide.textContent = guideText(); }
 };
 
 if ('serviceWorker' in navigator) {
@@ -58,11 +65,17 @@ if ('serviceWorker' in navigator) {
 
 if (closeButton) closeButton.addEventListener('click', dismiss);
 if (androidButton) androidButton.addEventListener('click', async () => {
-  if (!deferredPrompt) { show(manualMode()); return; }
+  if (!deferredPrompt) { show(manualMode(), { force: true, expandGuide: true }); return; }
   deferredPrompt.prompt();
   await deferredPrompt.userChoice;
   deferredPrompt = null;
   dismiss();
+});
+
+document.addEventListener('fewgood:pwa-reopen', () => {
+  if (deferredPrompt) show(undefined, { force: true, expandGuide: false });
+  else show(manualMode(), { force: true, expandGuide: true });
+  promptBar?.scrollIntoView?.({ block: 'nearest' });
 });
 
 if (!isStandalone() && !dismissed()) {

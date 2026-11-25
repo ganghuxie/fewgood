@@ -151,7 +151,7 @@ def test_search_focus_is_clean_rounded_and_narrow_placeholder_is_short():
     assert 'appearance:none;-webkit-appearance:none;outline:none' in layout
     assert '.search input::-webkit-search-decoration' in layout
     assert '.search input::-webkit-search-cancel-button' in layout
-    assert '.search:focus-within{outline:2px solid #49C987;outline-offset:2px;border-radius:22px}' in layout
+    assert '.search:focus-within{outline:none;border-radius:20px;box-shadow:0 0 0 2px rgba(73,201,135,.3)}' in layout
     assert ':global(.site-header .search){grid-area:search;grid-column:auto;min-width:0' in header
     assert "compactSearch.matches ? '搜索' : '搜索精选池'" in header
 
@@ -189,6 +189,6 @@ def test_first_visit_install_prompt_is_visible_without_bip_and_uses_honest_fallb
     assert 'data-pwa-install-action type="button">添加到桌面</button>' in layout
     assert 'deferredPrompt.prompt()' in prompt
     assert "localStorage.setItem(DISMISSED_KEY, '1')" in prompt
-    assert 'if (!deferredPrompt) { show(manualMode()); return; }' in prompt
-    for phrase in ('点底部分享 → 添加到主屏幕，像 App 一样打开', '点浏览器菜单 → 添加到桌面，像 App 一样打开', '点右上角 … 用系统浏览器打开，即可添加到桌面'):
+    assert 'if (!deferredPrompt) { show(manualMode(), { force: true, expandGuide: true }); return; }' in prompt
+    for phrase in ('把 fewgood 添加到桌面：点底部分享 → 添加到主屏幕', '把 fewgood 添加到桌面：点浏览器菜单 → 添加到桌面', '把 fewgood 添加到桌面：点右上角 … 用系统浏览器打开'):
         assert phrase in layout

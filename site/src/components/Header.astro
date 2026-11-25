@@ -91,12 +91,13 @@ html[data-theme="pale-green"]{color:#17221F;background:#D6F1E2}html[data-theme="
     return `${date.getMonth() + 1}-${String(date.getDate()).padStart(2, '0')} ${hh}:${mm}`;
   };
   const emptyText = { watchLater: '稍后观看是空的' };
+  const renderable = item => item?.id !== undefined && item?.id !== null && String(item.id).trim() !== '';
   const rowHtml = (item, kind) => {
     const bar = kind === 'history' ? '<span class="bar" aria-hidden="true"><i></i></span>' : '';
-    return `<a class="lib-row" href="${base}/v/${esc(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img loading="lazy" src="${esc(thumbFor(item))}" srcset="${esc(thumbSrcset(item))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(item.id)} alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
+    return `<a class="lib-row" href="${base}/v/${encodeURIComponent(item.id)}/" data-id="${esc(item.id)}"><div class="lib-thumb"><img loading="lazy" src="${esc(thumbFor(item))}" srcset="${esc(thumbSrcset(item))}" sizes="${CARD_THUMB_SIZES}" ${thumbFallbackAttr(item.id)} alt=""><span class="dur">${duration(item.duration)}</span>${bar}</div><div><b>${esc(item.title || item.id)}</b><small>${esc(metaTime(item, kind))}</small><small>${esc(item.channel || '')}</small></div></a>`;
   };
   const renderPanel = (kind) => {
-    const items = kind === 'watchLater' ? watchLaterItems() : list(KEYS[kind]);
+    const items = (kind === 'watchLater' ? watchLaterItems() : list(KEYS[kind])).filter(renderable);
     const box = panel.querySelector('[data-panel-list]');
     if (!items.length) { box.innerHTML = `<p class="lib-empty">${emptyText[kind]}</p>`; return; }
     box.innerHTML = items.slice(0, 30).map(i => rowHtml(i, kind)).join('');

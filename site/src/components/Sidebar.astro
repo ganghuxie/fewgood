@@ -10,6 +10,7 @@ const link = path => `${base}${path}`;
     <a class="side-section" href={link('/favorites/')}><b>收藏</b><span>›</span></a>
     <a class="side-section" href={link('/history/')}><b>历史</b><span>›</span></a>
     <a class="side-section" href={link('/following/')}><b>已关注</b><span>›</span></a>
+    <button class="side-section side-pwa-install" type="button" data-pwa-reopen><b>添加到桌面</b><span>›</span></button>
     <div class="theme-control"><button type="button" class="side-section" data-theme-toggle aria-expanded="false" aria-controls="theme-choices">主题：浅色<span>›</span></button><div id="theme-choices" hidden><button type="button" data-theme-choice="light" aria-pressed="true">浅色</button><button type="button" data-theme-choice="pale-green" aria-pressed="false">浅绿</button></div></div>
     <div class="followed-list" data-followed-list><p>还没有关注的频道</p><a class="empty-cta" href={link('/')}>去探索世界看看</a></div>
   </nav>
@@ -32,9 +33,19 @@ const link = path => `${base}${path}`;
   document.querySelectorAll('[data-theme-choice]').forEach(button => button.addEventListener('click', () => { const theme = button.dataset.themeChoice; document.documentElement.dataset.theme = theme === 'pale-green' ? 'pale-green' : ''; try { localStorage.setItem(themeKey, theme); } catch {} paintTheme(); closeThemes(); toggle.focus(); }));
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !choices?.hidden) { closeThemes(); toggle?.focus(); } });
   paintTheme();
+  const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const pwaReopen = document.querySelector('[data-pwa-reopen]');
+  if (pwaReopen) {
+    pwaReopen.hidden = isStandalone();
+    pwaReopen.addEventListener('click', () => {
+      document.querySelector('.menu-toggle[data-sidebar-close]')?.click();
+      document.dispatchEvent(new Event('fewgood:pwa-reopen'));
+    });
+  }
 </script>
 <style is:global>
 .site-sidebar{position:fixed;z-index:40;top:0;bottom:0;left:0;width:240px;padding:0;background:#fff;transform:translateX(-100%);transition:transform .2s ease;overflow-y:auto;box-shadow:2px 0 8px #0001}.site-sidebar a{color:#0f0f0f;text-decoration:none}.sidebar-open .site-sidebar{transform:translateX(0)}.side-top{height:56px;padding:0 16px;display:flex;align-items:center;gap:16px}.side-top .menu-toggle{margin:0;width:40px;height:40px}.side-top .logo{font-size:20px;gap:6px}.side-nav{padding:8px 12px 16px}.side-home,.side-section,.followed-item{display:flex;align-items:center;gap:24px;min-height:40px;padding:0 12px;border-radius:12px;color:#0f0f0f;text-decoration:none;font-size:14px}.side-home:hover,.side-home.active,.side-section:hover,.followed-item:hover{background:#f2f2f2}.side-home.active{font-weight:700}.side-home svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;flex:none}.side-section{justify-content:space-between;gap:8px}.side-section b{font-weight:500}.side-section span{font-size:25px;color:#606060}.side-auth{width:100%;border:0;background:none;cursor:pointer;font:inherit}.side-auth:hover{background:#f2f2f2}.side-divider{border-top:1px solid #e5e5e5;margin:12px}.followed-list p{padding:12px 12px 6px;color:#606060;font-size:13px}.site-sidebar a.empty-cta{display:inline-block;margin:0 12px 12px;padding:8px 12px;border-radius:8px;background:#0f0f0f;color:#fff;font-size:13px}.followed-item{gap:10px;min-height:40px;padding-right:8px}.followed-item img{width:24px;height:24px;border-radius:50%;object-fit:cover;background:#eee;flex:none}.followed-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.new-dot{width:7px;height:7px;margin-left:auto;border-radius:50%;background:#065fd4;flex:none}.sidebar-backdrop{display:none}.sidebar-open .sidebar-backdrop{display:block;position:fixed;inset:0;z-index:35;background:#0006}@media(max-width:899px){.site-sidebar{width:280px}}
 .theme-control{margin-top:4px}.theme-control button{width:100%;border:0;background:none;cursor:pointer;font:inherit;text-align:left}.theme-control>button:hover,#theme-choices button:hover{background:#f2f2f2}.theme-control>button span{margin-left:auto;font-size:25px;color:#606060}#theme-choices{padding:4px 12px 4px 36px}#theme-choices button{display:block;min-height:36px;padding:0 12px;border-radius:9px;color:#0f0f0f}#theme-choices [aria-pressed="true"]{font-weight:700;background:#f2f2f2}html[data-theme="pale-green"] .theme-control>button:hover,html[data-theme="pale-green"] #theme-choices button:hover{background:#C2E8D2}html[data-theme="pale-green"] #theme-choices [aria-pressed="true"]{background:#49C987;color:#17221F}
+.side-pwa-install{width:100%;border:0;background:none;cursor:pointer;font:inherit;text-align:left}
 </style>
 <style is:global>@media(max-width:767px){.site-sidebar{width:80vw;max-width:none;z-index:80}.sidebar-open .sidebar-backdrop{z-index:75}}</style>

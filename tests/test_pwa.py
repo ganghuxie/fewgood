@@ -75,7 +75,7 @@ def test_install_prompt_covers_native_fallback_and_persistent_dismissal():
     assert 'beforeinstallprompt' in prompt
     assert 'deferredPrompt.prompt()' in prompt
     assert 'show(manualMode())' in prompt
-    assert '点底部分享 → 添加到主屏幕，像 App 一样打开' in layout
+    assert '添加到桌面：点底部分享 → 添加到主屏幕，像 App 一样打开' in layout
     assert 'localStorage.setItem(DISMISSED_KEY, \'1\')' in prompt
     assert "display-mode: standalone" in prompt
     assert 'navigator.standalone' in prompt
@@ -94,8 +94,8 @@ def test_install_prompt_handles_in_app_browsers_and_hidden_state():
     assert any('.pwa-install[hidden]{display:none}' in block for block in media_blocks)
     assert layout.index('.pwa-install[hidden]{display:none}') > layout.index('.pwa-install{display:flex')
     assert 'data-pwa-mode="inapp"' in layout
-    assert '.pwa-install[data-pwa-mode="inapp"] .pwa-install-action{display:none}' in layout
-    assert '点右上角 … 用系统浏览器打开，即可添加到桌面' in layout
+    assert '.pwa-install[data-pwa-mode="inapp"] .pwa-install-action{display:none}' not in layout
+    assert '把 fewgood 添加到桌面：点右上角 … 用系统浏览器打开' in layout
     assert 'MicroMessenger' in prompt
     assert 'isInApp' in prompt
     assert "isInApp ? 'inapp'" in prompt
@@ -104,7 +104,7 @@ def test_install_prompt_handles_in_app_browsers_and_hidden_state():
 def test_android_manual_install_fallback_and_browser_detection_regressions():
     prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
     layout = (ROOT / 'site/src/components/Layout.astro').read_text()
-    assert '点浏览器菜单 → 添加到桌面，像 App 一样打开' in layout
+    assert '把 fewgood 添加到桌面：点浏览器菜单 → 添加到桌面' in layout
     assert 'data-pwa-mode="manual"' in layout
     assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-action{display:none}' not in layout
     assert '.pwa-install[data-pwa-mode="manual"] .pwa-install-manual{display:block}' in layout
@@ -120,3 +120,21 @@ def test_android_manual_install_fallback_and_browser_detection_regressions():
     for ua in ('MicroMessenger', 'QQ/'): assert re.search(in_app[1:in_app.rfind('/')], ua, re.I)
     for ua in ('MQQBrowser', 'HuaweiBrowser', 'MiuiBrowser', 'HeyTapBrowser', 'OPPOBrowser', 'VivoBrowser', 'HonorBrowser', 'Quark', 'UCBrowser'):
         assert not re.search(in_app[1:in_app.rfind('/')], ua, re.I)
+
+
+def test_install_prompt_keeps_action_visible_and_expands_honest_guide():
+    prompt = (ROOT / 'site/src/scripts/pwa.js').read_text()
+    layout = (ROOT / 'site/src/components/Layout.astro').read_text()
+    sidebar = (ROOT / 'site/src/components/Sidebar.astro').read_text()
+    assert 'data-pwa-install-guide' in layout
+    assert 'guideText' in prompt and 'expandGuide: true' in prompt
+    assert "if (!deferredPrompt) { show(manualMode(), { force: true, expandGuide: true }); return; }" in prompt
+    for mode in ('ios', 'inapp', 'manual'):
+        assert f'.pwa-install[data-pwa-mode="{mode}"] .pwa-install-action{{display:none}}' not in layout
+    assert 'data-pwa-reopen' in sidebar
+    assert "new Event('fewgood:pwa-reopen')" in sidebar
+    assert "document.querySelector('.menu-toggle[data-sidebar-close]')?.click()" in sidebar
+    assert "document.addEventListener('fewgood:pwa-reopen'" in prompt
+    assert "if (deferredPrompt) show(undefined, { force: true, expandGuide: false });" in prompt
+    assert "else show(manualMode(), { force: true, expandGuide: true });" in prompt
+    assert "promptBar?.scrollIntoView?.({ block: 'nearest' });" in prompt

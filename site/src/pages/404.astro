@@ -1,0 +1,55 @@
+---
+import Layout from '../components/Layout.astro';
+import { SITE_NAME } from '../lib/brand.mjs';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title={`页面未找到 · ${SITE_NAME}`}>
+  <section class="not-found" data-video-fallback data-base={base}>
+    <div data-not-found-generic>
+      <h1>这个页面不存在</h1>
+      <p>链接可能已变更，或地址输入有误。</p>
+      <a class="not-found-home" href={`${base}/`}>返回首页</a>
+    </div>
+    <article data-not-found-video hidden>
+      <div class="not-found-player" data-not-found-player></div>
+      <h1 data-not-found-title>这条视频已不在当前精选池</h1>
+      <p data-not-found-channel></p>
+      <p>它可能已随每日精选轮换；仍可直接在 YouTube 观看。</p>
+      <p class="not-found-actions"><a data-not-found-youtube target="_blank" rel="noopener noreferrer">在 YouTube 打开</a><a href={`${base}/`}>返回首页</a></p>
+    </article>
+  </section>
+</Layout>
+<script>
+  const root = document.querySelector('[data-video-fallback]');
+  const match = location.pathname.match(/\/v\/([^/]+)\/?$/);
+  const id = match && decodeURIComponent(match[1]);
+  const validId = value => /^[A-Za-z0-9_-]{6,}$/.test(value || '');
+  const snapshotFor = videoId => {
+    const keys = ['youtuber:watchLater', 'youtuber:favorites', 'youtuber:history', 'fewgood.watchLater', 'fewgood.favorites', 'fewgood.history'];
+    for (const key of keys) try {
+      const items = JSON.parse(localStorage.getItem(key) || '[]');
+      const item = Array.isArray(items) && items.find(entry => String(entry?.id || entry?.videoId || '') === videoId);
+      if (item) return item;
+    } catch {}
+    return null;
+  };
+  if (validId(id)) {
+    const item = snapshotFor(id) || {};
+    root.querySelector('[data-not-found-generic]').hidden = true;
+    const article = root.querySelector('[data-not-found-video]');
+    article.hidden = false;
+    root.querySelector('[data-not-found-title]').textContent = item.title || '这条视频已不在当前精选池';
+    root.querySelector('[data-not-found-channel]').textContent = item.channel || '';
+    const youtube = `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;
+    root.querySelector('[data-not-found-youtube]').href = youtube;
+    const frame = document.createElement('iframe');
+    frame.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?playsinline=1&rel=0`;
+    frame.title = item.title || 'YouTube 视频';
+    frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    frame.allowFullscreen = true;
+    root.querySelector('[data-not-found-player]').append(frame);
+  }
+</script>
+<style>
+.not-found{max-width:900px;margin:32px auto}.not-found h1{font-size:26px;margin:16px 0 8px}.not-found p{color:#606060;line-height:1.6}.not-found-player{aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}.not-found-player iframe{display:block;width:100%;height:100%;border:0}.not-found-actions{display:flex;gap:14px;flex-wrap:wrap}.not-found-actions a,.not-found-home{display:inline-flex;align-items:center;min-height:38px;padding:0 15px;border-radius:19px;background:#49C987;color:#17221F;text-decoration:none;font-weight:600}.not-found-actions a+a{background:#EAF8F0;border:1px solid #C2E8D2}
+</style>
