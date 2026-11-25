@@ -190,5 +190,5 @@ def test_first_visit_install_prompt_is_visible_without_bip_and_uses_honest_fallb
     assert 'deferredPrompt.prompt()' in prompt
     assert "localStorage.setItem(DISMISSED_KEY, '1')" in prompt
     assert 'if (!deferredPrompt) { show(manualMode(), { force: true, expandGuide: true }); return; }' in prompt
-    for phrase in ('把 fewgood 添加到桌面：点底部分享 → 添加到主屏幕', '把 fewgood 添加到桌面：点浏览器菜单 → 添加到桌面', '把 fewgood 添加到桌面：点右上角 … 用系统浏览器打开'):
+    for phrase in ('添加到桌面：点底部分享 → 添加到主屏幕，像 App 一样打开', '把 fewgood 添加到桌面：点浏览器菜单 → 添加到桌面', '把 fewgood 添加到桌面：点右上角 … 用系统浏览器打开'):
         assert phrase in layout
