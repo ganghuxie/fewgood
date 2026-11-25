@@ -23,7 +23,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const root = document.querySelector('[data-video-fallback]');
   const match = location.pathname.match(/\/v\/([^/]+)\/?$/);
   const id = match && decodeURIComponent(match[1]);
-  const validId = value => /^[A-Za-z0-9_-]{6,}$/.test(value || '');
+  const validId = value => /^[A-Za-z0-9_-]{11}$/.test(value || '');
   const snapshotFor = videoId => {
     const keys = ['youtuber:watchLater', 'youtuber:favorites', 'youtuber:history', 'fewgood.watchLater', 'fewgood.favorites', 'fewgood.history'];
     for (const key of keys) try {

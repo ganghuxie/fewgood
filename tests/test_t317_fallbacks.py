@@ -12,10 +12,18 @@ def test_static_404_recovers_rotated_video_from_local_snapshots():
     page = read('site/src/pages/404.astro')
     assert "import Layout from '../components/Layout.astro'" in page
     assert "location.pathname.match(/\\/v\\/([^/]+)\\/?$/)" in page
+    assert '<div data-not-found-generic>' in page
+    assert '<div data-not-found-generic hidden>' not in page
+    assert '<article data-not-found-video hidden>' in page
+    assert "const validId = value => /^[A-Za-z0-9_-]{11}$/.test(value || '');" in page
+    assert '{6,}' not in page
     for key in ('youtuber:watchLater', 'youtuber:favorites', 'youtuber:history', 'fewgood.watchLater', 'fewgood.favorites', 'fewgood.history'):
         assert key in page
     assert 'https://www.youtube.com/embed/${encodeURIComponent(id)}' in page
     assert 'https://www.youtube.com/watch?v=${encodeURIComponent(id)}' in page
+    valid_branch = page.split('if (validId(id)) {', 1)[1]
+    assert "document.createElement('iframe')" in valid_branch
+    assert "document.createElement('iframe')" not in page.split('if (validId(id)) {', 1)[0]
 
 
 def test_library_and_header_never_render_missing_video_ids_or_unencoded_links():
